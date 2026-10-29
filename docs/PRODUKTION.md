@@ -49,7 +49,8 @@ Zuerst lesen: `docs/KANAL_REGELN.md` (geht immer vor), `docs/THEMEN.md`, `state/
 - „Wann veröffentlichen“: Ist es vor 17:50 → „Zeitplan“ auf heute 18:00. Danach → „Jetzt“.
 - Vor dem Klick auf Veröffentlichen/Planen Screenshot prüfen (Caption, Schalter, Zeit). Danach in Studio → Beiträge prüfen, dass der Beitrag da ist.
 - `docs/THEMEN.md` Status setzen, `docs/plaene/<WORT>.md` final, `state/log.md` Eintrag (Datum, Folge, Wort, Beispiel + Quelle, Uhrzeit, Link). Committen, pushen. Jona kurz melden.
-- Instagram: sobald das Konto in `state/konten.md` als eingerichtet steht, dort ebenfalls als Reel posten (gleiche Caption, „Bezahlte Partnerschaft“ nicht nötig, „Werbung“ in Caption reicht; KI-Label setzen).
+- **YouTube Shorts** (gleiche Freigabe, gleiche Uhrzeit): studio.youtube.com, Kanal-ID `UCBmT3RjRK5PGk-YVTdFzuDA` prüfen (Name „Hamsterfrei“). `…/channel/UCBmT3RjRK5PGk-YVTdFzuDA/videos/upload?d=ud` → File-Input → Titel (kurz, mit „#shorts“), Beschreibung („Werbung | …“ + „Kommentier <WORT>, dann antworte ich dir mit dem Plan 🐹“ + Hashtags). „Nein, nicht speziell für Kinder“. „Mehr anzeigen“ → Bezahlte Werbung = Ja (bei Werbung), KI verwendet = Ja. Weiter ×3 → Sichtbarkeit: vor 17:50 „Veröffentlichungszeitpunkt festlegen“ heute 18:00, sonst „Öffentlich“. Link notieren.
+- **Instagram Reel** (gleiche Freigabe): instagram.com → „Erstellen“ → File-Input im Dialog → Zuschneiden: Seitenverhältnis „Original“ → Weiter → Weiter → Caption („Werbung | … Kommentier <WORT> und ich schick dir den Plan per DM 🐹“ + Hashtags), KI-Label an → Teilen. Instagram-Web kann nicht planen: um 18:00 posten (bzw. nach dem Okay, wenn es schon später ist).
 
 ## Nie still abbrechen
 Scheitert etwas (Credits, Render, Chrome nicht erreichbar, falsches Konto), Jona per Push melden, was fehlt.

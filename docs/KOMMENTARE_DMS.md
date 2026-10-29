@@ -17,6 +17,10 @@ Zuerst lesen: `docs/KANAL_REGELN.md`, `docs/THEMEN.md` (welche Wörter gehören 
 3. Antworten auf unsere DMs (Rückfragen) lesen: einfache Danke-Nachrichten mit einem kurzen, freundlichen Satz beantworten. Echte Fragen NICHT selbst beantworten, sondern Jona mit Antwortvorschlag melden.
 4. Andere Kommentare: Hasskommentare/Spam nicht beantworten. Fragen zum Thema sammeln und Jona mit Antwortvorschlag melden (nicht selbst posten). Lob darf mit einem Herz geliked werden.
 
+## Instagram und YouTube
+- Instagram (@hamsterfrei): Kommentare unter den Reels lesen; bei Kommentar-Wort genauso: kurz antworten + DM mit dem Plan (Instagram erlaubt Nachrichtenanfragen auch ohne gegenseitiges Folgen). Gleiche Grenzen, gleiches Log (Spalte `nutzer` mit Präfix `ig:`).
+- YouTube (Kanal Hamsterfrei): YouTube hat keine DMs. Bei Kommentar-Wort den Plan als **Antwort auf den Kommentar** posten (gekürzt auf die Schritte, ohne Link), Log mit Präfix `yt:`. Kommentare in YouTube Studio → Kommentare.
+
 ## Grenzen (Kontosicherheit)
 - Pro Lauf höchstens 15 DMs und 20 Kommentar-Antworten, zwischen Aktionen ein paar Sekunden Pause, natürlich variierte Texte.
 - Zeigt TikTok eine Warnung („zu schnell“, eingeschränkt, Captcha, Sicherheitsprüfung): sofort aufhören, nichts umgehen, kein Captcha lösen, Jona per Push melden.
