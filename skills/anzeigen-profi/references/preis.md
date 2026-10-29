@@ -1,23 +1,41 @@
 # Preis finden
 
-## Mit Websuche
-1. Genaues Modell bestimmen (Modellnummer, Jahr, Speicher, Größe).
-2. Suchen:
-   - Kleinanzeigen / Vinted: aktuelle Angebote **gleiches Modell, gleicher Zustand** (Achtung: Angebotspreise sind Wunschpreise, oft zu hoch).
-   - eBay: **verkaufte** Artikel (Filter „Verkaufte Artikel“) – das sind echte Preise.
-   - Elektronik: Ankaufspreise (reBuy, Back Market „Verkaufen“, Wirkaufens) = Untergrenze, darunter lohnt Privatverkauf nicht.
-   - LEGO/Sammlerstücke: BrickEconomy, BrickLink, verkaufte eBay-Artikel.
-3. Unpassende Vergleiche verwerfen (anderes Modell, defekt, Konvolut, Ausland).
+## 1. Modell und Neupreis
+- Genaues Modell bestimmen (Modellnummer, Jahr, Speicher, Größe, Material).
+- **Aktuellen Neupreis** prüfen (z. B. Preisvergleich wie idealo, Hersteller-Shop). Gibt es einen Nachfolger oder eine günstige Neuauflage, drückt das den Gebrauchtpreis – kurz erwähnen.
 
-## Rechnen
-- **Realistischer Preis** = unteres Drittel der passenden Vergleichswerte, angepasst an Zustand und Lieferumfang (OVP/Rechnung +5–10 %, sichtbare Mängel −10–30 %).
-- **Anzeigenpreis** = realistischer Preis + ca. 10–15 % Verhandlungsspielraum (Kleinanzeigen „VB“). Auf Vinted eher knapp am realistischen Preis, weil Käufer Preisvorschläge schicken.
-- **Untergrenze** = realistischer Preis − ca. 15 % (nie unter Ankaufspreis bei Elektronik).
-- Runden auf glatte Beträge (z. B. 45 €, 79 €, 120 €).
+## 2. Vergleichswerte sammeln
+- **Am besten: verkaufte Artikel** (eBay mit Filter „Verkaufte Artikel“). Das sind echte Preise.
+- Aktive Angebote auf Kleinanzeigen, Vinted, eBay: das sind **Wunschpreise** → mit ca. 15–25 % Abschlag rechnen.
+- Nur gleiches Modell, ähnlicher Zustand, Angebote aus Deutschland. Defekte, Konvolute und Auslandsangebote verwerfen (oder nur als grobe Orientierung nennen und so kennzeichnen).
+- Ankauf-Portale (reBuy, Back Market, Wirkaufens) nennen meist „bis zu“-Werte. Das sind **Höchstwerte für Top-Zustand**, keine Untergrenze. Nur als Plausibilitätscheck verwenden („Privat bekommst du meist mehr als beim Ankauf“).
 
-## Ohne Websuche
-Schätze vorsichtig aus allgemeinem Wissen, sag klar „Schätzung ohne aktuelle Vergleichspreise“ und empfiehl, kurz auf Kleinanzeigen/eBay (verkaufte Artikel) gegenzuchecken.
+## 3. Wenn kaum Daten kommen (häufig!)
+Websuche findet oft keine verkauften Artikel und keine Kleinanzeigen-/Vinted-Treffer. Dann:
+- Schätzung aus Neupreis und Zustand (Faustwerte unten), ehrlich als Schätzung kennzeichnen.
+- **Konfidenz** angeben: hoch (≥3 passende Vergleiche) / mittel / niedrig.
+- **Suchlinks zum Selbst-Prüfen** ausgeben (Modell einsetzen, Leerzeichen als +):
+  - eBay verkauft: `https://www.ebay.de/sch/i.html?_nkw=<Modell>&LH_Sold=1&LH_Complete=1`
+  - Kleinanzeigen: `https://www.kleinanzeigen.de/s-<Modell>/k0`
+  - Vinted: `https://www.vinted.de/catalog?search_text=<Modell>`
+  Dazu ein Satz: „Wenn die verkauften Preise deutlich anders sind, sag mir kurz Bescheid, dann passe ich an.“
+
+## 4. Faustwerte (nur wenn keine besseren Daten da sind)
+| Zustand | Elektronik (aktuell, Markengerät) | Fast Fashion (Zara, H&M …) | Premium-Marken (Patagonia, Ralph Lauren …) |
+|---|---|---|---|
+| Neu mit Etikett | 70–85 % vom aktuellen Neupreis | 40–60 % | 55–70 % |
+| Sehr gut | 55–70 % | 25–40 % | 40–55 % |
+| Gut / Gebrauchsspuren | 40–55 % | 15–30 % | 30–45 % |
+Ältere Elektronik (Nachfolger draußen) eher am unteren Ende.
+
+## 5. Rechnen
+- **Ziel der Person beachten:** „schnell weg“ (auch „loswerden“, „mach einfach“) → realistischer Preis eher unteres Ende, Anzeigenpreis nur ca. 5–10 % darüber. „Bester Preis“ → mehr Spielraum, dafür längere Wartezeit ansagen.
+- **Realistischer Preis** = unteres Drittel passender Vergleiche, angepasst: OVP/Rechnung +5–10 %, sichtbare Mängel −10–30 %.
+- **Anzeigenpreis** = realistisch + 10–15 % (Kleinanzeigen „VB“). Vinted eher knapp am realistischen Preis, Käufer schicken Preisvorschläge.
+- **Untergrenze** = realistisch − ca. 15 %.
+- Auf glatte Beträge runden (45 €, 79 €, 120 €).
 
 ## Ausgabe-Beispiel
-Anzeigenpreis 89 € VB · realistisch ca. 75–80 € · Untergrenze 65 €
-Vergleich: eBay verkauft 72 € und 81 € (gleiches Modell, gebraucht), Kleinanzeigen 3 Angebote 85–110 €.
+Anzeigenpreis 119 € VB · realistisch ca. 100–110 € · Untergrenze 90 € · Konfidenz: mittel
+Vergleich: eBay aktiv 120–150 € (Wunschpreise, −20 % gerechnet), Neupreis aktuell ca. 230 €, Nachfolger erhältlich.
+Selbst prüfen: eBay verkauft → <Link>

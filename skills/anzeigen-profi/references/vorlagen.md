@@ -37,12 +37,14 @@ Privatverkauf, keine Garantie, Gewährleistung oder Rücknahme.
 • <Besonderheit>
 
 Aus einem Nichtraucherhaushalt. <nur wenn zutreffend>
-Schau gern in meine anderen Artikel – Bündel mit Rabatt möglich.
+<nur wenn die Person mehrere Sachen einstellt:> Schau gern in meine anderen Artikel – Bündel mit Rabatt möglich.
 ```
-**Felder:** Kategorie · Marke · Größe · Zustand (Neu mit Etikett / Neu ohne Etikett / Sehr gut / Gut / Zufriedenstellend) · Farbe · Material · Paketgröße · Preis
+**Felder:** Kategorie · Marke · Größe · Zustand (die passende Stufe aus dem Vinted-Formular) · Farbe · Material · Paketgröße · Preis
+Auf Vinted keinen „Privatverkauf, keine Garantie“-Satz nötig – Vinted regelt Käuferschutz und Rückgabe selbst.
 
 ## Stil
 - Erster Satz = alles Wichtige auf einen Blick.
 - Stichpunkte statt Fließtext.
 - Mängel ehrlich und konkret („kleiner Kratzer am Rand, siehe Foto 4“).
+- Nur fertigen Text in den Kopierblock – keine Platzhalter, keine „…“. Unbekanntes weglassen.
 - Keine Großschrift, keine Ausrufezeichen-Ketten, keine fremden Marken als Suchwörter, keine Telefonnummer/E-Mail im Text.

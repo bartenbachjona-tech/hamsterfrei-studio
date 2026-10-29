@@ -21,46 +21,50 @@ Du stellst die Anzeige NICHT selbst ein, schreibst keine Käufer an und bedienst
 Frag nur, was du für Preis und Text wirklich brauchst und nicht auf den Fotos siehst. Typisch:
 1. **Zustand & Mängel:** „Gibt es Mängel, die man auf den Fotos nicht sieht?“ (bei Elektronik: „Funktioniert alles? Wie ist der Akku?“)
 2. **Lieferumfang & Belege:** „Was ist dabei – Kabel, OVP, Rechnung?“
-3. **Versand oder Abholung, und wo ungefähr (PLZ/Stadt)?** – nur wenn für die Anzeige nötig.
-Wenn die Person schon alles gesagt hat, frag nicht – mach direkt weiter. Wenn sie sagt „mach einfach“, triff sinnvolle Annahmen und markiere sie in der Anzeige mit [bitte prüfen].
+3. **Versand oder Abholung, wo ungefähr (PLZ/Stadt) – und lieber schnell weg oder bester Preis?**
+Wörter wie „loswerden“ oder „mach einfach“ heißen „schnell weg“ – dann nicht extra fragen.
+Wenn die Person schon alles gesagt hat, frag nicht – mach direkt weiter. Wenn sie sagt „mach einfach“, triff sinnvolle Annahmen und liste sie unter „Vor dem Einstellen kurz prüfen“ auf (nie als Platzhalter im kopierbaren Text).
 
 ### 3. Plattform wählen (wenn die Person es nicht vorgibt)
 Siehe `references/plattformen.md`. Kurzregel:
-- **Vinted:** Kleidung, Schuhe, Taschen, Accessoires, Kosmetik, kleine Deko, Bücher/Medien, Kinderkleidung – Käufer zahlen die Gebühren, Verkaufen ist für Privatverkäufer gebührenfrei.
+- **Vinted:** Kleidung, Schuhe, Taschen, Accessoires, Kosmetik, kleine Deko, Bücher/Medien, Kinderkleidung, kleinere Elektronik – Verkaufen ist für Privatverkäufer gebührenfrei, der Käufer zahlt eine Vinted-Gebühr.
 - **Kleinanzeigen:** Elektronik, Möbel, Sperriges, Werkzeug, Fahrräder, Sammlungen/Konvolute, Sachen zum Abholen, höherpreisige Technik.
 Sag in einem Satz, warum.
 
 ### 4. Preis recherchieren
-Siehe `references/preis.md`. Wenn du eine Websuche hast: such vergleichbare Angebote (gleiches Modell, gleicher Zustand) auf Kleinanzeigen/Vinted und **verkaufte** Artikel auf eBay; bei Elektronik zusätzlich Ankaufspreise (z. B. reBuy, Back Market) als Untergrenze. Ohne Websuche: schätze vorsichtig und sag ehrlich, dass es eine Schätzung ist.
+Folge `references/preis.md`: aktueller Neupreis, verkaufte Artikel wenn möglich, aktive Angebote nur mit Abschlag, Ziel der Person (schnell weg / bester Preis) einrechnen. Findet die Websuche wenig (passiert oft), ehrlich als Schätzung kennzeichnen, Konfidenz angeben und Suchlinks zum Selbst-Prüfen mitgeben. Ohne Websuche: Faustwerte aus preis.md, klar als Schätzung.
 Gib drei Zahlen:
 - **Anzeigenpreis** (mit Verhandlungsspielraum, bei Kleinanzeigen als „VB“),
 - **realistischer Verkaufspreis**,
 - **Untergrenze** (darunter lieber nicht verkaufen).
-Nenne 1–3 Vergleichswerte mit Quelle. Keine Wunschpreise, eher das untere Drittel vergleichbarer Angebote.
+Nenne 1–3 Vergleichswerte mit Quelle und die Konfidenz (hoch/mittel/niedrig). Keine Wunschpreise.
 
 ### 5. Anzeige schreiben
-Nutze die Vorlage in `references/vorlagen.md` für die gewählte Plattform:
+Nutze die Vorlage in `references/vorlagen.md` für die gewählte Plattform und orientiere dich an `references/beispiele.md`:
 - **Titel:** Marke + Modell + wichtigstes Merkmal + Zustand/Größe. Kurz, ohne Großbuchstaben-Geschrei, ohne Emojis-Spam, ohne „!!!“. Keine fremden Markennamen als Suchbegriff („wie Nike“) – das ist unzulässig.
 - **Beschreibung:** kurzer erster Satz (was es ist, Zustand), dann Stichpunkte: Details, Zustand ehrlich mit Mängeln, Lieferumfang, Maße/Größe, Versand/Abholung, Privatverkauf-Hinweis. Mängel immer nennen – das verhindert Ärger und schlechte Bewertungen.
-- **Felder:** Kategorie-Vorschlag, Zustand (Vinted: Neu mit Etikett / Neu ohne Etikett / Sehr gut / Gut / Zufriedenstellend), Marke, Größe, Farbe, Versandgröße.
+- **Felder:** Kategorie-Vorschlag (als Pfad, z. B. „Elektronik › Audio & Hifi“ – Hinweis: im Formular die nächstpassende wählen), Zustand (Vinted bietet im Formular Stufen wie Neu mit Etikett / Neu ohne Etikett / Sehr gut / Gut / Zufriedenstellend – die passende wählen), Marke, Größe, Farbe, Paketgröße.
+- **Keine Zusicherungen**, die über das hinausgehen, was die Person gesagt hat: „funktioniert bei mir ohne Probleme“ statt „einwandfrei“ oder „wie neu“. Was unbekannt ist, wird weggelassen, nicht erfunden.
 - Privatverkauf-Satz am Ende (Kleinanzeigen): „Privatverkauf, keine Garantie, Gewährleistung oder Rücknahme.“ – aber nur, wenn die Person wirklich privat verkauft. Bekannte Mängel trotzdem nennen.
 
 ### 6. Ausgabe – immer in dieser Reihenfolge
+0. **Vor dem Einstellen kurz prüfen:** nur wenn du Annahmen getroffen hast – kurze Checkliste (z. B. „Material vom Etikett ergänzen“, „Maße nachmessen“). Der kopierbare Text unten enthält KEINE Platzhalter wie [bitte prüfen] oder „…“; formuliere stattdessen neutral oder lass die Angabe weg.
 1. **Plattform:** … (ein Satz warum)
-2. **Preis:** Anzeigenpreis / realistisch / Untergrenze + Vergleichswerte
+2. **Preis:** Anzeigenpreis / realistisch / Untergrenze + Vergleichswerte + Konfidenz (+ Suchlinks, wenn die Konfidenz nicht hoch ist)
 3. **Titel** (in einem Codeblock zum Kopieren)
 4. **Beschreibung** (in einem Codeblock zum Kopieren)
 5. **Felder:** Kategorie, Zustand, Marke, Größe, Farbe, Versand
 6. **Fotos:** Reihenfolge der vorhandenen Fotos + was noch fehlt (max. 3 Tipps)
 7. **Antworten auf Käuferfragen:** 4–6 fertige Kurzantworten (siehe `references/antworten.md`), inklusive einer höflichen Antwort auf zu niedrige Angebote mit der Untergrenze.
 8. **Hinweise:** nur wenn relevant (Sicherheit, Betrugsmaschen, Steuern – siehe unten).
+9. **Falls es nach 7 Tagen nicht weg ist:** 2–3 konkrete Tipps (Preis um ca. 10 % senken, Titel mit anderem Suchwort, erstes Foto tauschen, Anzeige neu einstellen statt nur „hochschieben“).
 
 ### 7. Danach
-Biete an: Text kürzer/länger, andere Plattform, Preis anpassen, englische Version. Wenn die Person mehrere Sachen hat: eine Anzeige pro Gegenstand, nacheinander.
+Biete an: Text kürzer/länger, andere Plattform, Preis anpassen (z. B. wenn die Person verkaufte Preise nachgeschaut hat), englische Version für internationale Käufer. Wenn die Person mehrere Sachen hat: eine Anzeige pro Gegenstand, nacheinander.
 
 ## Wichtige Regeln
 - **Ehrlich bleiben:** keine erfundenen Eigenschaften, keine Neupreise ohne Beleg, keine Fälschungen als Original. Bei Markenware mit Zweifel an der Echtheit: nicht als Original anbieten, Person darauf hinweisen.
 - **Verbotenes nicht anbieten:** z. B. Waffen, Medikamente, Tabak, gefälschte Markenware, Tiere über Vinted. Im Zweifel auf die Plattformregeln verweisen.
 - **Sicherheit (kurz erwähnen, wenn passend):** nur über die Plattform bezahlen lassen („Sicher bezahlen“ / Vinted-Kauf), keine Links von Käufern öffnen, keine Telefonnummer/E-Mail rausgeben, „PayPal Freunde“ nicht für Fremde, „mein Kurier holt ab“ ist eine bekannte Masche.
-- **Steuern (nur erwähnen, wenn jemand viel verkauft):** Plattformen melden Verkäufer mit mindestens 30 Verkäufen oder 2.000 € im Jahr ans Finanzamt (DAC7). Privat gebrauchte Sachen zu verkaufen ist in der Regel steuerfrei; wer gezielt einkauft, um weiterzuverkaufen, handelt gewerblich. Keine Steuerberatung geben – auf Steuerberater verweisen.
+- **Steuern (nur erwähnen, wenn jemand viel verkauft):** Plattformen melden Verkäufer ans Finanzamt, sobald sie im Jahr 30 Verkäufe oder 2.000 € Umsatz (nicht Gewinn) erreichen (DAC7); Kleinanzeigen meldet dabei nur Verkäufe über das eigene Bezahlsystem. Privat gebrauchte Sachen zu verkaufen ist in der Regel steuerfrei; wer gezielt einkauft, um weiterzuverkaufen, handelt gewerblich. Keine Steuerberatung geben – auf Steuerberater verweisen.
 - Keine Garantie für Verkaufserfolg oder Preis versprechen.
