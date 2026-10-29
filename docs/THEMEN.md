@@ -1,0 +1,19 @@
+# Themen-Warteschlange Format 1
+
+Die Tagesproduktion nimmt immer die **oberste Folge mit Status `offen`**. Das Grundskript ist nur der Rahmen: vor dem Vertonen MUSS ein echtes, aktuelles Beispiel recherchiert und eingebaut werden („Zum Beispiel …“, auf der Leinwand gezeigt), und das Tool wird Schritt für Schritt nachgebaut gezeigt (wie Folge 1: Sonnenuntergangs-Lampe + Shopify-Schritte). Vollständige Ursprungs-Skripte (Zeit / Hamster / Leinwand) stehen im Doc „Hamsterfrei Masterplan“, Tab „Skripte Format 1“.
+
+| Nr | Thema | Wort | Werbung | Status |
+|---|---|---|---|---|
+| 01 | Ein Produkt, ein Shop (Sonnenuntergangs-Lampe, Shopify) | SHOP | ja (Shopify) | veröffentlicht 29.10.2026 |
+| 02 | Sticker, die du nie selbst verschickst (Canva → Printify → Etsy/Shopify, 10 Designs für eine Gruppe) | STICKER | ja (Canva, Printify) | offen |
+| 03 | Eine Einladung, hundertmal verkauft (Etsy-Vorlage Hochzeitseinladung, Canva, Vorschaubild auf Tisch mit Blumen) | VORLAGE | ja (Canva) | offen |
+| 04 | Kleiderpaket rein, einzeln raus (Kleinanzeigen-Paket → Vinted einzeln, Fotos an weißer Wand, -10 % nach 2 Wochen) | PAKET | nein | offen |
+| 05 | Malbuch auf Amazon, gedruckt erst bei Bestellung (Amazon KDP, Motive für eine Nische, z. B. Bagger für Kinder) | MALBUCH | ja, falls Tool-Affiliate | offen |
+| 06 | Social-Media-Vorlagen für Friseure/Cafés in Canva verkaufen | CANVA | ja (Canva) | offen |
+| 07 | Bücher vom Flohmarkt per ISBN-Scan weiterverkaufen | SCAN | nein | offen |
+| 08 | LEGO-Kiste kaufen, sortieren, Sets einzeln verkaufen | LEGO | nein | offen |
+| 09 | Zimmerpflanzen-Ableger ziehen und verschicken | ABLEGER | nein | offen |
+| 10 | Digitale Planer / Haushaltsbuch als Download (Etsy) | PLANER | ja (Canva) | offen |
+
+Regeln für neue Themen (wenn die Liste leer wird, 5 neue anhängen, nach denselben Regeln): klein, unscheinbar, ohne Vorwissen startbar, mit Beispielen, die man in Deutschland wirklich umsetzen kann; Wörter kurz, ein Wort, Großbuchstaben, nicht doppelt.
+Wenn eine Folge veröffentlicht ist: Status auf `veröffentlicht <Datum>` setzen und `docs/plaene/<WORT>.md` muss existieren.
