@@ -6,6 +6,7 @@ Stand 29.10.2026, alles von Jona festgelegt.
 - Name: **Hamsterfrei**. TikTok: @hamsterfrei (ehemals Jonas Konto mit ca. 2.400 Followern). Instagram: neues Konto (wird von Jona angelegt, noch offen).
 - Maskottchen: gezeichneter Hamster mit gelockerter Büro-Krawatte (navy mit grünen Streifen), Zeigestab in der Hand, steht vor einer Leinwand. Alles, was erklärt wird, läuft auf der Leinwand. Komponente: `src/Hamster.tsx`, Layout: `src/Episode.tsx`. Stil nie ändern.
 - Stimme: ElevenLabs „Hamsterfrei – Hamster“, Voice-ID `E6cNSOTqfEt7KnIGmkxz`, Modell `eleven_v3`. Comic-Hamster, leicht hoch, quirlig, gut verständlich.
+- Musik: dezentes, eigenes ElevenLabs-Musikbett (Ukulele/Marimba, ruhig, ohne Gesang) unter jedem Video, Lautstärke ca. 10 %, sanft ein-/ausgeblendet. Datei `public/music/bett01.mp3`, Standard in `Episode`. Keine Trend-Sounds oder fremde Musik.
 - Geld: primär Affiliate-Links + E-Mail-Liste. Später Nebenprodukt Anzeigen-Automation (Vinted/Kleinanzeigen/eBay).
 
 ## Format 1 (aktuell): Der Hamster erklärt ein kleines Nebenbei-Business

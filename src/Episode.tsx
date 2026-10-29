@@ -19,6 +19,8 @@ export type EpisodeProps = {
   dingAt?: number; // Sekunde für den Schluss-Ding (Kommentar-Wort)
   werbung?: boolean; // kleines "Werbung"-Label oben links
   captionMap?: (text: string) => string; // Zahlwörter -> Ziffern usw.
+  music?: string; // Pfad in public/, dezentes Musikbett (Standard: music/bett01.mp3)
+  musicVolume?: number; // Standard 0.10
 };
 
 // Untertitel in kurzen Gruppen (max. 3 Wörter, Umbruch nach Satzzeichen)
@@ -81,11 +83,10 @@ const Captions: React.FC<{ chunks: Chunk[]; map: (t: string) => string }> = ({ c
   );
 };
 
-export const Episode: React.FC<EpisodeProps> = ({ audio, words, scenes, totalSeconds, dingAt, werbung = true, captionMap }) => {
+export const Episode: React.FC<EpisodeProps> = ({ audio, words, scenes, totalSeconds, dingAt, werbung = true, captionMap, music = "music/bett01.mp3", musicVolume = 0.1 }) => {
   const WORDS = React.useMemo(() => words.filter((w) => w.type === "word"), [words]);
   const chunks = React.useMemo(() => buildChunks(WORDS), [WORDS]);
   const SCENES = scenes;
-  void totalSeconds;
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
@@ -101,6 +102,16 @@ export const Episode: React.FC<EpisodeProps> = ({ audio, words, scenes, totalSec
   return (
     <AbsoluteFill style={{ background: CREAM, fontFamily, color: INK }}>
       <Audio src={staticFile(audio)} />
+      {music && (
+        <Audio
+          src={staticFile(music)}
+          loop
+          volume={(f) =>
+            musicVolume *
+            interpolate(f, [0, 15, totalSeconds * fps - 30, totalSeconds * fps], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })
+          }
+        />
+      )}
       {SCENES.slice(1).map((s) => (
         <Sequence key={s.from} from={Math.round(s.from * fps) - 3} durationInFrames={12} layout="none">
           <Audio src={staticFile("sfx/whoosh.wav")} volume={0.6} />

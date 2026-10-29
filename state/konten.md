@@ -1,4 +1,4 @@
 # Konten
 
 - TikTok: @hamsterfrei (Name „Hamsterfrei“), eingerichtet. Bio/Profilbild: Jona trägt selbst ein (Profilbild = Composition „Avatar“).
-- Instagram: noch NICHT eingerichtet (Jona legt es an). Bis hier „eingerichtet“ steht, nichts auf Instagram posten.
+- Instagram: @hamsterfrei eingerichtet (29.10.2026, Profilbild + Bio gesetzt, in Jonas Chrome eingeloggt). Creator-Konto: noch offen (Jona stellt um). Reels werden zusammen mit TikTok gepostet.
