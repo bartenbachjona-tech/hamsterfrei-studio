@@ -61,6 +61,7 @@ header{padding-block:24px}
 .send .thumbs{grid-template-columns:repeat(3,56px)}
 .send .said{margin-top:0}
 .flow>*{min-width:0}
+.ex{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
 .label{font-family:var(--display);font-weight:600;font-size:16px;margin-bottom:8px}
 .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .thumbs svg{width:100%;height:auto;border-radius:8px;background:var(--bg);display:block}
@@ -145,13 +146,13 @@ footer p{font-size:14px;color:var(--muted)}
   <div class="wrap hero">
     <div>
       <h1>Aus deinen Handyfotos wird eine fertige Verkaufsanzeige.</h1>
-      <p class="sub">Der <b>Anzeigen-Profi</b> ist ein Zusatz (Skill) für den KI-Assistenten Claude. Fotos schicken, bis zu drei kurze Fragen beantworten – und du bekommst Preisvorschlag, Titel und Beschreibung für Kleinanzeigen oder Vinted zum Kopieren.</p>
+      <p class="sub">Der <b>Anzeigen-Profi</b> ist ein Zusatz für den KI-Assistenten Claude: Fotos schicken, bis zu drei Fragen beantworten, Preis und fertigen Anzeigentext kopieren.</p>
       <div class="buybox" id="kaufen">
         <div class="pricerow">
           <span class="price">9,90&nbsp;€</span>
           <a class="btn soon" href="#kaufen" aria-disabled="true">Bald verfügbar</a>
         </div>
-        <div class="facts small"><span>einmalig, kein Abo</span><span>läuft in deinem Claude-Konto, auch im kostenlosen</span><span>Download sofort danach</span></div>
+        <div class="facts small"><span>einmalig, kein Abo</span><span>läuft in deinem Claude-Konto, auch im kostenlosen</span><span>Sofort-Download · bezahlen über Digistore24</span><span>Gemacht von Jona · Hilfe per Mail</span></div>
       </div>
     </div>
 
@@ -159,6 +160,7 @@ footer p{font-size:14px;color:var(--muted)}
       <div class="canvas">
         <div class="flow">
           <div>
+            <p class="ex">Beispiel</p>
             <p class="label">Du schickst</p>
             <div class="send"><div class="thumbs" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M16 38V30a16 16 0 0 1 32 0v8" fill="none" stroke="#2B2B2E" stroke-width="5" stroke-linecap="round"/><rect x="10" y="34" width="12" height="18" rx="6" fill="#2B2B2E"/><rect x="42" y="34" width="12" height="18" rx="6" fill="#2B2B2E"/></svg><svg viewBox="0 0 64 64"><ellipse cx="32" cy="34" rx="22" ry="16" fill="#3A3A3E"/><path d="M12 32q20 -8 40 0" fill="none" stroke="#8A8A90" stroke-width="2" stroke-dasharray="3 3"/><rect x="28" y="22" width="8" height="5" rx="2" fill="#8A8A90"/></svg><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20" fill="#2B2B2E"/><circle cx="32" cy="32" r="11" fill="#55555A"/><path d="M18 22l4 3M44 40l3 3M20 42l3-2" stroke="#9A9AA0" stroke-width="2" stroke-linecap="round"/></svg></div><p class="said">„Will ich loswerden.“</p></div>
           </div>
@@ -184,11 +186,11 @@ footer p{font-size:14px;color:var(--muted)}
     <h2 id="paket">Das bekommst du – und das brauchst du</h2>
     <div class="pack">
       <div>
-        <h3>Im Download</h3>
+        <h3>Das bekommst du</h3>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9 14l3 3 3-3"/></svg><div><b>Anzeigen-Profi (ZIP-Datei)</b><span>Einmal in dein Claude-Konto hochladen, danach so oft nutzen, wie du willst.</span></div></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><div><b>Anleitung (PDF)</b><span>Schritt für Schritt, in etwa zwei Minuten eingerichtet.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Für jeden Gegenstand</b><span>Drei Preise mit Vergleichswerten, Titel und Text zum Kopieren, Kategorie und Zustand, ob Kleinanzeigen oder Vinted besser passt, fertige Antworten auf „Letzter Preis?“ und Warnungen vor Betrugsmaschen.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Damit bekommst du für jeden Gegenstand</b><span>Drei Preise mit Vergleichswerten, Titel und Text zum Kopieren, Kategorie und Zustand, ob Kleinanzeigen oder Vinted besser passt, fertige Antworten auf „Letzter Preis?“ und Warnungen vor Betrugsmaschen.</span></div></li>
         </ul>
       </div>
       <div>
@@ -234,7 +236,7 @@ footer p{font-size:14px;color:var(--muted)}
 
 <footer class="wrap">
   <nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="kaufbedingungen.html">Kaufbedingungen</a></nav>
-  <p>© 2026 Hamsterfrei · Weitere Skills sind in Arbeit – folg dem Hamster auf TikTok und Instagram. Claude ist eine Marke von Anthropic; Hamsterfrei ist nicht mit Anthropic verbunden.</p>
+  <p>© 2026 Hamsterfrei · Weitere Skills sind in Arbeit – folg dem Hamster auf <a href="https://www.tiktok.com/@hamsterfrei" rel="noopener" target="_blank">TikTok</a>, <a href="https://www.instagram.com/hamsterfrei/" rel="noopener" target="_blank">Instagram</a> und <a href="https://www.youtube.com/channel/UCBmT3RjRK5PGk-YVTdFzuDA" rel="noopener" target="_blank">YouTube</a>. Claude ist eine Marke von Anthropic; Hamsterfrei ist nicht mit Anthropic verbunden.</p>
 </footer>
 
 <div class="bar" id="bar" aria-hidden="true"><span class="price">9,90&nbsp;€</span><a class="btn soon" href="#kaufen" tabindex="-1" aria-disabled="true">Bald verfügbar</a></div>
