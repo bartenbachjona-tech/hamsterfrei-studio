@@ -18,3 +18,11 @@ Nur Links eintragen, die Jona ausdrücklich freigegeben hat. Affiliate-Links in 
 - Beide **nicht genehmigt** → Bestellformular nur mit Testzahlung.
 - Verkaufsseite auf github.io wird abgelehnt (Fehler SLPDM1: Domain von anderem User belegt) → eigene Domain nötig (z. B. hamsterfrei.de), dann GitHub-Pages-Custom-Domain.
 - Freigabe-Checkliste muss Jona selbst bestätigen (Testkauf, Impressum, Seriosität).
+
+## Domain hamsterfrei.de (gekauft 30.10.2026 bei STRATO, Paket 10203868)
+- Status 30.10. 00:30: „wird eingerichtet“, STRATO schickt Mail, wenn fertig (i. d. R. < 24 h).
+- Danach (Jona loggt sich bei STRATO ein): DNS setzen
+  - A @ → 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+  - CNAME www → bartenbachjona-tech.github.io
+- ERST wenn DNS auflöst: Datei `CNAME` mit `hamsterfrei.de` ins Repo hamsterfrei-site, Pages → Custom domain + „Enforce HTTPS“.
+- Dann Digistore: Verkaufsseite 757063 → https://hamsterfrei.de/anzeigen-profi.html, 757079 → https://hamsterfrei.de/seminararbeit-profi.html; TikTok-Bio-Link aktualisieren.
