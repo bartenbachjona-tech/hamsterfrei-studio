@@ -27,4 +27,4 @@ Tipp: Ist die Websuche in deinem Konto an, recherchiert Claude echte Vergleichsp
 - Preise sind Empfehlungen, keine Garantie für einen Verkauf.
 - Hamsterfrei ist ein unabhängiges Angebot und nicht mit Anthropic, Kleinanzeigen oder Vinted verbunden.
 
-Fragen? Schreib uns: <E-Mail eintragen>
+Fragen? Schreib uns: bartenbach.jona@gmail.com
