@@ -1,0 +1,179 @@
+<title>Hamsterfrei Skills</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Claude-Skills von Hamsterfrei: kleine Helfer, die dir Arbeit abnehmen. Erster Skill: Anzeigen-Profi für Kleinanzeigen und Vinted.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+<style>
+/* Layout: Leinwand-Prinzip wie im Video – heller Raum, eine große "Leinwand"-Karte mit dem Skill, Hamster als Erklärer daneben */
+:root{
+  --bg:#FFF8EC; --floor:#F5E7CF; --ink:#3A2618; --muted:#6B5444; --line:#EAD6B4;
+  --card:#FFFFFF; --green:#23885A; --green-ink:#FFFFFF; --navy:#24426B; --soft:#E8F4EC; --warn:#B45309;
+  --display:"Fredoka", "Trebuchet MS", system-ui, sans-serif;
+  --body:"Nunito Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#1E1712; --floor:#271E17; --ink:#F6EBDD; --muted:#C9B39E; --line:#3D3026;
+  --card:#2A211A; --green:#3DBE7F; --green-ink:#10241A; --navy:#9DB8E0; --soft:#1F3328; --warn:#F0A04B; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#1E1712; --floor:#271E17; --ink:#F6EBDD; --muted:#C9B39E; --line:#3D3026;
+  --card:#2A211A; --green:#3DBE7F; --green-ink:#10241A; --navy:#9DB8E0; --soft:#1F3328; --warn:#F0A04B; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+a{color:var(--green)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:8px}
+header{padding-block:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{width:48px;height:48px;border-radius:50%}
+.brand b{font-family:var(--display);font-size:26px;font-weight:700}
+.brand b span{color:var(--green)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding-block:28px 40px}
+.hero h1{font-size:clamp(34px,5.4vw,56px);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero p{font-size:19px;color:var(--muted);max-width:34em;margin:16px 0 0}
+.hero-art{display:flex;justify-content:center}
+.hero-art img{width:min(300px,70vw);height:auto;border-radius:50%;background:var(--soft)}
+.stage{background:var(--floor);border-top:6px solid var(--line);padding-block:48px 56px}
+.screen{background:var(--card);border:6px solid var(--ink);border-top:none;border-radius:0 0 26px 26px;position:relative;padding:28px clamp(16px,4vw,40px) 32px}
+.screen::before{content:"";position:absolute;left:-26px;right:-26px;top:-14px;height:20px;background:var(--ink);border-radius:12px}
+.skill{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.skill>*{min-width:0}
+.tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);background:var(--soft);padding:3px 10px;border-radius:99px}
+.skill h2{font-size:clamp(28px,4vw,40px);margin-top:12px}
+.skill .lead{color:var(--muted);margin:10px 0 18px}
+.gets{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:8px}
+.gets li{padding-left:28px;position:relative}
+.gets li::before{content:"";position:absolute;left:4px;top:.55em;width:12px;height:7px;border-left:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(-45deg)}
+.buy{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.price{font-family:var(--display);font-size:38px;font-weight:700}
+.price small{display:block;font-family:var(--body);font-size:14px;font-weight:600;color:var(--muted);line-height:1.2}
+.btn{display:inline-block;background:var(--green);color:var(--green-ink);font-family:var(--display);font-size:20px;font-weight:600;text-decoration:none;padding:13px 26px;border-radius:14px;border:3px solid var(--ink);box-shadow:0 4px 0 var(--ink);transition:transform .12s, box-shadow .12s}
+.btn:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--ink)}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+.note{font-size:14px;color:var(--muted);margin-top:12px}
+/* Chat-Demo */
+.chat{display:grid;gap:12px;font-size:15px}
+.msg{max-width:92%;padding:10px 14px;border-radius:16px;line-height:1.45}
+.me{justify-self:end;background:var(--navy);color:var(--card);border-bottom-right-radius:4px}
+.bot{justify-self:start;background:var(--bg);border:2px solid var(--line);border-bottom-left-radius:4px}
+.photos{display:flex;gap:6px;margin-bottom:6px}
+.photos span{width:44px;height:44px;border-radius:8px;background:color-mix(in srgb, var(--card) 30%, transparent);display:grid;place-items:center;font-size:11px;font-weight:700}
+.ad{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:12px 14px;margin-top:8px}
+.ad b{font-family:var(--display);font-size:16px;display:block}
+.ad .p{font-variant-numeric:tabular-nums;color:var(--green);font-weight:700}
+.ad pre{white-space:pre-wrap;font-family:var(--body);font-size:14px;margin:6px 0 0;color:var(--muted)}
+.chat-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+section.block{padding-block:48px}
+section.block h2{font-size:clamp(26px,3.4vw,34px);margin-bottom:20px}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.steps li{counter-increment:s;padding-top:52px;position:relative;min-width:0}
+.steps li::before{content:counter(s);position:absolute;top:0;left:0;width:40px;height:40px;border-radius:50%;background:var(--green);color:var(--green-ink);font-family:var(--display);font-weight:700;font-size:20px;display:grid;place-items:center}
+.steps h3{font-size:20px;margin-bottom:6px}
+.steps p{margin:0;color:var(--muted)}
+.need{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.need div{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:18px 20px;min-width:0}
+.need h3{font-size:19px;margin-bottom:6px}
+.need p{margin:0;color:var(--muted)}
+details{border-bottom:2px solid var(--line);padding-block:14px}
+summary{cursor:pointer;font-family:var(--display);font-size:19px;font-weight:600}
+details p{margin:8px 0 0;color:var(--muted);max-width:60em}
+.soon{display:flex;flex-wrap:wrap;gap:10px}
+.soon span{border:2px dashed var(--line);border-radius:99px;padding:6px 14px;color:var(--muted);font-weight:600}
+footer{border-top:2px solid var(--line);padding-block:28px;font-size:14px;color:var(--muted)}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:10px}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .hero-art{order:-1;justify-content:flex-start}
+  .hero-art img{width:120px}
+  .skill,.need{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .screen::before{left:-14px;right:-14px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+
+<header class="wrap">
+  <a class="brand" href="#top" aria-label="Hamsterfrei Startseite"><img src="{{HAMSTER}}" alt=""><b>Hamster<span>frei</span></b></a>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <h1>Claude-Skills, die dir <em>Kleinkram abnehmen</em></h1>
+      <p>Einmal kaufen, in dein eigenes Claude-Konto hochladen, immer wieder benutzen. Der Hamster aus den Videos baut dir die Helfer – du klickst am Ende nur noch selbst.</p>
+    </div>
+    <div class="hero-art"><img src="{{HAMSTER}}" alt="Der Hamsterfrei-Hamster mit Krawatte und Zeigestab"></div>
+  </div>
+
+  <div class="stage" id="anzeigen-profi">
+    <div class="wrap">
+      <div class="screen">
+        <div class="skill">
+          <div>
+            <span class="tag">Skill 1 · Verkaufen</span>
+            <h2>Anzeigen-Profi</h2>
+            <p class="lead">Fotos rein, Anzeige raus. Für alles, was du auf Kleinanzeigen oder Vinted loswerden willst.</p>
+            <ul class="gets">
+              <li>Höchstens drei kurze Rückfragen statt langem Formular</li>
+              <li>Preis mit echten Vergleichswerten: Anzeigenpreis, realistisch, Untergrenze</li>
+              <li>Titel und Beschreibung zum Kopieren, Mängel ehrlich drin</li>
+              <li>Kategorie, Zustand, Versandgröße und welche Plattform besser passt</li>
+              <li>Fertige Antworten auf „Letzter Preis?“ und Co. – plus Warnung vor Betrugsmaschen</li>
+            </ul>
+            <div class="buy">
+              <div class="price">9,90 €<small>einmalig · Einführungspreis</small></div>
+              <a class="btn" id="buy-anzeigen" href="{{BUY_ANZEIGEN}}" rel="noopener" target="_blank" {{BUY_DISABLED}}>Jetzt holen</a>
+            </div>
+            <p class="note">Sofort-Download: Skill-Datei + Anleitung. Bezahlung und Rechnung über Digistore24.</p>
+          </div>
+          <div class="chat" aria-label="Beispiel: So sieht ein Durchlauf aus">
+            <span class="chat-label">Beispiel</span>
+            <div class="msg me"><div class="photos"><span>Foto 1</span><span>Foto 2</span><span>Foto 3</span></div>Will ich loswerden.</div>
+            <div class="msg bot">{{EX_QUESTIONS}}</div>
+            <div class="msg me">{{EX_ANSWER}}</div>
+            <div class="msg bot">{{EX_RESULT_INTRO}}
+              <div class="ad"><b>{{EX_TITLE}}</b><span class="p">{{EX_PRICE}}</span><pre>{{EX_TEXT}}</pre></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="block wrap" aria-labelledby="so">
+    <h2 id="so">So läuft's</h2>
+    <ol class="steps">
+      <li><h3>Kaufen</h3><p>Einmal bezahlen, du bekommst sofort die Skill-Datei und eine bebilderte Anleitung.</p></li>
+      <li><h3>Hochladen</h3><p>In Claude unter Anpassen → Skills die Datei hochladen. Dauert zwei Minuten.</p></li>
+      <li><h3>Fotos schicken</h3><p>Neuer Chat, Fotos rein, „will ich verkaufen“ – der Skill übernimmt.</p></li>
+    </ol>
+  </section>
+
+  <section class="block wrap" aria-labelledby="brauchst">
+    <h2 id="brauchst">Was du brauchst</h2>
+    <div class="need">
+      <div><h3>Ein Claude-Konto</h3><p>Auf claude.ai, auch das kostenlose reicht. In den Einstellungen muss die Code-Ausführung bzw. „Dateien erstellen“ an sein – steht in der Anleitung.</p></div>
+      <div><h3>Deine Fotos</h3><p>3 bis 8 Handyfotos bei Tageslicht. Mit eingeschalteter Websuche recherchiert Claude echte Vergleichspreise, sonst gibt es eine vorsichtige Schätzung.</p></div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-labelledby="faq">
+    <h2 id="faq">Fragen</h2>
+    <details><summary>Stellt der Skill die Anzeige selbst ein?</summary><p>Nein, und das mit Absicht. Kleinanzeigen und Vinted erlauben keine automatischen Zugriffe. Der Skill schreibt alles fertig, du kopierst es und klickst selbst auf Einstellen – so bleibt dein Konto sicher.</p></details>
+    <details><summary>Muss ich ein Abo abschließen?</summary><p>Nein. Du zahlst den Skill einmal. Er läuft in deinem eigenen Claude-Konto; ob du dort Free oder Pro nutzt, entscheidest du.</p></details>
+    <details><summary>Garantiert mir der Skill einen Verkauf oder einen Preis?</summary><p>Nein. Er gibt dir eine gute Anzeige und eine realistische Preis-Empfehlung mit Belegen. Ob und wann jemand kauft, hängt vom Markt ab.</p></details>
+    <details><summary>Kann ich ihn widerrufen?</summary><p>Bei digitalen Inhalten erlischt das Widerrufsrecht, sobald du dem sofortigen Download ausdrücklich zustimmst. Das fragt dich Digistore24 im Bestellformular. Hängst du beim Einrichten, schreib uns – wir helfen.</p></details>
+    <details><summary>Ist das ein offizielles Produkt von Claude?</summary><p>Nein. Hamsterfrei ist ein unabhängiges Angebot und nicht mit Anthropic, Kleinanzeigen oder Vinted verbunden. Claude ist eine Marke von Anthropic.</p></details>
+  </section>
+
+  <section class="block wrap" aria-labelledby="bald">
+    <h2 id="bald">Kommen als Nächstes</h2>
+    <div class="soon"><span>Deal-Check für Kleinanzeigen-Angebote</span><span>Käufer-Antworten auf Knopfdruck</span><span>Faceless-Kurzvideo aus einem Thema</span></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <nav aria-label="Rechtliches"><a href="{{IMPRESSUM}}">Impressum</a><a href="{{DATENSCHUTZ}}">Datenschutz</a><a href="{{AGB}}">AGB</a></nav>
+  <p>© 2026 Hamsterfrei · Werbung: eigene Produkte. Hamsterfrei ist nicht mit Anthropic, Kleinanzeigen oder Vinted verbunden.</p>
+</footer>
