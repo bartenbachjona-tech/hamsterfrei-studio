@@ -6,6 +6,7 @@ Die Tagesproduktion nimmt immer die **oberste Folge mit Status `offen`**. Das Gr
 |---|---|---|---|---|
 | 01 | Ein Produkt, ein Shop (Sonnenuntergangs-Lampe, Shopify) | SHOP | ja (Shopify) | veröffentlicht 29.10.2026 |
 | 02 | Sticker, die du nie selbst verschickst (Canva → Printify → Etsy/Shopify, 10 Designs für eine Gruppe) | STICKER | ja (Canva, Printify) | offen |
+| 02b | **Skill-Serie Teil 1:** Claude schreibt deine Kleinanzeigen-/Vinted-Anzeige aus 3 Fotos (eigenes Produkt „Anzeigen-Profi“, Demo zeigen: Fotos rein → 3 Fragen → fertige Anzeige mit Preis) | SKILL | ja (eigenes Produkt) | **wartet**: erst produzieren, wenn Verkaufsseite + Digistore24-Link live sind und in `docs/plaene/links.md` stehen |
 | 03 | Eine Einladung, hundertmal verkauft (Etsy-Vorlage Hochzeitseinladung, Canva, Vorschaubild auf Tisch mit Blumen) | VORLAGE | ja (Canva) | offen |
 | 04 | Kleiderpaket rein, einzeln raus (Kleinanzeigen-Paket → Vinted einzeln, Fotos an weißer Wand, -10 % nach 2 Wochen) | PAKET | nein | offen |
 | 05 | Malbuch auf Amazon, gedruckt erst bei Bestellung (Amazon KDP, Motive für eine Nische, z. B. Bagger für Kinder) | MALBUCH | ja, falls Tool-Affiliate | offen |
