@@ -5,6 +5,9 @@ Die Tagesproduktion nimmt immer die **oberste Folge mit Status `offen`**. Das Gr
 | Nr | Thema | Wort | Werbung | Status |
 |---|---|---|---|---|
 | 01 | Ein Produkt, ein Shop (Sonnenuntergangs-Lampe, Shopify) | SHOP | ja (Shopify) | veröffentlicht 29.10.2026 |
+| T1 | **Trend:** Warum verkauft der Hamster den Keller seiner Nachbarn? (FinanzKopf-Formel, Beispielrechnung, siehe TRENDS.md Shortlist 1) | KELLER | nur wenn Skill-Link | offen |
+| T2 | **Trend:** Eine KI hat seinen Sessel verkauft – und seine Adresse weitergegeben (Meta Muse, Shortlist 2) | SICHER | ja, wenn Skill gezeigt | offen |
+| T3 | **Trend:** Codes-Serie „Mach ein Foto von deinem alten ___“ (Shortlist 3, braucht echte Fotos von Jona) | CODES | ja (eigenes Produkt) | wartet auf Fotos |
 | 02 | Sticker, die du nie selbst verschickst (Canva → Printify → Etsy/Shopify, 10 Designs für eine Gruppe) | STICKER | ja (Canva, Printify) | offen |
 | 02b | **Skill-Serie Teil 1:** Claude schreibt deine Kleinanzeigen-/Vinted-Anzeige aus 3 Fotos (eigenes Produkt „Anzeigen-Profi“, Demo zeigen: Fotos rein → 3 Fragen → fertige Anzeige mit Preis) | SKILL | ja (eigenes Produkt) | **wartet**: erst produzieren, wenn Verkaufsseite + Digistore24-Link live sind und in `docs/plaene/links.md` stehen |
 | 03 | Eine Einladung, hundertmal verkauft (Etsy-Vorlage Hochzeitseinladung, Canva, Vorschaubild auf Tisch mit Blumen) | VORLAGE | ja (Canva) | offen |

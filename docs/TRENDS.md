@@ -1,5 +1,21 @@
 # Trend-Log (neueste oben)
 
+## 2026-10-29 – Scout A (YouTube Shorts, 215 Videos dieses Monats gemessen)
+Top-Ausreißer (Aufrufe/Tag, Aufrufe÷Abos):
+- **FinanzKopf** (Cartoon-Finanzfigur, 16,1K Abos): „Warum parkt Finanzkopf fremde Autos auf einem Schotterplatz?“ 188K in 3 T (62,6K/Tag, 11,7×); „Mit zwei Freunden 4.200 Euro im Winter“ 474K in 11 T (29×). Formel: Frage zur Figur im Titel + konkrete Euro-Rechnung + „Der Haken“ + „Beispielrechnung“. https://youtube.com/watch?v=22UjCouisiI
+- **Claude-TV-Welle** (CleanYourTV, Start 17.10.): Nick Automates 262K/5 T („Comment TV“), Worth Making (2,5K Abos) 156K/3 T = 61×, Hood Informatik 29K am 1. Tag. Fast jeder Kanal hat gewonnen.
+- Maxi Raabe „4 geheime Codes, mit denen ChatGPT dir beim Verkaufen hilft 🤫“ 25,6K/3 T (Codes /anzeige /preis /letzterpreis /katalogfoto) – Serienformel.
+- The Curious Plot (Egg-Selling-Mindset) 1,27 Mio/23 T, 111×; CoupleStickfigure 3,78 Mio/22 T.
+- Gegenbeweis: Niklas Volland „ChatGPT verkauft deine alten Sachen“ nur ~400/Tag → Thema allein reicht nicht.
+- Aufhänger: Meta-KI-Agent „Muse“ verkaufte auf Facebook Marketplace ohne Erlaubnis und gab Adresse weiter (TechRepublic, 28.09.). tagesschau „Kleinanzeigen: KI-Analyse stoppen“ 254K.
+Muster: 1) News-Welle in 72 h mitnehmen, 2) ein Gegenstand + sichtbares Ergebnis, 3) feste Serienformel, 4) Cartoon-Figur + Euro-Rechnung + Frage im Titel, 5) CTA mit Stichwort/Frage + Gratis-Anleitung.
+
+## SHORTLIST (29.10.2026, zusammengeführt)
+1. **„Warum verkauft der Hamster den Keller seiner Nachbarn?“** – FinanzKopf-Formel: Frage im Titel, Nebenjob „Ausmist-Service“ mit ehrlicher Beispielrechnung (Provision pro Teil), „Der Haken“ (Abholung, Ausfälle, Gewerbe/Steuer), Anzeigen-Profi als Werkzeug im Hintergrund. Wort: KELLER (Nutzen: Rechenvorlage + Skill-Infos).
+2. **„Eine KI hat seinen Sessel verkauft – und dem Käufer seine Adresse gegeben.“** – News (Meta Muse) → Hamster-Regel „KI schreibt, du klickst“ → echte Skill-Ausgabe als Entwurf. Wort: SICHER.
+3. **„Mach ein Foto von deinem alten ___ und tipp genau das ein.“** – Codes-Serie (/anzeige /preis /letzterpreis), jede Folge ein neuer Gegenstand, echte Skill-Ausgabe auf echtem Foto. Wort: CODES. Braucht echte Fotos von Jona.
+Alle: Hamster mit Persönlichkeit (reagiert, wettet, Deadpan), Untertitel, Keywords gesprochen + im Bild, ehrliche Zahlen, „Werbung (eigenes Produkt)“ wenn Skill-Link.
+
 ## 2026-10-29 – Scout B (deutsche Creator + Plattform-Regeln)
 - Vorbilder KI-Listen DE: @niklas_volland (IG ~340K, TikTok ~150K, +40K IG in 30 Tagen; Format „8 geniale KI-Tools … kostenlos ✅✅“, Link in Caption), @herr_tech (IG 577K, KI-Avatare). Reselling-Story-Vorbild: „Fustler“ (Flohmarkt-Fund + Preis-Reveal). Keine belegten DE-Vinted-Creator, kein DE-Claude-Creator außer TikTok-Funde oben.
 - TikTok: Watch-Time, Durchschauen, Rewatch, Shares am stärksten; Suche/Keywords in Caption + gesprochen + Bildtext; Videos > 1 Min. für Creator Rewards; **„Kommentier X“ kann als Engagement-Bait gelten** → CTA immer mit echtem Nutzen formulieren („…dann schick ich dir die Checkliste“).
