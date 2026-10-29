@@ -48,6 +48,8 @@ def _style_map(z):
             defaults.update(_ppr_info(p))
     for s in root.findall(f"{W}style"):
         sid = s.get(f"{W}styleId")
+        if s.get(f"{W}type") == "paragraph" and s.get(f"{W}default") in ("1", "true"):
+            defaults["para_style"] = sid
         n = s.find(f"{W}name")
         names[sid] = n.get(f"{W}val") if n is not None else sid
         b = s.find(f"{W}basedOn")
@@ -173,7 +175,7 @@ def read_docx(path):
             if ps is not None:
                 sid = ps.get(f"{W}val")
             direct = _ppr_info(ppr)
-        sid = sid or "Normal"
+        sid = sid or defaults.get("para_style") or "Normal"
         sname = names.get(sid, sid)
         line = direct.get("line", _resolve(sid, sppr, based, "line") or defaults.get("line", 1.0))
         jc = direct.get("jc", _resolve(sid, sppr, based, "jc") or "left")

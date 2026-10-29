@@ -189,6 +189,8 @@ def main():
         mk = p["text_marked"]
         for q in QUOTE_RE.finditer(mk):
             n_quotes += 1
+            if len(words(q.group(1))) < 4:
+                continue  # Eigennamen, Titel, Begriffe in Anführungszeichen
             rest = mk[q.end():]
             m2 = re.search(r"⁣FN(\d+)⁣", rest)
             if not m2 or len(rest[: m2.start()]) > 160:
@@ -221,6 +223,8 @@ def main():
     for fid, _, _ in order:
         for name, jahr in CITE_RE.findall(fns.get(fid, "")):
             name = re.sub(r"^(Vgl\.?|Eigene|Darstellung|Berechnung|Stand|Nach|Und|Abbildung)\s+", "", name.strip())
+            if name.split()[0] in ("Für", "Im", "In", "Seit", "Ab", "Bis", "Laut", "Von", "Bei", "Zwischen", "Ende", "Anfang", "Mitte", "Jahr", "Seite", "Tabelle", "Stand", "Daten", "Werte", "Wert", "Quelle", "Die", "Der", "Das", "Den", "Dem", "Ein", "Eine", "Bei"):
+                continue
             name = re.sub(r"^(nach|und)\s+", "", name)
             if name.lower() in ("vgl", "ebd", "abbildung", "eigene", "stand", "darstellung", "nach", "berechnung"):
                 continue
@@ -242,7 +246,12 @@ def main():
     if not lit:
         probleme.append("Kein Literaturverzeichnis gefunden (Überschrift „Literaturverzeichnis“ oder „Quellen…“).")
     else:
-        alpha = [re.sub(r"[^a-zäöüß]", "", e.lower())[:12] for e in lit]
+        import unicodedata
+        def key(e):
+            e = e.lower().replace("æ", "ae").replace("ð", "d").replace("þ", "th").replace("ø", "o").replace("ß", "ss")
+            e = unicodedata.normalize("NFKD", e)
+            return re.sub(r"[^a-z]", "", e)[:12]
+        alpha = [key(e) for e in lit]
         if alpha != sorted(alpha):
             hinweise.append("Literaturverzeichnis ist evtl. nicht alphabetisch sortiert.")
         ok.append(f"Literaturverzeichnis: {len(lit)} Einträge; {len(zitiert)} verschiedene Kurzbelege in Fußnoten.")
@@ -250,7 +259,7 @@ def main():
             probleme.append("In Fußnoten zitiert, im Literaturverzeichnis nicht gefunden (Heuristik, bitte prüfen): " + "; ".join(fehlt_im_lit[:20]))
         if nie_zitiert:
             hinweise.append("Im Literaturverzeichnis, aber in keiner Fußnote erkannt (Heuristik): " + " | ".join(nie_zitiert[:12]))
-        no_date = [e[:70] for e in lit if re.search(r"https?://|www\.", e) and not re.search(r"(?i)abgerufen|abruf|zugriff", e)]
+        no_date = [e[:70] for e in lit if re.search(r"https?://|www\.", e) and not re.search(r"(?i)abgerufen|abruf|zugriff", e) and not re.search(r"https?://(dx\.)?doi\.org/\S+\.?\s*$", e.strip())]
         if no_date:
             probleme.append(f"{len(no_date)} Internetquelle(n) ohne Abrufdatum: " + " | ".join(no_date[:6]))
 

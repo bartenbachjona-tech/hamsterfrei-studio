@@ -4,6 +4,11 @@ Die Tagesproduktion nimmt immer die **oberste Folge mit Status `offen`**. Das Gr
 
 | Nr | Thema | Wort | Werbung | Status |
 |---|---|---|---|---|
+| S1 | **Seminar-Offensive:** „Bayern, 13. Klasse: Diese 5 Fehler in deiner Seminararbeit kosten dich Punkte“ (Inhalt + Regeln: docs/plaene/SEMINAR.md) | SEMINAR | ja (eigenes Produkt) | offen – VORRANG bis 10.11. |
+| S2 | **Seminar-Offensive:** „Im Prüfungsgespräch wirst du gefragt, wie du KI benutzt hast“ (KMS 02.02.2026, Coach-Demo) | SEMINAR | ja (eigenes Produkt) | offen |
+| S3 | **Seminar-Offensive:** Echte Demo – Jonas Arbeit im Endcheck (nur mit Jonas OK zu gezeigten Ausschnitten) | SEMINAR | ja (eigenes Produkt) | wartet auf OK |
+| S4 | **Seminar-Offensive:** Belege-Zeitraffer – Screenshots → Beleg-PDF | SEMINAR | ja (eigenes Produkt) | offen |
+| S5 | **Seminar-Offensive:** Countdown „Noch X Tage“ – ein Formalia-Tipp pro Tag | SEMINAR | ja (eigenes Produkt) | offen (täglich bis 10.11.) |
 | 01 | Ein Produkt, ein Shop (Sonnenuntergangs-Lampe, Shopify) | SHOP | ja (Shopify) | veröffentlicht 29.10.2026 |
 | T1 | **Trend:** Warum verkauft der Hamster den Keller seiner Nachbarn? (FinanzKopf-Formel, Beispielrechnung, siehe TRENDS.md Shortlist 1) | KELLER | nur wenn Skill-Link | offen |
 | T2 | **Trend:** Eine KI hat seinen Sessel verkauft – und seine Adresse weitergegeben (Meta Muse, Shortlist 2) | SICHER | ja, wenn Skill gezeigt | offen |
