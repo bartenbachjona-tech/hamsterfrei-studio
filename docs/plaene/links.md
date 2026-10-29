@@ -5,9 +5,16 @@ Nur Links eintragen, die Jona ausdrücklich freigegeben hat. Affiliate-Links in 
 | Wort | Link | Kennzeichnung | freigegeben am |
 |---|---|---|---|
 | SHOP | – (noch keiner, Shopify-Affiliate noch nicht beantragt/bestätigt) | – | – |
+| SEMINAR | https://bartenbachjona-tech.github.io/hamsterfrei-site/seminararbeit-profi.html (Bestellformular https://www.checkout-ds24.com/product/757079) | „Werbung: mein eigenes Produkt“ | erst aktiv nach Digistore-Freigabe |
 | SKILL | https://bartenbachjona-tech.github.io/hamsterfrei-site/ (Verkaufsseite; Bestellformular https://www.checkout-ds24.com/product/757063) | „Werbung: mein eigenes Produkt“ | erst aktiv, wenn Seite online + Digistore-Freigabe |
 
 ## Verkaufsseite
 - Quelle: `site/` im Studio-Repo, Build: `python3 site/build.py <DIGISTORE_LINK>` → schreibt nach ../hamsterfrei-site (öffentliches Repo, GitHub Pages).
 - Adresse (sobald Pages aktiv): https://bartenbachjona-tech.github.io/hamsterfrei-site/
 - Digistore24-Bestell-Link: https://www.checkout-ds24.com/product/757063 (Produkt-ID 757063).
+
+## Digistore-Stand (30.10.2026)
+- Anzeigen-Profi 757063 (9,90 €) und Seminararbeit-Profi 757079 (9,90 €, Plan 1545912; 37-€-Plan 1545910 deaktiviert; Datei-Paket 153266).
+- Beide **nicht genehmigt** → Bestellformular nur mit Testzahlung.
+- Verkaufsseite auf github.io wird abgelehnt (Fehler SLPDM1: Domain von anderem User belegt) → eigene Domain nötig (z. B. hamsterfrei.de), dann GitHub-Pages-Custom-Domain.
+- Freigabe-Checkliste muss Jona selbst bestätigen (Testkauf, Impressum, Seriosität).
