@@ -28,8 +28,8 @@ const at = (w: string, after = 0): number => {
 };
 const idx = (w: string, after = 0) => WORDS.findIndex((x, k) => k >= after && norm(x.text).startsWith(w));
 
-const iKeine = idx("keine");
 const iStell = idx("stell");
+const iDann = idx("dann");
 const M = {
   abgabe: at("abgabe"),
   angefangen: at("noch"),
@@ -41,16 +41,23 @@ const M = {
   schreibst: at("schreibst", iStell),
   fragen: at("claude", idx("schreibst")),
   nummern: at("nummern"),
-  prueft: at("dann"),
-  fn: at("fußnoten", idx("dann")),
+  schreibt: at("dann"),
+  kapitel: at("kapitel", iDann),
+  quellenS: at("quellen", iDann),
+  fn: at("fußnoten", iDann),
+  diagramm: at("aus", iDann),
+  diagramme: at("diagramme"),
+  prueft: at("er", idx("diagramme")),
   zitate: at("zitate"),
   lit: at("literatur"),
   formalia: at("formalia"),
-  quellen: at("quellen", idx("formalia")),
-  plan: at("plan"),
-  screenshots: at("aus", idx("plan")),
+  screenshots: at("aus", idx("formalia")),
   belege: at("quellenbelege"),
-  uebt: at("und", idx("quellenbelege")),
+  endcheck: at("und", idx("quellenbelege")),
+  plagiate: at("plagiate"),
+  floskeln: at("ki-", idx("plagiate")),
+  klingt: at("klingt"),
+  uebt: at("dann", idx("klingt")),
   eigene: at("eigenen"),
   skill: at("der", idx("eigenen")),
   kostenlos: at("kostenlosen"),
@@ -58,7 +65,6 @@ const M = {
   profil: at("profil"),
   end: WORDS[WORDS.length - 1].end,
 };
-void iKeine;
 export const SEMINAR01_SECONDS = Math.ceil((M.end + 2.2) * 10) / 10;
 
 // ---------- Helfer ----------
@@ -217,7 +223,7 @@ const Check: React.FC<{ show: number; label: string; status: "ok" | "warn" | "ba
 const Screen: React.FC = () => {
   const { t, fps } = useT();
   const stage =
-    t < M.fragen ? "upload" : t < M.prueft ? "fragen" : t < M.screenshots ? "check" : t < M.uebt ? "belege" : t < M.skill ? "pruefung" : "ende";
+    t < M.fragen ? "upload" : t < M.schreibt ? "fragen" : t < M.diagramm ? "schreiben" : t < M.prueft ? "diagramm" : t < M.screenshots ? "check" : t < M.endcheck ? "belege" : t < M.uebt ? "endcheck" : t < M.skill ? "pruefung" : "ende";
   const appear = (s: number) => pop(t, s, fps);
   const f = (a: number) => fade(t, a, a + 0.35);
 
@@ -239,7 +245,7 @@ const Screen: React.FC = () => {
             </div>
             {t >= M.schreibst && (
               <Bubble show={f(M.schreibst)} me>
-                <Typed text="Abgabe am 10.11. – check alles!" start={M.schreibst} dur={1.3} />
+                <Typed text="Abgabe am 10.11. – hilf mir!" start={M.schreibst} dur={1.2} />
               </Bubble>
             )}
           </>
@@ -253,16 +259,51 @@ const Screen: React.FC = () => {
                 <br />2. Leitfach? 3. Merkblatt dabei? 4. KI-Regel deiner Lehrkraft?
               </div>
             </Bubble>
-            {t >= M.nummern - 0.6 && (
-              <Bubble show={f(M.nummern - 0.6)} me style={{ fontSize: 44, fontWeight: 700 }}>
-                <Typed text="1c  2 Geo  3 ja  4a" start={M.nummern - 0.6} dur={0.9} />
+            {t >= M.nummern - 0.7 && (
+              <Bubble show={f(M.nummern - 0.7)} me style={{ fontSize: 44, fontWeight: 700 }}>
+                <Typed text="1c  2 Geo  3 ja  4a" start={M.nummern - 0.7} dur={0.8} />
               </Bubble>
             )}
           </>
         )}
+        {stage === "schreiben" && (
+          <div style={{ flex: 1, background: "#fff", border: "3px solid #E7D9C2", borderRadius: 14, padding: "26px 34px", position: "relative" }}>
+            <div style={{ fontSize: 42, fontWeight: 700, opacity: f(M.schreibt) }}>4.2 Auswirkungen auf die Bevölkerung</div>
+            <div style={{ fontSize: 34, lineHeight: 1.5, marginTop: 14 }}>
+              <Typed text="Die Zahl der Ferienwohnungen in Reykjavík stieg zwischen 2014 und 2017 stark an." start={M.kapitel - 0.3} dur={1.6} />
+              {t >= M.quellenS && <sup style={{ color: NAVY, fontWeight: 700, opacity: f(M.quellenS) }}>12</sup>}{" "}
+              <Typed text="Laut Mermet betraf das vor allem die Innenstadt." start={M.quellenS + 0.2} dur={1.2} />
+              {t >= M.fn && <sup style={{ color: NAVY, fontWeight: 700 }}>13</sup>}
+            </div>
+            <div style={{ position: "absolute", left: 34, right: 34, bottom: 22, borderTop: "2px solid #CFC2AE", paddingTop: 10, fontSize: 26, color: MUTED, opacity: f(M.fn) }}>
+              <sup>12</sup> Vgl. Elíasson/Ragnarsson 2018, S. 7.&nbsp;&nbsp;<sup>13</sup> Vgl. Mermet 2019, S. 21.
+            </div>
+            <div style={{ position: "absolute", right: 34, bottom: 90, background: GREEN, color: "#fff", borderRadius: 999, padding: "6px 18px", fontSize: 26, fontWeight: 600, scale: String(appear(M.quellenS)), opacity: t >= M.quellenS ? 1 : 0 }}>✓ echte Quelle, Seite geprüft</div>
+          </div>
+        )}
+        {stage === "diagramm" && (
+          <div style={{ flex: 1, background: "#fff", border: "3px solid #E7D9C2", borderRadius: 14, padding: "24px 34px", display: "flex", flexDirection: "column" }}>
+            <div style={{ display: "flex", alignItems: "flex-end", gap: 26, height: 380, borderBottom: `4px solid ${INK}`, paddingLeft: 10 }}>
+              {[0.65, 0.78, 0.97, 1.26, 1.77, 2.2, 2.32].map((v, i) => {
+                const g = interpolate(t, [M.diagramm + 0.3 + i * 0.12, M.diagramm + 0.7 + i * 0.12], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+                return (
+                  <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end", height: "100%" }}>
+                    <div style={{ fontSize: 24, color: MUTED, opacity: g }}>{v.toString().replace(".", ",")}</div>
+                    <div style={{ width: "100%", height: `${(v / 2.4) * 320 * g}px`, background: i > 4 ? "#2a78d6" : "#9cc2ee", borderRadius: "8px 8px 0 0" }} />
+                  </div>
+                );
+              })}
+            </div>
+            <div style={{ display: "flex", gap: 26, paddingLeft: 10, fontSize: 24, color: MUTED, marginTop: 6 }}>
+              {["2012", "2013", "2014", "2015", "2016", "2017", "2018"].map((y) => <div key={y} style={{ flex: 1, textAlign: "center" }}>{y}</div>)}
+            </div>
+            <div style={{ fontSize: 28, fontStyle: "italic", marginTop: 18, opacity: f(M.diagramme) }}>Abbildung 2: Besucher in Island (in Mio.)</div>
+            <div style={{ fontSize: 24, color: MUTED, marginTop: 4, opacity: f(M.diagramme + 0.3) }}>Achsen beschriftet · Quelle in der Fußnote · Dezimalkomma ✓</div>
+          </div>
+        )}
         {stage === "check" && (
           <>
-            <div style={{ fontSize: 44, fontWeight: 700 }}>Endcheck · deine Arbeit</div>
+            <div style={{ fontSize: 44, fontWeight: 700 }}>Check · deine Arbeit</div>
             <div style={{ display: "flex", gap: 12 }}>
               {[
                 { c: RED, n: "3", l: "Muss" },
@@ -276,18 +317,26 @@ const Screen: React.FC = () => {
               ))}
             </div>
             <div>
-              <Check show={f(M.fn)} label="Fußnoten" status="bad" note="Nr. 12: „Vgl.“ bei Zitat" />
               <Check show={f(M.zitate)} label="Zitate" status="ok" note="Wortlaut stimmt" />
-              <Check show={f(M.lit)} label="Literaturverz." status="warn" note="„Müller 2021“ fehlt" />
-              <Check show={f(M.formalia)} label="Formalia" status="ok" note="1,5 Zeilen · Ränder ok" />
-              <Check show={f(M.quellen)} label="Quellen-Abgleich" status="warn" note="2 Sätze zu nah dran" />
+              <Check show={f(M.lit)} label="Literaturverz." status="bad" note="„Müller 2021“ fehlt" />
+              <Check show={f(M.formalia)} label="Formalia" status="warn" note="Fußnote 12: „Vgl.“ bei Zitat" />
             </div>
-            <div style={{ display: "flex", gap: 10, alignItems: "center", fontSize: 32, opacity: f(M.plan), marginTop: 6 }}>
-              <b>Plan bis 10.11.:</b>
-              {["Fr Fußnoten", "Sa Belege", "So Endcheck"].map((d) => (
-                <span key={d} style={{ background: "#F1E6D3", borderRadius: 12, padding: "4px 12px" }}>{d}</span>
-              ))}
+          </>
+        )}
+        {stage === "endcheck" && (
+          <>
+            <div style={{ fontSize: 44, fontWeight: 700 }}>Endcheck vor der Abgabe</div>
+            <div>
+              <Check show={f(M.plagiate)} label="Plagiats-Check" status="ok" note="keine ungekennzeichneten Übernahmen" />
+              <Check show={f(M.plagiate + 0.4)} label="Zu nah an Quelle" status="warn" note="2 Sätze → neu formuliert" />
+              <Check show={f(M.floskeln)} label="KI-Floskeln" status="warn" note="4 gefunden → ersetzt" />
             </div>
+            <div style={{ fontSize: 34, lineHeight: 1.5, background: "#fff", border: "3px solid #E7D9C2", borderRadius: 14, padding: "14px 22px", opacity: f(M.floskeln + 0.3) }}>
+              <span style={{ textDecoration: "line-through", color: RED }}>Darüber hinaus spielt der Tourismus eine zentrale Rolle.</span>
+              <br />
+              <span style={{ color: GREEN, fontWeight: 600 }}>2019 kamen rund 2 Mio. Touristen nach Island.</span>
+            </div>
+            <div style={{ alignSelf: "center", marginTop: 6, fontSize: 38, fontWeight: 700, background: GREEN, color: "#fff", borderRadius: 999, padding: "8px 28px", scale: String(appear(M.klingt)), opacity: t >= M.klingt ? 1 : 0 }}>✓ sauber · klingt nach dir</div>
           </>
         )}
         {stage === "belege" && (
