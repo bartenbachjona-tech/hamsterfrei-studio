@@ -21,9 +21,10 @@
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
 .wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
-.narrow{max-width:672px}
+.narrow{max-width:1080px}
+.narrow>*{max-width:640px}
 h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
-h1{font-size:48px;font-weight:700}
+h1{font-size:46px;font-weight:700}
 h2{font-size:32px;font-weight:600}
 h3{font-size:20px;font-weight:600}
 p{margin:0}
@@ -38,7 +39,7 @@ header{padding-block:24px}
 .brand b{font-weight:700}.brand span{color:var(--green)}
 
 /* Hero */
-.hero{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:center;padding-block:24px 96px}
+.hero{display:grid;grid-template-columns:6fr 6fr;gap:48px;align-items:center;padding-block:24px 96px}
 .hero>*{min-width:0}
 .hero .sub{font-size:19px;margin-top:16px;max-width:30em}
 .buybox{margin-top:40px;display:grid;gap:16px}
@@ -89,7 +90,7 @@ section h2{margin-bottom:24px}
 .pack li{display:grid;grid-template-columns:24px 1fr;gap:8px}
 .pack li svg{width:24px;height:24px;color:var(--green);margin-top:1px}
 .pack li b{display:block}
-.pack li span{color:var(--muted);font-size:15px}
+.pack li span{color:var(--muted);font-size:15px;max-width:34em}
 .cta2{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
 .steps li{counter-increment:s;display:grid;grid-template-columns:32px 1fr;gap:16px;align-items:start}
@@ -106,8 +107,8 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";color:var(--green);font-size:22px;line-height:1}
 details[open] summary::after{content:"–"}
 details p{margin-top:8px;color:var(--ink)}
-footer{border-top:1px solid var(--line);padding-block:40px 120px}
-footer nav{display:flex;flex-wrap:wrap;gap:8px 24px;margin-bottom:16px;font-weight:600}
+footer{padding-block:0 40px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 24px;margin-bottom:16px;font-weight:600;border-top:1px solid var(--line);padding-top:24px}
 footer p{font-size:14px;color:var(--muted)}
 
 /* Sticky Kaufleiste (nur Handy) */
@@ -121,7 +122,9 @@ footer p{font-size:14px;color:var(--muted)}
   .hero .sub{font-size:17px}
   .buybox{margin-top:24px}
   .stage{padding-left:0;padding-bottom:40px}
-  .mascot{width:72px;left:-4px;bottom:-8px}
+  .stage{padding-top:48px}
+  .mascot{left:auto;right:8px;top:-6px;bottom:auto;width:64px}
+  footer{padding-bottom:120px}
   .canvas{padding:24px 20px}
   .canvas::before{left:-9px;right:-9px}
   .arrow{margin-left:72px}
@@ -190,7 +193,7 @@ footer p{font-size:14px;color:var(--muted)}
         <ul>
           <li>{{ICON_FILE}}<div><b>Anzeigen-Profi (ZIP-Datei)</b><span>Einmal in dein Claude-Konto hochladen, danach so oft nutzen, wie du willst.</span></div></li>
           <li>{{ICON_DOC}}<div><b>Anleitung (PDF)</b><span>Schritt für Schritt, in etwa zwei Minuten eingerichtet.</span></div></li>
-          <li>{{ICON_CHECK}}<div><b>Damit bekommst du für jeden Gegenstand</b><span>Drei Preise mit Vergleichswerten, Titel und Text zum Kopieren, Kategorie und Zustand, ob Kleinanzeigen oder Vinted besser passt, fertige Antworten auf „Letzter Preis?“ und Warnungen vor Betrugsmaschen.</span></div></li>
+          <li>{{ICON_CHECK}}<div><b>Damit bekommst du für jeden Gegenstand</b><span>Drei Preise, fertigen Text, Kategorie, Plattform-Tipp und Antworten auf „Letzter Preis?“.</span></div></li>
         </ul>
       </div>
       <div>
