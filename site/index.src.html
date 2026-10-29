@@ -1,179 +1,248 @@
-<title>Hamsterfrei Skills</title>
+<title>Anzeigen-Profi</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Claude-Skills von Hamsterfrei: kleine Helfer, die dir Arbeit abnehmen. Erster Skill: Anzeigen-Profi für Kleinanzeigen und Vinted.">
+<meta name="description" content="Anzeigen-Profi von Hamsterfrei: ein Skill für dein Claude-Konto, der aus Handyfotos fertige Kleinanzeigen- und Vinted-Anzeigen mit Preis-Check macht. 9,90 € einmalig.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
 <style>
-/* Layout: Leinwand-Prinzip wie im Video – heller Raum, eine große "Leinwand"-Karte mit dem Skill, Hamster als Erklärer daneben */
+/* Layout: eine Seite, ein Produkt. Hero = Text links, Leinwand mit Vorher/Nachher rechts, Hamster zeigt darauf. Darunter einspaltig 640px. */
 :root{
-  --bg:#FFF8EC; --floor:#F5E7CF; --ink:#3A2618; --muted:#6B5444; --line:#EAD6B4;
-  --card:#FFFFFF; --green:#23885A; --green-ink:#FFFFFF; --navy:#24426B; --soft:#E8F4EC; --warn:#B45309;
-  --display:"Fredoka", "Trebuchet MS", system-ui, sans-serif;
-  --body:"Nunito Sans", "Segoe UI", system-ui, sans-serif;
+  --bg:#FFF8EC; --floor:#F5EAD7; --card:#FFFFFF; --ink:#3A2618; --muted:#6B5444; --line:#EAD9BD;
+  --green:#23885A; --green-hover:#1C7049; --on-green:#FFFFFF; --navy:#24426B;
+  --display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
+  --body:"Nunito Sans","Segoe UI",system-ui,sans-serif;
+  --shadow:0 20px 40px -20px rgb(58 38 24 / .28);
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#1E1712; --floor:#271E17; --ink:#F6EBDD; --muted:#C9B39E; --line:#3D3026;
-  --card:#2A211A; --green:#3DBE7F; --green-ink:#10241A; --navy:#9DB8E0; --soft:#1F3328; --warn:#F0A04B; color-scheme:dark }}
+  --bg:#1E1712; --floor:#2A2019; --card:#2F251D; --ink:#F6EBDD; --muted:#C9B39E; --line:#43352A;
+  --green:#3DBE7F; --green-hover:#52CF91; --on-green:#10241A; --navy:#9DB8E0; --shadow:0 20px 40px -20px rgb(0 0 0 / .6); color-scheme:dark }}
 :root[data-theme="dark"]{
-  --bg:#1E1712; --floor:#271E17; --ink:#F6EBDD; --muted:#C9B39E; --line:#3D3026;
-  --card:#2A211A; --green:#3DBE7F; --green-ink:#10241A; --navy:#9DB8E0; --soft:#1F3328; --warn:#F0A04B; color-scheme:dark }
+  --bg:#1E1712; --floor:#2A2019; --card:#2F251D; --ink:#F6EBDD; --muted:#C9B39E; --line:#43352A;
+  --green:#3DBE7F; --green-hover:#52CF91; --on-green:#10241A; --navy:#9DB8E0; --shadow:0 20px 40px -20px rgb(0 0 0 / .6); color-scheme:dark }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
-.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
-h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.narrow{max-width:672px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:48px;font-weight:700}
+h2{font-size:32px;font-weight:600}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+.small{font-size:14px;color:var(--muted);font-weight:600}
 a{color:var(--green)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:8px}
-header{padding-block:20px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
-.brand img{width:48px;height:48px;border-radius:50%}
-.brand b{font-family:var(--display);font-size:26px;font-weight:700}
-.brand b span{color:var(--green)}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding-block:28px 40px}
-.hero h1{font-size:clamp(34px,5.4vw,56px);font-weight:700}
-.hero h1 em{font-style:normal;color:var(--green)}
-.hero p{font-size:19px;color:var(--muted);max-width:34em;margin:16px 0 0}
-.hero-art{display:flex;justify-content:center}
-.hero-art img{width:min(300px,70vw);height:auto;border-radius:50%;background:var(--soft)}
-.stage{background:var(--floor);border-top:6px solid var(--line);padding-block:48px 56px}
-.screen{background:var(--card);border:6px solid var(--ink);border-top:none;border-radius:0 0 26px 26px;position:relative;padding:28px clamp(16px,4vw,40px) 32px}
-.screen::before{content:"";position:absolute;left:-26px;right:-26px;top:-14px;height:20px;background:var(--ink);border-radius:12px}
-.skill{display:grid;grid-template-columns:1fr 1fr;gap:36px}
-.skill>*{min-width:0}
-.tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);background:var(--soft);padding:3px 10px;border-radius:99px}
-.skill h2{font-size:clamp(28px,4vw,40px);margin-top:12px}
-.skill .lead{color:var(--muted);margin:10px 0 18px}
-.gets{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:8px}
-.gets li{padding-left:28px;position:relative}
-.gets li::before{content:"";position:absolute;left:4px;top:.55em;width:12px;height:7px;border-left:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(-45deg)}
-.buy{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
-.price{font-family:var(--display);font-size:38px;font-weight:700}
-.price small{display:block;font-family:var(--body);font-size:14px;font-weight:600;color:var(--muted);line-height:1.2}
-.btn{display:inline-block;background:var(--green);color:var(--green-ink);font-family:var(--display);font-size:20px;font-weight:600;text-decoration:none;padding:13px 26px;border-radius:14px;border:3px solid var(--ink);box-shadow:0 4px 0 var(--ink);transition:transform .12s, box-shadow .12s}
-.btn:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--ink)}
-.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
-.note{font-size:14px;color:var(--muted);margin-top:12px}
-/* Chat-Demo */
-.chat{display:grid;gap:12px;font-size:15px}
-.msg{max-width:92%;padding:10px 14px;border-radius:16px;line-height:1.45}
-.me{justify-self:end;background:var(--navy);color:var(--card);border-bottom-right-radius:4px}
-.bot{justify-self:start;background:var(--bg);border:2px solid var(--line);border-bottom-left-radius:4px}
-.photos{display:flex;gap:6px;margin-bottom:6px}
-.photos span{width:44px;height:44px;border-radius:8px;background:color-mix(in srgb, var(--card) 30%, transparent);display:grid;place-items:center;font-size:11px;font-weight:700}
-.ad{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:12px 14px;margin-top:8px}
-.ad b{font-family:var(--display);font-size:16px;display:block}
-.ad .p{font-variant-numeric:tabular-nums;color:var(--green);font-weight:700}
-.ad pre{white-space:pre-wrap;font-family:var(--body);font-size:14px;margin:6px 0 0;color:var(--muted)}
-.chat-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-section.block{padding-block:48px}
-section.block h2{font-size:clamp(26px,3.4vw,34px);margin-bottom:20px}
-.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
-.steps li{counter-increment:s;padding-top:52px;position:relative;min-width:0}
-.steps li::before{content:counter(s);position:absolute;top:0;left:0;width:40px;height:40px;border-radius:50%;background:var(--green);color:var(--green-ink);font-family:var(--display);font-weight:700;font-size:20px;display:grid;place-items:center}
-.steps h3{font-size:20px;margin-bottom:6px}
-.steps p{margin:0;color:var(--muted)}
-.need{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.need div{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:18px 20px;min-width:0}
-.need h3{font-size:19px;margin-bottom:6px}
-.need p{margin:0;color:var(--muted)}
-details{border-bottom:2px solid var(--line);padding-block:14px}
-summary{cursor:pointer;font-family:var(--display);font-size:19px;font-weight:600}
-details p{margin:8px 0 0;color:var(--muted);max-width:60em}
-.soon{display:flex;flex-wrap:wrap;gap:10px}
-.soon span{border:2px dashed var(--line);border-radius:99px;padding:6px 14px;color:var(--muted);font-weight:600}
-footer{border-top:2px solid var(--line);padding-block:28px;font-size:14px;color:var(--muted)}
-footer nav{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:10px}
-@media (max-width:760px){
-  .hero{grid-template-columns:1fr}
-  .hero-art{order:-1;justify-content:flex-start}
-  .hero-art img{width:120px}
-  .skill,.need{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr}
-  .screen::before{left:-14px;right:-14px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:12px}
+
+/* Kopf */
+header{padding-block:24px}
+.brand{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-family:var(--display);font-size:22px;font-weight:700}
+.brand img{width:40px;height:40px;border-radius:50%}
+.brand b{font-weight:700}.brand span{color:var(--green)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:center;padding-block:24px 96px}
+.hero>*{min-width:0}
+.hero .sub{font-size:19px;margin-top:16px;max-width:30em}
+.buybox{margin-top:40px;display:grid;gap:16px}
+.pricerow{display:flex;align-items:center;gap:16px 24px;flex-wrap:wrap}
+.price{font-family:var(--display);font-size:36px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 28px;border-radius:12px;background:var(--green);color:var(--on-green);font-family:var(--display);font-size:18px;font-weight:600;text-decoration:none;box-shadow:0 1px 2px rgb(0 0 0 / .12);transition:background .15s}
+.btn:hover{background:var(--green-hover)}
+.btn.soon{background:var(--floor);color:var(--ink);box-shadow:none;cursor:default}
+.facts{display:flex;flex-wrap:wrap;gap:8px 16px}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.facts span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+
+/* Leinwand */
+.stage{position:relative;padding-left:92px;padding-bottom:24px}
+.canvas{position:relative;background:var(--card);border:3px solid var(--ink);border-top:none;border-radius:0 0 16px 16px;box-shadow:var(--shadow);padding:40px}
+.canvas::before{content:"";position:absolute;left:-15px;right:-15px;top:-7px;height:14px;background:var(--ink);border-radius:8px}
+.mascot{position:absolute;left:0;bottom:0;width:112px;height:auto;z-index:2}
+.flow{display:grid;grid-template-columns:1fr;gap:8px}
+.send{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.send .thumbs{grid-template-columns:repeat(3,56px)}
+.send .said{margin-top:0}
+.flow>*{min-width:0}
+.label{font-family:var(--display);font-weight:600;font-size:16px;margin-bottom:8px}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.thumbs svg{width:100%;height:auto;border-radius:8px;background:var(--bg);display:block}
+.said{margin-top:8px;font-size:15px;background:var(--bg);border-radius:12px;padding:8px 12px}
+.arrow{justify-self:start;margin-left:72px;color:var(--green);transform:rotate(90deg)}
+.arrow svg{width:32px;height:32px;display:block}
+.result .title{font-family:var(--display);font-size:20px;font-weight:600;line-height:1.25}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.tile{background:var(--bg);border-radius:12px;padding:8px 12px}
+.tile small{display:block;font-size:12px;font-weight:700;color:var(--muted)}
+.tile b{font-family:var(--display);font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}
+.tile.main{background:var(--green);color:var(--on-green)}
+.tile.main small{color:var(--on-green);opacity:.85}
+.desc{margin-top:16px;font-size:15px;line-height:1.55;border-top:1px solid var(--line);padding-top:16px;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{font-size:13px;font-weight:700;color:var(--muted);background:var(--bg);border-radius:999px;padding:4px 10px}
+
+/* Sektionen */
+section{padding-block:0 96px}
+section h2{margin-bottom:24px}
+.pack{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pack>div{background:var(--floor);border-radius:16px;padding:24px;min-width:0}
+.pack h3{margin-bottom:16px}
+.pack ul{margin:0;padding:0;list-style:none;display:grid;gap:16px}
+.pack li{display:grid;grid-template-columns:24px 1fr;gap:8px}
+.pack li svg{width:24px;height:24px;color:var(--green);margin-top:1px}
+.pack li b{display:block}
+.pack li span{color:var(--muted);font-size:15px}
+.cta2{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:32px 1fr;gap:16px;align-items:start}
+.steps li::before{content:counter(s);width:32px;height:32px;border-radius:50%;background:var(--green);color:var(--on-green);font-family:var(--display);font-weight:600;display:grid;place-items:center}
+.steps b{display:block;font-family:var(--display);font-size:18px;font-weight:600}
+.steps span{color:var(--muted);font-size:15px}
+.trust{display:grid;grid-template-columns:72px 1fr;gap:24px;align-items:center;background:var(--floor);border-radius:16px;padding:24px}
+.trust img{width:72px;height:72px;border-radius:50%}
+.trust p+p{margin-top:8px}
+details{border-bottom:1px solid var(--line);padding-block:16px}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-size:18px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--green);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:8px;color:var(--ink)}
+footer{border-top:1px solid var(--line);padding-block:40px 120px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 24px;margin-bottom:16px;font-weight:600}
+footer p{font-size:14px;color:var(--muted)}
+
+/* Sticky Kaufleiste (nur Handy) */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;align-items:center;justify-content:space-between;gap:16px;background:var(--card);border-top:1px solid var(--line);padding:12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px))}
+.bar .price{font-size:24px}
+.bar .btn{height:44px;padding:0 20px;font-size:16px}
+
+@media (max-width:860px){
+  h1{font-size:34px} h2{font-size:26px} body{font-size:16px}
+  .hero{grid-template-columns:1fr;gap:40px;padding-bottom:64px}
+  .hero .sub{font-size:17px}
+  .buybox{margin-top:24px}
+  .stage{padding-left:0;padding-bottom:40px}
+  .mascot{width:72px;left:-4px;bottom:-8px}
+  .canvas{padding:24px 20px}
+  .canvas::before{left:-9px;right:-9px}
+  .arrow{margin-left:72px}
+  .tile{padding:8px}
+  .tile b{font-size:16px}
+  .desc{-webkit-line-clamp:4}
+  section{padding-bottom:64px}
+  .pack,.steps{grid-template-columns:1fr}
+  .steps{gap:16px}
+  .trust{grid-template-columns:56px 1fr;gap:16px}
+  .trust img{width:56px;height:56px}
+  .bar.show{display:flex}
 }
 @media (prefers-reduced-motion:reduce){.btn{transition:none}}
 </style>
 
 <header class="wrap">
-  <a class="brand" href="#top" aria-label="Hamsterfrei Startseite"><img src="{{HAMSTER}}" alt=""><b>Hamster<span>frei</span></b></a>
+  <a class="brand" href="#top" aria-label="Hamsterfrei"><img src="{{HAMSTER}}" alt=""><b>Hamster<span>frei</span></b></a>
 </header>
 
 <main id="top">
   <div class="wrap hero">
     <div>
-      <h1>Claude-Skills, die dir <em>Kleinkram abnehmen</em></h1>
-      <p>Einmal kaufen, in dein eigenes Claude-Konto hochladen, immer wieder benutzen. Der Hamster aus den Videos baut dir die Helfer – du klickst am Ende nur noch selbst.</p>
+      <h1>Aus deinen Handyfotos wird eine fertige Verkaufsanzeige.</h1>
+      <p class="sub">Der <b>Anzeigen-Profi</b> ist ein Zusatz (Skill) für den KI-Assistenten Claude. Fotos schicken, bis zu drei kurze Fragen beantworten – und du bekommst Preisvorschlag, Titel und Beschreibung für Kleinanzeigen oder Vinted zum Kopieren.</p>
+      <div class="buybox" id="kaufen">
+        <div class="pricerow">
+          <span class="price">9,90&nbsp;€</span>
+          <a class="btn {{BUY_CLASS}}" href="{{BUY_ANZEIGEN}}" {{BUY_ATTRS}}>{{BUY_LABEL}}</a>
+        </div>
+        <div class="facts small"><span>einmalig, kein Abo</span><span>läuft in deinem Claude-Konto, auch im kostenlosen</span><span>Download sofort danach</span></div>
+      </div>
     </div>
-    <div class="hero-art"><img src="{{HAMSTER}}" alt="Der Hamsterfrei-Hamster mit Krawatte und Zeigestab"></div>
-  </div>
 
-  <div class="stage" id="anzeigen-profi">
-    <div class="wrap">
-      <div class="screen">
-        <div class="skill">
+    <div class="stage" aria-label="Beispiel: von drei Fotos zur fertigen Anzeige">
+      <div class="canvas">
+        <div class="flow">
           <div>
-            <span class="tag">Skill 1 · Verkaufen</span>
-            <h2>Anzeigen-Profi</h2>
-            <p class="lead">Fotos rein, Anzeige raus. Für alles, was du auf Kleinanzeigen oder Vinted loswerden willst.</p>
-            <ul class="gets">
-              <li>Höchstens drei kurze Rückfragen statt langem Formular</li>
-              <li>Preis mit echten Vergleichswerten: Anzeigenpreis, realistisch, Untergrenze</li>
-              <li>Titel und Beschreibung zum Kopieren, Mängel ehrlich drin</li>
-              <li>Kategorie, Zustand, Versandgröße und welche Plattform besser passt</li>
-              <li>Fertige Antworten auf „Letzter Preis?“ und Co. – plus Warnung vor Betrugsmaschen</li>
-            </ul>
-            <div class="buy">
-              <div class="price">9,90 €<small>einmalig · Einführungspreis</small></div>
-              <a class="btn" id="buy-anzeigen" href="{{BUY_ANZEIGEN}}" rel="noopener" target="_blank" {{BUY_DISABLED}}>Jetzt holen</a>
-            </div>
-            <p class="note">Sofort-Download: Skill-Datei + Anleitung. Bezahlung und Rechnung über Digistore24.</p>
+            <p class="label">Du schickst</p>
+            <div class="send"><div class="thumbs" aria-hidden="true">{{THUMBS}}</div><p class="said">„Will ich loswerden.“</p></div>
           </div>
-          <div class="chat" aria-label="Beispiel: So sieht ein Durchlauf aus">
-            <span class="chat-label">Beispiel</span>
-            <div class="msg me"><div class="photos"><span>Foto 1</span><span>Foto 2</span><span>Foto 3</span></div>Will ich loswerden.</div>
-            <div class="msg bot">{{EX_QUESTIONS}}</div>
-            <div class="msg me">{{EX_ANSWER}}</div>
-            <div class="msg bot">{{EX_RESULT_INTRO}}
-              <div class="ad"><b>{{EX_TITLE}}</b><span class="p">{{EX_PRICE}}</span><pre>{{EX_TEXT}}</pre></div>
+          <div class="arrow" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16h21M18 8l8 8-8 8"/></svg></div>
+          <div class="result">
+            <p class="label">Du bekommst</p>
+            <p class="title">Sony WH-1000XM4 Noise-Cancelling Kopfhörer schwarz mit Etui</p>
+            <div class="tiles">
+              <div class="tile main"><small>Anzeigenpreis</small><b>115&nbsp;€&nbsp;VB</b></div>
+              <div class="tile"><small>Realistisch</small><b>100–110&nbsp;€</b></div>
+              <div class="tile"><small>Nicht unter</small><b>90&nbsp;€</b></div>
             </div>
+            <p class="desc">Ich verkaufe meine Sony WH-1000XM4 Bluetooth-Kopfhörer mit Noise Cancelling, gebraucht in gutem Zustand. Bei mir funktioniert alles ohne Probleme, der Akku hält ca. 25 Stunden. Die Ohrpolster sind leicht abgenutzt (siehe Foto). Dabei: Etui, USB-C-Kabel, Klinkenkabel. Versand versichert oder Abholung in München.</p>
+            <div class="chips"><span>Besser auf Kleinanzeigen</span><span>Audio &amp; Hifi</span><span>Zustand: Gut</span><span>+ 6 Antworten auf Käuferfragen</span></div>
           </div>
         </div>
       </div>
+      <img class="mascot" src="{{HAMSTER_CUT}}" alt="">
     </div>
   </div>
 
-  <section class="block wrap" aria-labelledby="so">
+  <section class="wrap" aria-labelledby="paket">
+    <h2 id="paket">Das bekommst du – und das brauchst du</h2>
+    <div class="pack">
+      <div>
+        <h3>Im Download</h3>
+        <ul>
+          <li>{{ICON_FILE}}<div><b>Anzeigen-Profi (ZIP-Datei)</b><span>Einmal in dein Claude-Konto hochladen, danach so oft nutzen, wie du willst.</span></div></li>
+          <li>{{ICON_DOC}}<div><b>Anleitung (PDF)</b><span>Schritt für Schritt, in etwa zwei Minuten eingerichtet.</span></div></li>
+          <li>{{ICON_CHECK}}<div><b>Für jeden Gegenstand</b><span>Drei Preise mit Vergleichswerten, Titel und Text zum Kopieren, Kategorie und Zustand, ob Kleinanzeigen oder Vinted besser passt, fertige Antworten auf „Letzter Preis?“ und Warnungen vor Betrugsmaschen.</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Du brauchst</h3>
+        <ul>
+          <li>{{ICON_USER}}<div><b>Ein Claude-Konto</b><span>Auf claude.ai, das kostenlose reicht. Einrichten am besten am Computer im Browser.</span></div></li>
+          <li>{{ICON_TOGGLE}}<div><b>Eine Einstellung</b><span>„Dateien erstellen und bearbeiten“ einmal einschalten – die Anleitung zeigt, wo.</span></div></li>
+          <li>{{ICON_CAM}}<div><b>3 bis 8 Fotos</b><span>Bei Tageslicht vom Handy. Ist die Websuche an, prüft Claude echte Vergleichspreise.</span></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta2"><span class="price">9,90&nbsp;€</span><a class="btn {{BUY_CLASS}}" href="{{BUY_ANZEIGEN}}" {{BUY_ATTRS}}>{{BUY_LABEL}}</a><span class="small">Sicher bezahlen über Digistore24</span></div>
+  </section>
+
+  <section class="wrap" aria-labelledby="so">
     <h2 id="so">So läuft's</h2>
     <ol class="steps">
-      <li><h3>Kaufen</h3><p>Einmal bezahlen, du bekommst sofort die Skill-Datei und eine bebilderte Anleitung.</p></li>
-      <li><h3>Hochladen</h3><p>In Claude unter Anpassen → Skills die Datei hochladen. Dauert zwei Minuten.</p></li>
-      <li><h3>Fotos schicken</h3><p>Neuer Chat, Fotos rein, „will ich verkaufen“ – der Skill übernimmt.</p></li>
+      <li><div><b>Kaufen</b><span>Bezahlen über Digistore24, Download kommt sofort.</span></div></li>
+      <li><div><b>Hochladen</b><span>In Claude unter Anpassen → Skills die ZIP-Datei hochladen.</span></div></li>
+      <li><div><b>Fotos schicken</b><span>Neuer Chat, Fotos rein, „will ich verkaufen“ – fertig.</span></div></li>
     </ol>
   </section>
 
-  <section class="block wrap" aria-labelledby="brauchst">
-    <h2 id="brauchst">Was du brauchst</h2>
-    <div class="need">
-      <div><h3>Ein Claude-Konto</h3><p>Auf claude.ai, auch das kostenlose reicht. In den Einstellungen muss die Code-Ausführung bzw. „Dateien erstellen“ an sein – steht in der Anleitung.</p></div>
-      <div><h3>Deine Fotos</h3><p>3 bis 8 Handyfotos bei Tageslicht. Mit eingeschalteter Websuche recherchiert Claude echte Vergleichspreise, sonst gibt es eine vorsichtige Schätzung.</p></div>
+  <section class="wrap narrow" aria-labelledby="vertrauen">
+    <h2 id="vertrauen" class="sr">Wer dahintersteckt</h2>
+    <div class="trust">
+      <img src="{{HAMSTER}}" alt="">
+      <div>
+        <p><b>Du klickst am Ende selbst.</b> Der Anzeigen-Profi stellt nichts automatisch ein. Du kopierst die Anzeige und stellst sie selbst online – so bleibt dein Kleinanzeigen- oder Vinted-Konto sicher.</p>
+        <p class="small">Gemacht von Jona aus Wolnzach. Hängst du beim Einrichten? Schreib an bartenbach.jona@gmail.com, ich helfe persönlich.</p>
+      </div>
     </div>
   </section>
 
-  <section class="block wrap" aria-labelledby="faq">
+  <section class="wrap narrow" aria-labelledby="faq">
     <h2 id="faq">Fragen</h2>
-    <details><summary>Stellt der Skill die Anzeige selbst ein?</summary><p>Nein, und das mit Absicht. Kleinanzeigen und Vinted erlauben keine automatischen Zugriffe. Der Skill schreibt alles fertig, du kopierst es und klickst selbst auf Einstellen – so bleibt dein Konto sicher.</p></details>
-    <details><summary>Muss ich ein Abo abschließen?</summary><p>Nein. Du zahlst den Skill einmal. Er läuft in deinem eigenen Claude-Konto; ob du dort Free oder Pro nutzt, entscheidest du.</p></details>
-    <details><summary>Garantiert mir der Skill einen Verkauf oder einen Preis?</summary><p>Nein. Er gibt dir eine gute Anzeige und eine realistische Preis-Empfehlung mit Belegen. Ob und wann jemand kauft, hängt vom Markt ab.</p></details>
-    <details><summary>Kann ich ihn widerrufen?</summary><p>Bei digitalen Inhalten erlischt das Widerrufsrecht, sobald du dem sofortigen Download ausdrücklich zustimmst. Das fragt dich Digistore24 im Bestellformular. Hängst du beim Einrichten, schreib uns – wir helfen.</p></details>
-    <details><summary>Ist das ein offizielles Produkt von Claude?</summary><p>Nein. Hamsterfrei ist ein unabhängiges Angebot und nicht mit Anthropic, Kleinanzeigen oder Vinted verbunden. Claude ist eine Marke von Anthropic.</p></details>
-  </section>
-
-  <section class="block wrap" aria-labelledby="bald">
-    <h2 id="bald">Kommen als Nächstes</h2>
-    <div class="soon"><span>Deal-Check für Kleinanzeigen-Angebote</span><span>Käufer-Antworten auf Knopfdruck</span><span>Faceless-Kurzvideo aus einem Thema</span></div>
+    <details><summary>Was ist ein Skill?</summary><p>Eine kleine Anleitung für Claude, die du einmal hochlädst. Danach weiß Claude in jedem neuen Chat, wie es aus deinen Fotos eine gute Anzeige macht – du musst nichts mehr erklären.</p></details>
+    <details><summary>Bekomme ich garantiert den Preis?</summary><p>Nein. Du bekommst eine realistische Preis-Empfehlung mit Vergleichswerten. Ob und wann jemand kauft, hängt vom Markt ab.</p></details>
+    <details><summary>Kann ich den Kauf widerrufen?</summary><p>Bei digitalen Inhalten erlischt das Widerrufsrecht, sobald du im Bestellformular dem sofortigen Download zustimmst. Wenn etwas beim Einrichten nicht klappt, schreib mir – ich helfe.</p></details>
+    <details><summary>Ist das ein offizielles Produkt von Claude?</summary><p>Nein. Hamsterfrei ist ein unabhängiges Angebot und nicht mit Anthropic, Kleinanzeigen oder Vinted verbunden.</p></details>
   </section>
 </main>
 
 <footer class="wrap">
-  <nav aria-label="Rechtliches"><a href="{{IMPRESSUM}}">Impressum</a><a href="{{DATENSCHUTZ}}">Datenschutz</a><a href="{{AGB}}">AGB</a></nav>
-  <p>© 2026 Hamsterfrei · Werbung: eigene Produkte. Hamsterfrei ist nicht mit Anthropic, Kleinanzeigen oder Vinted verbunden.</p>
+  <nav aria-label="Rechtliches"><a href="{{IMPRESSUM}}">Impressum</a><a href="{{DATENSCHUTZ}}">Datenschutz</a><a href="{{AGB}}">Kaufbedingungen</a></nav>
+  <p>© 2026 Hamsterfrei · Weitere Skills sind in Arbeit – folg dem Hamster auf TikTok und Instagram. Claude ist eine Marke von Anthropic; Hamsterfrei ist nicht mit Anthropic verbunden.</p>
 </footer>
+
+<div class="bar" id="bar" aria-hidden="true"><span class="price">9,90&nbsp;€</span><a class="btn {{BUY_CLASS}}" href="{{BUY_ANZEIGEN}}" tabindex="-1" {{BUY_ATTRS}}>{{BUY_LABEL}}</a></div>
+<style>.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}</style>
+<script>
+(function(){
+  var bar=document.getElementById('bar'), box=document.getElementById('kaufen');
+  if(!('IntersectionObserver' in window)||!bar||!box) return;
+  new IntersectionObserver(function(e){ bar.classList.toggle('show', !e[0].isIntersecting && e[0].boundingClientRect.top<0); }).observe(box);
+})();
+</script>
