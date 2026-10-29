@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anzeigen-Profi · Hamsterfrei</title>
+<meta name="description" content="Anzeigen-Profi von Hamsterfrei: ein Skill für dein Claude-Konto, der aus Handyfotos fertige Kleinanzeigen- und Vinted-Anzeigen mit Preis-Check macht. 9,90 € einmalig.">
+<link rel="icon" href="hamster.png">
+<style>
+@font-face{font-family:"Fredoka";src:url(fonts/fredoka-latin.woff2) format("woff2");font-weight:300 700;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Fredoka";src:url(fonts/fredoka-latin-ext.woff2) format("woff2");font-weight:300 700;font-display:swap;unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF}
+@font-face{font-family:"Nunito Sans";src:url(fonts/nunito-latin.woff2) format("woff2");font-weight:200 1000;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito Sans";src:url(fonts/nunito-latin-ext.woff2) format("woff2");font-weight:200 1000;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C4}
+/* Layout: eine Seite, ein Produkt. Hero = Text links, Leinwand mit Vorher/Nachher rechts, Hamster zeigt darauf. Darunter einspaltig 640px. */
+:root{
+  --bg:#FFF8EC; --floor:#F5EAD7; --card:#FFFFFF; --ink:#3A2618; --muted:#6B5444; --line:#EAD9BD;
+  --green:#23885A; --green-hover:#1C7049; --on-green:#FFFFFF; --navy:#24426B;
+  --display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
+  --body:"Nunito Sans","Segoe UI",system-ui,sans-serif;
+  --shadow:0 20px 40px -20px rgb(58 38 24 / .28);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#1E1712; --floor:#2A2019; --card:#2F251D; --ink:#F6EBDD; --muted:#C9B39E; --line:#43352A;
+  --green:#3DBE7F; --green-hover:#52CF91; --on-green:#10241A; --navy:#9DB8E0; --shadow:0 20px 40px -20px rgb(0 0 0 / .6); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#1E1712; --floor:#2A2019; --card:#2F251D; --ink:#F6EBDD; --muted:#C9B39E; --line:#43352A;
+  --green:#3DBE7F; --green-hover:#52CF91; --on-green:#10241A; --navy:#9DB8E0; --shadow:0 20px 40px -20px rgb(0 0 0 / .6); color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.narrow{max-width:1080px}
+.narrow>*{max-width:640px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:46px;font-weight:700}
+h2{font-size:32px;font-weight:600}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+.small{font-size:14px;color:var(--muted);font-weight:600}
+a{color:var(--green)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:12px}
+
+/* Kopf */
+header{padding-block:24px}
+.brand{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-family:var(--display);font-size:22px;font-weight:700}
+.brand img{width:40px;height:40px;border-radius:50%}
+.brand b{font-weight:700}.brand span{color:var(--green)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:6fr 6fr;gap:48px;align-items:center;padding-block:24px 96px}
+.hero>*{min-width:0}
+.hero .sub{font-size:19px;margin-top:16px;max-width:30em}
+.buybox{margin-top:40px;display:grid;gap:16px}
+.pricerow{display:flex;align-items:center;gap:16px 24px;flex-wrap:wrap}
+.price{font-family:var(--display);font-size:36px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 28px;border-radius:12px;background:var(--green);color:var(--on-green);font-family:var(--display);font-size:18px;font-weight:600;text-decoration:none;box-shadow:0 1px 2px rgb(0 0 0 / .12);transition:background .15s}
+.btn:hover{background:var(--green-hover)}
+.btn.soon{background:var(--floor);color:var(--ink);box-shadow:none;cursor:default}
+.facts{display:flex;flex-wrap:wrap;gap:8px 16px}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.facts span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+
+/* Leinwand */
+.stage{position:relative;padding-left:92px;padding-bottom:24px}
+.canvas{position:relative;background:var(--card);border:3px solid var(--ink);border-top:none;border-radius:0 0 16px 16px;box-shadow:var(--shadow);padding:40px}
+.canvas::before{content:"";position:absolute;left:-15px;right:-15px;top:-7px;height:14px;background:var(--ink);border-radius:8px}
+.mascot{position:absolute;left:0;bottom:0;width:112px;height:auto;z-index:2}
+.flow{display:grid;grid-template-columns:1fr;gap:8px}
+.send{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.send .thumbs{grid-template-columns:repeat(3,56px)}
+.send .said{margin-top:0}
+.flow>*{min-width:0}
+.ex{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.label{font-family:var(--display);font-weight:600;font-size:16px;margin-bottom:8px}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.thumbs svg{width:100%;height:auto;border-radius:8px;background:var(--bg);display:block}
+.said{margin-top:8px;font-size:15px;background:var(--bg);border-radius:12px;padding:8px 12px}
+.arrow{justify-self:start;margin-left:72px;color:var(--green);transform:rotate(90deg)}
+.arrow svg{width:32px;height:32px;display:block}
+.result .title{font-family:var(--display);font-size:20px;font-weight:600;line-height:1.25}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.tile{background:var(--bg);border-radius:12px;padding:8px 12px}
+.tile small{display:block;font-size:12px;font-weight:700;color:var(--muted)}
+.tile b{font-family:var(--display);font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}
+.tile.main{background:var(--green);color:var(--on-green)}
+.tile.main small{color:var(--on-green);opacity:.85}
+.desc{margin-top:16px;font-size:15px;line-height:1.55;border-top:1px solid var(--line);padding-top:16px;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{font-size:13px;font-weight:700;color:var(--muted);background:var(--bg);border-radius:999px;padding:4px 10px}
+
+/* Sektionen */
+section{padding-block:0 96px}
+section h2{margin-bottom:24px}
+.pack{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pack>div{background:var(--floor);border-radius:16px;padding:24px;min-width:0}
+.pack h3{margin-bottom:16px}
+.pack ul{margin:0;padding:0;list-style:none;display:grid;gap:16px}
+.pack li{display:grid;grid-template-columns:24px 1fr;gap:8px}
+.pack li svg{width:24px;height:24px;color:var(--green);margin-top:1px}
+.pack li b{display:block}
+.pack li span{color:var(--muted);font-size:15px;max-width:34em}
+.cta2{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:32px 1fr;gap:16px;align-items:start}
+.steps li::before{content:counter(s);width:32px;height:32px;border-radius:50%;background:var(--green);color:var(--on-green);font-family:var(--display);font-weight:600;display:grid;place-items:center}
+.steps b{display:block;font-family:var(--display);font-size:18px;font-weight:600}
+.steps span{color:var(--muted);font-size:15px}
+.trust{display:grid;grid-template-columns:72px 1fr;gap:24px;align-items:center;background:var(--floor);border-radius:16px;padding:24px}
+.trust img{width:72px;height:72px;border-radius:50%}
+.trust p+p{margin-top:8px}
+details{border-bottom:1px solid var(--line);padding-block:16px}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-size:18px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--green);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:8px;color:var(--ink)}
+footer{padding-block:0 40px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 24px;margin-bottom:16px;font-weight:600;border-top:1px solid var(--line);padding-top:24px}
+footer p{font-size:14px;color:var(--muted)}
+
+/* Sticky Kaufleiste (nur Handy) */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;align-items:center;justify-content:space-between;gap:16px;background:var(--card);border-top:1px solid var(--line);padding:12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px))}
+.bar .price{font-size:24px}
+.bar .btn{height:44px;padding:0 20px;font-size:16px}
+
+@media (max-width:860px){
+  h1{font-size:34px} h2{font-size:26px} body{font-size:16px}
+  .hero{grid-template-columns:1fr;gap:40px;padding-bottom:64px}
+  .hero .sub{font-size:17px}
+  .buybox{margin-top:24px}
+  .stage{padding-left:0;padding-bottom:40px}
+  .stage{padding-top:48px}
+  .mascot{left:auto;right:8px;top:-6px;bottom:auto;width:64px}
+  footer{padding-bottom:120px}
+  .canvas{padding:24px 20px}
+  .canvas::before{left:-9px;right:-9px}
+  .arrow{margin-left:72px}
+  .tile{padding:8px}
+  .tile b{font-size:16px}
+  .desc{-webkit-line-clamp:4}
+  section{padding-bottom:64px}
+  .pack,.steps{grid-template-columns:1fr}
+  .steps{gap:16px}
+  .trust{grid-template-columns:56px 1fr;gap:16px}
+  .trust img{width:56px;height:56px}
+  .bar.show{display:flex}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+
+/* ---- Mehrseitig: Kopf mit Navigation ---- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.top nav{display:flex;gap:4px 20px;flex-wrap:wrap;font-weight:700;font-size:15px}
+.top nav a{color:var(--ink);text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.top nav a:hover,.top nav a[aria-current="page"]{border-bottom-color:var(--green)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--green);margin-bottom:16px}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:var(--green);color:var(--on-green);border-radius:999px;padding:3px 10px;vertical-align:middle}
+.badge.soft{background:var(--floor);color:var(--muted)}
+.lead{font-size:19px;color:var(--muted);max-width:36em;margin-top:-8px;margin-bottom:32px}
+
+/* ---- Startseite: Skill-Liste auf der Leinwand ---- */
+.menu{display:grid;gap:12px}
+.menu a{display:grid;grid-template-columns:48px 1fr auto;gap:16px;align-items:center;text-decoration:none;color:var(--ink);background:var(--bg);border-radius:14px;padding:14px 16px;transition:transform .15s}
+.menu a:hover{transform:translateX(4px)}
+.menu .ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--card);color:var(--green)}
+.menu .ic svg{width:26px;height:26px}
+.menu b{display:block;font-family:var(--display);font-size:18px;font-weight:600;line-height:1.2}
+.menu small{display:block;color:var(--muted);font-size:14px;line-height:1.35}
+.menu .go{font-family:var(--display);font-weight:600;color:var(--green);white-space:nowrap}
+.menu .more{background:transparent;border:2px dashed var(--line);cursor:default}
+.menu .more:hover{transform:none}
+
+/* ---- Produktkarten ---- */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{background:var(--floor);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.card.hot{background:var(--card);border:3px solid var(--ink);box-shadow:var(--shadow)}
+.card h3{font-size:26px}
+.card ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.card .foot{margin-top:auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:8px}
+.card .price{font-size:30px}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.ghost:hover{background:var(--floor)}
+
+/* ---- Vorteile-Raster ---- */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.why div{background:var(--floor);border-radius:16px;padding:20px}
+.why b{display:block;font-family:var(--display);font-size:18px;font-weight:600;margin-bottom:4px}
+.why span{color:var(--muted);font-size:15px}
+
+/* ---- Seminararbeit: Datei-Chip, Befundliste ---- */
+.file{display:inline-flex;align-items:center;gap:10px;background:var(--bg);border-radius:12px;padding:10px 14px;font-weight:700;font-size:15px}
+.file svg{width:22px;height:22px;color:var(--navy)}
+.finds{list-style:none;margin:16px 0 0;padding:16px 0 0;border-top:1px solid var(--line);display:grid;gap:8px;font-size:15px;line-height:1.4}
+.finds li{display:grid;grid-template-columns:14px 1fr;gap:10px}
+.finds li::before{content:"";width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--dot,#D9822B)}
+.finds li.r{--dot:#C8473A}.finds li.y{--dot:#D9A32B}.finds li.g{--dot:var(--green)}
+.tile.warn{background:#C8473A;color:#fff}
+.tile.warn small{color:#fff;opacity:.9}
+
+/* ---- Modi ---- */
+.modes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;counter-reset:m}
+.modes li{counter-increment:m;display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}
+.modes li::before{content:counter(m);width:36px;height:36px;border-radius:10px;background:var(--floor);color:var(--ink);font-family:var(--display);font-weight:700;display:grid;place-items:center}
+.modes li.star::before{background:var(--green);color:var(--on-green)}
+.modes b{display:block;font-family:var(--display);font-size:18px;font-weight:600}
+.modes span{color:var(--muted);font-size:15px}
+
+/* ---- Coach: Gesprächs-Mock ---- */
+.coach{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:center}
+.coach>*{min-width:0}
+.chat{background:var(--card);border:3px solid var(--ink);border-radius:20px;padding:24px;display:grid;gap:12px;box-shadow:var(--shadow)}
+.chat p{border-radius:16px;padding:12px 16px;font-size:15px;line-height:1.45;max-width:90%}
+.chat .who{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);display:block;margin-bottom:2px}
+.chat .q{background:var(--floor)}
+.chat .a{background:var(--bg);justify-self:end;border:1px solid var(--line)}
+.chat .fb{background:transparent;border:2px dashed var(--green);font-weight:600}
+.ticks{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px}
+.ticks li{display:grid;grid-template-columns:24px 1fr;gap:10px}
+.ticks li svg{width:22px;height:22px;color:var(--green);margin-top:2px}
+.ticks b{font-family:var(--display);font-weight:600}
+.callout{margin-top:24px;background:var(--floor);border-left:4px solid var(--green);border-radius:0 12px 12px 0;padding:14px 18px;font-size:15px}
+
+/* ---- Hinweisband ---- */
+.deadline{display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--bg);border-radius:12px;padding:10px 16px;font-weight:700;font-size:15px;margin-bottom:24px;width:fit-content;max-width:100%}
+.deadline svg{width:20px;height:20px;flex:none}
+
+@media (max-width:860px){
+  .cards,.modes,.coach{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr 1fr}
+  .coach{gap:32px}
+  .card{padding:24px}
+  .top nav{font-size:14px;gap:4px 14px}
+  .menu a{grid-template-columns:40px 1fr;padding:12px}
+  .menu .ic{width:40px;height:40px}
+  .menu .go{display:none}
+  .lead{font-size:17px}
+}
+@media (max-width:420px){ .why{grid-template-columns:1fr} }
+@media (prefers-reduced-motion:reduce){.menu a{transition:none}}
+</style>
+</head>
+<body>
+<header class="wrap top"><a class="brand" href="index.html" aria-label="Hamsterfrei – Startseite"><img src="hamster.png" alt=""><b>Hamster<span>frei</span></b></a><nav aria-label="Skills"><a href="index.html">Alle Skills</a><a href="seminararbeit-profi.html">Seminararbeit</a><a href="anzeigen-profi.html" aria-current="page">Anzeigen</a></nav></header>
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <h1>Aus deinen Handyfotos wird eine fertige Verkaufsanzeige.</h1>
+      <p class="sub">Der <b>Anzeigen-Profi</b> ist ein Zusatz für den KI-Assistenten Claude: Fotos schicken, bis zu drei Fragen beantworten, Preis und fertigen Anzeigentext kopieren.</p>
+      <div class="buybox" id="kaufen">
+        <div class="pricerow">
+          <span class="price">9,90&nbsp;€</span>
+          <a class="btn " href="https://www.checkout-ds24.com/product/757063" rel="noopener" target="_blank">Für 9,90 € kaufen</a>
+        </div>
+        <div class="facts small"><span>einmalig, kein Abo</span><span>läuft in deinem Claude-Konto, auch im kostenlosen</span><span>Sofort-Download · bezahlen über Digistore24</span><span>Gemacht von Jona · Hilfe per Mail</span></div>
+      </div>
+    </div>
+
+    <div class="stage" aria-label="Beispiel: von drei Fotos zur fertigen Anzeige">
+      <div class="canvas">
+        <div class="flow">
+          <div>
+            <p class="ex">Beispiel</p>
+            <p class="label">Du schickst</p>
+            <div class="send"><div class="thumbs" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M16 38V30a16 16 0 0 1 32 0v8" fill="none" stroke="#2B2B2E" stroke-width="5" stroke-linecap="round"/><rect x="10" y="34" width="12" height="18" rx="6" fill="#2B2B2E"/><rect x="42" y="34" width="12" height="18" rx="6" fill="#2B2B2E"/></svg><svg viewBox="0 0 64 64"><ellipse cx="32" cy="34" rx="22" ry="16" fill="#3A3A3E"/><path d="M12 32q20 -8 40 0" fill="none" stroke="#8A8A90" stroke-width="2" stroke-dasharray="3 3"/><rect x="28" y="22" width="8" height="5" rx="2" fill="#8A8A90"/></svg><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20" fill="#2B2B2E"/><circle cx="32" cy="32" r="11" fill="#55555A"/><path d="M18 22l4 3M44 40l3 3M20 42l3-2" stroke="#9A9AA0" stroke-width="2" stroke-linecap="round"/></svg></div><p class="said">„Will ich loswerden.“</p></div>
+          </div>
+          <div class="arrow" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16h21M18 8l8 8-8 8"/></svg></div>
+          <div class="result">
+            <p class="label">Du bekommst</p>
+            <p class="title">Sony WH-1000XM4 Noise-Cancelling Kopfhörer schwarz mit Etui</p>
+            <div class="tiles">
+              <div class="tile main"><small>Anzeigenpreis</small><b>115&nbsp;€&nbsp;VB</b></div>
+              <div class="tile"><small>Realistisch</small><b>100–110&nbsp;€</b></div>
+              <div class="tile"><small>Nicht unter</small><b>90&nbsp;€</b></div>
+            </div>
+            <p class="desc">Ich verkaufe meine Sony WH-1000XM4 Bluetooth-Kopfhörer mit Noise Cancelling, gebraucht in gutem Zustand. Bei mir funktioniert alles ohne Probleme, der Akku hält ca. 25 Stunden. Die Ohrpolster sind leicht abgenutzt (siehe Foto). Dabei: Etui, USB-C-Kabel, Klinkenkabel. Versand versichert oder Abholung in München.</p>
+            <div class="chips"><span>Besser auf Kleinanzeigen</span><span>Audio &amp; Hifi</span><span>Zustand: Gut</span><span>+ 6 Antworten auf Käuferfragen</span></div>
+          </div>
+        </div>
+      </div>
+      <img class="mascot" src="hamster-cut.png" alt="">
+    </div>
+  </div>
+
+  <section class="wrap" aria-labelledby="paket">
+    <h2 id="paket">Das bekommst du – und das brauchst du</h2>
+    <div class="pack">
+      <div>
+        <h3>Das bekommst du</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9 14l3 3 3-3"/></svg><div><b>Anzeigen-Profi (ZIP-Datei)</b><span>Einmal in dein Claude-Konto hochladen, danach so oft nutzen, wie du willst.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><div><b>Anleitung (PDF)</b><span>Schritt für Schritt, in etwa zwei Minuten eingerichtet.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Damit bekommst du für jeden Gegenstand</b><span>Drei Preise, fertigen Text, Kategorie, Plattform-Tipp und Antworten auf „Letzter Preis?“.</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Du brauchst</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><div><b>Ein Claude-Konto</b><span>Auf claude.ai, das kostenlose reicht. Einrichten am besten am Computer im Browser.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="16" cy="12" r="3"/></svg><div><b>Eine Einstellung</b><span>„Dateien erstellen und bearbeiten“ einmal einschalten – die Anleitung zeigt, wo.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="14" r="4"/></svg><div><b>3 bis 8 Fotos</b><span>Bei Tageslicht vom Handy. Ist die Websuche an, prüft Claude echte Vergleichspreise.</span></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta2"><span class="price">9,90&nbsp;€</span><a class="btn " href="https://www.checkout-ds24.com/product/757063" rel="noopener" target="_blank">Für 9,90 € kaufen</a><span class="small">Sicher bezahlen über Digistore24</span></div>
+  </section>
+
+  <section class="wrap" aria-labelledby="so">
+    <h2 id="so">So läuft's</h2>
+    <ol class="steps">
+      <li><div><b>Kaufen</b><span>Bezahlen über Digistore24, Download kommt sofort.</span></div></li>
+      <li><div><b>Hochladen</b><span>In Claude unter Anpassen → Skills die ZIP-Datei hochladen.</span></div></li>
+      <li><div><b>Fotos schicken</b><span>Neuer Chat, Fotos rein, „will ich verkaufen“ – fertig.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="wrap narrow" aria-labelledby="vertrauen">
+    <h2 id="vertrauen" class="sr">Wer dahintersteckt</h2>
+    <div class="trust">
+      <img src="hamster.png" alt="">
+      <div>
+        <p><b>Du klickst am Ende selbst.</b> Der Anzeigen-Profi stellt nichts automatisch ein. Du kopierst die Anzeige und stellst sie selbst online – so bleibt dein Kleinanzeigen- oder Vinted-Konto sicher.</p>
+        <p class="small">Gemacht von Jona aus Wolnzach. Hängst du beim Einrichten? Schreib an bartenbach.jona@gmail.com, ich helfe persönlich.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap narrow" aria-labelledby="faq">
+    <h2 id="faq">Fragen</h2>
+    <details><summary>Was ist ein Skill?</summary><p>Eine kleine Anleitung für Claude, die du einmal hochlädst. Danach weiß Claude in jedem neuen Chat, wie es aus deinen Fotos eine gute Anzeige macht – du musst nichts mehr erklären.</p></details>
+    <details><summary>Bekomme ich garantiert den Preis?</summary><p>Nein. Du bekommst eine realistische Preis-Empfehlung mit Vergleichswerten. Ob und wann jemand kauft, hängt vom Markt ab.</p></details>
+    <details><summary>Kann ich den Kauf widerrufen?</summary><p>Bei digitalen Inhalten erlischt das Widerrufsrecht, sobald du im Bestellformular dem sofortigen Download zustimmst. Wenn etwas beim Einrichten nicht klappt, schreib mir – ich helfe.</p></details>
+    <details><summary>Ist das ein offizielles Produkt von Claude?</summary><p>Nein. Hamsterfrei ist ein unabhängiges Angebot und nicht mit Anthropic, Kleinanzeigen oder Vinted verbunden.</p></details>
+  </section>
+</main>
+
+
+<div class="bar" id="bar" aria-hidden="true"><span class="price">9,90&nbsp;€</span><a class="btn " href="https://www.checkout-ds24.com/product/757063" tabindex="-1" rel="noopener" target="_blank">Für 9,90 € kaufen</a></div>
+
+<footer class="wrap">
+  <nav aria-label="Rechtliches"><a href="index.html">Alle Skills</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="kaufbedingungen.html">Kaufbedingungen</a></nav>
+  <p>© 2026 Hamsterfrei · Folg dem Hamster auf <a href="https://www.tiktok.com/@hamsterfrei" rel="noopener" target="_blank">TikTok</a>, <a href="https://www.instagram.com/hamsterfrei/" rel="noopener" target="_blank">Instagram</a> und <a href="https://www.youtube.com/channel/UCBmT3RjRK5PGk-YVTdFzuDA" rel="noopener" target="_blank">YouTube</a>. Claude ist eine Marke von Anthropic; Hamsterfrei ist nicht mit Anthropic verbunden.</p>
+</footer>
+<script>
+(function(){
+  var bar=document.getElementById('bar'), box=document.getElementById('kaufen');
+  if(!('IntersectionObserver' in window)||!bar||!box) return;
+  new IntersectionObserver(function(e){ bar.classList.toggle('show', !e[0].isIntersecting && e[0].boundingClientRect.top<0); }).observe(box);
+})();
+</script>
+</body>
+</html>
