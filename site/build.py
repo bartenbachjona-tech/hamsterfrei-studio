@@ -136,3 +136,10 @@ pages = build_pages()
 write(OUT, pages)
 write(PREVIEW, pages)
 print("ok:", ", ".join(pages), "| Kauf-Links:", {k: (v["buy"] or "–") for k, v in PRODUCTS.items()})
+
+# Kurzlink hamsterfrei.de/seminar → Seminar-Seite (für Bio-Links)
+REDIR = '<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Seminararbeit-Profi · Hamsterfrei</title><meta http-equiv="refresh" content="0; url=../seminararbeit-profi.html"><link rel="canonical" href="https://hamsterfrei.de/seminararbeit-profi.html"><script>location.replace("../seminararbeit-profi.html"+location.search)</script></head><body style="background:#FFF8EC;color:#3A2618;font-family:system-ui,sans-serif"><p><a href="../seminararbeit-profi.html">Weiter zum Seminararbeit-Profi</a></p></body></html>\n'
+for t in [OUT, HERE / "_preview"]:
+    (t / "seminar").mkdir(exist_ok=True)
+    (t / "seminar" / "index.html").write_text(REDIR)
+print("Kurzlink: /seminar/")
