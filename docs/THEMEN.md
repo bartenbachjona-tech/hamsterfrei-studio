@@ -4,7 +4,7 @@ Die Tagesproduktion nimmt immer die **oberste Folge mit Status `offen`**. Das Gr
 
 | Nr | Thema | Wort | Werbung | Status |
 |---|---|---|---|---|
-| S1 | **Seminar-Offensive:** „Bayern, 13. Klasse: Diese 5 Fehler in deiner Seminararbeit kosten dich Punkte“ (Inhalt + Regeln: docs/plaene/SEMINAR.md) | SEMINAR | ja (eigenes Produkt) | wartet auf Freigabe 30.10.2026 (Composition Seminar02, scripts/seminar02.md) |
+| S1 | **Seminar-Offensive:** „Bayern, 13. Klasse: Diese 5 Fehler in deiner Seminararbeit kosten dich Punkte“ (Inhalt + Regeln: docs/plaene/SEMINAR.md) | SEMINAR | ja (eigenes Produkt) | veröffentlicht 30.10.2026 16:36 (TikTok, YT, IG) |
 | S2 | **Seminar-Offensive:** „Im Prüfungsgespräch wirst du gefragt, wie du KI benutzt hast“ (KMS 02.02.2026, Coach-Demo) | SEMINAR | ja (eigenes Produkt) | offen |
 | S3 | **Seminar-Offensive:** Echte Demo – Jonas Arbeit im Endcheck (nur mit Jonas OK zu gezeigten Ausschnitten) | SEMINAR | ja (eigenes Produkt) | wartet auf OK |
 | S4 | **Seminar-Offensive:** Belege-Zeitraffer – Screenshots → Beleg-PDF | SEMINAR | ja (eigenes Produkt) | offen |
