@@ -13,19 +13,13 @@
 @font-face{font-family:"Nunito Sans";src:url(fonts/nunito-latin.woff2) format("woff2");font-weight:200 1000;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Nunito Sans";src:url(fonts/nunito-latin-ext.woff2) format("woff2");font-weight:200 1000;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C4}
 /* Layout: eine Seite, ein Produkt. Hero = Text links, Leinwand mit Vorher/Nachher rechts, Hamster zeigt darauf. Darunter einspaltig 640px. */
-:root{
+:root{ color-scheme:light;
   --bg:#FFF8EC; --floor:#F5EAD7; --card:#FFFFFF; --ink:#3A2618; --muted:#6B5444; --line:#EAD9BD;
   --green:#23885A; --green-hover:#1C7049; --on-green:#FFFFFF; --navy:#24426B;
   --display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
   --body:"Nunito Sans","Segoe UI",system-ui,sans-serif;
   --shadow:0 20px 40px -20px rgb(58 38 24 / .28);
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#1E1712; --floor:#2A2019; --card:#2F251D; --ink:#F6EBDD; --muted:#C9B39E; --line:#43352A;
-  --green:#3DBE7F; --green-hover:#52CF91; --on-green:#10241A; --navy:#9DB8E0; --shadow:0 20px 40px -20px rgb(0 0 0 / .6); color-scheme:dark }}
-:root[data-theme="dark"]{
-  --bg:#1E1712; --floor:#2A2019; --card:#2F251D; --ink:#F6EBDD; --muted:#C9B39E; --line:#43352A;
-  --green:#3DBE7F; --green-hover:#52CF91; --on-green:#10241A; --navy:#9DB8E0; --shadow:0 20px 40px -20px rgb(0 0 0 / .6); color-scheme:dark }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
 .wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}

@@ -1,17 +1,11 @@
 /* Layout: eine Seite, ein Produkt. Hero = Text links, Leinwand mit Vorher/Nachher rechts, Hamster zeigt darauf. Darunter einspaltig 640px. */
-:root{
+:root{ color-scheme:light;
   --bg:#FFF8EC; --floor:#F5EAD7; --card:#FFFFFF; --ink:#3A2618; --muted:#6B5444; --line:#EAD9BD;
   --green:#23885A; --green-hover:#1C7049; --on-green:#FFFFFF; --navy:#24426B;
   --display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
   --body:"Nunito Sans","Segoe UI",system-ui,sans-serif;
   --shadow:0 20px 40px -20px rgb(58 38 24 / .28);
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#1E1712; --floor:#2A2019; --card:#2F251D; --ink:#F6EBDD; --muted:#C9B39E; --line:#43352A;
-  --green:#3DBE7F; --green-hover:#52CF91; --on-green:#10241A; --navy:#9DB8E0; --shadow:0 20px 40px -20px rgb(0 0 0 / .6); color-scheme:dark }}
-:root[data-theme="dark"]{
-  --bg:#1E1712; --floor:#2A2019; --card:#2F251D; --ink:#F6EBDD; --muted:#C9B39E; --line:#43352A;
-  --green:#3DBE7F; --green-hover:#52CF91; --on-green:#10241A; --navy:#9DB8E0; --shadow:0 20px 40px -20px rgb(0 0 0 / .6); color-scheme:dark }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
 .wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
