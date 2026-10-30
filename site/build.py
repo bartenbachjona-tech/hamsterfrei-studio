@@ -97,6 +97,7 @@ def fill(s, product):
 
 def doc(title, desc, css, body):
     return ('<!doctype html>\n<html lang="de">\n<head>\n<meta charset="utf-8">\n'
+            '<script>if(location.protocol==="http:"&&/hamsterfrei\\.de$/.test(location.hostname))location.replace("https://hamsterfrei.de"+location.pathname+location.search+location.hash)</script>\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
             f'<title>{html.escape(title)}</title>\n<meta name="description" content="{html.escape(desc)}">\n'
             '<link rel="icon" href="hamster.png">\n'
