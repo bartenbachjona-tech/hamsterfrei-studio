@@ -21,6 +21,8 @@ Nur Links eintragen, die Jona ausdrücklich freigegeben hat. Affiliate-Links in 
 
 - **Bio-Link bis 10.11.2026 auf allen Kanälen: https://hamsterfrei.de/seminar** (leitet direkt auf seminararbeit-profi.html, NICHT auf die Startseite). Danach ggf. wieder hamsterfrei.de.
 
+- **30.10.2026 ~15:00: Digistore hat 757079 (Seminararbeit-Profi) und 757063 (Anzeigen-Profi) genehmigt. Kauf-Links aktiv.**
+
 ## Domain hamsterfrei.de (gekauft 30.10.2026 bei STRATO, Paket 10203868)
 - **LIVE seit 30.10.2026 ~07:45:** STRATO A 185.199.108.153, AAAA 2606:50c0:8000::153, www folgt der Hauptdomain. CNAME-Datei im Repo, HTTPS-Zertifikat für hamsterfrei.de aktiv, http→https per Skript in jeder Seite. Offen: Häkchen „Enforce HTTPS“ in GitHub (API über Proxy gesperrt), www-Zertifikat kommt automatisch.
 - Status 30.10. 00:30: „wird eingerichtet“, STRATO schickt Mail, wenn fertig (i. d. R. < 24 h).
