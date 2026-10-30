@@ -4,7 +4,7 @@ Zuerst lesen: `docs/KANAL_REGELN.md`, `docs/THEMEN.md` (welche Wörter gehören 
 
 ## Browser
 - Claude-in-Chrome-Tools in EINEM ToolSearch laden: list_connected_browsers, select_browser, tabs_context_mcp, tabs_create_mcp, navigate, find, read_page, get_page_text, computer, javascript_tool, browser_batch, tabs_close_mcp.
-- Nur das Hamsterfrei-Chrome-Profil nutzen: `select_browser` mit deviceId `93e4a890-9262-4c31-b12b-8deb51641c1f` („Browser 2“, Google-Konto bartenbach.jona@gmail.com). Die Profile von groschenfall und schattengast nie auswählen. Details und Kontoprüfung: PRODUKTION.md §6.
+- Nur das Hamsterfrei-Chrome-Profil nutzen: `select_browser` mit Browser 1 oder 2 (deviceIds in PRODUKTION.md §6), und zwar dem, in dem die Kontoprüfung hamsterfrei ergibt; Browser 3 = schattengast, nie. Die Profile von groschenfall und schattengast nie auswählen. Details und Kontoprüfung: PRODUKTION.md §6.
 - Vor jeder Aktion prüfen, dass TikTok/Instagram/YouTube **hamsterfrei** zeigt. Falsches Konto → Tab schließen, nichts lesen, Jona melden. Nie groschenfall_yt, schattengast oder andere Konten.
 - Eigene Tabs am Ende schließen. Andere Automationen nutzen Chrome ebenfalls: zügig arbeiten, keine Tabs offen lassen.
 
