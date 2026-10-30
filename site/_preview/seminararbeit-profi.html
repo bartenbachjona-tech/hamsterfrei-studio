@@ -5,7 +5,7 @@
 <script>if(location.protocol==="http:"&&/hamsterfrei\.de$/.test(location.hostname))location.replace("https://hamsterfrei.de"+location.pathname+location.search+location.hash)</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Seminararbeit-Profi · Hamsterfrei</title>
-<meta name="description" content="Seminararbeit-Profi: ein Skill für dein Claude-Konto (auch das kostenlose). Er prüft deine W-Seminararbeit auf Fußnoten, Formalia, Plagiat und KI-Klang, baut Quellenbelege mit Screenshots und coacht dich fürs Prüfungsgespräch. Einmalig.">
+<meta name="description" content="Seminararbeit-Profi: ein Skill für dein Claude-Konto (auch das kostenlose). Er hilft beim Schreiben, prüft Fußnoten, Formalia, Plagiate und KI-Floskeln, baut Quellenbelege und coacht dich fürs Prüfungsgespräch. Einmalig 9,90 €.">
 <link rel="icon" href="hamster.png">
 <style>
 @font-face{font-family:"Fredoka";src:url(fonts/fredoka-latin.woff2) format("woff2");font-weight:300 700;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
@@ -238,6 +238,13 @@ footer p{font-size:14px;color:var(--muted)}
 }
 @media (max-width:420px){ .why{grid-template-columns:1fr} }
 @media (prefers-reduced-motion:reduce){.menu a{transition:none}}
+
+/* ---- Kaufhinweise ---- */
+.buynote{margin-top:12px;color:var(--muted);line-height:1.5}
+.buynote b{color:var(--ink);font-weight:700}
+.buynote.center{text-align:center;max-width:560px;margin:16px auto 0}
+.cta2.solo,section[aria-label="Kaufen"] .cta2{justify-content:center;margin-top:0}
+.needs{margin-top:20px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -245,15 +252,15 @@ footer p{font-size:14px;color:var(--muted)}
 <main id="top">
   <div class="wrap hero">
     <div>
-      <p class="deadline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Abgabe in Bayern: 2. Unterrichtstag im November. Danach kommt das Prüfungsgespräch.</span></p>
-      <h1>Deine Seminararbeit: geprüft, sauber belegt und bereit fürs Prüfungsgespräch.</h1>
-      <p class="sub">Der <b>Seminararbeit-Profi</b> ist ein Zusatz für den KI-Assistenten Claude. Du lädst deine Arbeit hoch und beantwortest höchstens fünf kurze Fragen. Claude weiß dann, was zu tun ist: von Fußnoten über Belege bis zur Probe-Prüfung.</p>
+      <p class="deadline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Abgabe in Bayern: meist am 10.11. Danach kommt das Prüfungsgespräch.</span></p>
+      <h1>Seminararbeit bis zum 10.11.? Ich hab dich.</h1>
+      <p class="sub">Der <b>Seminararbeit-Profi</b> ist ein Skill für dein Claude-Konto: Er schreibt mit dir, prüft Fußnoten, Plagiate und KI-Floskeln, baut deine Quellenbelege und übt mit dir das Prüfungsgespräch.</p>
       <div class="buybox" id="kaufen">
         <div class="pricerow">
           <span class="price">9,90&nbsp;€</span>
           <a class="btn " href="https://www.checkout-ds24.com/product/757079" rel="noopener" target="_blank">Für 9,90 € kaufen</a>
         </div>
-        <div class="facts small"><span>einmalig, kein Abo</span><span>läuft im kostenlosen Claude</span><span>für die W-Seminararbeit in Bayern, passt auch für die Facharbeit</span><span>Sofort-Download · über Digistore24</span><span>Claude-Konto ab 18</span></div>
+        <p class="small buynote">Einmalig, kein Abo, inkl. MwSt. · Läuft im kostenlosen Claude · <b>Du brauchst ein Claude-Konto (ab 18).</b></p>
       </div>
     </div>
 
@@ -278,7 +285,7 @@ footer p{font-size:14px;color:var(--muted)}
               <li class="r">Fußnote 12: wörtliches Zitat, aber mit „Vgl.“</li>
               <li class="r">„Müller 2021“ zitiert, fehlt im Literaturverzeichnis</li>
               <li class="y">Kap. 3.2: „dramatisch“ ist eine Wertung außerhalb des Fazits</li>
-              <li class="g">Plagiats-Selbstcheck: keine ungekennzeichneten Übernahmen</li>
+              <li class="g">Plagiats-Check gegen deine Quellen: keine ungekennzeichneten Übernahmen</li>
             </ul>
             <div class="chips"><span>Beleg-PDF mit Screenshots</span><span>Formalia in Word</span><span>+ Probe-Prüfung</span></div>
           </div>
@@ -288,20 +295,29 @@ footer p{font-size:14px;color:var(--muted)}
     </div>
   </div>
 
+  <section class="wrap narrow" aria-label="Wer dahinter steckt">
+    <div class="trust">
+      <img src="hamster.png" alt="">
+      <div>
+        <p><b>Gemacht von Jona aus Wolnzach, selbst Abi-Jahrgang 2027.</b> Du bleibst der Autor: Claude nutzt KI so, wie deine Lehrkraft es erlaubt, und erfindet keine Quellen. Was er nicht prüfen konnte, markiert er.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="wrap" aria-labelledby="modi">
     <h2 id="modi">Zehn Modi, vom ersten Satz bis zum Gespräch</h2>
-    <p class="lead">Du musst nichts davon auswendig wissen. Sag einfach, wo du stehst. Claude schlägt den passenden Modus vor und legt los. Hast du wenig Zeit, arbeitet der Notfall-Modus nur das ab, was wirklich Punkte kostet.</p>
+    <p class="lead">Noch nicht angefangen oder fast fertig? Sag einfach, wo du stehst. Claude wählt den passenden Modus.</p>
     <ol class="modes">
-      <li><div><b>Planen</b><span>Forschungsfrage, Gliederung und ein Zeitplan, rückwärts bis zur Abgabe gerechnet.</span></div></li>
-      <li><div><b>Recherchieren</b><span>Wissenschaftliche Quellen werden vorgestellt, und du entscheidest. Nichts wird erfunden.</span></div></li>
+      <li><div><b>Planen</b><span>Forschungsfrage, Gliederung, Zeitplan bis zur Abgabe.</span></div></li>
+      <li><div><b>Recherchieren</b><span>Echte Quellen finden. Du entscheidest, was rein kommt.</span></div></li>
       <li><div><b>Schreiben &amp; Überarbeiten</b><span>Kapitel für Kapitel, sachlich, mit Beleg nach jeder Aussage.</span></div></li>
-      <li><div><b>Zitieren</b><span>Einheitliche Fußnoten, „Vgl.“ und „ebd.“ richtig, ein vollständiges Literaturverzeichnis.</span></div></li>
-      <li class="star"><div><b>Formalia-Check</b><span>Deine Word-Datei wird geprüft: Ränder, Zeilenabstand, Seitenzahlen, Umfang, leere Absätze.</span></div></li>
-      <li><div><b>Grafiken</b><span>Zahlen als saubere Diagramme, auf Deutsch, mit Achsen und Quelle in der Fußnote.</span></div></li>
-      <li><div><b>Kürzen</b><span>Zu lang? Ein markierter Kürzungsvorschlag in Word, ohne alles umzuschreiben.</span></div></li>
-      <li class="star"><div><b>Quellenbelege</b><span>Aus Screenshots werden Belegseiten mit Link und Abrufdatum, als PDF für die Abgabe.</span></div></li>
-      <li class="star"><div><b>Endcheck</b><span>Plagiats-Selbstcheck gegen deine Quellen, Stil-Check, Formalia und Checkliste.</span></div></li>
-      <li class="star"><div><b>Prüfungsgespräch-Coach</b><span>Spickzettel, Fragen aus deiner Arbeit, Probe-Prüfung mit Auswertung.</span></div></li>
+      <li><div><b>Zitieren</b><span>Fußnoten, „Vgl.“, „ebd.“ und Literaturverzeichnis.</span></div></li>
+      <li><div><b>Formalia-Check</b><span>Ränder, Abstände, Seitenzahlen, Umfang in deiner Word-Datei.</span></div></li>
+      <li><div><b>Grafiken</b><span>Saubere Diagramme mit Quelle.</span></div></li>
+      <li><div><b>Umfang anpassen</b><span>Zu lang oder zu kurz? Markierter Vorschlag in Word.</span></div></li>
+      <li><div><b>Quellenbelege</b><span>Aus Screenshots wird ein Beleg-PDF mit Link und Datum.</span></div></li>
+      <li><div><b>Endcheck</b><span>Plagiats-Check, KI-Check, Formalia und Checkliste.</span></div></li>
+      <li><div><b>Prüfungsgespräch-Coach</b><span>Spickzettel, Fragen und Probe-Prüfung.</span></div></li>
     </ol>
   </section>
 
@@ -311,13 +327,10 @@ footer p{font-size:14px;color:var(--muted)}
         <p class="eyebrow">Neu in Bayern</p>
         <h2 id="coach">Das Prüfungsgespräch übst du vorher, mit deiner eigenen Arbeit.</h2>
         <ul class="ticks">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Gesprächs-Landkarte:</b> Kernaussage, die 10 wichtigsten Zahlen, Fachbegriffe, Methoden und Grenzen auf zwei Seiten.</div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Schwachstellen-Radar:</b> die Sätze in deiner Arbeit, bei denen die Lehrkraft am ehesten nachhakt.</div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>30–40 Fragen</b> mit Antwort-Gerüst, aus deiner Arbeit erstellt.</div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Probe-Prüfung:</b> Claude fragt wie eine Lehrkraft, hakt nach und wertet dich danach in sechs Bereichen aus.</div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Kurzvortrag und Last-Minute-Drill</b> für den Abend davor.</div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Spickzettel</b> mit Kernaussage, wichtigen Zahlen und den Stellen, wo nachgehakt wird.</div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Fragenkatalog</b> aus deiner Arbeit, mit Antwort-Gerüst.</div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Probe-Prüfung:</b> Claude fragt wie eine Lehrkraft und wertet dich danach aus.</div></li>
         </ul>
-        <p class="callout">Laut Kultusministerium wird im Gespräch auch gefragt, <b>wie du KI genutzt hast</b> und wie du Ergebnisse geprüft hast. Darauf bereitet dich der Coach ehrlich vor.</p>
       </div>
       <div class="chat" aria-label="Beispiel aus einer Probe-Prüfung">
         <p class="q"><span class="who">Lehrkraft</span>Auf Seite 7 schreiben Sie, die Zahl der Touristen habe sich von 2010 bis 2018 mehr als vervierfacht. Woher wissen Sie das, und wie belastbar ist die Zahl?</p>
@@ -327,59 +340,28 @@ footer p{font-size:14px;color:var(--muted)}
     </div>
   </section>
 
-  <section class="wrap" aria-labelledby="paket">
-    <h2 id="paket">Das bekommst du, und das brauchst du</h2>
-    <div class="pack">
-      <div>
-        <h3>Das bekommst du</h3>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9 14l3 3 3-3"/></svg><div><b>Seminararbeit-Profi (ZIP-Datei)</b><span>Einmal in dein Claude-Konto hochladen und dann für die ganze Arbeit nutzen.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>7 Prüf-Werkzeuge</b><span>Formalia-Check, Plagiats-Selbstcheck, Stil-Check, Beleg-PDF, PDF-Markierung, Ordner-Struktur und Arbeits-Übersicht.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><div><b>Anleitung (PDF)</b><span>In zwei Minuten eingerichtet, mit Startsatz zum Kopieren.</span></div></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Du brauchst</h3>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><div><b>Ein Claude-Konto</b><span>Auf claude.ai, das kostenlose reicht. Einrichten am besten am Computer.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="16" cy="12" r="3"/></svg><div><b>Eine Einstellung</b><span>„Dateien erstellen und bearbeiten“ einschalten. Die Anleitung zeigt dir, wo.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><div><b>Deine Arbeit als Word-Datei</b><span>Am besten mit dem Merkblatt deiner Schule. Dann prüft Claude genau nach deinen Vorgaben.</span></div></li>
-        </ul>
-      </div>
-    </div>
-    <div class="cta2"><span class="price">9,90&nbsp;€</span><a class="btn " href="https://www.checkout-ds24.com/product/757079" rel="noopener" target="_blank">Für 9,90 € kaufen</a><span class="small">Sicher bezahlen über Digistore24</span></div>
-  </section>
-
-  <section class="wrap narrow" aria-labelledby="ehrlich">
-    <h2 id="ehrlich" class="sr">Ehrlich gesagt</h2>
-    <div class="trust">
-      <img src="hamster.png" alt="">
-      <div>
-        <p><b>Du bleibst der Autor.</b> Claude nutzt KI nur so, wie deine Lehrkraft es erlaubt. Er erfindet keine Quellen, Zitate oder Seitenzahlen und hilft beim Kennzeichnen, wenn das verlangt ist. Plagiats- und KI-Checks sind Selbstchecks, denn kein Werkzeug kann sicher beweisen, wer einen Text geschrieben hat.</p>
-        <p class="small">Gemacht von Jona aus Wolnzach, selbst gerade im Abi-Jahrgang 2027. Mit genau diesem Ablauf ist seine eigene Seminararbeit entstanden. Fragen? bartenbach.jona@gmail.com</p>
-      </div>
-    </div>
-  </section>
-
   <section class="wrap" aria-labelledby="so">
-    <h2 id="so">So läuft's</h2>
+    <h2 id="so">In 3 Schritten startklar</h2>
     <ol class="steps">
-      <li><div><b>Kaufen</b><span>Bezahlen über Digistore24, der Download kommt sofort.</span></div></li>
-      <li><div><b>Hochladen</b><span>In Claude unter Anpassen → Skills die ZIP-Datei hochladen.</span></div></li>
-      <li><div><b>Arbeit schicken</b><span>Neuer Chat, Word-Datei rein, „Abgabe am …, hilf mir“. Fertig.</span></div></li>
+      <li><div><b>Kaufen</b><span>Über Digistore24, der Download kommt sofort.</span></div></li>
+      <li><div><b>Hochladen</b><span>In Claude unter Anpassen → Skills die ZIP-Datei hochladen. Die Anleitung zeigt jeden Klick.</span></div></li>
+      <li><div><b>Loslegen</b><span>Neuer Chat, Word-Datei rein, „Abgabe am 10.11., hilf mir“.</span></div></li>
     </ol>
+    <p class="small needs">Du brauchst: ein Claude-Konto (kostenlos reicht, ab 18), die Einstellung „Dateien erstellen und bearbeiten“ und deine Arbeit als Word-Datei. Einrichten geht am besten am Laptop.</p>
   </section>
 
   <section class="wrap narrow" aria-labelledby="faq">
     <h2 id="faq">Fragen</h2>
-    <details><summary>Ist das nicht Schummeln?</summary><p>Viele Lehrkräfte erlauben KI ausdrücklich, und das Kultusministerium sieht vor, im Prüfungsgespräch über den KI-Einsatz zu sprechen. Der Skill fragt am Anfang nach der Regel deiner Lehrkraft und hält sich daran. Der größte Teil ist Prüfen, Belegen und Üben. Die Arbeit erklären musst du am Ende selbst, und genau dafür gibt es den Coach.</p></details>
-    <details><summary>Klappt das wirklich mit dem kostenlosen Claude?</summary><p>Ja. Alle Checks, Dateien und der Coach laufen im kostenlosen Konto. Weil die Zahl der Nachrichten dort begrenzt ist, speichert Claude am Ende jeder Sitzung einen Arbeitsstand. Den lädst du im nächsten Chat einfach wieder hoch. Mit einem Browser-Werkzeug kann Claude die Screenshots für die Belege sogar selbst machen. Das ist optional.</p></details>
-    <details><summary>Mein Gespräch ist schon bald. Lohnt sich das noch?</summary><p>Gerade dann. Lade die abgegebene Arbeit hoch und starte direkt mit dem Coach. In einer Stunde hast du Spickzettel, Fragenkatalog und eine erste Probe-Prüfung.</p></details>
-    <details><summary>Gilt das nur für Bayern?</summary><p>Der Skill ist auf das W-Seminar am bayerischen Gymnasium zugeschnitten. Für Facharbeiten in anderen Ländern funktioniert er genauso, wenn du dein Merkblatt hochlädst, denn das hat immer Vorrang.</p></details>
-    <details><summary>Ab welchem Alter kann ich das nutzen?</summary><p>Für claude.ai musst du laut den Nutzungsbedingungen von Anthropic mindestens 18 Jahre alt sein.</p></details>
-    <details><summary>Bekomme ich eine bessere Note garantiert?</summary><p>Nein. Du bekommst gründliche Checks, klare Hinweise und Training. Die Note gibt deine Lehrkraft.</p></details>
-    <details><summary>Kann ich den Kauf widerrufen?</summary><p>Bei digitalen Inhalten erlischt das Widerrufsrecht, sobald du im Bestellformular dem sofortigen Download zustimmst. Klappt beim Einrichten etwas nicht, schreib mir. Ich helfe dir.</p></details>
-    <details><summary>Ist das ein offizielles Produkt von Claude oder der Schule?</summary><p>Nein. Hamsterfrei ist ein unabhängiges Angebot und nicht mit Anthropic, dem Kultusministerium oder einer Schule verbunden.</p></details>
+    <details><summary>Ist das nicht Schummeln?</summary><p>Viele Lehrkräfte erlauben KI, und laut Kultusministerium wird im Prüfungsgespräch auch gefragt, wie du KI genutzt hast. Der Skill fragt am Anfang nach der Regel deiner Lehrkraft und hält sich daran. Erklären musst du deine Arbeit am Ende selbst, genau dafür gibt es den Coach.</p></details>
+    <details><summary>Klappt das mit dem kostenlosen Claude?</summary><p>Ja. Weil die Nachrichten dort begrenzt sind, speichert Claude am Ende jeder Sitzung deinen Arbeitsstand. Den lädst du im nächsten Chat wieder hoch und machst weiter.</p></details>
+    <details><summary>Mein Gespräch ist schon bald. Lohnt sich das noch?</summary><p>Ja. Lade die abgegebene Arbeit hoch und starte direkt mit dem Coach.</p></details>
+    <details><summary>Bekomme ich eine bessere Note garantiert?</summary><p>Nein. Plagiats- und KI-Check sind Selbstchecks: Kein Werkzeug kann sicher beweisen, wer einen Text geschrieben hat. Die Note gibt deine Lehrkraft.</p></details>
+    <details><summary>Kann ich den Kauf widerrufen?</summary><p>Bei digitalen Inhalten erlischt das Widerrufsrecht, wenn du im Bestellformular dem sofortigen Download zustimmst und bestätigst, dass du dein Widerrufsrecht damit verlierst. Klappt beim Einrichten etwas nicht, schreib mir.</p></details>
+  </section>
+
+  <section class="wrap narrow" aria-label="Kaufen">
+    <div class="cta2"><span class="price">9,90&nbsp;€</span><a class="btn " href="https://www.checkout-ds24.com/product/757079" rel="noopener" target="_blank">Für 9,90 € kaufen</a></div>
+    <p class="small buynote center">Einmalig, inkl. MwSt. · Claude-Konto ab 18 nötig · Vertragspartner und Zahlung: Digistore24 · Hamsterfrei ist nicht mit Anthropic, dem Kultusministerium oder einer Schule verbunden. Fragen? bartenbach.jona@gmail.com</p>
   </section>
 </main>
 
