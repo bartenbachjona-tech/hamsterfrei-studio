@@ -9,7 +9,13 @@ Stand 29.10.2026, alles von Jona festgelegt.
 - Musik: dezentes, eigenes ElevenLabs-Musikbett (Ukulele/Marimba, ruhig, ohne Gesang) unter jedem Video, Lautstärke ca. 10 %, sanft ein-/ausgeblendet. Datei `public/music/bett01.mp3`, Standard in `Episode`. Keine Trend-Sounds oder fremde Musik.
 - Geld: primär Affiliate-Links + E-Mail-Liste. Später Nebenprodukt Anzeigen-Automation (Vinted/Kleinanzeigen/eBay).
 
-## Format 1 (aktuell): Der Hamster erklärt ein kleines Nebenbei-Business
+## Ausrichtung (ab 30.10.2026, von Jona entschieden)
+- Look, Stimme, Musik bleiben unverändert. Inhaltlich: **„Der Hamster nimmt dir mit KI Arbeit ab“** (Schule, Uni, Alltag, Verkaufen).
+- **Bis 10.11.2026: Seminararbeit-Offensive hat Vorrang** (siehe `docs/plaene/SEMINAR.md`). TikTok-Bio bis 10.11.: „Seminararbeit bis 10.11.? Keine Angst 🐹 Hilfe hier ⬇️“, Link hamsterfrei.de/seminar. Danach entscheidet Jona über neue Bio (Varianten: „Ich nehm dir Arbeit ab 🐹 KI-Hilfe für Seminararbeit & Alltag ⬇️“ / „Weniger Stress, mehr frei 🐹 Claude-Skills für Schule & Alltag ⬇️“).
+- Publikum sind auch Unter-18-Jährige: nie zum Kauf drängen, Produktseite nennt „Claude-Konto ab 18“.
+- Nebenbei-Business-Videos (Format 1 unten) nur noch gelegentlich, nicht mehr Kern.
+
+## Format 1 (ab jetzt nur gelegentlich): Der Hamster erklärt ein kleines Nebenbei-Business
 - Kleine, unscheinbare Side Hustles. KEINE Gründergeschichten, keine „der hat Millionen gemacht“-Storys.
 - Startet direkt mit der Anleitung („Such dir auf AliExpress …“), Schritt für Schritt, 45–55 s.
 - **Immer konkret:** ein echtes, greifbares Beispiel, das gerade viral/aktuell ist („Zum Beispiel …“), und dieses Beispiel wird auf der Leinwand gezeigt. Tools (z. B. Shopify, Canva, Etsy, Printify, Vinted) werden Schritt für Schritt nachgebaut gezeigt, damit man sieht: ist einfach.
