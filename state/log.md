@@ -5,3 +5,4 @@
 - 2026-10-29 ~20:50: Folge 01 neu mit Musikbett A hochgeladen (TikTok, „Deine Marke“ + KI-Label). Alte Version ohne Musik (20:17, 10 Aufrufe) löscht Jona selbst.
 - 2026-10-29: Musik A (`public/music/bett01.mp3`, ElevenLabs Music v2.5, Generation NtPPV387ecCiZmHJlQpt) von Jona gewählt, Lautstärke 10 % passt. Take B als Reserve `bett01_b.mp3`.
 - 2026-10-29 ~20:55: Folge 01 (mit Musik) auf YouTube Shorts (https://youtube.com/shorts/-5de-KhfQOA, Bezahlte Werbung = ja, KI = ja, nicht für Kinder) und als Instagram-Reel (@hamsterfrei, KI-Label an) veröffentlicht.
+- 2026-10-30 13:05: S1 „5 Fehler in deiner Seminararbeit“ (Composition Seminar02, Wort SEMINAR, Werbung eigenes Produkt) produziert, 47 s, Datei out/hamsterfrei-s1-seminar-5fehler.mp4. Inhalt aus Skill-Referenzen (zitieren/formalia/endcheck). Stimme Take B, Flow uVvQ4AeOHELQ4Y1QuO5x. DM-Entwurf docs/plaene/SEMINAR_DM.md. **Wartet auf Jonas ok** (Plan: 18:00 TikTok, Shorts, Reel).
