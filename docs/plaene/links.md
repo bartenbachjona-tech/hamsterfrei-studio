@@ -20,6 +20,7 @@ Nur Links eintragen, die Jona ausdrücklich freigegeben hat. Affiliate-Links in 
 - Freigabe-Checkliste muss Jona selbst bestätigen (Testkauf, Impressum, Seriosität).
 
 ## Domain hamsterfrei.de (gekauft 30.10.2026 bei STRATO, Paket 10203868)
+- **LIVE seit 30.10.2026 ~07:45:** STRATO A 185.199.108.153, AAAA 2606:50c0:8000::153, www folgt der Hauptdomain. CNAME-Datei im Repo, HTTPS-Zertifikat für hamsterfrei.de aktiv, http→https per Skript in jeder Seite. Offen: Häkchen „Enforce HTTPS“ in GitHub (API über Proxy gesperrt), www-Zertifikat kommt automatisch.
 - Status 30.10. 00:30: „wird eingerichtet“, STRATO schickt Mail, wenn fertig (i. d. R. < 24 h).
 - Danach (Jona loggt sich bei STRATO ein): DNS setzen
   - A @ → 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
