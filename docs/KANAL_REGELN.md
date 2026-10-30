@@ -29,4 +29,5 @@ Zeigen, was jemand konkret macht und wie es funktioniert. Noch nicht produzieren
 
 ## Konten strikt trennen
 - Nur das TikTok-Konto **hamsterfrei** benutzen. **groschenfall_yt** und **schattengast** und alle anderen Konten nie anfassen.
+- Chrome: nur das Hamsterfrei-Profil (deviceId `2d7e7af3-dde1-4461-93af-738582ea1b9c`, „Browser 1“, bartenbach.jona@gmail.com) per `select_browser` wählen. Die Chrome-Profile von groschenfall und schattengast nie auswählen. Vor jeder Aktion das eingeloggte Konto prüfen; falsches Konto → Tab schließen, nichts lesen, Jona melden.
 - Nichts an Kontoeinstellungen, Passwörtern oder Zahlungsdaten ändern, nie ausloggen.

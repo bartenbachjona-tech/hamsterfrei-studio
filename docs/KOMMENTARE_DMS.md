@@ -4,7 +4,8 @@ Zuerst lesen: `docs/KANAL_REGELN.md`, `docs/THEMEN.md` (welche Wörter gehören 
 
 ## Browser
 - Claude-in-Chrome-Tools in EINEM ToolSearch laden: list_connected_browsers, select_browser, tabs_context_mcp, tabs_create_mcp, navigate, find, read_page, get_page_text, computer, javascript_tool, browser_batch, tabs_close_mcp.
-- Nur den Browser nutzen, in dem TikTok **hamsterfrei** eingeloggt ist (Prüfung wie in PRODUKTION.md §6). Nie groschenfall_yt, schattengast oder andere Konten.
+- Nur das Hamsterfrei-Chrome-Profil nutzen: `select_browser` mit deviceId `2d7e7af3-dde1-4461-93af-738582ea1b9c` („Browser 1“, Google-Konto bartenbach.jona@gmail.com). Die Profile von groschenfall und schattengast nie auswählen. Details und Kontoprüfung: PRODUKTION.md §6.
+- Vor jeder Aktion prüfen, dass TikTok/Instagram/YouTube **hamsterfrei** zeigt. Falsches Konto → Tab schließen, nichts lesen, Jona melden. Nie groschenfall_yt, schattengast oder andere Konten.
 - Eigene Tabs am Ende schließen. Andere Automationen nutzen Chrome ebenfalls: zügig arbeiten, keine Tabs offen lassen.
 
 ## Ablauf
