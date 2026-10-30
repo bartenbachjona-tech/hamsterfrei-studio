@@ -12,7 +12,7 @@ PREVIEW = HERE / "_preview"
 
 PRODUCTS = {
     "anzeigen": {"price": "9,90 €", "buy": "https://www.checkout-ds24.com/product/757063"},
-    "seminar": {"price": "9,90 €", "buy": ""},  # Digistore-Produkt noch anlegen
+    "seminar": {"price": "9,90 €", "buy": "https://www.checkout-ds24.com/product/757079"},
 }
 PAGE_PRODUCT = {"anzeigen-profi": "anzeigen", "seminararbeit-profi": "seminar"}
 NAV = [("start", "index.html", "Alle Skills"), ("seminar", "seminararbeit-profi.html", "Seminararbeit"), ("anzeigen", "anzeigen-profi.html", "Anzeigen")]
