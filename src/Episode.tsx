@@ -21,6 +21,7 @@ export type EpisodeProps = {
   captionMap?: (text: string) => string; // Zahlwörter -> Ziffern usw.
   music?: string; // Pfad in public/, dezentes Musikbett (Standard: music/bett01.mp3)
   musicVolume?: number; // Standard 0.10
+  startle?: boolean; // Hamster schreckt ab Frame 0 hoch (Hook-Bewegung im ersten Bild)
 };
 
 // Untertitel in kurzen Gruppen (max. 3 Wörter, Umbruch nach Satzzeichen)
@@ -83,7 +84,7 @@ const Captions: React.FC<{ chunks: Chunk[]; map: (t: string) => string }> = ({ c
   );
 };
 
-export const Episode: React.FC<EpisodeProps> = ({ audio, words, scenes, totalSeconds, dingAt, werbung = true, captionMap, music = "music/bett01.mp3", musicVolume = 0.1 }) => {
+export const Episode: React.FC<EpisodeProps> = ({ audio, words, scenes, totalSeconds, dingAt, werbung = true, captionMap, music = "music/bett01.mp3", musicVolume = 0.1, startle = false }) => {
   const WORDS = React.useMemo(() => words.filter((w) => w.type === "word"), [words]);
   const chunks = React.useMemo(() => buildChunks(WORDS), [WORDS]);
   const SCENES = scenes;
@@ -98,6 +99,8 @@ export const Episode: React.FC<EpisodeProps> = ({ audio, words, scenes, totalSec
   const since = t - lastSceneStart;
   const pointerAngle = interpolate(since, [0, 0.15, 0.4, 0.7], [0, -14, 6, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const bob = Math.sin(frame / 9) * 6;
+  const jump = startle ? interpolate(frame, [0, 7, 11, 15], [-95, 0, -24, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 0;
+  const shock = startle && frame < 40;
 
   return (
     <AbsoluteFill style={{ background: CREAM, fontFamily, color: INK }}>
@@ -155,9 +158,12 @@ export const Episode: React.FC<EpisodeProps> = ({ audio, words, scenes, totalSec
       <div style={{ position: "absolute", left: 0, right: 0, top: 1500, bottom: 0, background: "#F5E7CF", borderTop: "6px solid #EAD6B4" }} />
 
       {/* Hamster */}
-      <div style={{ position: "absolute", left: 10, top: 1050, translate: `0px ${bob}px` }}>
-        <Hamster size={520} talking={talking} blink={blink} pointerAngle={pointerAngle} />
+      <div style={{ position: "absolute", left: 10, top: 1050, translate: `0px ${bob + jump}px` }}>
+        <Hamster size={520} talking={talking} blink={startle && frame < 40 ? false : blink} pointerAngle={pointerAngle} />
       </div>
+      {shock && (
+        <div style={{ position: "absolute", left: 360, top: 990, fontSize: 120, fontWeight: 700, color: "#C8473A", rotate: `${12 + Math.sin(frame / 2) * 8}deg`, translate: `0px ${jump * 0.6}px` }}>!!</div>
+      )}
 
       <Captions chunks={chunks} map={captionMap ?? ((t) => t)} />
     </AbsoluteFill>
