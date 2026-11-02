@@ -7,6 +7,7 @@ Die Tagesproduktion nimmt immer die **oberste Folge mit Status `offen`**. Das Gr
 | S1 | **Seminar-Offensive:** „Bayern, 13. Klasse: Diese 5 Fehler in deiner Seminararbeit kosten dich Punkte“ (Inhalt + Regeln: docs/plaene/SEMINAR.md) | SEMINAR | ja (eigenes Produkt) | veröffentlicht 30.10.2026 16:36 (TikTok, YT, IG) |
 | S2 | **Seminar-Offensive:** „Im Prüfungsgespräch wirst du gefragt, wie du KI benutzt hast“ (KMS 02.02.2026, Coach-Demo) | SEMINAR | ja (eigenes Produkt) | produziert 02.11., wartet auf Freigabe |
 | S3 | **Seminar-Offensive:** Echte Demo – Jonas Arbeit im Endcheck (nur mit Jonas OK zu gezeigten Ausschnitten) | SEMINAR | ja (eigenes Produkt) | wartet auf OK |
+| T4 | **Trend (zeitkritisch bis 10.11.):** „Lass Claude deine Seminararbeit prüfen – nicht schreiben“ (Claude-Projekt + 3 Prüffragen, Ergebnis zuerst, „Konto ab 18“, KI-Nutzung angeben; siehe TRENDS.md 02.11. I1) | SEMINAR | ja (eigenes Produkt), Skill nicht im Video nennen | offen |
 | S4 | **Seminar-Offensive:** Belege-Zeitraffer – Screenshots → Beleg-PDF | SEMINAR | ja (eigenes Produkt) | offen |
 | S5 | **Seminar-Offensive:** Countdown „Noch X Tage“ – ein Formalia-Tipp pro Tag | SEMINAR | ja (eigenes Produkt) | offen (täglich bis 10.11.) |
 | 01 | Ein Produkt, ein Shop (Sonnenuntergangs-Lampe, Shopify) | SHOP | ja (Shopify) | veröffentlicht 29.10.2026 |
@@ -23,6 +24,8 @@ Die Tagesproduktion nimmt immer die **oberste Folge mit Status `offen`**. Das Gr
 | 08 | LEGO-Kiste kaufen, sortieren, Sets einzeln verkaufen | LEGO | nein | offen |
 | 09 | Zimmerpflanzen-Ableger ziehen und verschicken | ABLEGER | nein | offen |
 | 10 | Digitale Planer / Haushaltsbuch als Download (Etsy) | PLANER | ja (Canva) | offen |
+| T5 | Mein Morgen-Briefing von Claude (echte Ausgabe zuerst, Duet nur als Nebensatz; erst nach 10.11., TRENDS.md 02.11. I2) | MORGEN | nein | offen |
+| T6 | Wer bewegt eigentlich diesen Hamster? (Behind the Scenes Claude + Remotion, einmaliger Test nach 10.11., vorher Affiliate-Check ElevenLabs; TRENDS.md 02.11. I3) | HAMSTER | nur falls Tool-Affiliate genannt | offen |
 
 Regeln für neue Themen (wenn die Liste leer wird, 5 neue anhängen, nach denselben Regeln): klein, unscheinbar, ohne Vorwissen startbar, mit Beispielen, die man in Deutschland wirklich umsetzen kann; Wörter kurz, ein Wort, Großbuchstaben, nicht doppelt.
 Wenn eine Folge veröffentlicht ist: Status auf `veröffentlicht <Datum>` setzen und `docs/plaene/<WORT>.md` muss existieren.
