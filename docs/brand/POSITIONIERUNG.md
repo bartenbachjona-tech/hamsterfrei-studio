@@ -29,10 +29,10 @@ Von Jona freigegeben am 04.11.2026. Die vier Dateien in `docs/brand/` gehen alle
 - **Kein KI-Jargon-Kanal.** Keine Tool-News, keine Modellvergleiche, keine Wörter wie „Agent“, „LLM“, „Prompt-Chaining“ im Hook. Das Ergebnis zählt, nicht die Technik.
 - **Kein Dropshipping- oder Get-rich-quick-Kanal.** Keine Einkommensversprechen, keine „passives Einkommen“-Storys, keine Gründer-Millionen. Nebenjobs nur mit ehrlichem Stundenlohn inklusive Haken (Gewerbe, Steuern, Zeit).
 - **Kein Werbekanal.** Höchstens 1 von 5 Videos enthält Werbung für eigene Produkte, nie als Eröffnung, immer mit echtem Nutzen auch ohne Kauf.
-- **Keine Hausaufgaben-Abschreib-Hilfe.** Kein „KI schreibt deine Arbeit/Hausaufgabe“, kein „unentdeckbar“, keine Notengarantie. KI hilft prüfen, üben, ordnen. Schreiben musst du selbst, und KI nur so, wie die Lehrkraft es erlaubt.
+- **Seminar-/Schul-Videos = Vorbild Folge S1 („Seminararbeit bis 10.11.? Keine Angst“, Seminar01 v4). JONA 04.11.2026 16:00, gilt vorrangig:** Die Leute wollen, dass ihnen die Arbeit abgenommen wird: Zeit sparen, gutes Ergebnis. Jedes Video zeigt deshalb, wie Claude die schwere Arbeit **komplett erledigt** (Thema → Gliederung → Kapiteltext → Diagramm → Quellen/Zitierweise → Formalia → Feinschliff), mit sichtbarem Ergebnis und Tempo. **Verboten ist ab sofort das Belehren:** kein „frag deine Lehrkraft“, kein „schreiben musst du selbst“, kein „prüfen statt schreiben“, kein „ich helfe nur“, keine KI-Regel-Hinweise im Sprechtext oder auf dem Bild. Ehrlich bleibt nur: keine Notengarantie, kein „unentdeckbar / Lehrer merkt nichts“ (irreführende Werbung, Digistore-Risiko), keine erfundenen Quellen. „Claude-Konto ab 18“ nur klein in der Caption.
 
 ## Kernthemen ab 11.11. (Felder, aus denen Serien schöpfen)
-- Schule/Uni/Ausbildung: Lernzettel, Referate, Bewerbung, Lebenslauf, Prüfungsvorbereitung (prüfen und üben, nicht abschreiben).
+- Schule/Uni/Ausbildung: Lernzettel, Referate, Bewerbung, Lebenslauf, Prüfungsvorbereitung (Claude nimmt die Arbeit ab, Ergebnis zeigen).
 - Geld: Kleinanzeigen/Vinted-Anzeigen, Preis-Checks, Nebenjobs mit ehrlichem Stundenlohn.
 - Zeit: Alltagsaufgaben, die mit KI schneller gehen (Mails, Pläne, Listen, Formulare).
 Details und Baupläne: `SERIEN.md`.

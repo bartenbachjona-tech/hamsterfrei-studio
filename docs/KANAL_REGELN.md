@@ -1,3 +1,5 @@
+**STOPP T4 + NEUE SEMINAR-LINIE – JONA 04.11.2026 16:00 (gilt vorrangig):** T4 „Prüfen, nicht schreiben“ (Seminar04) ist ZURÜCKGEZOGEN: YouTube auf privat gestellt, TikTok löscht Jona selbst. **Das Instagram-Reel zu T4 wird NICHT gepostet.** Nächste Seminar-Videos nur nach dem Muster von Folge S1 (siehe docs/brand/POSITIONIERUNG.md, Punkt „Seminar-/Schul-Videos“): Claude erledigt die Arbeit sichtbar komplett, kein Belehren. Neue Seminar-Videos erst bauen, wenn das Social-Media-Studio das neue Skript-Muster freigibt.
+
 # Hamsterfrei – Kanalregeln (Sicherheit, Recht, Freigabe, Konten)
 
 Stand 04.11.2026 (Marke v2, von Jona freigegeben). Ersetzt die Fassung vom 29./30.10.2026.
