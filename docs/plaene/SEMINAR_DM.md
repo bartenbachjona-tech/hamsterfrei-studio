@@ -15,6 +15,7 @@ Viel Erfolg bei der Abgabe! 🍀
 ---
 
 ## Variante „3 Prompts“ (für Kommentare unter T4/Seminar04 „Lass Claude deine Seminararbeit prüfen“, ab 04.11.2026)
+> **Außer Kraft seit 04.11.2026 16:00:** T4/Seminar04 ist zurückgezogen, und die neue Seminar-Linie (POSITIONIERUNG.md, kein Belehren) widerspricht dieser Variante. Nicht mehr verschicken; bei SEMINAR immer die Checkliste oben. Neue DM-Variante passend zu S5 erstellt das Studio bei Bedarf.
 Nur Gratis-Teil, **kein Kauflink, keine Kaufaufforderung** (KANAL_REGELN, Minderjährige). Bei Kommentaren mit SEMINAR unter Seminar04 diese Variante schicken (unter älteren Videos die Checkliste oben).
 
 Hey {name} 🐹 hier deine 3 Prompts zum Kopieren. Vorher: Lehrkraft fragen, ob du Claude benutzen darfst, und in der Arbeit angeben, wofür. Name und Schule aus den Dateien nehmen. (Claude-Konto ab 18)
