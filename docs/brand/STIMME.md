@@ -36,7 +36,7 @@ Geht PRODUKTION.md vor. Sicherheit/Recht aus KANAL_REGELN geht dieser Datei vor.
 - Begrüßung, Intro: „Hey Leute“, „Willkommen“, „Heute zeig ich dir …“, „In diesem Video …“
 - Schluss-Signale (siehe oben), Insider-Bezüge („wie im letzten Video“)
 - Hype: „Gamechanger“, „krass“, „unglaublich“, „das ändert alles“, „Geheimtipp“, „Hack“, „Gelddruckmaschine“, „passives Einkommen“, „schnell reich“
-- Versprechen: „garantiert“, „100 %“, „unentdeckbar“, „besteht jeden KI-Detektor“, „schreibt deine Arbeit“, Notengarantien, Einkommensversprechen
+- Versprechen: „garantiert“, „100 %“, „unentdeckbar“, „besteht jeden KI-Detektor“, Notengarantien (seit 04.11. erlaubt: zeigen, dass Claude die Arbeit mit dir komplett schreibt, siehe POSITIONIERUNG), Einkommensversprechen
 - Druck: „nur noch heute“, „schnell zugreifen“, „Link in Bio, bevor es weg ist“, jede Kaufaufforderung im Hook
 - Fachwörter im Hook (siehe oben), „Dropshipping“ (darf nur als Gegenbegriff im Nebenjob-Check vorkommen: „nicht Dropshipping, sondern …“)
 
