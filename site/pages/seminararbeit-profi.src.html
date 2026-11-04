@@ -3,127 +3,145 @@ title: Seminararbeit-Profi · Hamsterfrei
 description: Seminararbeit-Profi: ein Skill für dein Claude-Konto (auch das kostenlose). Er hilft beim Schreiben, prüft Fußnoten, Formalia, Plagiate und KI-Floskeln, baut Quellenbelege und coacht dich fürs Prüfungsgespräch. Einmalig 9,90 €.
 nav: seminar
 -->
+<p class="notice"><span class="in" style="display:block">Abgabe in Bayern: meist am <b>10.11.</b> Danach kommt das Prüfungsgespräch.</span></p>
 <main id="top">
-  <div class="wrap hero hero-top">
-    <div>
-      <p class="deadline">{{ICON_CLOCK}}<span>Abgabe in Bayern: meist am 10.11. Danach kommt das Prüfungsgespräch.</span></p>
-      <h1>Seminararbeit bis zum 10.11.? Keine Angst.</h1>
-      <p class="sub">Der <b>Seminararbeit-Profi</b> ist ein Skill für dein Claude-Konto. Er hilft dir von der ersten Zeile bis zum Prüfungsgespräch.</p>
-      <ul class="feats">
-        <li>{{ICON_CHECK}}<span><b>Schreiben</b>Gliederung bis Fazit</span></li>
-        <li>{{ICON_CHECK}}<span><b>Plagiats- &amp; KI-Check</b>Übernahmen und KI-Floskeln</span></li>
-        <li>{{ICON_CHECK}}<span><b>Quellenbelege</b>als fertiges PDF</span></li>
-        <li>{{ICON_CHECK}}<span><b>Probe-Prüfung</b>fürs Gespräch</span></li>
-      </ul>
-      <div class="buybox" id="kaufen">
-        <div class="pricerow">
-          <span class="price">{{PRICE}}</span>
-          <a class="btn {{BUY_CLASS}}" href="{{BUY_URL}}" {{BUY_ATTRS}}>{{BUY_LABEL}}</a>
-        </div>
-        <p class="small buynote">Einmalig, kein Abo, inkl. MwSt. · 14 Tage Widerrufsrecht · <b>Sofort-Download:</b> Skill (ZIP) + Anleitung (PDF), kein Versand · Läuft im kostenlosen Claude · <b>Du brauchst ein eigenes Claude-Konto</b> (es gelten die Nutzungsbedingungen von Anthropic).</p>
+  <section class="hero">
+    <div class="in">
+      <p class="eyebrow">Seminararbeit-Profi</p>
+      <h1>Seminararbeit bis zum 10.11.?<br><span>Keine Angst.</span></h1>
+      <p class="sub">Ein Skill für dein Claude-Konto. Von der ersten Zeile bis zum Prüfungsgespräch.</p>
+      <div class="ctas" id="kaufen">
+        <a class="pill l {{BUY_CLASS}}" href="{{BUY_URL}}" {{BUY_ATTRS}}>{{BUY_LABEL}}</a>
+        <a class="more" href="#so">So funktioniert's ›</a>
       </div>
-    </div>
+      <p class="price-note">Einmalig, kein Abo, inkl. MwSt. · Läuft im kostenlosen Claude</p>
 
-    <div class="stage" aria-label="Beispiel: von der Word-Datei zum Endcheck">
-      <div class="canvas">
-        <div class="flow">
-          <div>
-            <p class="ex">Beispiel</p>
-            <p class="label">Du schickst</p>
-            <div class="send"><span class="file">{{ICON_DOC}}Seminararbeit_v4.docx</span><p class="said">„Abgabe am 10.11. Check alles.“</p></div>
-          </div>
-          <div class="arrow" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16h21M18 8l8 8-8 8"/></svg></div>
-          <div class="result">
-            <p class="label">Du bekommst</p>
-            <p class="title">Endcheck mit Fundstellen und Plan bis zur Abgabe</p>
-            <div class="tiles">
-              <div class="tile warn"><small>Muss vor Abgabe</small><b>5</b></div>
-              <div class="tile"><small>Sollte</small><b>7</b></div>
-              <div class="tile"><small>Passt schon</small><b>31</b></div>
+      <div class="shot" aria-label="Beispiel: von der Word-Datei zum Endcheck">
+        <div class="card">
+          <div class="row">
+            <div>
+              <p class="lbl">Du schickst</p>
+              <div class="file">{{ICON_DOC}}Seminararbeit_v4.docx</div>
+              <p class="said">„Abgabe am 10.11. Check alles.“</p>
             </div>
-            <ul class="finds">
-              <li class="r">Fußnote 12: wörtliches Zitat, aber mit „Vgl.“</li>
-              <li class="r">„Müller 2021“ zitiert, fehlt im Literaturverzeichnis</li>
-              <li class="y">Kap. 3.2: „dramatisch“ ist eine Wertung außerhalb des Fazits</li>
-              <li class="g">Plagiats-Check gegen deine Quellen: keine ungekennzeichneten Übernahmen</li>
-            </ul>
-            <div class="chips"><span>Beleg-PDF mit Screenshots</span><span>Formalia in Word</span><span>+ Probe-Prüfung</span></div>
+            <div class="arr" aria-hidden="true">→</div>
+            <div>
+              <p class="lbl">Du bekommst</p>
+              <p class="res-t">Endcheck mit Fundstellen und Plan bis zur Abgabe</p>
+              <div class="tiles">
+                <div class="tile warn"><small>Muss vor Abgabe</small><b>5</b></div>
+                <div class="tile"><small>Sollte</small><b>7</b></div>
+                <div class="tile"><small>Passt schon</small><b>31</b></div>
+              </div>
+            </div>
           </div>
+          <ul class="finds">
+            <li>Fußnote 12: wörtliches Zitat, aber mit „Vgl.“</li>
+            <li>„Müller 2021“ zitiert, fehlt im Literaturverzeichnis</li>
+            <li class="y">Kap. 3.2: „dramatisch“ ist eine Wertung außerhalb des Fazits</li>
+            <li class="g">Plagiats-Check gegen deine Quellen: keine ungekennzeichneten Übernahmen</li>
+          </ul>
+        </div>
+        <img class="mascot" src="{{HAMSTER_CUT}}" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="band ink" style="margin-top:120px">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Was drin ist</p>
+        <h2>Schreiben. Prüfen. Belegen. Üben.</h2>
+        <p>Vier Dinge, die vor der Abgabe Zeit kosten. Der Skill erledigt sie mit dir zusammen in Claude.</p>
+      </div>
+      <div class="bento">
+        <div class="tilebox a"><span class="k">Schreiben</span><h3>Von der Gliederung bis zum Fazit.</h3><p>Kapitel für Kapitel, sachlich, mit Beleg nach jeder Aussage. Du entscheidest, was rein kommt.</p></div>
+        <div class="tilebox b"><span class="big">7</span><h3>Prüf-Werkzeuge</h3><p>Formalia, Fußnoten, Literaturverzeichnis und mehr.</p></div>
+        <div class="tilebox c"><span class="k">Plagiats- &amp; KI-Check</span><h3>Übernahmen und KI-Floskeln finden.</h3><p>Gegen deine eigenen Quellen geprüft. Ein Selbstcheck, keine Garantie.</p></div>
+        <div class="tilebox d"><span class="k">Quellenbelege</span><h3>Aus Screenshots wird ein PDF.</h3><p>Mit Link und Abrufdatum, fertig zum Abgeben.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Neu in Bayern</p>
+        <h2>Das Prüfungsgespräch übst du vorher.</h2>
+        <p>Mit deiner eigenen Arbeit. Laut Kultusministerium wird dort auch gefragt, wie du KI genutzt hast.</p>
+      </div>
+      <div class="split">
+        <ul class="ticks">
+          <li><b>Spickzettel</b><span>Kernaussage, wichtige Zahlen und die Stellen, an denen nachgehakt wird.</span></li>
+          <li><b>Fragenkatalog</b><span>Aus deiner Arbeit erstellt, mit Antwort-Gerüst.</span></li>
+          <li><b>Probe-Prüfung</b><span>Claude fragt wie eine Lehrkraft und wertet dich danach aus.</span></li>
+        </ul>
+        <div class="chat" aria-label="Beispiel aus einer Probe-Prüfung">
+          <p class="bubble q"><i>Lehrkraft</i>Auf Seite 7 schreiben Sie, die Zahl der Touristen habe sich von 2010 bis 2018 mehr als vervierfacht. Woher wissen Sie das?</p>
+          <p class="bubble a"><i>Du</i>Ankünfte am Flughafen laut amtlicher Statistik, 2010 rund 0,5 Mio., 2018 2,3 Mio. Kreuzfahrtgäste fehlen.</p>
+          <p class="bubble fb">✓ Quelle und Zahl sicher, Grenze genannt. Nächstes Mal mit der Kernaussage anfangen.</p>
         </div>
       </div>
-      <img class="mascot" src="{{HAMSTER_CUT}}" alt="">
     </div>
-  </div>
+  </section>
 
-  <section class="wrap narrow" aria-label="Wer dahinter steckt">
-    <div class="trust">
-      <img src="{{HAMSTER}}" alt="">
-      <div>
-        <p><b>Gemacht von Jona aus Bayern, selbst Abi-Jahrgang 2027.</b> Du bleibst der Autor: Claude nutzt KI so, wie deine Lehrkraft es erlaubt, und erfindet keine Quellen. Was er nicht prüfen konnte, markiert er.</p>
+  <section class="band">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Zehn Modi</p>
+        <h2>Egal, wo du gerade stehst.</h2>
+        <p>Noch nicht angefangen oder fast fertig? Sag es Claude, er wählt den passenden Modus.</p>
+      </div>
+      <div class="specs">
+        <div><b>Planen</b><span>Forschungsfrage, Gliederung, Zeitplan bis zur Abgabe.</span></div>
+        <div><b>Recherchieren</b><span>Echte Quellen finden. Du entscheidest, was rein kommt.</span></div>
+        <div><b>Schreiben &amp; Überarbeiten</b><span>Kapitel für Kapitel, mit Beleg nach jeder Aussage.</span></div>
+        <div><b>Zitieren</b><span>Fußnoten, „Vgl.“, „ebd.“ und Literaturverzeichnis.</span></div>
+        <div><b>Formalia-Check</b><span>Ränder, Abstände, Seitenzahlen, Umfang in Word.</span></div>
+        <div><b>Grafiken</b><span>Saubere Diagramme mit Quelle.</span></div>
+        <div><b>Umfang anpassen</b><span>Zu lang oder zu kurz? Markierter Vorschlag in Word.</span></div>
+        <div><b>Quellenbelege</b><span>Screenshots werden ein Beleg-PDF mit Link und Datum.</span></div>
+        <div><b>Endcheck</b><span>Plagiats-Check, KI-Check, Formalia und Checkliste.</span></div>
+        <div><b>Prüfungsgespräch-Coach</b><span>Spickzettel, Fragen und Probe-Prüfung.</span></div>
       </div>
     </div>
   </section>
 
-  <section class="wrap" aria-labelledby="modi">
-    <h2 id="modi">Zehn Modi, vom ersten Satz bis zum Gespräch</h2>
-    <p class="lead">Noch nicht angefangen oder fast fertig? Sag einfach, wo du stehst. Claude wählt den passenden Modus.</p>
-    <ol class="modes">
-      <li><div><b>Planen</b><span>Forschungsfrage, Gliederung, Zeitplan bis zur Abgabe.</span></div></li>
-      <li><div><b>Recherchieren</b><span>Echte Quellen finden. Du entscheidest, was rein kommt.</span></div></li>
-      <li><div><b>Schreiben &amp; Überarbeiten</b><span>Kapitel für Kapitel, sachlich, mit Beleg nach jeder Aussage.</span></div></li>
-      <li><div><b>Zitieren</b><span>Fußnoten, „Vgl.“, „ebd.“ und Literaturverzeichnis.</span></div></li>
-      <li><div><b>Formalia-Check</b><span>Ränder, Abstände, Seitenzahlen, Umfang in deiner Word-Datei.</span></div></li>
-      <li><div><b>Grafiken</b><span>Saubere Diagramme mit Quelle.</span></div></li>
-      <li><div><b>Umfang anpassen</b><span>Zu lang oder zu kurz? Markierter Vorschlag in Word.</span></div></li>
-      <li><div><b>Quellenbelege</b><span>Aus Screenshots wird ein Beleg-PDF mit Link und Datum.</span></div></li>
-      <li><div><b>Endcheck</b><span>Plagiats-Check, KI-Check, Formalia und Checkliste.</span></div></li>
-      <li><div><b>Prüfungsgespräch-Coach</b><span>Spickzettel, Fragen und Probe-Prüfung.</span></div></li>
-    </ol>
+  <section class="band white" id="so">
+    <div class="in">
+      <div class="head">
+        <h2>In drei Schritten startklar.</h2>
+        <p>Einrichten geht am besten am Laptop und dauert etwa zwei Minuten.</p>
+      </div>
+      <ol class="steps">
+        <li><b>Kaufen</b><span>Über Digistore24, der Download kommt sofort.</span></li>
+        <li><b>Hochladen</b><span>In Claude unter Anpassen → Skills die ZIP-Datei hochladen. Die Anleitung zeigt jeden Klick.</span></li>
+        <li><b>Loslegen</b><span>Neuer Chat, Word-Datei rein, „Abgabe am 10.11., hilf mir“.</span></li>
+      </ol>
+      <p class="fine"><b>Lieferumfang:</b> Skill „Seminararbeit-Profi“ als ZIP-Datei und Anleitung als PDF, digital als Download, sofort nach dem Kauf. Kein Versand. Du brauchst ein eigenes Claude-Konto (kostenlos reicht; es gelten die Nutzungsbedingungen von Anthropic), die Einstellung „Dateien erstellen und bearbeiten“ und deine Arbeit als Word-Datei.</p>
+    </div>
   </section>
 
-  <section class="wrap" aria-labelledby="coach">
-    <div class="coach">
-      <div>
-        <p class="eyebrow">Neu in Bayern</p>
-        <h2 id="coach">Das Prüfungsgespräch übst du vorher, mit deiner eigenen Arbeit.</h2>
-        <ul class="ticks">
-          <li>{{ICON_CHECK}}<div><b>Spickzettel</b> mit Kernaussage, wichtigen Zahlen und den Stellen, wo nachgehakt wird.</div></li>
-          <li>{{ICON_CHECK}}<div><b>Fragenkatalog</b> aus deiner Arbeit, mit Antwort-Gerüst.</div></li>
-          <li>{{ICON_CHECK}}<div><b>Probe-Prüfung:</b> Claude fragt wie eine Lehrkraft und wertet dich danach aus.</div></li>
-        </ul>
-      </div>
-      <div class="chat" aria-label="Beispiel aus einer Probe-Prüfung">
-        <p class="q"><span class="who">Lehrkraft</span>Auf Seite 7 schreiben Sie, die Zahl der Touristen habe sich von 2010 bis 2018 mehr als vervierfacht. Woher wissen Sie das, und wie belastbar ist die Zahl?</p>
-        <p class="a"><span class="who">Du</span>Das sind die Ankünfte am Flughafen laut amtlicher Statistik, 2010 rund 0,5 Mio. und 2018 2,3 Mio. Ganz genau ist es nicht, weil Kreuzfahrtgäste fehlen.</p>
-        <p class="fb"><span class="who">Coach</span>✔ Quelle und Zahl sicher, Grenze genannt. ➜ Nächstes Mal mit der Kernaussage anfangen.</p>
+  <section class="band">
+    <div class="in">
+      <div class="head"><h2>Fragen.</h2></div>
+      <div class="faq">
+        <details><summary>Ist das nicht Schummeln?</summary><p>Viele Lehrkräfte erlauben KI, und laut Kultusministerium wird im Prüfungsgespräch auch gefragt, wie du KI genutzt hast. Der Skill fragt am Anfang nach der Regel deiner Lehrkraft und hält sich daran. Erklären musst du deine Arbeit am Ende selbst, genau dafür gibt es den Coach.</p></details>
+        <details><summary>Klappt das mit dem kostenlosen Claude?</summary><p>Ja. Weil die Nachrichten dort begrenzt sind, speichert Claude am Ende jeder Sitzung deinen Arbeitsstand. Den lädst du im nächsten Chat wieder hoch und machst weiter.</p></details>
+        <details><summary>Mein Gespräch ist schon bald. Lohnt sich das noch?</summary><p>Ja. Lade die abgegebene Arbeit hoch und starte direkt mit dem Coach.</p></details>
+        <details><summary>Bekomme ich eine bessere Note garantiert?</summary><p>Nein. Plagiats- und KI-Check sind Selbstchecks: Kein Werkzeug kann sicher beweisen, wer einen Text geschrieben hat. Die Note gibt deine Lehrkraft.</p></details>
+        <details><summary>Kann ich den Kauf widerrufen?</summary><p>Ja. Du hast 14 Tage Widerrufsrecht ab Kauf, nach der Widerrufsbelehrung von Digistore24 (dein Vertragspartner). Klappt beim Einrichten etwas nicht, schreib mir gern vorher, meist ist es schnell gelöst.</p></details>
       </div>
     </div>
   </section>
 
-  <section class="wrap" aria-labelledby="so">
-    <h2 id="so">In 3 Schritten startklar</h2>
-    <ol class="steps">
-      <li><div><b>Kaufen</b><span>Über Digistore24, der Download kommt sofort.</span></div></li>
-      <li><div><b>Hochladen</b><span>In Claude unter Anpassen → Skills die ZIP-Datei hochladen. Die Anleitung zeigt jeden Klick.</span></div></li>
-      <li><div><b>Loslegen</b><span>Neuer Chat, Word-Datei rein, „Abgabe am 10.11., hilf mir“.</span></div></li>
-    </ol>
-    <p class="small needs"><b>Lieferumfang:</b> ZIP-Datei mit dem Skill „Seminararbeit-Profi“ (Anleitungen und 7 Prüf-Werkzeuge für Claude) und Anleitung als PDF. Digitale Lieferung als Download, sofort nach dem Kauf auf der Danke-Seite und per E-Mail. Kein physischer Versand, das Claude-Konto selbst ist nicht enthalten.</p>
-    <p class="small needs">Du brauchst: ein eigenes Claude-Konto (kostenlos reicht; es gelten die Nutzungsbedingungen von Anthropic, z. B. zum Mindestalter), die Einstellung „Dateien erstellen und bearbeiten“ und deine Arbeit als Word-Datei. Einrichten geht am besten am Laptop.</p>
-  </section>
-
-  <section class="wrap narrow" aria-labelledby="faq">
-    <h2 id="faq">Fragen</h2>
-    <details><summary>Ist das nicht Schummeln?</summary><p>Viele Lehrkräfte erlauben KI, und laut Kultusministerium wird im Prüfungsgespräch auch gefragt, wie du KI genutzt hast. Der Skill fragt am Anfang nach der Regel deiner Lehrkraft und hält sich daran. Erklären musst du deine Arbeit am Ende selbst, genau dafür gibt es den Coach.</p></details>
-    <details><summary>Klappt das mit dem kostenlosen Claude?</summary><p>Ja. Weil die Nachrichten dort begrenzt sind, speichert Claude am Ende jeder Sitzung deinen Arbeitsstand. Den lädst du im nächsten Chat wieder hoch und machst weiter.</p></details>
-    <details><summary>Mein Gespräch ist schon bald. Lohnt sich das noch?</summary><p>Ja. Lade die abgegebene Arbeit hoch und starte direkt mit dem Coach.</p></details>
-    <details><summary>Bekomme ich eine bessere Note garantiert?</summary><p>Nein. Plagiats- und KI-Check sind Selbstchecks: Kein Werkzeug kann sicher beweisen, wer einen Text geschrieben hat. Die Note gibt deine Lehrkraft.</p></details>
-    <details><summary>Kann ich den Kauf widerrufen?</summary><p>Ja. Du hast <b>14 Tage Widerrufsrecht</b> ab Kauf, nach der Widerrufsbelehrung von Digistore24 (dein Vertragspartner). Den Widerruf richtest du an Digistore24, die Adresse steht in deiner Bestell-Mail. Klappt beim Einrichten etwas nicht, schreib mir gern vorher, meist ist es schnell gelöst.</p></details>
-  </section>
-
-  <section class="wrap narrow" aria-label="Kaufen">
-    <div class="cta2"><span class="price">{{PRICE}}</span><a class="btn {{BUY_CLASS}}" href="{{BUY_URL}}" {{BUY_ATTRS}}>{{BUY_LABEL}}</a></div>
-    <p class="small buynote center">Einmalig, inkl. MwSt. · 14 Tage Widerrufsrecht · eigenes Claude-Konto nötig · Vertragspartner und Zahlung: Digistore24 · Hamsterfrei ist nicht mit Anthropic, dem Kultusministerium oder einer Schule verbunden. Fragen? bartenbach.jona@gmail.com</p>
+  <section class="band white final">
+    <div class="in">
+      <img src="{{HAMSTER}}" alt="" width="96" height="96" style="border-radius:50%;background:#E3F1EA">
+      <h2 style="margin-top:20px">Bereit für den 10.11.</h2>
+      <p class="pricebig">{{PRICE}} · einmalig</p>
+      <div class="ctas"><a class="pill l {{BUY_CLASS}}" href="{{BUY_URL}}" {{BUY_ATTRS}}>{{BUY_LABEL}}</a></div>
+      <p class="price-note">Inkl. MwSt. · 14 Tage Widerrufsrecht · Vertragspartner und Zahlung: Digistore24</p>
+    </div>
   </section>
 </main>
-
-<div class="bar" id="bar" aria-hidden="true"><span class="price">{{PRICE}}</span><a class="btn {{BUY_CLASS}}" href="{{BUY_URL}}" tabindex="-1" {{BUY_ATTRS}}>{{BUY_LABEL}}</a></div>

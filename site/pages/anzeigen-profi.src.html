@@ -4,98 +4,98 @@ description: Anzeigen-Profi von Hamsterfrei: ein Skill für dein Claude-Konto, d
 nav: anzeigen
 -->
 <main id="top">
-  <div class="wrap hero">
-    <div>
-      <h1>Aus deinen Handyfotos wird eine fertige Verkaufsanzeige.</h1>
-      <p class="sub">Der <b>Anzeigen-Profi</b> ist ein Zusatz für den KI-Assistenten Claude: Fotos schicken, bis zu drei Fragen beantworten, Preis und fertigen Anzeigentext kopieren.</p>
-      <div class="buybox" id="kaufen">
-        <div class="pricerow">
-          <span class="price">{{PRICE}}</span>
-          <a class="btn {{BUY_CLASS}}" href="{{BUY_URL}}" {{BUY_ATTRS}}>{{BUY_LABEL}}</a>
-        </div>
-        <div class="facts small"><span>einmalig, kein Abo · 14 Tage Widerrufsrecht</span><span>läuft in deinem Claude-Konto, auch im kostenlosen</span><span>inkl. MwSt. · Sofort-Download · bezahlen über Digistore24</span><span>Gemacht von Jona · Hilfe per Mail</span></div>
-        <p class="small buynote"><b>Lieferung:</b> rein digital, kein Versand. Direkt nach dem Kauf lädst du zwei Dateien herunter: den Skill als ZIP-Datei und die Anleitung als PDF. Den Download-Link bekommst du auf der Danke-Seite und per E-Mail. Du brauchst ein eigenes Claude-Konto (es gelten die Nutzungsbedingungen von Anthropic).</p>
+  <section class="hero">
+    <div class="in">
+      <p class="eyebrow">Anzeigen-Profi</p>
+      <h1>Fotos rein.<br><span>Anzeige fertig.</span></h1>
+      <p class="sub">Ein Skill für dein Claude-Konto. Aus Handyfotos wird eine fertige Kleinanzeige mit Preis-Check.</p>
+      <div class="ctas" id="kaufen">
+        <a class="pill l {{BUY_CLASS}}" href="{{BUY_URL}}" {{BUY_ATTRS}}>{{BUY_LABEL}}</a>
+        <a class="more" href="#so">So funktioniert's ›</a>
       </div>
-    </div>
+      <p class="price-note">Einmalig, kein Abo, inkl. MwSt. · Läuft im kostenlosen Claude</p>
 
-    <div class="stage" aria-label="Beispiel: von drei Fotos zur fertigen Anzeige">
-      <div class="canvas">
-        <div class="flow">
-          <div>
-            <p class="ex">Beispiel</p>
-            <p class="label">Du schickst</p>
-            <div class="send"><div class="thumbs" aria-hidden="true">{{THUMBS}}</div><p class="said">„Will ich loswerden.“</p></div>
-          </div>
-          <div class="arrow" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16h21M18 8l8 8-8 8"/></svg></div>
-          <div class="result">
-            <p class="label">Du bekommst</p>
-            <p class="title">Sony WH-1000XM4 Noise-Cancelling Kopfhörer schwarz mit Etui</p>
-            <div class="tiles">
-              <div class="tile main"><small>Anzeigenpreis</small><b>115&nbsp;€&nbsp;VB</b></div>
-              <div class="tile"><small>Realistisch</small><b>100–110&nbsp;€</b></div>
-              <div class="tile"><small>Nicht unter</small><b>90&nbsp;€</b></div>
+      <div class="shot" aria-label="Beispiel: von drei Fotos zur fertigen Anzeige">
+        <div class="card">
+          <div class="row">
+            <div>
+              <p class="lbl">Du schickst</p>
+              <div class="thumbs" aria-hidden="true">{{THUMBS}}</div>
+              <p class="said">„Will ich loswerden.“</p>
             </div>
-            <p class="desc">Ich verkaufe meine Sony WH-1000XM4 Bluetooth-Kopfhörer mit Noise Cancelling, gebraucht in gutem Zustand. Bei mir funktioniert alles ohne Probleme, der Akku hält ca. 25 Stunden. Die Ohrpolster sind leicht abgenutzt (siehe Foto). Dabei: Etui, USB-C-Kabel, Klinkenkabel. Versand versichert oder Abholung in München.</p>
-            <div class="chips"><span>Besser auf Kleinanzeigen</span><span>Audio &amp; Hifi</span><span>Zustand: Gut</span><span>+ 6 Antworten auf Käuferfragen</span></div>
+            <div class="arr" aria-hidden="true">→</div>
+            <div>
+              <p class="lbl">Du bekommst</p>
+              <p class="res-t">Sony WH-1000XM4 Noise-Cancelling Kopfhörer schwarz mit Etui</p>
+              <div class="tiles">
+                <div class="tile main"><small>Anzeigenpreis</small><b>115&nbsp;€</b></div>
+                <div class="tile"><small>Realistisch</small><b>100–110</b></div>
+                <div class="tile"><small>Nicht unter</small><b>90&nbsp;€</b></div>
+              </div>
+            </div>
           </div>
+          <p class="desc">Ich verkaufe meine Sony WH-1000XM4 Bluetooth-Kopfhörer mit Noise Cancelling, gebraucht in gutem Zustand. Bei mir funktioniert alles ohne Probleme, der Akku hält ca. 25 Stunden. Die Ohrpolster sind leicht abgenutzt (siehe Foto). Dabei: Etui, USB-C-Kabel, Klinkenkabel.</p>
+          <div class="chips"><span>Besser auf Kleinanzeigen</span><span>Audio &amp; Hifi</span><span>Zustand: Gut</span><span>+ 6 Antworten auf Käuferfragen</span></div>
         </div>
-      </div>
-      <img class="mascot" src="{{HAMSTER_CUT}}" alt="">
-    </div>
-  </div>
-
-  <section class="wrap" aria-labelledby="paket">
-    <h2 id="paket">Das bekommst du – und das brauchst du</h2>
-    <div class="pack">
-      <div>
-        <h3>Das bekommst du</h3>
-        <ul>
-          <li>{{ICON_FILE}}<div><b>Anzeigen-Profi (ZIP-Datei)</b><span>Einmal in dein Claude-Konto hochladen, danach so oft nutzen, wie du willst.</span></div></li>
-          <li>{{ICON_DOC}}<div><b>Anleitung (PDF)</b><span>Schritt für Schritt, in etwa zwei Minuten eingerichtet.</span></div></li>
-          <li>{{ICON_CHECK}}<div><b>Damit bekommst du für jeden Gegenstand</b><span>Drei Preise, fertigen Text, Kategorie, Plattform-Tipp und Antworten auf „Letzter Preis?“.</span></div></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Du brauchst</h3>
-        <ul>
-          <li>{{ICON_USER}}<div><b>Ein Claude-Konto</b><span>Auf claude.ai, das kostenlose reicht. Einrichten am besten am Computer im Browser.</span></div></li>
-          <li>{{ICON_TOGGLE}}<div><b>Eine Einstellung</b><span>„Dateien erstellen und bearbeiten“ einmal einschalten – die Anleitung zeigt, wo.</span></div></li>
-          <li>{{ICON_CAM}}<div><b>3 bis 8 Fotos</b><span>Bei Tageslicht vom Handy. Ist die Websuche an, prüft Claude echte Vergleichspreise.</span></div></li>
-        </ul>
-      </div>
-    </div>
-    <p class="small needs"><b>Lieferumfang:</b> ZIP-Datei mit dem Skill „Anzeigen-Profi“ (Anleitungen und kleine Werkzeuge für Claude) und Anleitung als PDF. Digitale Lieferung als Download, sofort nach dem Kauf. Kein physischer Versand, das Claude-Konto selbst ist nicht enthalten.</p>
-    <div class="cta2"><span class="price">{{PRICE}}</span><a class="btn {{BUY_CLASS}}" href="{{BUY_URL}}" {{BUY_ATTRS}}>{{BUY_LABEL}}</a><span class="small">Sicher bezahlen über Digistore24</span></div>
-  </section>
-
-  <section class="wrap" aria-labelledby="so">
-    <h2 id="so">So läuft's</h2>
-    <ol class="steps">
-      <li><div><b>Kaufen</b><span>Bezahlen über Digistore24, Download kommt sofort.</span></div></li>
-      <li><div><b>Hochladen</b><span>In Claude unter Anpassen → Skills die ZIP-Datei hochladen.</span></div></li>
-      <li><div><b>Fotos schicken</b><span>Neuer Chat, Fotos rein, „will ich verkaufen“ – fertig.</span></div></li>
-    </ol>
-  </section>
-
-  <section class="wrap narrow" aria-labelledby="vertrauen">
-    <h2 id="vertrauen" class="sr">Wer dahintersteckt</h2>
-    <div class="trust">
-      <img src="{{HAMSTER}}" alt="">
-      <div>
-        <p><b>Du klickst am Ende selbst.</b> Der Anzeigen-Profi stellt nichts automatisch ein. Du kopierst die Anzeige und stellst sie selbst online – so bleibt dein Kleinanzeigen- oder Vinted-Konto sicher.</p>
-        <p class="small">Gemacht von Jona aus Bayern. Hängst du beim Einrichten? Schreib an bartenbach.jona@gmail.com, ich helfe persönlich.</p>
+        <img class="mascot" src="{{HAMSTER_CUT}}" alt="">
       </div>
     </div>
   </section>
 
-  <section class="wrap narrow" aria-labelledby="faq">
-    <h2 id="faq">Fragen</h2>
-    <details><summary>Was ist ein Skill?</summary><p>Eine kleine Anleitung für Claude, die du einmal hochlädst. Danach weiß Claude in jedem neuen Chat, wie es aus deinen Fotos eine gute Anzeige macht – du musst nichts mehr erklären.</p></details>
-    <details><summary>Bekomme ich garantiert den Preis?</summary><p>Nein. Du bekommst eine realistische Preis-Empfehlung mit Vergleichswerten. Ob und wann jemand kauft, hängt vom Markt ab.</p></details>
-    <details><summary>Kann ich den Kauf widerrufen?</summary><p>Ja. Du hast <b>14 Tage Widerrufsrecht</b> ab Kauf, nach der Widerrufsbelehrung von Digistore24 (dein Vertragspartner). Den Widerruf richtest du an Digistore24, die Adresse steht in deiner Bestell-Mail. Klappt beim Einrichten etwas nicht, schreib mir gern vorher, meist ist es schnell gelöst.</p></details>
-    <details><summary>Ist das ein offizielles Produkt von Claude?</summary><p>Nein. Hamsterfrei ist ein unabhängiges Angebot und nicht mit Anthropic, Kleinanzeigen oder Vinted verbunden.</p></details>
+  <section class="band ink" style="margin-top:120px">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Was drin ist</p>
+        <h2>Preis. Text. Antworten.</h2>
+        <p>Alles, was eine gute Anzeige braucht. Du kopierst es nur noch.</p>
+      </div>
+      <div class="bento">
+        <div class="tilebox a"><span class="k">Preis-Check</span><h3>Drei Preise mit Vergleichswerten.</h3><p>Anzeigenpreis, realistischer Verkaufspreis und deine Untergrenze. Ist die Websuche an, prüft Claude echte Vergleichsangebote.</p></div>
+        <div class="tilebox b"><span class="big">3</span><h3>Fragen höchstens</h3><p>Den Rest erkennt Claude auf deinen Fotos.</p></div>
+        <div class="tilebox c"><span class="k">Anzeigentext</span><h3>Titel und Text zum Kopieren.</h3><p>Ehrlich formuliert, mit Kategorie und Plattform-Tipp: Kleinanzeigen oder Vinted.</p></div>
+        <div class="tilebox d"><span class="k">Käuferfragen</span><h3>Antworten auf „Letzter Preis?“</h3><p>Fertige Antworten für die Nachrichten, die immer kommen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white" id="so">
+    <div class="in">
+      <div class="head">
+        <h2>In drei Schritten startklar.</h2>
+        <p>Einrichten geht am besten am Laptop und dauert etwa zwei Minuten.</p>
+      </div>
+      <ol class="steps">
+        <li><b>Kaufen</b><span>Über Digistore24, der Download kommt sofort.</span></li>
+        <li><b>Hochladen</b><span>In Claude unter Anpassen → Skills die ZIP-Datei hochladen. Die Anleitung zeigt jeden Klick.</span></li>
+        <li><b>Fotos schicken</b><span>Neuer Chat, 3 bis 8 Fotos rein, „will ich verkaufen“.</span></li>
+      </ol>
+      <p class="fine"><b>Lieferumfang:</b> Skill „Anzeigen-Profi“ als ZIP-Datei und Anleitung als PDF, digital als Download, sofort nach dem Kauf. Kein Versand. Du brauchst ein eigenes Claude-Konto (kostenlos reicht; es gelten die Nutzungsbedingungen von Anthropic) und die Einstellung „Dateien erstellen und bearbeiten“.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Dein Konto bleibt sicher</p>
+        <h2>Am Ende klickst du selbst.</h2>
+        <p>Der Anzeigen-Profi stellt nichts automatisch ein. Du kopierst die Anzeige und stellst sie selbst online.</p>
+      </div>
+      <div class="faq">
+        <details><summary>Was ist ein Skill?</summary><p>Eine Anleitung für Claude, die du einmal hochlädst. Danach weiß Claude in jedem neuen Chat, wie es aus deinen Fotos eine gute Anzeige macht. Du musst nichts mehr erklären.</p></details>
+        <details><summary>Bekomme ich garantiert den Preis?</summary><p>Nein. Du bekommst eine realistische Preis-Empfehlung mit Vergleichswerten. Ob und wann jemand kauft, hängt vom Markt ab.</p></details>
+        <details><summary>Kann ich den Kauf widerrufen?</summary><p>Ja. Du hast 14 Tage Widerrufsrecht ab Kauf, nach der Widerrufsbelehrung von Digistore24 (dein Vertragspartner). Klappt beim Einrichten etwas nicht, schreib mir gern vorher, meist ist es schnell gelöst.</p></details>
+        <details><summary>Ist das ein offizielles Produkt von Claude?</summary><p>Nein. Hamsterfrei ist ein unabhängiges Angebot und nicht mit Anthropic, Kleinanzeigen oder Vinted verbunden.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white final">
+    <div class="in">
+      <img src="{{HAMSTER}}" alt="" width="96" height="96" style="border-radius:50%;background:#E3F1EA">
+      <h2 style="margin-top:20px">Weg damit. Für einen guten Preis.</h2>
+      <p class="pricebig">{{PRICE}} · einmalig</p>
+      <div class="ctas"><a class="pill l {{BUY_CLASS}}" href="{{BUY_URL}}" {{BUY_ATTRS}}>{{BUY_LABEL}}</a></div>
+      <p class="price-note">Inkl. MwSt. · 14 Tage Widerrufsrecht · Vertragspartner und Zahlung: Digistore24</p>
+    </div>
   </section>
 </main>
-
-
-<div class="bar" id="bar" aria-hidden="true"><span class="price">{{PRICE}}</span><a class="btn {{BUY_CLASS}}" href="{{BUY_URL}}" tabindex="-1" {{BUY_ATTRS}}>{{BUY_LABEL}}</a></div>

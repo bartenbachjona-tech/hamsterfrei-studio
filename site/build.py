@@ -46,12 +46,15 @@ ICONS = {
  '{{ICON_PLUS}}': icon('<circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/>'),
 }
 
-CSS = (HERE / "site.base.css").read_text() + (HERE / "site.extra.css").read_text()
+CSS = (HERE / "site.v2.css").read_text()  # Marke v2 Website (Apple-Stil, 04.11.2026)
 LEGAL_CSS = (HERE / "legal.css").read_text()
 
-FOOTER = """<footer class="wrap">
-  <nav aria-label="Rechtliches"><a href="index.html">Alle Skills</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="kaufbedingungen.html">Kaufbedingungen</a></nav>
-  <p>© 2026 Hamsterfrei · Folg dem Hamster auf <a href="https://www.tiktok.com/@hamsterfrei" rel="noopener" target="_blank">TikTok</a>, <a href="https://www.instagram.com/hamsterfrei/" rel="noopener" target="_blank">Instagram</a> und <a href="https://www.youtube.com/channel/UCBmT3RjRK5PGk-YVTdFzuDA" rel="noopener" target="_blank">YouTube</a>. Claude ist eine Marke von Anthropic; Hamsterfrei ist nicht mit Anthropic verbunden.</p>
+FOOTER = """<footer class="foot">
+  <div class="in">
+    <p>Gemacht von Jona aus Bayern, selbst Abi-Jahrgang 2027. Folg dem Hamster auf <a href="https://www.tiktok.com/@hamsterfrei" rel="noopener" target="_blank">TikTok</a>, <a href="https://www.instagram.com/hamsterfrei/" rel="noopener" target="_blank">Instagram</a> und <a href="https://www.youtube.com/channel/UCBmT3RjRK5PGk-YVTdFzuDA" rel="noopener" target="_blank">YouTube</a>. Claude ist eine Marke von Anthropic; Hamsterfrei ist nicht mit Anthropic verbunden.</p>
+    <nav aria-label="Rechtliches"><a href="index.html">Alle Skills</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="kaufbedingungen.html">Kaufbedingungen</a><span>Fragen? bartenbach.jona@gmail.com</span></nav>
+    <p>© 2026 Hamsterfrei</p>
+  </div>
 </footer>"""
 
 BAR_JS = """<script>
@@ -63,12 +66,16 @@ BAR_JS = """<script>
 </script>"""
 
 
-def header(active):
+def header(active, product=None):
     links = "".join(
         f'<a href="{href}"{" aria-current=\"page\"" if key == active else ""}>{label}</a>' for key, href, label in NAV
     )
-    return (f'<header class="wrap top"><a class="brand" href="index.html" aria-label="Hamsterfrei – Startseite">'
-            f'<img src="hamster.png" alt=""><b>Hamster<span>frei</span></b></a><nav aria-label="Skills">{links}</nav></header>')
+    if product and PRODUCTS[product]["buy"]:
+        cta = f'<a class="pill s" href="{PRODUCTS[product]["buy"]}" rel="noopener" target="_blank">Kaufen</a>'
+    else:
+        cta = '<a class="pill s" href="seminararbeit-profi.html">Seminararbeit</a>'
+    return (f'<header class="nav"><div class="in"><a class="brand" href="index.html" aria-label="Hamsterfrei – Startseite">'
+            f'<img src="hamster.png" alt=""><span>Hamster<b>frei</b></span></a><nav aria-label="Seiten">{links}</nav>{cta}</div></header>')
 
 
 def price_html(p):
@@ -113,7 +120,7 @@ def build_pages():
         meta = dict(line.split(": ", 1) for line in m.group(1).splitlines())
         body = raw[m.end():]
         product = PAGE_PRODUCT.get(name)
-        full = header(meta["nav"]) + "\n" + fill(body, product) + "\n" + FOOTER + ("\n" + BAR_JS if 'id="bar"' in body else "")
+        full = header(meta["nav"], product) + "\n" + fill(body, product) + "\n" + FOOTER + ("\n" + BAR_JS if 'id="bar"' in body else "")
         pages[f"{name}.html"] = doc(meta["title"], meta["description"], CSS, full)
     for name in ["impressum", "datenschutz", "kaufbedingungen"]:
         body = (HERE / f"{name}.src.html").read_text().replace('href="index.html">← Zurück zu Hamsterfrei', 'href="index.html">← Zurück zu Hamsterfrei')

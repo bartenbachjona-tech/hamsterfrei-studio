@@ -12,392 +12,345 @@
 @font-face{font-family:"Fredoka";src:url(fonts/fredoka-latin-ext.woff2) format("woff2");font-weight:300 700;font-display:swap;unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF}
 @font-face{font-family:"Nunito Sans";src:url(fonts/nunito-latin.woff2) format("woff2");font-weight:200 1000;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Nunito Sans";src:url(fonts/nunito-latin-ext.woff2) format("woff2");font-weight:200 1000;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C4}
-/* Layout: eine Seite, ein Produkt. Hero = Text links, Leinwand mit Vorher/Nachher rechts, Hamster zeigt darauf. Darunter einspaltig 640px. */
-:root{ color-scheme:light;
-  --bg:#FFF8EC; --floor:#F5EAD7; --card:#FFFFFF; --ink:#3A2618; --muted:#6B5444; --line:#EAD9BD;
-  --green:#23885A; --green-hover:#1C7049; --on-green:#FFFFFF; --navy:#24426B;
-  --display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
-  --body:"Nunito Sans","Segoe UI",system-ui,sans-serif;
-  --shadow:0 20px 40px -20px rgb(58 38 24 / .28);
+/* Layout: Apple-Prinzip – zentrierte Riesen-Headlines, viel Luft, abwechselnde Bänder (Creme / Weiß / Tinte), ein Produktbild pro Band. Farben: Hamsterfrei. Bewusst nur helles Design (Jonas Vorgabe), Tinte-Band als einziges dunkles Element. */
+:root{
+  color-scheme: light;
+  --cream:#FFF8EC;   /* Seitengrund */
+  --paper:#FFFFFF;   /* helle Bänder, Karten */
+  --sand:#F5EAD7;    /* Flächen in Karten */
+  --ink:#3A2618;     /* Text + dunkles Band */
+  --muted:#7A6352;   /* Nebentext */
+  --line:#EAD9BD;
+  --green:#23885A;   /* Aktion */
+  --green-d:#1C7049;
+  --navy:#24426B;    /* Krawatte, Akzent 2 */
+  --fur:#E9A24E;     /* Fell, nur sparsam */
+  --red:#C8473A;
+  --on-ink:#FFF8EC; --on-ink-muted:#CDB8A2;
+  --sans:"Nunito Sans","SF Pro Display",-apple-system,"Segoe UI",system-ui,sans-serif;
+  --brand:"Fredoka","Nunito Sans",system-ui,sans-serif;
+  --w:1040px;
 }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
-.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
-.narrow{max-width:1080px}
-.narrow>*{max-width:640px}
-h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
-h1{font-size:46px;font-weight:700}
-h2{font-size:32px;font-weight:600}
-h3{font-size:20px;font-weight:600}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.in{max-width:var(--w);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.025em;line-height:1.05;text-wrap:balance}
 p{margin:0}
-.small{font-size:14px;color:var(--muted);font-weight:600}
-a{color:var(--green)}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:12px}
 
-/* Kopf */
-header{padding-block:24px}
-.brand{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-family:var(--display);font-size:22px;font-weight:700}
-.brand img{width:40px;height:40px;border-radius:50%}
-.brand b{font-weight:700}.brand span{color:var(--green)}
+/* Navigation */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:rgba(255,248,236,.86)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(255,248,236,.82);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid rgba(58,38,24,.08)}
+.nav .in{display:flex;align-items:center;gap:24px;height:52px;font-size:13px}
+.brand{display:flex;align-items:center;gap:8px;font-family:var(--brand);font-size:18px;text-decoration:none;margin-right:auto}
+.brand img{width:26px;height:26px;border-radius:50%;background:#E3F1EA}
+.brand b{color:var(--green);font-weight:600}
+.nav nav{display:flex;gap:22px}
+.nav nav a{text-decoration:none;color:var(--muted)}
+.nav nav a[aria-current]{color:var(--ink);font-weight:700}
+.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:980px;background:var(--green);color:#fff;text-decoration:none;font-weight:700;transition:background .2s}
+.pill:hover{background:var(--green-d)}
+.pill:focus-visible,.more:focus-visible,summary:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.pill.s{font-size:12px;padding:5px 12px}
+.pill.l{font-size:17px;padding:12px 24px}
+.more{color:var(--green);text-decoration:none;font-weight:600;font-size:17px}
+.more:hover{text-decoration:underline}
+
+/* Deadline-Leiste wie Apples Hinweisbanner */
+.notice{background:var(--paper);text-align:center;font-size:14px;padding-block:12px;color:var(--muted);border-bottom:1px solid var(--line)}
+.notice b{color:var(--ink)}
 
 /* Hero */
-.hero{display:grid;grid-template-columns:6fr 6fr;gap:48px;align-items:center;padding-block:24px 96px}
-.hero>*{min-width:0}
-.hero .sub{font-size:19px;margin-top:16px;max-width:30em}
-.buybox{margin-top:40px;display:grid;gap:16px}
-.pricerow{display:flex;align-items:center;gap:16px 24px;flex-wrap:wrap}
-.price{font-family:var(--display);font-size:36px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
-.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 28px;border-radius:12px;background:var(--green);color:var(--on-green);font-family:var(--display);font-size:18px;font-weight:600;text-decoration:none;box-shadow:0 1px 2px rgb(0 0 0 / .12);transition:background .15s}
-.btn:hover{background:var(--green-hover)}
-.btn.soon{background:var(--floor);color:var(--ink);box-shadow:none;cursor:default}
-.facts{display:flex;flex-wrap:wrap;gap:8px 16px}
-.facts span{display:inline-flex;align-items:center;gap:8px}
-.facts span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+.hero{text-align:center;padding-block:72px 0}
+.eyebrow{font-weight:700;font-size:21px;color:var(--green);letter-spacing:-.01em}
+.hero h1{font-size:clamp(44px,8vw,88px);margin-top:10px}
+.hero h1 span{color:var(--fur)}
+.hero .sub{font-size:clamp(19px,2.4vw,26px);font-weight:600;color:var(--muted);max-width:30ch;margin:18px auto 0;line-height:1.3;letter-spacing:-.01em}
+.ctas{display:flex;gap:28px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:28px}
+.price-note{font-size:14px;color:var(--muted);margin-top:14px}
 
-/* Leinwand */
-.stage{position:relative;padding-left:92px;padding-bottom:24px}
-.canvas{position:relative;background:var(--card);border:3px solid var(--ink);border-top:none;border-radius:0 0 16px 16px;box-shadow:var(--shadow);padding:40px}
-.canvas::before{content:"";position:absolute;left:-15px;right:-15px;top:-7px;height:14px;background:var(--ink);border-radius:8px}
-.mascot{position:absolute;left:0;bottom:0;width:112px;height:auto;z-index:2}
-.flow{display:grid;grid-template-columns:1fr;gap:8px}
-.send{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.send .thumbs{grid-template-columns:repeat(3,56px)}
-.send .said{margin-top:0}
-.flow>*{min-width:0}
-.ex{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
-.label{font-family:var(--display);font-weight:600;font-size:16px;margin-bottom:8px}
-.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.thumbs svg{width:100%;height:auto;border-radius:8px;background:var(--bg);display:block}
-.said{margin-top:8px;font-size:15px;background:var(--bg);border-radius:12px;padding:8px 12px}
-.arrow{justify-self:start;margin-left:72px;color:var(--green);transform:rotate(90deg)}
-.arrow svg{width:32px;height:32px;display:block}
-.result .title{font-family:var(--display);font-size:20px;font-weight:600;line-height:1.25}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
-.tile{background:var(--bg);border-radius:12px;padding:8px 12px}
-.tile small{display:block;font-size:12px;font-weight:700;color:var(--muted)}
-.tile b{font-family:var(--display);font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}
-.tile.main{background:var(--green);color:var(--on-green)}
-.tile.main small{color:var(--on-green);opacity:.85}
-.desc{margin-top:16px;font-size:15px;line-height:1.55;border-top:1px solid var(--line);padding-top:16px;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.chips span{font-size:13px;font-weight:700;color:var(--muted);background:var(--bg);border-radius:999px;padding:4px 10px}
+/* Produktbild: Ergebnis-Karte mit Hamster */
+.shot{position:relative;max-width:760px;margin:56px auto 0}
+.card{background:var(--paper);border-radius:28px;box-shadow:0 40px 80px -40px rgba(58,38,24,.35),0 0 0 1px rgba(58,38,24,.06);padding:32px;text-align:left}
+.card .row{display:grid;grid-template-columns:1fr auto 1.4fr;gap:24px;align-items:center}
+.lbl{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.file{display:flex;align-items:center;gap:10px;background:var(--sand);border-radius:14px;padding:12px 14px;font-weight:700;font-size:15px}
+.file svg{width:22px;height:22px;flex:none;color:var(--navy)}
+.said{margin-top:10px;font-size:15px;color:var(--muted)}
+.arr{color:var(--green);font-size:28px}
+.res-t{font-weight:800;font-size:20px;letter-spacing:-.01em;line-height:1.2}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.tile{background:var(--sand);border-radius:14px;padding:10px 12px}
+.tile small{display:block;font-size:12px;color:var(--muted);font-weight:700}
+.tile b{font-size:28px;font-weight:900;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.tile.warn{background:var(--red);color:#fff}
+.tile.warn small{color:rgba(255,255,255,.85)}
+.finds{list-style:none;margin:16px 0 0;padding:16px 0 0;border-top:1px solid var(--line);display:grid;gap:8px;font-size:14px}
+.finds li{display:grid;grid-template-columns:10px 1fr;gap:10px;align-items:baseline}
+.finds li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--red)}
+.finds li.y::before{background:var(--fur)} .finds li.g::before{background:var(--green)}
+.mascot{position:absolute;width:150px;right:-40px;bottom:-34px}
 
-/* Sektionen */
-section{padding-block:0 96px}
-section h2{margin-bottom:24px}
-.pack{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.pack>div{background:var(--floor);border-radius:16px;padding:24px;min-width:0}
-.pack h3{margin-bottom:16px}
-.pack ul{margin:0;padding:0;list-style:none;display:grid;gap:16px}
-.pack li{display:grid;grid-template-columns:24px 1fr;gap:8px}
-.pack li svg{width:24px;height:24px;color:var(--green);margin-top:1px}
-.pack li b{display:block}
-.pack li span{color:var(--muted);font-size:15px;max-width:34em}
-.cta2{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
-.steps li{counter-increment:s;display:grid;grid-template-columns:32px 1fr;gap:16px;align-items:start}
-.steps li::before{content:counter(s);width:32px;height:32px;border-radius:50%;background:var(--green);color:var(--on-green);font-family:var(--display);font-weight:600;display:grid;place-items:center}
-.steps b{display:block;font-family:var(--display);font-size:18px;font-weight:600}
-.steps span{color:var(--muted);font-size:15px}
-.trust{display:grid;grid-template-columns:72px 1fr;gap:24px;align-items:center;background:var(--floor);border-radius:16px;padding:24px}
-.trust img{width:72px;height:72px;border-radius:50%}
-.trust p+p{margin-top:8px}
-details{border-bottom:1px solid var(--line);padding-block:16px}
-details:first-of-type{border-top:1px solid var(--line)}
-summary{cursor:pointer;font-family:var(--display);font-size:18px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+/* Bänder */
+.band{padding-block:110px}
+.band.white{background:var(--paper)}
+.band.ink{background:var(--ink);color:var(--on-ink)}
+.head{text-align:center;max-width:780px;margin:0 auto}
+.head h2{font-size:clamp(36px,6vw,64px)}
+.head p{font-size:clamp(18px,2.2vw,24px);color:var(--muted);font-weight:600;margin-top:18px;line-height:1.35;letter-spacing:-.01em}
+.ink .head p{color:var(--on-ink-muted)}
+.ink .eyebrow{color:var(--fur)}
+
+/* Bento: vier Werkzeuge */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:64px}
+.tilebox{background:rgba(255,248,236,.06);border:1px solid rgba(255,248,236,.12);border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.tilebox.a{grid-column:span 4}.tilebox.b{grid-column:span 2}.tilebox.c{grid-column:span 3}.tilebox.d{grid-column:span 3}
+.big{font-size:clamp(48px,7vw,80px);font-weight:900;letter-spacing:-.04em;line-height:1;color:var(--fur);font-variant-numeric:tabular-nums}
+.tilebox h3{font-size:24px;letter-spacing:-.015em}
+.tilebox p{color:var(--on-ink-muted);font-size:16px}
+.tilebox .k{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8FC9AC}
+
+/* Prüfungsgespräch */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:64px}
+.split>*{min-width:0}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.ticks b{display:block;font-size:21px;letter-spacing:-.01em}
+.ticks span{color:var(--muted)}
+.chat{background:var(--cream);border-radius:28px;padding:28px;display:grid;gap:12px}
+.bubble{border-radius:20px;padding:14px 18px;font-size:15px;line-height:1.45;max-width:92%}
+.bubble i{display:block;font-style:normal;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.bubble.q{background:var(--paper)}
+.bubble.a{background:var(--navy);color:#fff;justify-self:end}
+.bubble.a i{color:rgba(255,255,255,.75)}
+.bubble.fb{background:#E3F1EA;color:var(--green-d);font-weight:700}
+
+/* Zehn Modi: Spezifikationsliste */
+.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px;margin-top:56px;counter-reset:m}
+.specs div{display:grid;grid-template-columns:44px 1fr;gap:4px 12px;padding-block:20px;border-top:1px solid var(--line);counter-increment:m}
+.specs div::before{content:counter(m,decimal-leading-zero);grid-row:span 2;font-weight:800;color:var(--fur);font-variant-numeric:tabular-nums;font-size:15px;padding-top:3px}
+.specs b{font-size:19px;letter-spacing:-.01em}
+.specs span{color:var(--muted);font-size:15px}
+
+/* Schritte */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px;list-style:none;padding:0;counter-reset:s}
+.steps li{background:var(--cream);border-radius:24px;padding:32px;counter-increment:s;min-width:0}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;margin-bottom:18px}
+.steps b{display:block;font-size:22px;letter-spacing:-.015em}
+.steps span{color:var(--muted);font-size:16px}
+.fine{max-width:760px;margin:32px auto 0;text-align:center;font-size:13px;color:var(--muted)}
+
+/* FAQ */
+.faq{max-width:760px;margin:48px auto 0}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding-block:22px;font-size:20px;font-weight:700;letter-spacing:-.01em;display:flex;justify-content:space-between;gap:16px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--green);font-size:22px;line-height:1}
+summary::after{content:"+";color:var(--green);font-weight:400;font-size:26px;line-height:1}
 details[open] summary::after{content:"–"}
-details p{margin-top:8px;color:var(--ink)}
-footer{padding-block:0 40px}
-footer nav{display:flex;flex-wrap:wrap;gap:8px 24px;margin-bottom:16px;font-weight:600;border-top:1px solid var(--line);padding-top:24px}
-footer p{font-size:14px;color:var(--muted)}
+details p{padding-bottom:22px;color:var(--muted);max-width:65ch}
 
-/* Sticky Kaufleiste (nur Handy) */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;align-items:center;justify-content:space-between;gap:16px;background:var(--card);border-top:1px solid var(--line);padding:12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px))}
-.bar .price{font-size:24px}
-.bar .btn{height:44px;padding:0 20px;font-size:16px}
+/* Schluss */
+.final{text-align:center}
+.final h2{font-size:clamp(40px,7vw,72px)}
+.final .pricebig{font-size:22px;font-weight:700;margin-top:16px}
+.foot{font-size:12px;color:var(--muted);padding-block:28px 40px;border-top:1px solid var(--line)}
+.foot .in{display:grid;gap:10px}
+.foot nav{display:flex;gap:18px;flex-wrap:wrap}
 
-@media (max-width:860px){
-  h1{font-size:34px} h2{font-size:26px} body{font-size:16px}
-  .hero{grid-template-columns:1fr;gap:40px;padding-bottom:64px}
-  .hero .sub{font-size:17px}
-  .buybox{margin-top:24px}
-  .stage{padding-left:0;padding-bottom:40px}
-  .stage{padding-top:48px}
-  .mascot{left:auto;right:8px;top:-6px;bottom:auto;width:64px}
-  footer{padding-bottom:120px}
-  .canvas{padding:24px 20px}
-  .canvas::before{left:-9px;right:-9px}
-  .arrow{margin-left:72px}
-  .tile{padding:8px}
-  .tile b{font-size:16px}
-  .desc{-webkit-line-clamp:4}
-  section{padding-bottom:64px}
-  .pack,.steps{grid-template-columns:1fr}
-  .steps{gap:16px}
-  .trust{grid-template-columns:56px 1fr;gap:16px}
-  .trust img{width:56px;height:56px}
-  .bar.show{display:flex}
+@media (max-width:820px){
+  .nav nav{display:none}
+  .card .row{grid-template-columns:1fr}
+  .arr{transform:rotate(90deg);justify-self:start;margin-left:20px}
+  .mascot{width:96px;right:-6px;bottom:-26px}
+  .bento{grid-template-columns:1fr}
+  .tilebox.a,.tilebox.b,.tilebox.c,.tilebox.d{grid-column:auto}
+  .split,.specs,.steps{grid-template-columns:1fr}
+  .split{gap:40px}
+  .band{padding-block:80px}
+  .card{padding:22px}
 }
-@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
-/* ---- Mehrseitig: Kopf mit Navigation ---- */
-.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.top nav{display:flex;gap:4px 20px;flex-wrap:wrap;font-weight:700;font-size:15px}
-.top nav a{color:var(--ink);text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
-.top nav a:hover,.top nav a[aria-current="page"]{border-bottom-color:var(--green)}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--green);margin-bottom:16px}
-.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:var(--green);color:var(--on-green);border-radius:999px;padding:3px 10px;vertical-align:middle}
-.badge.soft{background:var(--floor);color:var(--muted)}
-.lead{font-size:19px;color:var(--muted);max-width:36em;margin-top:-8px;margin-bottom:32px}
-
-/* ---- Startseite: Skill-Liste auf der Leinwand ---- */
-.menu{display:grid;gap:12px}
-.menu a{display:grid;grid-template-columns:48px 1fr auto;gap:16px;align-items:center;text-decoration:none;color:var(--ink);background:var(--bg);border-radius:14px;padding:14px 16px;transition:transform .15s}
-.menu a:hover{transform:translateX(4px)}
-.menu .ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--card);color:var(--green)}
-.menu .ic svg{width:26px;height:26px}
-.menu b{display:block;font-family:var(--display);font-size:18px;font-weight:600;line-height:1.2}
-.menu small{display:block;color:var(--muted);font-size:14px;line-height:1.35}
-.menu .go{font-family:var(--display);font-weight:600;color:var(--green);white-space:nowrap}
-.menu .more{background:transparent;border:2px dashed var(--line);cursor:default}
-.menu .more:hover{transform:none}
-
-/* ---- Produktkarten ---- */
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.card{background:var(--floor);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:16px;min-width:0}
-.card.hot{background:var(--card);border:3px solid var(--ink);box-shadow:var(--shadow)}
-.card h3{font-size:26px}
-.card ul{margin:0;padding-left:20px;display:grid;gap:4px}
-.card .foot{margin-top:auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:8px}
-.card .price{font-size:30px}
-.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
-.btn.ghost:hover{background:var(--floor)}
-
-/* ---- Vorteile-Raster ---- */
-.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.why div{background:var(--floor);border-radius:16px;padding:20px}
-.why b{display:block;font-family:var(--display);font-size:18px;font-weight:600;margin-bottom:4px}
-.why span{color:var(--muted);font-size:15px}
-
-/* ---- Seminararbeit: Datei-Chip, Befundliste ---- */
-.file{display:inline-flex;align-items:center;gap:10px;background:var(--bg);border-radius:12px;padding:10px 14px;font-weight:700;font-size:15px}
-.file svg{width:22px;height:22px;color:var(--navy)}
-.finds{list-style:none;margin:16px 0 0;padding:16px 0 0;border-top:1px solid var(--line);display:grid;gap:8px;font-size:15px;line-height:1.4}
-.finds li{display:grid;grid-template-columns:14px 1fr;gap:10px}
-.finds li::before{content:"";width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--dot,#D9822B)}
-.finds li.r{--dot:#C8473A}.finds li.y{--dot:#D9A32B}.finds li.g{--dot:var(--green)}
-.tile.warn{background:#C8473A;color:#fff}
-.tile.warn small{color:#fff;opacity:.9}
-
-/* ---- Modi ---- */
-.modes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;counter-reset:m}
-.modes li{counter-increment:m;display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}
-.modes li::before{content:counter(m);width:36px;height:36px;border-radius:10px;background:var(--floor);color:var(--ink);font-family:var(--display);font-weight:700;display:grid;place-items:center}
-.modes li.star::before{background:var(--green);color:var(--on-green)}
-.modes b{display:block;font-family:var(--display);font-size:18px;font-weight:600}
-.modes span{color:var(--muted);font-size:15px}
-
-/* ---- Coach: Gesprächs-Mock ---- */
-.coach{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:center}
-.coach>*{min-width:0}
-.chat{background:var(--card);border:3px solid var(--ink);border-radius:20px;padding:24px;display:grid;gap:12px;box-shadow:var(--shadow)}
-.chat p{border-radius:16px;padding:12px 16px;font-size:15px;line-height:1.45;max-width:90%}
-.chat .who{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);display:block;margin-bottom:2px}
-.chat .q{background:var(--floor)}
-.chat .a{background:var(--bg);justify-self:end;border:1px solid var(--line)}
-.chat .fb{background:transparent;border:2px dashed var(--green);font-weight:600}
-.ticks{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px}
-.ticks li{display:grid;grid-template-columns:24px 1fr;gap:10px}
-.ticks li svg{width:22px;height:22px;color:var(--green);margin-top:2px}
-.ticks b{font-family:var(--display);font-weight:600}
-.callout{margin-top:24px;background:var(--floor);border-left:4px solid var(--green);border-radius:0 12px 12px 0;padding:14px 18px;font-size:15px}
-
-/* ---- Hinweisband ---- */
-.deadline{display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--bg);border-radius:12px;padding:10px 16px;font-weight:700;font-size:15px;margin-bottom:24px;width:fit-content;max-width:100%}
-.deadline svg{width:20px;height:20px;flex:none}
-
-@media (max-width:860px){
-  .cards,.modes,.coach{grid-template-columns:1fr}
-  .why{grid-template-columns:1fr 1fr}
-  .coach{gap:32px}
-  .card{padding:24px}
-  .top nav{font-size:14px;gap:4px 14px}
-  .menu a{grid-template-columns:40px 1fr;padding:12px}
-  .menu .ic{width:40px;height:40px}
-  .menu .go{display:none}
-  .lead{font-size:17px}
-}
-@media (max-width:420px){ .why{grid-template-columns:1fr} }
-@media (prefers-reduced-motion:reduce){.menu a{transition:none}}
-
-/* ---- Kaufhinweise ---- */
-.buynote{margin-top:12px;color:var(--muted);line-height:1.5}
-.buynote b{color:var(--ink);font-weight:700}
-.buynote.center{text-align:center;max-width:560px;margin:16px auto 0}
-.cta2.solo,section[aria-label="Kaufen"] .cta2{justify-content:center;margin-top:0}
-.needs{margin-top:20px;color:var(--muted)}
-
-/* ---- Hero oben bündig + Feature-Raster ---- */
-.hero.hero-top{align-items:start;padding-top:8px}
-.hero.hero-top .stage{margin-top:8px}
-.feats{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.feats li{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px 14px}
-.feats svg{width:22px;height:22px;color:var(--green);margin-top:2px}
-.feats b{display:block;font-family:var(--display);font-size:16px;font-weight:600;line-height:1.25}
-.feats span{color:var(--muted);font-size:14px;line-height:1.35}
-.hero-top .buybox{margin-top:24px}
-@media (max-width:860px){
-  .hero.hero-top{padding-top:0;gap:24px}
-  .hero-top .deadline{margin-bottom:16px}
-  .hero.hero-top .stage{padding-top:40px;margin-top:0}
-  .feats{gap:8px;margin-top:20px}
-  .feats li{padding:10px;gap:8px;grid-template-columns:20px 1fr}
-  .feats svg{width:18px;height:18px}
-  .feats b{font-size:15px}
-  .feats span{font-size:13px}
-}
+/* v2 Ergänzungen */
+.pill.soon{background:var(--line);color:var(--muted);pointer-events:none}
+.notice .in{display:block}
+.hero-sp{margin-top:120px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px}
+.prod{background:var(--paper);border-radius:28px;padding:40px 32px 0;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;overflow:hidden;min-width:0}
+.band.white .prod{background:var(--cream)}
+.prod .tag{font-size:13px;font-weight:800;color:var(--fur);letter-spacing:.02em}
+.prod h3{font-size:clamp(28px,3.4vw,40px)}
+.prod p{color:var(--muted);font-size:18px;font-weight:600;max-width:28ch}
+.prod .ctas{margin-top:14px}
+.prod .mini{margin-top:28px;width:100%;max-width:360px;background:var(--paper);border-radius:20px 20px 0 0;box-shadow:0 -20px 50px -30px rgba(58,38,24,.35);padding:20px 20px 24px;text-align:left}
+.band.white .prod .mini{background:var(--paper)}
+.mini .lbl{margin-bottom:6px}
+.mini .tiles{margin-top:8px}
+.mini .tile b{font-size:20px}
+.soon-card{border:2px dashed var(--line);border-radius:28px;padding:32px;text-align:center;color:var(--muted);margin-top:16px}
+.soon-card b{color:var(--ink);font-size:20px;display:block}
+.thumbs{display:flex;gap:8px}
+.thumbs svg{width:56px;height:56px;background:var(--sand);border-radius:12px;padding:6px}
+.desc{font-size:14px;color:var(--muted);margin-top:14px;line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{background:var(--sand);border-radius:980px;padding:5px 12px;font-size:13px;font-weight:700}
+.tile.main{background:var(--green);color:#fff}
+.tile.main small{color:rgba(255,255,255,.85)}
+@media (max-width:820px){.duo{grid-template-columns:1fr}}
+.prod .mini .lbl{font-size:12px;max-width:none}
+.prod .mini .tile small{font-size:12px}
 </style>
 </head>
 <body>
-<header class="wrap top"><a class="brand" href="index.html" aria-label="Hamsterfrei – Startseite"><img src="hamster.png" alt=""><b>Hamster<span>frei</span></b></a><nav aria-label="Skills"><a href="index.html">Alle Skills</a><a href="seminararbeit-profi.html" aria-current="page">Seminararbeit</a><a href="anzeigen-profi.html">Anzeigen</a></nav></header>
+<header class="nav"><div class="in"><a class="brand" href="index.html" aria-label="Hamsterfrei – Startseite"><img src="hamster.png" alt=""><span>Hamster<b>frei</b></span></a><nav aria-label="Seiten"><a href="index.html">Alle Skills</a><a href="seminararbeit-profi.html" aria-current="page">Seminararbeit</a><a href="anzeigen-profi.html">Anzeigen</a></nav><a class="pill s" href="https://www.checkout-ds24.com/product/757079" rel="noopener" target="_blank">Kaufen</a></div></header>
+<p class="notice"><span class="in" style="display:block">Abgabe in Bayern: meist am <b>10.11.</b> Danach kommt das Prüfungsgespräch.</span></p>
 <main id="top">
-  <div class="wrap hero hero-top">
-    <div>
-      <p class="deadline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Abgabe in Bayern: meist am 10.11. Danach kommt das Prüfungsgespräch.</span></p>
-      <h1>Seminararbeit bis zum 10.11.? Keine Angst.</h1>
-      <p class="sub">Der <b>Seminararbeit-Profi</b> ist ein Skill für dein Claude-Konto. Er hilft dir von der ersten Zeile bis zum Prüfungsgespräch.</p>
-      <ul class="feats">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><span><b>Schreiben</b>Gliederung bis Fazit</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><span><b>Plagiats- &amp; KI-Check</b>Übernahmen und KI-Floskeln</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><span><b>Quellenbelege</b>als fertiges PDF</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><span><b>Probe-Prüfung</b>fürs Gespräch</span></li>
-      </ul>
-      <div class="buybox" id="kaufen">
-        <div class="pricerow">
-          <span class="price">9,90&nbsp;€</span>
-          <a class="btn " href="https://www.checkout-ds24.com/product/757079" rel="noopener" target="_blank">Für 9,90 € kaufen</a>
-        </div>
-        <p class="small buynote">Einmalig, kein Abo, inkl. MwSt. · 14 Tage Widerrufsrecht · <b>Sofort-Download:</b> Skill (ZIP) + Anleitung (PDF), kein Versand · Läuft im kostenlosen Claude · <b>Du brauchst ein eigenes Claude-Konto</b> (es gelten die Nutzungsbedingungen von Anthropic).</p>
+  <section class="hero">
+    <div class="in">
+      <p class="eyebrow">Seminararbeit-Profi</p>
+      <h1>Seminararbeit bis zum 10.11.?<br><span>Keine Angst.</span></h1>
+      <p class="sub">Ein Skill für dein Claude-Konto. Von der ersten Zeile bis zum Prüfungsgespräch.</p>
+      <div class="ctas" id="kaufen">
+        <a class="pill l " href="https://www.checkout-ds24.com/product/757079" rel="noopener" target="_blank">Für 9,90 € kaufen</a>
+        <a class="more" href="#so">So funktioniert's ›</a>
       </div>
-    </div>
+      <p class="price-note">Einmalig, kein Abo, inkl. MwSt. · Läuft im kostenlosen Claude</p>
 
-    <div class="stage" aria-label="Beispiel: von der Word-Datei zum Endcheck">
-      <div class="canvas">
-        <div class="flow">
-          <div>
-            <p class="ex">Beispiel</p>
-            <p class="label">Du schickst</p>
-            <div class="send"><span class="file"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>Seminararbeit_v4.docx</span><p class="said">„Abgabe am 10.11. Check alles.“</p></div>
-          </div>
-          <div class="arrow" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16h21M18 8l8 8-8 8"/></svg></div>
-          <div class="result">
-            <p class="label">Du bekommst</p>
-            <p class="title">Endcheck mit Fundstellen und Plan bis zur Abgabe</p>
-            <div class="tiles">
-              <div class="tile warn"><small>Muss vor Abgabe</small><b>5</b></div>
-              <div class="tile"><small>Sollte</small><b>7</b></div>
-              <div class="tile"><small>Passt schon</small><b>31</b></div>
+      <div class="shot" aria-label="Beispiel: von der Word-Datei zum Endcheck">
+        <div class="card">
+          <div class="row">
+            <div>
+              <p class="lbl">Du schickst</p>
+              <div class="file"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>Seminararbeit_v4.docx</div>
+              <p class="said">„Abgabe am 10.11. Check alles.“</p>
             </div>
-            <ul class="finds">
-              <li class="r">Fußnote 12: wörtliches Zitat, aber mit „Vgl.“</li>
-              <li class="r">„Müller 2021“ zitiert, fehlt im Literaturverzeichnis</li>
-              <li class="y">Kap. 3.2: „dramatisch“ ist eine Wertung außerhalb des Fazits</li>
-              <li class="g">Plagiats-Check gegen deine Quellen: keine ungekennzeichneten Übernahmen</li>
-            </ul>
-            <div class="chips"><span>Beleg-PDF mit Screenshots</span><span>Formalia in Word</span><span>+ Probe-Prüfung</span></div>
+            <div class="arr" aria-hidden="true">→</div>
+            <div>
+              <p class="lbl">Du bekommst</p>
+              <p class="res-t">Endcheck mit Fundstellen und Plan bis zur Abgabe</p>
+              <div class="tiles">
+                <div class="tile warn"><small>Muss vor Abgabe</small><b>5</b></div>
+                <div class="tile"><small>Sollte</small><b>7</b></div>
+                <div class="tile"><small>Passt schon</small><b>31</b></div>
+              </div>
+            </div>
           </div>
+          <ul class="finds">
+            <li>Fußnote 12: wörtliches Zitat, aber mit „Vgl.“</li>
+            <li>„Müller 2021“ zitiert, fehlt im Literaturverzeichnis</li>
+            <li class="y">Kap. 3.2: „dramatisch“ ist eine Wertung außerhalb des Fazits</li>
+            <li class="g">Plagiats-Check gegen deine Quellen: keine ungekennzeichneten Übernahmen</li>
+          </ul>
+        </div>
+        <img class="mascot" src="hamster-cut.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="band ink" style="margin-top:120px">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Was drin ist</p>
+        <h2>Schreiben. Prüfen. Belegen. Üben.</h2>
+        <p>Vier Dinge, die vor der Abgabe Zeit kosten. Der Skill erledigt sie mit dir zusammen in Claude.</p>
+      </div>
+      <div class="bento">
+        <div class="tilebox a"><span class="k">Schreiben</span><h3>Von der Gliederung bis zum Fazit.</h3><p>Kapitel für Kapitel, sachlich, mit Beleg nach jeder Aussage. Du entscheidest, was rein kommt.</p></div>
+        <div class="tilebox b"><span class="big">7</span><h3>Prüf-Werkzeuge</h3><p>Formalia, Fußnoten, Literaturverzeichnis und mehr.</p></div>
+        <div class="tilebox c"><span class="k">Plagiats- &amp; KI-Check</span><h3>Übernahmen und KI-Floskeln finden.</h3><p>Gegen deine eigenen Quellen geprüft. Ein Selbstcheck, keine Garantie.</p></div>
+        <div class="tilebox d"><span class="k">Quellenbelege</span><h3>Aus Screenshots wird ein PDF.</h3><p>Mit Link und Abrufdatum, fertig zum Abgeben.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Neu in Bayern</p>
+        <h2>Das Prüfungsgespräch übst du vorher.</h2>
+        <p>Mit deiner eigenen Arbeit. Laut Kultusministerium wird dort auch gefragt, wie du KI genutzt hast.</p>
+      </div>
+      <div class="split">
+        <ul class="ticks">
+          <li><b>Spickzettel</b><span>Kernaussage, wichtige Zahlen und die Stellen, an denen nachgehakt wird.</span></li>
+          <li><b>Fragenkatalog</b><span>Aus deiner Arbeit erstellt, mit Antwort-Gerüst.</span></li>
+          <li><b>Probe-Prüfung</b><span>Claude fragt wie eine Lehrkraft und wertet dich danach aus.</span></li>
+        </ul>
+        <div class="chat" aria-label="Beispiel aus einer Probe-Prüfung">
+          <p class="bubble q"><i>Lehrkraft</i>Auf Seite 7 schreiben Sie, die Zahl der Touristen habe sich von 2010 bis 2018 mehr als vervierfacht. Woher wissen Sie das?</p>
+          <p class="bubble a"><i>Du</i>Ankünfte am Flughafen laut amtlicher Statistik, 2010 rund 0,5 Mio., 2018 2,3 Mio. Kreuzfahrtgäste fehlen.</p>
+          <p class="bubble fb">✓ Quelle und Zahl sicher, Grenze genannt. Nächstes Mal mit der Kernaussage anfangen.</p>
         </div>
       </div>
-      <img class="mascot" src="hamster-cut.png" alt="">
     </div>
-  </div>
+  </section>
 
-  <section class="wrap narrow" aria-label="Wer dahinter steckt">
-    <div class="trust">
-      <img src="hamster.png" alt="">
-      <div>
-        <p><b>Gemacht von Jona aus Bayern, selbst Abi-Jahrgang 2027.</b> Du bleibst der Autor: Claude nutzt KI so, wie deine Lehrkraft es erlaubt, und erfindet keine Quellen. Was er nicht prüfen konnte, markiert er.</p>
+  <section class="band">
+    <div class="in">
+      <div class="head">
+        <p class="eyebrow">Zehn Modi</p>
+        <h2>Egal, wo du gerade stehst.</h2>
+        <p>Noch nicht angefangen oder fast fertig? Sag es Claude, er wählt den passenden Modus.</p>
+      </div>
+      <div class="specs">
+        <div><b>Planen</b><span>Forschungsfrage, Gliederung, Zeitplan bis zur Abgabe.</span></div>
+        <div><b>Recherchieren</b><span>Echte Quellen finden. Du entscheidest, was rein kommt.</span></div>
+        <div><b>Schreiben &amp; Überarbeiten</b><span>Kapitel für Kapitel, mit Beleg nach jeder Aussage.</span></div>
+        <div><b>Zitieren</b><span>Fußnoten, „Vgl.“, „ebd.“ und Literaturverzeichnis.</span></div>
+        <div><b>Formalia-Check</b><span>Ränder, Abstände, Seitenzahlen, Umfang in Word.</span></div>
+        <div><b>Grafiken</b><span>Saubere Diagramme mit Quelle.</span></div>
+        <div><b>Umfang anpassen</b><span>Zu lang oder zu kurz? Markierter Vorschlag in Word.</span></div>
+        <div><b>Quellenbelege</b><span>Screenshots werden ein Beleg-PDF mit Link und Datum.</span></div>
+        <div><b>Endcheck</b><span>Plagiats-Check, KI-Check, Formalia und Checkliste.</span></div>
+        <div><b>Prüfungsgespräch-Coach</b><span>Spickzettel, Fragen und Probe-Prüfung.</span></div>
       </div>
     </div>
   </section>
 
-  <section class="wrap" aria-labelledby="modi">
-    <h2 id="modi">Zehn Modi, vom ersten Satz bis zum Gespräch</h2>
-    <p class="lead">Noch nicht angefangen oder fast fertig? Sag einfach, wo du stehst. Claude wählt den passenden Modus.</p>
-    <ol class="modes">
-      <li><div><b>Planen</b><span>Forschungsfrage, Gliederung, Zeitplan bis zur Abgabe.</span></div></li>
-      <li><div><b>Recherchieren</b><span>Echte Quellen finden. Du entscheidest, was rein kommt.</span></div></li>
-      <li><div><b>Schreiben &amp; Überarbeiten</b><span>Kapitel für Kapitel, sachlich, mit Beleg nach jeder Aussage.</span></div></li>
-      <li><div><b>Zitieren</b><span>Fußnoten, „Vgl.“, „ebd.“ und Literaturverzeichnis.</span></div></li>
-      <li><div><b>Formalia-Check</b><span>Ränder, Abstände, Seitenzahlen, Umfang in deiner Word-Datei.</span></div></li>
-      <li><div><b>Grafiken</b><span>Saubere Diagramme mit Quelle.</span></div></li>
-      <li><div><b>Umfang anpassen</b><span>Zu lang oder zu kurz? Markierter Vorschlag in Word.</span></div></li>
-      <li><div><b>Quellenbelege</b><span>Aus Screenshots wird ein Beleg-PDF mit Link und Datum.</span></div></li>
-      <li><div><b>Endcheck</b><span>Plagiats-Check, KI-Check, Formalia und Checkliste.</span></div></li>
-      <li><div><b>Prüfungsgespräch-Coach</b><span>Spickzettel, Fragen und Probe-Prüfung.</span></div></li>
-    </ol>
+  <section class="band white" id="so">
+    <div class="in">
+      <div class="head">
+        <h2>In drei Schritten startklar.</h2>
+        <p>Einrichten geht am besten am Laptop und dauert etwa zwei Minuten.</p>
+      </div>
+      <ol class="steps">
+        <li><b>Kaufen</b><span>Über Digistore24, der Download kommt sofort.</span></li>
+        <li><b>Hochladen</b><span>In Claude unter Anpassen → Skills die ZIP-Datei hochladen. Die Anleitung zeigt jeden Klick.</span></li>
+        <li><b>Loslegen</b><span>Neuer Chat, Word-Datei rein, „Abgabe am 10.11., hilf mir“.</span></li>
+      </ol>
+      <p class="fine"><b>Lieferumfang:</b> Skill „Seminararbeit-Profi“ als ZIP-Datei und Anleitung als PDF, digital als Download, sofort nach dem Kauf. Kein Versand. Du brauchst ein eigenes Claude-Konto (kostenlos reicht; es gelten die Nutzungsbedingungen von Anthropic), die Einstellung „Dateien erstellen und bearbeiten“ und deine Arbeit als Word-Datei.</p>
+    </div>
   </section>
 
-  <section class="wrap" aria-labelledby="coach">
-    <div class="coach">
-      <div>
-        <p class="eyebrow">Neu in Bayern</p>
-        <h2 id="coach">Das Prüfungsgespräch übst du vorher, mit deiner eigenen Arbeit.</h2>
-        <ul class="ticks">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Spickzettel</b> mit Kernaussage, wichtigen Zahlen und den Stellen, wo nachgehakt wird.</div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Fragenkatalog</b> aus deiner Arbeit, mit Antwort-Gerüst.</div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Probe-Prüfung:</b> Claude fragt wie eine Lehrkraft und wertet dich danach aus.</div></li>
-        </ul>
-      </div>
-      <div class="chat" aria-label="Beispiel aus einer Probe-Prüfung">
-        <p class="q"><span class="who">Lehrkraft</span>Auf Seite 7 schreiben Sie, die Zahl der Touristen habe sich von 2010 bis 2018 mehr als vervierfacht. Woher wissen Sie das, und wie belastbar ist die Zahl?</p>
-        <p class="a"><span class="who">Du</span>Das sind die Ankünfte am Flughafen laut amtlicher Statistik, 2010 rund 0,5 Mio. und 2018 2,3 Mio. Ganz genau ist es nicht, weil Kreuzfahrtgäste fehlen.</p>
-        <p class="fb"><span class="who">Coach</span>✔ Quelle und Zahl sicher, Grenze genannt. ➜ Nächstes Mal mit der Kernaussage anfangen.</p>
+  <section class="band">
+    <div class="in">
+      <div class="head"><h2>Fragen.</h2></div>
+      <div class="faq">
+        <details><summary>Ist das nicht Schummeln?</summary><p>Viele Lehrkräfte erlauben KI, und laut Kultusministerium wird im Prüfungsgespräch auch gefragt, wie du KI genutzt hast. Der Skill fragt am Anfang nach der Regel deiner Lehrkraft und hält sich daran. Erklären musst du deine Arbeit am Ende selbst, genau dafür gibt es den Coach.</p></details>
+        <details><summary>Klappt das mit dem kostenlosen Claude?</summary><p>Ja. Weil die Nachrichten dort begrenzt sind, speichert Claude am Ende jeder Sitzung deinen Arbeitsstand. Den lädst du im nächsten Chat wieder hoch und machst weiter.</p></details>
+        <details><summary>Mein Gespräch ist schon bald. Lohnt sich das noch?</summary><p>Ja. Lade die abgegebene Arbeit hoch und starte direkt mit dem Coach.</p></details>
+        <details><summary>Bekomme ich eine bessere Note garantiert?</summary><p>Nein. Plagiats- und KI-Check sind Selbstchecks: Kein Werkzeug kann sicher beweisen, wer einen Text geschrieben hat. Die Note gibt deine Lehrkraft.</p></details>
+        <details><summary>Kann ich den Kauf widerrufen?</summary><p>Ja. Du hast 14 Tage Widerrufsrecht ab Kauf, nach der Widerrufsbelehrung von Digistore24 (dein Vertragspartner). Klappt beim Einrichten etwas nicht, schreib mir gern vorher, meist ist es schnell gelöst.</p></details>
       </div>
     </div>
   </section>
 
-  <section class="wrap" aria-labelledby="so">
-    <h2 id="so">In 3 Schritten startklar</h2>
-    <ol class="steps">
-      <li><div><b>Kaufen</b><span>Über Digistore24, der Download kommt sofort.</span></div></li>
-      <li><div><b>Hochladen</b><span>In Claude unter Anpassen → Skills die ZIP-Datei hochladen. Die Anleitung zeigt jeden Klick.</span></div></li>
-      <li><div><b>Loslegen</b><span>Neuer Chat, Word-Datei rein, „Abgabe am 10.11., hilf mir“.</span></div></li>
-    </ol>
-    <p class="small needs"><b>Lieferumfang:</b> ZIP-Datei mit dem Skill „Seminararbeit-Profi“ (Anleitungen und 7 Prüf-Werkzeuge für Claude) und Anleitung als PDF. Digitale Lieferung als Download, sofort nach dem Kauf auf der Danke-Seite und per E-Mail. Kein physischer Versand, das Claude-Konto selbst ist nicht enthalten.</p>
-    <p class="small needs">Du brauchst: ein eigenes Claude-Konto (kostenlos reicht; es gelten die Nutzungsbedingungen von Anthropic, z. B. zum Mindestalter), die Einstellung „Dateien erstellen und bearbeiten“ und deine Arbeit als Word-Datei. Einrichten geht am besten am Laptop.</p>
-  </section>
-
-  <section class="wrap narrow" aria-labelledby="faq">
-    <h2 id="faq">Fragen</h2>
-    <details><summary>Ist das nicht Schummeln?</summary><p>Viele Lehrkräfte erlauben KI, und laut Kultusministerium wird im Prüfungsgespräch auch gefragt, wie du KI genutzt hast. Der Skill fragt am Anfang nach der Regel deiner Lehrkraft und hält sich daran. Erklären musst du deine Arbeit am Ende selbst, genau dafür gibt es den Coach.</p></details>
-    <details><summary>Klappt das mit dem kostenlosen Claude?</summary><p>Ja. Weil die Nachrichten dort begrenzt sind, speichert Claude am Ende jeder Sitzung deinen Arbeitsstand. Den lädst du im nächsten Chat wieder hoch und machst weiter.</p></details>
-    <details><summary>Mein Gespräch ist schon bald. Lohnt sich das noch?</summary><p>Ja. Lade die abgegebene Arbeit hoch und starte direkt mit dem Coach.</p></details>
-    <details><summary>Bekomme ich eine bessere Note garantiert?</summary><p>Nein. Plagiats- und KI-Check sind Selbstchecks: Kein Werkzeug kann sicher beweisen, wer einen Text geschrieben hat. Die Note gibt deine Lehrkraft.</p></details>
-    <details><summary>Kann ich den Kauf widerrufen?</summary><p>Ja. Du hast <b>14 Tage Widerrufsrecht</b> ab Kauf, nach der Widerrufsbelehrung von Digistore24 (dein Vertragspartner). Den Widerruf richtest du an Digistore24, die Adresse steht in deiner Bestell-Mail. Klappt beim Einrichten etwas nicht, schreib mir gern vorher, meist ist es schnell gelöst.</p></details>
-  </section>
-
-  <section class="wrap narrow" aria-label="Kaufen">
-    <div class="cta2"><span class="price">9,90&nbsp;€</span><a class="btn " href="https://www.checkout-ds24.com/product/757079" rel="noopener" target="_blank">Für 9,90 € kaufen</a></div>
-    <p class="small buynote center">Einmalig, inkl. MwSt. · 14 Tage Widerrufsrecht · eigenes Claude-Konto nötig · Vertragspartner und Zahlung: Digistore24 · Hamsterfrei ist nicht mit Anthropic, dem Kultusministerium oder einer Schule verbunden. Fragen? bartenbach.jona@gmail.com</p>
+  <section class="band white final">
+    <div class="in">
+      <img src="hamster.png" alt="" width="96" height="96" style="border-radius:50%;background:#E3F1EA">
+      <h2 style="margin-top:20px">Bereit für den 10.11.</h2>
+      <p class="pricebig">9,90&nbsp;€ · einmalig</p>
+      <div class="ctas"><a class="pill l " href="https://www.checkout-ds24.com/product/757079" rel="noopener" target="_blank">Für 9,90 € kaufen</a></div>
+      <p class="price-note">Inkl. MwSt. · 14 Tage Widerrufsrecht · Vertragspartner und Zahlung: Digistore24</p>
+    </div>
   </section>
 </main>
 
-<div class="bar" id="bar" aria-hidden="true"><span class="price">9,90&nbsp;€</span><a class="btn " href="https://www.checkout-ds24.com/product/757079" tabindex="-1" rel="noopener" target="_blank">Für 9,90 € kaufen</a></div>
-
-<footer class="wrap">
-  <nav aria-label="Rechtliches"><a href="index.html">Alle Skills</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="kaufbedingungen.html">Kaufbedingungen</a></nav>
-  <p>© 2026 Hamsterfrei · Folg dem Hamster auf <a href="https://www.tiktok.com/@hamsterfrei" rel="noopener" target="_blank">TikTok</a>, <a href="https://www.instagram.com/hamsterfrei/" rel="noopener" target="_blank">Instagram</a> und <a href="https://www.youtube.com/channel/UCBmT3RjRK5PGk-YVTdFzuDA" rel="noopener" target="_blank">YouTube</a>. Claude ist eine Marke von Anthropic; Hamsterfrei ist nicht mit Anthropic verbunden.</p>
+<footer class="foot">
+  <div class="in">
+    <p>Gemacht von Jona aus Bayern, selbst Abi-Jahrgang 2027. Folg dem Hamster auf <a href="https://www.tiktok.com/@hamsterfrei" rel="noopener" target="_blank">TikTok</a>, <a href="https://www.instagram.com/hamsterfrei/" rel="noopener" target="_blank">Instagram</a> und <a href="https://www.youtube.com/channel/UCBmT3RjRK5PGk-YVTdFzuDA" rel="noopener" target="_blank">YouTube</a>. Claude ist eine Marke von Anthropic; Hamsterfrei ist nicht mit Anthropic verbunden.</p>
+    <nav aria-label="Rechtliches"><a href="index.html">Alle Skills</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="kaufbedingungen.html">Kaufbedingungen</a><span>Fragen? bartenbach.jona@gmail.com</span></nav>
+    <p>© 2026 Hamsterfrei</p>
+  </div>
 </footer>
-<script>
-(function(){
-  var bar=document.getElementById('bar'), box=document.getElementById('kaufen');
-  if(!('IntersectionObserver' in window)||!bar||!box) return;
-  new IntersectionObserver(function(e){ bar.classList.toggle('show', !e[0].isIntersecting && e[0].boundingClientRect.top<0); }).observe(box);
-})();
-</script>
 </body>
 </html>
