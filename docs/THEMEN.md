@@ -9,7 +9,7 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | S1 | **Seminar-Offensive:** „Bayern, 13. Klasse: Diese 5 Fehler in deiner Seminararbeit kosten dich Punkte“ (Inhalt + Regeln: docs/plaene/SEMINAR.md) | SEMINAR | ja (eigenes Produkt) | veröffentlicht 30.10.2026 16:36 (TikTok, YT, IG) |
 | S2 | **Seminar-Offensive:** „Im Prüfungsgespräch wirst du gefragt, wie du KI benutzt hast“ (KMS 02.02.2026, Coach-Demo) | SEMINAR | ja (eigenes Produkt) | veröffentlicht 02.11.2026 18:00 (TikTok, YT, IG) |
 | S3 | **Seminar-Offensive:** Echte Demo – Jonas Arbeit im Endcheck (nur mit Jonas OK zu gezeigten Ausschnitten) | SEMINAR | ja (eigenes Produkt) | wartet auf OK |
-| T4 | **Trend (zeitkritisch bis 10.11.):** „Lass Claude deine Seminararbeit prüfen – nicht schreiben“ (Claude-Projekt + 3 Prüffragen, Ergebnis zuerst, „Konto ab 18“, KI-Nutzung angeben; siehe TRENDS.md 02.11. I1) | SEMINAR | ja (eigenes Produkt), Skill nicht im Video nennen | in Arbeit 03.11.: Skript + Szenen fertig, Stimme fehlt (ElevenLabs-Credits leer) |
+| T4 | **Trend (zeitkritisch bis 10.11.):** „Lass Claude deine Seminararbeit prüfen – nicht schreiben“ (Composition Seminar04, Marke v2 ohne Produkt) | SEMINAR | **nein** (ohne Produkt gebaut, Marke v2) | terminiert 04.11.2026 18:00 (TikTok, YT; IG offen 18:00) |
 | S4 | **Seminar-Offensive:** Belege-Zeitraffer – Screenshots → Beleg-PDF | SEMINAR | ja (eigenes Produkt) | offen |
 | S5 | **Seminar-Offensive:** Countdown „Noch X Tage“ – ein Formalia-Tipp pro Tag | SEMINAR | ja (eigenes Produkt) | offen (täglich bis 10.11.) |
 | 01 | Ein Produkt, ein Shop (Sonnenuntergangs-Lampe, Shopify) | SHOP | ja (Shopify) | veröffentlicht 29.10.2026 |

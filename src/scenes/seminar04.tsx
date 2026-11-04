@@ -49,7 +49,13 @@ export const SceneHook: React.FC<{ pruefen: number; schreiben: number }> = ({ pr
       <div style={{ position: "absolute", left: 320, top: 60, right: 30, fontSize: 60, fontWeight: 700, lineHeight: 1.1 }}>
         Claude <span style={{ color: GREEN }}>prüft</span> deine Seminararbeit.
       </div>
+      <svg width={948} height={1004} style={{ position: "absolute", left: 0, top: 0 }}>
+        <path d="M 445 1000 C 470 910, 500 850, 520 795" stroke={RED} strokeWidth={14} fill="none" strokeLinecap="round" strokeDasharray="30 20" />
+        <path d="M 478 812 L 522 780 L 548 828" stroke={RED} strokeWidth={14} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
       <ClaudeCard style={{ left: 40, right: 40, top: 330 }} size={50} />
+      {/* Ring um „Kapitel 2“ + Pfeil vom Zeigestab des Hamsters (ab Frame 0) */}
+      <div style={{ position: "absolute", left: 52, top: 414, width: 284, height: 78, border: `8px solid ${RED}`, borderRadius: 999, rotate: "-3deg", scale: String(1 + 0.04 * Math.sin(frame / 3)) }} />
       <div style={{ position: "absolute", left: 40, right: 40, top: 760, display: "flex", justifyContent: "space-around" }}>
         <div style={{ scale: String(s1), rotate: "-5deg", border: `7px solid ${GREEN}`, color: GREEN, borderRadius: 18, padding: "4px 22px", fontSize: 64, fontWeight: 700, background: "rgba(255,255,255,.9)" }}>PRÜFEN ✓</div>
         <div style={{ scale: String(s2), rotate: "5deg", border: `7px solid ${RED}`, color: RED, borderRadius: 18, padding: "4px 22px", fontSize: 64, fontWeight: 700, background: "rgba(255,255,255,.9)" }}>SCHREIBEN ✗</div>
@@ -113,14 +119,14 @@ export const SceneProjekt: React.FC<{ projekt: number; files: number[] }> = ({ p
         const s = sp(t, files[i], fps);
         const y = interpolate(s, [0, 1], [260, 0]);
         return (
-          <div key={f.name} style={{ position: "absolute", left: 110, right: 110, top: 330 + i * 160, opacity: t < files[i] ? 0 : 1, translate: `0px ${y}px`, display: "flex", alignItems: "center", gap: 24, background: PAPER, border: `5px solid ${INK}`, borderRadius: 22, padding: "18px 28px", fontSize: 46, fontWeight: 600 }}>
-            <span style={{ fontSize: 60 }}>{f.icon}</span>
+          <div key={f.name} style={{ position: "absolute", left: 110, right: 110, top: 300 + i * 190, opacity: t < files[i] ? 0 : 1, translate: `0px ${y}px`, display: "flex", alignItems: "center", gap: 24, background: PAPER, border: `5px solid ${INK}`, borderRadius: 26, padding: "30px 32px", fontSize: 56, fontWeight: 600 }}>
+            <span style={{ fontSize: 76 }}>{f.icon}</span>
             {f.name}
             <span style={{ marginLeft: "auto", color: GREEN, fontSize: 50, opacity: fade(t, files[i] + 0.4) }}>✓</span>
           </div>
         );
       })}
-      <div style={{ position: "absolute", left: 0, right: 0, top: 830, textAlign: "center", fontSize: 38, fontWeight: 600, color: MUTED, opacity: fade(t, files[2] + 0.3) }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 830, textAlign: "center", fontSize: 44, fontWeight: 600, color: MUTED, opacity: fade(t, files[2] + 0.3) }}>
         Tipp: Name &amp; Schule vorher rausnehmen
       </div>
     </div>
@@ -178,11 +184,11 @@ export const SceneF2: React.FC<{ quelle: number }> = ({ quelle }) => {
       <Ask n={2}>Welche Zitate soll ich nochmal mit der Quelle vergleichen?</Ask>
       <div style={{ position: "absolute", left: 50, top: 440, width: 380, height: 360, background: PAPER, border: `5px solid ${INK}`, borderRadius: 20, padding: 24 }}>
         <div style={{ fontSize: 32, fontWeight: 700, color: MUTED }}>DEINE ARBEIT</div>
-        <div style={{ fontSize: 38, fontWeight: 600, marginTop: 14, lineHeight: 1.2 }}>„… rund 30 % mehr Fahrgäste …“<sup>12</sup></div>
+        <div style={{ fontSize: 46, fontWeight: 600, marginTop: 14, lineHeight: 1.2 }}>„… rund 30 % mehr Fahrgäste …“<sup>12</sup></div>
       </div>
       <div style={{ position: "absolute", right: 50, top: 440, width: 380, height: 360, background: PAPER, border: `5px solid ${INK}`, borderRadius: 20, padding: 24, opacity: fade(t, quelle) }}>
         <div style={{ fontSize: 32, fontWeight: 700, color: MUTED }}>QUELLE</div>
-        <div style={{ fontSize: 38, fontWeight: 600, marginTop: 14, lineHeight: 1.2 }}>„… rund 13 % mehr Fahrgäste …“</div>
+        <div style={{ fontSize: 46, fontWeight: 600, marginTop: 14, lineHeight: 1.2 }}>„… rund 13 % mehr Fahrgäste …“</div>
       </div>
       <Pop at={quelle + 0.4} style={{ position: "absolute", left: 404, top: 560 }}>
         <div style={{ width: 140, height: 140, borderRadius: 70, background: "#FFE27A", border: `6px solid ${INK}`, display: "grid", placeItems: "center", fontSize: 50 }}>🔍</div>
@@ -212,25 +218,39 @@ export const SceneF3: React.FC<{ frage: number }> = ({ frage }) => (
   </div>
 );
 
-// ---------- Regel ----------
-export const SceneRegel: React.FC<{ selbst: number; lehrkraft: number; angeben: number }> = ({ selbst, lehrkraft, angeben }) => {
+// ---------- Regel: „Aber vorher“ ----------
+export const SceneRegel: React.FC<{ lehrkraft: number; angeben: number }> = ({ lehrkraft, angeben }) => {
   const rows = [
-    { at: selbst, icon: "✍️", text: "Schreiben musst du selbst" },
-    { at: lehrkraft, icon: "🧑‍🏫", text: "Lehrkraft fragen: KI erlaubt?" },
-    { at: angeben, icon: "📝", text: "KI-Nutzung angeben" },
+    { at: lehrkraft, icon: "🧑‍🏫", text: "Lehrkraft fragen: Claude erlaubt?" },
+    { at: angeben, icon: "📝", text: "In der Arbeit angeben, wofür" },
   ];
   return (
     <div style={{ position: "absolute", inset: 0, background: "#FDF1E6" }}>
-      <div style={{ position: "absolute", left: 60, top: 50, fontSize: 70, fontWeight: 700 }}>Aber:</div>
+      <div style={{ position: "absolute", left: 60, top: 60, fontSize: 80, fontWeight: 700 }}>Aber <span style={{ color: RED }}>vorher</span>:</div>
       {rows.map((r, i) => (
-        <Pop key={r.text} at={r.at} style={{ position: "absolute", left: 60, right: 60, top: 190 + i * 210 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 26, background: "#fff", border: `6px solid ${INK}`, borderRadius: 26, padding: "22px 30px", fontSize: 50, fontWeight: 600 }}>
-            <span style={{ fontSize: 72 }}>{r.icon}</span>
+        <Pop key={r.text} at={r.at} style={{ position: "absolute", left: 60, right: 60, top: 250 + i * 290 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 26, background: "#fff", border: `6px solid ${INK}`, borderRadius: 26, padding: "40px 34px", fontSize: 62, fontWeight: 600, lineHeight: 1.1 }}>
+            <span style={{ fontSize: 96 }}>{r.icon}</span>
             {r.text}
           </div>
         </Pop>
       ))}
-      <div style={{ position: "absolute", left: 0, right: 0, bottom: 40, textAlign: "center", fontSize: 32, color: MUTED, fontWeight: 500 }}>Claude-Konto ab 18</div>
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: 50, textAlign: "center", fontSize: 46, color: MUTED, fontWeight: 500 }}>Claude-Konto ab 18</div>
+    </div>
+  );
+};
+
+// ---------- Pointe: Claude findet, du reparierst ----------
+export const ScenePointe: React.FC<{ reparieren: number }> = ({ reparieren }) => {
+  const { t, fps } = useT();
+  const s = sp(t, reparieren, fps);
+  return (
+    <div style={{ position: "absolute", inset: 0, background: CREAM }}>
+      <ClaudeCard style={{ left: 50, right: 50, top: 60, scale: String(Math.max(0.8, sp(t, -0.1, fps))) }} size={46} />
+      <div style={{ position: "absolute", left: 0, right: 0, top: 520, textAlign: "center", fontSize: 54, fontWeight: 700, color: MUTED, opacity: fade(t, 0.1) }}>Claude findet's.</div>
+      <div style={{ position: "absolute", left: 80, right: 80, top: 620, scale: String(s), rotate: "-3deg", background: GREEN, color: "#fff", border: `7px solid ${INK}`, borderRadius: 30, padding: "26px 20px", textAlign: "center", fontSize: 84, fontWeight: 700 }}>
+          Reparieren: DU ✍️
+      </div>
     </div>
   );
 };
