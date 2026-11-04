@@ -1,5 +1,7 @@
 # Viral-Recherche & neue Formate (29.10.2026)
 
+> **Hintergrund, Stand 29.10.** Seit Marke v2 (04.11.2026) sind die Formate in `docs/brand/SERIEN.md` aufgegangen: A „Hamster vs. Handy-Anzeige“ → Serie (b) Vorher/Nachher bzw. (a) Hamster-Test; C „Labor“ → Serie (a) Hamster-Test (Bewertung Geklappt/Halb/Fail); B „Was ist das wert?“ → möglicher Hamster-Test. Testplan unten ersetzt durch `docs/AUSWERTUNG_AKTUELL.md` (eine Variable je 10 Videos). „Werbung (eigenes Produkt) ab Sekunde 0“ bei Format A gilt nicht mehr: nie Werbe-Eröffnung, Label ja (KANAL_REGELN).
+
 Datenlage: vidIQ ohne Credits, TikTok-Seiten nicht abrufbar, kaum deutsche Daten – Sekundärquellen (creatordb, Fachartikel). Kernaussagen:
 - Kommentar-Wort → DM ist bei KI-Kanälen Standard (z. B. „Comment ‘Claude’…“, „Comment AI…“), Instagram duldet es bei echter Interaktion.
 - Ergebnis sofort/in Echtzeit schlägt Erklären; übertriebene Demos schaden dem Vertrauen.

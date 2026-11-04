@@ -1,8 +1,9 @@
 # Hamsterfrei Studio
 
-Animierter Hamster (Krawatte, Zeigestab, Leinwand) erklärt kleine Nebenbei-Businesses. TikTok @hamsterfrei.
+Animierter Hamster (Krawatte, Zeigestab, Leinwand). Marke v2 (04.11.2026): bis 10.11. Seminararbeit-Offensive, ab 11.11. „Der Hamster probiert's aus: KI-Tricks, die dir Zeit oder Geld bringen.“ TikTok/Instagram @hamsterfrei, YouTube Hamsterfrei.
 
-- Regeln: `docs/KANAL_REGELN.md` (gehen immer vor)
+- Regeln (Rangfolge): `docs/KANAL_REGELN.md` (Sicherheit/Recht/Freigabe) → `docs/brand/` (POSITIONIERUNG, STIMME, LOOK, SERIEN) → `docs/STUDIO_HANDBUCH.md` → `docs/AUSWERTUNG_AKTUELL.md` → `docs/PRODUKTION.md`
+- Zahlen: `state/zahlen.md`
 - Tägliche Produktion: `docs/PRODUKTION.md`
 - Kommentare & DMs: `docs/KOMMENTARE_DMS.md`
 - Themen: `docs/THEMEN.md`, DM-Pläne: `docs/plaene/`

@@ -1,39 +1,57 @@
-# Hamsterfrei – Kanalregeln (gehen immer vor)
+# Hamsterfrei – Kanalregeln (Sicherheit, Recht, Freigabe, Konten)
 
-Stand 29.10.2026, alles von Jona festgelegt.
+Stand 04.11.2026 (Marke v2, von Jona freigegeben). Ersetzt die Fassung vom 29./30.10.2026.
 
-## Kanal
-- Name: **Hamsterfrei**. TikTok: @hamsterfrei (ehemals Jonas Konto mit ca. 2.400 Followern). Instagram: neues Konto (wird von Jona angelegt, noch offen).
-- Maskottchen: gezeichneter Hamster mit gelockerter Büro-Krawatte (navy mit grünen Streifen), Zeigestab in der Hand, steht vor einer Leinwand. Alles, was erklärt wird, läuft auf der Leinwand. Komponente: `src/Hamster.tsx`, Layout: `src/Episode.tsx`. Stil nie ändern.
-- Stimme: ElevenLabs „Hamsterfrei – Hamster“, Voice-ID `E6cNSOTqfEt7KnIGmkxz`, Modell `eleven_v3`. Comic-Hamster, leicht hoch, quirlig, gut verständlich.
-- Musik: dezentes, eigenes ElevenLabs-Musikbett (Ukulele/Marimba, ruhig, ohne Gesang) unter jedem Video, Lautstärke ca. 10 %, sanft ein-/ausgeblendet. Datei `public/music/bett01.mp3`, Standard in `Episode`. Keine Trend-Sounds oder fremde Musik.
-- Geld: primär Affiliate-Links + E-Mail-Liste. Später Nebenprodukt Anzeigen-Automation (Vinted/Kleinanzeigen/eBay).
+## Rangfolge (bei Widersprüchen gilt die höhere Ebene)
+1. **Sicherheit und Recht** in dieser Datei (Freigabe, Werbung, Minderjährige, Konten)
+2. **`docs/brand/*`** (POSITIONIERUNG, STIMME, LOOK, SERIEN)
+3. **`docs/STUDIO_HANDBUCH.md`** (G1–G10, gilt für alle drei Studios)
+4. **`docs/AUSWERTUNG_AKTUELL.md`** (aktueller Test, Messziele)
+5. **`docs/PRODUKTION.md`**, danach `KOMMENTARE_DMS.md`, `THEMEN.md`, `TRENDS.md`, `VIRAL_FORMATE.md`, `docs/plaene/*`
 
-## Ausrichtung (ab 30.10.2026, von Jona entschieden)
-- Look, Stimme, Musik bleiben unverändert. Inhaltlich: **„Der Hamster nimmt dir mit KI Arbeit ab“** (Schule, Uni, Alltag, Verkaufen).
-- **Bis 10.11.2026: Seminararbeit-Offensive hat Vorrang** (siehe `docs/plaene/SEMINAR.md`). TikTok-Bio bis 10.11.: „Seminararbeit bis 10.11.? Keine Angst 🐹 Hilfe hier ⬇️“, Link hamsterfrei.de/seminar. Danach entscheidet Jona über neue Bio (Varianten: „Ich nehm dir Arbeit ab 🐹 KI-Hilfe für Seminararbeit & Alltag ⬇️“ / „Weniger Stress, mehr frei 🐹 Claude-Skills für Schule & Alltag ⬇️“).
-- Publikum sind auch Unter-18-Jährige: nie zum Kauf drängen, Produktseite nennt „Claude-Konto ab 18“.
-- Nebenbei-Business-Videos (Format 1 unten) nur noch gelegentlich, nicht mehr Kern.
+Widerspricht eine niedrigere Datei einer höheren, gilt die höhere, und der Widerspruch wird im nächsten Lauf in der niedrigeren Datei bereinigt. Die Prompts der geplanten Aufgaben verweisen nur auf diese Dateien und enthalten keine eigenen Detailregeln.
 
-## Format 1 (ab jetzt nur gelegentlich): Der Hamster erklärt ein kleines Nebenbei-Business
-- Kleine, unscheinbare Side Hustles. KEINE Gründergeschichten, keine „der hat Millionen gemacht“-Storys.
-- Startet direkt mit der Anleitung („Such dir auf AliExpress …“), Schritt für Schritt, 45–55 s.
-- **Immer konkret:** ein echtes, greifbares Beispiel, das gerade viral/aktuell ist („Zum Beispiel …“), und dieses Beispiel wird auf der Leinwand gezeigt. Tools (z. B. Shopify, Canva, Etsy, Printify, Vinted) werden Schritt für Schritt nachgebaut gezeigt, damit man sieht: ist einfach.
-- Dropshipping darf gezeigt, aber nicht beim Namen genannt werden. Fachbegriffe vermeiden.
-- Videos dürfen nicht wie Werbung anfangen. Kein „Haken“-Teil im Video. Kein gesprochener Satz über Werbelinks.
-- Ende: „Die genaue Anleitung schick ich dir. Folg mir und kommentier WORT.“ Letztes Bild bleibt mit dem Wort (SHOP-Kommentarblase auf Handy).
-- Folgen mit Affiliate-Tool: kleines „Werbung“-Label oben links im Bild + „Werbung |“ am Anfang der Caption. Auf TikTok „Beitragsinhalt offenlegen → Deine Marke“ und „KI-generierter Inhalt“ einschalten.
-- Kein großer Titeltext im Video, Titel nur in Caption/Cover.
+## Kanal (kurz, Details in docs/brand/)
+- Name **Hamsterfrei**. TikTok @hamsterfrei (ehemals Jonas Privatkonto mit ca. 2.400 Followern), Instagram @hamsterfrei, YouTube-Kanal Hamsterfrei `UCBmT3RjRK5PGk-YVTdFzuDA` (Details `state/konten.md`).
+- Positionierung bis 10.11. Seminararbeit-Offensive, ab 11.11. „Der Hamster probiert's aus: KI-Tricks, die dir Zeit oder Geld bringen.“ → `docs/brand/POSITIONIERUNG.md`.
+- Figur, Farben, Schrift, Musik → `docs/brand/LOOK.md` (Stil nur schrittweise ändern). Stimme → `docs/brand/STIMME.md`.
+- TikTok-Bio bis 10.11.: „Seminararbeit bis 10.11.? Keine Angst 🐹 Hilfe hier ⬇️“, Link hamsterfrei.de/seminar. Danach entscheidet Jona (Vorschlag in POSITIONIERUNG.md).
 
-## Format 2 (später)
-Zeigen, was jemand konkret macht und wie es funktioniert. Noch nicht produzieren.
+## Takt
+- **1 Video pro Tag, Veröffentlichung 18:00 Uhr** (Europe/Berlin) auf TikTok, YouTube Shorts und Instagram Reels. Das gilt auch während der Seminar-Offensive (die frühere Planung „2 Videos pro Tag um 16:30/20:30“ in SEMINAR.md ist aufgehoben).
+- Ist für heute schon ein Video terminiert oder veröffentlicht, wird kein zweites hochgeladen.
+- Die Posting-Zeit ist eine spätere Testvariable (nur über AUSWERTUNG_AKTUELL), jetzt nicht ändern.
 
-## Ablauf und Freigabe
-- Täglich ein Video, **Veröffentlichung 18:00 Uhr** (Europe/Berlin).
-- **Jedes Video geht erst nach Jonas ausdrücklichem „ok“ online** (Freigabe in der Sitzung der Tagesproduktion). Ohne Okay wird nichts veröffentlicht.
-- DMs: persönlicher Plan als Text (siehe `docs/plaene/`). Solange es keinen Affiliate-Link/keine Hamsterfrei-Seite gibt: **kein Link** in der DM. Sobald Jona einen Affiliate-Link freigibt, wird er in `docs/plaene/links.md` eingetragen und mit Kennzeichnung (*Werbelink) angehängt.
+## Freigabe und Terminieren (neu ab 04.11.2026, Jonas Entscheidung)
+- **Das Studio terminiert Videos selbst für 18:00** auf YouTube, TikTok und Instagram, sobald Text-Kritiker und Bild-Kritiker freigegeben haben (PRODUKTION.md). Nie sofort veröffentlichen, immer terminieren (Ausnahme Instagram-Web ohne Planungsfunktion: siehe PRODUKTION.md).
+- Jona bekommt nach dem Terminieren Video, Caption und Links (SendUserMessage + PushNotification) und **kann bis 18:00 stoppen**. Schreibt er „stopp“ oder Änderungen: Termine löschen bzw. auf privat/Entwurf setzen und nichts neu terminieren, bis er antwortet.
+- **AUSNAHME – Werbung für eigene Produkte:** Videos, die das eigene Produkt zeigen, nennen, bewerben oder darauf verlinken (Digistore „**Seminararbeit-Profi**“ 757079, „**Anzeigen-Profi**“ 757063, auch per „Link in Bio“-Hinweis oder Werbe-Label), werden **nur nach Jonas ausdrücklichem „ok“** zu genau diesem Video terminiert. Ohne Okay: fertig bauen, Jona schicken, nicht terminieren. Gleiches gilt für Affiliate-Werbung.
+- Kein Kritiker-OK (nach 2 Runden) → nicht terminieren, im Log mit Grund, Jona melden.
+
+## Werbung
+- **Höchstens 1 von 5 Videos** enthält Werbung (gezählt über die letzten 5 veröffentlichten bzw. terminierten Videos in `state/log.md`). Gilt ab 11.11.; bis 10.11. läuft die Seminar-Offensive mit Jonas Einzel-OK pro Werbe-Video (POSITIONIERUNG.md).
+- **Nie als Eröffnung:** Frame 0, Hook und die ersten Sätze zeigen Nutzen bzw. Ergebnis, nie das Produkt, nie „Link in Bio“.
+- **Immer mit echtem Nutzen im Video:** Wer nichts kauft, hat trotzdem etwas gelernt bzw. kann es nachmachen.
+- **Immer gekennzeichnet:** „Werbung“-Label oben links im Bild (`werbung`-Prop in Episode), Caption beginnt mit „Werbung: mein eigenes Produkt |“ (bzw. „Werbung |“ bei Affiliate), TikTok „Beitragsinhalt offenlegen → Deine Marke“, YouTube „Bezahlte Werbung = Ja“, Instagram-Hinweis in der Caption. Videos ohne Produkt/Affiliate bekommen kein Werbe-Label.
+- Keine Einkommensversprechen, keine Notengarantien, kein „unentdeckbar“ (Bann-Phrasen: `docs/brand/STIMME.md`).
+
+## Minderjährige (Publikum enthält Unter-18-Jährige)
+- **Kommentar-Wort-DMs enthalten nur den Gratis-Teil** (Anleitung, Checkliste, Prompts). **Kein Kauflink und keine Kaufaufforderung an erkennbar Minderjährige.** Weil das Alter in Kommentaren meist nicht sicher erkennbar ist, gilt praktisch: **Kommentar-Wort-DMs enthalten grundsätzlich keinen Kauflink und keine Kaufaufforderung.** Fragt ein erkennbar Erwachsener ausdrücklich nach dem Produkt, geht die Antwort als Vorschlag an Jona. Details `docs/KOMMENTARE_DMS.md`.
+- Der **Link in der Bio bleibt** (Verkaufsseite nennt „Claude-Konto ab 18“).
+- Wird ein Claude-Weg gezeigt: Hinweis „Claude-Konto ab 18“ im Bild oder in der Caption.
+- Nie zum Kauf drängen, keine künstliche Verknappung.
+- **Nie „Made for Kids“** einstellen (YouTube: „Nein, nicht speziell für Kinder“; sonst fallen die Kommentare weg).
+
+## Plattform-Sicherheit
+- KI-Label an (TikTok „KI-generierter Inhalt“, YouTube „KI verwendet = Ja“, Instagram KI-Label), „KI-animiert“ in Bio bzw. Beschreibung.
+- Keine Trend-Sounds, keine fremde Musik, keine fremden Logos/Produktfotos, keine fremden Skripte oder Geschichten (Handbuch G9).
+- „Kommentier X“ nur mit echtem Gegenwert (gilt sonst als Engagement-Köder).
+
+## DMs und Links
+- DM-Texte stehen in `docs/plaene/<WORT>.md`. Kauflinks (eigene Produkte, Affiliate) kommen nicht in Kommentar-Wort-DMs (siehe Minderjährige). Andere Links (z. B. Gratis-Vorlage) nur, wenn Jona sie in `docs/plaene/links.md` freigegeben hat.
+- Ablauf, Grenzen, Log: `docs/KOMMENTARE_DMS.md`.
 
 ## Konten strikt trennen
-- Nur das TikTok-Konto **hamsterfrei** benutzen. **groschenfall_yt** und **schattengast** und alle anderen Konten nie anfassen.
-- Chrome: nur das Hamsterfrei-Profil (dem Hamsterfrei-deviceId, siehe PRODUKTION.md §6; deviceId 3fb31033… = schattengast, nie; Anzeigenamen „Browser N“ wechseln, nur deviceId zählt) per `select_browser` wählen. Die Chrome-Profile von groschenfall und schattengast nie auswählen. Vor jeder Aktion das eingeloggte Konto prüfen; falsches Konto → Tab schließen, nichts lesen, Jona melden.
+- Nur die Konten **hamsterfrei** (TikTok, Instagram) und den YouTube-Kanal **Hamsterfrei** benutzen. **groschenfall_yt**, **schattengast** und alle anderen Konten nie anfassen, auch nicht Jonas private Kleinanzeigen-/Vinted-Konten.
+- Chrome: nur das Hamsterfrei-Profil per `select_browser` nach deviceId (PRODUKTION.md §10). deviceId `3fb31033…` = schattengast, nie. Anzeigenamen „Browser N“ wechseln, nur die deviceId zählt. Vor jeder Aktion das eingeloggte Konto prüfen; falsches Konto → Tab schließen, nichts lesen, Jona melden.
 - Nichts an Kontoeinstellungen, Passwörtern oder Zahlungsdaten ändern, nie ausloggen.

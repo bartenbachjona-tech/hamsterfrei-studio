@@ -1,6 +1,6 @@
 # Freigegebene Links für DMs
 
-Nur Links eintragen, die Jona ausdrücklich freigegeben hat. Affiliate-Links in der DM immer mit „(*Werbelink)“ kennzeichnen.
+Nur Links eintragen, die Jona ausdrücklich freigegeben hat. **Seit 04.11.2026: Kauflinks (eigene Produkte, Affiliate) gehen nicht in Kommentar-Wort-DMs** (Publikum enthält Minderjährige, KANAL_REGELN). Sie stehen nur in Bio/Verkaufsseite und ggf. in Caption/Beschreibung von Werbe-Videos mit Jonas OK.
 
 | Wort | Link | Kennzeichnung | freigegeben am |
 |---|---|---|---|

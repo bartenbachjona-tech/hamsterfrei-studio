@@ -1,8 +1,10 @@
-# Offensive „Seminararbeit-Profi“ (Stand 29.10.2026)
+# Offensive „Seminararbeit-Profi“ (Stand 29.10.2026, angepasst an Marke v2 am 04.11.2026)
+
+> Läuft bis einschließlich 10.11.2026 (`docs/brand/POSITIONIERUNG.md`). Dabei gelten schon `docs/STUDIO_HANDBUCH.md` und `docs/brand/*` (Schlüsselbild, Hook-Tore, 1 Take, kein Schluss-Signal). Bei Widerspruch gehen KANAL_REGELN und docs/brand vor.
 
 Zielgruppe: bayerische 13. Klässler, Abgabe am 2. Unterrichtstag im November (meist 10.11.), danach das Prüfungsgespräch. Zeitfenster: **jetzt bis ca. Ende November**. Danach wird recycelt für den Jahrgang 2028 und für Facharbeiten in anderen Bundesländern.
 
-Link in der TikTok-Bio: `https://bartenbachjona-tech.github.io/hamsterfrei-site/seminararbeit-profi.html`. Jedes Video wird als „Werbung: mein eigenes Produkt“ gekennzeichnet.
+Link in der TikTok-Bio: `https://bartenbachjona-tech.github.io/hamsterfrei-site/seminararbeit-profi.html`. Jedes Video, in dem das Produkt vorkommt oder auf das es verweist, wird als „Werbung: mein eigenes Produkt“ gekennzeichnet und braucht Jonas ausdrückliches OK vor dem Terminieren (KANAL_REGELN). Videos ohne Produkt (z. B. reine Formalia-Tipps) sind keine Werbung und werden vom Studio selbst terminiert.
 
 ## Kritischer Pfad, bevor das erste Video online geht
 1. GitHub Pages einschalten. Jona: Repository hamsterfrei-site → Settings → Pages → Branch main / root.
@@ -28,17 +30,14 @@ Inhalt von S1, nur echte Fehlerbilder aus dem Skill:
 4. Internetquelle ohne Abrufdatum und ohne Ausdruck bzw. Screenshot.
 5. Quelle in der Fußnote, aber nicht im Literaturverzeichnis (oder umgekehrt).
 
-Schluss: „Mein Claude-Skill findet die alle automatisch und übt danach mit dir das Prüfungsgespräch. Link in Bio.“
+Schluss (alt, S1): „Mein Claude-Skill findet die alle automatisch und übt danach mit dir das Prüfungsgespräch. Link in Bio.“ Ab 04.11.: Pointe = Nutzen/Ergebnis, Produkt höchstens als kurzer Satz danach, nie im Hook (STIMME.md).
 
 ## Rhythmus bis zur Abgabe
-- **2 Videos pro Tag** auf TikTok, Reels und Shorts:
-  - um ca. 16:30, nach der Schule
-  - um ca. 20:30, wenn alle an der Arbeit sitzen
-- Die bestehende Tagesproduktion um 18:00 läuft weiter. In der Offensive werden ihre Themen durch S-Folgen ersetzt.
-- Freigabe durch Jona bleibt Pflicht.
+- **1 Video pro Tag um 18:00** auf TikTok, Reels und Shorts (KANAL_REGELN; die frühere Planung „2 pro Tag um 16:30/20:30“ ist aufgehoben). Die Tagesproduktion ersetzt in der Offensive ihre Themen durch S-Folgen.
+- Freigabe: Werbe-Videos (Produkt kommt vor/verlinkt) nur nach Jonas OK; Videos ohne Produkt terminiert das Studio selbst, Jona kann bis 18:00 stoppen.
 - Instagram: neue Hooks zuerst als **Trial Reel** testen und den besseren Hook danach regulär posten.
 - Kommentare: Fragen zur Seminararbeit kurz und hilfreich beantworten. Darin liegt der eigentliche Mehrwert, und das schafft Vertrauen.
-  - Link nur, wenn er in `links.md` freigegeben ist.
+  - Kein Kauflink in Kommentaren oder Kommentar-Wort-DMs (Minderjährige, KANAL_REGELN); der Link in der Bio bleibt.
   - Keine „kommentiere X“-Köder ohne echten Gegenwert.
 
 ## Was wir NICHT sagen

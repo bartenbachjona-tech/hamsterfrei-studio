@@ -1,6 +1,6 @@
 # DM-Plan SKILL (Skill-Serie Teil 1 · Anzeigen-Profi)
 
-Vorlage. {name} ersetzen. Link nur aus `links.md` (Verkaufsseite), mit „(*Werbelink)“ – hier ist es unser eigenes Produkt, daher „Werbung: mein eigenes Produkt“.
+Vorlage. {name} ersetzen. **Seit 04.11.2026 (KANAL_REGELN, Minderjährige): Als Kommentar-Wort-DM wird nur der Gratis-Teil geschickt. Die Zeilen „Läuft in deinem eigenen Claude-Konto …“ und „👉 {link} …“ fallen weg; kein Kauflink, keine Kaufaufforderung.** Vor dem ersten Einsatz einen echten Gratis-Teil ergänzen (z. B. die 3 Fragen, die eine gute Anzeige beantwortet, als Prompt zum Kopieren).
 
 ---
 

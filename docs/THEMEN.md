@@ -1,6 +1,8 @@
-# Themen-Warteschlange Format 1
+# Themen-Warteschlange
 
-Die Tagesproduktion nimmt immer die **oberste Folge mit Status `offen`**. Das Grundskript ist nur der Rahmen: vor dem Vertonen MUSS ein echtes, aktuelles Beispiel recherchiert und eingebaut werden („Zum Beispiel …“, auf der Leinwand gezeigt), und das Tool wird Schritt für Schritt nachgebaut gezeigt (wie Folge 1: Sonnenuntergangs-Lampe + Shopify-Schritte). Vollständige Ursprungs-Skripte (Zeit / Hamster / Leinwand) stehen im Doc „Hamsterfrei Masterplan“, Tab „Skripte Format 1“.
+> **Marke v2 (04.11.2026):** Bis 10.11. nimmt die Tagesproduktion die oberste offene S-/T4-Folge (Seminar-Offensive). **Ab 11.11. kommen Ideen aus den Kernserien in `docs/brand/SERIEN.md`** (Hamster-Test, Vorher/Nachher, Nebenjob-Check; 80/20). Die Themen unten sind dann nur noch Rohstoff: Nebenjob-Themen (02–10, T1) werden als „Nebenjob-Check“ umgebaut, T5/T6 als „Hamster-Test“. Format 1 (Schritt-für-Schritt-Anleitung ab Satz 1, Schlusssatz „Die genaue Anleitung schick ich dir …“) wird nicht mehr produziert. Werbung höchstens 1 von 5 Videos; Werbe-Videos nur mit Jonas OK (KANAL_REGELN). Spalte „Werbung“ = ob das Video Werbung *wäre*; ob es so gebaut wird, entscheidet die Quote.
+
+Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen`**. Das Grundskript ist nur der Rahmen: vor dem Vertonen MUSS ein echtes, aktuelles Beispiel recherchiert und eingebaut werden („Zum Beispiel …“, auf der Leinwand gezeigt), und das Tool wird Schritt für Schritt nachgebaut gezeigt (wie Folge 1: Sonnenuntergangs-Lampe + Shopify-Schritte). Vollständige Ursprungs-Skripte (Zeit / Hamster / Leinwand) stehen im Doc „Hamsterfrei Masterplan“, Tab „Skripte Format 1“.
 
 | Nr | Thema | Wort | Werbung | Status |
 |---|---|---|---|---|
@@ -27,5 +29,5 @@ Die Tagesproduktion nimmt immer die **oberste Folge mit Status `offen`**. Das Gr
 | T5 | Mein Morgen-Briefing von Claude (echte Ausgabe zuerst, Duet nur als Nebensatz; erst nach 10.11., TRENDS.md 02.11. I2) | MORGEN | nein | offen |
 | T6 | Wer bewegt eigentlich diesen Hamster? (Behind the Scenes Claude + Remotion, einmaliger Test nach 10.11., vorher Affiliate-Check ElevenLabs; TRENDS.md 02.11. I3) | HAMSTER | nur falls Tool-Affiliate genannt | offen |
 
-Regeln für neue Themen (wenn die Liste leer wird, 5 neue anhängen, nach denselben Regeln): klein, unscheinbar, ohne Vorwissen startbar, mit Beispielen, die man in Deutschland wirklich umsetzen kann; Wörter kurz, ein Wort, Großbuchstaben, nicht doppelt.
+Regeln für neue Themen (ab 11.11. nach SERIEN.md inkl. Ausschlusskriterien; „Gibt es ein starkes Schlüsselbild?“ zuerst): klein, unscheinbar, ohne Vorwissen startbar, mit Beispielen, die man in Deutschland wirklich umsetzen kann; Wörter kurz, ein Wort, Großbuchstaben, nicht doppelt.
 Wenn eine Folge veröffentlicht ist: Status auf `veröffentlicht <Datum>` setzen und `docs/plaene/<WORT>.md` muss existieren.
