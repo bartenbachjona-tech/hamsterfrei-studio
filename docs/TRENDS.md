@@ -9,10 +9,10 @@ Methode TikTok: Suche im Hamsterfrei-Chrome (nur gelesen), dann Profilseite des 
 | Konto | Video | Aufrufe | Alter | Median Konto | Faktor | Spr./Nische |
 |---|---|---|---|---|---|---|
 | @aiagentgeorg (32,9K F.) | „Ich habe ChatGPT auf mich selbst angesetzt, und es hat meine Adresse auf Se…“ (Overlay „ChatGPT löscht deine Daten“, Talking Head) https://www.tiktok.com/@aiagentgeorg/video/7703211755480108320 | 1,5 Mio, 69K Likes, ~110K Shares/Saves | 4 T | 1.816 | **826×** | DE / KI-Alltag |
-| @aiagentgeorg | „Was passiert, wenn du ChatGPT dein Zimmer einrichten lässt?“ https://www.tiktok.com/@aiagentgeorg/video/7703543800416800032 | 93K | 3 T | 1.816 | **51×** | DE / KI-Alltag |
+| @aiagentgeorg (Halo, 1 Tag nach dem 1,5-Mio-Video, vermutlich Mitlauf-Effekt) | „Was passiert, wenn du ChatGPT dein Zimmer einrichten lässt?“ https://www.tiktok.com/@aiagentgeorg/video/7703543800416800032 | 93K | 3 T | 1.816 | **51×** | DE / KI-Alltag |
 | @stella.maria.sorg (513 F.) | „Claude verkauft jetzt meine aussortierten Klamotten auf Vinted“ (Serie „Agenten-Serie“, Kommentar-Wort) https://www.tiktok.com/@stella.maria.sorg/video/7699898927109164321 | 25,3K, 454 Kommentare, 954 Saves | 13 T | 791 | **32×** | DE / Reselling mit KI |
 | @arbeitemitki (36,7K F.) | „Copilot baut dir ein Dashboard, das deinen Arbeitstag steuert“ / „Claude steckt jetzt in Copilot – und schreibt dir jeden Montag …“ | 80,7K / 74K | ? / 2 T | 8.201 | **9,8× / 9,0×** | DE / Produktivität |
-| @niklas_volland (161K F.) | „Deine ersten 1.000 …“ (Anleitung + Prompts) | 162K | 12 T | 9.073 | 17,9× | DE / KI-Tools |
+| @niklas_volland (161K F.) | „… Deine ersten 1.000 …“ (Anleitung + Prompts; Titel nicht vollständig gesehen, falls „1.000 €“ → Einkommensversprechen, nicht als Vorbild) | 162K | 12 T | 9.073 | 17,9× | DE / KI-Tools |
 | Nate Herk (YT, 1,1 Mio Abos) | „I Turned GPT-6 Astra Into a 24/7 Stock Trader“ / „I Tested Jev on 12 Real Use Cases. My Honest Thoughts.“ (outlierkit.com/channel/nateherk) | 546K / 363K | 31 / 22 T | – | 5,2× / 3,5× | EN / KI |
 | Your Average Tech Bro (YT, 209K) | „Cursor vs Codex vs Claude vs Zed … (I Tested Them All)“ / „… 30+ PRs A Day“ | – / 94K | ≤ 31 T | – | 11,4× / 6,3× | EN / KI |
 | TechWiser (YT, 2,6 Mio) | „We Tried 25 Useful Gadgets From Blinkit!“ / „Best Pixel Deal … Right Now“ | 728K / 761K | 31 T | – | 4,0× / 4,1× | EN / Tech-/Spar-Tipps |
@@ -24,40 +24,43 @@ Nicht gewertet (bezahlte „Anzeige“-UGC, Reichweite vermutlich beworben): @it
 - **@aiagentgeorg:** Top = **Experimenter mit eigenem Einsatz** („auf mich selbst angesetzt“, „dein Zimmer einrichten lassen“) + Frage/Folge für *dich*; Overlay oben groß, 49–58 s. Bottom (0,3–0,4×) = **News/„X ersetzt“** („Claude hat gerade Fitness-Apps ersetzt“ 629, „Callcenter werden überflüssig, und keiner redet darüber“ 590/653, „Dein Claude-Limit ist leer“ 700). CTA gleich (Kommentar-Wort) → CTA ist nicht der Unterschied.
 - **@stella.maria.sorg:** Top = konkrete Alltagsaufgabe + Ergebnis „Claude verkauft meine Klamotten“ (32×), Teil 2 derselben Serie nur 3,3×; Bottom (0,4×) = abstrakte Fragen („Hast du dein Second Brain schon eingerichtet?“, „Bevor du dir einen Agenten baust …“), Podcast-Hinweis. Talking Head, Kommentar-Wort → hohe Kommentarquote (1,8 %).
 - **@arbeitemitki:** Top = **wiederkehrender Nutzen für dich** („steuert deinen Arbeitstag“, „schreibt dir jeden Montag“, „ohne eine Formel“), 40–60 s; Bottom (0,2–0,3×) = **Teacher/Produkt-News** („So nutzt du Copilot in PowerPoint“, „Microsoft hat Copilot komplett umgebaut“, „5 geheime Codes“).
-- **@niklas_volland (letzte 40 T):** Top = Liste „kostenlos“ + Zeitanker („5 KI-Tools, die du im November 2026 kostenlos nutzen kannst“ 22K) und „Kopiere nie wieder …“ (18K); Bottom = **Belehren** („Du lernst mit KI falsch. Diese 5 Fehler …“ 629 = 0,07×), „Diese 5 Tools haben dein Reisebüro ersetzt“ 855, Nebenkosten-Prompts 1.270.
-- **YouTube EN (Agent-Befund, Thumbnails nicht geprüft):** Nate Herk, TechWiser, Tech Bro: Experimenter/Investigator („I Tested …“, „We Tried 25 …“, „Reality Check“, „My Honest Thoughts“) schlagen Teacher/Kurs-Titel; Ali Abdaal: Identitätsansprache („If you're X, watch this“) schlägt How-to.
+- **@niklas_volland (letzte 40 T):** Top = das 162K-Video (s. o., Thema unklar), danach Liste „kostenlos“ + Zeitanker („5 KI-Tools, die du im November 2026 kostenlos nutzen kannst“ (22K = 2,4×) und „Kopiere nie wieder …“ (18K = 2×), also nur leicht über Median; Bottom = **Belehren** („Du lernst mit KI falsch. Diese 5 Fehler …“ 629 = 0,07×), „Diese 5 Tools haben dein Reisebüro ersetzt“ 855, Nebenkosten-Prompts 1.270.
+- **YouTube EN (Agent-Befund, nur Motor-Hinweis, kein Beleg: Faktoren von OutlierKit ohne Median, Longform, Thumbnails ungeprüft; „Stock Trader“ = Trading, „Cursor vs Codex“ = Modellvergleich, Blinkit/Pixel = Deal-/evtl. Affiliate-Content → Themen für uns tabu):** Nate Herk, TechWiser, Tech Bro: Experimenter/Investigator („I Tested …“, „We Tried 25 …“, „Reality Check“, „My Honest Thoughts“) schlagen Teacher/Kurs-Titel; Ali Abdaal: Identitätsansprache („If you're X, watch this“) schlägt How-to.
 
-### 3 Folgerungen
-1. **Persönlicher Selbstversuch schlägt News:** „Ich hab KI auf *mich/meine Sachen* angesetzt“ = 32–826×; „Claude hat X ersetzt“ und „keiner redet darüber“ liegen jetzt bei 0,3× → das Schlagzeilen-Meme aus dem 29.10.-Log ist durch. Bestätigt Serie (a) Hamster-Test.
-2. **Belehren floppt messbar** (niklas „Du lernst mit KI falsch“ 0,07×) → bestätigt Jonas Linie vom 04.11. (kein Belehren).
+### 3 Folgerungen (je n = 1–2 Konten → Hinweise, keine Gesetze)
+1. **Persönlicher Selbstversuch schlägt News:** „Ich hab KI auf *mich/meine Sachen* angesetzt“ = 32–826× (aiagentgeorg, stella); „Claude hat X ersetzt“ und „keiner redet darüber“ liegen bei aiagentgeorg nur noch bei 0,3× → Hinweis: das Schlagzeilen-Meme aus dem 29.10.-Log nutzt sich ab. Passt zu Serie (a) Hamster-Test.
+2. **Belehren floppt** (Hinweis: niklas „Du lernst mit KI falsch“ 0,07×, stella „Bevor du dir einen Agenten baust …“ 0,7×) → passt zu Jonas Linie vom 04.11. (kein Belehren).
 3. **Menge + Urteil** („12 Use Cases, Honest Thoughts“, „25 Gadgets getestet“) trägt in EN; Serien-Teil 2 fällt stark ab (stella 32× → 3,3×) → jede Folge muss allein funktionieren, „Teil 2“ nur als Bonus.
 
-### 3 Video-Ideen (ab 11.11., Kernserien)
-**I1 – Hamster-Test: „Was verrät dein Verkaufsfoto über dich?“ (Serie a, Motor aiagentgeorg 826×: KI auf mich selbst angesetzt) – Wort FOTO**
-- Schlüsselbild: Verkaufsfoto einer Jacke (selbst gestellt), darauf 3 rote Kreise (Briefumschlag im Hintergrund, Fensterblick, Spiegelung); Hamster hält sich erschrocken die Krawatte vors Gesicht. Overlay: „Dein Foto verrät zu viel“.
-- Hook Experimenter: „Hamster-Test: Ich hab Claude mein Vinted-Foto gezeigt. Es wusste, in welcher Stadt ich wohne.“ (nur wenn der Test das wirklich ergibt, sonst „… und gefragt, was es über mich verrät.“)
-- Hook Investigator: „Auf deinem Verkaufsfoto stehen drei Dinge, die da nicht hingehören. Claude hat sie in zehn Sekunden gefunden.“
-- Ablauf: 1) Foto + Kreise (Ergebnis zuerst) 2) Prompt kurz auf der Leinwand („Was kann ein Fremder aus diesem Foto über mich herausfinden?“) 3) Claudes Antwort Punkt für Punkt, „aber …“: ein Punkt war falsch geraten (ehrliche Schwäche) 4) Gegenprobe: gleiches Foto aufgeräumt → Claude findet nichts mehr 5) Stempel „Geklappt“ + Pointe „Claude findet's in zehn Sekunden. Ein Fremder auch.“
-- Echt aufnehmen: Jona stellt ein Foto in einer neutralen Ecke mit harmlosen, ERFUNDENEN Hinweisen (z. B. Brief an „Max Muster, Musterstadt“), keine echte Adresse/Gesicht; Bildschirmaufnahme der echten Claude-Antwort für Foto 1 und Foto 2. Claude-Konto ab 18 klein in Caption.
-- Kommentar-Wort FOTO → „5 Dinge, die nie auf dein Verkaufsfoto gehören“ (Checkliste, gratis, kein Kauflink).
+Lücke: Nebenjob-/Spar-Nische auf TikTok wegen Drosselung nicht abgedeckt → I3 hat keinen deutschen Ausreißer-Beleg (nur Motor aus EN). Trichter (G5): 10 Rohideen (Verkaufsfoto, Vinted-5-Teile, Nebenjob-Rechnung, Zimmer einrichten, POV-Insider, Montags-Plan, „kostenlos im November“-Liste, Lebenslauf-Vergleich, Modell-Effort-Leiter, „If you're …“-Ansprache) → Ausschluss (Schlüsselbild, Fake, Jargon, Werbung) → 3.
 
-**I2 – Hamster-Test: „Ich hab Claude fünf alte Teile für Vinted einstellen lassen“ (Serie a, Motor stella.maria.sorg 32×) – Wort VINTED**
-- Schlüsselbild: Stapel mit 5 Teilen (Hoodie, Sneaker, Buch, Spiel, Lampe), darüber 5 Anzeigen-Karten, auf 3 davon Stempel „Verkauft“ (nur echte Zahl); Hamster sitzt obenauf mit Stoppuhr.
-- Hook Experimenter: „Hamster-Test: Fünf Teile, die seit einem Jahr im Schrank liegen. Claude schreibt die Anzeigen. Nach sieben Tagen: <X> verkauft.“
-- Hook Contrarian: „Alle sagen, auf Vinted verkauft nur, wer billig ist. Ich hab Claude die Preise machen lassen. Nicht billig.“
-- Ablauf: 1) Ergebnis-Board Tag 7 zuerst 2) ein Teil exemplarisch: Fotos → Claude-Anzeige (Titel, Text, Preis mit Begründung) 3) „aber …“: ein Preis war zu hoch, nichts passiert (ehrlich) 4) Gesamtrechnung: Einnahmen, Gebühren, Minuten Arbeit 5) Stempel „Halb“/„Geklappt“ je nach Ergebnis + Pointe = das eine Detail, das den Unterschied machte.
-- Echt aufnehmen: Jona stellt 5 eigene Teile wirklich ein (sein Konto, er macht es selbst; Studio fasst Jonas Vinted-Konto nicht an), Screenshots Tag 0 und Tag 7 (ohne Käufernamen), Claude-Antworten als Bildschirmaufnahme. Kein Anzeigen-Profi im Video → keine Werbung; Folge allein vollständig, kein „Teil 2“ nötig.
-- Kommentar-Wort VINTED → „mein Anzeigen-Prompt zum Kopieren“ (gratis).
+### 3 Video-Ideen (ab 11.11., Kernserien; Kritiker fable: I2 pass 7/10, I1 und I3 nachgebessert)
+**I2 – Hamster-Test: „Fünf Schrankleichen auf Vinted“ (Serie a, Motor stella.maria.sorg 32×) – Wort VINTED – ⏰ zeitkritisch: 7-Tage-Test muss bis ca. 06.11. starten, damit die Folge ab 12./13.11. kommt**
+- Schlüsselbild: EINE Anzeige groß (Claudes Text + Preis), daneben der Schrank-Stapel; Stempel „Verkauft“ quer drüber (nur echt); Hamster sitzt mit Stoppuhr obenauf. Overlay: „<X> von 5 weg“ (nur echter Wert, sonst „Tag 7: Ergebnis“).
+- Hook Experimenter: „Hamster-Test: Ich hab Claude fünf Schrankleichen auf Vinted einstellen lassen. Tag sieben: <X> von fünf weg.“
+- Hook Contrarian: „Hamster-Test: Claude sollte meine alten Sachen nicht billig machen, sondern teurer. Nach sieben Tagen weiß ich, ob das geht.“
+- Ablauf: 1) Ergebnis Tag 7 zuerst 2) ein Teil exemplarisch: Fotos → Claude-Anzeige (Titel, Text, Preis mit Begründung) 3) „aber …“: ein Preis war zu hoch, keine Nachricht (ehrliche Schwäche) 4) Rechnung: Einnahmen, Minuten Arbeit (Vinted nimmt Verkäufern in DE keine Gebühr → nur echte Kosten wie Versand) 5) Stempel Geklappt/Halb/Fail + Pointe = das eine Detail, das den Unterschied machte. 0 verkauft = ehrlich „Fail“, trotzdem senden.
+- Echt aufnehmen: Jona stellt 5 eigene Teile selbst ein (Studio fasst sein Vinted-Konto nicht an), Screenshots Tag 0 und Tag 7 ohne Käufernamen, Claude-Antworten als Bildschirmaufnahme. Kein Anzeigen-Profi → keine Werbung. Folge allein vollständig. Unterschied zu stella: 7-Tage-Board + Preisfrage tragen die Pointe.
+- Kommentar-Wort VINTED → „mein Anzeigen-Prompt zum Kopieren“ (gratis, kein Kauflink).
 
-**I3 – Nebenjob-Check: „Ich hab fünf ‚KI-Nebenjobs‘ von TikTok nachgerechnet“ (Serie c, Motor TechWiser „25 Gadgets getestet“ + Nate Herk „12 Use Cases, Honest Thoughts“: Menge + Urteil) – Wort STUNDE**
-- Schlüsselbild: 5 Karteikarten nebeneinander (z. B. „Etsy-Planer“, „Canva-Vorlagen“, „Anzeigen für Nachbarn schreiben“, „Lernzettel verkaufen“, „KDP-Malbuch“), auf jeder groß „<X> €/h“, vier mit rotem „Fail“-Stempel, eine grün; Hamster zerreißt die erste.
-- Hook Contrarian: „Fünf KI-Nebenjobs, die dir TikTok verspricht. Ich hab den ehrlichen Stundenlohn ausgerechnet. Vier sind Quatsch.“ (Anzahl erst nach Rechnung festlegen)
-- Hook Investigator: „Wer sagt dir eigentlich, wie viel ein KI-Nebenjob pro Stunde bringt? Keiner. Also hab ich nachgerechnet.“
-- Ablauf: 1) 5 Karten mit €/h (Ergebnis zuerst) 2) je Job 4–5 s: Preis pro Stück (Quelle) × realistische Verkäufe ÷ Stunden 3) „aber …“: Gebühren, Gewerbe/Steuer, Zeit für Nachrichten 4) der eine Job, der sich lohnt, und für wen 5) Urteil „lohnt sich für …, nicht für …“.
-- Echt aufnehmen: Rechnung mit echten, datierten Preisen (Etsy/Kleinanzeigen-Suche, Gebührenseiten) als Tabelle/Screenshot; Claude nur als Helfer beim Rechnen gezeigt. Keine fremden Creator nennen oder zeigen, nur „Videos versprechen …“. Keine Einkommensversprechen.
+**I1 – Hamster-Test: „Was dein Verkaufsfoto verrät“ (Serie a, Motor aiagentgeorg 826×: KI auf mich selbst angesetzt) – Wort FOTO – nicht direkt neben I2 senden**
+- Schlüsselbild: offen als BEISPIEL markiertes Verkaufsfoto einer Jacke, 3 rote Kreise (Brief im Hintergrund, Fensterblick, Spiegelung); Hamster hält sich die Krawatte vors Gesicht. Overlay: „Dein Foto verrät zu viel“.
+- Hook Experimenter: „Hamster-Test: Ich hab Claude mein Verkaufsfoto gezeigt und gefragt, was ein Fremder daraus rausliest. Drei Dinge zu viel.“
+- Hook Investigator: „Hamster-Test: Auf deinem Verkaufsfoto liegen drei Dinge, die da nicht hingehören. Claude hat sie gefunden.“
+- Ablauf: 1) Foto + Kreise (Ergebnis zuerst) 2) Frage kurz auf der Leinwand 3) Claudes Antwort Punkt für Punkt, „aber …“: ein Punkt war falsch geraten 4) Gegenprobe aufgeräumtes Foto → Claude findet nichts, Foto wirkt auch für Käufer sauberer 5) Stempel + Pointe an Verkauf gekoppelt: „Was ein Fremder sieht, sieht dein Käufer auch.“
+- Echt aufnehmen: gestelltes Beispielfoto (als „Beispiel“ eingeblendet) mit erfundenen Hinweisen, keine echte Adresse/kein Gesicht; echte Claude-Antworten für Foto 1 und 2; Zeitangaben nur gestoppt. Hook behauptet nichts, was der Test nicht ergibt.
+- Kommentar-Wort FOTO → „5 Dinge, die nie auf dein Verkaufsfoto gehören“ (Checkliste, gratis).
+
+**I3 – Nebenjob-Check: „Drei Nebenjobs, die dir TikTok verspricht“ (Serie c, Motor „Menge + ehrliches Urteil“ aus TechWiser/Nate Herk; kein DE-Beleg) – Wort STUNDE**
+- Schlüsselbild: 3 Karten, zwei mit rotem „Fail“, eine grün; nur EINE Zahl groß lesbar („<X> €/h“ auf der grünen); Hamster zerreißt eine rote.
+- Hook Contrarian: „Drei Nebenjobs, die dir TikTok verspricht. Ich hab den ehrlichen Stundenlohn gerechnet. Nur einer schafft den Mindestlohn.“ (Aussage nur nach Rechnung)
+- Hook Experimenter: „Ich hab die Stoppuhr bei drei Nebenjobs mitlaufen lassen. Einer lohnt sich.“
+- Ablauf: 1) Karten mit Urteil zuerst 2) ein Job tief: Preis pro Stück (datierte Quelle) × eigene Testmenge ÷ gestoppte Zeit 3) zwei Kurzurteile je ein Satz 4) „aber …“: Gewerbe/Steuer, Zeit für Nachrichten 5) Urteil „lohnt sich für …, nicht für …“.
+- Kandidaten: „Anzeigen für Nachbarn schreiben“, Canva-Vorlagen, Ableger/ISBN-Bücher (aus THEMEN). NICHT: Etsy-Shop, Amazon KDP (ab 18, Gewerbe/US-Steuerformular), Lernzettel verkaufen (Urheberrecht/Schule).
+- Echt aufnehmen: eigene kleine Testmenge mit gestoppter Zeit, Preis-Screenshots mit Datum, Annahmen sichtbar. Keine fremden Creator zeigen/nennen. Keine Einkommensversprechen, „KI“ im Sprechtext meiden.
 - Kommentar-Wort STUNDE → „meine Rechnung zum Nachrechnen“ (Tabelle, gratis).
 
-Verworfen: „Claude richtet dein Zimmer ein“ (aiagentgeorg 51×) – Claude liefert kein sichtbares Zimmerbild ohne Bildgenerator → Schlüsselbild schwach/Fake-Gefahr; POV „Dein Vater arbeitet bei Anthropic“ – wirkt wie erfundene Insider-Story (Fiktion als wahr, G9).
+Verworfen: „Claude richtet dein Zimmer ein“ (Halo-Wert, ohne Bildgenerator kein echtes Ergebnis-Bild → Fake-Gefahr); POV „Dein Vater arbeitet bei …“ (erfundene Insider-Story, G9); Modellvergleiche/Trading aus EN (Positionierung).
 
 ## 2026-11-02 – Trend-Scout (Web & YouTube; TikTok-Direktcheck ausgefallen)
 Hinweis: Lauf startete erst ~17:20 Uhr statt 06:41 → Chrome/TikTok bewusst nicht benutzt (nach 08:50 laufen andere Chrome-Automationen). YouTube-Suche/Reddit/TikTok-Discover per Web gesperrt → Zahlen nur von einzelnen Video-/Kanalseiten (Stand 02.11.). Machart/CTA nicht angesehen.
