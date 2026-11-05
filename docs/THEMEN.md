@@ -12,6 +12,7 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | T4 | **Trend (zeitkritisch bis 10.11.):** „Lass Claude deine Seminararbeit prüfen – nicht schreiben“ (Composition Seminar04, Marke v2 ohne Produkt) | SEMINAR | **nein** (ohne Produkt gebaut, Marke v2) | terminiert 04.11.2026 18:00 (TikTok, YT; IG offen 18:00) |
 | S4 | **Seminar-Offensive:** Belege-Zeitraffer – Screenshots → Beleg-PDF | SEMINAR | ja (eigenes Produkt) | offen |
 | S5 | **Seminar-Offensive:** Countdown „Noch X Tage“ – ein Formalia-Tipp pro Tag | SEMINAR | ja (eigenes Produkt) | offen (täglich bis 10.11.) |
+| S5-2 | **Countdown Teil 2:** „Noch 5 Tage: Claude macht dein Literaturverzeichnis fertig“ (Composition Seminar06, ohne Produkt) | QUELLEN | **nein** | terminiert 05.11.2026 18:00 (TikTok, YT; IG offen 18:00) |
 | 01 | Ein Produkt, ein Shop (Sonnenuntergangs-Lampe, Shopify) | SHOP | ja (Shopify) | veröffentlicht 29.10.2026 |
 | T1 | **Trend:** Warum verkauft der Hamster den Keller seiner Nachbarn? (FinanzKopf-Formel, Beispielrechnung, siehe TRENDS.md Shortlist 1) | KELLER | nur wenn Skill-Link | offen |
 | T2 | **Trend:** Eine KI hat seinen Sessel verkauft – und seine Adresse weitergegeben (Meta Muse, Shortlist 2) | SICHER | ja, wenn Skill gezeigt | offen |
