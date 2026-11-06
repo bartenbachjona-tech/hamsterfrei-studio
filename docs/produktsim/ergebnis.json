@@ -454,6 +454,99 @@
    "kaeufe_pro_1000_aufrufe": 0.3472668078769272,
    "euro_pro_verkauf": 25,
    "euro_pro_1000_aufrufe": 8.68167019692318
+  },
+  "P11": {
+   "name": "Viral-Video-Profi",
+   "panel_kaeufer": 44.19985136090547,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 5.0,
+    "OPP": 6.0,
+    "IDP": 11.5,
+    "PME": 21.5
+   },
+   "median_guenstig": 7.261625243549815,
+   "median_teuer": 15.50761379197769,
+   "top_segmente": [
+    [
+     "C21",
+     3.7
+    ],
+    [
+     "G28",
+     3.7
+    ],
+    [
+     "G24",
+     2.8
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 2.201728359178747,
+   "preis_empfehlung": 11.5,
+   "euro_pro_verkauf": 7.7553655462184885,
+   "euro_pro_1000_aufrufe": 17.07520825890702
+  },
+  "P12": {
+   "name": "Website-Profi",
+   "panel_kaeufer": 33.48847432781643,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 8.0,
+    "OPP": 9.5,
+    "IDP": 18.0,
+    "PME": 33.5
+   },
+   "median_guenstig": 11.052485500554514,
+   "median_teuer": 22.99234342528318,
+   "top_segmente": [
+    [
+     "G24",
+     4.0
+    ],
+    [
+     "G28",
+     3.0
+    ],
+    [
+     "G31",
+     1.9
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.668162253106554,
+   "preis_empfehlung": 18.0,
+   "euro_pro_verkauf": 12.70405042016807,
+   "euro_pro_1000_aufrufe": 21.192417372486833
+  },
+  "P13": {
+   "name": "App-Profi",
+   "panel_kaeufer": 25.619901626481376,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 11.5,
+    "OPP": 12.0,
+    "IDP": 24.0,
+    "PME": 48.0
+   },
+   "median_guenstig": 18.768184658734985,
+   "median_teuer": 40.51743727801402,
+   "top_segmente": [
+    [
+     "G24",
+     3.6
+    ],
+    [
+     "G28",
+     1.6
+    ],
+    [
+     "G31",
+     1.4
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.276204834034496,
+   "preis_empfehlung": 24.0,
+   "euro_pro_verkauf": 17.272067226890755,
+   "euro_pro_1000_aufrufe": 22.042695688726774
   }
  }
 }

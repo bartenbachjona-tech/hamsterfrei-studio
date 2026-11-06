@@ -15,13 +15,13 @@ random.seed(42)
 D = "/home/claude/hamsterfrei-studio/docs/produktsim/"
 pers = json.load(open(D + "personas.json"))
 U = {}
-for f in ("urteile_a.json", "urteile_b.json", "urteile_c.json"):
+for f in ("urteile_a.json", "urteile_b.json", "urteile_c.json", "urteile_d.json"):
     U.update(json.load(open(D + f)))
 
 NAMES = {
     "P1": "Seminararbeit-Profi (Referenz)", "P2": "Anzeigen-Profi", "P3": "Bewerbungs-Profi Ausbildung/Minijob",
     "P4": "Wohnungs-/WG-Bewerbungs-Profi", "P5": "Hausarbeit-/Bachelorarbeit-Profi", "P6": "Kleingewerbe-Starter",
-    "P7": "Steuer-Checkliste Azubi/Studi", "P8": "Abi-Lernplan-Coach", "P9": "BAföG-Lotse", "P10": "Hochzeits-Planer",
+    "P7": "Steuer-Checkliste Azubi/Studi", "P8": "Abi-Lernplan-Coach", "P9": "BAföG-Lotse", "P10": "Hochzeits-Planer", "P11": "Viral-Video-Profi", "P12": "Website-Profi", "P13": "App-Profi",
     "F1": "CapCut Pro (Affiliate)", "F2": "Gamma (Affiliate)", "F3": "LanguageTool Premium (Affiliate)",
     "F4": "ElevenLabs (Affiliate)", "F5": "smartsteuer (Affiliate)", "F6": "Surfshark VPN (Affiliate)",
 }

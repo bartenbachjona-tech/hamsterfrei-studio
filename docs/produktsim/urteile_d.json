@@ -1,0 +1,903 @@
+{
+ "P11": {
+  "S16": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Unter 18, kein Claude, Videos nur Hobby"
+  },
+  "S17a": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Seminararbeit-Stress, null Zeit für Kanal"
+  },
+  "S17b": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Lernt fürs Abi, Kanal kein Plan"
+  },
+  "S18a": {
+   "kauf": 6,
+   "vw": [
+    3,
+    7,
+    15,
+    25
+   ],
+   "grund": "Neugierig auf Nebenkanal nach Abi"
+  },
+  "S18b": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Abi-Stress, ChatGPT kann Skripte gratis"
+  },
+  "S19": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Bewerbungen wichtiger als Content"
+  },
+  "A16": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Zu jung, sucht Ausbildung"
+  },
+  "A18": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Will Ausbildung, keinen Kanal"
+  },
+  "A20": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Klingt nach Geld-mit-KI-Masche"
+  },
+  "A22": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Schaut TikTok, macht keins, keine Zeit"
+  },
+  "U19": {
+   "kauf": 6,
+   "vw": [
+    2,
+    6,
+    15,
+    25
+   ],
+   "grund": "BWL-Neugier, vielleicht Side-Hustle testen"
+  },
+  "U21": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Hausarbeiten statt Kanal"
+  },
+  "U23": {
+   "kauf": 5,
+   "vw": [
+    2,
+    5,
+    12,
+    20
+   ],
+   "grund": "Könnte Prompts selbst schreiben, Neugier"
+  },
+  "U24": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Referate ja, Kanal nein"
+  },
+  "U22w": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Sucht WG, nicht Reichweite"
+  },
+  "U20b": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "BAföG-Stress, null Interesse"
+  },
+  "U25": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Misstraut KI-Influencer-Produkten grundsätzlich"
+  },
+  "M18": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Will Minijob, kein Creator"
+  },
+  "M30": {
+   "kauf": 8,
+   "vw": [
+    3,
+    7,
+    15,
+    25
+   ],
+   "grund": "Sucht Zuverdienst, aber Abzocke-Angst"
+  },
+  "R19": {
+   "kauf": 7,
+   "vw": [
+    2,
+    6,
+    12,
+    20
+   ],
+   "grund": "TikTok für Vinted-Laden reizvoll, knapp bei Kasse"
+  },
+  "R26": {
+   "kauf": 5,
+   "vw": [
+    3,
+    8,
+    15,
+    25
+   ],
+   "grund": "Videos für Reselling denkbar, Zeit fehlt"
+  },
+  "R35": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Will nur Keller leeren"
+  },
+  "R45": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Interesse an Kanälen"
+  },
+  "G24": {
+   "kauf": 14,
+   "vw": [
+    4,
+    10,
+    22,
+    40
+   ],
+   "grund": "Nagel-Reels fürs Studio wären echt nützlich"
+  },
+  "G28": {
+   "kauf": 18,
+   "vw": [
+    5,
+    12,
+    29,
+    50
+   ],
+   "grund": "Für Kundenvideos, kennt aber vieles schon"
+  },
+  "G31": {
+   "kauf": 12,
+   "vw": [
+    5,
+    12,
+    25,
+    45
+   ],
+   "grund": "Produktvideos für Etsy, wenn Zeit spart"
+  },
+  "C17": {
+   "kauf": 10,
+   "vw": [
+    2,
+    5,
+    10,
+    20
+   ],
+   "grund": "Will Creator werden, aber unter 18"
+  },
+  "C21": {
+   "kauf": 15,
+   "vw": [
+    3,
+    9,
+    19,
+    35
+   ],
+   "grund": "Hooks und Posting-Plan helfen beim Wachsen"
+  },
+  "C26": {
+   "kauf": 16,
+   "vw": [
+    5,
+    12,
+    25,
+    45
+   ],
+   "grund": "Faceless wie Hamster, Workflow interessant"
+  },
+  "B27": {
+   "kauf": 9,
+   "vw": [
+    5,
+    10,
+    20,
+    40
+   ],
+   "grund": "Einmalkauf ok, beruflich vielleicht nutzbar"
+  },
+  "B32": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Präsentationen, keine Videos"
+  },
+  "B29": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Bewerbungsfokus, kein Kanal"
+  },
+  "B35": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Interesse, Datenschutz-Bedenken"
+  },
+  "W26": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Wohnungssuche hat Vorrang"
+  },
+  "W30": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Wohnungssuche hat Vorrang"
+  },
+  "H28": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Kanal geplant"
+  },
+  "H31": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Postet privat, kein Kanal"
+  },
+  "T23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Interesse"
+  },
+  "T19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Interesse, kein Geld"
+  },
+  "V20": {
+   "kauf": 5,
+   "vw": [
+    2,
+    5,
+    10,
+    20
+   ],
+   "grund": "Gaming-Clips posten wäre cool, eher gratis"
+  },
+  "V34": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Kanal geplant"
+  },
+  "E45": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Sucht Hilfe fürs Kind, nicht das"
+  },
+  "E50": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Misstraut KI und Influencern"
+  },
+  "AT19": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Studium zuerst, kein Kanal"
+  },
+  "CH22": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Geld egal, aber kein Interesse"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Schaut nur Hamster, kein Geld"
+  },
+  "N40": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Keinerlei Bedarf"
+  },
+  "K22": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Praxisbericht statt Videos"
+  },
+  "F20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Führerschein-Theorie wichtiger"
+  },
+  "L33": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kritisch gegenüber KI-Verkaufsvideos"
+  }
+ },
+ "P12": {
+  "S16": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Braucht keine Website"
+  },
+  "S17a": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf, Abgabe drängt"
+  },
+  "S17b": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Wozu eine Website?"
+  },
+  "S18a": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Website gerade irrelevant"
+  },
+  "S18b": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "S19": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Vielleicht später, jetzt nicht"
+  },
+  "A16": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A18": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A20": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Nett, aber kein Projekt geplant"
+  },
+  "A22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U19": {
+   "kauf": 5,
+   "vw": [
+    3,
+    8,
+    20,
+    35
+   ],
+   "grund": "Irgendwann Startup-Idee, aktuell vage"
+  },
+  "U21": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein konkretes Projekt"
+  },
+  "U23": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Baut das selbst mit Claude Pro"
+  },
+  "U24": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Evtl. Nachhilfe-Seite, eher Wix"
+  },
+  "U22w": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U20b": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U25": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Uni-Seite reicht, skeptisch"
+  },
+  "M18": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "M30": {
+   "kauf": 5,
+   "vw": [
+    3,
+    8,
+    18,
+    30
+   ],
+   "grund": "Vielleicht später fürs Nebengewerbe"
+  },
+  "R19": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Vinted reicht als Shop"
+  },
+  "R26": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Kleinanzeigen reicht ihm"
+  },
+  "R35": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "G24": {
+   "kauf": 20,
+   "vw": [
+    5,
+    15,
+    35,
+    60
+   ],
+   "grund": "Braucht Website mit Impressum, Wix zu teuer"
+  },
+  "G28": {
+   "kauf": 15,
+   "vw": [
+    8,
+    19,
+    40,
+    70
+   ],
+   "grund": "Landingpages für Kunden als Zusatzleistung"
+  },
+  "G31": {
+   "kauf": 14,
+   "vw": [
+    8,
+    19,
+    39,
+    70
+   ],
+   "grund": "Eigener Shop neben Etsy, Wix-Abo sparen"
+  },
+  "C17": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Braucht keine Website"
+  },
+  "C21": {
+   "kauf": 6,
+   "vw": [
+    4,
+    10,
+    20,
+    35
+   ],
+   "grund": "Eigene Seite statt Linktree, nice-to-have"
+  },
+  "C26": {
+   "kauf": 7,
+   "vw": [
+    5,
+    12,
+    25,
+    45
+   ],
+   "grund": "Kanal-Website vielleicht, kein Muss"
+  },
+  "B27": {
+   "kauf": 7,
+   "vw": [
+    5,
+    12,
+    25,
+    45
+   ],
+   "grund": "Eigene Portfolio-Seite denkbar"
+  },
+  "B32": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Kein konkretes Projekt"
+  },
+  "B29": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein Bedarf gerade"
+  },
+  "B35": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "W26": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "W30": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "kauf": 7,
+   "vw": [
+    3,
+    8,
+    18,
+    30
+   ],
+   "grund": "Hochzeitswebsite für Gäste wäre süß"
+  },
+  "H31": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "JGA braucht keine Website"
+  },
+  "T23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "V20": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "V34": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E50": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "AT19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "CH22": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Bachelorarbeit wichtiger"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "N40": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Keinerlei Bedarf"
+  },
+  "K22": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein Projekt geplant"
+  },
+  "F20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  }
+ },
+ "P13": {
+  "S16": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Keine App-Idee, zu jung"
+  },
+  "S17a": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf, keine Zeit"
+  },
+  "S17b": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Keine App-Idee"
+  },
+  "S18a": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Prüfung zuerst, keine App-Idee"
+  },
+  "S18b": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "S19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Keine App-Idee"
+  },
+  "A16": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A18": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A20": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Keine App-Idee"
+  },
+  "A22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U19": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Idee fehlt, Lovable gratis reicht"
+  },
+  "U21": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U23": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Informatiker, macht Claude Code selbst"
+  },
+  "U24": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U22w": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U20b": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U25": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Skeptisch, kein Bedarf"
+  },
+  "M18": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "M30": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Keine App-Idee, wenig Geld"
+  },
+  "R19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R26": {
+   "kauf": 5,
+   "vw": [
+    5,
+    12,
+    25,
+    45
+   ],
+   "grund": "Bestands-Rechner wäre praktisch, Excel tut's"
+  },
+  "R35": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "G24": {
+   "kauf": 18,
+   "vw": [
+    8,
+    20,
+    45,
+    80
+   ],
+   "grund": "Terminbuchung genau ihr Problem, Beweis überzeugt"
+  },
+  "G28": {
+   "kauf": 8,
+   "vw": [
+    8,
+    20,
+    45,
+    80
+   ],
+   "grund": "Apps eher nicht ihr Geschäft"
+  },
+  "G31": {
+   "kauf": 10,
+   "vw": [
+    10,
+    25,
+    50,
+    90
+   ],
+   "grund": "Automatisierung reizt, unsicher ob ohne Code klappt"
+  },
+  "C17": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C21": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C26": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B27": {
+   "kauf": 6,
+   "vw": [
+    5,
+    15,
+    30,
+    50
+   ],
+   "grund": "Neugier, aber ChatGPT im Job reicht"
+  },
+  "B32": {
+   "kauf": 5,
+   "vw": [
+    10,
+    20,
+    40,
+    80
+   ],
+   "grund": "Kundenliste-App für Vertrieb denkbar, Firma hat CRM"
+  },
+  "B29": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B35": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Datenschutz bei KI-Apps unklar"
+  },
+  "W26": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "W30": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "RSVP gibt's gratis woanders"
+  },
+  "H31": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "V20": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "V34": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E50": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "AT19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "CH22": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Vielleicht später, jetzt nicht"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "N40": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Keinerlei Bedarf"
+  },
+  "K22": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Evtl. für Projektarbeit, Firma-Tools reichen"
+  },
+  "F20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  }
+ }
+}
