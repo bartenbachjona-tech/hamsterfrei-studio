@@ -1,0 +1,62 @@
+[
+ {
+  "id": 408,
+  "alter": 39,
+  "ziel": "Praktikum/Werkstudent",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "schweift gern ab",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "Abbruch Ausbildung/Studium",
+  "assessment_center": false
+ },
+ {
+  "id": 801,
+  "alter": 37,
+  "ziel": "Praktikum/Werkstudent",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "Tippfehler, umgangssprachlich",
+  "link": "Link funktioniert",
+  "geraet": "nur Handy",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 554,
+  "alter": 20,
+  "ziel": "Duales Studium",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "Link funktioniert",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 91,
+  "alter": 28,
+  "ziel": "Praktikum/Werkstudent",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "Link funktioniert",
+  "geraet": "Tablet",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 543,
+  "alter": 22,
+  "ziel": "Minijob/Nebenjob",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ }
+]
