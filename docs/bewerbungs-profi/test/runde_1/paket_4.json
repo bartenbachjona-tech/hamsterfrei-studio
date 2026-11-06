@@ -1,0 +1,122 @@
+[
+ {
+  "id": 93,
+  "alter": 27,
+  "ziel": "Jobwechsel",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 646,
+  "alter": 27,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "schweift gern ab",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 641,
+  "alter": 21,
+  "ziel": "Duales Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "antwortet sehr knapp",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 840,
+  "alter": 34,
+  "ziel": "Wiedereinstieg nach Pause",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "Laptop",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 139,
+  "alter": 20,
+  "ziel": "Praktikum/Werkstudent",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "nur Handy",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 411,
+  "alter": 28,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "Link funktioniert",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 532,
+  "alter": 35,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 584,
+  "alter": 35,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 432,
+  "alter": 44,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "gründlich, viele Rückfragen",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 382,
+  "alter": 26,
+  "ziel": "Jobwechsel",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ }
+]
