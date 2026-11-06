@@ -16,6 +16,18 @@ Für **alle bisherigen Videos** (Folge 01, S1 „Seminararbeit bis 10.11.?“, V
 - Dann **Median** je Plattform und **Erwartung** für das nächste Video eintragen (Handbuch G7).
 - Zugriff nur über das Hamsterfrei-Chrome-Profil (KANAL_REGELN, Konten). Nichts in den Studios ändern.
 
+
+## Erhebung 06.11.2026 01:10 (TikTok Studio, manuell)
+| Video | veröff. | Aufrufe | Ø Wiedergabe | ganz angesehen | Für dich | Suche |
+|---|---|---|---|---|---|---|
+| S1 „Seminararbeit bis 10.11.? Keine Angst“ | 30.10. | 656 | 10,3 s | 4,3 % | 38,8 % | **53,5 %** |
+| 5 Fehler | 30.10. | 281 | – | – | – | – |
+| S2 „Wofür hast du KI benutzt?“ | 02.11. | 273 | 5,9 s | 2,1 % | 86,4 % | 4,4 % |
+| S5 „6 Tage, 0 Seiten“ | 04.11. | 307 | 4,7 s | 1,3 % | 87,9 % | 7,0 % |
+| S5-2 „Noch 5 Tage: Literaturverzeichnis“ | 05.11. | 240 | 3,2 s | 1,2 % | 98,8 % | 0,8 % |
+- **Befund:** Für-dich-Ausspielung bleibt bei ~250–300 hängen (Absprung bei 0:01 bei allen). **S1 wächst über die TikTok-Suche** (Suchbegriffe: „w seminar quellen“, „seminararbeit ki“, „seminararbeit mit claude“, „w seminar“, „seminar arbeit ki kostenlos“). Suche = Zuschauer mit Absicht, Ø 10 s.
+- **Folgerung:** Bis 10.11. Suchbegriffe gezielt in Bildschirmtext (Frame 0), Caption-Anfang und Sprechtext packen (z. B. „Seminararbeit mit KI“, „W-Seminar Quellen“). Funnel: 0 Wort-Kommentare; Verkäufe nicht geprüft (Digistore-Login).
+
 ## Messziele (vorläufig; nach Erfassung der Basiswerte konkretisieren)
 | Kennzahl | Plattform | Basiswert | Ziel nach 10 Videos ab 11.11. |
 |---|---|---|---|
