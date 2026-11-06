@@ -356,7 +356,7 @@ export const SceneSchritte: React.FC<{ s1: number; s2: number; s3: number; frei:
 };
 
 // ---------- 10 Schluss: Handy mit der neuen Website + Adresse ----------
-export const SceneEnde: React.FC<{ link: number }> = ({ link }) => {
+export const SceneEnde: React.FC<{ link: number; frei?: number }> = ({ link, frei }) => {
   const { t, fps, frame } = useT();
   const s = Math.max(0.5, sp(t, -0.05, fps));
   const glow = 0.5 + 0.5 * Math.sin(frame / 4);
@@ -397,6 +397,122 @@ export const SceneEnde: React.FC<{ link: number }> = ({ link }) => {
         <div style={{ display: "inline-block", fontSize: 66, fontWeight: 700, color: "#1A56C4", background: "#fff", border: `6px solid rgba(35,136,90,${0.5 + glow * 0.5})`, borderRadius: 26, padding: "8px 30px", scale: String(1 + 0.08 * big) }}>hamsterfrei.de/seminar</div>
       </div>
       <div style={{ position: "absolute", left: 0, right: 0, top: 875, textAlign: "center", fontSize: 66, fontWeight: 700, color: GREEN, scale: String(Math.max(0.0001, big)), opacity: t >= link ? 1 : 0 }}>Link im Profil ☝️</div>
+      {frei !== undefined && t >= frei && t < link && (
+        <div style={{ position: "absolute", left: 0, right: 0, top: 878, display: "flex", justifyContent: "center", scale: String(Math.max(0.0001, sp(t, frei, fps))) }}>
+          <div style={{ background: "#E3F1EA", color: "#1C7049", border: `6px solid ${GREEN}`, borderRadius: 999, padding: "8px 34px", fontSize: 48, fontWeight: 700 }}>✓ läuft im kostenlosen Claude</div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// ======================= Fassung 2 (Jonas Feedback 06.11.) =======================
+
+// ---------- A „Wo stehst du gerade?“ mit drei Antwort-Buttons ----------
+export const SceneStand: React.FC<{ q: number; m: number; f: number }> = ({ q, m, f }) => {
+  const { t, fps, frame } = useT();
+  const opts = [
+    { at: q, ico: "🔍", label: "Noch keine Quellen", hint: "→ echte Quellen suchen" },
+    { at: m, ico: "✏️", label: "Mittendrin", hint: "→ Kapitel für Kapitel" },
+    { at: f, ico: "✅", label: "Fast fertig", hint: "→ alles checken" },
+  ];
+  const activeIdx = t >= f ? 2 : t >= m ? 1 : t >= q ? 0 : -1;
+  return (
+    <div style={{ position: "absolute", inset: 0, background: "#FBF7F0" }}>
+      <ClaudeHead />
+      <div style={{ position: "absolute", left: 40, right: 40, top: 125, background: "#fff", border: `6px solid ${INK}`, borderRadius: 36, padding: "16px 34px 22px", scale: String(Math.max(0.8, sp(t, -0.1, fps))), transformOrigin: "left top", boxShadow: "0 12px 0 rgba(58,38,24,.10)" }}>
+        <div style={{ fontSize: 28, fontWeight: 700, color: MUTED, letterSpacing: 2 }}>CLAUDE</div>
+        <div style={{ fontSize: 70, fontWeight: 700, lineHeight: 1.1, whiteSpace: "nowrap" }}>Wo stehst du gerade?</div>
+      </div>
+      {opts.map((o, i) => {
+        const on = i === activeIdx;
+        const pulse = on ? 1.04 + 0.015 * Math.sin(frame / 4) : 1;
+        return (
+          <div key={o.label} style={{ position: "absolute", left: 60, right: 60, top: 355 + i * 200, opacity: fade(t, 0.1 + i * 0.12, 0.2), scale: String(pulse) }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 24, background: on ? GREEN : "#fff", color: on ? "#fff" : INK, border: `6px solid ${INK}`, borderRadius: 999, padding: "20px 36px", boxShadow: on ? "0 10px 0 rgba(35,136,90,.3)" : "none" }}>
+              <div style={{ fontSize: 64 }}>{o.ico}</div>
+              <div style={{ fontSize: 60, fontWeight: 700 }}>{o.label}</div>
+            </div>
+            {on && <div style={{ marginTop: 6, marginLeft: 120, fontSize: 38, fontWeight: 700, color: GREEN, opacity: fade(t, o.at + 0.2) }}>{o.hint}</div>}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+// ---------- B Beispiel: Quelle fehlt im Literaturverzeichnis ----------
+export const SceneLuecke: React.FC<{ fehlt: number; ergaenze: number }> = ({ fehlt, ergaenze }) => {
+  const { t, fps, frame } = useT();
+  const blink = t >= fehlt ? 0.55 + 0.45 * Math.abs(Math.sin(frame / 5)) : 0;
+  const arrow = interpolate(t, [0.3, 0.8], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const rows = ["Bauer: Mobilität im Wandel", "Destatis: Fahrgastzahlen", "?", "Schmidt: Pendeln in Bayern"];
+  return (
+    <div style={{ position: "absolute", inset: 0, background: CREAM }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 34, display: "flex", justifyContent: "center" }}>
+        <div style={{ background: RED, color: "#fff", border: `5px solid ${INK}`, borderRadius: 999, padding: "10px 32px", fontSize: 44, fontWeight: 700 }}>Quelle fehlt im Literaturverzeichnis</div>
+      </div>
+      {/* links: dein Text */}
+      <div style={{ position: "absolute", left: 30, width: 380, top: 170, height: 520, background: PAPER, border: `6px solid ${INK}`, borderRadius: 22, padding: "24px 26px", scale: String(Math.max(0.85, sp(t, -0.1, fps))), rotate: "-2deg" }}>
+        <div style={{ fontSize: 26, fontWeight: 800, color: MUTED, letterSpacing: 2 }}>DEIN TEXT</div>
+        <Lines n={2} />
+        <div style={{ marginTop: 20, fontSize: 40, lineHeight: 1.3, fontWeight: 500 }}>
+          … wie eine Studie zeigt <span style={{ background: "#FFE27A", border: `4px solid ${RED}`, borderRadius: 10, padding: "0 6px", fontWeight: 700 }}>(Müller)</span> …
+        </div>
+        <Lines n={3} w={[96, 100, 64]} />
+      </div>
+      {/* Pfeil */}
+      <svg width={110} height={80} viewBox="0 0 110 80" style={{ position: "absolute", left: 412, top: 380, opacity: arrow }}>
+        <path d={`M5 40 L${5 + 85 * arrow} 40`} stroke={GREEN} strokeWidth={12} strokeLinecap="round" />
+        {arrow > 0.9 && <path d="M70 15 L100 40 L70 65" fill="none" stroke={GREEN} strokeWidth={12} strokeLinecap="round" strokeLinejoin="round" />}
+      </svg>
+      {/* rechts: Literaturverzeichnis */}
+      <div style={{ position: "absolute", left: 520, right: 30, top: 170, height: 520, background: PAPER, border: `6px solid ${INK}`, borderRadius: 22, padding: "24px 24px", rotate: "1.5deg", scale: String(Math.max(0.85, sp(t, 0.1, fps))) }}>
+        <div style={{ fontSize: 26, fontWeight: 800, color: MUTED, letterSpacing: 2 }}>LITERATURVERZEICHNIS</div>
+        {rows.map((r, i) =>
+          r === "?" ? (
+            <div key={i} style={{ marginTop: 18, height: 82, borderRadius: 14, border: `6px dashed ${t >= fehlt ? RED : LINE}`, background: `rgba(200,71,58,${blink * 0.15})`, display: "flex", alignItems: "center", padding: "0 16px", fontSize: 40, fontWeight: 700, color: RED, opacity: t >= fehlt ? 0.4 + blink * 0.6 : 1 }}>
+              {t >= fehlt ? "Müller … fehlt!" : ""}
+            </div>
+          ) : (
+            <div key={i} style={{ marginTop: 18, fontSize: 32, fontWeight: 500, color: "#5B4636", lineHeight: 1.2 }}>{r}</div>
+          )
+        )}
+      </div>
+      <Pop at={ergaenze} style={{ position: "absolute", left: 60, right: 60, top: 725 }}>
+        <div style={{ background: "#E3F1EA", border: `6px solid ${GREEN}`, borderRadius: 28, padding: "18px 30px", textAlign: "center" }}>
+          <div style={{ fontSize: 30, fontWeight: 800, color: GREEN, letterSpacing: 2 }}>CLAUDE SAGT DIR</div>
+          <div style={{ fontSize: 50, fontWeight: 700, color: "#1C7049", lineHeight: 1.15 }}>Ergänze: Autor, Titel,<br />Jahr, Seite</div>
+        </div>
+      </Pop>
+      <Beispiel style={{ right: 36, top: 125 }} />
+    </div>
+  );
+};
+
+// ---------- C Probe-Prüfung zu deiner Arbeit ----------
+export const SceneCoach: React.FC<{ antwort: number; feedback: number }> = ({ antwort, feedback }) => {
+  const { t, fps, frame } = useT();
+  return (
+    <div style={{ position: "absolute", inset: 0, background: "#FBF7F0" }}>
+      <ClaudeHead right={<span style={{ background: NAVY, color: "#fff", borderRadius: 999, padding: "6px 20px", fontSize: 28 }}>🎓 Probe-Prüfung</span>} />
+      <div style={{ position: "absolute", left: 36, right: 110, top: 125, background: "#fff", border: `6px solid ${INK}`, borderRadius: 36, padding: "18px 30px 24px", rotate: `${-1 + Math.sin(frame / 5) * 0.8}deg`, scale: String(Math.max(0.8, sp(t, -0.1, fps))), transformOrigin: "left top" }}>
+        <div style={{ fontSize: 26, fontWeight: 700, color: NAVY, letterSpacing: 2 }}>🧑‍🏫 CLAUDE, WIE DEINE LEHRKRAFT</div>
+        <div style={{ fontSize: 62, fontWeight: 700, lineHeight: 1.12, marginTop: 4 }}>„Warum hast du diese Quelle gewählt?“</div>
+        <div style={{ fontSize: 28, fontWeight: 600, color: MUTED, marginTop: 6 }}>Frage zu deiner Arbeit, Kapitel 3</div>
+      </div>
+      <Pop at={antwort} style={{ position: "absolute", left: 190, right: 60, top: 470 }}>
+        <div style={{ background: NAVY, color: "#fff", borderRadius: 30, padding: "18px 28px", fontSize: 42, lineHeight: 1.25 }}>
+          <div style={{ fontSize: 24, fontWeight: 700, letterSpacing: 2, opacity: 0.8 }}>DU</div>
+          Die Studie von Müller, weil sie aktuelle Zahlen hat.
+        </div>
+      </Pop>
+      <Pop at={feedback} style={{ position: "absolute", left: 36, right: 36, top: 710 }}>
+        <div style={{ background: "#fff", border: `6px solid ${INK}`, borderRadius: 28, padding: "18px 28px", display: "grid", gap: 10 }}>
+          <div style={{ fontSize: 46, fontWeight: 700, color: GREEN }}>✓ gut: Quelle genannt</div>
+          <div style={{ fontSize: 46, fontWeight: 700, color: "#C27A1E" }}>➜ fehlt noch: warum sie verlässlich ist</div>
+        </div>
+      </Pop>
     </div>
   );
 };
