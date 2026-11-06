@@ -1,0 +1,510 @@
+[
+ {
+  "id": "36",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "sonstiges"
+  ],
+  "begruendung": "Ich hab mich echt ermutigt gefühlt und die Bewerbung ist raus. Nur die Frage, wie ich auf die Stelle aufmerksam wurde, war komisch, und die letzte Nachricht mit Mail, PDF und Checkliste war ganz schön lang."
+ },
+ {
+  "id": "58",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "zu_lang",
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Studium und Unterlagen passen, und der Postkorb hat mir echt was gebracht. Chat 2 hat sich aber gezogen, nach dem Okay kam noch eine neue Fassung, und mein Motivationsschreiben hieß plötzlich \"Anschreiben\"."
+ },
+ {
+  "id": "69",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang",
+   "generisch_nicht_persoenlich"
+  ],
+  "begruendung": "Ohne die Ermutigung hätte ich nicht auf Senden gedrückt. Es war aber lang, und mein SAP MM, das in der Anzeige gefragt war, fehlt im Anschreiben."
+ },
+ {
+  "id": "77",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_viele_fragen",
+   "zu_lang"
+  ],
+  "begruendung": "Die Bewerbung ist ehrlich und raus, auch mit dem Abbruch. 30 Nachrichten waren aber viel, und manche Nachrichten haben sich mechanisch angefühlt."
+ },
+ {
+  "id": "116",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_viele_fragen",
+   "generisch_nicht_persoenlich"
+  ],
+  "begruendung": "Ging alles mit kurzen Antworten, die Bewerbung ist raus. 26 Runden sind für mich aber viel, und der Satz über die Firma im Anschreiben ist ziemlich dünn."
+ },
+ {
+  "id": "120",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Schnell und locker, auch als ich abgeschweift bin. Der Lebenslauf ist sauber und die Mail ist raus."
+ },
+ {
+  "id": "124",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang"
+  ],
+  "begruendung": "Meine vielen Fragen wurden genau beantwortet, und die Unterlagen sind gut. Insgesamt hat es aber sehr lange gedauert, und warum ich den Chat wechseln sollte, war mir nicht ganz klar."
+ },
+ {
+  "id": "135",
+  "zufriedenheit": 3,
+  "wiederkauf": true,
+  "kategorie": "ac_schwach",
+  "probleme_kategorien": [
+   "zu_viele_fragen",
+   "ac_schwach",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Die Bewerbung hat geklappt, aber ich musste Sachen doppelt sagen, und 35 Nachrichten waren mir zu viel. Beim Postkorb bin ich ausgestiegen, im Feedback stand \"Herrn X\", und auf dem Spickzettel stehen 1–2 Minuten statt der 5 aus der Einladung."
+ },
+ {
+  "id": "146",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "zu_lang"
+  ],
+  "begruendung": "Hätte ich alleine nie so hinbekommen, die Bewerbung ist raus. Chat 1 war am Handy lang, und im Formulartext steht \"finde ich spannend\", obwohl ich das so nie gesagt hab."
+ },
+ {
+  "id": "192",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_viele_fragen",
+   "erfunden_ungenau",
+   "sonstiges"
+  ],
+  "begruendung": "Mit allen Fragen auf einmal ging es schnell. Die extra Gerätefrage hat genervt, und die Zeile \"Staplerschein: 2022\" sieht im Lebenslauf komisch aus."
+ },
+ {
+  "id": "224",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Aus meinem ChatGPT-Text ist was Ehrliches geworden, und die Bewerbung ist raus. Nach dem Okay musste aber noch mal neu erzeugt werden, im Formular steht die Zeichengrenze doppelt, und \"Vertretung in verschiedenen Gruppen\" hab ich nie gesagt."
+ },
+ {
+  "id": "227",
+  "zufriedenheit": 3,
+  "wiederkauf": true,
+  "kategorie": "technik_datei_fehler",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "zu_lang",
+   "ac_schwach",
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Die Bewerbung war gut gemacht, und die Gruppenübung hat geholfen. Im Spickzettel standen aber Fehler, die ich selbst finden musste (Frage doppelt, \"auf das er sich gefreut hat\", falscher Tipp), und nach 20 Nachrichten war ich durch, ohne das Einzelgespräch geübt zu haben."
+ },
+ {
+  "id": "233",
+  "zufriedenheit": 3,
+  "wiederkauf": true,
+  "kategorie": "technik_datei_fehler",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "zu_viele_fragen",
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Ich hab alles geschafft, aber dauernd kamen Nachfragen, und am Handy lagen plötzlich 2 Anschreiben. Im Spickzettel steht bei meiner Präsentation ein Fallstudien-Tipp und 1–2 Minuten statt 5."
+ },
+ {
+  "id": "296",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Kurz und verständlich am Handy, der Lebenslauf zum Abgeben ist fertig. Im Lebenslauf steht aber \"Beratung\", das hab ich so nicht gesagt."
+ },
+ {
+  "id": "319",
+  "zufriedenheit": 3,
+  "wiederkauf": false,
+  "kategorie": "zu_lang",
+  "probleme_kategorien": [
+   "zu_lang",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Ich wollte nur kurz fürs Probearbeiten üben. Die Bestätigung, die ich schon per 👍 gegeben hatte, und 5 Fragen waren mir zu viel, und im ersten Spickzettel stand die falsche Filiale."
+ },
+ {
+  "id": "346",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Schnell, genau was ich brauchte: kurze Übung, gutes Feedback, Zettel als PDF. Auch die Frage zum kranken Kind war gut erklärt."
+ },
+ {
+  "id": "350",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_viele_fragen"
+  ],
+  "begruendung": "Hat mit kurzen Antworten gut geklappt, und die Bewerbung ist raus. Durch die vielen Nachfragen hat es aber länger gedauert, als ich dachte."
+ },
+ {
+  "id": "402",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang",
+   "verwirrend_naechster_schritt"
+  ],
+  "begruendung": "Alle meine Fragen wurden beantwortet, und es ist abgeschickt. Kurz vor Schluss sollte ich einen neuen Chat aufmachen, und die WhatsApp-Datei hieß \"Formular-Texte\", das war verwirrend."
+ },
+ {
+  "id": "490",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_viele_fragen",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Richtig schnell, die Unterlagen sind sauber. Die Gerätefrage mittendrin hat genervt, und in der Formular-Datei steht ein \"max. 50 Zeichen\", das es gar nicht gibt."
+ },
+ {
+  "id": "500",
+  "zufriedenheit": 3,
+  "wiederkauf": true,
+  "kategorie": "erfunden_ungenau",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "technik_datei_fehler",
+   "zu_lang"
+  ],
+  "begruendung": "Am Ende ist meine Bewerbung raus, das hätte ich allein nicht geschafft. Aber im Text stand, dass ich täglich mit der Software arbeite und schnell lerne. Das stimmt nicht, und ich musste es selbst finden; der Dateiname war auch komisch abgeschnitten."
+ },
+ {
+  "id": "505",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang",
+   "sonstiges"
+  ],
+  "begruendung": "Ich weiß jetzt, wie ich in der Bäckerei frage, und hab einen Lebenslauf. Manche Nachrichten am Handy waren lang, und der Hinweis wegen meiner Mailadresse war mir kurz peinlich."
+ },
+ {
+  "id": "530",
+  "zufriedenheit": 3,
+  "wiederkauf": false,
+  "kategorie": "zu_viele_fragen",
+  "probleme_kategorien": [
+   "zu_viele_fragen",
+   "handy_problem",
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Für einen Minijob waren mir das zu viele Fragen, und die Checkliste in zwei Teilen hat mich genervt. Am Handy musste ich den Text suchen, und \"schwer tragen bin ich gewohnt\" hab ich nie gesagt."
+ },
+ {
+  "id": "575",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang",
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Die Bewerbung ist gut und ehrlich, meine Fragen wurden beantwortet. Es war aber lang, und ein Satz in der Mail klang nicht nach mir, das musste ich selbst ansprechen."
+ },
+ {
+  "id": "588",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "zu_lang"
+  ],
+  "begruendung": "Lebenslauf und Anschreiben sind ordentlich, und die Familienzeit ist gut gelöst. Im Lebenslauf steht aber nur \"2002 Realschule\" ohne Abschluss, das sieht unvollständig aus."
+ },
+ {
+  "id": "622",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Die Fachfragen zu SQL waren genau richtig, und das Feedback war konkret. Im Spickzettel steht aber eine Gegenmaßnahme, die ich nie gesagt hab, und meine Vorstellung steht doppelt drin."
+ },
+ {
+  "id": "626",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "sonstiges"
+  ],
+  "begruendung": "Ich bin jetzt echt weniger nervös, die zweite Runde hat viel gebracht. Auf dem Zettel stehen meine Antworten aber unter \"schwierige Fragen\", und dass die Krankheit meiner Nachbarin drinsteht, war mir nicht klar."
+ },
+ {
+  "id": "642",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "zu_lang",
+   "handy_problem"
+  ],
+  "begruendung": "Alles ist vorbereitet, und auch das Telefonat ist geplant. Die Info zur Krankenversicherung war erst falsch, und das Anschreiben am Handy zu lesen war sehr lang."
+ },
+ {
+  "id": "692",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang",
+   "sonstiges"
+  ],
+  "begruendung": "In einem Rutsch geschafft, die Lücke ist gut erklärt. Es war aber ein langer Chat, und der Staplerschein steht komisch beim Führerschein."
+ },
+ {
+  "id": "698",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_viele_fragen"
+  ],
+  "begruendung": "Hat geklappt, und der Minijob ist beworben. 23 Runden waren für einen Nebenjob aber viel, und die Sache mit Check-U passte nicht zu mir."
+ },
+ {
+  "id": "710",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Trotz meinem Abschweifen ist alles fertig und raus. Bei Führerschein und Praktikumsjahr war ich aber nicht sicher, und es steht jetzt trotzdem fest im Lebenslauf."
+ },
+ {
+  "id": "725",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Ohne die Ermutigung hätte ich mich nicht getraut, und die Unterlagen sind super. Ein Satz im Anschreiben behauptet aber mehr, als ich eigentlich kenne."
+ },
+ {
+  "id": "732",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Viel einfacher als gedacht: Jede Rückfrage wurde geduldig beantwortet, und das Telefonat mit der Einrichtung war gut vorbereitet. Die Bewerbung ist raus."
+ },
+ {
+  "id": "744",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "zu_lang",
+   "verwirrend_naechster_schritt"
+  ],
+  "begruendung": "Die Bewerbung und die erste AC-Übung waren hilfreich. Der Spickzettel duzt mich aber, obwohl wir uns siezen, er hat Grammatikfehler und die falsche Redezeit, und zur Mailadresse kamen widersprüchliche Aussagen."
+ },
+ {
+  "id": "749",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Genau so wollte ich das: schnell, alles auf einmal, nach 9 Nachrichten abgeschickt."
+ },
+ {
+  "id": "758",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Locker, auch wenn ich abgeschweift bin, und die Bewerbung ist raus. Den Hinweis auf den versteckten KI-Text in der Anzeige fand ich stark."
+ },
+ {
+  "id": "763",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Initiativbewerbung und Fallstudie waren hilfreich. Im Spickzettel steht mein Wechselgrund aber roh und unpassend, und es gibt einen Grammatikfehler in der Überschrift."
+ },
+ {
+  "id": "767",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Schnell, ohne unnötiges Anschreiben, und mein Abbruch ist ehrlich drin. Ist raus."
+ },
+ {
+  "id": "837",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "zu_viele_fragen"
+  ],
+  "begruendung": "Mit allen Fragen auf einmal ging die Bewerbung schnell. Das Formularfeld \"Über mich\" kam aber erst am Ende dazu, und der Spickzettel hat kleine Fehler."
+ },
+ {
+  "id": "846",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "erfunden_ungenau",
+   "zu_lang"
+  ],
+  "begruendung": "Die Übung hat mir wirklich geholfen. Auf dem Spickzettel werde ich aber geduzt, und dort steht noch die aufgehübschte Fassung statt meiner eigenen Antwort."
+ },
+ {
+  "id": "867",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Ich hatte Angst, aber jetzt ist es abgeschickt, und ich wurde gut ermutigt. Der Satz \"Genau das möchte ich lernen\" ist aber nicht von mir, und \"Englisch (mittel)\" sieht nicht so gut aus."
+ },
+ {
+  "id": "869",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "handy_problem",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Die Übung und der Hinweis zur Kinderfrage haben mir gutgetan. Der Spickzettel ist am Handy aber sehr klein, und es steht nicht genau meine gewählte Antwort drin."
+ },
+ {
+  "id": "895",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_viele_fragen"
+  ],
+  "begruendung": "Ging doch fix, 8 Nachrichten und abgeschickt. Nur die Gerätefrage kurz vor Schluss hat genervt."
+ },
+ {
+  "id": "912",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Ich fühl mich viel besser vorbereitet, auch beim Gehalt. Im Spickzettel steht der Wechselgrund doppelt, das ist aber egal."
+ },
+ {
+  "id": "920",
+  "zufriedenheit": 3,
+  "wiederkauf": true,
+  "kategorie": "technik_datei_fehler",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "erfunden_ungenau",
+   "zu_lang"
+  ],
+  "begruendung": "Bewerbung und Gruppendiskussion haben geklappt, aber es waren insgesamt über 40 Nachrichten. Im Anschreiben steht ein Satz, den ich so nicht gesagt hab, und der Spickzettel hat falsche Zeitangaben und musste neu gemacht werden."
+ },
+ {
+  "id": "941",
+  "zufriedenheit": 3,
+  "wiederkauf": true,
+  "kategorie": "erfunden_ungenau",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "zu_viele_fragen",
+   "verwirrend_naechster_schritt"
+  ],
+  "begruendung": "Die Bewerbung ist fertig, aber in der Mail stand, dass ich Frau Brandl am Stand kennengelernt hab. Das weiß ich gar nicht, und ich musste es selbst merken. Der Chatwechsel mit dem Neu-Hochladen der Zeugnisse hat mich außerdem verunsichert."
+ },
+ {
+  "id": "955",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "verwirrend_naechster_schritt",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Ich fühle mich viel sicherer fürs Gespräch. Die Bestätigungsmail ohne Adresse hat mich aber verwirrt, und auf dem Spickzettel stehen Fragen doppelt."
+ },
+ {
+  "id": "965",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Super schnell, 7 Nachrichten, und mit WhatsApp Web ging's sogar vom Laptop."
+ },
+ {
+  "id": "971",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Die Übung war gar nicht so schlimm, und ich bin sicherer. Auf dem Spickzettel stehen aber 1–2 statt 5 Minuten, und eine interne Notiz (\"Kein sorry\") ist mit drin."
+ }
+]
