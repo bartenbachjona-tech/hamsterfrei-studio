@@ -28,18 +28,26 @@ Für **alle bisherigen Videos** (Folge 01, S1 „Seminararbeit bis 10.11.?“, V
 - **Befund:** Für-dich-Ausspielung bleibt bei ~250–300 hängen (Absprung bei 0:01 bei allen). **S1 wächst über die TikTok-Suche** (Suchbegriffe: „w seminar quellen“, „seminararbeit ki“, „seminararbeit mit claude“, „w seminar“, „seminar arbeit ki kostenlos“). Suche = Zuschauer mit Absicht, Ø 10 s.
 - **Folgerung:** Bis 10.11. Suchbegriffe gezielt in Bildschirmtext (Frame 0), Caption-Anfang und Sprechtext packen (z. B. „Seminararbeit mit KI“, „W-Seminar Quellen“). Funnel: 0 Wort-Kommentare; Verkäufe nicht geprüft (Digistore-Login).
 
-## Messziele (vorläufig; nach Erfassung der Basiswerte konkretisieren)
-| Kennzahl | Plattform | Basiswert | Ziel nach 10 Videos ab 11.11. |
+## Messziele (Stand 06.11.2026, nach Kritiker-Runde)
+Basis = FYP-Videos ≥ 24 h (S2, S5). Suchgetriebene Videos (wie S1) getrennt führen. Gemessen wird immer nach **48 h**, nicht nachts zu beliebiger Zeit.
+| Kennzahl | Plattform | Basiswert 06.11. | Ziel nach 10 Videos ab 11.11. |
 |---|---|---|---|
-| Ø Wiedergabedauer | TikTok | offen (zuletzt ca. 5–7 s) | ≥ Basis + 50 % (Richtwert ≥ 10 s) |
-| „Ganz angesehen“ % | TikTok | offen | ≥ Basis × 2 |
-| Halterate nach 3 s | TikTok (falls sichtbar) | offen | ≥ 50 % |
-| Angesehen % (vs. Weiterwischen) | YouTube | offen | ≥ 60 % |
-| Ø angesehener Anteil | YouTube | offen | ≥ 70 % |
-| Follower-Wachstum / 7 Tage | je Plattform | offen | positiv, Ziel festlegen nach Basis |
-| Kommentare mit Kommentar-Wort | alle | offen | ≥ 1 pro Video mit Wort |
-| Gesendete DMs | TikTok/IG | 0 | jede Wort-Anfrage innerhalb von 2 h beantwortet |
-| Verkäufe | Digistore | offen | nur beobachten, kein Ziel (kein Werbekanal) |
+| Ø Wiedergabedauer | TikTok | 5,3 s | ≥ 8 s |
+| „Ganz angesehen“ % | TikTok | 1,7 % | ≥ 3,4 % |
+| Anteil Aufrufe aus Suche | TikTok | S2/S5 4–7 %, S1 53,5 % | ≥ 20 % im Schnitt |
+| Kommentare (alle) je 100 Aufrufe + Kommentar-Wort | TikTok | 0 Wort-Kommentare | ≥ 1 Wort-Kommentar pro Video mit Wort |
+| Angesehen % / Ø angesehener Anteil | YouTube | offen (noch nicht erhoben) | nach Basis festlegen |
+| Follower Δ 7 Tage | je Plattform | offen | positiv |
+Aufrufe sind **kein Ziel** (nicht steuerbar), nur Kontext.
+
+## Testdesign ab 11.11. (EIN Test: Hook)
+- Ergebnis-Hook „Hamster-Test“ vs. bisheriger Hook, **abwechselnd A/B/A/B** über 10 Videos (nicht 5 dann 5), damit Serie/Zeit nicht mit dem Hook vermischt werden.
+- Widerlegt, wenn die A-Videos (Hamster-Test) im Mittel nicht ≥ 1,5 s mehr Ø Wiedergabe haben als die B-Videos.
+- Erwartung nächstes FYP-Video (G7): 230–350 Aufrufe/48 h, Ø 4–6 s. Liegt es < 4 s, ist Frame 0 schlechter als bisher.
+
+## Offene Messpunkte (nächster Lauf)
+- Je Video Follower- vs. Nicht-Follower-Anteil (TikTok Analytics → Zuschauer) → Frage „geerbtes Privatkonto als Basis?“ mit Zahlen belegen. Hinweis bisher: FYP 87–99 %, aber Ausspielung stoppt bei ~250–300.
+- Herkunft der 3 Verkäufe unklar → Jona: getrennte Digistore-Links/Affiliate-Tracking je Plattform.
 
 ## Laufender Test
 - **Bis 10.11.:** kein Test. Seminar-Offensive mit Handbuch-Regeln. Nur Basiswerte und Erwartungen sammeln.
