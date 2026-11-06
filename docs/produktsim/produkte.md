@@ -22,3 +22,8 @@ Eigene Produkte = Claude-Skills (ZIP + PDF-Anleitung, laufen im kostenlosen Clau
 - F4 ElevenLabs (KI-Stimmen, z. B. die Hamster-Stimme): Gratisstufe; Starter ca. 5 €/Monat, Creator ca. 22 €/Monat.
 - F5 smartsteuer (Online-Steuererklärung): ca. 40 € pro Erklärung (Schätzung); für Studierende mit Verlustvortrag kostenlos. Auf TikTok als Werbung wohl nicht erlaubt.
 - F6 Surfshark VPN: keine Gratisversion; Mehrjahrespaket ca. 60–90 €.
+
+## Nachtrag 06.11. – Gründer-Skills (Preis offen → Van Westendorp)
+- P11 Viral-Video-Profi: Claude-Skill, der aus einer Idee ein fertiges Kurzvideo-Paket macht: Hook-Varianten, Skript (30–45 s), Szenenplan, Untertitel, Caption + Hashtags, Posting-Plan, Auswertung der eigenen Zahlen. Beweis: genau so entstehen die Hamsterfrei-Videos. Keine Reichweiten-Garantie. Vergleich: viele Gratis-Prompts, Kurse 30–300 €, Tools wie Opus Clip/CapCut-KI.
+- P12 Website-Profi: Claude baut mit dir eine fertige Website/Landingpage (Text, Design, rechtliche Pflichtseiten-Gerüst, Veröffentlichung kostenlos über GitHub Pages, eigene Domain verbinden). Beweis: hamsterfrei.de ist so entstanden. Vergleich: Wix/Jimdo 10–20 €/Monat, Freelancer 300–2.000 €, KI-Baukästen.
+- P13 App-Profi: Claude baut mit dir eine kleine Web-App ohne Programmierkenntnisse (z. B. Terminbuchung, Rechner, Kundenliste), Schritt für Schritt bis online. Beweis: Jona hat so ein Buchungssystem für ein Beauty-Studio gebaut. Vergleich: Lovable/Replit/Bolt 20–25 $/Monat mit Gratisstufe, Freelancer ab 1.000 €.
