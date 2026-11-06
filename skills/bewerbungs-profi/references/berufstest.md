@@ -76,7 +76,7 @@ Regeln: Weg beachten – wer „Geld ab Monat 1“ will, bekommt keine schulisch
 
 | Typ | Ausbildung | Studium / dual |
 |---|---|---|
-| R | Kfz-Mechatroniker/in, Elektroniker/in Energie- und Gebäudetechnik, Anlagenmechaniker/in SHK, Tischler/in, Industriemechaniker/in, Gärtner/in | Maschinenbau, Bauingenieurwesen, Elektrotechnik |
+| R | Kfz-Mechatroniker/in, Zweiradmechatroniker/in (Fahrrad/Motorrad), Elektroniker/in Energie- und Gebäudetechnik, Anlagenmechaniker/in SHK, Tischler/in, Industriemechaniker/in, Gärtner/in, Tierwirt/in, Pferdewirt/in | Maschinenbau, Bauingenieurwesen, Elektrotechnik, Agrarwissenschaften |
 | I | Fachinformatiker/in, Chemielaborant/in, Biologielaborant/in, Elektroniker/in für Geräte und Systeme | Informatik, Physik, Chemie, Biologie, Mathematik |
 | A | Mediengestalter/in Digital und Print, Gestalter/in für visuelles Marketing, Fotograf/in, Friseur/in | Kommunikationsdesign, Architektur, Medien |
 | S | Pflegefachfrau/-mann, Medizinische/r Fachangestellte/r, Erzieher/in, Notfallsanitäter/in, Heilerziehungspfleger/in | Soziale Arbeit, Lehramt, Psychologie, Pflege |
@@ -90,7 +90,7 @@ Regeln: Weg beachten – wer „Geld ab Monat 1“ will, bekommt keine schulisch
 | RI | 1 | Mechatroniker/in, Fachinformatiker/in Systemintegration, Elektrotechnik |
 | RA | 2 | Tischler/in, Raumausstatter/in, Goldschmied/in, Bühnenmaler/in, Innenarchitektur |
 | RS | 3 | Notfallsanitäter/in, Physiotherapeut/in, Orthopädietechnik-Mechaniker/in |
-| RE | 2 | Kfz-Mechatroniker/in mit Kundendienst, Meister/in im Handwerk (später), Baustellenleitung (Bauingenieurwesen) |
+| RE | 2 | Kfz-Mechatroniker/in mit Kundendienst, Zweiradmechatroniker/in (Werkstatt + Verkauf), Meister/in im Handwerk (später), Baustellenleitung (Bauingenieurwesen) |
 | RC | 1 | Fachkraft für Lagerlogistik, Vermessungstechniker/in, Logistik (dual) |
 | IA | 1 | Architektur, Mediengestalter/in, Medieninformatik |
 | IS | 2 | Medizinisch-technische/r Laboratoriumsassistent/in (MTL), Pharmazeutisch-technische/r Assistent/in, Lehramt MINT, Psychologie |
@@ -117,3 +117,5 @@ Regeln: Weg beachten – wer „Geld ab Monat 1“ will, bekommt keine schulisch
 > „Zum Vertiefen (kostenlos): **Check-U** der Arbeitsagentur (testet auch Fähigkeiten, ca. 1,5–2 Std.), **BERUFENET** für alle Berufe, und die **Berufsberatung** der Arbeitsagentur – auch für Erwachsene, vor Ort, per Telefon oder Video.“
 
 Mehr: planet-beruf.de (Schüler), abi.de, studienwahl.de, Studium-Interessentest (SIT) im Hochschulkompass; Praktikum oder Probetag als bester Test. **AT:** AMS, BerufsInfoZentren. **CH:** berufsberatung.ch, kantonale BIZ.
+
+**Mit Tieren** (oft gewünscht, passt zu R/S): Tiermedizinische/r Fachangestellte/r (S+C), Tierpfleger/in (R+S), Tierwirt/in, Pferdewirt/in (R), Zootierpfleger/in. Studium: Tiermedizin (I+R, NC), Agrarwissenschaften. Ehrlich dazusagen: Vergütung oft niedrig, Arbeitszeiten auch am Wochenende.

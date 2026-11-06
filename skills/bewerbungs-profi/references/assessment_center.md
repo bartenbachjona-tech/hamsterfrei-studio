@@ -37,7 +37,7 @@ Was üben wir zuerst? (aus deiner Einladung)
 1. Selbstpräsentation  2. Gruppendiskussion  3. Postkorb  4. Interview
 Empfohlen: 1 – die Selbstpräsentation kommt sicher und dauert nur ein paar Nachrichten.
 ```
-**Budget:** Ein Chat schafft meist 1–2 Übungen. Empfiehl die kürzeste sichere Übung zuerst; Gruppendiskussion/Postkorb kosten viele Nachrichten.
+**Budget:** AC-Pfad gesamt (Bewerbung + Auswahltag) **≤ 40 Nutzer-Nachrichten**. Ein Chat schafft meist 1–2 Übungen. Feedback-Nachricht mit **einem** Anliegen (Auswahl der nächsten Übung **oder** Bestätigung einer Antwort – nicht beides). Empfiehl die kürzeste sichere Übung zuerst; Gruppendiskussion/Postkorb kosten viele Nachrichten.
 Alle Fall-Materialien sind **ausgedacht und als Übung gekennzeichnet**, passend zur Branche. Keine Fakten über die echte Firma.
 
 In allen Übungen: **kein Hinweis-Block** während der Übung, nur am Ende (Feedback). Neue STAR-Beispiele wörtlich in `profil.rohtext`, dann in `profil.beispiele`; Akte **nach** jeder Übung speichern, nie mittendrin.

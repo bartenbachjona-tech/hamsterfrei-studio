@@ -14,7 +14,8 @@
 - Quellen (…_AKTUELL.pdf) werden in --ordner, sonst in --ausgabe, sonst im Standard-Ausgabeordner gesucht –
   im ersten Ordner, in dem sie liegen. --ausgabe ist nur das Ziel.
 - --einzeln/--buendeln im selben Ordner: die Arbeitsdateien …_AKTUELL.pdf wandern danach nach alt/ – am Handy
-  liegt so nur EINE Datei je Unterlage im Ordner (die saubere zum Hochladen).
+  liegt so nur EINE Datei je Unterlage im Ordner (die saubere zum Hochladen). v5: die Word-Fassungen
+  (…_AKTUELL.docx) wandern nach bearbeitbar/ – auch nach einer Gesamt-PDF mit --profil.
 
 - ZIEL-Name wird genau so verwendet (Bindestriche bleiben). Nur Umlaute/Leerzeichen/Sonderzeichen werden
   ersetzt – mit klarer Meldung.
@@ -410,6 +411,7 @@ def main():
             if not anlage and ziele and os.path.dirname(os.path.abspath(p)) == ziel_ordner and \
                     textlib.basis_und_version(os.path.splitext(os.path.basename(p))[0])[1] == textlib.N_AKTUELL:
                 textlib.aktuell_archivieren(p)
+        word_weg(eintraege, ziel_ordner, hinweise)
         for h in hinweise:
             print(h)
         return
@@ -475,8 +477,29 @@ def main():
         print(f"⚠️ Größer als {MAX_MB} MB – Scans kleiner speichern oder weniger Anlagen (nur relevante Zeugnisse).")
     if abweichung:
         print(f"⚠️ {abweichung}")
+    if d:
+        word_weg([(q, "", False) for q, _ in pdfs], os.path.abspath(ordner), hinweise)
     for h in hinweise:
         print(h)
+
+
+def word_weg(eintraege, ziel_ordner, hinweise):
+    """v5: …_AKTUELL.docx der versendeten Unterlagen nach bearbeitbar/ – neben den Versand-PDFs liegt dann je
+    Unterlage genau EINE Datei (am Handy wichtig). Nichts wird gelöscht."""
+    weg = []
+    for p, _, anlage in eintraege:
+        if anlage or not p:
+            continue
+        stamm = textlib.basis_und_version(os.path.splitext(os.path.basename(p))[0])[0]
+        for o in {os.path.dirname(os.path.abspath(p)), ziel_ordner}:
+            docx = os.path.join(o, f"{stamm}_{textlib.AKTUELL}.docx")
+            if os.path.isfile(docx):
+                ziel = os.path.join(o, "bearbeitbar")
+                os.makedirs(ziel, exist_ok=True)
+                shutil.move(docx, os.path.join(ziel, os.path.basename(docx)))
+                weg.append(os.path.basename(docx))
+    if weg:
+        hinweise.append("📝 Word-Fassungen zum Bearbeiten liegen jetzt in „bearbeitbar/“ (nur auf Wunsch anbieten): " + ", ".join(weg))
 
 
 def buendel(eintraege, n, ausgabe, name, drehen, hinweise):

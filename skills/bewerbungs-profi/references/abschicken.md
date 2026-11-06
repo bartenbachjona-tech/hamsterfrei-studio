@@ -24,7 +24,7 @@ python3 "$S/endcheck.py" …/Bewerbung_Vorname_Nachname_Stelle.pdf --typ gesamt 
 ```
 Ein Aufruf je Dokumenttyp. Akte und Spickzettel prüft der Sammel-Check nicht mit (Spickzettel: `fakten_check.py … --typ spickzettel`; `endcheck` hat keinen Spickzettel-Typ). Firmenname und Stellentitel verlangt `endcheck` nur im Anschreiben/Motivationsschreiben – Formular und Mail bleiben, wie sie freigegeben wurden. ❌ beheben über JSON + neu erzeugen (nach Freigabe der Änderung im Chat).
 
-**Pflicht-Checkliste** – immer in **einem** Teil (≤ 6 Zeilen, auch am Handy und im Schnellmodus), als Codeblock:
+**Pflicht-Checkliste** – immer in **einem** Teil (≤ 6 Zeilen, auch am Handy und im Schnellmodus; **Minijob: 3 Zeilen** – Name/Firma stimmt, Daten = Zeugnisse, Lebenslauf dabei), als Codeblock:
 ```
 ✅ Kurz selbst prüfen, dann abschicken:
 1. Firma, Ansprechperson, Stelle stimmen
@@ -70,13 +70,14 @@ Für Rückfragen erreichen Sie mich unter [Telefon aus dem Profil].
 Mit freundlichen Grüßen
 [Name]
 ```
-3–5 Sätze; Anschreiben nicht doppelt hineinkopieren (außer es soll entfallen). Jeder Satz über die Person braucht seine `herkunft` (z. B. „über die Ausbildungsmesse“ nur, wenn er das so gesagt hat). **Bewerbungsadresse unbekannt:** nicht raten – Anzeige/Karriereseite/Impressum prüfen lassen oder anrufen. Anleitung (`geraet.md`): neue Mail → Betreff/Text einfügen → PDF anhängen → **Testmail an dich selbst** → senden.
+3–5 Sätze; Anschreiben nicht doppelt hineinkopieren (außer es soll entfallen). Die Vorlagensätze (anbei …, … finden Sie in einer PDF im Anhang, Für Rückfragen …) sind neutral und brauchen **keine** `herkunft` – auch mit „Arbeitszeugnis“, „letzten zwei Zeugnisse“ oder dem Starttermin. Die Mail wird **vor** dem Erzeugen freigegeben (nicht erst mit der Gesamt-PDF zeigen). Jeder eigene Satz über die Person braucht seine `herkunft` (z. B. „über die Ausbildungsmesse“ nur, wenn er das so gesagt hat). **Bewerbungsadresse unbekannt:** nicht raten – Anzeige/Karriereseite/Impressum prüfen lassen oder anrufen. Anleitung (`geraet.md`): neue Mail → Betreff/Text einfügen → PDF anhängen → **Testmail an dich selbst** → senden.
 
 ## 4. Weg B: Online-Formular / Portal
 
 - **Felder vorab erfragen:** „Welche Felder hat das Formular? Mach einen Screenshot der Felder (mit Zeichengrenzen).“ – dann nur diese Texte bauen.
 - Texte vorher als Datei und im Chat (Timeout-Gefahr): `formular[]` mit `feld`, `limit`, `text` → `--nur formular`. Feldtitel stehen als `=== … (max. N Zeichen) ===` darüber.
 - Typische Felder: Über mich, Motivation, Eintrittstermin, Gehalt (nur Spanne, nur wenn gefragt), „Wie sind Sie auf uns aufmerksam geworden?“ – **immer aus seiner Antwort** (`profil.wie_aufmerksam`, in der Profil-Phase gefragt).
+- **Schnellmodus:** Portal-Felder (Gehalt, Eintritt, „Wie aufmerksam“) nur erfragen, wenn wirklich per Formular beworben wird.
 - **Portale, die nach dem Upload alles noch einmal eintippen lassen** (Lebenslauf-Felder, Stationen, Daten): Felder sind oft vorausgefüllt und falsch zugeordnet. Sag das vorher. Gib die Stationen als kurze Liste im Chat (Zeitraum · Titel · Firma · 1 Zeile Tätigkeit) zum Abtippen/Kopieren; Daten exakt wie im Lebenslauf; Pflichtfelder nie mit „siehe Lebenslauf“.
 - Dateien im verlangten Format (meist PDF; getrennt, eine oder Bündel – Abschnitt 2).
 - Am Ende: Screenshot der Bestätigungsseite oder Bestätigungsmail aufheben.
@@ -92,5 +93,6 @@ Mit freundlichen Grüßen
 
 - JSON: `status`, `bewerbungen` (abgeschickt am, Weg, nachfassen am – ohne Gespräch etwa 2–3 Wochen später), dann `akte.py`.
 - **Parallel weiterbewerben** – Ghosting ist häufig (karriere.at, AT 11/2025: 84 % schon ohne Rückmeldung).
-- **Online-Test angekündigt?** Einmal anbieten, 5 Übungsaufgaben zu machen (`assessment_center.md` 4) – als eigene Nachricht, nicht mit der Abschicken-Bestätigung zusammen.
+- **Online-Test angekündigt?** Einmal anbieten, 5 Übungsaufgaben zu machen (`assessment_center.md` 4) – als eigene Nachricht, nicht mit der Abschicken-Bestätigung zusammen. **AC/Auswahltag angekündigt, aber noch keine Einladung:** einmal eine kurze AC-Übersicht anbieten (Zeit bis zum Termin nutzen), sonst „Einladung da → neuer Chat, Akte hochladen“.
+- **Dateien am Handy:** Nach `--einzeln`/`--buendeln`/Gesamt-PDF (mit `--profil`) liegen die Word-Fassungen in `bearbeitbar/` – im Ordner bleibt je Unterlage **eine** Datei zum Hochladen. Die .docx nur auf Wunsch anbieten.
 - Fahrplan (nur, wenn noch nicht gesagt): „Wenn die Einladung kommt: neuer Chat, Akte hochladen, ‚Gespräch üben‘ schreiben.“

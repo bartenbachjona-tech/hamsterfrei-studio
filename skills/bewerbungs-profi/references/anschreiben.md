@@ -27,7 +27,7 @@ Nur fragen, wenn die Anzeige es offenlässt (eine Frage, Empfehlung markieren). 
 ## 2. Aufbau
 
 1. **Betreff:** Stellentitel genau wie in der Anzeige, ggf. Kennziffer, Start.
-2. **Anrede** persönlich; ohne Namen „Sehr geehrte Damen und Herren,“ oder „Guten Tag, liebes …-Team,“. AT: Titel (Mag., Dr.).
+2. **Anrede** persönlich; ohne Namen „Sehr geehrte Damen und Herren,“ oder „Guten Tag, liebes …-Team,“. AT: Titel (Mag., Dr.). „Wir duzen uns“ in der Anzeige → trotzdem höflich-neutral; Du nur, wenn die Firma Bewerber ausdrücklich duzt (`sonderfaelle.md`).
 3. **Einstieg ohne Floskel:** stärkster Bezug aus dem Profil (`motivation_beruf`, ein `beispiel`, ein Telefonat).
 4. **Belege statt Behauptungen:** 2–3 Anforderungen aus `ziel.muss`/`schluesselwoerter`, je ein Beispiel aus `profil.beispiele` – mit den Details, die der Nutzer genannt hat, nicht mehr.
 5. **Warum diese Firma:** `motivation_firma` oder ein `firmenfakt` mit `zugestimmt: true`. Fehlt beides: eine Frage stellen – nicht raten, nicht [PRÜFEN] mit eigenem Vorschlag. Keine Kennenlern-Szenen erfinden („Wir haben uns am Stand kennengelernt“) – nur, was er erzählt hat.
@@ -36,7 +36,23 @@ Nur fragen, wenn die Anzeige es offenlässt (eine Frage, Empfehlung markieren). 
 8. Gruß, Name. **Anlagen-Zeile baut das Skript** aus `profil.anlagen` (nur vorhandene Dateien) – nicht von Hand schreiben. Zeugnisse darum **vor** dem Anschreiben einsammeln (Profil-Frage). Kommen sie später, zieht `pdf_zusammenfuegen.py --profil` die Zeile automatisch nach.
    **Kurzanschreiben: ohne Anlagen-Zeile** (es steht im Portal/in der Mail neben den Dateien). Erzwingen mit `anschreiben.anlagen_zeile: true`, unterdrücken beim vollen Anschreiben mit `false`.
 
-## 3. Sprache: echt statt KI-glatt
+## 3. Sprache: Fakten wörtlich, Formulierung frei (v5)
+
+**Standarddeutsch ist Pflicht.** Du formulierst wie ein guter Bewerbungscoach – vollständige Sätze, richtige Rechtschreibung, keine Umgangssprache, keine Chat-Kürzel. Was du **nicht** änderst: die Fakten. Beispiele aus Tests:
+
+| Nutzer sagt | Im Anschreiben |
+|---|---|
+| „sag dem schichtleiter bescheid“ | „informiere den Schichtleiter“ |
+| „ich find es cool wie die ware vom lager in den laden kommt“ | „Mich interessiert, wie Waren vom Lager in den Laden gelangen.“ |
+| „15 min mit der ubahn“ | „mit der U-Bahn in 15 Minuten erreichbar“ |
+| „total sauer“, „bevor die raus is“, „Kumpel“ | „verärgert“, „bevor sie den Betrieb verlassen hat“, „ein Bekannter“ |
+| „kommisioniert“, „frühstens“, „kfz mechatroniker“ | „kommissioniert“, „frühestens“, „Kfz-Mechatroniker“ |
+| „Dienstplan für 12 Leute gemacht“ | „den Dienstplan für zwölf Mitarbeitende erstellt“ |
+| „b manchmal“ (Preise verhandelt) | „gelegentlich Preise verhandelt“ (Einschränkung bleibt) |
+
+Nicht erlaubt (das ist keine Umformulierung, sondern eine neue Behauptung): „gut“ → „sehr gut“, „cool“ → „begeistert mich schon immer“, „Leute“ → „Kollegen eingearbeitet“, „Kasse“ → „Kassenverantwortung“, eine Häufigkeit dazudichten („täglich“, „jede Woche“).
+
+### Echt statt KI-glatt
 
 Laut Stepstone (06/2025) finden 73 % der Recruiter KI-Bewerbungen weniger authentisch, 75 % sehen oft übertriebene Qualifikationen. Darum:
 - Motivation, Gefühle, Eigenschaften, Häufigkeiten **nur aus dem Wortlaut** – jeder Satz bekommt beim Entwurf seinen `herkunft`-Eintrag (`profil_json.md` 5). Typische Erfindungen aus Tests: „täglich“, „lerne neue Programme schnell“, „passt zu mir“, „ist mir wichtig“, „finde ich spannend“ (wenn er es nicht sagte), „schwer tragen bin ich gewohnt“, „Privat habe ich …“, Gegenmaßnahmen zu Schwächen. Fehlt die Basis: **nicht schreiben, sondern fragen.**
@@ -53,10 +69,10 @@ Laut Stepstone (06/2025) finden 73 % der Recruiter KI-Bewerbungen weniger authen
 > Sehr geehrte Frau Sommer,
 > seit September 2025 mache ich an der Kasse eines Supermarkts die Abrechnung am Schichtende selbst. Dabei habe ich gemerkt, wie gern ich Zahlen sauber abschließe.
 > In Ihrer Anzeige nennen Sie Sorgfalt und Teamarbeit. Im Praktikum im Steuerbüro habe ich Belege sortiert und erfasst. In der Schülerfirma haben wir zu fünft einen Verkaufsstand geplant; ich habe die Kasse übernommen.
-> Mich spricht an, dass Azubis bei Ihnen eigene Projekte betreuen.
+> Laut Ihrer Karriereseite betreuen Auszubildende bei Ihnen eigene Projekte.
 > Ich freue mich auf ein persönliches Gespräch.
 
-Der Firmen-Satz steht nur drin, weil die Nutzerin vorher gefragt wurde: „Laut Ihrer Karriereseite (beispiel.de/karriere) betreuen Azubis eigene Projekte – soll das rein?“ → Ja.
+Der Firmen-Satz steht nur drin, weil die Nutzerin vorher gefragt wurde: „Laut Ihrer Karriereseite (beispiel.de/karriere) betreuen Azubis eigene Projekte – soll das rein?“ → Ja. „Mich spricht an, dass …“ wäre ein Gefühl – das schreibst du nur, wenn sie es so gesagt hat.
 
 Danach höchstens 1–2 Sätze, warum der Text so gebaut ist (nicht im Kurzpfad).
 
@@ -66,14 +82,16 @@ Danach höchstens 1–2 Sätze, warum der Text so gebaut ist (nicht im Kurzpfad)
 2. **Im Chat zeigen** (Codeblock zum Kopieren) – **noch keine Datei**. Darunter die **Woher-Liste** aus der `--woher`-Ausgabe, kompakt (eine Zeile je Satz über die Person, Satzanfang → seine Worte):
    ```
    Woher:
-   – „Seit September 2025 mache…“ → deine Worte: „seit 09/2025 … abrechnung selbst“ (Nr. 3)
-   – „In der Schülerfirma haben wir…“ → deine Worte: „zu fünft einen verkaufsstand geplant“ (Nr. 7)
+   – „Seit September 2025 mache…“ → deine Worte: „seit 09/2025 … abrechnung selbst“
+   – „In der Schülerfirma haben wir…“ → deine Worte: „zu fünft einen verkaufsstand geplant“
    – „In Ihrer Anzeige nennen Sie…“ → Anzeige: „Sorgfalt, Teamarbeit“
    ```
-   Am Handy höchstens 6 Zeilen; bei mehr Sätzen die Liste als Codeblock. Dann: „Passt das so? a) Ja, PDF erstellen b) Ändern: …“ – **kein** Angebot und kein Chatwechsel in derselben Nachricht.
+   Am Handy höchstens 6 Zeilen; bei mehr Sätzen die Liste als Codeblock. **Keine internen Nummern** („Nr. 7“) zeigen. Dann: „Passt das so? a) Ja, PDF erstellen b) Ändern: …“ – **kein** Angebot und kein Chatwechsel in derselben Nachricht.
 3. Nach dem Ja **einmal**: `python3 "$S/unterlagen_erstellen.py" /tmp/bewerbung/profil.json --nur anschreiben [--nur-pdf]` → `Anschreiben_…_AKTUELL.pdf` (bzw. `Motivationsschreiben_…`, `Kurzanschreiben_…`).
 4. `fakten_check.py profil.json <Datei>` (Abgleich: Datei = freigegebener Text) + `endcheck.py <Datei> --typ anschreiben|kurzanschreiben|motivationsschreiben --profil profil.json`.
 5. Formular-/Mail-/WhatsApp-Text genauso: erst im Chat, nach dem Ja `--nur formular` / `--nur email` / `--nur whatsapp` → `.txt`. Steht „max. N Zeichen“ (auch „1.000“) schon im Feldnamen, hängt das Skript es nicht doppelt an. Firmenname/Stellentitel sind dort **nicht** Pflicht – keine hölzernen Sätze einbauen.
+
+**Änderungswunsch** („der Satz hängt da so“, „cool ist zu locker“): Stil-Wünsche setzt du direkt um – kein Auswahlmenü, keine Rückfrage, solange die Fakten gleich bleiben. Was du zusagst, kommt sofort in `meta.offene_aenderungen` und wird vor dem Erzeugen abgehakt (`bewerbungsakte.md`).
 
 ## 6. Motivationsschreiben (Studium, duales Studium)
 

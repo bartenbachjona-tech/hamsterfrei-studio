@@ -14,17 +14,24 @@ nicht in Formularfeldern, E-Mail oder WhatsApp (dort nur Warnung bei fremden Fir
 whatsapp = kurze Nachricht: 2–6 Sätze, Gruß + voller Name, keine Emoji-Ketten, Lebenslauf als PDF erwähnt.
 --profil liefert Name, Firma, Stelle und frühere Arbeitgeber/Schulen (die sind kein Copy-and-paste-Rest).
 
+v5 Stil-Check (alle Text-Typen): Umgangssprache („nix“, „mega“, „Kumpel“, „Ubahn“), Chat-Kürzel („vlt“, „lol“),
+Tippfehler (Liste + Abgleich mit der Anzeige: „kommisioniert“ ↔ „Kommissionieren“), „Sa und So“/„Mo-Fr“, doppelte
+Wörter, wiederholte Satzteile → ⚠️ mit Standard-Vorschlag. Unterlagen stehen in Standarddeutsch.
+Mit --profil zusätzlich: Lebenslauf-Zeitraum zu lang für die Datumsspalte, Enddatum in der Zukunft ohne „voraussichtlich“.
+
 Prüft u. a.: offene [PRÜFEN], Platzhalter, Floskeln, Konjunktiv, Länge, Seiten, Firmenname
 (unscharf, ohne Rechtsform), ganze Stellenbezeichnung, fremde Firmennamen, Anrede, ATS-Layout,
 E-Mail-Adresse (nur echte Probleme), Formular-Felder mit Zeichenlimit, Dateiname, Größe.
 ❌ = vor dem Abschicken beheben, ⚠️ = prüfen, ✅ = in Ordnung. Exit-Code 1 bei ❌.
 """
+import datetime
 import os
 import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import textlib  # noqa: E402
+import sprachlib  # noqa: E402
 
 MAX_MB = 5
 ANSCHR_MAX_WORTE = 420
@@ -62,7 +69,9 @@ MAIL_PROBLEM = ["party", "sexy", "hot", "cool", "gangster", "babe", "baby", "mau
                 "engel", "teufel", "bad", "xx", "420", "1337", "69", "drunk", "beer", "bier", "bitch", "thug", "ninja"]
 FELD_KOPF = re.compile(r"^===\s*(.+?)\s*(?:\(max\.?\s*(\d{1,3}(?:[.\s]\d{3})+|\d+)\s*Zeichen\))?\s*===\s*$", re.M)
 STELLE_META = {"start", "beginn", "ab", "bis", "zum", "jahr", "befristet", "unbefristet", "vollzeit", "teilzeit", "standort",
-               "kennziffer", "stellen", "plaetze", "platz", "minijob", "basis", "deutschlandweit", "remote", "hybrid"}
+               "kennziffer", "stellen", "plaetze", "platz", "minijob", "basis", "deutschlandweit", "remote", "hybrid",
+               "quereinstieg", "quereinsteiger", "quereinsteigerin", "wiedereinstieg", "wiedereinsteiger", "sommersemester",
+               "wintersemester", "sose", "wise", "ref", "referenznummer"}
 
 
 def kern_firma(s):
@@ -125,6 +134,9 @@ def profil_infos(pfad):
         for x in e.get("eintraege", []):
             eigene.append(x.get("ort", ""))
     return {"name": (d.get("person") or {}).get("name", ""), "firma": (d.get("ziel") or {}).get("firma", ""),
+            "anzeige": (d.get("ziel") or {}).get("anzeige_text", ""),
+            "zeitraeume": [e.get("zeitraum", "") for ab in ((d.get("lebenslauf") or {}).get("abschnitte") or [])
+                           for e in ab.get("eintraege", [])],
             "stelle": (d.get("ziel") or {}).get("stelle", ""), "eigene": [e for e in eigene if e],
             "variante": (d.get("ziel") or {}).get("anschreiben_variante", ""),
             "bewerbungsweg": (d.get("ziel") or {}).get("bewerbungsweg", "")}
@@ -276,8 +288,9 @@ def pruefe(pfad, typ=None, firma=None, stelle=None, info=None):
     if art in BRIEF:
         worte = len(textlib.words(txt))
         if art == "kurzanschreiben":
-            if worte < KURZ_MIN - 30 or worte > KURZ_MAX + 40:
-                add("⚠️", f"{worte} Wörter – Kurzanschreiben hat meist {KURZ_MIN}–{KURZ_MAX}.")
+            rumpf = len(textlib.words(re.sub(r"(?is)^.*?(sehr geehrte|guten tag|hallo|liebe[sr]? )", r"\1", txt)))
+            if rumpf < KURZ_MIN or rumpf > KURZ_MAX:     # Text ab der Anrede (Kopf/Adressen zählen nicht)
+                add("⚠️", f"{rumpf} Wörter ab der Anrede – Kurzanschreiben: {KURZ_MIN}–{KURZ_MAX} Wörter.")
             else:
                 add("✅", f"{worte} Wörter – passt als Kurzanschreiben.")
         elif worte > ANSCHR_MAX_WORTE:
@@ -332,7 +345,18 @@ def pruefe(pfad, typ=None, firma=None, stelle=None, info=None):
             add("⚠️", f"E-Mail hat {worte} Wörter – in der Mail reichen 3–5 Sätze (das Anschreiben hängt als PDF an).")
         if not re.search(r"(sehr geehrte|guten tag|hallo|liebe[sr]? )", low):
             add("⚠️", "E-Mail ohne Anrede.")
+    if art in BRIEF + ("formular", "email", "whatsapp", "lebenslauf"):
+        for msg, vorschlag in sprachlib.stil_befunde(txt, referenz=[info.get("anzeige", "")], lebenslauf=(art == "lebenslauf")):
+            add("⚠️", f"Stil: {msg} → {vorschlag}")
     if art == "lebenslauf":
+        for zr in info.get("zeitraeume") or []:
+            if len(zr) > 17:
+                add("⚠️", f"Zeitraum „{zr}“ ist zu lang für die Datumsspalte (max. ~17 Zeichen) – kürzen; der Rest gehört "
+                          "unter den Titel (unterlagen_erstellen.py setzt ihn als Notiz darunter).")
+            for mo, jahr in re.findall(r"(?:–|-|bis)\s*(\d{1,2})/(\d{4})", zr):
+                if (int(jahr), int(mo)) > (datetime.date.today().year, datetime.date.today().month) and \
+                        not re.search(r"voraussichtlich|geplant|bis vorauss", zr, re.I):
+                    add("⚠️", f"Enddatum {mo}/{jahr} liegt in der Zukunft – „voraussichtlich“ davor schreiben oder „seit …“.")
         if "€" in txt:
             add("⚠️", "„€“ gefunden – für ATS besser „EUR“ schreiben.")
         if not STANDARD_UEBERSCHRIFTEN.search(txt):

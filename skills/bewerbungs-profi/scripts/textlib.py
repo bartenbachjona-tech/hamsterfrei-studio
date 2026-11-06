@@ -115,9 +115,12 @@ def neue_version(ordner, basis, ext, mitziehen=(".docx", ".pdf")):
                 os.makedirs(alt, exist_ok=True)
                 if not os.path.exists(os.path.join(alt, os.path.basename(p))):
                     shutil.move(p, os.path.join(alt, os.path.basename(p)))
-    # bisherige AKTUELL-Fassung → alt/basis_vN
+    # bisherige AKTUELL-Fassung → alt/basis_vN (auch die Word-Fassung in bearbeitbar/, v5)
     verschoben = False
     for e in exts:
+        bp = os.path.join(ordner, "bearbeitbar", f"{basis}_{AKTUELL}{e}")
+        if os.path.exists(bp) and not os.path.exists(os.path.join(ordner, f"{basis}_{AKTUELL}{e}")):
+            shutil.move(bp, os.path.join(ordner, f"{basis}_{AKTUELL}{e}"))
         p = os.path.join(ordner, f"{basis}_{AKTUELL}{e}")
         if os.path.exists(p):
             os.makedirs(alt, exist_ok=True)
@@ -335,8 +338,80 @@ def _ein_fehler(a, b):
     return any(l[:i] + l[i + 1:] == k for i in range(len(l)))
 
 
+# ---------------------------------------------------------------- Satztrenner (v5, gemeinsam für herkunft/fakten_check/akte)
+ABKUERZUNGEN = ["z. B.", "z.B.", "u. a.", "u.a.", "d. h.", "d.h.", "o. ä.", "o.ä.", "i. d. R.", "e. V.", "e.V.", "s. o.",
+                "Dr.", "Prof.", "Dipl.", "Ing.", "St.", "Str.", "Nr.", "ca.", "bzw.", "ggf.", "inkl.", "evtl.", "usw.",
+                "vgl.", "Tel.", "Std.", "Min.", "max.", "min.", "mind.", "Abt.", "Co.", "Kl.", "Hr.", "Fr.", "Mo.", "Di.",
+                "Mi.", "Do.", "Sa.", "So.", "Jan.", "Feb.", "Mär.", "Apr.", "Jun.", "Jul.", "Aug.", "Sep.", "Sept.",
+                "Okt.", "Nov.", "Dez.", "geb.", "gem.", "jun.", "sen.", "Mag.", "lt.", "zzgl.", "u. v. m.", "etc.", "allg.",
+                "Bsp.", "bspw.", "Hbf.", "Pl.", "Tsd.", "Mio.", "Mrd.", "rd.", "sog.", "v. a.", "z. T.", "z.T."]
+ORDINAL_NOMEN = (r"(Klasse|Klassen|Semester|Ausbildungsjahr|Ausbildungsjahres|Lehrjahr|Lehrjahres|Schuljahr|Jahr|Jahres|"
+                 r"Monat|Woche|Stock|Etage|Obergeschoss|OG|Platz|Rang|Staffel|Liga|Hälfte|Quartal|Mal|Tag|Lebensjahr|"
+                 r"Fachsemester|Stunde|Bundesliga|Kreisliga|Bezirksliga|Januar|Februar|März|April|Mai|Juni|Juli|August|"
+                 r"September|Oktober|November|Dezember)\b")
+_SCHUTZ = "⁣"   # unsichtbarer Platzhalter für geschützte Punkte
+
+
+def saetze(text, pro_zeile=True):
+    """Text → Sätze. Punkte in Ordinalzahlen („5. Semester“, „1. Februar“, „12. Klasse“), Abkürzungen („Dr.“, „z. B.“,
+    „Str.“), Daten („01.02.2027“), Uhrzeiten und Raumnummern („Raum 2.14“) beenden keinen Satz.
+    pro_zeile=True: Zeilenumbruch beendet immer einen Satz (Unterlagen werden zeilenweise geprüft)."""
+    out = []
+    bloecke = (text or "").splitlines() if pro_zeile else [re.sub(r"\s*\n\s*", " ", text or "")]
+    for z in bloecke:
+        z = z.strip()
+        if not z:
+            continue
+        g = z
+        for a in sorted(ABKUERZUNGEN, key=len, reverse=True):
+            g = re.sub(r"(?<![\wÄÖÜäöüß])" + re.escape(a).replace(r"\ ", r"\s?"),
+                       lambda m: m.group(0).replace(".", _SCHUTZ), g)
+        g = re.sub(r"\b(\d{1,2})\.(?=\s*(?:\d|" + ORDINAL_NOMEN + r"))", r"\1" + _SCHUTZ, g)    # 5. Semester, 1. Februar
+        g = re.sub(r"\b(\d{1,2})\.(?=\s+[a-zäöüß])", r"\1" + _SCHUTZ, g)                         # zum 1. des Monats
+        g = re.sub(r"(\d)\.(?=\d)", r"\1" + _SCHUTZ, g)                                          # 01.02.2027, 2.14
+        for s in re.split(r"(?<=[.!?…])[\"“”']?\s+(?=[A-ZÄÖÜ0-9„\"])", g):
+            s = s.replace(_SCHUTZ, ".").strip()
+            if s:
+                out.append(s)
+    return out
+
+
 # ---------------------------------------------------------------- Wortlaut (v3)
 JA_RE = re.compile(r"^\s*(ja|jap|jep|jo|joa|yes|genau|stimmt|passt|richtig|korrekt|ok|okay|jawohl|klar|👍)", re.I)
+OPTION_A_RE = re.compile(r"^\s*(?:\d{1,2}\s*)?\(?a\)?(?:[.,!)]|\s|$)(?!\s*(?:und|,|\+|&)\s*[b-f]\b)", re.I)
+
+
+def ist_ja(e):
+    """Klares Ja? „ja“, „genau“, „👍“ – und v5: „a“, „1a“, „a passt“, wenn Option a „Ja“ ist (oder die Frage keine
+    Optionen nennt und ein Wert bestätigt werden sollte)."""
+    a = (e.get("antwort") or "").strip()
+    if JA_RE.match(a):
+        return True
+    if OPTION_A_RE.match(a):
+        opt = str((e.get("optionen") or {}).get("a", "")).lower()
+        frage = (e.get("frage") or "").lower()
+        if opt.startswith("ja") or re.search(r"a\)\s*ja\b", frage):
+            return True
+        if not opt and not re.search(r"\ba\)", frage) and e.get("bestaetigt"):
+            return True
+    return False
+
+
+def bestaetigte_werte(e):
+    """Bestätigte Werte einer Antwort (Liste oder „Juli 2025; Juli 2023“) – nur bei klarem Ja und wenn die Teile des
+    Werts in der Frage standen (Wortreihenfolge egal: „Deutsch Muttersprache“ ↔ „Deutsch ist deine Muttersprache“)."""
+    b = e.get("bestaetigt")
+    if not b or not ist_ja(e):
+        return []
+    werte = b if isinstance(b, list) else re.split(r"\s*[;|]\s*", str(b))
+    frage = translit((e.get("frage") or "").lower())
+    fw = set(re.findall(r"[a-z0-9]+", frage))
+    out = []
+    for w in werte:
+        tw = [t for t in re.findall(r"[a-z0-9]+", translit(str(w).lower())) if len(t) >= 2 or t.isdigit()]
+        if not frage.strip() or not tw or all(t in fw or t in frage for t in tw):
+            out.append(str(w))
+    return out
 
 
 def rohtext_eintraege(d):
@@ -376,14 +451,16 @@ def wortlaut(d):
         if e.get("sensibel"):
             continue          # sensible Details (Todesfall, Diagnose …) sind kein Beleg für Unterlagen
         teile.append(normalisiere_nutzertext(e["antwort"]))
-        gewaehlt = set(re.findall(r"(?<![\w])([a-f])(?![\w])", e["antwort"].lower()))
-        for k, v in (e.get("optionen") or {}).items():
-            if str(k).lower() in gewaehlt:
-                teile.append(str(v))
-        b = e.get("bestaetigt") or ""
-        if b and JA_RE.match(e["antwort"]) and translit(b.lower()) in translit((e.get("frage") or "").lower()):
-            teile.append(b)
+        teile += gewaehlte_optionen(e)
+        teile += bestaetigte_werte(e)
     return teile
+
+
+def gewaehlte_optionen(e):
+    """Text der gewählten Optionen („a und c“, „1b“, „b, und …“) – nicht „a) Ja“ selbst."""
+    gewaehlt = set(re.findall(r"(?<![\wäöüß])([a-f])(?![\wäöüß])", (e.get("antwort") or "").lower()))
+    return [str(v) for k, v in (e.get("optionen") or {}).items()
+            if str(k).lower() in gewaehlt and not re.match(r"\s*(ja|nein)\b", str(v), re.I)]
 
 
 def upload_texte(d, extra=()):

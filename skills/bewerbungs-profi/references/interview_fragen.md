@@ -20,7 +20,8 @@ Ziel: alle Fakten für die Unterlagen **vom Nutzer**, in die Profil-JSON (`profi
 - **Schon gesagt** (erste Nachricht, Kurzweg-Berufstest, Nebenbei-Antwort, „👍“, „passt“) → Frage gar nicht erst einplanen (Y ohne sie).
 - Nie nach Ausweis, Steuer-ID, SV- oder Kontonummer fragen.
 
-Einmal sagen: „Jetzt kommen ca. 10 kurze Fragen (Minijob: 5). Stichworte reichen. ‚Weiß nicht‘ ist okay.“ Ungeduldige oder knappe Nutzer: **anbieten**, die restlichen Fragen als Liste auf einmal zu schicken (höchstens 5, nummeriert, Antwort „1 … 2 …“) – erst auf sein Ja.
+Einmal sagen: „Jetzt kommen ca. 10 kurze Fragen (Minijob: 5). Stichworte reichen. ‚Weiß nicht‘ ist okay.“ **Ungeduldige oder knappe Nutzer** („schnell bitte“, Ein-Wort-Antworten): die nächsten Fragen **direkt als Liste** schicken (höchstens 5, nummeriert, Antwort „1 … 2 …“) – nicht erst fragen, ob er eine Liste will (kostet eine Runde).
+**Ehrlich zählen:** Nie „nur noch eine Frage“ sagen, wenn danach noch eine kommt (Test 423: Abbruch). Reicht eine Antwort nicht für den Text (z. B. Motivationsschreiben aus „test hat das gesagt“), **sag es offen und gleich mit der Zahl**: „Damit wird das Motivationsschreiben dünn. 2 kurze Fragen noch, dann schreibe ich es – okay?“
 
 ## 2. Format und Zählung
 
@@ -45,10 +46,10 @@ Beispiele: „Englisch B1, Türkisch Muttersprache“ · „Excel Grundlagen, Ca
 
 | Nr | Frage (ein Thema) | Beispiele | → JSON |
 |---|---|---|---|
-| 1 | **Kontaktdaten** als Block (Name zuerst – dann heißt die Akte richtig) | „Lena Muster, Musterweg 1, 85049 Ingolstadt, 0151 …, lena.muster@…“ | person |
+| 1 | **Kontaktdaten** als Block: Name, Adresse, Handy **und E-Mail** | „Lena Muster, Musterweg 1, 85049 Ingolstadt, 0151 …, lena.muster@…“ | person |
 | 2 | **Schule/Abschluss**: höchster (oder laufender) mit Monat/Jahr, Schule | „Realschule Ingolstadt, Mittlere Reife 07/2026“ | profil.bildung |
 | 3 | **Stationen**: Jobs, Praktika, Ehrenamt, Verein – je mit Monat/Jahr und was du gemacht hast | „Minijob Kasse seit 09/2025, abends abgerechnet“ | profil.stationen |
-| 4 | **Kenntnisse**: Sprachen mit Niveau, Programme, Scheine/Zertifikate | „Englisch B1, Excel, Staplerschein“ | sprachen, edv, zertifikate |
+| 4 | **Kenntnisse**: Sprachen mit Niveau **inkl. Muttersprache**, Programme, Scheine/Zertifikate | „Deutsch Muttersprache, Englisch B1, Excel, Staplerschein“ | sprachen, edv, zertifikate |
 | 5 | **Warum dieser Beruf?** ein echter Grund | „Ich mag Zahlen“ | motivation_beruf |
 | 6 | **Warum diese Firma?** ein Grund | „nah dran“, „bilden viel aus“ | motivation_firma |
 | 7 | **Ein Beispiel für [Soft Skill aus der Anzeige]**: was war los, was hast *du* getan, was kam raus? | „Schülerfirma, zu fünft Stand geplant, ich Kasse“ | profil.beispiele |
@@ -57,6 +58,7 @@ Beispiele: „Englisch B1, Türkisch Muttersprache“ · „Excel Grundlagen, Ca
 | 10 | **Zeugnisse jetzt hochladen** (die die Anzeige verlangt; Handy: Scan-App) – damit die Anlagen-Zeile gleich stimmt | „Zeugnis 10. Klasse“ | profil.anlagen |
 | (11) | **Foto?** a) ja, habe eins b) nein · **Hobbys** – nur wenn sinnvoll, sonst weglassen | | rahmen.foto, hobbys |
 
+**Sprachen nie ergänzen:** „Deutsch (Muttersprache)“ steht nur im Lebenslauf, wenn er es gesagt hat – sonst fragt Frage 4 danach (fakten_check meldet ❌ „Sprache nicht genannt“).
 Nur bei Bedarf (zählt in Y): **Note** (wenn verlangt oder gut) · **Lücke** > 3 Monate (als Nachfrage) · **Führerschein** (nur wenn Anzeige/Beruf ihn braucht) · **Gehaltsvorstellung** (nur wenn verlangt). Foto: freiwillig (AGG), in AT/CH üblicher.
 
 ## 4. Anpassen nach Ziel
@@ -77,6 +79,7 @@ Nur bei Bedarf (zählt in Y): **Note** (wenn verlangt oder gut) · **Lücke** > 
 - **„Keine Erfahrung“:** nach Schule, Verein, Familie, Hobby, Nachbarschaftshilfe fragen.
 - **Unklare Daten** (Monat, Niveau, Ergebnis): **eine** Nachfrage mit **einem** konkreten Vorschlag – bei Monaten **Monat + Jahr** („Juni 2026?“, nicht nur „Juni?“) – sonst so lassen, wie gesagt („seit 2023“), oder [PRÜFEN: Monat?]. Nie selbst einen Monat ergänzen.
 - **Unsichere Antworten** („glaub schon“, „b2 glaub ich“) oder **zurückgeschickte Beispielwerte**: eine Ja/Nein-Rückfrage, dann `geklaert: true` (`profil_json.md` 2).
+- **Antwort „a“/„1a“/„a passt“ auf „a) Ja b) Nein“ = Ja** (Skript erkennt das). Mehrere Werte in einer Bestätigung gehen als Liste (`"bestaetigt": ["Juli 2025", "Juli 2023"]`).
 - **Knappe Nutzer:** Nachfragen mit **einem** Wert und Auswahl („Was hast du bei Edeka gemacht? a) Kasse b) Regale c) anderes“) statt offener Mehrfachfragen.
 - **Übertreibungen bremsen:** aus „Kasse gemacht“ wird keine „Filialverantwortung“. Kurz begründen (Gespräch, § 123 BGB).
 - **Gefälschtes** (Zeugnis, Abschluss, Referenz): freundlich ablehnen, Alternative nennen.

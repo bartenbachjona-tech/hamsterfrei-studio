@@ -10,7 +10,7 @@ python3 "$S/akte.py" /tmp/bewerbung/profil.json
 → `/mnt/user-data/outputs/Bewerbungsakte_Vorname_Nachname_JJJJ-MM-TT_HHMMSS.txt` (Sekunden + ggf. Laufnummer – zwei Akten in derselben Minute heißen verschieden). Ältere Akten wandern nach `alt/`. **Nur .txt** – eine PDF gibt es nur auf Wunsch (`--pdf` → `Akte-Lesefassung_…pdf`; die ist zum Lesen, nicht zum Hochladen). Vorher `meta.phase`, `meta.naechster_schritt`, `status`, `naechste_schritte` aktualisieren – nie die Akte von Hand schreiben.
 
 **Wann:**
-- **früh**, sobald der Name da ist (Profil-Frage 1) – nicht vorher, sonst heißt sie „Name“,
+- **früh** – spätestens nach dem Berufstest-Ergebnis oder Profil-Frage 1. Ohne Namen heißt sie `Bewerbungsakte_JJJJ-MM-TT_HHMMSS.txt`; der Name kommt in die nächste Akte (keine Frage nur dafür vorziehen),
 - nach **jeder Phase** (Steckbrief ok, Profil ok, Lebenslauf ok …),
 - nach **~6 Nutzerantworten** innerhalb einer Phase (Zähler `meta.antworten_seit_akte`; `akte.py` setzt ihn zurück),
 - **nicht mitten in Rollenspiel/Simulation/Übung** – dann direkt nach dem Feedback,
@@ -28,7 +28,7 @@ Ein Satz reicht: „📁 Akte gespeichert: Bewerbungsakte_…_184012.txt – spe
 | Ohne Plan | Berufstest + Stelle finden | Profil + Unterlagen | Abschicken + Gespräch |
 | Einladung da | Bestätigen + Übersicht + Üben | (Runde 2 / AC-Übungen) | – |
 
-`meta.chat_plan` speichern. **Chatwechsel-Hinweis höchstens einmal** pro Chat, an einer echten Etappen-Grenze (z. B. nach dem Profil) – **nie kurz vor einem Ziel** (wenn die Unterlagen in 2–3 Nachrichten fertig wären: erst fertig machen) und nie in derselben Nachricht wie eine Freigabe-Frage. Text: „Starte jetzt einen neuen Chat, lade die Akte (.txt) hoch und schreib ‚Weiter mit meiner Bewerbung‘.“ Minijob/Probearbeiten: in der Regel **ein** Chat, kein Wechsel.
+`meta.chat_plan` speichern. **Chatwechsel-Hinweis nur, wenn nötig** (Chat schon lang – etwa ab 15 Nutzer-Nachrichten oder mehreren Dateien – oder das Limit ist absehbar), höchstens einmal pro Chat, an einer echten Etappen-Grenze – **nie nach Frage 1**, **nie kurz vor einem Ziel** (wenn die Unterlagen in 2–3 Nachrichten fertig wären: erst fertig machen) und nie in derselben Nachricht wie eine Freigabe-Frage. Text: „Starte jetzt einen neuen Chat, lade die Akte (.txt) hoch und schreib ‚Weiter mit meiner Bewerbung‘.“ Minijob/Probearbeiten: in der Regel **ein** Chat, kein Wechsel.
 
 ## Fortsetzung
 
@@ -37,6 +37,10 @@ Ein Satz reicht: „📁 Akte gespeichert: Bewerbungsakte_…_184012.txt – spe
 3. In **2 Zeilen** sagen, wo er steht; nächsten Schritt nennen und **direkt loslegen**.
 4. Fristen oder Nachfass-Daten vorbei? Das zuerst ansprechen.
 5. Alte Akte (v1/v2 ohne Wortlaut): fehlende Fakten **nachfragen**, nicht aus alten Texten ableiten; neue Antworten in `profil.rohtext`. Akte aus v3: vor der nächsten Freigabe `herkunft` für die Texte anlegen.
+
+## Zugesagte Änderungen
+
+Versprichst du eine Änderung („Den Satz stelle ich vor das Beispiel“), trag sie sofort ein: `meta.offene_aenderungen: [{"text": "Organisationstalent-Satz vor das Beispiel", "unterlage": "anschreiben", "erledigt": false}]`. `unterlagen_erstellen.py` bricht ab (Exit 3), solange sie offen ist; die Akte listet sie. Erst einbauen, im Chat zeigen, dann `erledigt: true`.
 
 ## Datenschutz
 

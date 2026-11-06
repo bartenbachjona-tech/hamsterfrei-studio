@@ -19,6 +19,11 @@ Kennziffern im Betreff („DS-BWL-2027-03“) werden nicht am Bindestrich umbroc
 Neue Fassung → alte saubere Upload-Kopien (Lebenslauf_Vorname_Nachname.pdf aus --einzeln) wandern nach alt/.
 Foto (person.foto): schwebend rechts neben dem Kopf, 3,5 × 4,5 cm. Stellen mit [PRÜFEN: …] werden gelb markiert und pro Dokument gezählt.
 Layout: einspaltig, keine Tabellen/Grafiken, Tabstopp, Arial 11, A4 (ATS-lesbar).
+v5: Lücken aus profil.luecken[{zeitraum, bezeichnung}] kommen automatisch (chronologisch) in den Lebenslauf
+(„grund“ bleibt privat und wird nie gedruckt; im_lebenslauf: false lässt sie weg). Zu lange Zeiträume
+(> 17 Zeichen, z. B. „jährlich, zuletzt 03/2026“) werden gekürzt, der Rest steht als Notiz unter dem Titel.
+Enddatum in der Zukunft ohne „voraussichtlich“ → Hinweis. Offene Änderungswünsche (meta.offene_aenderungen ohne
+erledigt: true) → Abbruch (Exit 3), bis sie im Text sind und abgehakt wurden.
 """
 import datetime
 import json
@@ -42,7 +47,7 @@ TYPEN = {"anschreiben": "Anschreiben", "motivationsschreiben": "Motivationsschre
 
 BEISPIEL = {
     "schema": "bewerbungs-profi/3",
-    "meta": {"stand": "06.11.2026", "phase": "4 Lebenslauf", "naechster_schritt": "Lebenslauf freigeben",
+    "meta": {"stand": "06.11.2026", "phase": "4 Lebenslauf", "naechster_schritt": "Lebenslauf freigeben", "offene_aenderungen": [],
              "geraet": "handy", "anrede_form": "du", "modus": "normal", "fragen_gesamt": 10, "antworten_seit_akte": 0,
              "chat_plan": "Chat 1: Stelle + Profil · Chat 2: Unterlagen + Abschicken · Chat 3: Gespräch"},
     "person": {"name": "Lena Muster", "strasse": "Musterweg 1", "plz_ort": "85049 Ingolstadt",
@@ -327,13 +332,76 @@ def notiz(doc, inhalt):
     return p
 
 
+ZR_MAX = 17   # passt bei Arial 11 in die 4-cm-Datumsspalte
+
+
 def zeitraum_aufteilen(z):
-    """[PRÜFEN] im Zeitraum sprengt die 4-cm-Spalte → in der Spalte nur „??“, Notiz darunter."""
+    """[PRÜFEN] im Zeitraum sprengt die 4-cm-Spalte → in der Spalte nur „??“, Notiz darunter.
+    v5: zu langer Zeitraum („jährlich, zuletzt 03/2026“) → kurzer Teil mit Datum in die Spalte, Rest als Notiz."""
     notizen = list(dict.fromkeys(PRUEFEN_RE.findall(z or "")))   # gleiche Notiz nur einmal
-    if not notizen:
-        return z, []
-    kurz = re.sub(r"\s{2,}", " ", PRUEFEN_RE.sub("??", z)).strip()
+    kurz = re.sub(r"\s{2,}", " ", PRUEFEN_RE.sub("??", z or "")).strip() if notizen else (z or "").strip()
+    if len(kurz) > ZR_MAX:
+        teile = [t.strip() for t in kurz.split(",") if t.strip()]
+        passend = [t for t in teile if re.search(r"\d", t) and len(t) <= ZR_MAX]
+        if passend:
+            spalte = passend[-1]
+            rest = ", ".join(t for t in teile if t != spalte)
+        else:
+            m = re.search(r"(seit\s+|bis\s+|ab\s+)?(\d{1,2}/)?\d{4}(\s*[–-]\s*((\d{1,2}/)?\d{4}|heute))?", kurz)
+            spalte, rest = (m.group(0).strip(), kurz) if m and len(m.group(0)) <= ZR_MAX else (kurz[:ZR_MAX - 1] + "…", kurz)
+        notizen = ([rest] if rest else []) + notizen
+        kurz = spalte
     return kurz, notizen
+
+
+def _zr_schluessel(zr):
+    """Sortierschlüssel (Jahr, Monat) aus dem Zeitraum-Anfang; „seit …“/„heute“ zählen als aktuell."""
+    m = re.search(r"(?:(\d{1,2})/)?(\d{4})", zr or "")
+    if not m:
+        return (0, 0)
+    return (int(m.group(2)), int(m.group(1) or 0))
+
+
+def luecken_einfuegen(d, lv, hinweise):
+    """profil.luecken → Lebenslauf (chronologisch in den ersten Erfahrungs-Abschnitt). Gedruckt wird nur
+    „bezeichnung“ (bzw. „lebenslauf_text“/„erklaerung“) – nie „grund“ (privat)."""
+    abschnitte = lv.get("abschnitte") or []
+    if not abschnitte:
+        return
+    vorhanden = {re.sub(r"\s", "", e.get("zeitraum", "")) for ab in abschnitte for e in ab.get("eintraege", [])}
+    for l in (d.get("profil") or {}).get("luecken") or []:
+        if not isinstance(l, dict) or l.get("im_lebenslauf") is False:
+            continue
+        zr = (l.get("zeitraum") or "").strip()
+        text = (l.get("bezeichnung") or l.get("lebenslauf_text") or l.get("erklaerung") or "").strip()
+        if not zr or re.sub(r"\s", "", zr) in vorhanden:
+            continue
+        if not text:
+            hinweise.append(f"Lücke {zr}: keine Bezeichnung für den Lebenslauf (profil.luecken[].bezeichnung, z. B. "
+                            "„Bewerbungsphase“) – der Grund bleibt privat. Nutzer fragen.")
+            continue
+        ziel = next((ab for ab in abschnitte if re.search(r"erfahrung|werdegang|station|praxis|beruf", ab.get("titel", ""), re.I)),
+                    abschnitte[0])
+        eintr = ziel.setdefault("eintraege", [])
+        neu = {"zeitraum": zr, "titel": text, "ort": "", "punkte": []}
+        k = _zr_schluessel(zr)
+        pos = next((i for i, e in enumerate(eintr) if _zr_schluessel(e.get("zeitraum")) < k), len(eintr))
+        eintr.insert(pos, neu)
+        hinweise.append(f"Lücke {zr} als „{text}“ in „{ziel.get('titel', '')}“ eingefügt.")
+
+
+def zeitraum_hinweise(lv, hinweise):
+    heute_ym = (datetime.date.today().year, datetime.date.today().month)
+    for ab in lv.get("abschnitte") or []:
+        for e in ab.get("eintraege", []):
+            zr = e.get("zeitraum", "")
+            if len(zr) > ZR_MAX:
+                hinweise.append(f"Zeitraum „{zr}“ zu lang für die Datumsspalte – gekürzt, Rest steht als Notiz unter "
+                                f"„{e.get('titel', '')}“ (Bild prüfen).")
+            for mo, jahr in re.findall(r"(?:–|-|bis)\s*(\d{1,2})/(\d{4})", zr):
+                if (int(jahr), int(mo)) > heute_ym and not re.search(r"voraussichtlich|geplant", zr + e.get("titel", ""), re.I):
+                    hinweise.append(f"„{zr}“ ({e.get('titel', '')}): Enddatum in der Zukunft – „voraussichtlich“ davor "
+                                    "schreiben (mit dem Nutzer klären).")
 
 
 FOTO_B_CM, FOTO_H_CM = 3.5, 4.5
@@ -388,7 +456,10 @@ def foto_rechts(par, pfad):
 def baue_lebenslauf(d, ordner):
     from docx.enum.text import WD_ALIGN_PARAGRAPH
     from docx.shared import Cm, Pt
-    pers, lv = d.get("person", {}), d.get("lebenslauf", {})
+    pers, lv = d.get("person", {}), json.loads(json.dumps(d.get("lebenslauf", {})))
+    hinweise = []
+    luecken_einfuegen(d, lv, hinweise)
+    zeitraum_hinweise(lv, hinweise)
     name = pers.get("name", "").strip()
     doc = neues_dokument("Lebenslauf " + name, name)
     pruefen = 0
@@ -440,7 +511,7 @@ def baue_lebenslauf(d, ordner):
     pfad, n = textlib.neue_version(ordner, "Lebenslauf_" + textlib.name_teile(name), ".docx")
     doc.save(pfad)
     textlib.versandkopien_weg(ordner, "Lebenslauf", textlib.name_teile(name))
-    return pfad, pruefen
+    return pfad, pruefen, hinweise
 
 
 # ---------------------------------------------------------------- Anlagen
@@ -624,11 +695,20 @@ def main():
     if not d.get("person", {}).get("name"):
         sys.exit("FEHLER: person.name fehlt – ohne Namen kann ich keine Unterlagen bauen.")
     nur_pdf, kein_pdf = "--nur-pdf" in a, "--kein-pdf" in a
+    offen = [aw for aw in (d.get("meta") or {}).get("offene_aenderungen") or []
+             if isinstance(aw, dict) and not aw.get("erledigt") and (nur is None or aw.get("unterlage") in (None, "", nur))]
+    if offen:
+        print("❌ Zugesagte Änderungen noch offen – erst in den Text einbauen, dem Nutzer zeigen, dann in "
+              "meta.offene_aenderungen „erledigt: true“ setzen:")
+        for aw in offen:
+            print(f"   – {aw.get('text', '')}" + (f" ({aw['unterlage']})" if aw.get("unterlage") else ""))
+        sys.exit(3)
     erstellt, warn = [], []          # (pfad, pruefen, ist_docx)
     if nur in (None, "lebenslauf") and d.get("lebenslauf", {}).get("abschnitte"):
         ensure_docx()
-        p, n = baue_lebenslauf(d, ordner)
+        p, n, h = baue_lebenslauf(d, ordner)
         erstellt.append((p, n, True))
+        warn += h
     if nur in (None, "anschreiben"):
         if d.get("anschreiben", {}).get("absaetze"):
             ensure_docx()

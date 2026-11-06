@@ -90,6 +90,9 @@ def lesbar(d):
         out.append("Lebenslauf und Anschreiben baut Claude aus dieser Akte neu – die musst du nicht hochladen.")
         out.append("")
     out += [f"Stand: {jetzt}", zeile("Phase", m.get("phase")), zeile("Nächster Schritt", m.get("naechster_schritt"))]
+    offen_aw = [a.get("text", "") for a in (m.get("offene_aenderungen") or []) if isinstance(a, dict) and not a.get("erledigt")]
+    if offen_aw:
+        out.append("Zugesagte Änderungen (noch offen): " + "; ".join(offen_aw))
     zeile_wenn(out, "Fahrplan", m.get("chat_plan"))
     zeile_wenn(out, "Gerät", m.get("geraet"))
     out += ["", LINIE, "ZIEL", LINIE]
@@ -195,9 +198,10 @@ def alte_wegraeumen(ordner, praefixe):
 
 def schreibe_akte(d, ordner, pdf=False):
     os.makedirs(ordner, exist_ok=True)
-    name = textlib.name_teile((d.get("person") or {}).get("name", "")) or "Name"
-    praefix = f"Bewerbungsakte_{name}"
-    lese = f"Akte-Lesefassung_{name}"
+    roh_name = ((d.get("person") or {}).get("name") or "").strip()
+    name = textlib.name_teile(roh_name) if roh_name else ""
+    praefix = f"Bewerbungsakte_{name}" if name else "Bewerbungsakte"      # v5: Akte schon vor dem Namen (z. B. nach dem Berufstest)
+    lese = f"Akte-Lesefassung_{name}" if name else "Akte-Lesefassung"
     alte_wegraeumen(ordner, (praefix, lese))
     stempel = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
     pfad, n = os.path.join(ordner, f"{praefix}_{stempel}.txt"), 2
@@ -338,10 +342,15 @@ def ac_typ(u):
 
 
 def einladung_minuten(text, schl=r"vorstell|präsent|praesent|stell\w* (dich|sich)|über (dich|sich)|warum ich|selbst"):
-    """Vorstellungsdauer aus der Einladung („Kurzpräsentation (3 Min.)“, „stellen Sie sich 5 Minuten vor“)."""
-    for satz in re.split(r"(?<=[.!?])\s+(?=[A-ZÄÖÜ])|\n", text or ""):   # „(ca. 5 Minuten)“ nicht zerschneiden
-        if re.search(schl, satz, re.I):
-            m = re.search(r"(\d{1,2})\s*(?:[-–]|bis)\s*(\d{1,2})\s*(?:min|minuten)\b|(\d{1,2})\s*(?:min|minuten)\b", satz, re.I)
+    """Vorstellungsdauer aus der Einladung („Kurzpräsentation (3 Min.)“, „stellen Sie sich 5 Minuten vor“).
+    v5: je Übung getrennt (Komma/Semikolon/Gedankenstrich) – „Gruppenübung (30 Min.)“ ist keine Vorstellungsdauer."""
+    minuten = r"(\d{1,2})\s*(?:[-–]|bis)\s*(\d{1,2})\s*(?:min\.?|minuten)(?![a-zäöü])|(\d{1,2})\s*(?:min\.?|minuten)(?![a-zäöü])"
+    for satz in textlib.saetze(text or ""):
+        for teil in re.split(r"(?<!\d),(?!\d)|;|\s[–—]\s|\bsowie\b|\bund (?=[A-ZÄÖÜ])", satz):
+            k = re.search(schl, teil, re.I)
+            if not k:
+                continue
+            m = re.search(minuten, teil[k.start():], re.I) or re.search(minuten, teil, re.I)
             if m:
                 return f"{m.group(1)}–{m.group(2)}" if m.group(1) else m.group(3)
     return None
@@ -357,7 +366,7 @@ def sauber(liste):
         t = x if isinstance(x, str) else (x.get("frage") or x.get("text") or "")
         if isinstance(x, dict) and x.get("gewaehlt") is False:
             continue
-        t = re.sub(r"^\s*(?:\d{1,2}[.)]|[•\-–·])\s+", "", (t or "").strip())   # eigene Nummerierung weg (Aufzählung macht das Skript)
+        t = re.sub(r"^\s*(?:[1-9][.)](?!\s*" + textlib.ORDINAL_NOMEN + r")|[•\-–·])\s+", "", (t or "").strip())   # eigene Nummerierung weg, „12. Klasse“ bleibt
         if t and not INTERN_RE.search(t):
             out.append(t)
     return out
@@ -431,9 +440,11 @@ def spickzettel_daten(d):
     if sf:
         teile.append((K["schwer"], sf))
     if any(pr.get(k) for k in ("luecken", "abbruch_grund", "wechselgrund")):
-        abgedeckt = " ".join(sf).lower()
-        for k, wort in (("luecken", "lücke|war .*20\\d\\d|zeit nach"), ("abbruch_grund", "abbruch|abgebrochen"),
-                        ("wechselgrund", "wechsel")):
+        abgedeckt = " ".join(x for x in sf if x.startswith("• ")).lower()     # nur die Fragen, nicht die Antworten
+        for k, wort in (("luecken", r"lücke|luecke|zwischen|in der zeit|zeit nach|nach (dem|der|deinem|ihrem) \w+|danach|pause|"
+                                    r"gemacht\?|lebenslauf|monate|bewerbungsphase|was war|pause"),
+                        ("abbruch_grund", r"abbruch|abgebrochen|aufgehört|nicht (fertig|beendet)|beendet|warum.*(ausbildung|studium)"),
+                        ("wechselgrund", r"wechsel|weg\b|verlassen|kündig|warum.*(neu|anders|hier|uns|zu uns)|was reizt|warum jetzt")):
             if pr.get(k) and not re.search(wort, abgedeckt):
                 hinweise.append(f"ℹ️ profil.{k} vorhanden, aber keine schwierige Frage dazu – als "
                                 "schwierige_fragen[{frage, antwort_final}] in seinen Worten ergänzen?")
@@ -492,19 +503,29 @@ def einladung_abgleich(gs):
         return []
     out = []
     kopf = textlib.translit(f"{gs.get('termin', '')} {gs.get('ort', '')}".lower())
-    for m in re.finditer(r"\b(\d{1,2})\.(\d{1,2})\.(?:\d{2,4})?", e):
-        tag, mon = int(m.group(1)), int(m.group(2))
-        if not re.search(rf"\b0?{tag}\.0?{mon}\.", kopf):
-            out.append(f"⚠️ Einladung nennt den {m.group(0)} – steht nicht in gespraech.termin.")
-            break
-    for m in re.finditer(r"\b(\d{1,2})(?::(\d{2}))?\s*Uhr", e):
-        if not re.search(rf"\b0?{m.group(1)}(:|\s*uhr|\.)", kopf):
-            out.append(f"⚠️ Einladung nennt {m.group(0)} – Uhrzeit fehlt in gespraech.termin.")
-            break
-    for m in re.finditer(r"(?:(?:filiale|standort|praxis|büro|gebäude|haus|eingang|raum)\s+(?:am|an der|im|in der)\s+|"
-                         r"\b)([A-ZÄÖÜ][\wäöüß\-]*(?:straße|strasse|str\.|platz|weg|allee|ring|gasse|markt|ufer|damm)\b(?:\s*\d+\w?)?)", e, re.I):
+    frist = re.compile(r"bestätig|bestaetig|rückmeld|rueckmeld|zusage|zusagen|antwort|frist|melde|absage|spätestens|bis zum", re.I)
+    for satz in textlib.saetze(e):
+        if frist.search(satz):
+            continue      # v5: Bestätigungsfrist ist kein Termin
+        for m in re.finditer(r"(?<![\d.])(\d{1,2})\.(\d{1,2})\.(?:\d{2,4})?", satz):
+            tag, mon = int(m.group(1)), int(m.group(2))
+            if not (1 <= tag <= 31 and 1 <= mon <= 12) or re.search(r"(raum|zimmer|gebäude|haus|etage|stock|nr\.?)\s*$",
+                                                                    satz[:m.start()], re.I):
+                continue  # „Raum 2.14“ ist kein Datum
+            if not re.search(rf"\b0?{tag}\.0?{mon}\.", kopf):
+                out.append(f"⚠️ Einladung nennt den {m.group(0)} – steht nicht in gespraech.termin.")
+                break
+        for m in re.finditer(r"\b(\d{1,2})(?::(\d{2}))?\s*Uhr", satz):
+            if not re.search(rf"\b0?{m.group(1)}(:|\s*uhr|\.)", kopf):
+                out.append(f"⚠️ Einladung nennt {m.group(0)} – Uhrzeit fehlt in gespraech.termin.")
+                break
+    # Ort: Straßen-/Platzname beginnt groß, ganzes Wort (v4-Fehler: „Bitte bring …“ wurde als Ort gelesen)
+    for m in re.finditer(r"(?:(?i:filiale|standort|praxis|büro|gebäude|haus|eingang)\s+(?i:am|an der|im|in der)\s+|(?<![\wäöüß]))"
+                         r"([A-ZÄÖÜ][a-zäöüß\-]{2,}(?:straße|strasse|str\.|platz|weg|allee|ring|gasse|markt|ufer|damm)"
+                         r"(?![a-zäöüß])(?:\s*\d+\w?)?|[A-ZÄÖÜ][a-zäöüß]+-?(?:Straße|Strasse|Platz|Weg|Allee|Ring|Gasse|Markt)"
+                         r"(?:\s*\d+\w?)?|(?:Am|An der|Im)\s+[A-ZÄÖÜ][a-zäöüß]+(?:\s*\d+\w?))", e):
         ort = m.group(1)
-        if textlib.translit(ort.lower().split()[0])[:6] not in kopf:
+        if textlib.translit(ort.lower().split()[0])[:6] not in kopf and textlib.translit(ort.lower().split()[-1])[:6] not in kopf:
             out.append(f"⚠️ Ort laut Einladung: „{ort}“ – fehlt in gespraech.ort.")
             break
     return out
@@ -526,9 +547,19 @@ def spickzettel_pdf(d, pdf_ziel, format_="kompakt"):
         import unterlagen_erstellen as ue
         ue.ensure_docx()
         from docx.shared import Cm, Pt
-        teile = spickzettel_teile(d)
-        stufen = [(11, 3, 9), (10.5, 2, 7), (10, 1, 5), (9.5, 0, 4)] if format_ == "kompakt" else [(11, 2, 10), (10, 1, 6)]
-        for groesse, abstand, kopf_vor in stufen:
+        teile_voll = spickzettel_teile(d)
+        stufen = [(11, 3, 9), (10.5, 2, 7), (10, 1, 5), (9.5, 0, 4), (9, 0, 3)] if format_ == "kompakt" else [(11, 2, 10), (10, 1, 6)]
+        f = anrede_form(d)
+        for nr, (groesse, abstand, kopf_vor) in enumerate(stufen):
+            teile = teile_voll
+            if nr >= 2:   # v5: knapp → Mitbringen in eine Zeile, Tipps auf 3 – statt fast leerer Seite 2
+                teile = []
+                for kopf, zeilen in teile_voll:
+                    if kopf == KOPF[f]["mit"]:
+                        zeilen = ["• " + " · ".join(z.lstrip("• ") for z in zeilen)]
+                    elif kopf and kopf.startswith("Tipps"):
+                        zeilen = zeilen[:3]
+                    teile.append((kopf, zeilen))
             doc = ue.neues_dokument("Spickzettel", "")
             sec = doc.sections[0]
             if format_ == "kompakt":
@@ -639,9 +670,11 @@ def lesen(akte, ziel):
     os.makedirs(os.path.dirname(ziel), exist_ok=True)
     fehlen, zugeordnet = [], []
     pr = d.get("profil") or {}
-    uploads = [os.path.join(UPLOADS, f) for f in (os.listdir(UPLOADS) if os.path.isdir(UPLOADS) else [])
-               if os.path.isfile(os.path.join(UPLOADS, f)) and os.path.abspath(os.path.join(UPLOADS, f)) != os.path.abspath(akte)
+    ordner = list(dict.fromkeys(o for o in (UPLOADS, os.path.dirname(os.path.abspath(akte))) if os.path.isdir(o)))
+    uploads = [os.path.join(o, f) for o in ordner for f in os.listdir(o)        # v5: auch der Ordner der Akte
+               if os.path.isfile(os.path.join(o, f)) and os.path.abspath(os.path.join(o, f)) != os.path.abspath(akte)
                and not f.lower().endswith((".txt", ".md", ".json"))]
+    uploads = list(dict.fromkeys(uploads))
     vergeben = set()
     hashes = {}
 
@@ -670,6 +703,8 @@ def lesen(akte, ziel):
         if p and not os.path.isfile(p):
             neu, _ = suche(p, a.get("sha1"))
             if neu:
+                if os.path.basename(neu) != os.path.basename(p):
+                    zugeordnet.append(f"{os.path.basename(neu)} → {a.get('bezeichnung') or os.path.basename(p)} (gleicher Inhalt)")
                 a["datei"] = neu
                 vergeben.add(neu)
             else:
@@ -698,6 +733,9 @@ def lesen(akte, ziel):
         print(f"🔗 Neue Datei zugeordnet (Name war anders): {zg} – kurz mit dem Nutzer bestätigen.")
     if fehlen:
         print("📎 Erst nötig für Anlagen/Gesamt-PDF – dann bitte noch einmal hochladen: " + "; ".join(fehlen))
+    for aw in m.get("offene_aenderungen") or []:
+        if isinstance(aw, dict) and not aw.get("erledigt"):
+            print(f"📝 Zugesagte Änderung noch offen: {aw.get('text', '')} – vor dem nächsten Erzeugen einbauen.")
     if "schema" not in d:
         print("ℹ️ Alte Akte (v1): Profil-Felder fehlen – fehlende Fakten beim Nutzer nachfragen, nicht aus den Texten raten.")
     elif not textlib.rohtext_eintraege(d):

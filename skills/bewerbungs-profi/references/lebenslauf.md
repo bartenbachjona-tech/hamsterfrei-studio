@@ -19,7 +19,8 @@
 
 **Schlüsselwörter** aus der Anzeige im gleichen Wortlaut – nur, wo sie zutreffen.
 
-**Zeiträume** exakt wie im Profil. Nur Jahr bekannt → „2023 – 2024“ oder „seit 2023“, kein ausgedachter Monat. Lücken > ~3 Monate: `profil.luecken` als eigene Zeile, kurz und ehrlich (`sonderfaelle.md`).
+**Zeiträume** exakt wie im Profil. Nur Jahr bekannt → „2023 – 2024“ oder „seit 2023“, kein ausgedachter Monat. Höchstens ~17 Zeichen (Datumsspalte) – längere („jährlich, zuletzt 03/2026“) kürzt das Skript, der Rest steht als Notiz darunter; besser gleich „seit 2019“ + Punkt „jährliche Auffrischung, zuletzt 03/2026“. **Enddatum in der Zukunft** → „voraussichtlich 07/2027“. **Lücken > ~3 Monate:** `profil.luecken[{zeitraum, bezeichnung}]` – das Skript fügt sie automatisch chronologisch in den Erfahrungs-Abschnitt ein (nur `bezeichnung`, z. B. „Bewerbungsphase“; der private `grund` wird nie gedruckt). Nicht zusätzlich von Hand eintragen.
+**Sprachen** nur, wie gesagt: „Deutsch (Muttersprache)“ nie ohne seine Angabe. **Standarddeutsch** in Titeln und Punkten: „Kfz-Mechatroniker“, „kommissioniert“, „U-Bahn“ – auch wenn er „kfz mechatroniker“, „kommisioniert“, „ubahn“ schrieb (gleiche Fakten, korrekte Schreibung).
 
 **Foto** freiwillig (AGG), Pfad in `person.foto` – das Skript setzt es schwebend rechts neben Name/Kontakt (3,5 × 4,5 cm, zugeschnitten), der Lebenslauf rutscht nicht nach unten. **Geburtsdatum** nur auf Wunsch. **Datum/Unterschrift** online nicht nötig (`ort_datum_unterschrift`).
 

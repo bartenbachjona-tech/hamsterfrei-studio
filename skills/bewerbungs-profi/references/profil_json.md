@@ -1,4 +1,4 @@
-# Die Profil-JSON (Quelle aller Fakten) – v4 mit Wortlaut und Satz-Herkunft
+# Die Profil-JSON (Quelle aller Fakten) – v5: Fakten wörtlich, Formulierung frei
 
 ## Inhalt
 1. Grundregel: Wortlaut zuerst
@@ -20,6 +20,8 @@ Jede Antwort des Nutzers kommt **sofort und wörtlich** in `profil.rohtext` – 
 - `belege[]` mit wörtlichem Zitat, das den Wert trägt,
 - und die **Satz-Herkunft** (`herkunft`, Abschnitt 5) für alle Freitexte.
 
+**v5-Prinzip:** Jede *Behauptung* (Zahl, Datum, Dauer, Name, Abschluss/Niveau, Tätigkeit/Fähigkeit, Häufigkeit/Intensität, Gefühl/Motiv, Kontakt zur Firma) kommt vom Nutzer. Die *Formulierung* ist frei und muss sauberes Standarddeutsch sein: „seh ich“ → „sehe ich“, „nix“ → „nichts“, „ubahn“ → „U-Bahn“, „Kumpel“ → „ein Bekannter“, „Sa und So“ → „samstags und sonntags“, „bescheid sagen“ → „informieren“, „leute“ → „Kundinnen und Kunden“, Tippfehler korrigieren. Das Skript erkennt diese Umformungen (Lemma, Wörterbuch, Tippfehler-Toleranz) – du brauchst dafür keine Rückfrage und keine `belege`.
+
 Im **Lebenslauf** zählt nur der Wortlaut (+ Uploads) – die Anzeige belegt nichts über die Person. **Nicht** gegen deine eigenen Profil-Felder. Was du dort „normalisierst“ (09/2018, Klasse B, B.A., 30 Std.), zählt nur, wenn es so im Wortlaut steht. Muster: `python3 "$S/unterlagen_erstellen.py" --beispiel`. Neue Sitzung ohne JSON: Muster anlegen (`mkdir -p /tmp/bewerbung`), alle Beispielwerte **leeren**.
 
 ## 2. rohtext, Bestätigungen, unsichere und sensible Antworten
@@ -31,9 +33,10 @@ Im **Lebenslauf** zählt nur der Wortlaut (+ Uploads) – die Anzeige belegt nic
   {"nr": 3, "frage": "Nachfrage zu Frage 2: Zeugnis im Juli 2024?", "antwort": "ja", "bestaetigt": "Juli 2024"}
 ]
 ```
-- **Auswahlfragen** (a/b/c): die Optionen mitspeichern, dann zählt der Text der gewählten Option: `{"frage": "Warum Brenner? a) Übernahme b) nah dran", "antwort": "a und b", "optionen": {"a": "Übernahme bei guten Leistungen", "b": "nah dran"}}`.
+- **Auswahlfragen** (a/b/c): die Optionen mitspeichern, dann zählt der Text der gewählten Option automatisch (auch als Zitat): `{"frage": "Warum Brenner? a) Übernahme b) nah dran", "antwort": "a und b", "optionen": {"a": "Übernahme bei guten Leistungen", "b": "nah dran"}}`. Nicht gewählte Optionen zählen nie.
 - **Wörtlich** übernehmen, auch Tippfehler/Kleinschreibung. Auch Nebenbei-Infos aus anderen Nachrichten (dann `"frage": "nebenbei"`).
-- `bestaetigt` zählt nur, wenn die Antwort ein klares Ja ist („ja“, „genau“, „stimmt“, „👍“ …) **und** der Wert wörtlich in deiner Frage stand. Darum fragst du mit **einem** konkreten Wert („im Juli 2024?“), nicht „meist September“.
+- `bestaetigt` zählt, wenn die Antwort ein klares Ja ist („ja“, „genau“, „stimmt“, „👍“ – **und „a“, „1a“, „a passt“, wenn a) „Ja“ war**) und die Teile des Werts in deiner Frage standen (Reihenfolge egal: „Deutsch Muttersprache“ ↔ „Deutsch ist deine Muttersprache?“). Mehrere Werte als Liste: `"bestaetigt": ["Juli 2025", "Juli 2023"]`. **Bestätigte Werte gelten überall** – in fakten_check und in jedem `herkunft`-Satz (Zitat = der Wert). Frag mit konkreten Werten („im Juli 2024?“), nicht „meist September“.
+- **Abgeleitete Zeitangaben** („letztes Jahr“, „letzten Sommer“ → 2025/2026) sind nur ⚠️ – einmal mit dem Jahr bestätigen lassen, dann `bestaetigt`.
 - **Unsichere Antworten** („b2 glaub ich“, „ja glaub schon“, „oder so“): `fakten_check` meldet ℹ️, `herkunft` ⚠️. Eine Ja/Nein-Rückfrage, Antwort als neuer Eintrag, beim alten `"geklaert": true`.
 - **Schickt der Nutzer dein Beispiel zurück** („Excel gut, SAP MM, Englisch B2“ – genau wie in deiner Frage): wie unsicher behandeln, kurz bestätigen lassen.
 - **Sensibles** (Todesfall, Diagnose, Trennung): nicht wörtlich speichern. `{"nr": 9, "frage": "…", "antwort": "familiärer Grund (Details nicht gespeichert)", "sensibel": true}` – zählt nie als Beleg.
@@ -44,11 +47,11 @@ Im **Lebenslauf** zählt nur der Wortlaut (+ Uploads) – die Anzeige belegt nic
 
 | Bereich | Inhalt | Wer schreibt |
 |---|---|---|
-| `meta` | stand, phase, naechster_schritt, geraet, anrede_form, modus (normal/schnell), chat_plan, **fragen_gesamt** (Y), **antworten_seit_akte** | du |
+| `meta` | stand, phase, naechster_schritt, geraet, anrede_form, modus (normal/schnell), chat_plan, **fragen_gesamt** (Y), **antworten_seit_akte**, **offene_aenderungen[{text, unterlage, erledigt}]** | du |
 | `person` | name, strasse, plz_ort, telefon, email, linkedin (nur wenn genannt), geburtsdatum (nur auf Wunsch), foto (Pfad) | Wortlaut |
 | `ziel` | art, stelle (genau wie in der Anzeige), firma, kennziffer, ansprechperson, anrede, firma_adresse, link, bewerbungsweg (inkl. WhatsApp/Portal), frist, start, unterlagen_verlangt, upload_limit, muss, kann, schluesselwoerter, auswahlverfahren, anschreiben_variante, **anzeige_text** | Anzeige |
 | `profil.rohtext[]` | alle Antworten im Wortlaut | Nutzer |
-| `profil.bildung[]`, `stationen[]`, `luecken[]` | `stationen[{zeitraum, art (Minijob/Praktikum/Ehrenamt), titel (Tätigkeit), firma, ort, taetigkeiten[], ergebnisse[]}]` · `luecken[{zeitraum, erklaerung}]` (`grund` geht auch) | aus dem Wortlaut |
+| `profil.bildung[]`, `stationen[]`, `luecken[]` | `stationen[{zeitraum, art (Minijob/Praktikum/Ehrenamt), titel (Tätigkeit), firma, ort, taetigkeiten[], ergebnisse[]}]` · `luecken[{zeitraum, bezeichnung, grund, im_lebenslauf}]` – `bezeichnung` („Bewerbungsphase“) kommt automatisch in den Lebenslauf, `grund` bleibt privat | aus dem Wortlaut |
 | `profil.sprachen[]`, `edv[]`, `fuehrerschein`, **`zertifikate[]`** | Staplerschein, Ersthelfer, Sprachzertifikat → `zertifikate`, nicht unter Führerschein | Wortlaut |
 | **`profil.wechselgrund`**, **`abbruch_grund`**, **`motivation_fach`**, `motivation_beruf`, `motivation_firma` | in seinen Worten, kurz | Wortlaut |
 | `profil.beispiele[]` | thema, stichwort, situation, aufgabe, handlung, ergebnis (leer, wenn nicht gesagt) | Wortlaut |
@@ -57,7 +60,7 @@ Im **Lebenslauf** zählt nur der Wortlaut (+ Uploads) – die Anzeige belegt nic
 | `profil.anlagen[]`, **`profil.quellen[]`** | datei (Upload-Pfad), bezeichnung („Zeugnis 10. Klasse“) | Uploads |
 | `firmenfakten[]` | fakt, quelle, zugestimmt | Recherche + Nutzer |
 | `belege[]` | `{text, woher, zitat}` – nur echte Herleitung; das **zitat** muss wörtlich vorkommen **und** den Wert tragen (jede Zahl/jedes Datum/jeder Abschluss im `text` steht im Zitat oder folgt daraus) | du |
-| **`herkunft[]`** | `{satz, quellen[{nr, zitat} \| {anzeige} \| {firmenfakt} \| {upload}], privat_ok}` – Abschnitt 5 | du, beim Entwurf |
+| **`herkunft[]`** | `{satz, quellen[{nr, zitat} \| {anzeige} \| {firmenfakt} \| {upload}], privat_ok, vorlage}` – Abschnitt 5 | du, beim Entwurf |
 | `lebenslauf`, `anschreiben{typ, betreff, anrede, absaetze[], gruss, anlagen_zeile}`, `formular[{feld, limit, text}]`, `email{betreff, text}`, **`whatsapp{text}`** | Unterlagen-Texte | du |
 | `gespraech{termin, art, ort, gespraechspartner, einladung_text, bestaetigt, anrede (du/sie), mitbringen[], kernbotschaften[], vorstellung{dauer_min, kernpunkte[]}, schwierige_fragen[{frage, antwort_final}], fachfragen[{frage, antwort_final}], gehalt{antwort_final}, eigene_fragen[{frage, gewaehlt}], ac_uebungen[{typ, titel, dauer_min}], feedback[] (intern)}` | Gespräch/Spickzettel (`gespraech.md` 3) | du, aus Wortlaut + Einladung |
 | `status[]`, `bewerbungen[]`, `entscheidungen[]`, `naechste_schritte[]` | Verlauf | du |
@@ -86,12 +89,13 @@ Beim **Entwurf** jedes Freitexts (Anschreiben, Motivationsschreiben, Mail, Formu
  {"satz": "Meine Cousine hat bei Ihnen gelernt.", "nr": 13, "zitat": "meine cousine hat da ausbildung gemacht", "privat_ok": true}
 ]
 ```
-- `satz` = der Satz genau wie im Text. `zitat` = **Ausschnitt aus der Antwort, Zeichen für Zeichen** (Kleinschreibung/Tippfehler wie gesagt). Mehrere Quellen pro Satz sind normal.
-- Das Skript prüft: Zitat steht in Antwort Nr.; **jedes Inhaltswort und jede Zahl des Satzes** steht in einem seiner Zitate (Beugung, Komposita, trennbare Verben werden erkannt) oder ist neutral (Bindewörter, „bewerben“, „Anhang“, Firmenname, Stelle). Rest → ❌ „Wörter ohne Quelle: …“.
-- Neutrale Sätze brauchen keinen Eintrag („Ich freue mich auf ein persönliches Gespräch.“, „Anbei sende ich …“, Gruß, Name, reine Datumsangaben).
+- `satz` = der Satz genau wie im Text. `zitat` = Ausschnitt aus der Antwort (Groß/klein, Satzzeichen egal; „…“ für Auslassungen). Mehrere Quellen pro Satz sind normal; Belege sind Zitat **und** die ganze zitierte Antwort (inkl. gewählter Optionen, bestätigter Werte).
+- Das Skript prüft nur **Behauptungs-Bausteine**: Zahlen/Daten (auch „fünften“ ↔ „5.“, „1. Februar 2027“ ↔ „1.2.27“), Namen, Abschlüsse, Tätigkeiten, Fähigkeiten, Häufigkeit/Intensität (täglich, immer, schnell, sehr), Gefühle/Motive (Spaß, spannend, „spricht mich an“), Kontakt zur Firma (kennengelernt). Erkannt werden Beugung, Partizip, trennbare Verben, Komposita, Umgangssprache, Synonyme in eine Richtung („leute“ → Kunden, nicht umgekehrt Kunden → Kollegen) und Tippfehler. Funktions- und Stilwörter sind frei. Fehlt ein Baustein → ❌ „Wörter ohne Quelle: …“.
+- In **Ich-Teilsätzen** zählen nur Nutzer-Quellen; Anzeige/Firmen-Info nur im Teilsatz über die Firma („…, dass Azubis bei Ihnen …“). Ein „ja“ zu einem Firmenfakt ist **kein** Motiv – „Mich spricht an, dass …“ nur, wenn er es so (oder „finde ich gut/spannend“) gesagt hat; sonst „Laut Ihrer Karriereseite …“.
+- Neutrale Sätze brauchen keinen Eintrag („Ich freue mich auf ein persönliches Gespräch.“, Gruß, Name, reine Datumsangaben) – auch die **Mail-Vorlagen** aus `abschicken.md` („anbei sende ich Ihnen meine Bewerbung als … ab …“, „Anschreiben, Lebenslauf und Zeugnisse finden Sie in einer PDF im Anhang“, „Für Rückfragen erreichen Sie mich unter …“). Vorlage mit eigenem Zusatz: `{"satz": …, "vorlage": true}` – dann prüft das Skript nur Zahlen/Daten.
 - Quellen-Arten: `nr`+`zitat` (Wortlaut) · `upload` (Zitat aus Text-PDF/Word, z. B. Zeugnis) · `anzeige` (Anzeige/Einladung – nur für Firmenbezug) · `firmenfakt` (nur mit `zugestimmt: true`).
 - Ich-Satz nur mit Anzeige-Quelle → ❌. Zeugnis-Foto → erst Rückfrage, Antwort ins rohtext, dann zitieren. Gesundheit/Familie/Privates → nur mit `privat_ok: true` nach ausdrücklichem Ja; im Anschreiben ⚠️ (im Regelfall weglassen).
-- `fakten_check.py … --woher` (oder `herkunft.py PROFIL.json`) druckt die **Woher-Liste** für die Freigabe: `– „Satzanfang…“ → deine Worte: „…“ (Nr. 3)`.
+- `fakten_check.py … --woher` (oder `herkunft.py PROFIL.json`) druckt die **Woher-Liste** für die Freigabe: `– „Satzanfang…“ → deine Worte: „…“` (ohne interne Nummern; Sie-Form: „Ihre Worte“).
 
 ## 6. Von der JSON zu den Unterlagen
 
@@ -119,7 +123,13 @@ Beim **Entwurf** jedes Freitexts (Anschreiben, Motivationsschreiben, Mail, Formu
 | ❌ Privates/Gesundheit/Familie | vorher ausdrücklich fragen („Soll das mit deinem Knie rein? Ich rate eher ab.“) |
 | ℹ️/⚠️ unsichere Antwort | Ja/Nein-Rückfrage, dann `geklaert: true` |
 | ❌ Abgleich | Datei ist alt oder von Hand geändert → neu erzeugen |
-| ⚠️ Aufwertung? / Begriff | Hat er das so gesagt? Sonst schlichter |
+| ❌ Sprache | „Deutsch“/„Englisch“ nicht genannt → Sprachen-Frage, nie automatisch eintragen |
+| ❌ Spickzettel-Wortlaut | Kernbotschaft/Antwort mit Wörtern, die er nicht gesagt hat → seine Worte nehmen |
+| ⚠️ Aufwertung? / Begriff / Lebenslauf-Begriff | Hat er das so gesagt? Sonst seine Worte nehmen |
+| ⚠️ Einschränkung weg? | Er sagte „manchmal“/„bisschen“ – im Text mitnehmen („gelegentlich“) |
+| ⚠️ Stil | Umgangssprache, Chat-Kürzel, Tippfehler → Standarddeutsch (Vorschlag steht dabei) |
+| ⚠️ Jahr abgeleitet | aus „letztes Jahr“ – Jahr kurz bestätigen lassen |
+| ⚠️ Änderungswunsch offen | zugesagte Änderung einbauen, dann `erledigt: true` |
 | ⚠️ Beispiel/Hobby ungenutzt | einbauen oder bewusst weglassen |
 
 **Nie** einen Treffer mit `belege` „wegbelegen“, den der Nutzer nicht gesagt hat. Der Check ist heuristisch: Deine `herkunft` ehrlich anzulegen bleibt Pflicht.

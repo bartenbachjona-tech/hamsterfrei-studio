@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fakten-Check v4: Steht in den Unterlagen etwas, das der Nutzer NICHT gesagt hat
+"""Fakten-Check v5 („Fakten wörtlich, Formulierung frei“): Steht in den Unterlagen eine Behauptung, die der Nutzer NICHT gesagt hat
 (und das nicht in Anzeige, Einladung oder seinen Uploads steht)? Prüft außerdem die Satz-Herkunft
 (herkunft.py: jeder Satz über die Person ↔ Antwort-Nr. + wörtliches Zitat).
 
@@ -38,6 +38,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import textlib  # noqa: E402
+import sprachlib as SL  # noqa: E402
 
 ERZEUGT = ("lebenslauf", "anschreiben", "formular", "email", "meta", "status")
 PRUEFEN_RE = re.compile(r"\[PRÜFEN:[^\]]*\]")
@@ -99,7 +100,7 @@ telefon e-mail adresse und oder sowie außerdem zudem gern gerne januar februar 
 september oktober november dezember montag dienstag mittwoch donnerstag freitag samstag sonntag
 mit für von vom zum zur nach vor über unter auf aus als auch aber denn dann wenn weil dass ob wie was wer wo
 mein meine meinen meinem meiner dein deine sein seine man es er jeder jede dieses diese dieser diesem diesen
-jahr jahre jahren monat monate monaten woche wochen tag tage tagen stunde stunden minute minuten mal prozent euro
+jahr jahre jahren jahres monat monate monaten woche wochen tag tage tagen stunde stunden minute minuten mal prozent euro
 zeit arbeit sachen sache dinge ding art teil ende anfang beginn platz weg leute menschen kunden kundinnen kunde
 kollegen kolleginnen chef chefin betrieb firma unternehmen schule klasse fach fächer beruf berufe job jobs aufgabe
 aufgaben erfahrung erfahrungen beispiel beispiele idee ideen grund gründe ziel ziele möglichkeit möglichkeiten
@@ -258,6 +259,10 @@ class Belege:
             return True
         if re.search(r"(?<![a-z0-9])" + re.escape(w), self.low):
             return True
+        if "-" in w or " " in w:      # „Kfz-Mechatroniker“ ↔ „kfz mechatroniker“, „U-Bahn“ ↔ „ubahn“
+            dicht = re.sub(r"[\s-]+", "", w)
+            if dicht in re.sub(r"[\s-]+", "", self.low) or re.sub(r"-", " ", w) in self.low:
+                return True
         if len(w) >= 6 and any(x.startswith(w[:max(5, len(w) - 3)]) for x in self.woerter):
             return True
         return self._kompositum(w)
@@ -328,7 +333,7 @@ def korpus(d, anzeigen=(), quellen=(), befunde=None):
         befunde.append(("⚠️", "Profil", "Kein Wortlaut", "profil.rohtext fehlt",
                         "Prüfung nur gegen Profil-Felder (unsicher). Nutzer-Antworten im Wortlaut in profil.rohtext speichern."))
     else:
-        u_teile = textlib.wortlaut(d)
+        u_teile = [SL.standardisiere(x) for x in textlib.wortlaut(d)]
     up, hinw = textlib.upload_texte(d, quellen)
     u_teile += [textlib.normalisiere_nutzertext(x) for x in up]
     for h in hinw:
@@ -422,7 +427,7 @@ def zeilen_fuer_pruefung(t, spickzettel=False):
                 continue
             if skip:
                 continue
-            z = re.sub(r"^\s*(?:\d{1,2}[.)]|[•\-–·▸])\s+", "", z)   # eigene Nummerierung/Aufzählung
+            z = re.sub(r"^\s*(?:[1-9][.)](?!\s*" + textlib.ORDINAL_NOMEN + r")|[•\-–·▸])\s+", "", z)   # eigene Nummerierung (nicht „12. Klasse“)
             if z.strip().endswith("?") or z.strip().lower().startswith(("frage:", "f:")):
                 continue          # Fragen sind keine Fakten
             z = re.sub(r"^\s*(→|antwort:)\s*", "", z, flags=re.I)
@@ -450,10 +455,34 @@ def zeilen_fuer_pruefung(t, spickzettel=False):
 
 
 def saetze(text):
-    for z in text.splitlines():
-        for s in re.split(r"(?<=[.!?])\s+", z):
-            if len(s.split()) >= 3:
-                yield s.strip()
+    for s in textlib.saetze(text):
+        if len(s.split()) >= 3:
+            yield s.strip()
+
+
+def klausel_bei(z, pos):
+    """Teilsatz (zwischen , ; : – ( )) um die Position pos."""
+    a = max([z.rfind(c, 0, pos) for c in ",;:–—().\n"] + [-1]) + 1
+    bs = [i for i in (z.find(c, pos) for c in ",;:–—()\n") if i >= 0]
+    return z[a:min(bs) if bs else len(z)]
+
+
+SPRACHEN = ["Deutsch", "Englisch", "Französisch", "Spanisch", "Italienisch", "Türkisch", "Russisch", "Polnisch", "Arabisch",
+            "Kroatisch", "Serbisch", "Bosnisch", "Rumänisch", "Griechisch", "Portugiesisch", "Ukrainisch", "Albanisch",
+            "Kurdisch", "Persisch", "Farsi", "Vietnamesisch", "Chinesisch", "Japanisch", "Niederländisch", "Ungarisch",
+            "Tschechisch", "Bulgarisch", "Latein", "Gebärdensprache", "Tamil", "Hindi", "Urdu", "Dari", "Paschtu"]
+EINSCHRAENKUNG = r"(manchmal|ab und zu|gelegentlich|selten|bisschen|bissl|bissel|etwas|ein wenig|nicht wirklich|kaum|teilweise|ab und an|so halb)"
+PERSON_TITEL_RE = re.compile(r"\b(Herrn?|Frau)\s+((?:Dr\.|Prof\.|Dipl\.-?\w*\.?|Mag\.)\s*)*([A-ZÄÖÜ][\wäöüß\-]+)(\s+[A-ZÄÖÜ][\wäöüß\-]+)?")
+
+
+def ohne_fremde_personen(t, A):
+    """Anrede/Gesprächspartner aus Anzeige oder Einladung („Herr Dr. Huber“, „Frau Albrecht (Teamleitung)“) sind keine
+    Angaben über den Nutzer → vor der Abschluss-/Titel-/Aufwertungs-Prüfung entfernen."""
+    def weg(m):
+        nachname = (m.group(4) or m.group(3)).strip()
+        return " " if norm(nachname) in A.low or norm(m.group(3)) in A.low else m.group(0)
+    t = PERSON_TITEL_RE.sub(weg, t)
+    return re.sub(r"\((?:[A-ZÄÖÜ][\wäöüß\-]*)?(leitung|leiter|leiterin|teamleitung|personalleitung|ausbildungsleitung)\)", " ", t, flags=re.I)
 
 
 def kontext(m, src):
@@ -484,6 +513,8 @@ def pruefe_dauer(v, e, satz_vor, satz, U, A, computed):
             return None
         if not qual and claim in computed:
             return None
+        if not qual and e == "jahr" and any(claim <= c < claim + 12 for c in computed):
+            return None   # v5: abgerundet ist korrekt („sieben Jahre“ bei 7 J. 2 M.), aufgerundet nicht
         if nah:
             return ("❌", f"gerundet: aus den Daten berechnet {monate_fmt(nah[0])} – genau schreiben "
                           f"(„seit …“, „fast {vtxt} {e}e“) oder Nutzer fragen")
@@ -533,6 +564,8 @@ def pruefe_text(name, t, K, befunde, spickzettel=False, nur_nutzer=False):
             add("⚠️", "[PRÜFEN] als Vorschlag", m.group(0)[:70],
                 "[PRÜFEN] nur für echte Lücken. Eigene Vorschläge vorher im Chat fragen – nicht in den Text schreiben.")
     zeilen = zeilen_fuer_pruefung(PRUEFEN_RE.sub(" ", t), spickzettel)
+    A_voll = K["A"]
+    zeilen = [ohne_fremde_personen(z, A_voll) for z in zeilen]
     s = "\n".join(zeilen)
 
     # Daten
@@ -544,14 +577,19 @@ def pruefe_text(name, t, K, befunde, spickzettel=False, nur_nutzer=False):
                 add("❌", "Datum", f"{tg:02d}.{mo:02d}.{y}", "kein Beleg")
         elif mo and not tg and (y, mo) not in UA.monate:
             nachbar = {((y * 12 + mo - 1 + dd) // 12, (y * 12 + mo - 1 + dd) % 12 + 1) for dd in (-1, 1)}
-            if nachbar & UA.monate:
+            if nachbar & UA.monate and (y, mo) in K.get("luecken_monate", set()):
+                pass      # Lücke: Monate ergeben sich aus den Nachbarstationen – so gewollt
+            elif nachbar & UA.monate:
                 add("⚠️", "Monat", f"{mo:02d}/{y}", "aus dem Nachbarmonat abgeleitet (z. B. Lücke zwischen zwei Stationen) – passt das?")
             elif y in UA.jahre:
                 add("❌", "Monat", f"{mo:02d}/{y}", f"nur das Jahr {y} ist im Wortlaut – Monat erfragen oder nur „{y}“ schreiben")
             else:
                 add("❌", "Monat/Jahr", f"{mo:02d}/{y}", "kein Beleg")
         elif not mo and y not in UA.jahre:
-            add("❌", "Jahr", str(y), "kein Beleg")
+            if y in K.get("abgel", {}):
+                add("⚠️", "Jahr", str(y), f"abgeleitet aus „{K['abgel'][y]}“ – kurz bestätigen lassen (Ja/Nein)")
+            else:
+                add("❌", "Jahr", str(y), "kein Beleg")
     # Dauern (zeilenweise, mit Satz-Kontext). Gerechnet wird nur mit Zeiträumen derselben Zeile oder aus
     # Antworten, die zum Satz passen (v3-Fehler: „4 Semester“ gegen die Minijob-Dauer geprüft).
     gesehen_d = set()
@@ -577,8 +615,8 @@ def pruefe_text(name, t, K, befunde, spickzettel=False, nur_nutzer=False):
             continue
         if any(v == zz for v, _ in UA.dauern):
             continue
-        if 1900 <= zz <= 2100 and int(zz) in UA.jahre:
-            continue
+        if 1900 <= zz <= 2100 and (int(zz) in UA.jahre or int(zz) in K.get("abgel", {})):
+            continue      # abgeleitete Jahre („letztes Jahr“) meldet die Datumsprüfung als ⚠️
         if any(v == zz for (v, _), _m in Belege.dauern_mit_pos(rest[max(0, m.start() - 1):m.end() + 12])):
             continue   # schon als Dauer geprüft
         add("❌", "Zahl", m.group(0), kontext(m, rest))
@@ -591,10 +629,23 @@ def pruefe_text(name, t, K, befunde, spickzettel=False, nur_nutzer=False):
     abschl_basis = U.low + "\n" + norm(K["stelle"] + " " + K["firma"])   # Stellentitel („… (B.A.)“) darf im Betreff stehen
     for a in ABSCHLUESSE:
         na = norm(a)
-        if re.search(r"(?<![a-z])" + re.escape(na) + (r"(?![a-z])" if not na.endswith(".") else ""), low) and \
-                not re.search(r"(?<![a-z])" + re.escape(na) + (r"(?![a-z])" if not na.endswith(".") else ""), abschl_basis):
+        m_a = re.search(r"(?<![a-z])" + re.escape(na) + (r"(?![a-z])" if not na.endswith(".") else ""), low)
+        if m_a and not re.search(r"(?<![a-z])" + re.escape(na) + (r"(?![a-z])" if not na.endswith(".") else ""), abschl_basis):
+            # v5: im Sie-Teilsatz aus Anzeige/zugestimmtem Firmenfakt („ab dem 2. Ausbildungsjahr betreuen Azubis bei Ihnen“)
+            kl = klausel_bei(low, m_a.start())
+            if not nur_nutzer and re.search(r"(?<![a-z])" + re.escape(na), A_voll.low) and \
+                    re.search(r"\b(sie|ihnen|ihr\w*)\b", kl) and not SL.ICH_RE.search(kl):
+                continue
             add("❌", "Abschluss", a, "Abschluss/Kürzel steht nicht im Wortlaut des Nutzers oder in seinem Zeugnis "
                                      "(die Anzeige belegt nichts über ihn)")
+    # Sprachen (v5): „Deutsch (Muttersprache)“ nie ohne Nutzerangabe
+    if nur_nutzer or spickzettel:
+        for sp in SPRACHEN:
+            for m in re.finditer(r"\b" + sp + r"\b", s):
+                if not U.hat_wort(sp):
+                    add("❌", "Sprache", sp, f"„{sp}“ hat der Nutzer nicht genannt – nie automatisch eintragen (auch nicht "
+                                            "Deutsch als Muttersprache), Sprachen-Frage stellen")
+                break
     # Sprachniveaus
     for m in NIVEAU_RE.finditer(s):
         if not U.hat_wort(m.group(0)):
@@ -659,15 +710,19 @@ def pruefe_text(name, t, K, befunde, spickzettel=False, nur_nutzer=False):
                 # nach Artikel/Possessiv folgt ein normales Nomen („Ihr Haus“, „Ihre Praxis“, „Meine Cousine“)
                 teile = [x for i, x in enumerate(teile) if not (i > 0 and DETERMINATIV_RE.match(teile[i - 1]))]
                 kand = ist_eigenname_folge(teile)
-            fehlt = [x for x in kand if not UA.hat_wort(x) and norm(x) not in gemeldet]
+            fehlt = [x for x in kand if not UA.hat_wort(x) and norm(x) not in gemeldet and not SL.gedeckt(x, K["QUA"])]
             if fehlt and folge not in gesehen:
                 gesehen.add(folge)
                 add("❌", "Name", folge, "nicht vom Nutzer/aus der Anzeige: " + ", ".join(fehlt))
     # Aufwertungen – nur gegen den Nutzer-Wortlaut (nicht die Anzeige)
     for a in AUFWERTUNG:
         for m in re.finditer(r"\b" + re.escape(a) + r"\w*", s, re.I):
-            if not U.hat_wort(m.group(0)[:len(a)]):
-                add("⚠️", "Aufwertung?", m.group(0), kontext(m, s) + " – hat der Nutzer das so gesagt?")
+            kl = klausel_bei(s, m.start())
+            if U.hat_wort(m.group(0)[:len(a)]) or SL.gedeckt(m.group(0), K["QU"]):
+                break     # v5: „eingelernt“ ↔ „einlernen“, „geführt“ ↔ „ich führe“
+            if A_voll.hat_wort(m.group(0)) and not SL.ICH_RE.search(kl):
+                break     # Titel/Funktion aus Anzeige/Einladung („Teamleitung“), keine Angabe über den Nutzer
+            add("⚠️", "Aufwertung?", m.group(0), kontext(m, s) + " – hat der Nutzer das so gesagt?")
             break
     # lange Fachbegriffe
     for m in re.finditer(r"\b[A-ZÄÖÜ][a-zäöüß]{11,}\b", s):
@@ -675,7 +730,7 @@ def pruefe_text(name, t, K, befunde, spickzettel=False, nur_nutzer=False):
         if norm(w) in STANDARD or w in gesehen or norm(w) in gemeldet:
             continue
         gesehen.add(w)
-        if not UA.hat_wort(w):
+        if not UA.hat_wort(w) and not SL.gedeckt(w, K["QU"] if nur_nutzer else K["QUA"]):
             add("⚠️", "Begriff", w, kontext(m, s))
     # Firmenfakten ohne Zustimmung: nur wenn der Fakt wirklich im Text steht (Satz-Ebene,
     # ohne die Wörter aus Stelle/Firma – v2-Fehlalarm)
@@ -690,7 +745,84 @@ def pruefe_text(name, t, K, befunde, spickzettel=False, nur_nutzer=False):
             if treffer >= 2 and treffer / len(kern) >= 0.6:
                 add("❌", "Firmenfakt", f, "aus der Recherche, aber der Nutzer hat nicht zugestimmt")
                 break
+    QU = K["QU"]
+    # v5: Lebenslauf-Begriffe (Tätigkeiten, Fähigkeiten) gegen den Wortlaut – ⚠️, weil Stichpunkte frei formuliert sind
+    if nur_nutzer and not spickzettel and name.endswith("(JSON)"):
+        for z in zeilen:
+            inhalt = z.split(":", 1)[1] if re.match(r"^\s*[\wÄÖÜäöüß /-]{2,30}:", z) else z
+            fehl = [w for w in SL.woerter(inhalt) if not w[0].isdigit() and len(w) >= 3 and not SL.ist_frei(w)
+                    and norm(w) not in STANDARD and norm(w) not in LL_WORTE and norm(w) not in SL.MONATE
+                    and not SL.gedeckt(w, QU) and norm(w) not in gemeldet]
+            if fehl:
+                add("⚠️", "Lebenslauf-Begriff", ", ".join(dict.fromkeys(fehl)),
+                    f"nicht im Wortlaut ⟵ „{z.strip()[:70]}“ – hat der Nutzer das so gesagt? Sonst seine Worte nehmen")
+    # v5: Spickzettel – Kernbotschaften, Vorstellung, Antworten, Beispiele gegen den Wortlaut (nicht Fachfragen)
+    if spickzettel:
+        for z in spick_faktzeilen(t):
+            fehl = [w for w in SL.woerter(z) if not w[0].isdigit() and len(w) >= 3 and not SL.ist_frei(w)
+                    and norm(w) not in STANDARD and norm(w) not in SL.MONATE and not SL.gedeckt(w, QU)
+                    and not A_voll.hat_wort(w) and norm(w) not in gemeldet]
+            if fehl:
+                add("❌", "Spickzettel-Wortlaut", ", ".join(dict.fromkeys(fehl)),
+                    f"nicht vom Nutzer ⟵ „{z.strip()[:70]}“ – seine Worte nehmen oder fragen")
+    # v5: Einschränkung des Nutzers („b manchmal“, „sap so bisschen“) darf nicht verloren gehen
+    for antw, eingeschraenkt in K.get("einschraenkungen", []):
+        for z in zeilen:
+            if re.search(EINSCHRAENKUNG + r"|gelegentlich|teilweise|grundkenntnis|grundlagen|einige|bei bedarf", z, re.I):
+                continue
+            treffer = [w for w in eingeschraenkt if any(SL.lemma(x) == w or (len(w) >= 5 and SL.lemma(x).startswith(w))
+                                                        for x in SL.woerter(z))]
+            if len(treffer) >= max(1, min(2, len(eingeschraenkt))):
+                add("⚠️", "Einschränkung weg?", z.strip()[:60], f"Nutzer sagte „{antw}“ – im Text ohne „manchmal/etwas“?")
+                break
     return s
+
+
+LL_WORTE = set(norm(w) for w in """heute laufend voraussichtlich abgebrochen abschluss ohne note noten schnitt durchschnitt
+leistungskurs leistungskurse wahlfach fach fächer schwerpunkt schwerpunkte grundkurs klasse jahrgangsstufe sprachen edv
+kenntnisse sonstiges zertifikate führerschein interessen hobbys ehrenamt ehrenamtlich minijob aushilfe praktikum
+berufserfahrung schulbildung bildung ausbildung studium projekte projekt privat familienzeit elternzeit bewerbungsphase
+weiterbildung weiterbildungen schulung schulungen woche wochen stunden std monate""".split())
+
+
+def spick_faktzeilen(t):
+    """Zeilen aus Kernbotschaften, Vorstellung, Antworten auf schwierige Fragen und Beispielen."""
+    out, aktiv = [], False
+    for z in (t or "").splitlines():
+        if SPICK_KOPF.match(z) and (z.strip().isupper() or len(z.split()) <= 6):
+            low = z.lower()
+            aktiv = bool(re.match(r"\s*(deine 3 kernbotschaften|ihre 3 kernbotschaften|kernbotschaften|so stellst du dich vor|"
+                                  r"so stellen sie sich vor|vorstellung|schwierige fragen|deine beispiele|ihre beispiele|beispiele)", low))
+            continue
+        if not aktiv or not z.strip() or z.strip().endswith("?") or "noch offen" in z:
+            continue
+        zz = re.sub(r"^\s*(→|antwort:|•|-|–|·)\s*", "", z.strip(), flags=re.I)
+        zz = re.sub(r"^(?:[1-9][.)])\s+(?!" + textlib.ORDINAL_NOMEN + ")", "", zz)
+        out.append(zz)
+    return out
+
+
+def einschraenkungen(d):
+    """→ [(antwort_ausschnitt, [lemmata])] für Antworten mit „manchmal“, „bisschen“ … (inkl. gewählter Option)."""
+    out = []
+    for e in textlib.rohtext_eintraege(d):
+        if e.get("sensibel"):
+            continue
+        for seg in re.split(r"[.;\n]|,(?!\d)", e["antwort"]):
+            m = re.search(r"\b" + EINSCHRAENKUNG + r"\b", seg, re.I)
+            if not m:
+                continue
+            ok = lambda w: len(w) >= 3 and not SL.ist_frei(w) and not re.fullmatch(EINSCHRAENKUNG, w, re.I) and w.lower() not in ("nur",)
+            vorher = [w for w in SL.woerter(seg[:m.start()]) if ok(w)][-3:]
+            woerter_seg = vorher or [w for w in SL.woerter(seg[m.end():]) if ok(w)][:2]
+            buchst = re.findall(r"(?<![\wäöüß])([a-f])(?![\wäöüß])", seg[:m.start()].lower() or seg.lower())
+            for k, v in (e.get("optionen") or {}).items():
+                if str(k).lower() in buchst:
+                    woerter_seg += [w for w in SL.woerter(str(v)) if len(w) >= 3 and not SL.ist_frei(w)]
+            lem = list(dict.fromkeys(SL.lemma(w) for w in woerter_seg))
+            if len(lem) >= 2:      # ein einzelnes Wort („sap so bisschen“) prüfen Niveau-/Kenntnis-Regeln
+                out.append((seg.strip(), lem))
+    return out
 
 
 # ---------------------------------------------------------------- Texte aus der JSON
@@ -812,8 +944,17 @@ def main():
     befunde = []
     U, A, UA, offen, legacy, zr_antw = korpus(d, anzeigen, quellen, befunde)
     z = d.get("ziel") or {}
+    abgel = {}
+    for e in textlib.rohtext_eintraege(d):
+        if not e.get("sensibel"):
+            abgel.update(SL.abgeleitete_jahre(e["antwort"]))
+    luecken_monate = set()
+    for l in (d.get("profil") or {}).get("luecken") or []:
+        for mo, y in re.findall(r"\b(\d{1,2})\s*/\s*(\d{4})", str(l.get("zeitraum", ""))):
+            luecken_monate.add((int(y), int(mo)))
     K = {"U": U, "A": A, "UA": UA, "offen": offen, "stelle": z.get("stelle", ""), "firma": z.get("firma", ""),
-         "zr_antworten": zr_antw}
+         "zr_antworten": zr_antw, "QU": SL.Quelle([U.text]), "QUA": SL.Quelle([UA.text]), "abgel": {y: a for y, a in abgel.items() if y not in U.jahre},
+         "luecken_monate": luecken_monate, "einschraenkungen": [] if legacy else einschraenkungen(d)}
     alle, geprueft = [], []
 
     if typ == "spickzettel":
@@ -839,6 +980,14 @@ def main():
             alle.append("\n".join(einheiten))
             pruefe_text(sek + " (JSON)", "\n".join(einheiten), K, befunde, nur_nutzer=(sek == "lebenslauf"))
             geprueft.append(sek)
+            # v5: Unterlagen in Standarddeutsch – Umgangssprache, Chat-Kürzel, Tippfehler früh melden (vor der Freigabe)
+            for msg, vorschlag in SL.stil_befunde("\n".join(einheiten[1:] if sek == "anschreiben" else einheiten),
+                                                  referenz=[z.get("anzeige_text", "")], lebenslauf=(sek == "lebenslauf")):
+                befunde.append(("⚠️", sek + " (JSON)", "Stil", msg, f"Standarddeutsch: {vorschlag}"))
+        for aw in (d.get("meta") or {}).get("offene_aenderungen") or []:
+            if isinstance(aw, dict) and not aw.get("erledigt"):
+                befunde.append(("⚠️", "Änderungswunsch", "offen", aw.get("text", "")[:70],
+                                "zugesagt, aber noch nicht abgehakt – in den Text einbauen, dann erledigt: true"))
         for datei in a[1:]:
             name = os.path.basename(datei)
             if name.lower().startswith(("bewerbungsakte", "gespraech_spickzettel", "spickzettel")):
@@ -878,7 +1027,7 @@ def main():
     rot = [b for b in befunde if b[0] == "❌"]
     gelb = [b for b in befunde if b[0] == "⚠️"]
     info = [b for b in befunde if b[0] == "ℹ️"]
-    print("# Fakten-Check v4 – Belege: Wortlaut des Nutzers, Anzeige/Einladung, Uploads" + (" (LEGACY ohne rohtext)" if legacy else ""))
+    print("# Fakten-Check v5 – Fakten wörtlich, Formulierung frei. Belege: Wortlaut, Anzeige/Einladung, Uploads" + (" (LEGACY ohne rohtext)" if legacy else ""))
     for sym, wo, kat, was, ctx in rot + ([] if kurz else gelb + info):
         print(f"{sym} [{wo}] {kat}: {was}" + (f"  ⟶ {ctx}" if ctx else ""))
     n_pr = sum(len(PRUEFEN_RE.findall(x)) for x in alle)   # v3-Fehler: wurde nach dem Entfernen gezählt (immer 0)
