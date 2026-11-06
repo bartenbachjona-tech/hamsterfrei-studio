@@ -1,0 +1,74 @@
+[
+ {
+  "id": 357,
+  "alter": 20,
+  "ziel": "Jobwechsel",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 808,
+  "alter": 19,
+  "ziel": "Ausbildung",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 994,
+  "alter": 20,
+  "ziel": "Ausbildung",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "schweift gern ab",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "Laptop",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 243,
+  "alter": 43,
+  "ziel": "Jobwechsel",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "Link funktioniert",
+  "geraet": "Tablet",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 436,
+  "alter": 18,
+  "ziel": "Minijob/Nebenjob",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "Abbruch Ausbildung/Studium",
+  "assessment_center": false
+ },
+ {
+  "id": 111,
+  "alter": 40,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "schweift gern ab",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ }
+]

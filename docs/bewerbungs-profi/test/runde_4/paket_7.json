@@ -1,0 +1,74 @@
+[
+ {
+  "id": 778,
+  "alter": 22,
+  "ziel": "Minijob/Nebenjob",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "Tippfehler, umgangssprachlich",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 17,
+  "alter": 39,
+  "ziel": "Wiedereinstieg nach Pause",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "Tippfehler, umgangssprachlich",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 334,
+  "alter": 22,
+  "ziel": "Minijob/Nebenjob",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 651,
+  "alter": 22,
+  "ziel": "Ausbildung",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "gründlich, viele Rückfragen",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 819,
+  "alter": 18,
+  "ziel": "Ausbildung",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 60,
+  "alter": 21,
+  "ziel": "Ausbildung",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "Claude-Erfahren",
+  "eigenart": "Tippfehler, umgangssprachlich",
+  "link": "Link funktioniert",
+  "geraet": "Tablet",
+  "lebenslauf": "Abbruch Ausbildung/Studium",
+  "assessment_center": false
+ }
+]

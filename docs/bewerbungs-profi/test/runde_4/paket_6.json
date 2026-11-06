@@ -1,0 +1,74 @@
+[
+ {
+  "id": 72,
+  "alter": 18,
+  "ziel": "Duales Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 184,
+  "alter": 28,
+  "ziel": "Praktikum/Werkstudent",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link funktioniert",
+  "geraet": "nur Handy",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 405,
+  "alter": 40,
+  "ziel": "Wiedereinstieg nach Pause",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 883,
+  "alter": 31,
+  "ziel": "Jobwechsel",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 206,
+  "alter": 18,
+  "ziel": "Minijob/Nebenjob",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "Link funktioniert",
+  "geraet": "nur Handy",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 361,
+  "alter": 20,
+  "ziel": "Duales Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "gründlich, viele Rückfragen",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ }
+]

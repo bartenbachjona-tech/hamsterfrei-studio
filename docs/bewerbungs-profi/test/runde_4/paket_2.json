@@ -1,0 +1,74 @@
+[
+ {
+  "id": 352,
+  "alter": 21,
+  "ziel": "Duales Studium",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 798,
+  "alter": 19,
+  "ziel": "Minijob/Nebenjob",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "gründlich, viele Rückfragen",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 356,
+  "alter": 34,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "Claude-Erfahren",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 960,
+  "alter": 37,
+  "ziel": "Jobwechsel",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 605,
+  "alter": 20,
+  "ziel": "Ausbildung",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 78,
+  "alter": 20,
+  "ziel": "Ausbildung",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "schweift gern ab",
+  "link": "Link funktioniert",
+  "geraet": "Tablet",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ }
+]

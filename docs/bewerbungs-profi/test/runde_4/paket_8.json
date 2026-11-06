@@ -1,0 +1,74 @@
+[
+ {
+  "id": 423,
+  "alter": 20,
+  "ziel": "Duales Studium",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 438,
+  "alter": 27,
+  "ziel": "Wiedereinstieg nach Pause",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 976,
+  "alter": 38,
+  "ziel": "Wiedereinstieg nach Pause",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 7,
+  "alter": 25,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 834,
+  "alter": 20,
+  "ziel": "Ausbildung",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "Link funktioniert",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 215,
+  "alter": 19,
+  "ziel": "Ausbildung",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "Link funktioniert",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ }
+]

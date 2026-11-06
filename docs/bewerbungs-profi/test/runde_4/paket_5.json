@@ -1,0 +1,74 @@
+[
+ {
+  "id": 158,
+  "alter": 36,
+  "ziel": "Jobwechsel",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "Tippfehler, umgangssprachlich",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "Abbruch Ausbildung/Studium",
+  "assessment_center": false
+ },
+ {
+  "id": 680,
+  "alter": 22,
+  "ziel": "Duales Studium",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link funktioniert",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 226,
+  "alter": 20,
+  "ziel": "Ausbildung",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "schweift gern ab",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 708,
+  "alter": 21,
+  "ziel": "Jobwechsel",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 884,
+  "alter": 26,
+  "ziel": "Jobwechsel",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 140,
+  "alter": 29,
+  "ziel": "Praktikum/Werkstudent",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": true
+ }
+]
