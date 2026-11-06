@@ -1,5 +1,44 @@
 # Changelog – bewerbungs-profi
 
+## v5 (06.11.2026) – nach Testrunde 4 (48 Sitzungen, 87,5 % zufrieden; Fehlerliste Runde 4, Transkripte 15, 72, 158, 423, 605, 651, 654, 976)
+
+### Kernprinzip „Fakten wörtlich, Formulierung frei“ (Hauptursache, 22×)
+- v4 verlangte fast jedes Inhaltswort im Nutzer-Wortlaut → „seh ich“, „Ich red gern“, „Kumpel“, „Ubahn“, „Sa und So“, „Kfz Mechatroniker“ und Tippfehler landeten im Anschreiben, korrektes Deutsch wurde abgelehnt, 3–4 Prüfrunden je Text.
+- Neu `scripts/sprachlib.py`: `herkunft.py`/`fakten_check.py` prüfen nur noch **Behauptungs-Bausteine** (Zahlen, Daten, Dauern, Eigennamen, Abschlüsse/Niveaus, Tätigkeiten/Fähigkeiten, Häufigkeit/Intensität, Gefühle/Motive, Kontakt zur Firma). Funktions- und Stilwörter sind frei.
+- Erkannt werden: Lemma (Endungen, Partizip II, trennbare Verben auch getrennt im Satz – „rief … an“, „bereite … vor“ –, starke Verben, Kompositum-Kopf/-Teilwort), Zahlwörter inkl. Ordinalzahlen („fünften“ ↔ „5.“), Datums-Normalisierung („01.02.2027“ ↔ „1.2.27“ ↔ „1. Februar 2027“), Wörterbuch Umgangssprache → Standard (114 Einträge: red, seh, find, hab, nix, was → etwas, ubahn, sa/so, mo-fr, kumpel, mega, cool, bissl, kfz, azubi …), gerichtete Synonyme („leute“ → Kunden, „bescheid sagen“ → informieren; nie Kunden → Kollegen), Tippfehler-Toleranz (Levenshtein ≤ 2 ab 6 Zeichen, nicht für Zahlen/Monate/Wochentage).
+- Zitat = Zeiger: belegt werden Wörter aus Zitat **und** ganzer zitierter Antwort (inkl. gewählter Optionen, bestätigter Werte); Zitat-Abgleich ignoriert Groß/klein, Satzzeichen, Bindestriche, „…“ erlaubt.
+- Strenger, wo es zählt: In Ich-Teilsätzen zählen nur Nutzer-Quellen (Anzeige + beliebiges Zitat belegt keine Ich-Aussage mehr); „spricht mich an“ ist ein Motiv (ein „Ja“ zum Firmenfakt reicht nicht); Wohnort/Straße sind nicht mehr frei (Hotel „in München“); „sehr“, „gut“, „gern“ sind Behauptungen; Anrede-Wörter nicht mehr frei.
+- Ergebnis (Tests): 7 echte Transkript-Fälle (15, 72, 158, 605, 651, 654, 976) – umgangssprachlicher Wortlaut → professionelles Anschreiben – ergeben **0 ❌ in einem Lauf**; 18 Erfindungs-Fälle aus allen vier Fehlerlisten werden alle gefunden.
+
+### Stil-Check und Satztrenner
+- `endcheck.py` (alle Text-Typen) und `fakten_check.py` (vor der Freigabe): Umgangssprache, Chat-Kürzel, Tippfehler (Liste + Abgleich mit der Anzeige), „Sa und So“/„Mo-Fr“, doppelte Wörter, wiederholte Satzteile, kleiner Satzanfang → ⚠️ mit Standard-Vorschlag. Nomen wie „4 Grad“ lösen keinen Fehlalarm aus. Verbzweitstellung wird bewusst nicht geprüft (zu viele Fehlalarme ohne echten Parser).
+- `textlib.saetze()`: gemeinsamer Satztrenner für herkunft, fakten_check, akte, sprachlib – Ordinalzahlen („5. Semester“, „1. März“, „12. Klasse“), Abkürzungen (Dr., z. B., Str., ca., Nr. …), Daten und Raumnummern („2.14“) beenden keinen Satz.
+
+### Bestätigungen, Belege, Fehlalarme
+- „a“, „1a“, „a passt“ auf „a) Ja b) Nein“ = Ja; `bestaetigt` als Liste; Wert-Teile müssen in der Frage stehen, Reihenfolge egal („Deutsch Muttersprache“ ↔ „Deutsch ist deine Muttersprache“). Bestätigte Werte gelten überall (herkunft + fakten_check).
+- Titel/Funktionen aus Anzeige/Einladung (Dr., Teamleitung, Ausbildungsleitung) sind keine Nutzerangaben → kein ❌/⚠️. „Ausbildungsjahr“ aus zugestimmtem Firmenfakt im Sie-Teilsatz → ok.
+- Mail-Vorlagen aus abschicken.md (auch mit Arbeitszeugnis, „letzten zwei Zeugnisse“, Starttermin, Telefon) gehen ohne herkunft durch; `"vorlage": true` markiert Vorlagensätze mit Zusatz.
+- „Deutsch (Muttersprache)“ bzw. jede Sprache im Lebenslauf ohne Nutzerangabe → ❌; Sprachen-Frage inkl. Muttersprache ist Pflicht.
+- Abgeleitete Zeitangaben („letztes Jahr“, „letzten Sommer“) → nur ⚠️ bis zur Bestätigung. Abgerundete Dauer („sieben Jahre“ bei 7 J. 2 M.) ok, aufgerundet weiter ❌. „Kfz-Mechatroniker“ ↔ „kfz mechatroniker“, „eingelernt“ ↔ „einlernen“ ohne Fehlalarm.
+- Krankenkasse/Krankenhaus ≠ Gesundheit; Elternzeit, Mutterschutz, Kita-Abholung = privat.
+- Neu ⚠️: Einschränkung verloren („b manchmal“ → „Preise verhandelt“), Lebenslauf-Begriff nicht im Wortlaut, offener Änderungswunsch. Woher-Liste ohne interne Nummern („deine/Ihre Worte: …“).
+
+### Dateien, Lebenslauf, Spickzettel
+- `--einzeln`/`--buendeln`/Gesamt-PDF mit `--profil`: Word-Fassungen wandern nach `bearbeitbar/` – je Unterlage genau eine Datei im Ordner; neue Fassung holt die alte Word-Datei von dort nach `alt/`.
+- Lebenslauf: Lücken aus `profil.luecken[{zeitraum, bezeichnung}]` automatisch chronologisch (privater `grund` nie gedruckt); Zeitraum > 17 Zeichen → kurzer Teil in die Datumsspalte, Rest als Notiz; Enddatum in der Zukunft → Hinweis (auch `endcheck --profil`).
+- Spickzettel: Vorstellungsdauer je Übung (nicht die 30 Min. der Gruppenübung), Raum 2.14 ist kein Datum, Bestätigungsfrist kein Termin, „Bitte bring …“ kein Ort, Lücken-/Wechselgrund-Fragen auch ohne Wort „Lücke“, „12. Klasse“ bleibt, A5 rückt weiter zusammen (Mitbringen einzeilig) statt fast leerer Seite 2; Kernbotschaften, Vorstellung, Antworten und Beispiele werden gegen den Wortlaut geprüft (❌ „Spickzettel-Wortlaut“).
+- Zugesagte Änderungen: `meta.offene_aenderungen` – `unterlagen_erstellen.py` erzeugt erst nach dem Abhaken (Exit 3), Akte und `--lesen` listen sie.
+- Akte schon vor dem Namen (nach dem Berufstest: `Bewerbungsakte_<Datum>.txt`); `akte.py --lesen ORDNER` sucht Uploads auch im angegebenen Ordner und meldet 🔗 bei umbenannten Dateien.
+- endcheck: „Quereinstieg“, Semester-/Referenzwörter im Stellentitel muss der Betreff nicht wiederholen; Kurzanschreiben einheitlich 150–200 Wörter (gezählt ab der Anrede).
+
+### Ablauf, Budget, Fachliches
+- SKILL.md neu (148 Zeilen): Kernprinzip und Standarddeutsch ganz oben, Beispiele „Wortlaut → professioneller Satz“ und „neue Behauptung statt Umformulierung“, „a“ als Ja.
+- Budget: Minijob ≤ 12 (eine Freigabe für Text + Lebenslauf, Checkliste 3 Zeilen), AC-Pfad ≤ 40. Nie „nur noch eine Frage“, wenn es nicht stimmt; dünne Antworten offen ansprechen. Knappe Nutzer bekommen die Fragen direkt als Liste. Chatwechsel nur, wenn nötig (nie nach Frage 1). Kontaktfrage mit E-Mail; Portal-Felder im Schnellmodus nur bei Formular-Bewerbung; AC angekündigt → Übersicht anbieten; Stil-Wünsche direkt umsetzen.
+- Fachlich: Tier-Berufe und Zweiradmechatroniker/in im Berufstest; „Wir duzen uns“ (Anschreiben höflich-neutral, Du nur bei ausdrücklichem Duzen); Werkstudent über 30 (studentische KV endet, Werkstudentenprivileg laut Barmer ohne Altersgrenze, Quellen Barmer Stand 22.09.2026, Verbraucherzentrale Stand 05.11.2024); Abschweifen im Rollenspiel kurz zurückholen.
+
+### Tests
+- Testsuite 253 → 379 Tests (`bewerbungs-profi-tests/run_tests.py` + `fixtures/v5_faelle.py`, schreibt nur unter `/tmp/bp_test5/`), inkl. Sichtprüfung von Anschreiben-, Lebenslauf- und Spickzettel-PDF (A5) als Bild.
+
 ## v4 (06.11.2026) – nach Testrunde 3 (48 Sitzungen, 83 % zufrieden; Fehlerliste 1–6, Transkripte 135, 227, 233, 319, 500, 530, 920, 941)
 
 ### Satz-Herkunft statt Marker-Liste (Fehler 1)

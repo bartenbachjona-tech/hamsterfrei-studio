@@ -1,6 +1,6 @@
 # Bewerbungs-Profi: so richtest du den Skill ein
 
-Danke für deinen Kauf! 🐹 In 2 Minuten ist der Skill in deinem Claude-Konto. (Version 4)
+Danke für deinen Kauf! 🐹 In 2 Minuten ist der Skill in deinem Claude-Konto. (Version 5)
 
 ## Was du brauchst
 - Ein Claude-Konto auf claude.ai. Free, Pro und Max funktionieren alle. Laut den Nutzungsbedingungen von Claude musst du mindestens 18 Jahre alt sein.
@@ -14,18 +14,18 @@ Danke für deinen Kauf! 🐹 In 2 Minuten ist der Skill in deinem Claude-Konto. 
 4. Wähle **bewerbungs-profi.zip** aus.
 5. Fertig. Der Skill steht jetzt in deiner Liste und ist eingeschaltet.
 
-Du hast schon Version 1, 2 oder 3? Lösch den alten Skill in der Liste und lade die neue ZIP hoch. Deine alte Bewerbungsakte funktioniert weiter.
+Du hast schon Version 1, 2, 3 oder 4? Lösch den alten Skill in der Liste und lade die neue ZIP hoch. Deine alte Bewerbungsakte funktioniert weiter.
 
 ## Loslegen
 Starte einen neuen Chat und schreib zum Beispiel:
 
 > „Hilf mir bei meiner Bewerbung.“
 
-Claude fragt dich zuerst, wo du stehst. Schickst du gleich einen Link oder eine Einladung, legt es direkt damit los. Ob du am Handy oder am Computer bist, musst du nicht sagen – du bekommst immer PDFs und zu jeder Datei zwei kurze Zeilen, wie du sie am Handy oder am PC speicherst. Danach führt es dich Schritt für Schritt. **Du bekommst immer nur eine Frage auf einmal**, mit Beispielen und Zählung („Frage 3 von 10“). Was du schon gesagt hast (auch ein 👍), wird nicht noch einmal gefragt. Unten in der Nachricht steht kurz, was als Nächstes passiert und was du tun musst.
+Claude fragt dich zuerst, wo du stehst. Schickst du gleich einen Link oder eine Einladung, legt es direkt damit los. Ob du am Handy oder am Computer bist, musst du nicht sagen – du bekommst immer PDFs und zu jeder Datei zwei kurze Zeilen, wie du sie am Handy oder am PC speicherst. Danach führt es dich Schritt für Schritt. **Du bekommst immer nur eine Frage auf einmal**, mit Beispielen und Zählung („Frage 3 von 10“). Antwortest du lieber kurz, bekommst du die Fragen gleich als kleine Liste. Bei Auswahlfragen reicht ein Buchstabe – „a“ heißt auch „Ja“. Was du schon gesagt hast (auch ein 👍), wird nicht noch einmal gefragt. Unten in der Nachricht steht kurz, was als Nächstes passiert und was du tun musst.
 
 Du weißt noch gar nicht, was du machen willst? Schreib „Ich weiß noch nicht, was ich werden will“. Dann bekommst du einen **kurzen Berufstest**: 12 kurze Aussagen, die du in einer einzigen Nachricht beantwortest (z. B. „1a 2c 3b …“). Danach gibt es 3 Berufsvorschläge. Für Minijob oder Praktikum geht es noch schneller, mit 3–5 Fragen.
 
-**Minijob, Nebenjob oder Probearbeiten?** Dafür gibt es einen Kurzweg: höchstens 5 Fragen, Lebenslauf und Text in etwa 10 Nachrichten. Fürs Probearbeiten bekommst du eine kurze Übersicht und auf Wunsch zwei Übungsfragen.
+**Minijob, Nebenjob oder Probearbeiten?** Dafür gibt es einen Kurzweg: höchstens 5 Fragen, Lebenslauf und Text in etwa 10–12 Nachrichten, mit einer gemeinsamen Freigabe. Fürs Probearbeiten bekommst du eine kurze Übersicht und auf Wunsch zwei Übungsfragen.
 
 ## Die 9 Schritte
 Sag einfach, was du brauchst, oder nenn die Nummer:
@@ -44,7 +44,7 @@ Sag einfach, was du brauchst, oder nenn die Nummer:
 Die Nachrichten sind im kostenlosen Claude begrenzt. Darum plant Claude am Anfang mit dir, z. B.:
 **Chat 1:** Stelle + deine Angaben · **Chat 2:** Lebenslauf, Anschreiben, Abschicken · **Chat 3:** Gespräch üben.
 
-Nach jedem Schritt (und zwischendurch) bekommst du deine **Bewerbungsakte** als `.txt`-Datei. Sie öffnet sich auf jedem Handy und PC. Wenn Claude es vorschlägt, starte einen neuen Chat, lade die Akte hoch und schreib „Weiter mit meiner Bewerbung“. So geht nichts verloren. Nimm immer die **neueste** Akte (Datum und Uhrzeit stehen im Dateinamen) und immer die **.txt**, nicht eine PDF. Hat dein Handy sie umbenannt (z. B. „Bewerbungsakte (1).txt“), ist das kein Problem. Oben in der Akte steht, welche Dateien (z. B. Zeugnisse, Foto) du im neuen Chat noch einmal hochladen solltest – auch die findet Claude, wenn sie anders heißen.
+Nach jedem Schritt (und zwischendurch – schon nach dem Berufstest) bekommst du deine **Bewerbungsakte** als `.txt`-Datei. Einen neuen Chat schlägt Claude nur vor, wenn es wirklich nötig ist. Sie öffnet sich auf jedem Handy und PC. Wenn Claude es vorschlägt, starte einen neuen Chat, lade die Akte hoch und schreib „Weiter mit meiner Bewerbung“. So geht nichts verloren. Nimm immer die **neueste** Akte (Datum und Uhrzeit stehen im Dateinamen) und immer die **.txt**, nicht eine PDF. Hat dein Handy sie umbenannt (z. B. „Bewerbungsakte (1).txt“), ist das kein Problem. Oben in der Akte steht, welche Dateien (z. B. Zeugnisse, Foto) du im neuen Chat noch einmal hochladen solltest – auch die findet Claude, wenn sie anders heißen.
 
 ## Am Handy
 - Du bekommst immer **PDFs**, die sich auf jedem Handy öffnen. Je Unterlage liegt nur **eine** Datei bereit – keine doppelten Lebensläufe.
@@ -52,6 +52,7 @@ Nach jedem Schritt (und zwischendurch) bekommst du deine **Bewerbungsakte** als 
 - **Hochladen:** „+“ bzw. Büroklammer im Chat → Datei oder Foto wählen.
 - **Link geht nicht auf?** Mach 1–3 Screenshots von der ganzen Anzeige und schick sie (in Job-Apps kopiert „Teilen“ oft nur den Link).
 - **Zeugnisse:** mit der Scan-Funktion fotografieren (iPhone: Notizen-App → Kamera → „Dokumente scannen“; Android: Google Drive → „+“ → „Scannen“). Normale Fotos gehen auch, iPhone-Fotos (HEIC) eingeschlossen.
+- Wenn du Einzeldateien oder eine Gesamt-PDF bekommst, liegen die Word-Dateien im Unterordner „bearbeitbar“ – im Hauptordner bleibt je Unterlage genau die eine Datei zum Hochladen.
 - Deine Arbeitsdateien heißen z. B. `Lebenslauf_…_AKTUELL.pdf`. Gibt es eine neue Fassung, lade sie neu herunter und lösch die alte. Zum Hochladen sagt dir Claude jedes Mal genau, welche Datei(en) du nimmst.
 
 ## Am Computer
@@ -59,9 +60,11 @@ Nach jedem Schritt (und zwischendurch) bekommst du deine **Bewerbungsakte** als 
 - **Speichern:** Datei im Chat anklicken → „Herunterladen“ (landet im Ordner „Downloads“). **Hochladen:** Büroklammer bzw. „+“ im Eingabefeld, oder Datei ins Chatfenster ziehen.
 
 ## Ehrlich gesagt
-- **Claude erfindet nichts.** Deine Antworten werden **wörtlich** gespeichert. Lebenslauf und Anschreiben entstehen nur daraus, aus der Anzeige und deinen Zeugnissen. Vor jeder Freigabe prüft ein Programm jede Zahl, jedes Datum, jeden Monat, jeden Namen und jeden Abschluss gegen deinen Wortlaut: Hast du „2018“ gesagt, steht da nicht plötzlich „09/2018“. Was du nicht gesagt hast, fragt Claude nach oder streicht es. Was noch fehlt, wird gelb mit **[PRÜFEN: …]** markiert.
+- **Deine Fakten, gutes Deutsch.** Du kannst schreiben, wie du redest – mit Tippfehlern, Abkürzungen, „nix“ oder „Sa und So“. Claude macht daraus ein Anschreiben in sauberem Standarddeutsch, wie von einem guten Bewerbungscoach. Die **Inhalte** bleiben aber genau deine: Aus „Englisch gut“ wird nie „sehr gutes Englisch“, aus „find ich cool“ nie „begeistert mich schon immer“.
+- **Claude erfindet nichts.** Deine Antworten werden **wörtlich** gespeichert. Lebenslauf und Anschreiben entstehen nur daraus, aus der Anzeige und deinen Zeugnissen. Vor jeder Freigabe prüft ein Programm jede Zahl, jedes Datum, jeden Namen, jeden Abschluss, jede Tätigkeit und jedes „täglich“, „sehr“ oder „macht mir Spaß“ gegen deinen Wortlaut: Hast du „2018“ gesagt, steht da nicht plötzlich „09/2018“. Was du nicht gesagt hast, fragt Claude nach oder streicht es. Was noch fehlt, wird gelb mit **[PRÜFEN: …]** markiert.
 - **Jeder Satz über dich hat eine Quelle.** Beim Anschreiben, bei Mail-, Formular- und WhatsApp-Texten siehst du eine kurze **„Woher“-Liste**: Satzanfang → deine eigenen Worte. Ein Programm prüft, dass in jedem Satz nur steht, was du wirklich gesagt hast. Sätze wie „Ich lerne schnell“ oder „Das macht mir Spaß“ kommen nur rein, wenn du das so gesagt hast – sonst fragt Claude dich kurz.
-- Private Dinge (Gesundheit, Familie) kommen nur rein, wenn du ausdrücklich Ja sagst – und Claude rät meist davon ab.
+- Private Dinge (Gesundheit, Familie) kommen nur rein, wenn du ausdrücklich Ja sagst – und Claude rät meist davon ab. Eine Lücke steht im Lebenslauf nur mit dem Wort, das du ausgesucht hast (z. B. „Bewerbungsphase“), nie mit dem privaten Grund.
+- Sagt Claude dir eine Änderung zu, wird sie notiert und vor dem nächsten PDF eingebaut – nichts geht unter.
 - Du siehst jeden Text **zuerst im Chat**. Erst nach deinem „Ja“ wird die Datei erstellt.
 - Infos über die Firma aus dem Internet zeigt Claude dir mit Quelle. Ins Anschreiben kommen sie nur, wenn du zustimmst.
 - Nichts wird ohne dein „Ja“ fertig gemacht oder abgeschickt. Abschicken tust du selbst.

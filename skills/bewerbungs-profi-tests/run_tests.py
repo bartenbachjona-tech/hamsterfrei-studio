@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
-"""Tests für bewerbungs-profi v4 – schreibt nur unter /tmp/bp_test4/work.
-Enthält die angepassten v2/v3-Tests + Regressionen aus den Fehlerlisten Runde 1, 2 und 3
-(Satz-Herkunft, Normalisierungs-Wörterbuch, Spickzettel v4, Datei-Fixes)."""
+"""Tests für bewerbungs-profi v5 – schreibt nur unter /tmp/bp_test5/work.
+Start: Ordner bewerbungs-profi-tests nach /tmp/bp_test5 kopieren (fixtures/ mit fall_284.json und v5_faelle.py), dann
+    python3 /tmp/bp_test5/run_tests.py
+Enthält die angepassten v2–v4-Tests + Regressionen aus den Fehlerlisten Runde 1–4 und den v5-Block 16:
+7 Transkript-Fälle „Nutzerwortlaut umgangssprachlich → professionelles Anschreiben“ (je EIN Lauf, 0 ❌),
+18 Erfindungs-Fälle (alle ❌), Lemma/Zahlwort/Datum/Wörterbuch/Tippfehler, Satztrenner, „a“ als Ja, Stil-Check,
+Spickzettel-Fehlalarme, Lebenslauf-Lücken/Zeitraum/Zukunft, offene Änderungswünsche, bearbeitbar/, Akte ohne Namen."""
 import copy
+import datetime
 import json
 import os
 import re
@@ -12,7 +17,7 @@ import sys
 import zipfile
 
 S = "/home/claude/hamsterfrei-studio/skills/bewerbungs-profi/scripts"
-W = "/tmp/bp_test4/work"
+W = "/tmp/bp_test5/work"
 sys.path.insert(0, S)
 import textlib  # noqa: E402
 
@@ -224,8 +229,8 @@ rc, o = fc(d, "weich.json", "--woher")
 check("v4 Motivationssatz ohne Quelle → ❌ (Herkunft, nicht nur ⚠️)", rc == 1 and "Genau so möchte" in o and "kein Problem" in o
       and "Satz ohne Quelle" in o, o)
 check("v4 Eigenschaft „zuverlässig“ ohne Quelle → ❌", "sehr zuverlässig" in "".join(rot(o)), o)
-check("v4 Woher-Liste: belegter Satz → deine Worte (Nr.), unbelegter → ❓", "→ deine Worte: „Die Abrechnung macht mir Spaß“ (Nr. 5)" in o
-      and "❓ „Genau so möchte ich später" in o, o)
+check("v5 Woher-Liste: belegter Satz → deine Worte (ohne interne Nr.), unbelegter → ❓", "→ deine Worte: „Die Abrechnung macht mir Spaß“" in o
+      and "(Nr." not in o.split("# Fakten-Check")[0] and "❓ „Genau so möchte ich später" in o, o)
 # Fehlalarme v2 (Namen)
 d = beispiel()
 d["anschreiben"]["absaetze"].insert(2, "Für ein Gespräch nehme ich mir gern ein paar Minuten Zeit und erledige auch mal Ihren Sachen zuliebe Extras.")
@@ -319,10 +324,10 @@ rc, o = fc(d, "legacy.json")
 check("v2-JSON ohne rohtext: läuft, warnt „Kein Wortlaut“", rc in (0, 1) and "Kein Wortlaut" in o and "LEGACY" in o, o)
 
 # Realistischer Fall (Transkript 284): knappe Kleinbuchstaben-Antworten, Auswahl „a und b“, Lücke → 0 ❌
-F284 = json.load(open("/tmp/bp_test4/fixtures/fall_284.json", encoding="utf8"))
+F284 = json.load(open("/tmp/bp_test5/fixtures/fall_284.json", encoding="utf8"))
 rc, o = fc(copy.deepcopy(F284), "f284.json", "--woher")
 check("Fall 284: ehrliche Texte aus knappen Antworten → 0 ❌", rc == 0 and not rot(o), o)
-check("Fall 284: Auswahl-Antwort „a und b“ belegt Optionstext (Woher → Nr. 9)", "„Übernahme bei guten Leistungen“ (Nr. 9)" in o, o)
+check("Fall 284: Auswahl-Antwort „a und b“ belegt Optionstext (Woher ohne Nr.)", "„Übernahme bei guten Leistungen“" in o and "(Nr. 9)" not in o, o)
 check("Fall 284: Lücken-Monate aus Nachbarmonaten → nur ⚠️", "aus dem Nachbarmonat" in o, o)
 check("Fall 284: „Grundkenntnisse“ aus „bisschen“ → nur ⚠️", "⚠️ [lebenslauf (JSON)] Niveau: Grundkenntnisse" in o, o)
 d = copy.deepcopy(F284); d["lebenslauf"]["kenntnisse"][1]["wert"] = "Excel (sehr gute Kenntnisse)"
@@ -718,7 +723,7 @@ d["profil"]["anlagen"] = [{"datei": f"{W}/up/Zeugnis_10.jpg", "bezeichnung": "Ze
 rc, o = fc(d, "hzeug2.json")
 check("v4 Zeugnis nur als Foto → Inhalt erst bestätigen lassen (❌)", rc == 1 and "erst beim Nutzer bestätigen" in o, o)
 rc, o = run(f"{S}/herkunft.py", speichern(beispiel(), "hcli.json"))
-check("v4 herkunft.py CLI: Beispiel 0 ❌ + Woher-Liste „Satzanfang → deine Worte“", rc == 0 and "→ deine Worte:" in o and "(Nr. 3)" in o, o)
+check("v5 herkunft.py CLI: Beispiel 0 ❌ + Woher-Liste „Satzanfang → deine Worte“ ohne Nr.", rc == 0 and "→ deine Worte:" in o and "(Nr." not in o, o)
 rc, o = run(f"{S}/fakten_check.py", speichern(beispiel(), "hwoher.json"), "--woher")
 wl = [z for z in o.split("---")[0].splitlines() if z.startswith(("–", "❓"))]
 check("v4 Woher-Liste kompakt: eine Zeile je Satz, Satzanfang ≤ 5 Wörter", wl and all(len(z.split("“")[0].split()) <= 7 for z in wl), wl)
@@ -807,6 +812,7 @@ check("Wörterbuch: Monats-Tippfehler „febuar“ → februar", "februar" in te
 SP = beispiel()
 SP["meta"]["anrede_form"] = "sie"
 SP["profil"]["rohtext"] += [{"nr": 12, "frage": "Über sich", "antwort": "Mittlere Reife 07/2026, seit 09/2025 Kasse, will Zahlen und Kunden"},
+                            {"nr": 14, "frage": "Schwäche?", "antwort": "fehler will ich nicht, darum prüf ich lieber zweimal"},
                             {"nr": 13, "frage": "Fachfrage Skonto", "antwort": "skonto ist ein rabatt wenn man schnell zahlt, meist 2 prozent"}]
 SP["gespraech"].update({
     "termin": "20.01.2027, 9:00 Uhr", "art": "Assessment Center", "ort": "Industriestraße 4, Ingolstadt", "anrede": "sie",
@@ -965,6 +971,303 @@ check("v4 fakten_check prüft WhatsApp-Text mit (neutraler Text → 0 ❌)", rc 
 subprocess.run(["pdftoppm", "-r", "70", "-png", "-f", "1", "-l", "1", LL, f"{W}/ll_bild"])
 check("Lebenslauf- und Spickzettel-PNG für die Sichtprüfung erzeugt", any(f.startswith("ll_bild") for f in os.listdir(W))
       and any(f.startswith("sp4_bild") for f in os.listdir(W)), os.listdir(W))
+
+# ================================================================ 16 v5: Fakten wörtlich, Formulierung frei
+sys.path.insert(0, "/tmp/bp_test5/fixtures")
+import v5_faelle as V5  # noqa: E402
+import sprachlib  # noqa: E402
+up976 = f"{W}/up/Arbeitszeugnis_Weigl.txt"
+open(up976, "w", encoding="utf8").write(V5.F976["upload"])
+# 16a: 7 Transkript-Fälle (umgangssprachlicher Wortlaut → professionelles Anschreiben) – je EIN Lauf, 0 ❌
+for k, f in V5.EHRLICH.items():
+    d = V5.profil(f, beispiel(), up976 if "upload" in f else None)
+    rc, o = fc(d, f"v5_ehrlich_{k}.json", "--woher")
+    check(f"v5 Transkript {k}: professionelles Anschreiben aus Umgangssprache → 0 ❌ in einem Lauf", rc == 0 and not rot(o), o)
+    check(f"v5 Transkript {k}: Woher-Liste ohne interne Nummern", "(Nr." not in o.split("# Fakten-Check")[0]
+          and ("Ihre Worte" if f.get("anrede_form") == "sie" else "deine Worte") in o, o[:600])
+    check(f"v5 Transkript {k}: kein Stil-⚠️ im professionellen Text", "Stil" not in o, [z for z in o.splitlines() if "Stil" in z])
+# Anschreiben aus Fall 158 als PDF: endcheck ohne Stil-Befund, Seite als Bild
+d158 = V5.profil(V5.F158, beispiel())
+d158["person"].update({"strasse": "Lindenweg 7", "plz_ort": "86356 Neusäß", "telefon": "0171 5583920", "email": "dennis.hartl87@gmx.de"})
+P158 = speichern(d158, "v5_158_datei.json")
+rc, o = run(f"{S}/unterlagen_erstellen.py", P158, "--ausgabe", f"{W}/out_v5", "--nur", "anschreiben")
+AN158 = f"{W}/out_v5/" + [f for f in os.listdir(f"{W}/out_v5") if f.startswith("Anschreiben") and f.endswith(".pdf")][0]
+rc, o = run(f"{S}/fakten_check.py", P158, AN158)
+check("v5 Fall 158 als PDF: fakten_check mit Datei → 0 ❌ (Abgleich ok)", rc == 0 and not rot(o), o)
+rc, o = run(f"{S}/endcheck.py", AN158, "--typ", "anschreiben", "--profil", P158)
+check("v5 Fall 158 als PDF: endcheck 0 ❌, kein Stil-⚠️, 1 Seite", rc == 0 and "Stil:" not in o and "Seitenzahl: 1" in o, o)
+subprocess.run(["pdftoppm", "-r", "60", "-png", "-f", "1", "-l", "1", AN158, f"{W}/v5_an158_bild"])
+
+# 16b: Erfindungen aus allen vier Fehlerlisten werden gefunden
+for i, (name, basis, satz, herk, erwartet) in enumerate(V5.ERFUNDEN):
+    f = V5.EHRLICH[basis]
+    d = V5.profil(f, beispiel(), up976 if "upload" in f else None)
+    d["anschreiben"]["absaetze"].insert(1, satz)
+    if herk:
+        d["herkunft"].append(herk)
+    rc, o = fc(d, f"v5_erf_{i}.json")
+    check(f"v5 Erfindung erkannt: {name}", rc == 1 and all(any(e in z for z in rot(o)) for e in erwartet), "\n".join(rot(o)) or o)
+check("v5 mind. 10 Erfindungs- und 6 Umgangssprache-Fälle", len(V5.ERFUNDEN) >= 10 and len(V5.EHRLICH) >= 6, "")
+
+# 16c: Bausteine – Lemma, Partizip, trennbare Verben, Zahlwörter, Daten, Wörterbuch, Tippfehler
+Q = sprachlib.Quelle(["azubis einarbeiten hat spaß gemacht, kommisioniert, sag dem chef bescheid, 15 min mit der ubahn, "
+                      "ab 1.2.27, jetzt 5. semester, schichtleitung, er hat angerufen"])
+for w in ("eingearbeitet", "Auszubildende", "kommissioniert", "informiere", "U-Bahn", "geleitet"):
+    check(f"v5 Deckung: „{w}“ aus dem Wortlaut erkannt", sprachlib.gedeckt(w, Q), w)
+for w in ("Kollegen", "täglich", "begeistert", "verhandelt", "Klasse"):
+    check(f"v5 Deckung: „{w}“ ist NICHT gedeckt", not sprachlib.gedeckt(w, Q), w)
+check("v5 Zahlwort „fünften“ ↔ „5.“", sprachlib.zahl_gedeckt("fünften", Q) == "ja" and sprachlib.zahl_gedeckt("siebten", Q) == "nein")
+check("v5 Datum „01.02.2027“ ↔ „1.2.27“", sprachlib.zahl_gedeckt("01.02.2027", Q) == "ja" and sprachlib.zahl_gedeckt("01.03.2027", Q) == "nein")
+check("v5 Umgangssprache-Wörterbuch ≥ 60 Einträge (red, seh, find, hab, nix, was, ubahn, sa, so, kumpel, mega, cool, bissl, kfz, azubi)",
+      len(sprachlib.UMGANGSSPRACHE) >= 60 and all(k in sprachlib.UMGANGSSPRACHE for k in
+      ("red", "seh", "find", "hab", "nix", "was", "ubahn", "sa", "so", "kumpel", "mega", "cool", "bissl", "kfz", "azubi")),
+      len(sprachlib.UMGANGSSPRACHE))
+check("v5 „sa und so“ → samstags/sonntags, „mo-fr“ → montags bis freitags",
+      "samstags" in sprachlib.standardisiere("nur sa und so") and "montag" in sprachlib.standardisiere("mo-fr früh")
+      and "sonntag" not in sprachlib.standardisiere("das war so gut"))
+check("v5 Levenshtein ≤ 2 nur ab 6 Zeichen", sprachlib.gedeckt("frühestens", sprachlib.Quelle(["frühstens"]))
+      and not sprachlib.gedeckt("Kasse", sprachlib.Quelle(["klasse"])))
+# Satztrenner (gemeinsam für herkunft, fakten_check, akte)
+for t, n_ in (("Ich bin im 5. Semester. Danach Praktikum.", 2), ("Anfangen kann ich am 1. März 2027.", 1),
+              ("Herr Dr. Huber wartet z. B. in Raum 2.14. Dann geht es los.", 2), ("Ab dem 2. Ausbildungsjahr betreuen Azubis Kunden.", 1),
+              ("Ich war in der 12. Klasse. Das war 2019. Danach kam die Lehre.", 3), ("Kurzpräsentation „Warum ich?“ (3 Min.), Gruppenaufgabe", 1)):
+    check(f"v5 Satztrenner: „{t[:40]}…“ → {n_} Satz/Sätze", len(textlib.saetze(t)) == n_, textlib.saetze(t))
+
+# 16d: Bestätigungen „a“, Liste, Wortreihenfolge
+check("v5 „a“ / „1a“ / „a passt“ auf „a) Ja b) Nein“ = Ja", all(textlib.ist_ja({"antwort": a_, "frage": "Stimmt das? a) Ja b) Nein"})
+                                                               for a_ in ("a", "1a", "a passt", "A)")) and not textlib.ist_ja(
+    {"antwort": "a und c", "frage": "a) Kasse b) Lager c) Büro"}))
+check("v5 bestätigter Wert ohne zusammenhängende Zeichenfolge („Deutsch ist deine Muttersprache?“)",
+      textlib.bestaetigte_werte({"antwort": "ja", "frage": "Deutsch ist deine Muttersprache – stimmt das?", "bestaetigt": "Deutsch Muttersprache"})
+      == ["Deutsch Muttersprache"])
+d = V5.profil(V5.F605, beispiel())
+d["lebenslauf"] = {"kurzprofil": "", "abschnitte": [{"titel": "Schulbildung", "eintraege": [
+    {"zeitraum": "07/2025", "titel": "Fachabitur Wirtschaft (Note 2,9)", "ort": "FOS Landshut", "punkte": []},
+    {"zeitraum": "07/2023", "titel": "Mittlere Reife", "ort": "", "punkte": []}]}], "kenntnisse": [{"label": "Sonstiges", "wert": "Führerschein Klasse B"}], "interessen": ""}
+rc, o = fc(d, "v5_a_ja.json")
+check("v5 Transkript 605: Monate aus Bestätigung mit „a“ (zwei Werte) → 0 ❌ im Lebenslauf", rc == 0 and "07/2023" not in "".join(rot(o)), o)
+
+# 16e: Deutsch-Muttersprache nie ohne Angabe; Titel aus Anzeige; Vorlagensätze; Privates
+d = V5.profil(V5.F605, beispiel())
+d["lebenslauf"] = {"kurzprofil": "", "abschnitte": [{"titel": "Schulbildung", "eintraege": [
+    {"zeitraum": "2025", "titel": "Fachabitur", "ort": "FOS Landshut", "punkte": []}]}],
+    "kenntnisse": [{"label": "Sprachen", "wert": "Deutsch (Muttersprache), Englisch"}], "interessen": ""}
+rc, o = fc(d, "v5_deutsch.json")
+check("v5 „Deutsch (Muttersprache)“ ohne Nutzerangabe → ❌ (Transkripte 72/158/423/976)", rc == 1 and "Sprache: Deutsch" in o and "Englisch" in o, o)
+d = V5.profil(V5.F654, beispiel())
+d["ziel"]["ansprechperson"] = "Frau Dr. Anna Pöllmann"
+d["ziel"]["anzeige_text"] += " Ihre Ansprechpartnerin: Frau Dr. Anna Pöllmann (Teamleitung Qualitätssicherung)."
+d["anschreiben"]["anrede"] = "Sehr geehrte Frau Dr. Pöllmann,"
+rc, o = fc(d, "v5_titel.json")
+check("v5 Titel/Funktion aus der Anzeige („Dr.“) in der Anrede → kein ❌", rc == 0 and "dr." not in "".join(rot(o)).lower(), o)
+d = V5.profil(V5.F976, beispiel(), up976)
+d["email"] = {"betreff": "Bewerbung als Sachbearbeiterin Einkauf in Teilzeit",
+              "text": "Sehr geehrter Herr Reiter,\n\nanbei sende ich Ihnen meine Bewerbung als Sachbearbeiterin Einkauf in Teilzeit ab dem 01.02.2027.\n"
+                      "Anschreiben, Lebenslauf und Arbeitszeugnis finden Sie in einer PDF im Anhang.\n"
+                      "Für Rückfragen erreichen Sie mich unter 0171 5520873.\n\nMit freundlichen Grüßen\nAndrea Wimmer"}
+d["person"]["telefon"] = "0171 5520873"
+rc, o = fc(d, "v5_mail976.json")
+check("v5 Transkript 976: Mail-Vorlage (Arbeitszeugnis, Starttermin) ohne herkunft → 0 ❌", rc == 0 and not rot(o), o)
+d["email"]["text"] = d["email"]["text"].replace("Anschreiben, Lebenslauf und Arbeitszeugnis", "Anschreiben, Lebenslauf und meine letzten zwei Zeugnisse")
+rc, o = fc(d, "v5_mail605.json")
+check("v5 Transkript 605: „… meine letzten zwei Zeugnisse finden Sie …“ → neutral, 0 ❌", rc == 0, o)
+d["email"]["text"] = d["email"]["text"].replace("Für Rückfragen", "Ich arbeite täglich mit SAP. Für Rückfragen")
+rc, o = fc(d, "v5_mail_erf.json")
+check("v5 Vorlage + eigene Behauptung („täglich mit SAP“) → ❌", rc == 1 and "täglich" in "".join(rot(o)), o)
+for satz, privat in (("Bei der Krankenkasse habe ich nachgefragt.", False), ("Nach meiner Elternzeit möchte ich wieder arbeiten.", True),
+                     ("Bis 16 Uhr kann ich arbeiten, weil ich danach mein Kind aus der Kita abhole.", True)):
+    d = V5.profil(V5.F651, beispiel())
+    d["anschreiben"]["absaetze"] = [satz]
+    d["herkunft"] = [V5.S(satz, (12, "ich hab dann bei der kasse nachgefragt"))]
+    d["profil"]["rohtext"].append(V5.R(30, "nach der elternzeit will ich wieder arbeiten, bis 16 uhr weil ich mein kind aus der kita abhole, kasse nachgefragt"))
+    d["herkunft"][0]["quellen"].append({"nr": 30, "zitat": "nach der elternzeit"})
+    rc, o = fc(d, "v5_privat.json")
+    check(f"v5 Privat-Erkennung: „{satz[:35]}…“ → {'❌ Privates' if privat else 'kein Privat-❌'}",
+          ("Privates" in o) == privat, o)
+# abgeleitete Jahreszahl („letztes Jahr“) → nur ⚠️
+d = V5.profil(V5.F158, beispiel())
+d["anschreiben"]["absaetze"][1] = d["anschreiben"]["absaetze"][1].replace("Im vergangenen Jahr", f"Im Jahr {datetime.date.today().year - 1}")
+for h in d["herkunft"]:
+    h["satz"] = h["satz"].replace("Im vergangenen Jahr", f"Im Jahr {datetime.date.today().year - 1}")
+rc, o = fc(d, "v5_abgeleitet.json")
+check("v5 Jahr aus „letztes jahr“ abgeleitet → ⚠️ bestätigen, kein ❌", rc == 0 and "abgeleitet" in o, o)
+
+# 16f: Lebenslauf – Kfz-Mechatroniker, Dauer abgerundet, eingelernt, Einschränkung, Lücke, Zeitraum, Zukunft
+d = V5.profil(V5.F158, beispiel())
+d["lebenslauf"] = {"kurzprofil": "", "abschnitte": [{"titel": "Berufserfahrung", "eintraege": [
+    {"zeitraum": "05/2007 – 06/2014", "titel": "Lagerhelfer, ab 2008 Staplerfahrer", "ort": "Spedition Kögel, Augsburg",
+     "punkte": ["Waren kommissioniert, Lkw be- und entladen", "Neue Mitarbeitende eingelernt"]}]},
+    {"titel": "Ausbildung", "eintraege": [{"zeitraum": "09/2005 – 03/2007", "titel": "Ausbildung zum Kfz-Mechatroniker (ohne Abschluss)",
+                                           "ort": "Autohaus Seitz, Augsburg", "punkte": []}]}],
+    "kenntnisse": [{"label": "Sprachen", "wert": "Deutsch"}], "interessen": ""}
+d["anschreiben"]["absaetze"][0] += " Sieben Jahre war ich bei der Spedition Kögel."
+d["herkunft"].append(V5.S("Sieben Jahre war ich bei der Spedition Kögel.", (20, "05/2007 – 06/2014"), (7, "spedition kögel")))
+rc, o = fc(d, "v5_ll158.json")
+check("v5 „Kfz-Mechatroniker“ (Nutzer: „kfz mechatroniker“) → kein Name-❌", "Mechatroniker" not in "".join(rot(o)), o)
+check("v5 „Sieben Jahre“ bei 7 J. 2 M. (abgerundet) → ok", "Dauer" not in "".join(rot(o)), o)
+check("v5 „eingelernt“ aus „einlernen“ → keine Aufwertungs-⚠️", "eingelernt" not in o, o)
+d["anschreiben"]["absaetze"][0] = d["anschreiben"]["absaetze"][0].replace("Sieben Jahre", "Acht Jahre")
+d["herkunft"][-1]["satz"] = "Acht Jahre war ich bei der Spedition Kögel."
+rc, o = fc(d, "v5_ll158b.json")
+check("v5 „Acht Jahre“ bei 7 J. 2 M. (aufgerundet) → ❌", rc == 1 and "Dauer" in o, o)
+d = V5.profil(V5.F976, beispiel(), up976)
+d["lebenslauf"] = {"kurzprofil": "", "abschnitte": [{"titel": "Berufserfahrung", "eintraege": [
+    {"zeitraum": "08/2008 – 03/2018", "titel": "Sachbearbeiterin Einkauf", "ort": "Weigl Elektrotechnik GmbH",
+     "punkte": ["Preise mit Lieferanten verhandelt", "Kunden am Telefon beraten"]}]}], "kenntnisse": [], "interessen": ""}
+rc, o = fc(d, "v5_ll976.json")
+check("v5 Transkript 976: „Preise verhandelt“ ohne „manchmal“ → ⚠️ Einschränkung weg", "Einschränkung weg" in o, o)
+check("v5 Lebenslauf-Tätigkeit nie gesagt („Kunden … beraten“) → ⚠️ Lebenslauf-Begriff", "Lebenslauf-Begriff" in o and "beraten" in o, o)
+# Lücke automatisch, langer Zeitraum, Zukunft
+d = V5.profil(V5.F72, beispiel())
+d["person"].update({"plz_ort": "93055 Regensburg", "telefon": "0157 31846620", "email": "mara.kessler@gmx.de"})
+d["profil"]["luecken"] = [{"zeitraum": "08/2025 – 12/2025", "bezeichnung": "Bewerbungsphase", "grund": "Pflege in der Familie"}]
+d["lebenslauf"] = {"kurzprofil": "", "abschnitte": [
+    {"titel": "Praktische Erfahrung", "eintraege": [{"zeitraum": "seit 01/2026", "titel": "Aushilfe Verkauf und Kasse (Minijob)", "ort": "Bäckerei Schmid", "punkte": []}]},
+    {"titel": "Schulbildung", "eintraege": [{"zeitraum": "07/2025", "titel": "Fachhochschulreife Wirtschaft", "ort": "FOS Regensburg", "punkte": []}]},
+    {"titel": "Weiterbildung", "eintraege": [{"zeitraum": "jährlich, zuletzt 03/2026", "titel": "HACCP-Schulung", "ort": "", "punkte": []},
+                                             {"zeitraum": "10/2026 – 07/2029", "titel": "Duales Studium", "ort": "", "punkte": []}]}],
+    "kenntnisse": [], "interessen": ""}
+Pl = speichern(d, "v5_luecke.json")
+rc, o = run(f"{S}/unterlagen_erstellen.py", Pl, "--ausgabe", f"{W}/out_v5ll", "--nur", "lebenslauf")
+llt = textlib.read_any(f"{W}/out_v5ll/Lebenslauf_Mara_Kessler_AKTUELL.pdf")
+check("v5 Lücke aus profil.luecken automatisch im Lebenslauf (Bezeichnung, nicht der private Grund)",
+      "Bewerbungsphase" in llt and "Pflege" not in llt and llt.index("seit 01/2026") < llt.index("Bewerbungsphase") < llt.index("Schulbildung"), llt)
+check("v5 langer Zeitraum gekürzt + Hinweis, Rest als Notiz", "zu lang für die Datumsspalte" in o and "zuletzt 03/2026" in llt and "jährlich" in llt, o)
+check("v5 Enddatum in der Zukunft → Hinweis „voraussichtlich“", "voraussichtlich" in o, o)
+rc, o = run(f"{S}/endcheck.py", f"{W}/out_v5ll/Lebenslauf_Mara_Kessler_AKTUELL.pdf", "--typ", "lebenslauf", "--profil", Pl)
+check("v5 endcheck --profil: Zeitraum zu lang + Zukunft gemeldet", "zu lang für die Datumsspalte" in o and "Zukunft" in o, o)
+spalte = [p_["text"].split("\t")[0] for p_ in textlib.read_docx(f"{W}/out_v5ll/Lebenslauf_Mara_Kessler_AKTUELL.docx")["paragraphs"]
+          if "\t" in p_["text"]]
+check("v5 Datumsspalte bleibt schmal (kein Zeitraum > 17 Zeichen vor dem Tab)", spalte and all(len(x) <= 17 for x in spalte)
+      and "zuletzt 03/2026" in spalte, spalte)
+subprocess.run(["pdftoppm", "-r", "60", "-png", "-f", "1", "-l", "1", f"{W}/out_v5ll/Lebenslauf_Mara_Kessler_AKTUELL.pdf", f"{W}/v5_ll_bild"])
+
+# 16g: Stil-Check im endcheck
+open(f"{W}/umgang.txt", "w", encoding="utf8").write(
+    "Sehr geehrte Frau Ortner,\nich red gern mit Leuten und find Logistik mega spannend. Mit der Ubahn bin ich in 15 Minuten da. "
+    "Mein Kumpel arbeitet bei Ihnen. Sa und So kann ich nix machen, vlt am Abend. Ich habe kommisioniert und die die Listen geprüft.\n"
+    "Mit freundlichen Grüßen\nMara Kessler\nmara.kessler@gmx.de")
+rc, o = run(f"{S}/endcheck.py", f"{W}/umgang.txt", "--typ", "anschreiben", "--firma", "Hollerith Logistik GmbH")
+for wort, vorschlag in (("red", "rede"), ("find", "finde"), ("mega", "sehr"), ("Ubahn", "U-Bahn"), ("Kumpel", "Freund"), ("nix", "nichts"),
+                        ("vlt", "vielleicht"), ("kommisioniert", "kommissioniert"), ("Sa und So", "samstags"), ("die die", "die")):
+    check(f"v5 endcheck Stil: „{wort}“ → ⚠️ mit Vorschlag „{vorschlag}“", any(wort in z and vorschlag in z for z in o.splitlines() if z.startswith("⚠️")), o)
+open(f"{W}/standard.txt", "w", encoding="utf8").write(
+    "Sehr geehrte Frau Ortner,\nmich interessiert, wie Waren vom Lager in den Laden gelangen. Mit der U-Bahn bin ich in 15 Minuten bei Ihnen. "
+    "Samstags und sonntags arbeite ich in der Bäckerei. Bis 4 Grad muss die Kühlung halten. Die Halt­estelle liegt nah.\n"
+    "Mit freundlichen Grüßen\nMara Kessler\nmara.kessler@gmx.de")
+rc, o = run(f"{S}/endcheck.py", f"{W}/standard.txt", "--typ", "anschreiben", "--firma", "Hollerith Logistik GmbH")
+check("v5 endcheck Stil: Standarddeutsch → kein Stil-⚠️ („4 Grad“, „Samstags“)", "Stil:" not in o, o)
+open(f"{W}/quer.txt", "w", encoding="utf8").write("Betreff: Bewerbung als Mitarbeiter Qualitätssicherung (m/w/d)\nSehr geehrte Frau Pöllmann,\n"
+                                                  "ich bin Bäcker.\nMit freundlichen Grüßen\nThomas Reischl\nthomas.reischl@t-online.de")
+rc, o = run(f"{S}/endcheck.py", f"{W}/quer.txt", "--typ", "anschreiben", "--firma", "Donautal Backwaren GmbH",
+            "--stelle", "Mitarbeiter Qualitätssicherung (m/w/d) – Quereinstieg")
+check("v5 endcheck: „Quereinstieg“ muss nicht in den Betreff", "Stellenbezeichnung" not in o, o)
+open(f"{W}/kurz2.txt", "w").write("Sehr geehrte Damen und Herren,\n" + "Wort " * 210 + "\nMit freundlichen Grüßen")
+rc, o = run(f"{S}/endcheck.py", f"{W}/kurz2.txt", "--typ", "kurzanschreiben")
+check("v5 Kurzanschreiben: Grenze und Meldung einheitlich 150–200 Wörter", "150–200" in o and "Wörter ab der Anrede" in o, o)
+
+# 16h: Spickzettel-Fehlalarme (Transkripte 72, 651) und Kernbotschaften gegen den Wortlaut
+SP5 = V5.profil(V5.F72, beispiel())
+SP5["profil"]["rohtext"].append(V5.R(30, "hab die listen angeboten"))
+SP5["profil"]["luecken"] = [{"zeitraum": "08/2025 – 12/2025", "bezeichnung": "Bewerbungsphase"}]
+SP5["gespraech"].update({
+    "termin": "11.02.2027, 8:30 Uhr", "art": "Assessment Center", "ort": "Schulungszentrum Hafenstraße 18", "gespraechspartner": "Frau Dr. Ortner (Ausbildungsleitung)",
+    "einladung_text": "Wir laden dich zum Auswahltag am 11.02.2027 um 8:30 Uhr ins Schulungszentrum Hafenstraße 18 ein, Raum 2.14. "
+                      "Ablauf: Kurzpräsentation „Warum ich?“ (3 Min.), Gruppenübung (30 Min.), Postkorb (45 Min.). "
+                      "Bitte bring deinen Personalausweis mit. Bitte bestätige deine Teilnahme bis 22.01.2027.",
+    "kernbotschaften": ["Samstags bereite ich in der Bäckerei die Vorbestellungen vor", "Ich habe die Listen angeboten",
+                        "In der 12. Klasse hatte ich Wirtschaft"],
+    "schwierige_fragen": [{"frage": "Was hast du zwischen Fachabi und Januar gemacht?", "antwort_final": "Ich habe mich beworben und keinen Platz bekommen."}],
+    "ac_uebungen": ["Kurzpräsentation „Warum ich?“", "Gruppenübung", "Postkorb"],
+    "mitbringen": ["Personalausweis", "Kugelschreiber", "Lebenslauf ausgedruckt", "Zeugnisse in Kopie", "Etwas zu trinken", "Notizblock", "Uhr"]})
+SP5["profil"]["rohtext"].append(V5.R(31, "in der 12. klasse hatte ich wirtschaft, beworben und keinen platz bekommen"))
+Psp5 = speichern(SP5, "v5_sp.json")
+rc, o = run(f"{S}/akte.py", Psp5, "--spickzettel", "--pdf", "--ausgabe", f"{W}/sp_v5")
+sp_v5 = open(f"{W}/sp_v5/Gespraech_Spickzettel_Hollerith-Logistik-GmbH_AKTUELL.txt", encoding="utf8").read()
+check("v5 Spickzettel: Bestätigungsfrist (22.01.) ist kein Termin-Fehlalarm", "22.01" not in o, o)
+check("v5 Spickzettel: „Raum 2.14“ ist kein Datum", "2.14" not in o, o)
+check("v5 Spickzettel: „Bitte bring …“ ist kein Ort", "„bring" not in o and "Ort laut Einladung" not in o, o)
+check("v5 Spickzettel: Lücken-Frage ohne Wort „Lücke“ erkannt", "profil.luecken vorhanden" not in o, o)
+check("v5 Spickzettel: Vorstellungsdauer 3 Min. (nicht 30 Min. der Gruppenübung)", "(3 MINUTEN)" in sp_v5 or "(3 Min.)" in sp_v5
+      and "30 Min" not in [z for z in sp_v5.splitlines() if "Warum ich" in z][0], sp_v5)
+check("v5 Spickzettel: „12. Klasse“ bleibt erhalten", "12. Klasse" in sp_v5, sp_v5)
+rc, o = run(f"{S}/fakten_check.py", Psp5, "--typ", "spickzettel")
+check("v5 Spickzettel: Kernbotschaft „angeboten“ gegen Wortlaut ok, Titel „Dr.“/„Ausbildungsleitung“ aus Einladung kein ❌",
+      "angeboten" not in "".join(rot(o)) and "dr." not in "".join(rot(o)).lower() and "Ausbildungsleitung" not in o, o)
+SP5b = copy.deepcopy(SP5); SP5b["gespraech"]["kernbotschaften"][1] = "Ich habe die Listen selbst eingeschickt"
+rc, o = fc(SP5b, "v5_sp_b.json", "--typ", "spickzettel")
+check("v5 Spickzettel: Kernbotschaft „eingeschickt“ (Nutzer sagte „angeboten“) → ❌", rc == 1 and "eingeschickt" in "".join(rot(o)), o)
+SP5c = copy.deepcopy(SP5); SP5c["gespraech"]["kernbotschaften"][1] = "Ich habe die Lieferscheine digital erfasst"
+rc, o = fc(SP5c, "v5_sp_c.json", "--typ", "spickzettel")
+check("v5 Spickzettel: erfundene Kernbotschaft („Lieferscheine digital erfasst“) → ❌", rc == 1 and "Spickzettel-Wortlaut" in o, o)
+r5 = pypdf.PdfReader(f"{W}/sp_v5/Gespraech_Spickzettel_Hollerith-Logistik-GmbH_AKTUELL.pdf")
+letzte5 = [z for z in (r5.pages[-1].extract_text() or "").splitlines() if z.strip()]
+check("v5 Spickzettel-PDF A5: keine fast leere Seite 2 trotz langer Mitbring-Liste", len(r5.pages) == 1 or len(letzte5) >= 6,
+      f"{len(r5.pages)} Seiten, letzte {len(letzte5)} Zeilen")
+subprocess.run(["pdftoppm", "-r", "70", "-png", f"{W}/sp_v5/Gespraech_Spickzettel_Hollerith-Logistik-GmbH_AKTUELL.pdf", f"{W}/v5_sp_bild"])
+
+# 16i: zugesagte Änderungen, Dateien (bearbeitbar/), Akte ohne Namen, akte --lesen mit Ordner
+d = V5.profil(V5.F72, beispiel())
+d["person"].update({"plz_ort": "93055 Regensburg", "telefon": "0157 31846620", "email": "mara.kessler@gmx.de"})
+d["meta"]["offene_aenderungen"] = [{"text": "Organisationstalent-Satz vor das Beispiel", "unterlage": "anschreiben", "erledigt": False}]
+Pae = speichern(d, "v5_aenderung.json")
+rc, o = run(f"{S}/unterlagen_erstellen.py", Pae, "--ausgabe", f"{W}/out_ae", "--nur", "anschreiben")
+check("v5 Transkript 72: offene zugesagte Änderung → kein Erzeugen (Exit 3)", rc == 3 and "Organisationstalent" in o
+      and not os.path.isdir(f"{W}/out_ae") or not os.listdir(f"{W}/out_ae"), o)
+rc, o = fc(d, "v5_aenderung2.json")
+check("v5 fakten_check meldet offenen Änderungswunsch (⚠️)", "Änderungswunsch" in o, o)
+rc, o = run(f"{S}/akte.py", Pae, "--ausgabe", f"{W}/ak_ae")
+akae = open(f"{W}/ak_ae/" + [f for f in os.listdir(f"{W}/ak_ae") if f.endswith(".txt")][0], encoding="utf8").read()
+check("v5 Akte listet offene Änderungen", "Zugesagte Änderungen (noch offen): Organisationstalent" in akae, akae[:800])
+d["meta"]["offene_aenderungen"][0]["erledigt"] = True
+speichern(d, "v5_aenderung.json")
+rc, o = run(f"{S}/unterlagen_erstellen.py", Pae, "--ausgabe", f"{W}/out_ae", "--nur", "anschreiben")
+check("v5 nach dem Abhaken wird erzeugt", rc == 0 and any(f.startswith("Motivationsschreiben") for f in os.listdir(f"{W}/out_ae")), o)
+dd = beispiel(); dd["profil"]["anlagen"] = [{"datei": f"{W}/up/Zeugnis_10.jpg", "bezeichnung": "Zeugnis der 10. Klasse"}]
+Pdx = speichern(dd, "v5_docx.json")
+run(f"{S}/unterlagen_erstellen.py", Pdx, "--ausgabe", f"{W}/out_dx")
+rc, o = run(f"{S}/pdf_zusammenfuegen.py", "--einzeln", "--profil", Pdx, "--ausgabe", f"{W}/out_dx")
+fl = sorted(f for f in os.listdir(f"{W}/out_dx") if os.path.isfile(os.path.join(f"{W}/out_dx", f)))
+check("v5 --einzeln: Word-Fassungen in bearbeitbar/, je Unterlage genau EINE Datei im Ordner",
+      rc == 0 and not any(f.endswith(".docx") for f in fl) and os.path.isdir(f"{W}/out_dx/bearbeitbar")
+      and len([f for f in fl if f.startswith("Lebenslauf")]) == 1 and len([f for f in fl if f.startswith("Anschreiben")]) == 1, f"{fl}\n{o}")
+run(f"{S}/unterlagen_erstellen.py", Pdx, "--ausgabe", f"{W}/out_dx2")
+rc, o = run(f"{S}/pdf_zusammenfuegen.py", f"{W}/out_dx2/Bewerbung_Lena_Muster.pdf", "--profil", Pdx, "--ordner", f"{W}/out_dx2")
+check("v5 Gesamt-PDF mit --profil: .docx wandern nach bearbeitbar/", rc == 0 and not any(f.endswith(".docx") for f in os.listdir(f"{W}/out_dx2"))
+      and "bearbeitbar" in o, f"{os.listdir(W + '/out_dx2')}\n{o}")
+run(f"{S}/unterlagen_erstellen.py", Pdx, "--ausgabe", f"{W}/out_dx", "--nur", "lebenslauf")
+check("v5 neue Fassung nach bearbeitbar/: alte Word-Fassung wandert nach alt/ (keine Doppelten)",
+      not os.path.exists(f"{W}/out_dx/bearbeitbar/Lebenslauf_Lena_Muster_AKTUELL.docx")
+      and os.path.exists(f"{W}/out_dx/Lebenslauf_Lena_Muster_AKTUELL.docx"), os.listdir(f"{W}/out_dx"))
+dn = beispiel(); dn["person"]["name"] = ""
+rc, o = run(f"{S}/akte.py", speichern(dn, "v5_ohne_name.json"), "--ausgabe", f"{W}/ak_nn")
+check("v5 Akte schon vor dem Namen (nach dem Berufstest): Bewerbungsakte_<Datum>.txt", rc == 0 and any(
+    re.match(r"Bewerbungsakte_\d{4}-\d{2}-\d{2}_\d{6}\.txt", f) for f in os.listdir(f"{W}/ak_nn")), os.listdir(f"{W}/ak_nn"))
+os.makedirs(f"{W}/up_v5")
+Image.new("RGB", (700, 900), (90, 120, 150)).save(f"{W}/up/IMG_5555.jpg")
+dz5 = beispiel(); dz5["profil"]["anlagen"] = [{"datei": f"{W}/up/IMG_5555.jpg", "bezeichnung": "Zeugnis Fachabi"}]
+run(f"{S}/akte.py", speichern(dz5, "v5_lesen.json"), "--ausgabe", f"{W}/ak_l5")
+shutil.copy(f"{W}/ak_l5/" + [f for f in os.listdir(f"{W}/ak_l5") if f.endswith(".txt")][0], f"{W}/up_v5/Bewerbungsakte (1).txt")
+shutil.copy(f"{W}/up/IMG_5555.jpg", f"{W}/up_v5/image.jpg")
+os.remove(f"{W}/up/IMG_5555.jpg")
+rc, o = run(f"{S}/akte.py", "--lesen", f"{W}/up_v5", "--json-nach", f"{W}/fort_v5/profil.json", env={"BP_UPLOADS": f"{W}/gibts_nicht"})
+check("v5 akte --lesen ORDNER: Uploads im angegebenen Ordner gefunden + 🔗-Meldung bei anderem Namen",
+      rc == 0 and "image.jpg" in json.load(open(f"{W}/fort_v5/profil.json"))["profil"]["anlagen"][0]["datei"] and "🔗" in o, o)
+
+# 16j: Skill-Texte v5
+skill5 = open("/home/claude/hamsterfrei-studio/skills/bewerbungs-profi/SKILL.md", encoding="utf8").read()
+check("v5 SKILL.md: Kernprinzip + Standarddeutsch + Budgets (Minijob ≤ 12, AC ≤ 40) oben",
+      "Fakten wörtlich, Formulierung frei" in skill5 and "Standarddeutsch" in skill5 and "≤ 12" in skill5 and "≤ 40" in skill5
+      and skill5.index("Fakten wörtlich") < skill5.index("Kurzpfade"), "")
+ref = "/home/claude/hamsterfrei-studio/skills/bewerbungs-profi/references/"
+lies = lambda f: open(ref + f, encoding="utf8").read()  # noqa: E731
+check("v5 Fachliches: Zweiradmechatroniker + Tier-Berufe im Berufstest", "Zweiradmechatroniker" in lies("berufstest.md") and "Tierpfleger" in lies("berufstest.md"), "")
+check("v5 Fachliches: „Wir duzen uns“ + Werkstudent über 30 (mit Quelle)", "Wir duzen uns" in lies("sonderfaelle.md")
+      and "Werkstudent über 30" in lies("sonderfaelle.md") and "Verbraucherzentrale" in lies("sonderfaelle.md"), "")
+check("v5 Ablauf: Liste direkt, nie „nur noch eine Frage“, Chatwechsel nur wenn nötig, Rollenspiel zurückholen",
+      "direkt als Liste" in lies("interview_fragen.md") and "nur noch eine Frage" in lies("interview_fragen.md")
+      and "nur, wenn nötig" in lies("bewerbungsakte.md") and "Abschweifen" in lies("gespraech.md"), "")
+check("v5 Mail-Vorlage neutral + bearbeitbar/ in abschicken.md", "brauchen **keine** `herkunft`" in lies("abschicken.md") and "bearbeitbar/" in lies("abschicken.md"), "")
 
 # ================================================================ 11 Skill-Dateien
 SK = "/home/claude/hamsterfrei-studio/skills/bewerbungs-profi"
