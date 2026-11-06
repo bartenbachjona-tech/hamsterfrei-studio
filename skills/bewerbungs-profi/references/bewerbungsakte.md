@@ -1,20 +1,22 @@
 # Die Bewerbungsakte (Gedächtnis zwischen Chats)
 
-Ein neuer Chat weiß nichts vom alten, und im Free-Plan sind Nachrichten begrenzt (Reset etwa alle 5 Stunden). Darum gibt es die **Bewerbungsakte**: eine `.txt`-Datei, die `akte.py` aus der Profil-JSON schreibt – oben lesbar (Stand, Ziel, Profil, Status, Gespräch, Bewerbungen, Entscheidungen, nächste Schritte), unten die vollständigen Daten zum Fortsetzen.
+Ein neuer Chat weiß nichts vom alten, und im Free-Plan sind Nachrichten begrenzt (Reset etwa alle 5 Stunden). Darum gibt es die **Bewerbungsakte**: eine `.txt`-Datei, die `akte.py` aus der Profil-JSON schreibt – oben lesbar (Stand, Ziel, Berufstest, Profil inkl. Wechselgrund/Abbruchgrund/Zertifikate, Status, Gespräch, Bewerbungen, nächste Schritte und die Liste **„im neuen Chat wieder hochladen: …“**), unten die vollständigen Daten inkl. Wortlaut (`profil.rohtext`).
 
 ## Schreiben – automatisch und billig
 
 ```
-python3 "$S/akte.py" /tmp/bewerbung/profil.json          (Handy: --pdf dazu, dann gibt es auch eine lesbare PDF)
+python3 "$S/akte.py" /tmp/bewerbung/profil.json
 ```
-→ `/mnt/user-data/outputs/Bewerbungsakte_Vorname_Nachname_JJJJ-MM-TT_HHMM.txt`. Ältere Akten im Ausgabeordner wandern nach `alt/`. Vorher `meta.phase`, `meta.naechster_schritt`, `status`, `naechste_schritte` in der JSON aktualisieren – nie die Akte von Hand schreiben.
+→ `/mnt/user-data/outputs/Bewerbungsakte_Vorname_Nachname_JJJJ-MM-TT_HHMMSS.txt` (Sekunden + ggf. Laufnummer – zwei Akten in derselben Minute heißen verschieden). Ältere Akten wandern nach `alt/`. **Nur .txt** – eine PDF gibt es nur auf Wunsch (`--pdf` → `Akte-Lesefassung_…pdf`; die ist zum Lesen, nicht zum Hochladen). Vorher `meta.phase`, `meta.naechster_schritt`, `status`, `naechste_schritte` aktualisieren – nie die Akte von Hand schreiben.
 
 **Wann:**
+- **früh**, sobald der Name da ist (Profil-Frage 1) – nicht vorher, sonst heißt sie „Name“,
 - nach **jeder Phase** (Steckbrief ok, Profil ok, Lebenslauf ok …),
-- **spätestens nach ~6 Nutzerantworten** innerhalb einer Phase (Profil-Fragen, STAR-Geschichten, Übungen),
-- wenn der Nutzer aufhört („danke, bis morgen“) oder der Chat lang wird.
+- nach **~6 Nutzerantworten** innerhalb einer Phase (Zähler `meta.antworten_seit_akte`; `akte.py` setzt ihn zurück),
+- **nicht mitten in Rollenspiel/Simulation/Übung** – dann direkt nach dem Feedback,
+- wenn der Nutzer aufhört oder der Chat lang wird (~20 Nachrichten).
 
-Ein Satz reicht: „📁 Akte aktualisiert: Bewerbungsakte_…_1840.txt – speichern, im neuen Chat einfach hochladen.“ Beim ersten Mal zusätzlich: „Sie enthält deine Daten – privat speichern, nicht teilen.“
+Ein Satz reicht: „📁 Akte gespeichert: Bewerbungsakte_…_184012.txt – speichern, im neuen Chat einfach hochladen.“ Beim ersten Mal zusätzlich: „Sie enthält deine Daten – privat speichern, nicht teilen.“ Gibt das Skript „Im neuen Chat zusätzlich hochladen: …“ aus (Zeugnisse, Foto), sag das einmal, wenn du einen neuen Chat empfiehlst.
 
 ## Fahrplan in Chats (Free-Plan)
 
@@ -22,18 +24,17 @@ Ein Satz reicht: „📁 Akte aktualisiert: Bewerbungsakte_…_1840.txt – spei
 |---|---|---|---|
 | Stelle vorhanden | Stelle + Profil | Lebenslauf, Anschreiben, Abschicken | Gespräch/AC üben |
 | Ohne Plan | Berufstest + Stelle finden | Profil + Unterlagen | Abschicken + Gespräch |
-| Einladung da | Übersicht + Üben | (Runde 2 / AC-Übungen) | – |
+| Einladung da | Bestätigen + Übersicht + Üben | (Runde 2 / AC-Übungen) | – |
 
-`meta.chat_plan` speichern. An jeder Etappen-Grenze und wenn eine Phase lang wird (~20 Nachrichten im Chat): Akte speichern und **neuen Chat empfehlen**: „Starte jetzt einen neuen Chat, lade die Akte hoch und schreib ‚Weiter mit meiner Bewerbung‘. So läufst du nicht ins Nachrichtenlimit.“
+`meta.chat_plan` speichern. An jeder Etappen-Grenze: Akte speichern und **neuen Chat empfehlen**: „Starte jetzt einen neuen Chat, lade die Akte (.txt) hoch und schreib ‚Weiter mit meiner Bewerbung‘.“
 
 ## Fortsetzung
 
-Lädt der Nutzer eine Akte hoch (`.txt`, PDF hilft nicht – die Daten stehen nur in der `.txt`; alte `.md` geht auch):
-1. `python3 "$S/akte.py" --lesen /mnt/user-data/uploads/<Akte>` → schreibt `/tmp/bewerbung/profil.json` und zeigt Stand/Phase/nächsten Schritt.
-2. Mehrere Akten hochgeladen? Die mit dem jüngsten Datum im Namen bzw. „Stand“ nehmen und kurz sagen, welche.
-3. In **2 Zeilen** sagen, wo er steht; nächsten Schritt nennen und **direkt loslegen** (nicht alles neu fragen).
+1. `python3 "$S/akte.py" --lesen /mnt/user-data/uploads/<Akte>.txt` → schreibt `/tmp/bewerbung/profil.json`, sucht Anlagen/Foto unter den neuen Uploads und nennt, was fehlt („📎 Bitte noch einmal hochladen …“) – anfordern, **wenn es gebraucht wird** (Gesamt-PDF, Lebenslauf mit Foto).
+2. Mehrere Akten? Die mit der jüngsten Zeit im Namen nehmen und kurz sagen, welche. Eine `Akte-Lesefassung_…pdf` hilft nicht (keine Daten) – um die `.txt` bitten.
+3. In **2 Zeilen** sagen, wo er steht; nächsten Schritt nennen und **direkt loslegen**.
 4. Fristen oder Nachfass-Daten vorbei? Das zuerst ansprechen.
-5. Alte Akte (v1, ohne `profil`): fehlende Profil-Felder **nachfragen**, nicht aus den alten Texten ableiten.
+5. Alte Akte (v1/v2 ohne Wortlaut): fehlende Fakten **nachfragen**, nicht aus alten Texten ableiten; neue Antworten in `profil.rohtext`.
 
 ## Datenschutz
 

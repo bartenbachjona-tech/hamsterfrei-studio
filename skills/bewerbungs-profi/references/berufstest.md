@@ -55,7 +55,7 @@ Dann 3 Vorschläge aus der Tabelle „Minijob/Nebenjob“ unten mit je einem Sat
 
 ## 4. Auswertung und 3 Vorschläge
 
-`python3 "$S/berufstest_auswerten.py" "1a 2c 3b …"` (oder Zahlen 1–5). Ergebnis in `berufstest` der JSON.
+`python3 "$S/berufstest_auswerten.py" "1a 2c 3b …"` (oder Zahlen 1–5). Die Antwortzeile wörtlich in `profil.rohtext`, das Ergebnis lesbar in `profil.berufstest` (`code`, `bereiche`, `vorschlaege[]`, später `gewaehlt`) – so steht es in der Akte. Budget: Berufstest + komplette Bewerbung ≤ 30 Nutzer-Nachrichten; nach Test + Stellensuche ist oft ein guter Moment für Akte + neuen Chat.
 
 Zeig in **einer** Nachricht (max. ~12 Zeilen):
 - Die 2–3 stärksten Typen in Alltagssprache (1 Satz) und Skript-Hinweise (Gleichstand, flaches Profil) einfach erklärt. „Gegenüber im Hexagon“ gibt es nur bei R–S, I–E, A–C – das ist kein Problem, nur seltener in einem Beruf vereint.

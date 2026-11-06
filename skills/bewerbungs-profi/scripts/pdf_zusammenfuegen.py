@@ -1,22 +1,28 @@
 #!/usr/bin/env python3
-"""Fügt Anschreiben, Lebenslauf und Anlagen zu EINER PDF zusammen (Reihenfolge = Argumente).
+"""Bewerbungs-PDFs bauen: eine Gesamt-PDF, saubere Einzeldateien oder N Bündel (Upload-Limit).
 
-    python3 pdf_zusammenfuegen.py ZIEL.pdf Anschreiben_v2.pdf Lebenslauf_v3.pdf Zeugnis.jpg …
+    python3 pdf_zusammenfuegen.py ZIEL.pdf Anschreiben_….pdf Lebenslauf_….pdf Zeugnis.jpg …
     python3 pdf_zusammenfuegen.py ZIEL.pdf --profil PROFIL.json [--ordner AUSGABE]
-          → nimmt automatisch: aktuelles Anschreiben/Motivationsschreiben, aktuellen Lebenslauf,
-            dann profil.anlagen (Dateien) in dieser Reihenfolge
-    python3 pdf_zusammenfuegen.py --einzeln Datei … [--ausgabe ORDNER]
-          → jede Datei als eigene PDF mit sauberem Namen (ohne _vN) nach versand/ (für Formulare,
-            die getrennte Dateien wollen)
+          → aktuelles Anschreiben/Motivationsschreiben, aktueller Lebenslauf, dann profil.anlagen
+    python3 pdf_zusammenfuegen.py --einzeln --profil PROFIL.json [--ausgabe ORDNER]
+    python3 pdf_zusammenfuegen.py --einzeln DATEI … [--name DATEI=Bezeichnung …] [--ausgabe ORDNER]
+          → jede Datei als eigene PDF mit sprechendem Namen (Bezeichnung aus profil.anlagen statt IMG_4471),
+            flach im Ausgabeordner (kein Unterordner – am Handy gibt es keine Ordner) + Liste „Hochladen: …“
+    python3 pdf_zusammenfuegen.py --buendeln N --profil PROFIL.json [--ausgabe ORDNER]
+          → Upload-Limit „max. N Dateien“: Anschreiben, Lebenslauf einzeln, alle Anlagen gebündelt
+            (N=2: Lebenslauf + Anschreiben&Anlagen; N=1: alles in einer PDF)
 
+- ZIEL-Name wird genau so verwendet (Bindestriche bleiben). Nur Umlaute/Leerzeichen/Sonderzeichen werden
+  ersetzt – mit klarer Meldung.
 - Fehlt eine Datei oder klappt eine Umwandlung nicht: ABBRUCH ohne PDF, Exit-Code 2.
-- Gibt es eine neuere Fassung (_vN höher, auch aus alt/), wird automatisch die neueste genommen (mit Hinweis).
-  --genau schaltet das ab.
-- .docx/.odt → PDF per LibreOffice. .jpg/.png/.webp/.heic → auf A4 eingepasst (Pillow; HEIC über
-  pillow-heif, wird bei Bedarf per pip installiert).
-- Prüft die Zeile „Anlagen: …“ im Anschreiben gegen die wirklich angehängten Dateien (Exit-Code 3 bei
-  Abweichung; --trotzdem erzeugt die PDF dennoch).
-- ZIEL ohne Ordner → /mnt/user-data/outputs. Ältere Fassung des Ziels → alt/ (nichts wird überschrieben).
+- Neuere Fassung vorhanden (…_AKTUELL bzw. höheres _vN, auch wenn der Pfad in alt/ zeigt oder nicht mehr
+  existiert): die aktuelle wird genommen (mit Hinweis). --genau schaltet das ab.
+- Bilder (.jpg/.png/.webp/.heic) → A4; Querformat-Fotos werden gedreht (Texterkennung, wenn vorhanden) oder auf
+  eine A4-Querseite eingepasst; --drehen DATEI=90|180|270 dreht von Hand. PDF-Anlagen in anderem Format
+  (Letter, Scan-Größe) werden auf A4 skaliert.
+- Anlagen-Zeile im Anschreiben ≠ angehängte Anlagen: mit --profil wird das Anschreiben automatisch neu
+  erzeugt (nur die Anlagen-Zeile ändert sich); sonst Exit 3 (--trotzdem baut dennoch).
+- Ausgabe ohne Ordner → /mnt/user-data/outputs. Gleichnamige ältere Datei → alt/ (nichts wird überschrieben).
 """
 import os
 import re
@@ -29,12 +35,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import textlib  # noqa: E402
 
 MAX_MB = 5
-A4_PX = (1654, 2339)   # A4 bei 200 dpi – lesbar, Datei bleibt klein
+A4_PX = (1654, 2339)   # A4 bei 200 dpi
+A4_PT = (595.28, 841.89)
 RAND_PX = 60
 HANDY_HEIC = ("HEIC-Foto (iPhone) ließ sich nicht umwandeln. So geht's: iPhone → Einstellungen → Kamera → "
               "Formate → „Maximale Kompatibilität“ (dann JPG), oder das Foto öffnen, Screenshot machen und den "
               "Screenshot hochladen. Am besten gleich mit der Notizen-App als PDF scannen (Notizen → Kamera → "
               "Dokumente scannen).")
+KAMERA_NAME = re.compile(r"^(img|pxl|dsc|dcim|photo|foto|bild|image|scan|screenshot|whatsapp)[_\- ]?\d", re.I)
 
 
 def pip_install(paket):
@@ -72,23 +80,104 @@ def heic_oeffner():
     return True
 
 
-def bild_a4(pfad, out):
+def dateiname(roh):
+    """Exakter Name, wenn er schon sauber ist; sonst nur Problemzeichen ersetzen (Bindestrich bleibt)."""
+    stamm, ext = os.path.splitext(os.path.basename(roh))
+    if re.fullmatch(r"[A-Za-z0-9_.\-]+", stamm):
+        return stamm + ".pdf", None
+    neu = re.sub(r"\s+", "_", textlib.translit(stamm).strip())
+    neu = re.sub(r"[^A-Za-z0-9_.\-]", "", neu).strip("_-") or "Bewerbung"
+    return neu + ".pdf", f"ℹ️ Dateiname angepasst (Umlaute/Leerzeichen/Sonderzeichen machen in Portalen Ärger): „{stamm}{ext}“ → „{neu}.pdf“"
+
+
+def osd_drehung(img):
+    """Drehwinkel per Texterkennung (tesseract --psm 0), wenn vorhanden und sicher; sonst None."""
+    if not shutil.which("tesseract"):
+        return None
+    with tempfile.TemporaryDirectory() as tmp:
+        p = os.path.join(tmp, "x.png")
+        k = img.copy()
+        k.thumbnail((1600, 1600))
+        k.save(p)
+        try:
+            r = subprocess.run(["tesseract", p, "-", "--psm", "0"], capture_output=True, text=True, timeout=40)
+        except Exception:
+            return None
+    m = re.search(r"Rotate:\s*(\d+)", r.stdout)
+    c = re.search(r"Orientation confidence:\s*([\d.]+)", r.stdout)
+    if m and c and float(c.group(1)) >= 2.0:
+        return int(m.group(1))
+    return None
+
+
+def bild_a4(pfad, out, drehen=None, hinweise=None):
     from PIL import Image, ImageOps
-    img = Image.open(pfad)
-    img = ImageOps.exif_transpose(img).convert("RGB")
-    breite, hoehe = A4_PX[0] - 2 * RAND_PX, A4_PX[1] - 2 * RAND_PX
-    img.thumbnail((breite, hoehe))
-    if img.width < breite * 0.5 and img.height < hoehe * 0.5:
-        f = min(breite / img.width, hoehe / img.height)
-        img = img.resize((int(img.width * f), int(img.height * f)))
-    seite = Image.new("RGB", A4_PX, "white")
-    seite.paste(img, ((A4_PX[0] - img.width) // 2, (A4_PX[1] - img.height) // 2))
+    img = ImageOps.exif_transpose(Image.open(pfad)).convert("RGB")
+    name = os.path.basename(pfad)
+    if drehen:
+        img = img.rotate(-int(drehen), expand=True)
+    elif img.width > img.height * 1.05:
+        winkel = osd_drehung(img)
+        if winkel:
+            img = img.rotate(-winkel, expand=True)
+            if hinweise is not None:
+                hinweise.append(f"↻ {name}: lag quer – um {winkel}° gedreht (Texterkennung). Bitte Seite ansehen.")
+    quer = img.width > img.height * 1.05
+    seite_px = (A4_PX[1], A4_PX[0]) if quer else A4_PX
+    if quer and hinweise is not None and not drehen:
+        hinweise.append(f"⚠️ {name}: Querformat → auf eine A4-Querseite eingepasst (groß und lesbar). Liegt der Text auf "
+                        f"der Seite? Dann neu bauen mit --drehen {name}=90 (oder 270) – oder mit der Scan-App neu aufnehmen.")
+    breite, hoehe = seite_px[0] - 2 * RAND_PX, seite_px[1] - 2 * RAND_PX
+    f = min(breite / img.width, hoehe / img.height)
+    img = img.resize((max(1, int(img.width * f)), max(1, int(img.height * f))))
+    seite = Image.new("RGB", seite_px, "white")
+    seite.paste(img, ((seite_px[0] - img.width) // 2, (seite_px[1] - img.height) // 2))
     seite.save(out, "PDF", resolution=200)
 
 
-def als_pdf(pfad, tmp):
+def pdf_auf_a4(pfad, out, pypdf):
+    """Seiten, die nicht A4 sind, auf A4 (hoch/quer passend) skalieren und zentrieren. → (pfad, geändert?)"""
+    r = pypdf.PdfReader(pfad)
+    geaendert = False
+    w = pypdf.PdfWriter()
+    for pg in r.pages:
+        bw, bh = float(pg.mediabox.width), float(pg.mediabox.height)
+        if pg.get("/Rotate") in (90, 270):
+            bw, bh = bh, bw
+        quer = bw > bh
+        zw, zh = (A4_PT[1], A4_PT[0]) if quer else A4_PT
+        if abs(bw - zw) < 3 and abs(bh - zh) < 3:
+            w.add_page(pg)
+            continue
+        geaendert = True
+        pg.transfer_rotation_to_content()
+        bw, bh = float(pg.mediabox.width), float(pg.mediabox.height)
+        s = min(zw / bw, zh / bh)
+        neu = pypdf.PageObject.create_blank_page(width=zw, height=zh)
+        tx = (zw - bw * s) / 2 - float(pg.mediabox.left) * s
+        ty = (zh - bh * s) / 2 - float(pg.mediabox.bottom) * s
+        neu.merge_transformed_page(pg, pypdf.Transformation().scale(s, s).translate(tx, ty))
+        w.add_page(neu)
+    if not geaendert:
+        return pfad, False
+    with open(out, "wb") as f:
+        w.write(f)
+    return out, True
+
+
+def als_pdf(pfad, tmp, drehen=None, hinweise=None, anlage=False):
     ext = os.path.splitext(pfad)[1].lower()
     if ext == ".pdf":
+        if anlage:
+            pypdf = pypdf_laden()
+            if pypdf:
+                try:
+                    neu, geaendert = pdf_auf_a4(pfad, os.path.join(tmp, "a4_" + os.path.basename(pfad)), pypdf)
+                    if geaendert and hinweise is not None:
+                        hinweise.append(f"ℹ️ {os.path.basename(pfad)}: Seitenformat war nicht A4 – auf A4 skaliert.")
+                    return neu, None
+                except Exception as e:
+                    return None, f"PDF ließ sich nicht lesen ({e}) – passwortgeschützt? Bitte neu scannen/speichern."
         return pfad, None
     if ext in (".docx", ".doc", ".odt", ".rtf", ".txt"):
         so = shutil.which("soffice") or shutil.which("libreoffice")
@@ -108,7 +197,7 @@ def als_pdf(pfad, tmp):
             return None, HANDY_HEIC
         out = os.path.join(tmp, os.path.basename(pfad) + ".pdf")
         try:
-            bild_a4(pfad, out)
+            bild_a4(pfad, out, drehen, hinweise)
         except Exception as e:
             return None, (HANDY_HEIC if ext in (".heic", ".heif") else f"Bild ließ sich nicht öffnen ({e})")
         return out, None
@@ -118,11 +207,11 @@ def als_pdf(pfad, tmp):
 def neueste(pfade, genau, hinweise):
     out = []
     for p in pfade:
-        if not genau and os.path.isfile(p):
+        if not genau and p:
             neu, n_neu, n = textlib.neueste_version(p)
             if neu != p:
-                hinweise.append(f"⚠️ {os.path.basename(p)} ist nicht aktuell – genommen wird die neueste Fassung "
-                                f"{os.path.basename(neu)} (v{n_neu}). Mit --genau abschalten.")
+                hinweise.append(f"⚠️ {os.path.basename(p)} ist nicht (mehr) die aktuelle Fassung – genommen wird "
+                                f"{os.path.basename(neu)}. Mit --genau abschalten.")
                 p = neu
             elif os.path.basename(os.path.dirname(os.path.abspath(p))) == "alt":
                 hinweise.append(f"⚠️ {os.path.basename(p)} liegt in alt/ (ältere Fassung).")
@@ -130,21 +219,21 @@ def neueste(pfade, genau, hinweise):
     return out
 
 
-def aus_profil(profil, ordner):
+def profil_dateien(profil, ordner):
+    """→ (dokumente [(pfad, bezeichnung, art)], anlagen [(pfad, bezeichnung)], fehlt, d)."""
     d = textlib.lade_profil(profil)
     name = textlib.name_teile((d.get("person") or {}).get("name", ""))
     firma = textlib.safe_name((d.get("ziel") or {}).get("firma", ""), 30, "Firma")
-    liste, fehlt = [], []
+    doks, fehlt = [], []
     if (d.get("anschreiben") or {}).get("absaetze"):
         typ = (d["anschreiben"].get("typ") or "anschreiben").capitalize()
         v = textlib.versionen(ordner, f"{typ}_{name}_{firma}", ".pdf")
-        (liste.append(v[max(v)]) if v else fehlt.append(f"{typ}-PDF in {ordner}"))
+        (doks.append((v[max(v)], typ, "brief")) if v else fehlt.append(f"{typ}-PDF in {ordner} (erst erzeugen)"))
     if (d.get("lebenslauf") or {}).get("abschnitte"):
         v = textlib.versionen(ordner, f"Lebenslauf_{name}", ".pdf")
-        (liste.append(v[max(v)]) if v else fehlt.append(f"Lebenslauf-PDF in {ordner}"))
-    for a in (d.get("profil") or {}).get("anlagen") or []:
-        liste.append(a.get("datei", ""))
-    return liste, fehlt
+        (doks.append((v[max(v)], "Lebenslauf", "lebenslauf")) if v else fehlt.append(f"Lebenslauf-PDF in {ordner} (erst erzeugen)"))
+    anl = [(a.get("datei", ""), a.get("bezeichnung") or "") for a in (d.get("profil") or {}).get("anlagen") or []]
+    return doks, anl, fehlt, d
 
 
 def anlagen_zeile(pdf_pfad):
@@ -158,40 +247,83 @@ def anlagen_zeile(pdf_pfad):
     return [x.strip() for x in re.sub(r"\s+", " ", m.group(1)).split(",") if x.strip()]
 
 
-def einzeln(dateien, ausgabe):
-    ziel_ordner = os.path.join(textlib.ausgabe_ordner(ausgabe), "versand")
+def anschreiben_neu(profil, ordner):
+    """Anschreiben neu erzeugen (Anlagen-Zeile nachziehen). → True bei Erfolg."""
+    hier = os.path.dirname(os.path.abspath(__file__))
+    geraet = ((textlib.lade_profil(profil).get("meta") or {}).get("geraet") or "").lower()
+    extra = [] if geraet in ("pc", "computer", "laptop", "desktop") else ["--nur-pdf"]
+    r = subprocess.run([sys.executable, os.path.join(hier, "unterlagen_erstellen.py"), profil, "--nur", "anschreiben",
+                        *extra, "--ausgabe", ordner], capture_output=True, text=True)
+    return r.returncode == 0
+
+
+def ablegen(quelle, ziel):
+    """Kopiert nach ziel; gleichnamige ältere Datei → alt/…_altN.pdf. Nichts wird überschrieben."""
+    if os.path.exists(ziel):
+        alt = os.path.join(os.path.dirname(ziel), "alt")
+        os.makedirs(alt, exist_ok=True)
+        stamm = os.path.splitext(os.path.basename(ziel))[0]
+        n = 1
+        while os.path.exists(os.path.join(alt, f"{stamm}_alt{n}.pdf")):
+            n += 1
+        shutil.move(ziel, os.path.join(alt, f"{stamm}_alt{n}.pdf"))
+    shutil.copy(quelle, ziel)
+
+
+def zusammen(pdfs, ziel, pypdf):
+    if pypdf:
+        w = pypdf.PdfWriter()
+        for p in pdfs:
+            w.append(p)
+        with open(ziel, "wb") as f:
+            w.write(f)
+        return len(pypdf.PdfReader(ziel).pages)
+    if shutil.which("pdfunite"):
+        subprocess.run(["pdfunite", *pdfs, ziel], check=True)
+        return None
+    print("FEHLER: Weder pypdf noch pdfunite verfügbar. Ausweg: Dateien einzeln anhängen, wenn erlaubt.")
+    sys.exit(2)
+
+
+def einzeln(eintraege, ausgabe, name, drehen, hinweise):
+    """eintraege: [(pfad, bezeichnung, ist_anlage)] → saubere Einzel-PDFs flach in ausgabe."""
+    ziel_ordner = textlib.ausgabe_ordner(ausgabe)
     os.makedirs(ziel_ordner, exist_ok=True)
-    probleme, hinweise = [], []
-    dateien = neueste(dateien, False, hinweise)
+    probleme, fertig, namen = [], [], set()
     with tempfile.TemporaryDirectory() as tmp:
-        fertig = []
-        for q in dateien:
-            if not os.path.isfile(q):
-                probleme.append(f"{q}: nicht gefunden")
+        for i, (q, bez, anlage) in enumerate(eintraege, 1):
+            if not q or not os.path.isfile(q):
+                probleme.append(f"{q or '(leerer Pfad)'}: nicht gefunden")
                 continue
-            p, err = als_pdf(q, tmp)
+            p, err = als_pdf(q, tmp, drehen.get(os.path.basename(q)), hinweise, anlage)
             if err:
                 probleme.append(f"{os.path.basename(q)}: {err}")
                 continue
             stamm = textlib.basis_und_version(os.path.splitext(os.path.basename(q))[0])[0]
-            ziel = os.path.join(ziel_ordner, textlib.safe_name(stamm, 80).replace("-", "_") + ".pdf")
-            fertig.append((p, ziel))
+            if bez:
+                teil = textlib.safe_name(bez, 50).replace("-", "_")
+                stamm = f"{teil}_{name}" if name and name.split("_")[-1] not in teil else teil
+            elif KAMERA_NAME.match(stamm):
+                stamm = f"Anlage_{i}_{name}" if name else f"Anlage_{i}"
+                hinweise.append(f"⚠️ {os.path.basename(q)}: keine Bezeichnung – heißt jetzt {stamm}.pdf "
+                                f"(besser: --name {os.path.basename(q)}=\"Zeugnis 10. Klasse\" oder profil.anlagen)")
+            else:
+                stamm = re.sub(r"[^A-Za-z0-9_.\-]", "", textlib.translit(stamm).replace(" ", "_"))
+            z, n = stamm, 2
+            while z in namen:
+                z, n = f"{stamm}_{n}", n + 1
+            namen.add(z)
+            fertig.append((p, os.path.join(ziel_ordner, z + ".pdf")))
         if probleme:
             print("FEHLER – nichts erzeugt:\n" + "\n".join(f"❌ {p}" for p in probleme))
             sys.exit(2)
         for p, ziel in fertig:
-            if os.path.exists(ziel):
-                alt = os.path.join(ziel_ordner, "alt")
-                os.makedirs(alt, exist_ok=True)
-                stamm = os.path.splitext(os.path.basename(ziel))[0]
-                n = 1
-                while os.path.exists(os.path.join(alt, f"{stamm}_alt{n}.pdf")):
-                    n += 1
-                shutil.move(ziel, os.path.join(alt, f"{stamm}_alt{n}.pdf"))
-            shutil.copy(p, ziel)
-            print(f"✅ {ziel}")
-    for h in hinweise:
-        print(h)
+            ablegen(p, ziel)
+    print("✅ Fertig. 📤 Diese Dateien hochladen/anhängen (in dieser Reihenfolge):")
+    for i, (_, ziel) in enumerate(fertig, 1):
+        print(f"   {i}. {os.path.basename(ziel)}")
+    print(f"Ordner: {ziel_ordner}")
+    return [z for _, z in fertig]
 
 
 def main():
@@ -199,48 +331,96 @@ def main():
     if not a or a[0] in ("-h", "--help"):
         print(__doc__)
         sys.exit(2)
-    flags = {f for f in ("--genau", "--trotzdem") if f in a}
+    flags = {f for f in ("--genau", "--trotzdem", "--einzeln") if f in a}
     a = [x for x in a if x not in flags]
-    opts = {}
-    for k in ("--profil", "--ordner", "--ausgabe"):
+    opts, namen_map, drehen = {}, {}, {}
+    for k in ("--profil", "--ordner", "--ausgabe", "--buendeln"):
         if k in a:
             i = a.index(k)
             opts[k] = a[i + 1]
             del a[i:i + 2]
-    if a and a[0] == "--einzeln":
-        einzeln(a[1:], opts.get("--ausgabe"))
-        return
-    if not a:
-        print(__doc__)
-        sys.exit(2)
-    ziel, quellen = a[0], a[1:]
-    if not ziel.lower().endswith(".pdf"):
-        print(f"FEHLER: Das erste Argument muss der Name der Ziel-PDF sein (…pdf), nicht „{ziel}“. "
-              "Leerzeichen im Namen? Dann in Anführungszeichen setzen.")
-        sys.exit(2)
-    hinweise, probleme = [], []
+    for k, ziel in (("--name", namen_map), ("--drehen", drehen)):
+        while k in a:
+            i = a.index(k)
+            datei, _, wert = a[i + 1].partition("=")
+            ziel[os.path.basename(datei)] = wert
+            del a[i:i + 2]
+    hinweise = []
+    ordner_q = textlib.ausgabe_ordner(opts.get("--ordner") or opts.get("--ausgabe"))
+    d, doks, anl = None, [], []
     if opts.get("--profil"):
         try:
-            liste, fehlt = aus_profil(opts["--profil"], textlib.ausgabe_ordner(opts.get("--ordner")))
+            doks, anl, fehlt, d = profil_dateien(opts["--profil"], ordner_q)
         except RuntimeError as e:
             print(f"FEHLER: {e}")
             sys.exit(2)
-        probleme += [f"{f}: nicht gefunden" for f in fehlt]
-        quellen = liste + quellen
-    if not quellen:
+        if fehlt:
+            print("FEHLER – nichts erzeugt:\n" + "\n".join(f"❌ {f}" for f in fehlt))
+            sys.exit(2)
+    name = textlib.name_teile((d.get("person") or {}).get("name", "")) if d else ""
+
+    # Anlagen-Zeile prüfen (Brief + Profil): bei Abweichung Anschreiben automatisch neu
+    an = (d or {}).get("anschreiben") or {}
+    zeile_soll = an.get("anlagen_zeile")
+    if zeile_soll is None:
+        zeile_soll = (an.get("typ") or "anschreiben") != "kurzanschreiben"
+    if d and doks and doks[0][2] == "brief" and zeile_soll:
+        zeile = anlagen_zeile(doks[0][0]) or []
+        vorhanden = [b for p, b in anl if p and os.path.isfile(p)]
+        soll = (1 if any(x[2] == "lebenslauf" for x in doks) else 0) + len(vorhanden)
+        if zeile and len(zeile) != soll or (not zeile and vorhanden):
+            if anschreiben_neu(opts["--profil"], ordner_q):
+                doks, anl, _, d = profil_dateien(opts["--profil"], ordner_q)
+                hinweise.append("🔁 Anlagen-Zeile passte nicht zu den Anlagen → Anschreiben automatisch neu erzeugt "
+                                "(nur die Anlagen-Zeile hat sich geändert).")
+
+    if "--einzeln" in flags or opts.get("--buendeln"):
+        if d:
+            eintraege = [(p, b, False) for p, b, _ in doks] + [(p, b, True) for p, b in anl]
+        else:
+            eintraege = [(p, namen_map.get(os.path.basename(p), ""), not re.match(r"(Anschreiben|Motivationsschreiben|Kurzanschreiben|Lebenslauf)_", os.path.basename(p)))
+                         for p in a]
+        if not eintraege:
+            print("FEHLER: Keine Dateien angegeben.")
+            sys.exit(2)
+        eintraege = [(neueste([p], "--genau" in flags, hinweise)[0], b, an) for p, b, an in eintraege]
+        if opts.get("--buendeln"):
+            n = int(opts["--buendeln"])
+            buendel(eintraege, n, opts.get("--ausgabe"), name, drehen, hinweise)
+        else:
+            einzeln(eintraege, opts.get("--ausgabe"), name, drehen, hinweise)
+        for h in hinweise:
+            print(h)
+        return
+
+    if not a:
+        print(__doc__)
+        sys.exit(2)
+    ziel_roh, quellen = a[0], a[1:]
+    if not ziel_roh.lower().endswith(".pdf"):
+        print(f"FEHLER: Das erste Argument muss der Name der Ziel-PDF sein (…pdf), nicht „{ziel_roh}“. "
+              "Leerzeichen im Namen? Dann in Anführungszeichen setzen.")
+        sys.exit(2)
+    eintraege = [(p, b, False) for p, b, _ in doks] + [(p, b, True) for p, b in anl]
+    eintraege += [(q, "", not re.match(r"(Anschreiben|Motivationsschreiben|Kurzanschreiben|Lebenslauf)_", os.path.basename(q)))
+                  for q in quellen]
+    if not eintraege:
         print("FEHLER: Keine Dateien angegeben.")
         sys.exit(2)
-    quellen = neueste(quellen, "--genau" in flags, hinweise)
-    ordner = os.path.dirname(ziel) or textlib.ausgabe_ordner(opts.get("--ordner"))
-    stamm = textlib.safe_name(os.path.splitext(os.path.basename(ziel))[0], 80).replace("-", "_")
+    eintraege = [(neueste([p], "--genau" in flags, hinweise)[0], b, an) for p, b, an in eintraege]
+    ordner = os.path.dirname(ziel_roh) or textlib.ausgabe_ordner(opts.get("--ordner"))
+    fname, meldung = dateiname(ziel_roh)
+    if meldung:
+        hinweise.insert(0, meldung)
     os.makedirs(os.path.abspath(ordner), exist_ok=True)
+    zielpfad = os.path.join(ordner, fname)
+    probleme, pdfs = [], []
     with tempfile.TemporaryDirectory() as tmp:
-        pdfs = []
-        for q in quellen:
+        for q, _, anlage in eintraege:
             if not q or not os.path.isfile(q):
                 probleme.append(f"{q or '(leerer Pfad)'}: nicht gefunden")
                 continue
-            p, err = als_pdf(q, tmp)
+            p, err = als_pdf(q, tmp, drehen.get(os.path.basename(q)), hinweise, anlage)
             if err:
                 probleme.append(f"{os.path.basename(q)}: {err}")
             else:
@@ -251,7 +431,6 @@ def main():
                 print(f"❌ {p}")
             print("Fehlende Datei hochladen lassen (oder aus der Liste nehmen), dann neu starten.")
             sys.exit(2)
-        # Anlagen-Zeile prüfen
         abweichung = None
         brief = [p for q, p in pdfs if re.match(r"(Anschreiben|Motivationsschreiben)_", os.path.basename(q))]
         if brief:
@@ -259,33 +438,14 @@ def main():
             angehaengt = len(pdfs) - 1
             if zeile is not None and len(zeile) != angehaengt:
                 abweichung = (f"Anlagen-Zeile im Anschreiben nennt {len(zeile)} Anlage(n) ({', '.join(zeile)}), "
-                              f"angehängt sind {angehaengt}. Anschreiben neu erzeugen (profil.anlagen) oder Dateien ergänzen.")
+                              f"angehängt sind {angehaengt}. Mit --profil wird das Anschreiben automatisch angepasst; "
+                              f"sonst profil.anlagen ergänzen und Anschreiben neu erzeugen.")
         if abweichung and "--trotzdem" not in flags:
             print(f"❌ {abweichung}\nKeine PDF erzeugt (mit --trotzdem trotzdem bauen).")
             sys.exit(3)
-        pypdf = pypdf_laden()
-        zielpfad = os.path.join(ordner, stamm + ".pdf")
-        if os.path.exists(zielpfad):
-            alt = os.path.join(ordner, "alt")
-            os.makedirs(alt, exist_ok=True)
-            n = 1
-            while os.path.exists(os.path.join(alt, f"{stamm}_v{n}.pdf")):
-                n += 1
-            shutil.move(zielpfad, os.path.join(alt, f"{stamm}_v{n}.pdf"))
-            hinweise.append(f"Ältere Gesamt-PDF nach alt/{stamm}_v{n}.pdf verschoben.")
-        if pypdf:
-            w = pypdf.PdfWriter()
-            for _, p in pdfs:
-                w.append(p)
-            with open(zielpfad, "wb") as f:
-                w.write(f)
-            seiten = len(pypdf.PdfReader(zielpfad).pages)
-        elif shutil.which("pdfunite"):
-            subprocess.run(["pdfunite", *[p for _, p in pdfs], zielpfad], check=True)
-            seiten = None
-        else:
-            print("FEHLER: Weder pypdf noch pdfunite verfügbar. Ausweg: Dateien einzeln anhängen, wenn erlaubt.")
-            sys.exit(2)
+        tmpziel = os.path.join(tmp, "gesamt.pdf")
+        seiten = zusammen([p for _, p in pdfs], tmpziel, pypdf_laden())
+        ablegen(tmpziel, zielpfad)
     mb = os.path.getsize(zielpfad) / 1024 / 1024
     print(f"✅ PDF: {zielpfad}")
     print("Reihenfolge: " + " → ".join(os.path.basename(q) for q, _ in pdfs))
@@ -296,6 +456,50 @@ def main():
         print(f"⚠️ {abweichung}")
     for h in hinweise:
         print(h)
+
+
+def buendel(eintraege, n, ausgabe, name, drehen, hinweise):
+    """Upload-Limit „max. N Dateien“: Rezept – Briefe/Lebenslauf einzeln, Anlagen gebündelt."""
+    if n < 1:
+        print("FEHLER: --buendeln braucht eine Zahl ≥ 1.")
+        sys.exit(2)
+    brief = [e for e in eintraege if not e[2] and re.match(r"(anschreiben|motivationsschreiben|kurzanschreiben)", (e[1] or os.path.basename(e[0])).lower())]
+    ll = [e for e in eintraege if not e[2] and e not in brief]
+    anl = [e for e in eintraege if e[2]]
+    ordner = textlib.ausgabe_ordner(ausgabe)
+    os.makedirs(ordner, exist_ok=True)
+    gruppen = []
+    if n == 1:
+        gruppen = [("Bewerbung", brief + ll + anl)]
+    elif n == 2:
+        gruppen = [("Lebenslauf", ll), ("Anschreiben_und_Anlagen" if brief else "Anlagen", brief + anl)]
+    else:
+        gruppen = [("Anschreiben", brief), ("Lebenslauf", ll), ("Anlagen", anl)]
+    gruppen = [(g, e) for g, e in gruppen if e]
+    pypdf = pypdf_laden()
+    probleme, fertig = [], []
+    with tempfile.TemporaryDirectory() as tmp:
+        for g, elem in gruppen:
+            pdfs = []
+            for q, _, anlage in elem:
+                if not os.path.isfile(q):
+                    probleme.append(f"{q}: nicht gefunden")
+                    continue
+                p, err = als_pdf(q, tmp, drehen.get(os.path.basename(q)), hinweise, anlage)
+                (probleme.append(f"{os.path.basename(q)}: {err}") if err else pdfs.append(p))
+            if probleme:
+                continue
+            tz = os.path.join(tmp, f"{g}.pdf")
+            zusammen(pdfs, tz, pypdf)
+            fertig.append((tz, os.path.join(ordner, f"{g}_{name}.pdf" if name else f"{g}.pdf")))
+        if probleme:
+            print("FEHLER – nichts erzeugt:\n" + "\n".join(f"❌ {p}" for p in probleme))
+            sys.exit(2)
+        for t, z in fertig:
+            ablegen(t, z)
+    print(f"✅ {len(fertig)} Datei(en) für „max. {n} Dateien“. 📤 Hochladen:")
+    for i, (_, z) in enumerate(fertig, 1):
+        print(f"   {i}. {os.path.basename(z)}")
 
 
 if __name__ == "__main__":

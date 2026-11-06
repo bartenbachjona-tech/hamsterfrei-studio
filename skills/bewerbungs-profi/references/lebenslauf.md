@@ -21,7 +21,7 @@
 
 **Zeiträume** exakt wie im Profil. Nur Jahr bekannt → „2023 – 2024“ oder „seit 2023“, kein ausgedachter Monat. Lücken > ~3 Monate: `profil.luecken` als eigene Zeile, kurz und ehrlich (`sonderfaelle.md`).
 
-**Foto** freiwillig (AGG), Pfad in `person.foto` (rechts oben, 3,5 cm). **Geburtsdatum** nur auf Wunsch. **Datum/Unterschrift** online nicht nötig (`ort_datum_unterschrift`).
+**Foto** freiwillig (AGG), Pfad in `person.foto` – das Skript setzt es schwebend rechts neben Name/Kontakt (3,5 × 4,5 cm, zugeschnitten), der Lebenslauf rutscht nicht nach unten. **Geburtsdatum** nur auf Wunsch. **Datum/Unterschrift** online nicht nötig (`ort_datum_unterschrift`).
 
 **E-Mail:** Ist sie unseriös (Spitzname, lange Zahlenfolge, Jugendsprache), freundlich eine neue vorname.nachname@… empfehlen. Eine normale Adresse nicht beanstanden.
 
@@ -41,20 +41,20 @@ Format: `python3 "$S/unterlagen_erstellen.py" --beispiel` (Abschnitt `lebenslauf
  "kenntnisse": [{"label": "Sprachen", "wert": "Deutsch (Muttersprache), Englisch (B1)"}],
  "interessen": "", "ort_datum_unterschrift": false}
 ```
-Zuordnung: `profil.stationen` → Erfahrung/Ehrenamt, `profil.bildung` → Schulbildung, `sprachen`+`edv`(+`fuehrerschein`) → Kenntnisse, `hobbys` → Interessen (`profil_json.md`, Abschnitt 4). Zeiträume `MM/JJJJ – MM/JJJJ` oder `seit MM/JJJJ` – aber nur, wenn der Monat bekannt ist. [PRÜFEN] im Zeitraum ist ok: das Skript setzt „??“ in die Datumsspalte und die Notiz darunter (Layout bleibt gerade).
+Zuordnung: `profil.stationen` → Erfahrung/Ehrenamt, `profil.bildung` → Schulbildung, `sprachen`+`edv`+`zertifikate`(+`fuehrerschein`) → Kenntnisse, `hobbys` → Interessen (`profil_json.md`). Zeiträume `MM/JJJJ – MM/JJJJ` oder `seit MM/JJJJ` – **nur, wenn der Monat im Wortlaut steht**; sonst `2018 – 07/2024`. [PRÜFEN] im Zeitraum ist ok: das Skript setzt „??“ in die Datumsspalte und die Notiz darunter (Layout bleibt gerade).
 
-## 4. Erzeugen, prüfen, zeigen
+## 4. Zeigen, freigeben, EINMAL erzeugen
 
-1. `python3 "$S/fakten_check.py" /tmp/bewerbung/profil.json` → 0 ❌.
-2. `python3 "$S/unterlagen_erstellen.py" /tmp/bewerbung/profil.json --nur lebenslauf` (Handy: `--nur-pdf`) → `Lebenslauf_Vorname_Nachname_vN.pdf` (+ .docx).
-3. `python3 "$S/fakten_check.py" /tmp/bewerbung/profil.json /mnt/user-data/outputs/Lebenslauf_…_vN.pdf` (Abgleich) und `python3 "$S/endcheck.py" … --typ lebenslauf --profil /tmp/bewerbung/profil.json`.
-4. Wenn möglich: `pdftoppm -r 60 -png …pdf /tmp/ll` und das Bild ansehen.
-5. Im Chat: 3–5 Zeilen Zusammenfassung, offene [PRÜFEN] als Liste, „📁 Aktuell: Lebenslauf_…_vN.pdf“. Dann „Passt alles? a) Ja b) Ändern: …“.
+1. `python3 "$S/fakten_check.py" /tmp/bewerbung/profil.json` → 0 ❌ (Monate/Dauern nur aus dem Wortlaut).
+2. **Kurzfassung im Chat** (Stationen je eine Zeile: Zeitraum · Titel · Ort; Kenntnisse in einer Zeile), offene [PRÜFEN] als Liste. „Passt das so? a) Ja, als PDF b) Ändern: …“ – **noch keine Datei**.
+3. Nach dem Ja: `python3 "$S/unterlagen_erstellen.py" /tmp/bewerbung/profil.json --nur lebenslauf` (Handy: `--nur-pdf`) → `Lebenslauf_Vorname_Nachname_AKTUELL.pdf` (+ .docx).
+4. `fakten_check.py … /mnt/user-data/outputs/Lebenslauf_…_AKTUELL.pdf` (Abgleich) und `endcheck.py … --typ lebenslauf --profil …`. Seite als Bild ansehen (`pdftoppm -r 60 -png …pdf /tmp/ll`) – Foto, Umbrüche, eine Seite.
+5. Im Chat: „📁 Lebenslauf_…_AKTUELL.pdf – antippen → speichern.“ Leere untere Hälfte bei Einsteigern ist normal (kurz sagen).
 
 Kein python-docx/keine Installation: eingebauter docx-Skill, gleiches Layout, Texte 1:1 aus der JSON.
 
 ## 5. Änderungswünsche und Versionen
 
-- Änderung → **JSON** ändern → neu erzeugen (→ `_v2`). Ältere Fassung liegt danach in `alt/`; im Chat sagen: „Aktuell ist v2 – lösch die alte.“ Nie die Datei selbst umschreiben.
+- Änderung → kurz im Chat zeigen → Ja → **JSON** ändern → neu erzeugen. Die Datei heißt wieder `…_AKTUELL.pdf` (ältere intern in `alt/`); im Chat: „Neue Fassung – lade sie neu herunter und lösch die alte.“ Keine Versionsnummern erwähnen. Nie die Datei selbst umschreiben.
 - Wunsch nach Übertriebenem/Erfundenem: freundlich ablehnen, ehrliche Alternative.
 - Nutzer bearbeitet in Word selbst weiter: okay; dann hochladen lassen, `fakten_check.py` mit der Datei laufen lassen (zeigt Abweichungen), JSON nachziehen.

@@ -8,11 +8,13 @@ E-Mail-Texte – NUR aus der Profil-JSON (bzw. der Akte mit DATEN-Block).
     python3 unterlagen_erstellen.py --beispiel              (zeigt das Datenformat)
 
 Ausgabe: /mnt/user-data/outputs (falls vorhanden), sonst aktueller Ordner.
-Versionen: Jede Fassung heißt …_vN (v1, v2 …). Im Ausgabeordner liegt immer genau EINE
-aktuelle Fassung je Unterlage; ältere wandern nach alt/ (nichts wird gelöscht).
+Versionen: Der Nutzer sieht nur …_AKTUELL.pdf – genau EINE Datei je Unterlage. Frühere Fassungen
+wandern intern nach alt/ (…_v1, …_v2; nichts wird gelöscht). Erst NACH der Freigabe im Chat erzeugen.
 --nur-pdf: nur PDF ausgeben (Handy), .docx bleibt in alt/word/ als Sicherung.
 Anlagen-Zeile im Anschreiben: automatisch aus profil.anlagen (nur Dateien, die es gibt) +
-„Lebenslauf“. Stellen mit [PRÜFEN: …] werden gelb markiert und pro Dokument gezählt.
+„Lebenslauf“. Kurzanschreiben: ohne Anlagen-Zeile (anschreiben.anlagen_zeile: true erzwingt sie).
+Formular: Steht „max. N Zeichen“ schon im Feldnamen, wird es nicht doppelt angehängt.
+Foto (person.foto): schwebend rechts neben dem Kopf, 3,5 × 4,5 cm. Stellen mit [PRÜFEN: …] werden gelb markiert und pro Dokument gezählt.
 Layout: einspaltig, keine Tabellen/Grafiken, Tabstopp, Arial 11, A4 (ATS-lesbar).
 """
 import datetime
@@ -36,22 +38,39 @@ TYPEN = {"anschreiben": "Anschreiben", "motivationsschreiben": "Motivationsschre
          "kurzanschreiben": "Kurzanschreiben"}
 
 BEISPIEL = {
-    "schema": "bewerbungs-profi/2",
+    "schema": "bewerbungs-profi/3",
     "meta": {"stand": "06.11.2026", "phase": "4 Lebenslauf", "naechster_schritt": "Lebenslauf freigeben",
-             "geraet": "handy", "anrede_form": "du", "modus": "normal",
-             "chat_plan": "Chat 1: Profil + Stelle · Chat 2: Unterlagen · Chat 3: Gespräch"},
+             "geraet": "handy", "anrede_form": "du", "modus": "normal", "fragen_gesamt": 10, "antworten_seit_akte": 0,
+             "chat_plan": "Chat 1: Stelle + Profil · Chat 2: Unterlagen + Abschicken · Chat 3: Gespräch"},
     "person": {"name": "Lena Muster", "strasse": "Musterweg 1", "plz_ort": "85049 Ingolstadt",
                "telefon": "0151 23456789", "email": "lena.muster@example.de", "linkedin": "",
                "geburtsdatum": "", "foto": ""},
     "ziel": {"art": "Ausbildung", "stelle": "Kauffrau für Büromanagement", "firma": "Beispiel GmbH",
-             "kennziffer": "AZ-2027-04", "ansprechperson": "Frau Sommer", "anrede": "Sehr geehrte Frau Sommer,",
+             "kennziffer": "AZ-2027-04", "ansprechperson": "Frau Petra Sommer", "anrede": "Sehr geehrte Frau Sommer,",
              "firma_adresse": ["Beispiel GmbH", "Personalabteilung", "Frau Petra Sommer", "Hauptstraße 5", "85049 Ingolstadt"],
              "link": "", "bewerbungsweg": "E-Mail", "frist": "31.01.2027", "start": "01.09.2027",
              "unterlagen_verlangt": ["Anschreiben", "Lebenslauf", "letzte zwei Zeugnisse"],
              "muss": ["Mittlere Reife"], "kann": ["Excel"], "schluesselwoerter": ["Sorgfalt", "Teamarbeit"],
              "auswahlverfahren": "Gespräch", "anschreiben_variante": "anschreiben", "upload_limit": "",
-             "anzeige_text": "Ausbildung Kauffrau für Büromanagement (m/w/d) ab 01.09.2027 … Sorgfalt, Teamarbeit …"},
+             "anzeige_text": "Ausbildung Kauffrau für Büromanagement (m/w/d) ab 01.09.2027 bei der Beispiel GmbH, "
+                             "Hauptstraße 5, 85049 Ingolstadt. Kennziffer AZ-2027-04. Ansprechpartnerin: Frau Petra Sommer, "
+                             "Personalabteilung. Dein Profil: Mittlere Reife, Sorgfalt, Teamarbeit, Excel von Vorteil. "
+                             "Die Ausbildung dauert 3 Jahre. Bewerbung per E-Mail an ausbildung@beispiel.de mit Anschreiben, "
+                             "Lebenslauf und den letzten zwei Zeugnissen bis 31.01.2027."},
     "profil": {
+        "rohtext": [
+            {"nr": 1, "frage": "Frage 1 – Kontaktdaten", "antwort": "Lena Muster, Musterweg 1, 85049 Ingolstadt, 0151 23456789, lena.muster@example.de"},
+            {"nr": 2, "frage": "Frage 2 – Schule", "antwort": "Realschule Beispiel in Ingolstadt, 09/2020 bis 07/2026, Mittlere Reife mit 2,3. Wahlfach Wirtschaft, Schülerfirma"},
+            {"nr": 3, "frage": "Frage 3 – Stationen", "antwort": "Minijob an der Kasse im Supermarkt Beispiel in Ingolstadt seit 09/2025, am Schichtende mach ich die Abrechnung selbst und beantworte Kundenfragen am Infopunkt. Schülerpraktikum im Steuerbüro Beispiel 03/2025, 2 Wochen, Belege sortiert und erfasst. Seit 2023 Jugendtrainerin Handball U12 beim TSV Beispiel"},
+            {"nr": 4, "frage": "Frage 4 – Kenntnisse", "antwort": "Deutsch Muttersprache, Englisch B1, Word, Excel mit Formeln und Tabellen, PowerPoint"},
+            {"nr": 5, "frage": "Frage 5 – Warum dieser Beruf?", "antwort": "Ich schließe Zahlen gern sauber und ohne Fehler ab, das merk ich an der Kasse. Die Abrechnung macht mir Spaß"},
+            {"nr": 6, "frage": "Frage 6 – Warum diese Firma?", "antwort": "ihr bildet viele Azubis aus und ich bin mit dem Bus in 15 Minuten da"},
+            {"nr": 7, "frage": "Frage 7 – Beispiel Teamarbeit", "antwort": "Schülerfirma, wir haben zu fünft einen Verkaufsstand geplant, ich hab die Kasse und die Abrechnung übernommen"},
+            {"nr": 8, "frage": "Frage 8 – Start", "antwort": "ab 01.09.2027 passt"},
+            {"nr": 9, "frage": "Frage 9 – Foto", "antwort": "nein"},
+            {"nr": 10, "frage": "Frage 10 – Hobbys", "antwort": "Handball, ich trainiere die U12"},
+            {"nr": 11, "frage": "Frage 11 – Wie aufmerksam geworden?", "antwort": "auf eurer Karriereseite, mein Lehrer hat sie mir gezeigt"}],
+        "quellen": [],
         "bildung": [{"zeitraum": "09/2020 – 07/2026", "abschluss": "Mittlere Reife", "schule": "Realschule Beispiel, Ingolstadt",
                      "note": "2,3", "details": "Wahlfach Wirtschaft, Schülerfirma"}],
         "stationen": [
@@ -64,51 +83,61 @@ BEISPIEL = {
         "luecken": [],
         "sprachen": [{"sprache": "Deutsch", "niveau": "Muttersprache"}, {"sprache": "Englisch", "niveau": "B1"}],
         "edv": ["Word", "Excel (Formeln, Tabellen)", "PowerPoint"],
-        "fuehrerschein": "",
-        "motivation_beruf": "Ich schließe Zahlen gern sauber und ohne Fehler ab (Kasse).",
-        "motivation_firma": "",
+        "fuehrerschein": "", "zertifikate": [],
+        "wechselgrund": "", "abbruch_grund": "", "motivation_fach": "",
+        "motivation_beruf": "Ich schließe Zahlen gern sauber und ohne Fehler ab (Kasse). Abrechnung macht Spaß.",
+        "motivation_firma": "bildet viele Azubis aus; mit dem Bus 15 Minuten",
         "beispiele": [{"thema": "Teamarbeit", "stichwort": "Schülerfirma",
-                       "situation": "Schülerfirma, Verkaufsstand", "aufgabe": "Stand mit 4 Mitschülern planen",
+                       "situation": "Schülerfirma, Verkaufsstand", "aufgabe": "Stand zu fünft planen",
                        "handlung": "Kasse und Abrechnung übernommen", "ergebnis": ""}],
-        "hobbys": ["Handball (Training einer Jugendmannschaft)"],
+        "hobbys": ["Handball (Trainerin U12)"],
         "rahmen": {"start": "01.09.2027", "stunden": "", "verfuegbarkeit": "", "gehalt": "", "foto": False},
-        "wie_aufmerksam": "",
+        "wie_aufmerksam": "Karriereseite, Hinweis vom Lehrer",
+        "berufstest": {},
         "sonstiges": [],
         "anlagen": [{"datei": "/mnt/user-data/uploads/Zeugnis_10.pdf", "bezeichnung": "Zeugnis der 10. Klasse"}]
     },
     "firmenfakten": [{"fakt": "Azubis betreuen eigene Projekte", "quelle": "Karriereseite beispiel.de/karriere", "zugestimmt": False}],
-    "belege": [{"text": "zu fünft", "woher": "Nutzerin + 4 Mitschüler (Profil)"}],
+    "belege": [],
     "lebenslauf": {
         "kurzprofil": "",
         "abschnitte": [
             {"titel": "Praktische Erfahrung", "eintraege": [
                 {"zeitraum": "09/2025 – heute", "titel": "Aushilfe Kasse (Minijob)", "ort": "Supermarkt Beispiel, Ingolstadt",
-                 "punkte": ["Kassenabrechnung am Schichtende selbst erstellt", "Kundenfragen am Infopunkt beantwortet"]},
+                 "punkte": ["Kassenabrechnung am Schichtende selbst gemacht", "Kundenfragen am Infopunkt beantwortet"]},
                 {"zeitraum": "03/2025", "titel": "Schülerpraktikum (2 Wochen)", "ort": "Steuerbüro Beispiel, Ingolstadt",
                  "punkte": ["Belege sortiert und erfasst"]}]},
             {"titel": "Schulbildung", "eintraege": [
                 {"zeitraum": "09/2020 – 07/2026", "titel": "Mittlere Reife (Note 2,3)", "ort": "Realschule Beispiel, Ingolstadt",
-                 "punkte": ["Wahlfach Wirtschaft, Schülerfirma: Verkaufsstand mit 4 Mitschülern organisiert"]}]},
+                 "punkte": ["Wahlfach Wirtschaft, Schülerfirma: Verkaufsstand zu fünft geplant"]}]},
             {"titel": "Ehrenamt", "eintraege": [
                 {"zeitraum": "seit 2023", "titel": "Jugendtrainerin Handball (U12)", "ort": "TSV Beispiel", "punkte": []}]}],
         "kenntnisse": [{"label": "Sprachen", "wert": "Deutsch (Muttersprache), Englisch (B1)"},
                        {"label": "EDV", "wert": "Word, Excel (Formeln, Tabellen), PowerPoint"}],
-        "interessen": "Handball (Training einer Jugendmannschaft)",
+        "interessen": "Handball (Trainerin der U12)",
         "ort_datum_unterschrift": False},
     "anschreiben": {
         "typ": "anschreiben",
         "betreff": "Bewerbung um einen Ausbildungsplatz als Kauffrau für Büromanagement ab 01.09.2027 (Kennziffer AZ-2027-04)",
         "anrede": "Sehr geehrte Frau Sommer,",
         "absaetze": [
-            "seit September 2025 mache ich an der Kasse eines Supermarkts die Abrechnung am Schichtende selbst. Dabei habe ich gemerkt, wie gern ich Zahlen sauber und ohne Fehler abschließe.",
+            "seit September 2025 mache ich an der Kasse eines Supermarkts die Abrechnung am Schichtende selbst. Die Abrechnung macht mir Spaß, weil ich Zahlen gern sauber und ohne Fehler abschließe.",
             "In Ihrer Anzeige nennen Sie Sorgfalt und Teamarbeit. In meinem Praktikum im Steuerbüro habe ich Belege sortiert und erfasst. In der Schülerfirma haben wir zu fünft einen Verkaufsstand geplant; ich habe die Kasse und die Abrechnung übernommen.",
-            "[PRÜFEN: Warum genau die Beispiel GmbH? Grund fehlt noch]",
-            "Ich freue mich auf ein persönliches Gespräch."],
-        "gruss": "Mit freundlichen Grüßen", "ort_datum": ""},
-    "formular": [{"feld": "Wie sind Sie auf uns aufmerksam geworden?", "limit": 200, "text": "[PRÜFEN: Wo hast du die Anzeige gefunden?]"}],
-    "email": {"betreff": "", "text": ""},
+            "Für die Beispiel GmbH spricht für mich, dass Sie viele Azubis ausbilden und ich Sie mit dem Bus in 15 Minuten erreiche.",
+            "Ab dem 01.09.2027 kann ich bei Ihnen anfangen. Ich freue mich auf ein persönliches Gespräch."],
+        "gruss": "Mit freundlichen Grüßen", "ort_datum": "", "anlagen_zeile": None},
+    "formular": [
+        {"feld": "Warum möchtest du zu uns? (max. 1000 Zeichen)", "limit": 1000,
+         "text": "An der Kasse mache ich am Schichtende die Abrechnung selbst und merke dabei, dass ich Zahlen gern sauber abschließe. Sie bilden viele Azubis aus, und ich erreiche Sie mit dem Bus in 15 Minuten."},
+        {"feld": "Frühester Eintrittstermin", "limit": 50, "text": "01.09.2027"},
+        {"feld": "Wie sind Sie auf uns aufmerksam geworden?", "limit": 200,
+         "text": "Über Ihre Karriereseite – mein Lehrer hat mich darauf hingewiesen."}],
+    "email": {"betreff": "Bewerbung als Kauffrau für Büromanagement (Kennziffer AZ-2027-04)",
+              "text": "Sehr geehrte Frau Sommer,\n\nanbei sende ich Ihnen meine Bewerbung um einen Ausbildungsplatz als Kauffrau für Büromanagement ab 01.09.2027. Im Juli 2026 habe ich meine Mittlere Reife an der Realschule Beispiel gemacht.\nAnschreiben, Lebenslauf und Zeugnis finden Sie in einer PDF im Anhang.\nFür Rückfragen erreichen Sie mich unter 0151 23456789.\n\nMit freundlichen Grüßen\nLena Muster"},
     "status": [{"unterlage": "Lebenslauf", "status": "Entwurf", "datei": "", "offen": ""}],
-    "gespraech": {"termin": "", "art": "", "star": [], "eigene_fragen": [], "feedback": []},
+    "gespraech": {"termin": "", "art": "", "ort": "", "gespraechspartner": "", "einladung_text": "", "bestaetigt": False,
+                  "mitbringen": [], "kernbotschaften": [], "selbstpraesentation": [], "schwierige_fragen": [],
+                  "star": [], "eigene_fragen": [], "feedback": [], "ac_uebungen": []},
     "bewerbungen": [{"firma": "Beispiel GmbH", "stelle": "Kauffrau für Büromanagement", "abgeschickt": "", "status": "in Arbeit", "nachfassen": ""}],
     "entscheidungen": [{"datum": "06.11.2026", "text": "Volles Anschreiben, weil verlangt"}],
     "naechste_schritte": ["Lebenslauf freigeben", "Anschreiben"]
@@ -259,6 +288,54 @@ def zeitraum_aufteilen(z):
     return kurz, notizen
 
 
+FOTO_B_CM, FOTO_H_CM = 3.5, 4.5
+
+
+def foto_rechts(par, pfad):
+    """Bewerbungsfoto als schwebendes Bild (wp:anchor) rechts oben am Seitenrand, Text fließt links daneben.
+    Hochformat 3,5 × 4,5 cm (zugeschnitten, nicht verzerrt)."""
+    from docx.oxml.ns import qn
+    from docx.shared import Cm
+    from PIL import Image, ImageOps
+    import copy
+    import tempfile as _tf
+    img = ImageOps.exif_transpose(Image.open(pfad)).convert("RGB")
+    ziel = FOTO_B_CM / FOTO_H_CM
+    w, h = img.size
+    if w / h > ziel:                     # zu breit → seitlich zuschneiden
+        nw = int(h * ziel)
+        img = img.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+    else:                                # zu hoch → oben/unten zuschneiden
+        nh = int(w / ziel)
+        img = img.crop((0, (h - nh) // 3, w, (h - nh) // 3 + nh))
+    tmp = _tf.NamedTemporaryFile(suffix=".jpg", delete=False).name
+    img.save(tmp, "JPEG", quality=90)
+    run = par.add_run()
+    run.add_picture(tmp, width=Cm(FOTO_B_CM), height=Cm(FOTO_H_CM))
+    inline = run._r.find(qn("w:drawing")).find(qn("wp:inline"))
+    emu_b, emu_h = int(Cm(FOTO_B_CM)), int(Cm(FOTO_H_CM))
+    A = "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+    xml = (f'<wp:anchor xmlns:wp="{A}" distT="0" distB="0" distL="114300" distR="0" simplePos="0" relativeHeight="251659264" '
+           f'behindDoc="0" locked="0" layoutInCell="1" allowOverlap="0">'
+           f'<wp:simplePos x="0" y="0"/>'
+           f'<wp:positionH relativeFrom="margin"><wp:align>right</wp:align></wp:positionH>'
+           f'<wp:positionV relativeFrom="paragraph"><wp:posOffset>0</wp:posOffset></wp:positionV>'
+           f'<wp:extent cx="{emu_b}" cy="{emu_h}"/><wp:effectExtent l="0" t="0" r="0" b="0"/>'
+           f'<wp:wrapSquare wrapText="left"/></wp:anchor>')
+    from lxml import etree
+    anchor = etree.fromstring(xml)
+    for tag in ("wp:docPr", "wp:cNvGraphicFramePr"):
+        el = inline.find(qn(tag))
+        if el is not None:
+            anchor.append(copy.deepcopy(el))
+    anchor.append(copy.deepcopy(inline.find(qn("a:graphic"))))
+    inline.getparent().replace(inline, anchor)
+    try:
+        os.unlink(tmp)
+    except OSError:
+        pass
+
+
 # ---------------------------------------------------------------- Lebenslauf
 def baue_lebenslauf(d, ordner):
     from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -268,15 +345,13 @@ def baue_lebenslauf(d, ordner):
     doc = neues_dokument("Lebenslauf " + name, name)
     pruefen = 0
     foto = pers.get("foto")
-    if foto and os.path.isfile(foto):
-        p = doc.add_paragraph()
-        p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-        p.add_run().add_picture(foto, width=Cm(3.5))
-    elif foto:
-        print(f"⚠️ Foto nicht gefunden: {foto} – Lebenslauf ohne Foto erstellt.")
     p = doc.add_paragraph(style="Title")
     p.paragraph_format.space_after = Pt(2)
     text(p, "Lebenslauf", size=13)
+    if foto and os.path.isfile(foto):
+        foto_rechts(p, foto)          # schwebend rechts neben Name/Kontakt – schiebt nichts nach unten
+    elif foto:
+        print(f"⚠️ Foto nicht gefunden: {foto} – Lebenslauf ohne Foto erstellt.")
     text(doc.add_paragraph(), name, bold=True, size=18)
     kontakt = [pers.get(k, "") for k in ("strasse", "plz_ort", "telefon", "email", "linkedin")]
     text(doc.add_paragraph(), " | ".join(k for k in kontakt if k))
@@ -385,7 +460,12 @@ def baue_anschreiben(d, ordner):
     p.paragraph_format.space_before = Pt(24)
     text(p, name)
     anl, hinw = anlagen_liste(d)
-    if anl and typ != "kurzanschreiben":
+    # Regel: Kurzanschreiben ohne Anlagen-Zeile (die Dateien stehen ohnehin im Portal/der Mail);
+    # anschreiben.anlagen_zeile: true erzwingt sie, false unterdrückt sie auch beim vollen Anschreiben.
+    zeile_an = an.get("anlagen_zeile")
+    if zeile_an is None:
+        zeile_an = typ != "kurzanschreiben"
+    if anl and zeile_an:
         p = doc.add_paragraph()
         p.paragraph_format.space_before = Pt(14)
         text(p, "Anlagen: " + ", ".join(anl))
@@ -402,7 +482,11 @@ def baue_formular(d, ordner):
     zeilen, pruefen, warn = [], 0, []
     for f in felder:
         lim = f.get("limit")
-        kopf = f"=== {f.get('feld', 'Feld')}" + (f" (max. {lim} Zeichen)" if lim else "") + " ==="
+        feld = (f.get("feld") or "Feld").strip()
+        schon = re.search(r"max\.?\s*\d+\s*(Zeichen|Wörter|Worte)", feld, re.I)
+        if schon and lim:   # Grenze steht schon im Feldtitel → nicht doppelt; die Zahl im Titel muss passen
+            feld = re.sub(r"\s*\(?\s*max\.?\s*\d+\s*(Zeichen|Wörter|Worte)\s*\)?", "", feld, flags=re.I).strip()
+        kopf = f"=== {feld}" + (f" (max. {lim} Zeichen)" if lim else (f" ({schon.group(0)})" if schon else "")) + " ==="
         t = (f.get("text") or "").strip()
         zeilen += [kopf, t, ""]
         pruefen += zaehle_pruefen(t)
@@ -525,7 +609,7 @@ def main():
     if fehl:
         print("⚠️ Fehlende Angaben: " + ", ".join(fehl))
     if os.path.isdir(os.path.join(ordner, "alt")):
-        print("📌 Aktuell ist jeweils nur die Datei im Ausgabeordner (höchste _vN). Ältere Fassungen liegen in alt/ – nicht mehr verwenden.")
+        print("📌 Für den Nutzer gilt nur …_AKTUELL. Frühere Fassungen liegen intern in alt/ – nicht erwähnen, nicht anbieten.")
     print("Nächster Schritt: fakten_check.py PROFIL.json <Dateien> – Treffer belegen, streichen oder nachfragen.")
     sys.exit(1 if fehler and not erstellt else 0)
 

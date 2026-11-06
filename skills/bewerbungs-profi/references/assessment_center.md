@@ -12,7 +12,7 @@
 
 ## 1. Einladung bestätigen
 
-Einladung hochladen lassen (Foto/Screenshot/PDF). Zuerst: **Termin bestätigen** – innerhalb der genannten Frist, sonst in 1–2 Tagen (kurze Mail anbieten: Dank, Teilnahme bestätigen, ggf. Frage zu Ablauf/Unterlagen/Anreise). Termin, Ort, genannte Übungen und Mitbringliste in `gespraech`.
+Einladung hochladen lassen (Foto/Screenshot/PDF), ganz in `gespraech.einladung_text`. Termin, Ort, genannte Übungen (`ac_uebungen`) und Mitbringliste (`mitbringen`) in `gespraech`, `art = "Assessment Center"`. **Termin bestätigen ist ein eigener Schritt** (wie `gespraech.md` Abschnitt 0): Mail im Chat + „Abgeschickt? a) Ja b) Später“. Erst in der nächsten Nachricht Übersicht und Menü.
 
 ## 2. Kompakte Übersicht (EINE Nachricht, max. ~12 Zeilen), dann Menü
 
@@ -29,7 +29,7 @@ Einladung hochladen lassen (Foto/Screenshot/PDF). Zuerst: **Termin bestätigen**
 Beobachtet wird alles – auch Pausen und Mittagessen. Authentisch bleiben.
 Deine Beispiele (STAR) aus dem Profil passen für fast jede Übung.
 ```
-Bei Bedarf statt Chat als PDF: `akte.py … --spickzettel --pdf`.
+Bei Bedarf als **AC-Spickzettel**: `akte.py … --spickzettel [--pdf]` – mit Abschnitt „Dein Auswahltag“ (jede Übung aus `ac_uebungen` mit einem Tipp), Mitbring-Liste und AC-Tipps.
 
 **Menü an die Einladung anpassen:** Nur die Übungen zeigen, die in Einladung/Anzeige stehen (plus „Interview“). Steht nichts drin: ehrlich sagen und die typischen 4 anbieten.
 ```
@@ -39,7 +39,7 @@ Empfohlen: 1.
 ```
 Alle Fall-Materialien sind **ausgedacht und als Übung gekennzeichnet**, passend zur Branche. Keine Fakten über die echte Firma.
 
-In allen Übungen: **kein Hinweis-Block** während der Übung, nur am Ende (Feedback). Neue STAR-Beispiele sofort in `profil.beispiele`; nach jeder Übung Akte speichern.
+In allen Übungen: **kein Hinweis-Block** während der Übung, nur am Ende (Feedback). Neue STAR-Beispiele wörtlich in `profil.rohtext`, dann in `profil.beispiele`; Akte **nach** jeder Übung speichern, nie mittendrin.
 
 ## 3. Übungen
 

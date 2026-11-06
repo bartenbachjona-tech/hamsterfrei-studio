@@ -15,13 +15,13 @@ Der Skill funktioniert mit dem **kostenlosen Claude**, wenn „Code-Ausführung 
 
 | Skript | Zweck |
 |---|---|
-| `fakten_check.py PROFIL.json [Dateien] [--anzeige x.txt]` | **Pflicht vor jeder Freigabe**: unbelegte Zahlen, Daten, Dauern, Namen, Abschlüsse, Niveaus, Führerschein, Links, Aufwertungen; Datei = freigegebener Text. Exit 1 bei ❌ |
-| `unterlagen_erstellen.py PROFIL.json [--nur lebenslauf/anschreiben/formular/email] [--nur-pdf] [--ausgabe O]` | Unterlagen aus der JSON; Versionen `_vN`, ältere → `alt/`; Anlagen-Zeile automatisch; `--beispiel` zeigt das Format |
-| `endcheck.py Dateien --typ T [--profil P] [--firma F --stelle S]` | Form/Stil: [PRÜFEN], Platzhalter, Floskeln, Länge, Seiten, Firma (unscharf), Stelle (ganz), fremde Firmen, E-Mail (nur echte Probleme), Formular-Limits. Typ: lebenslauf, anschreiben, motivationsschreiben, kurzanschreiben, formular, email, gesamt |
-| `pdf_zusammenfuegen.py Ziel.pdf --profil P` (oder Dateien…) / `--einzeln Dateien` | eine PDF bzw. saubere Einzeldateien; nimmt neueste Fassung, A4-Fotos, HEIC; Abbruch (Exit 2) bei fehlender Datei, Exit 3 bei falscher Anlagen-Zeile |
-| `akte.py PROFIL.json [--pdf]` · `--lesen AKTE` · `--spickzettel [--pdf]` | Akte schreiben/lesen, Gesprächs-Spickzettel |
+| `fakten_check.py PROFIL.json [Dateien] [--woher] [--typ spickzettel] [--anzeige x.txt] [--quelle upload.pdf]` | **Pflicht vor jeder Freigabe**: prüft gegen Nutzer-Wortlaut (`profil.rohtext`), Anzeige, Einladung, Uploads – nicht gegen Claudes JSON-Werte. Zahlen, Daten, Monate, Dauern (gegen berechnete Dauer), Namen, Kürzel, Niveaus, Führerschein/Klasse, Links, „Wie aufmerksam“ (Quelle), Firmenfakten, weiche Sätze (⚠️), Datei = freigegebener Text. `--woher` druckt die Woher-Liste. Akte/Spickzettel werden in Sammelprüfungen übersprungen. Exit 1 bei ❌ |
+| `unterlagen_erstellen.py PROFIL.json [--nur lebenslauf/anschreiben/formular/email] [--nur-pdf] [--ausgabe O]` | Unterlagen aus der JSON – **erst nach der Freigabe**; Datei heißt `…_AKTUELL`, frühere intern in `alt/`; Anlagen-Zeile automatisch (Kurzanschreiben ohne); Foto rechts neben dem Kopf; `--beispiel` zeigt das Format |
+| `endcheck.py Dateien --typ T [--profil P]` | Form/Stil. Typ: lebenslauf, anschreiben, motivationsschreiben, kurzanschreiben, formular, email, gesamt, anlage. Firma/Stelle nur im Brief verlangt (Rechtsform mit Wortgrenzen, Stelle mit Flexions-Toleranz); gebeugte Floskeln + „würde mich … freuen“ |
+| `pdf_zusammenfuegen.py Ziel.pdf --profil P` · `--einzeln --profil P` · `--buendeln N --profil P` | Gesamt-PDF (exakter Name), saubere Einzeldateien flach mit Bezeichnung + Hochlade-Liste, Bündel für „max. N Dateien“; Querformat drehen/einpassen (`--drehen D=90`), PDF-Anlagen auf A4, aktuelle Fassung automatisch, Anlagen-Zeile wird nachgezogen; Exit 2 bei fehlender Datei |
+| `akte.py PROFIL.json [--pdf]` · `--lesen AKTE` · `--spickzettel [--pdf]` | Akte (.txt, eindeutiger Name, Wieder-hochladen-Liste) schreiben/lesen; gegliederter Gesprächs-/AC-Spickzettel |
 | `berufstest_auswerten.py "1a 2c …"` | RIASEC-Code (`--fragen` zeigt die Aussagen) |
-| `textlib.py Datei [--info]` | Text aus .docx/.pdf/.html/.txt; `--info`: Layout-Befunde (docx sicher, PDF einfache Spalten-Erkennung) |
+| `textlib.py Datei [--info]` | Text aus .docx/.pdf/.html/.txt; `--info`: Layout-Befunde |
 | `ordner_anlegen.py Basis "Firma" "Stelle" [Dateien] [--profil P] [--zip] [--ausgabe O]` | Bewerbungsordner mit Akte (lokaler Ordner oder ZIP) |
 
 Abhängigkeiten: Standardbibliothek; `python-docx`, `pypdf`, `pillow`, `pillow-heif` werden bei Bedarf per pip nachinstalliert; PDF über LibreOffice (`soffice`). Fehlt etwas und keine Installation möglich: `.docx` liefern und „Speichern unter → PDF“ erklären bzw. den eingebauten docx-Skill nutzen. Fehlermeldungen sind deutsch – in einem Satz erklären.
@@ -29,8 +29,8 @@ Abhängigkeiten: Standardbibliothek; `python-docx`, `pypdf`, `pillow`, `pillow-h
 ## Speichern ohne Ordnerzugriff (Free-Plan, Standard)
 
 - Alles für den Nutzer nach **`/mnt/user-data/outputs/`**; Arbeits-JSON in `/tmp/bewerbung/`.
-- Namen ohne Umlaute/Sonderzeichen (die Skripte transliterieren: ć→c, ş→s, ı→i, ë→e, ä→ae, ß→ss): `Lebenslauf_Vorname_Nachname_vN.pdf`, `Anschreiben_…_Firma_vN.pdf`, `Bewerbung_Vorname_Nachname_Stelle.pdf`, `Formular-Texte_Firma_vN.txt`, `E-Mail_Bewerbung_Firma_vN.txt`, `Gespraech_Spickzettel_Firma_vN.txt/.pdf`, `Bewerbungsakte_Vorname_Nachname_Datum_Uhrzeit.txt`.
-- **Genau eine aktuelle Fassung je Unterlage** im Ausgabeordner; ältere in `alt/`. Im Chat immer sagen, welche aktuell ist.
+- Namen ohne Umlaute/Sonderzeichen (die Skripte transliterieren: ć→c, ş→s, ı→i, ë→e, ä→ae, ß→ss), flach, ohne Unterordner: Arbeitsdateien `Lebenslauf_Vorname_Nachname_AKTUELL.pdf`, `Anschreiben_…_Firma_AKTUELL.pdf`, `Formular-Texte_Firma_AKTUELL.txt`, `E-Mail_Bewerbung_Firma_AKTUELL.txt`, `Gespraech_Spickzettel_Firma_AKTUELL.txt/.pdf`; zum Versand `Bewerbung_Vorname_Nachname_Stelle.pdf` bzw. `Lebenslauf_Vorname_Nachname.pdf` usw.; Akte `Bewerbungsakte_Vorname_Nachname_Datum_HHMMSS.txt`.
+- **Genau eine Datei je Unterlage** (`…_AKTUELL`) im Ausgabeordner; frühere intern in `alt/` – nicht erwähnen. Dateien erst **nach der Freigabe** erzeugen, nicht „zur Ansicht“.
 - Nach jeder Datei sagen, was der Nutzer tut (Handy: `geraet.md`).
 - Optional am Ende: alles als ZIP (`ordner_anlegen.py /tmp "Firma" "Stelle" Dateien… --profil P --zip`).
 

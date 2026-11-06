@@ -21,8 +21,9 @@ Rechtliches immer nur **allgemein** einordnen, keine Einzelfall-Fristen ausrechn
 | Minijob-Grenze | 603 €/Monat | 633 €/Monat | ebd.; Deutsche Rentenversicherung PM 21.11.2025 |
 
 - Ausnahmen vom Mindestlohn u. a.: Auszubildende (dafür Mindestausbildungsvergütung, `nach_dem_gespraech.md`), **Pflichtpraktika** laut Studien-/Schulordnung und **freiwillige Orientierungspraktika bis 3 Monate** (§ 22 MiLoG; z. B. Uni Göttingen „Praktikum und Mindestlohn“). Freiwilliges Praktikum über 3 Monate: Mindestlohn. Darum im Anschreiben/Formular angeben: Pflicht- oder freiwilliges Praktikum, Zeitraum.
-- **Werkstudent:** In der Vorlesungszeit **höchstens 20 Std./Woche** (mehrere Jobs zusammen), sonst entfällt das „Werkstudentenprivileg“. Mehr nur abends/nachts/am Wochenende oder in den Semesterferien, zusammen höchstens 26 Wochen im Jahr. Beiträge: nur Rentenversicherung; keine Kranken-, Pflege-, Arbeitslosenversicherung über den Job – die studentische KV (oder Familienversicherung) bleibt (Barmer, „Werkstudent“, abgerufen 11/2026). In die Bewerbung: Studiengang, Semester, Stunden/Woche, ab wann, wie lange.
-- **Minijob:** Verfügbarkeit (Tage/Uhrzeiten), Start, Erfahrung zählen; Anschreiben meist 3–5 Sätze in Mail/Formular.
+- **Werkstudent:** In der Vorlesungszeit **höchstens 20 Std./Woche – alle Jobs zusammen** (Minijob nebenher zählt mit; darum im Profil nach anderen Jobs fragen), sonst entfällt das „Werkstudentenprivileg“. Der Status **endet mit der Exmatrikulation** (bzw. dem Studienende) – Vertragsende/Zeitraum entsprechend angeben, nicht darüber hinaus planen. Mehr nur abends/nachts/am Wochenende oder in den Semesterferien, zusammen höchstens 26 Wochen im Jahr. Beiträge: nur Rentenversicherung; keine Kranken-, Pflege-, Arbeitslosenversicherung über den Job – die studentische KV (oder Familienversicherung) bleibt (Barmer, „Werkstudent“, abgerufen 11/2026). In die Bewerbung: Studiengang, Semester, Stunden/Woche, ab wann, wie lange.
+- **Minijob:** Verfügbarkeit (Tage/Uhrzeiten), Start, Erfahrung zählen; dazu **eine** kurze Kenntnisse-Frage (Kasse, Sprachen, Führerschein nur wenn relevant). Anschreiben meist 3–5 Sätze in Mail/Formular oder per WhatsApp (`abschicken.md` Abschnitt 5).
+- **Probearbeiten:** `gespraech.md` Abschnitt 5a (Kurzfassung: Ablauf/Kleidung/Bezahlung klären; echte Mitarbeit ist in der Regel zu bezahlen – allgemein einordnen, Beratung nennen).
 
 ## 2. Lebenslauf-Situationen
 
@@ -56,6 +57,7 @@ Kinder, Familienstand, Religion, Staatsangehörigkeit, Gesundheit, Schwerbehinde
 
 ## 7. Formular-Grenzen
 
-- **Upload-Limit** („max. 2 Dateien“, „max. 5 MB“) in `ziel.upload_limit`. Beispiel 2 Dateien: 1) Lebenslauf, 2) Anschreiben + alle Zeugnisse als eine PDF (`pdf_zusammenfuegen.py`). Ohne Anschreiben-Feld: Lebenslauf + Zeugnisse-PDF.
+- **Upload-Limit** („max. 3 Dateien“, „max. 5 MB“) in `ziel.upload_limit` → `pdf_zusammenfuegen.py --buendeln N --profil …` (Rezept in `abschicken.md` Abschnitt 2: N ≥ 3 Anschreiben | Lebenslauf | Anlagen, N = 2 Lebenslauf | Anschreiben+Anlagen, N = 1 alles).
+- **Portale mit Neu-Eintippen** nach dem Upload: `abschicken.md` Abschnitt 4.
 - **Zeichenlimits** je Feld in `formular[].limit`; `endcheck.py --typ formular` prüft sie.
 - Pflichtfelder nie mit „siehe Lebenslauf“.

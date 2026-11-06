@@ -20,7 +20,7 @@ Laut Stepstone (700 Recruiter, 07/2025) verlangen 55 % der Unternehmen ein Ansch
 | optional | `kurzanschreiben` (150–200 Wörter) oder 3–5 Sätze im Formular-/Mailfeld (`formular`/`email`) |
 | Hochschule/dual verlangt „Motivationsschreiben“ | `motivationsschreiben` (Dateiname heißt dann so) |
 | „ohne Anschreiben“ | keins – Risiko nennen, wenn der Nutzer eins will; er entscheidet |
-| Minijob | 3–5 Sätze in Mail/Formular |
+| Minijob | 3–5 Sätze in Mail/Formular (oder WhatsApp, `sonderfaelle.md`) |
 
 Nur fragen, wenn die Anzeige es offenlässt (eine Frage, Empfehlung markieren). Entscheidung in `entscheidungen`.
 
@@ -33,12 +33,13 @@ Nur fragen, wenn die Anzeige es offenlässt (eine Frage, Empfehlung markieren). 
 5. **Warum diese Firma:** `motivation_firma` oder ein `firmenfakt` mit `zugestimmt: true`. Fehlt beides: eine Frage stellen – nicht raten, nicht [PRÜFEN] mit eigenem Vorschlag.
 6. **Rahmen nur, wenn verlangt:** Start, Gehalt (Spanne brutto/Jahr), bei Praktikum/Werkstudent Zeitraum, Stunden, Pflicht/freiwillig.
 7. **Schluss ohne Konjunktiv:** „Ich freue mich auf ein persönliches Gespräch.“
-8. Gruß, Name. **Anlagen-Zeile baut das Skript** aus `profil.anlagen` (nur vorhandene Dateien) – nicht von Hand schreiben.
+8. Gruß, Name. **Anlagen-Zeile baut das Skript** aus `profil.anlagen` (nur vorhandene Dateien) – nicht von Hand schreiben. Zeugnisse darum **vor** dem Anschreiben einsammeln (Profil-Frage). Kommen sie später, zieht `pdf_zusammenfuegen.py --profil` die Zeile automatisch nach.
+   **Kurzanschreiben: ohne Anlagen-Zeile** (es steht im Portal/in der Mail neben den Dateien). Erzwingen mit `anschreiben.anlagen_zeile: true`, unterdrücken beim vollen Anschreiben mit `false`.
 
 ## 3. Sprache: echt statt KI-glatt
 
 Laut Stepstone (06/2025) finden 73 % der Recruiter KI-Bewerbungen weniger authentisch, 75 % sehen oft übertriebene Qualifikationen. Darum:
-- Motivation und Beispiele **nur aus dem Profil**. Keine Sätze wie „Ich lerne am besten, wenn …“, die der Nutzer nie gesagt hat.
+- Motivation, Gefühle und Eigenschaften **nur aus dem Wortlaut** (`profil.rohtext`). Keine Sätze wie „Genau so möchte ich arbeiten“, „macht mir mehr Spaß als alles andere“, „Reisen ist kein Problem“, „ich bin sehr zuverlässig“, wenn er das nicht gesagt hat. Fehlt die Basis: **nicht schreiben, sondern fragen.**
 - Sprache des Nutzers (Alter, Bildungsweg). Verboten: „hiermit bewerbe ich mich“, „mit großem Interesse“, „würde mich freuen“, „teamfähig, belastbar und flexibel“, Dreier-Ketten.
 - Nach dem Entwurf: „Kannst du zu jedem Satz eine kleine Geschichte erzählen?“
 
@@ -58,14 +59,20 @@ Der Firmen-Satz steht nur drin, weil die Nutzerin vorher gefragt wurde: „Laut 
 
 Danach in 2–3 Sätzen erklären, warum der Text so gebaut ist.
 
-## 5. Erzeugen, prüfen, zeigen
+## 5. Zeigen, freigeben, EINMAL erzeugen
 
-1. Absätze in `anschreiben.absaetze` (bzw. `formular`/`email`), dann `fakten_check.py` → 0 ❌.
-2. Entwurf **im Chat zeigen** und fragen: „Klingt das nach dir? a) Ja b) Ändern: … c) lockerer/förmlicher“.
-3. Nach dem Ja: `python3 "$S/unterlagen_erstellen.py" /tmp/bewerbung/profil.json --nur anschreiben [--nur-pdf]` → `Anschreiben_…_vN` (bzw. `Motivationsschreiben_…`, `Kurzanschreiben_…`).
+1. Absätze in `anschreiben.absaetze` (bzw. `formular`/`email`), dann `python3 "$S/fakten_check.py" /tmp/bewerbung/profil.json --woher` → 0 ❌; ⚠️ „Motivation/Eigenschaft ohne Wortlaut“ → Satz raus, als Frage stellen.
+2. **Im Chat zeigen** (Computer: im Codeblock zum Kopieren) – **noch keine Datei**. Darunter die **Woher-Liste** (max. 5 Zeilen, aus der `--woher`-Ausgabe, in einfachen Worten):
+   ```
+   So habe ich deine Antworten verwendet:
+   – „Die Abrechnung macht mir Spaß …“ ↔ deine Antwort 5: „die Abrechnung macht mir Spaß“
+   – „zu fünft einen Verkaufsstand geplant“ ↔ Antwort 7
+   ```
+   Dann: „Klingt das nach dir? a) Ja, Datei erstellen b) Ändern: … c) lockerer/förmlicher“.
+3. Nach dem Ja **einmal**: `python3 "$S/unterlagen_erstellen.py" /tmp/bewerbung/profil.json --nur anschreiben [--nur-pdf]` → `Anschreiben_…_AKTUELL.pdf` (bzw. `Motivationsschreiben_…`, `Kurzanschreiben_…`).
 4. `fakten_check.py profil.json <Datei>` (Abgleich: Datei = freigegebener Text) + `endcheck.py <Datei> --typ anschreiben|kurzanschreiben|motivationsschreiben --profil profil.json`.
-5. Formular-/Mailtext: `--nur formular` bzw. `--nur email` → `.txt`, Feldtitel als `=== Feld (max. N Zeichen) ===`; am Handy die Felder zusätzlich einzeln im Chat zeigen.
+5. Formular-/Mailtext genauso: erst im Chat (Handy: Feld für Feld), nach dem Ja `--nur formular` bzw. `--nur email` → `.txt`. Steht „max. N Zeichen“ schon im Feldnamen, hängt das Skript es nicht doppelt an. Firmenname/Stellentitel sind in Formularfeldern und Mail **nicht** Pflicht – keine hölzernen Sätze einbauen, freigegebene Texte nicht für den Endcheck umschreiben.
 
 ## 6. Motivationsschreiben (Studium, duales Studium)
 
-Gleiche Regeln; Schwerpunkt: Warum dieses Fach, was hat hingeführt (Schulfach, Projekt, Praktikum), was danach. Dual: Warum der Betrieb **und** warum das Fach (zwei Profil-Fragen). Vorgaben der Hochschule/des Betriebs (Länge, Leitfragen) gehen vor.
+Gleiche Regeln; Schwerpunkt: Warum dieses Fach (`profil.motivation_fach`, wörtlich erfragt), was hat hingeführt (Schulfach, Projekt, Praktikum), was danach. Dual: Warum der Betrieb **und** warum das Fach (zwei Profil-Fragen). Vorgaben der Hochschule/des Betriebs (Länge, Leitfragen) gehen vor; Leitfragen, auf die er nichts gesagt hat, fragst du – nicht auffüllen.

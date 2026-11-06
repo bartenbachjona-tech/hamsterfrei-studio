@@ -56,18 +56,25 @@ def name_teile(name):
 
 
 # ---------------------------------------------------------------- Versionen
-VER_RE = re.compile(r"^(?P<basis>.+?)_v(?P<n>\d+)$")
+# Der Nutzer sieht immer nur EINE Datei je Unterlage: …_AKTUELL.pdf. Frühere Fassungen liegen
+# intern in alt/ als …_v1, …_v2 (nichts wird gelöscht). Alte Namen …_vN im Ordner gehen auch.
+AKTUELL = "AKTUELL"
+N_AKTUELL = 10 ** 6
+VER_RE = re.compile(r"^(?P<basis>.+?)_(?:v(?P<n>\d+)|(?P<akt>AKTUELL))$")
 
 
 def basis_und_version(stamm):
     m = VER_RE.match(stamm)
-    return (m.group("basis"), int(m.group("n"))) if m else (stamm, 0)
+    if not m:
+        return stamm, 0
+    return m.group("basis"), (N_AKTUELL if m.group("akt") else int(m.group("n")))
 
 
 def versionen(ordner, basis, ext):
-    """Alle Fassungen basis_vN.ext im Ordner und in ordner/alt → {n: pfad}."""
+    """Alle Fassungen basis_vN.ext / basis_AKTUELL.ext im Ordner und in ordner/alt → {n: pfad}
+    (AKTUELL hat die höchste Nummer)."""
     gef = {}
-    for o in (ordner, os.path.join(ordner, "alt")):
+    for o in (os.path.join(ordner, "alt"), ordner):
         if not os.path.isdir(o):
             continue
         for f in os.listdir(o):
@@ -75,34 +82,45 @@ def versionen(ordner, basis, ext):
             if e.lower() != ext.lower():
                 continue
             b, n = basis_und_version(s)
-            if b == basis:
+            if b == basis and n:
                 gef[n] = os.path.join(o, f)
     return gef
 
 
+def _naechste_alt_nr(ordner, basis, exts):
+    nrs = [n for e in exts for n in versionen(ordner, basis, e) if n < N_AKTUELL]
+    return (max(nrs) if nrs else 0) + 1
+
+
 def neue_version(ordner, basis, ext, mitziehen=(".docx", ".pdf")):
-    """Pfad für die nächste Fassung basis_vN.ext. Ältere Fassungen (aller Endungen in
-    `mitziehen`) werden nach ordner/alt verschoben – so liegt im Ordner immer genau EINE
-    aktuelle Datei je Unterlage. Nichts wird gelöscht oder überschrieben."""
+    """Pfad für die neue aktuelle Fassung basis_AKTUELL.ext. Die bisherige AKTUELL-Fassung (und alte
+    …_vN-Dateien im Ordner) wandern nach ordner/alt/ als …_vN – so liegt im Ordner genau EINE Datei je
+    Unterlage. Gibt (pfad, interne_nummer) zurück. Nichts wird gelöscht oder überschrieben."""
     os.makedirs(ordner, exist_ok=True)
-    alle = {}
-    for e in set(mitziehen) | {ext}:
-        for n, p in versionen(ordner, basis, e).items():
-            alle.setdefault(n, []).append(p)
-    n_neu = (max(alle) if alle else 0) + 1
+    exts = sorted(set(mitziehen) | {ext})
     alt = os.path.join(ordner, "alt")
-    for n, pfade in alle.items():
-        for p in pfade:
-            if os.path.dirname(os.path.abspath(p)) == os.path.abspath(ordner):
+    nr = _naechste_alt_nr(ordner, basis, exts)
+    # alte _vN-Dateien im Hauptordner nach alt/
+    for e in exts:
+        for n, p in sorted(versionen(ordner, basis, e).items()):
+            if os.path.dirname(os.path.abspath(p)) == os.path.abspath(ordner) and n < N_AKTUELL:
                 os.makedirs(alt, exist_ok=True)
-                ziel = os.path.join(alt, os.path.basename(p))
-                if not os.path.exists(ziel):
-                    shutil.move(p, ziel)
-    return os.path.join(ordner, f"{basis}_v{n_neu}{ext}"), n_neu
+                if not os.path.exists(os.path.join(alt, os.path.basename(p))):
+                    shutil.move(p, os.path.join(alt, os.path.basename(p)))
+    # bisherige AKTUELL-Fassung → alt/basis_vN
+    verschoben = False
+    for e in exts:
+        p = os.path.join(ordner, f"{basis}_{AKTUELL}{e}")
+        if os.path.exists(p):
+            os.makedirs(alt, exist_ok=True)
+            shutil.move(p, os.path.join(alt, f"{basis}_v{nr}{e}"))
+            verschoben = True
+    return os.path.join(ordner, f"{basis}_{AKTUELL}{ext}"), (nr + 1 if verschoben else nr)
 
 
 def neueste_version(pfad):
-    """Gibt (neuester_pfad, n_neu, n_gegeben) für eine Datei mit _vN-Endung zurück."""
+    """(neuester_pfad, n_neu, n_gegeben) für eine Datei mit _vN/_AKTUELL-Endung. Findet die Fassung
+    auch, wenn der genannte Pfad inzwischen in alt/ liegt oder gar nicht mehr existiert."""
     ordner = os.path.dirname(os.path.abspath(pfad))
     stamm, ext = os.path.splitext(os.path.basename(pfad))
     basis, n = basis_und_version(stamm)
@@ -111,7 +129,13 @@ def neueste_version(pfad):
     if not v:
         return pfad, n, n
     n_max = max(v)
-    return (v[n_max], n_max, n) if n_max > n else (pfad, n, n)
+    if n_max > n or not os.path.exists(pfad):
+        return v[n_max], n_max, n
+    return pfad, n, n
+
+
+def version_text(n):
+    return "aktuell" if n >= N_AKTUELL else f"v{n}"
 
 
 def ausgabe_ordner(wunsch=None):
@@ -140,6 +164,65 @@ def lade_profil(pfad):
         return json.loads(raw)
     except json.JSONDecodeError as e:
         raise RuntimeError(f"JSON ungültig (Zeile {e.lineno}, Spalte {e.colno}): {e.msg}")
+
+
+# ---------------------------------------------------------------- Wortlaut (v3)
+JA_RE = re.compile(r"^\s*(ja|jap|jep|jo|joa|yes|genau|stimmt|passt|richtig|korrekt|ok|okay|jawohl|klar)\b", re.I)
+
+
+def rohtext_eintraege(d):
+    """Liste der Nutzer-Antworten im Wortlaut: profil.rohtext (Hauptquelle) bzw. d['rohtext'].
+    Einträge: {"nr", "frage", "antwort", "bestaetigt"} oder einfache Strings."""
+    roh = (d.get("profil") or {}).get("rohtext")
+    if roh is None:
+        roh = d.get("rohtext")
+    out = []
+    for i, e in enumerate(roh or [], 1):
+        if isinstance(e, str):
+            out.append({"nr": i, "frage": "", "antwort": e})
+        elif isinstance(e, dict):
+            out.append({"nr": e.get("nr", i), "frage": e.get("frage", ""), "antwort": e.get("antwort", "") or "",
+                        "bestaetigt": e.get("bestaetigt", ""), "optionen": e.get("optionen") or {}})
+    return out
+
+
+def wortlaut(d):
+    """Alle Nutzer-Wörter: Antworten + nur bei klarem „ja“ der bestätigte Wert, wenn er wörtlich in der Frage stand
+    + bei Auswahlfragen der Text der gewählten Optionen ({"optionen": {"a": "Übernahme", …}}, Antwort „a und b“)."""
+    teile = []
+    for e in rohtext_eintraege(d):
+        teile.append(e["antwort"])
+        gewaehlt = set(re.findall(r"(?<![\w])([a-f])(?![\w])", e["antwort"].lower()))
+        for k, v in (e.get("optionen") or {}).items():
+            if str(k).lower() in gewaehlt:
+                teile.append(str(v))
+        b = e.get("bestaetigt") or ""
+        if b and JA_RE.match(e["antwort"]) and translit(b.lower()) in translit((e.get("frage") or "").lower()):
+            teile.append(b)
+    return teile
+
+
+def upload_texte(d, extra=()):
+    """Texte aus Uploads (Zeugnisse, alter Lebenslauf …): profil.anlagen[].datei, profil.quellen[] + extra.
+    Bilder/Scans ohne Text werden übersprungen (Hinweis)."""
+    pfade = [a.get("datei", "") for a in ((d.get("profil") or {}).get("anlagen") or []) if isinstance(a, dict)]
+    pfade += [q if isinstance(q, str) else q.get("datei", "") for q in ((d.get("profil") or {}).get("quellen") or [])]
+    pfade += list(extra)
+    texte, hinweise = [], []
+    for p in dict.fromkeys(x for x in pfade if x):
+        if not os.path.isfile(p):
+            hinweise.append(f"Upload nicht gefunden (nicht als Beleg genutzt): {os.path.basename(p)}")
+            continue
+        try:
+            t = read_any(p)
+        except RuntimeError:
+            hinweise.append(f"{os.path.basename(p)}: Bild/Scan ohne Text – Inhalt nicht maschinell als Beleg nutzbar")
+            continue
+        if t.strip():
+            texte.append(t)
+        else:
+            hinweise.append(f"{os.path.basename(p)}: kein Text (Scan) – nicht als Beleg nutzbar")
+    return texte, hinweise
 
 
 # ---------------------------------------------------------------- Lesen

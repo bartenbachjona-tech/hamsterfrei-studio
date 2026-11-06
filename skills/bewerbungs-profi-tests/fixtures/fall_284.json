@@ -1,0 +1,348 @@
+{
+ "schema": "bewerbungs-profi/3",
+ "meta": {
+  "stand": "06.11.2026",
+  "phase": "4 Lebenslauf",
+  "naechster_schritt": "Lebenslauf freigeben",
+  "geraet": "handy",
+  "anrede_form": "du",
+  "modus": "normal",
+  "fragen_gesamt": 10,
+  "antworten_seit_akte": 0,
+  "chat_plan": "Chat 1: Stelle + Profil · Chat 2: Unterlagen + Abschicken · Chat 3: Gespräch"
+ },
+ "person": {
+  "name": "Deniz Arslan",
+  "strasse": "Weinweg 14",
+  "plz_ort": "93049 Regensburg",
+  "telefon": "0176 48213307",
+  "email": "deniz.arslan07@gmail.com",
+  "linkedin": "",
+  "geburtsdatum": "",
+  "foto": ""
+ },
+ "ziel": {
+  "art": "Ausbildung",
+  "stelle": "Fachkraft für Lagerlogistik (m/w/d)",
+  "firma": "Brenner Logistik GmbH",
+  "kennziffer": "LOG-27-03",
+  "ansprechperson": "Julia Hertel",
+  "anrede": "Sehr geehrte Frau Hertel,",
+  "firma_adresse": [],
+  "link": "",
+  "bewerbungsweg": "E-Mail",
+  "frist": "31.01.2027",
+  "start": "01.09.2027",
+  "unterlagen_verlangt": [
+   "Anschreiben",
+   "Lebenslauf",
+   "letzte zwei Zeugnisse"
+  ],
+  "muss": [
+   "Mittlere Reife"
+  ],
+  "kann": [
+   "Excel"
+  ],
+  "schluesselwoerter": [
+   "Sorgfalt",
+   "Teamarbeit"
+  ],
+  "auswahlverfahren": "Gespräch",
+  "anschreiben_variante": "anschreiben",
+  "upload_limit": "",
+  "anzeige_text": "Ausbildung zur Fachkraft für Lagerlogistik (m/w/d) 2027 – Brenner Logistik GmbH, Regensburg. Kennziffer LOG-27-03. Start 01.09.2027, Dauer 3 Jahre. Du bringst mit: guter Mittelschulabschluss oder Mittlere Reife, Zuverlässigkeit, Teamgeist, körperliche Belastbarkeit. Von Vorteil: erste Erfahrung im Lager oder Handel. Wir bieten: 1.150 EUR im 1. Jahr, Übernahme bei guten Leistungen, familiengeführt, 180 Mitarbeitende in Regensburg-Ost. Bewerbung nur über unser Online-Formular: Lebenslauf + letztes Zeugnis, max. 3 PDF-Dateien à 5 MB. Anschreiben freiwillig – erzähl uns im Formular in ein paar Sätzen, warum du zu uns willst. Ansprechpartnerin: Julia Hertel, 0941 7788-214."
+ },
+ "profil": {
+  "rohtext": [
+   {
+    "nr": 1,
+    "frage": "Frage 1 – Kontakt",
+    "antwort": "deniz arslan weinweg 14 93049 regensburg 0176 48213307 deniz.arslan07@gmail.com"
+   },
+   {
+    "nr": 2,
+    "frage": "Frage 2 – Schule",
+    "antwort": "mittlere reife 2024 realschule am donaupark 2,8"
+   },
+   {
+    "nr": 3,
+    "frage": "Nachfrage zu Frage 2: Zeugnis im Juli 2024?",
+    "antwort": "ja 2018 bis juli 24",
+    "bestaetigt": "Juli 2024"
+   },
+   {
+    "nr": 4,
+    "frage": "Frage 3 – Stationen",
+    "antwort": "minijob getränke hofmann seit märz 25 lager. lieferungen annehmen kisten einräumen leergut. praktikum paketzentrum 9. klasse 1 woche"
+   },
+   {
+    "nr": 5,
+    "frage": "Nachfrage zu Frage 3 – Zeit nach der Schule",
+    "antwort": "hab bewerbungen geschrieben aber nix bekommen. muss das rein??"
+   },
+   {
+    "nr": 6,
+    "frage": "Nachfrage zu Frage 3 – Jahr Praktikum",
+    "antwort": "2023"
+   },
+   {
+    "nr": 7,
+    "frage": "Frage 4 – Kenntnisse",
+    "antwort": "deutsch türkisch muttersprache englisch schule. excel bisschen"
+   },
+   {
+    "nr": 8,
+    "frage": "Frage 5 – Warum Beruf",
+    "antwort": "im getränkelager merk ich dass ich gern ordnung reinbring und mich beweg den ganzen tag statt sitzen"
+   },
+   {
+    "nr": 9,
+    "frage": "Frage 6 – Warum Brenner? a) Übernahme b) nah dran c) anderes",
+    "antwort": "a und b 10 min mit rad",
+    "optionen": {
+     "a": "Übernahme bei guten Leistungen",
+     "b": "nah dran / gut erreichbar"
+    }
+   },
+   {
+    "nr": 10,
+    "frage": "Frage 7 – Zuverlässigkeit",
+    "antwort": "samstags schließ ich allein auf, chef gibt mir den schlüssel"
+   },
+   {
+    "nr": 11,
+    "frage": "Frage 8 – Start",
+    "antwort": "passt"
+   },
+   {
+    "nr": 12,
+    "frage": "Frage 9 – Wie aufmerksam",
+    "antwort": "instagram"
+   }
+  ],
+  "quellen": [],
+  "bildung": [
+   {
+    "zeitraum": "09/2020 – 07/2026",
+    "abschluss": "Mittlere Reife",
+    "schule": "Realschule Beispiel, Ingolstadt",
+    "note": "2,3",
+    "details": "Wahlfach Wirtschaft, Schülerfirma"
+   }
+  ],
+  "stationen": [
+   {
+    "zeitraum": "09/2025 – heute",
+    "art": "Minijob",
+    "titel": "Aushilfe Kasse",
+    "firma": "Supermarkt Beispiel",
+    "ort": "Ingolstadt",
+    "taetigkeiten": [
+     "Kassenabrechnung am Schichtende selbst gemacht",
+     "Kundenfragen am Infopunkt beantwortet"
+    ],
+    "ergebnisse": []
+   },
+   {
+    "zeitraum": "03/2025, 2 Wochen",
+    "art": "Schülerpraktikum",
+    "titel": "Schülerpraktikum",
+    "firma": "Steuerbüro Beispiel",
+    "ort": "Ingolstadt",
+    "taetigkeiten": [
+     "Belege sortiert und erfasst"
+    ],
+    "ergebnisse": []
+   },
+   {
+    "zeitraum": "seit 2023",
+    "art": "Ehrenamt",
+    "titel": "Jugendtrainerin Handball (U12)",
+    "firma": "TSV Beispiel",
+    "ort": "",
+    "taetigkeiten": [],
+    "ergebnisse": []
+   }
+  ],
+  "luecken": [],
+  "sprachen": [
+   {
+    "sprache": "Deutsch",
+    "niveau": "Muttersprache"
+   },
+   {
+    "sprache": "Englisch",
+    "niveau": "B1"
+   }
+  ],
+  "edv": [
+   "Word",
+   "Excel (Formeln, Tabellen)",
+   "PowerPoint"
+  ],
+  "fuehrerschein": "",
+  "zertifikate": [],
+  "wechselgrund": "",
+  "abbruch_grund": "",
+  "motivation_fach": "",
+  "motivation_beruf": "Ich schließe Zahlen gern sauber und ohne Fehler ab (Kasse). Abrechnung macht Spaß.",
+  "motivation_firma": "bildet viele Azubis aus; mit dem Bus 15 Minuten",
+  "beispiele": [
+   {
+    "thema": "Teamarbeit",
+    "stichwort": "Schülerfirma",
+    "situation": "Schülerfirma, Verkaufsstand",
+    "aufgabe": "Stand zu fünft planen",
+    "handlung": "Kasse und Abrechnung übernommen",
+    "ergebnis": ""
+   }
+  ],
+  "hobbys": [
+   "Handball (Trainerin U12)"
+  ],
+  "rahmen": {
+   "start": "01.09.2027",
+   "stunden": "",
+   "verfuegbarkeit": "",
+   "gehalt": "",
+   "foto": false
+  },
+  "wie_aufmerksam": "Instagram",
+  "berufstest": {},
+  "sonstiges": [],
+  "anlagen": []
+ },
+ "firmenfakten": [
+  {
+   "fakt": "familiengeführt, 180 Mitarbeitende",
+   "quelle": "Anzeige",
+   "zugestimmt": false
+  }
+ ],
+ "belege": [],
+ "lebenslauf": {
+  "kurzprofil": "",
+  "abschnitte": [
+   {
+    "titel": "Praktische Erfahrung",
+    "eintraege": [
+     {
+      "zeitraum": "03/2025 – heute",
+      "titel": "Aushilfe Lager (Minijob)",
+      "ort": "Getränke Hofmann, Regensburg",
+      "punkte": [
+       "Lieferungen angenommen",
+       "Kisten eingeräumt, Leergut sortiert",
+       "Samstags allein aufgeschlossen"
+      ]
+     },
+     {
+      "zeitraum": "08/2024 – 02/2025",
+      "titel": "Ausbildungsplatzsuche",
+      "ort": "",
+      "punkte": [
+       "Bewerbungen geschrieben"
+      ]
+     },
+     {
+      "zeitraum": "2023",
+      "titel": "Schülerpraktikum (1 Woche)",
+      "ort": "Paketzentrum",
+      "punkte": []
+     }
+    ]
+   },
+   {
+    "titel": "Schulbildung",
+    "eintraege": [
+     {
+      "zeitraum": "2018 – 07/2024",
+      "titel": "Mittlere Reife (Note 2,8)",
+      "ort": "Realschule am Donaupark, Regensburg",
+      "punkte": []
+     }
+    ]
+   }
+  ],
+  "kenntnisse": [
+   {
+    "label": "Sprachen",
+    "wert": "Deutsch und Türkisch (Muttersprache), Englisch (Schulkenntnisse)"
+   },
+   {
+    "label": "EDV",
+    "wert": "Excel (Grundkenntnisse)"
+   }
+  ],
+  "interessen": "",
+  "ort_datum_unterschrift": false
+ },
+ "anschreiben": {
+  "absaetze": []
+ },
+ "formular": [
+  {
+   "feld": "Warum willst du zu uns? (max. 1000 Zeichen)",
+   "limit": 1000,
+   "text": "Seit März 2025 arbeite ich als Minijobber im Getränkelager von Getränke Hofmann. Ich nehme Lieferungen an, räume Kisten ein und sortiere Leergut. Samstags schließe ich allein auf – mein Chef gibt mir dafür den Schlüssel. Dabei merke ich, dass ich gern Ordnung reinbringe und mich lieber den ganzen Tag bewege, statt zu sitzen. Bei Ihnen gefällt mir die Übernahme bei guten Leistungen, und mit dem Rad bin ich in 10 Minuten da."
+  },
+  {
+   "feld": "Frühestmöglicher Eintritt",
+   "limit": 100,
+   "text": "01.09.2027"
+  },
+  {
+   "feld": "Wie bist du auf uns aufmerksam geworden?",
+   "limit": 200,
+   "text": "Über Instagram."
+  }
+ ],
+ "email": {
+  "betreff": "",
+  "text": ""
+ },
+ "status": [
+  {
+   "unterlage": "Lebenslauf",
+   "status": "Entwurf",
+   "datei": "",
+   "offen": ""
+  }
+ ],
+ "gespraech": {
+  "termin": "",
+  "art": "",
+  "ort": "",
+  "gespraechspartner": "",
+  "einladung_text": "",
+  "bestaetigt": false,
+  "mitbringen": [],
+  "kernbotschaften": [],
+  "selbstpraesentation": [],
+  "schwierige_fragen": [],
+  "star": [],
+  "eigene_fragen": [],
+  "feedback": [],
+  "ac_uebungen": []
+ },
+ "bewerbungen": [
+  {
+   "firma": "Beispiel GmbH",
+   "stelle": "Kauffrau für Büromanagement",
+   "abgeschickt": "",
+   "status": "in Arbeit",
+   "nachfassen": ""
+  }
+ ],
+ "entscheidungen": [
+  {
+   "datum": "06.11.2026",
+   "text": "Volles Anschreiben, weil verlangt"
+  }
+ ],
+ "naechste_schritte": [
+  "Lebenslauf freigeben",
+  "Anschreiben"
+ ]
+}
