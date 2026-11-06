@@ -51,11 +51,11 @@ Danach **eine** Rahmenfrage (falls nicht bekannt): „Welcher Schulabschluss (od
 4. „Hast du schon Erfahrung (Job, Verein, Familie)?“ (optional)
 5. Praktikum: „Pflichtpraktikum für Schule/Studium oder freiwillig? Wie lange?“ (nur bei Praktikum)
 
-Dann 3 Vorschläge aus der Tabelle „Minijob/Nebenjob“ unten mit je einem Satz Begründung. Die Kurzweg-Antworten kommen **wörtlich** in `profil.rohtext` und zählen später als Antworten (Verfügbarkeit, Erfahrung) – **nicht noch einmal fragen**.
+Dann 3 Vorschläge aus der Tabelle „Minijob/Nebenjob“ unten mit je einem Satz Begründung.
 
 ## 4. Auswertung und 3 Vorschläge
 
-`python3 "$S/berufstest_auswerten.py" "1a 2c 3b …"` (oder Zahlen 1–5). Die Antwortzeile wörtlich in `profil.rohtext`, das Ergebnis lesbar in `profil.berufstest` (`code`, `bereiche`, `vorschlaege[]`, später `gewaehlt`) – so steht es in der Akte. Budget: Berufstest + komplette Bewerbung ≤ 30 Nutzer-Nachrichten; nach Test + Stellensuche ist oft ein guter Moment für Akte + neuen Chat.
+`python3 "$S/berufstest_auswerten.py" "1a 2c 3b …"` (oder Zahlen 1–5). Ergebnis in `berufstest` der JSON.
 
 Zeig in **einer** Nachricht (max. ~12 Zeilen):
 - Die 2–3 stärksten Typen in Alltagssprache (1 Satz) und Skript-Hinweise (Gleichstand, flaches Profil) einfach erklärt. „Gegenüber im Hexagon“ gibt es nur bei R–S, I–E, A–C – das ist kein Problem, nur seltener in einem Beruf vereint.
@@ -76,7 +76,7 @@ Regeln: Weg beachten – wer „Geld ab Monat 1“ will, bekommt keine schulisch
 
 | Typ | Ausbildung | Studium / dual |
 |---|---|---|
-| R | Kfz-Mechatroniker/in, Zweiradmechatroniker/in (Fahrrad/Motorrad), Elektroniker/in Energie- und Gebäudetechnik, Anlagenmechaniker/in SHK, Tischler/in, Industriemechaniker/in, Gärtner/in, Tierwirt/in, Pferdewirt/in | Maschinenbau, Bauingenieurwesen, Elektrotechnik, Agrarwissenschaften |
+| R | Kfz-Mechatroniker/in, Elektroniker/in Energie- und Gebäudetechnik, Anlagenmechaniker/in SHK, Tischler/in, Industriemechaniker/in, Gärtner/in | Maschinenbau, Bauingenieurwesen, Elektrotechnik |
 | I | Fachinformatiker/in, Chemielaborant/in, Biologielaborant/in, Elektroniker/in für Geräte und Systeme | Informatik, Physik, Chemie, Biologie, Mathematik |
 | A | Mediengestalter/in Digital und Print, Gestalter/in für visuelles Marketing, Fotograf/in, Friseur/in | Kommunikationsdesign, Architektur, Medien |
 | S | Pflegefachfrau/-mann, Medizinische/r Fachangestellte/r, Erzieher/in, Notfallsanitäter/in, Heilerziehungspfleger/in | Soziale Arbeit, Lehramt, Psychologie, Pflege |
@@ -90,7 +90,7 @@ Regeln: Weg beachten – wer „Geld ab Monat 1“ will, bekommt keine schulisch
 | RI | 1 | Mechatroniker/in, Fachinformatiker/in Systemintegration, Elektrotechnik |
 | RA | 2 | Tischler/in, Raumausstatter/in, Goldschmied/in, Bühnenmaler/in, Innenarchitektur |
 | RS | 3 | Notfallsanitäter/in, Physiotherapeut/in, Orthopädietechnik-Mechaniker/in |
-| RE | 2 | Kfz-Mechatroniker/in mit Kundendienst, Zweiradmechatroniker/in (Werkstatt + Verkauf), Meister/in im Handwerk (später), Baustellenleitung (Bauingenieurwesen) |
+| RE | 2 | Kfz-Mechatroniker/in mit Kundendienst, Meister/in im Handwerk (später), Baustellenleitung (Bauingenieurwesen) |
 | RC | 1 | Fachkraft für Lagerlogistik, Vermessungstechniker/in, Logistik (dual) |
 | IA | 1 | Architektur, Mediengestalter/in, Medieninformatik |
 | IS | 2 | Medizinisch-technische/r Laboratoriumsassistent/in (MTL), Pharmazeutisch-technische/r Assistent/in, Lehramt MINT, Psychologie |
@@ -117,5 +117,3 @@ Regeln: Weg beachten – wer „Geld ab Monat 1“ will, bekommt keine schulisch
 > „Zum Vertiefen (kostenlos): **Check-U** der Arbeitsagentur (testet auch Fähigkeiten, ca. 1,5–2 Std.), **BERUFENET** für alle Berufe, und die **Berufsberatung** der Arbeitsagentur – auch für Erwachsene, vor Ort, per Telefon oder Video.“
 
 Mehr: planet-beruf.de (Schüler), abi.de, studienwahl.de, Studium-Interessentest (SIT) im Hochschulkompass; Praktikum oder Probetag als bester Test. **AT:** AMS, BerufsInfoZentren. **CH:** berufsberatung.ch, kantonale BIZ.
-
-**Mit Tieren** (oft gewünscht, passt zu R/S): Tiermedizinische/r Fachangestellte/r (S+C), Tierpfleger/in (R+S), Tierwirt/in, Pferdewirt/in (R), Zootierpfleger/in. Studium: Tiermedizin (I+R, NC), Agrarwissenschaften. Ehrlich dazusagen: Vergütung oft niedrig, Arbeitszeiten auch am Wochenende.

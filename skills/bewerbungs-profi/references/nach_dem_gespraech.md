@@ -31,9 +31,9 @@ Mit freundlichen Grüßen
 - Mindestlohn, Minijob-Grenze, Praktikum, Werkstudent: `sonderfaelle.md` Abschnitt 1.
 - **Einstiegsgehalt einschätzen:** Den BA-Entgeltatlas kannst du **nicht** selbst abrufen (interaktive Seite). Darum:
   1. Gehaltsangabe in der Anzeige (Pflicht in AT, in DE durch die EU-Entgelttransparenz künftig häufiger).
-  2. **Ist Websuche an, nutze sie immer** (nicht aus dem Gedächtnis): Tarifvertrag der Branche (z. B. TVöD, IG Metall, Handel) oder seriöse Gehaltsangaben suchen und **mit Quelle (Link) und Stand** nennen; Jobportal-Zahlen als grobe Orientierung kennzeichnen. Beispiel: „Laut [Quelle] (Stand 05/2026) liegt TVöD SuE S 14 Stufe 1 bei … € brutto/Monat.“
+  2. Mit Websuche: Tarifvertrag der Branche (z. B. TVöD, IG Metall, Handel) oder seriöse Gehaltsangaben suchen und **mit Quelle und Stand** nennen; Jobportal-Zahlen als grobe Orientierung kennzeichnen.
   3. Ohne Websuche oder zum Selbstprüfen – Anleitung für den Nutzer: „Such im Browser ‚Entgeltatlas Arbeitsagentur‘ → Beruf eingeben → Region und Alter wählen → du siehst den Median (mittleres Gehalt).“
-  Nie eine Zahl ohne Quelle nennen – auch keine unbelegten Einschätzungen („Tarif liegt eher oben“). Eine Spanne, die du vorschlägst, als **Vorschlag** kennzeichnen; in die Unterlagen kommt nur, was der Nutzer bestätigt.
+  Nie eine Zahl ohne Quelle nennen.
 - **Verhandeln:** Spanne im Bruttojahresgehalt, mit Quelle und Qualifikation begründen, unteren Wert realistisch; Benefits mitdenken. Bei Ausbildung wird selten verhandelt.
 - **AT:** Lehrlingsentschädigung laut Kollektivvertrag; Gehalt in Anzeigen Pflicht. **CH:** kein gesetzlicher Lehrlingslohn auf Bundesebene, Branchenempfehlungen.
 

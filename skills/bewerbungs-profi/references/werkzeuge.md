@@ -15,15 +15,13 @@ Der Skill funktioniert mit dem **kostenlosen Claude**, wenn „Code-Ausführung 
 
 | Skript | Zweck |
 |---|---|
-| `fakten_check.py PROFIL.json [Dateien] [--woher] [--typ spickzettel] [--anzeige x.txt] [--quelle upload.pdf]` | **Pflicht vor jeder Freigabe**: prüft gegen Nutzer-Wortlaut (mit Normalisierungs-Wörterbuch), Anzeige, Einladung, Uploads – nicht gegen Claudes JSON-Werte. Zahlen, Daten, Monate, Dauern (nur gegen passende Zeiträume), Namen, Kürzel, Niveaus, Führerschein, Links, „Wie aufmerksam“, Firmenfakten, belege (Zitat muss den Wert tragen), Datei = freigegebener Text **und die Satz-Herkunft** (herkunft.py). `--woher` druckt die Woher-Liste. Lebenslauf nur gegen den Wortlaut. Exit 1 bei ❌ |
-| `herkunft.py PROFIL.json [--teil anschreiben/formular/email/whatsapp/kurzprofil]` | Satz-Herkunft allein prüfen + Woher-Liste (läuft in fakten_check automatisch mit). v5: prüft nur Behauptungs-Bausteine – Formulierung frei |
-| `sprachlib.py "Text"` | Hilfsmodul (Lemma, Umgangssprache → Standard, Synonyme, Tippfehler-Toleranz, Stil-Check, Satztrenner in textlib); zum Ausprobieren: Stil-Befunde eines Texts |
-| `unterlagen_erstellen.py PROFIL.json [--nur lebenslauf/anschreiben/formular/email/whatsapp] [--nur-pdf] [--ausgabe O]` | Unterlagen aus der JSON – **erst nach der Freigabe**; Lücken aus `profil.luecken` automatisch; Exit 3 bei offenen Änderungswünschen; `…_AKTUELL`, frühere intern in `alt/`; alte Upload-Kopien wandern mit; Anlagen-Zeile automatisch; Kennziffer im Betreff ohne Umbruch; `--beispiel` zeigt das Format (inkl. herkunft) |
-| `endcheck.py Dateien --typ T [--profil P]` | Form/Stil inkl. **Stil-Check** (Umgangssprache, Chat-Kürzel, Tippfehler, „Sa und So“, doppelte Wörter → ⚠️ mit Vorschlag); mit `--profil` auch Zeitraum zu lang/Enddatum in der Zukunft. Typ: lebenslauf, anschreiben, motivationsschreiben, kurzanschreiben, formular, email, whatsapp, gesamt, anlage. Firma/Stelle nur im Brief (ohne „Start“/Jahr), gebeugte Floskeln, Zeichengrenzen auch „1.000“ |
-| `pdf_zusammenfuegen.py Ziel.pdf --profil P` · `--einzeln --profil P` · `--buendeln N --profil P [--ordner Q] [--ausgabe O]` | Gesamt-PDF, saubere Einzeldateien (Arbeitsdateien danach in `alt/`, Word-Fassungen in `bearbeitbar/` – eine Datei je Unterlage), Bündel (Motivationsschreiben heißt so); Quellen in `--ordner`/`--ausgabe`/Standard gesucht; Querformat drehen, A4; Exit 2 bei fehlender Datei |
-| `akte.py PROFIL.json [--pdf]` · `--lesen AKTE\|ORDNER` · `--spickzettel [--pdf] [--a4]` | Akte schreiben/lesen (findet umbenannte Akten und Re-Uploads); Spickzettel kompakt A5, Du/Sie, Hinweise an Claude |
+| `fakten_check.py PROFIL.json [Dateien] [--anzeige x.txt]` | **Pflicht vor jeder Freigabe**: unbelegte Zahlen, Daten, Dauern, Namen, Abschlüsse, Niveaus, Führerschein, Links, Aufwertungen; Datei = freigegebener Text. Exit 1 bei ❌ |
+| `unterlagen_erstellen.py PROFIL.json [--nur lebenslauf/anschreiben/formular/email] [--nur-pdf] [--ausgabe O]` | Unterlagen aus der JSON; Versionen `_vN`, ältere → `alt/`; Anlagen-Zeile automatisch; `--beispiel` zeigt das Format |
+| `endcheck.py Dateien --typ T [--profil P] [--firma F --stelle S]` | Form/Stil: [PRÜFEN], Platzhalter, Floskeln, Länge, Seiten, Firma (unscharf), Stelle (ganz), fremde Firmen, E-Mail (nur echte Probleme), Formular-Limits. Typ: lebenslauf, anschreiben, motivationsschreiben, kurzanschreiben, formular, email, gesamt |
+| `pdf_zusammenfuegen.py Ziel.pdf --profil P` (oder Dateien…) / `--einzeln Dateien` | eine PDF bzw. saubere Einzeldateien; nimmt neueste Fassung, A4-Fotos, HEIC; Abbruch (Exit 2) bei fehlender Datei, Exit 3 bei falscher Anlagen-Zeile |
+| `akte.py PROFIL.json [--pdf]` · `--lesen AKTE` · `--spickzettel [--pdf]` | Akte schreiben/lesen, Gesprächs-Spickzettel |
 | `berufstest_auswerten.py "1a 2c …"` | RIASEC-Code (`--fragen` zeigt die Aussagen) |
-| `textlib.py Datei [--info]` | Text aus .docx/.pdf/.html/.txt; `--info`: Layout-Befunde |
+| `textlib.py Datei [--info]` | Text aus .docx/.pdf/.html/.txt; `--info`: Layout-Befunde (docx sicher, PDF einfache Spalten-Erkennung) |
 | `ordner_anlegen.py Basis "Firma" "Stelle" [Dateien] [--profil P] [--zip] [--ausgabe O]` | Bewerbungsordner mit Akte (lokaler Ordner oder ZIP) |
 
 Abhängigkeiten: Standardbibliothek; `python-docx`, `pypdf`, `pillow`, `pillow-heif` werden bei Bedarf per pip nachinstalliert; PDF über LibreOffice (`soffice`). Fehlt etwas und keine Installation möglich: `.docx` liefern und „Speichern unter → PDF“ erklären bzw. den eingebauten docx-Skill nutzen. Fehlermeldungen sind deutsch – in einem Satz erklären.
@@ -31,8 +29,8 @@ Abhängigkeiten: Standardbibliothek; `python-docx`, `pypdf`, `pillow`, `pillow-h
 ## Speichern ohne Ordnerzugriff (Free-Plan, Standard)
 
 - Alles für den Nutzer nach **`/mnt/user-data/outputs/`**; Arbeits-JSON in `/tmp/bewerbung/`.
-- Namen ohne Umlaute/Sonderzeichen (die Skripte transliterieren: ć→c, ş→s, ı→i, ë→e, ä→ae, ß→ss), flach, ohne Unterordner: Arbeitsdateien `Lebenslauf_Vorname_Nachname_AKTUELL.pdf`, `Anschreiben_…_Firma_AKTUELL.pdf`, `Formular-Texte_Firma_AKTUELL.txt`, `E-Mail_Bewerbung_Firma_AKTUELL.txt`, `Gespraech_Spickzettel_Firma_AKTUELL.txt/.pdf`; zum Versand `Bewerbung_Vorname_Nachname_Stelle.pdf` bzw. `Lebenslauf_Vorname_Nachname.pdf` usw.; Akte `Bewerbungsakte_Vorname_Nachname_Datum_HHMMSS.txt`.
-- **Genau eine Datei je Unterlage** (`…_AKTUELL`) im Ausgabeordner; frühere intern in `alt/` – nicht erwähnen. Dateien erst **nach der Freigabe** erzeugen, nicht „zur Ansicht“.
+- Namen ohne Umlaute/Sonderzeichen (die Skripte transliterieren: ć→c, ş→s, ı→i, ë→e, ä→ae, ß→ss): `Lebenslauf_Vorname_Nachname_vN.pdf`, `Anschreiben_…_Firma_vN.pdf`, `Bewerbung_Vorname_Nachname_Stelle.pdf`, `Formular-Texte_Firma_vN.txt`, `E-Mail_Bewerbung_Firma_vN.txt`, `Gespraech_Spickzettel_Firma_vN.txt/.pdf`, `Bewerbungsakte_Vorname_Nachname_Datum_Uhrzeit.txt`.
+- **Genau eine aktuelle Fassung je Unterlage** im Ausgabeordner; ältere in `alt/`. Im Chat immer sagen, welche aktuell ist.
 - Nach jeder Datei sagen, was der Nutzer tut (Handy: `geraet.md`).
 - Optional am Ende: alles als ZIP (`ordner_anlegen.py /tmp "Firma" "Stelle" Dateien… --profil P --zip`).
 
@@ -48,4 +46,4 @@ Abhängigkeiten: Standardbibliothek; `python-docx`, `pypdf`, `pillow`, `pillow-h
 
 - Fahrplan in Chats (`bewerbungsakte.md`), Akte nach jeder Phase und alle ~6 Antworten.
 - Lange Ergebnisse als Datei, im Chat nur Kurzfassung; Skript-Ausgaben nie komplett in den Chat kopieren.
-- Ziel: Profil → fertige Unterlagen in ≤ ~25 Nutzer-Nachrichten (Minijob ≤ 10), alles inkl. Gespräch ≤ 35.
+- Ziel: Profil → fertige Unterlagen in ≤ ~25 Nutzer-Nachrichten.
