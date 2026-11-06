@@ -85,3 +85,4 @@ Der Scout sucht keine Themen, sondern **Ausreißer**: Videos mit ≥ 3× dem Med
 - [ ] Cover/Titelbild = Hook-Paket
 - [ ] Erwartung ins Log eingetragen
 - [ ] Sicherheit G9 erfüllt
+- [ ] Zuschauer-Test (docs/VIDEO_TEST.md) gelaufen, Ergebnis im Log und in der Nachricht an Jona

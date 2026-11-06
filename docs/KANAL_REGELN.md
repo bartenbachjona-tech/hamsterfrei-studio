@@ -16,6 +16,7 @@ Widerspricht eine niedrigere Datei einer höheren, gilt die höhere, und der Wid
 ## Kanal (kurz, Details in docs/brand/)
 - Name **Hamsterfrei**. TikTok @hamsterfrei (ehemals Jonas Privatkonto mit ca. 2.400 Followern), Instagram @hamsterfrei, YouTube-Kanal Hamsterfrei `UCBmT3RjRK5PGk-YVTdFzuDA` (Details `state/konten.md`).
 - **Seminararbeit-Profi, Werbe-Kernsatz (Jona 06.11.2026):** In jeder Werbung für den Seminararbeit-Profi kommt die Probe-Prüfung „wie mit einer simulierten Lehrkraft“ vor (z. B. „Claude spielt deine Lehrkraft: Er stellt dir die Fragen aus dem Prüfungsgespräch zu deiner eigenen Arbeit und sagt dir danach, was noch fehlt.“). Ehrlich bleiben: „simuliert“ bzw. „spielt“, keine echten Lehrkräfte, keine „5 unabhängigen Lehrkräfte“, keine Note/Notengarantie.
+- **Zuschauer-Test für JEDES Video (Jona 06.11.2026):** Vor jedem Post simuliertes 1.000er-Panel: bis zum Ende? auf die Website? kaufen bzw. folgen? und wenn nein, warum nicht. Ablauf: `docs/VIDEO_TEST.md`.
 - Positionierung bis 10.11. Seminararbeit-Offensive, ab 11.11. „Der Hamster probiert's aus: KI-Tricks, die dir Zeit oder Geld bringen.“ → `docs/brand/POSITIONIERUNG.md`.
 - Figur, Farben, Schrift, Musik → `docs/brand/LOOK.md` (Stil nur schrittweise ändern). Stimme → `docs/brand/STIMME.md`.
 - TikTok-Bio bis 10.11.: „Seminararbeit bis 10.11.? Keine Angst 🐹 Hilfe hier ⬇️“, Link hamsterfrei.de/seminar. Danach entscheidet Jona (Vorschlag in POSITIONIERUNG.md).

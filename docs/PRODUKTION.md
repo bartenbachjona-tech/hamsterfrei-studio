@@ -73,6 +73,11 @@ Sieht nur: Skript, `docs/brand/*`, `docs/STUDIO_HANDBUCH.md`, KANAL_REGELN, AUSW
   - Cover = gleiche Aussage wie der Hook.
 - Urteil **pass / nachbessern** mit Note; Freigabe ab 8/10. Max. 2 Runden, sonst nicht terminieren (Log + Jona melden).
 
+## 7b. Zuschauer-Test (Pflicht, docs/VIDEO_TEST.md)
+- Material nach `docs/video_test/<folge>/material/` (Kontaktbögen, Cover, `text.md` mit gesprochenem Text, Bildschirmtexten, Caption, ggf. Zielseiten-Kurzfassung).
+- 2 Agenten mit dem Auftrag aus `docs/video_test/AUFTRAG.md` (Archetypen 1–25 bzw. 26–50 aus `docs/produktsim/personas.json`), dann `python3 scripts/video_panel.py docs/video_test/<folge>/`.
+- Behebbarer Hauptgrund (≥ 15 % der Abspringer einer Stufe) → eine Nachbesserungsrunde, erneut testen. Ergebnis (bis Ende / Website / Kauf bzw. Folgen pro 1.000 + Top-Gründe) ins Skript, ins Log und in die Nachricht an Jona.
+
 ## 8. Checkliste vor dem Terminieren (Handbuch G10)
 Alle Punkte aus Handbuch G10 abhaken und im Skript vermerken (Schlüsselbild, Hook-Tore, ≥ 2 Hook-Varianten, Pointe zuerst, Signatur ohne Intro/Schluss-Signal, Serie/Experiment, Testvariable, Cover, Erwartung, Sicherheit). Zusätzlich: Werbung ja/nein korrekt (Label, Caption, Quote), „Claude-Konto ab 18“, wenn ein Claude-Weg gezeigt wird.
 
