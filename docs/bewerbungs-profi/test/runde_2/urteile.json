@@ -1,0 +1,431 @@
+[
+ {
+  "id": "75",
+  "zufriedenheit": 3,
+  "wiederkauf": false,
+  "kategorie": "zu_viele_fragen",
+  "probleme_kategorien": [
+   "zu_viele_fragen",
+   "link_problem"
+  ],
+  "begruendung": "Ich wollte nur schnell einen Minijob, musste aber viele kleine Fragen beantworten und war zweimal kurz vorm Aufhören. Am Ende hatte ich Lebenslauf, Mail und Übung, aber das war mir zu zäh."
+ },
+ {
+  "id": "82",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "technik_datei_fehler",
+   "link_problem",
+   "handy_problem"
+  ],
+  "begruendung": "Ich habe meine Bewerbung am Handy wirklich abgeschickt und wurde die ganze Zeit ermutigt. Gestört hat, dass ein Satz drinstand, den ich nie gesagt habe, und das Foto im Lebenslauf komisch verrutscht war."
+ },
+ {
+  "id": "94",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "ac_schwach"
+  ],
+  "begruendung": "Ich habe Beruf, Bewerbung und Auswahltag-Übung bekommen und wurde dabei richtig aufgebaut. Du hast mir echt die Angst genommen."
+ },
+ {
+  "id": "103",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang",
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Meine vielen Fragen wurden sauber beantwortet, mein ChatGPT-Text ehrlich geprüft und die Unterlagen sind gut. Es hat aber lange gedauert, und einen erfundenen Satz musste ich selbst finden."
+ },
+ {
+  "id": "163",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "zu_viele_fragen",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Bewerbung ist raus und die Unterlagen sehen gut aus. Ärgerlich: ein erfundener Satz, die Formularfelder wurden geraten statt erfragt, und eine Frage kam doppelt."
+ },
+ {
+  "id": "174",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "zu_lang",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Die Präsentation und das Rollenspiel haben mir viel gebracht, und das Gehalt war mit Quelle. Dass in meiner Akte ungefragt 'Teilzeit 30 Std.' wegen meiner Kinder stand, fand ich daneben."
+ },
+ {
+  "id": "198",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_viele_fragen"
+  ],
+  "begruendung": "Schnell und ohne Gelaber: Berufsvorschlag, Bewerbung raus, Test geübt. Den Studienabbruch hat das gut und ehrlich gelöst."
+ },
+ {
+  "id": "204",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Ich wollte schnell üben, und genau das ging: kurze Runde, nur die roten Fragen nochmal, Spickzettel dazu. Fühle mich für Donnerstag bereit."
+ },
+ {
+  "id": "249",
+  "zufriedenheit": 3,
+  "wiederkauf": true,
+  "kategorie": "handy_problem",
+  "probleme_kategorien": [
+   "handy_problem",
+   "technik_datei_fehler",
+   "zu_lang"
+  ],
+  "begruendung": "Am Ende ist meine Bewerbung raus. Am Handy war es aber nervig: Zeugnisse nochmal hochladen, falsche Akte-Datei, den Ordner 'versand' gab es nicht, und doppelte Lebensläufe in Downloads."
+ },
+ {
+  "id": "251",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "verwirrend_naechster_schritt"
+  ],
+  "begruendung": "Ich wusste nicht, was ich machen will, und jetzt ist meine Bewerbung als Mediengestalterin raus. Ein typischer KI-Satz stand im Anschreiben, den ich selbst streichen musste, und mit v1/v2 war ich kurz verwirrt."
+ },
+ {
+  "id": "279",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "verwirrend_naechster_schritt"
+  ],
+  "begruendung": "Kurze Fragen, sauberer Lebenslauf, Abbruch und Familienzeit ehrlich gelöst, abgeschickt. Nur der Strg+A-Tipp hat einmal nicht funktioniert."
+ },
+ {
+  "id": "284",
+  "zufriedenheit": 3,
+  "wiederkauf": true,
+  "kategorie": "technik_datei_fehler",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "zu_lang",
+   "erfunden_ungenau",
+   "handy_problem"
+  ],
+  "begruendung": "Bewerbung ist raus, aber es hat gedauert. Das Zeugnis war quer und winzig, das musste ich selbst merken, und der Formulartext klang am Ende holpriger als der, den ich freigegeben hatte."
+ },
+ {
+  "id": "295",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "zu_viele_fragen"
+  ],
+  "begruendung": "Die Übung für den Kennenlerntag, vor allem die Antwort zur Lücke, hat mir echt geholfen. Blöd, dass genau die Lücke nicht auf dem Spickzettel stand und vorher ein paar Fragen zu viel kamen."
+ },
+ {
+  "id": "328",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Mit kurzen Antworten von mir kam ein passender Studiengang, ein gutes Motivationsschreiben und eine starke Postkorb-Übung raus. Genau so wollte ich das."
+ },
+ {
+  "id": "339",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang",
+   "erfunden_ungenau",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Die Unterlagen sind gut und raus. Aber die 'bis Ende 2028'-Zusage stimmte nicht und ist nur mir aufgefallen, und dass das Prüfskript einen Fehler hat, wollte ich nicht erklärt bekommen."
+ },
+ {
+  "id": "358",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang"
+  ],
+  "begruendung": "Berufstest, passende Lagerstelle, Lebenslauf und WhatsApp-Bewerbung, alles erledigt. Die Nachrichten waren für mein Handy oft ziemlich lang."
+ },
+ {
+  "id": "365",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang"
+  ],
+  "begruendung": "In einem Chat von der Anzeige bis zum Abschicken, ohne erfundene Sachen, gut. Die Freigabe-Nachricht am Ende war mir viel zu lang."
+ },
+ {
+  "id": "371",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang"
+  ],
+  "begruendung": "Ich hab mich am Anfang nicht gut genug gefühlt, und jetzt ist meine Praktikumsbewerbung raus. Die Ermutigung war echt und nie übertrieben."
+ },
+ {
+  "id": "372",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Ging schnell, Bewerbung raus und Test geübt. Im Anschreiben stehen aber Sachen etwas zugespitzt, und im Empfängerfeld sieht 'Ausbildung' wie ein Platzhalter aus."
+ },
+ {
+  "id": "450",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Mit meinem alten Lebenslauf ging es schnell, und ich hab mich getraut, auf Senden zu drücken. Du hast mir echt Mut gemacht."
+ },
+ {
+  "id": "461",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang",
+   "erfunden_ungenau",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Die Unterlagen sind sauber, die Fallstudie war realistisch und gutes Feedback. Es waren aber viele Nachrichten, ein paar Haken vorab waren voreilig, und der Prüf-Fix hat meine Mail schlechter gemacht."
+ },
+ {
+  "id": "484",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "free_limit_abbruch",
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Richtig schnell, und mit dem Studienabbruch ehrlich umgegangen. Dass mich kurz vor dem Abschicken das Nachrichtenlimit für Stunden gestoppt hat, hat genervt."
+ },
+ {
+  "id": "495",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "zu_viele_fragen"
+  ],
+  "begruendung": "Die Gesprächsübung mit zwei Runden hat viel gebracht, ich bin für Montag bereit. Der Spickzettel ist aber schlicht, mit meinem kleingeschriebenen Originalsatz und Video-Tipps, obwohl ich vor Ort bin."
+ },
+ {
+  "id": "551",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Hätte nicht gedacht, dass das so viel bringt: schneller Start, ehrliches Feedback, rote Fragen nochmal. Der Spickzettel ist optisch ein Textblock, aber brauchbar."
+ },
+ {
+  "id": "572",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang"
+  ],
+  "begruendung": "Ich hab einen passenden Beruf gefunden und die Bewerbung ist raus, obwohl ich so unsicher war. Es waren zwar zwei Chats und viele Nachrichten, aber das war's wert."
+ },
+ {
+  "id": "600",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Alle meine Warum-Fragen wurden beantwortet, Bewerbung raus, sogar die Vergütung mit Quelle. 'Leistungsfächer' hätte vorher geprüft werden können."
+ },
+ {
+  "id": "616",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Die Übung für das Video-Interview und die R-Fragen haben echt geholfen, auch mit meiner Lücke. Ein erfundener 'Schwerpunkt' kam zweimal, und auf dem Spickzettel fehlt die Lücke und es stehen Vor-Ort-Tipps."
+ },
+ {
+  "id": "617",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "zu_lang"
+  ],
+  "begruendung": "Ich fühle mich jetzt besser vorbereitet, Präsentation und Interview waren gut geübt. Auf dem Spickzettel stehen aber interne Notizen über mich in der dritten Person, und die Mitbring-Liste fehlt."
+ },
+ {
+  "id": "623",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Minijob-Lebenslauf und Mail waren schnell fertig und abgeschickt, plus Tipps fürs Probearbeiten. Passt."
+ },
+ {
+  "id": "644",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Alle meine Rückfragen wurden geduldig beantwortet, die Mail ist raus, und der Mindestlohn-Hinweis war super."
+ },
+ {
+  "id": "727",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau",
+   "verwirrend_naechster_schritt"
+  ],
+  "begruendung": "Die Unterlagen sind hochgeladen, und auch mein Abschweifen hat nicht gestört. Geratene Monate und 'Reisen kein Problem' musste ich selbst finden, und die Dateien lagen an zwei Orten."
+ },
+ {
+  "id": "754",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang"
+  ],
+  "begruendung": "Nach 3,5 Jahren Pause hätte ich mich das ohne Hilfe nicht getraut, und jetzt ist die Bewerbung raus. Ehrlich, ermutigend und ordentliche Unterlagen."
+ },
+ {
+  "id": "766",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Schnell, mein alter Lebenslauf wurde genutzt, die Lücke wurde neutral erfragt, Gehalt sauber hergeleitet und die Fallstudie war praxisnah."
+ },
+ {
+  "id": "816",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "verwirrend_naechster_schritt"
+  ],
+  "begruendung": "Die Bewerbung ist raus, und jetzt weiß ich, was ich zum Pharmazie-Abbruch sagen soll. Nur das mit der v2 vom Formular war kurz verwirrend."
+ },
+ {
+  "id": "827",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "zu_lang",
+   "technik_datei_fehler"
+  ],
+  "begruendung": "Ich habe aus der Gastro raus eine Bewerbung im Kundenservice abgeschickt, und die Anleitung fürs Handy war super. Die Mail klang durch den Firmennamen holprig, und es waren ganz schön viele Nachrichten."
+ },
+ {
+  "id": "843",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "handy_problem",
+   "technik_datei_fehler",
+   "zu_lang"
+  ],
+  "begruendung": "Bewerbung, Telefoninterview und Rollenspiel, ich fühle mich wirklich ermutigt. Am Handy war die Akte .txt/.pdf verwirrend, es lagen zu viele Dateien herum, und ein Formularsatz klang hölzern."
+ },
+ {
+  "id": "847",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "zu_viele_fragen"
+  ],
+  "begruendung": "Die Gesprächsübung war echt hilfreich, vor allem das zweite Mal bei den roten Fragen. Auf dem Spickzettel stehen aber 'der Gruber' und eine Video-Zeile, das wirkt unfertig."
+ },
+ {
+  "id": "866",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "Ohne KI-Erfahrung hab ich es mit kurzen Antworten bis zum Abschicken geschafft. Hat etwas gedauert, war aber gut erklärt."
+ },
+ {
+  "id": "945",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "erfunden_ungenau"
+  ],
+  "begruendung": "Mein ChatGPT-Text wurde ehrlich aufgeräumt, die Bewerbung ist raus, und es gab einen AC-Überblick. Einen geratenen Monat im Lebenslauf musste ich selbst korrigieren."
+ },
+ {
+  "id": "969",
+  "zufriedenheit": 5,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [],
+  "begruendung": "In der Mittagspause abgeschickt, genau was ich wollte. Gut, dass das Social-Media-Märchen aus ChatGPT nicht reingekommen ist."
+ },
+ {
+  "id": "992",
+  "zufriedenheit": 4,
+  "wiederkauf": true,
+  "kategorie": "-",
+  "probleme_kategorien": [
+   "technik_datei_fehler",
+   "verwirrend_naechster_schritt"
+  ],
+  "begruendung": "Schnell bis zum Abschicken, und der Test zum Warmwerden war gut. Das Portal hat Extra-Runden gekostet, und die Notenspiegel-Datei hieß erst IMG_4471."
+ }
+]
