@@ -1,0 +1,74 @@
+[
+ {
+  "id": 546,
+  "alter": 33,
+  "ziel": "Jobwechsel",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 165,
+  "alter": 20,
+  "ziel": "Ausbildung",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "Tippfehler, umgangssprachlich",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 278,
+  "alter": 20,
+  "ziel": "Ausbildung",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "gründlich, viele Rückfragen",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 114,
+  "alter": 44,
+  "ziel": "Jobwechsel",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "gründlich, viele Rückfragen",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 614,
+  "alter": 22,
+  "ziel": "Duales Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "nur Handy",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 917,
+  "alter": 29,
+  "ziel": "Praktikum/Werkstudent",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "schweift gern ab",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ }
+]
