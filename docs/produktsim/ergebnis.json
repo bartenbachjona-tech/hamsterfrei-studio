@@ -1,0 +1,459 @@
+{
+ "kalibrierfaktor": 0.04981302631995193,
+ "ergebnisse": {
+  "P1": {
+   "name": "Seminararbeit-Profi (Referenz)",
+   "panel_kaeufer": 24.09008423403812,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 4.5,
+    "OPP": 5.0,
+    "IDP": 9.5,
+    "PME": 16.5
+   },
+   "median_guenstig": 5.7080541684982595,
+   "median_teuer": 13.2361605726815,
+   "top_segmente": [
+    [
+     "S18a",
+     10.3
+    ],
+    [
+     "S17a",
+     5.3
+    ],
+    [
+     "E45",
+     2.9
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.2,
+   "preis_empfehlung": 9.9,
+   "euro_pro_verkauf": 6.537227731092438,
+   "euro_pro_1000_aufrufe": 7.844673277310925
+  },
+  "P2": {
+   "name": "Anzeigen-Profi",
+   "panel_kaeufer": 34.59134318288407,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 3.5,
+    "OPP": 4.0,
+    "IDP": 6.0,
+    "PME": 11.5
+   },
+   "median_guenstig": 4.401960742355372,
+   "median_teuer": 8.803921484710743,
+   "top_segmente": [
+    [
+     "R35",
+     4.2
+    ],
+    [
+     "R19",
+     4.0
+    ],
+    [
+     "R26",
+     2.5
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.7230994884114936,
+   "preis_empfehlung": 9.9,
+   "euro_pro_verkauf": 6.537227731092438,
+   "euro_pro_1000_aufrufe": 11.264293759074809
+  },
+  "P3": {
+   "name": "Bewerbungs-Profi Ausbildung/Minijob",
+   "panel_kaeufer": 24.9393250670728,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 3.5,
+    "OPP": 6.0,
+    "IDP": 7.5,
+    "PME": 12.0
+   },
+   "median_guenstig": 4.4882766240761445,
+   "median_teuer": 8.976553248152289,
+   "top_segmente": [
+    [
+     "A18",
+     5.8
+    ],
+    [
+     "S19",
+     2.9
+    ],
+    [
+     "M18",
+     1.9
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.2423032559679343,
+   "preis_empfehlung": 7.5,
+   "euro_pro_verkauf": 4.710021008403362,
+   "euro_pro_1000_aufrufe": 5.85127443441687
+  },
+  "P4": {
+   "name": "Wohnungs-/WG-Bewerbungs-Profi",
+   "panel_kaeufer": 28.988401092335653,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 5.0,
+    "OPP": 6.0,
+    "IDP": 10.0,
+    "PME": 17.5
+   },
+   "median_guenstig": 6.770950394546776,
+   "median_teuer": 14.509179416885948,
+   "top_segmente": [
+    [
+     "U22w",
+     8.1
+    ],
+    [
+     "U19",
+     4.2
+    ],
+    [
+     "W26",
+     4.1
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.443999986585839,
+   "preis_empfehlung": 10.0,
+   "euro_pro_verkauf": 6.613361344537815,
+   "euro_pro_1000_aufrufe": 9.549693692799911
+  },
+  "P5": {
+   "name": "Hausarbeit-/Bachelorarbeit-Profi",
+   "panel_kaeufer": 23.55237785763291,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 5.5,
+    "OPP": 6.0,
+    "IDP": 11.0,
+    "PME": 19.5
+   },
+   "median_guenstig": 6.697482356139009,
+   "median_teuer": 13.841674394364295,
+   "top_segmente": [
+    [
+     "U19",
+     5.4
+    ],
+    [
+     "U23",
+     2.8
+    ],
+    [
+     "U21",
+     2.6
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.173215218119721,
+   "preis_empfehlung": 11.0,
+   "euro_pro_verkauf": 7.374697478991598,
+   "euro_pro_1000_aufrufe": 8.652107311382084
+  },
+  "P6": {
+   "name": "Kleingewerbe-Starter",
+   "panel_kaeufer": 37.2275213921077,
+   "starke_absicht": 4,
+   "vw": {
+    "PMC": 6.0,
+    "OPP": 6.0,
+    "IDP": 11.5,
+    "PME": 21.0
+   },
+   "median_guenstig": 8.402478707379498,
+   "median_teuer": 16.552968657386003,
+   "top_segmente": [
+    [
+     "G24",
+     8.0
+    ],
+    [
+     "R26",
+     7.5
+    ],
+    [
+     "C21",
+     2.5
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.8544155029316343,
+   "preis_empfehlung": 11.5,
+   "euro_pro_verkauf": 7.7553655462184885,
+   "euro_pro_1000_aufrufe": 14.381670099809426
+  },
+  "P7": {
+   "name": "Steuer-Checkliste Azubi/Studi",
+   "panel_kaeufer": 50.99763904503344,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 4.0,
+    "OPP": 6.0,
+    "IDP": 7.5,
+    "PME": 13.0
+   },
+   "median_guenstig": 5.312756676106747,
+   "median_teuer": 9.871349210512873,
+   "top_segmente": [
+    [
+     "A20",
+     7.1
+    ],
+    [
+     "T23",
+     5.4
+    ],
+    [
+     "U21",
+     2.6
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 2.540346736005659,
+   "preis_empfehlung": 7.5,
+   "euro_pro_verkauf": 4.710021008403362,
+   "euro_pro_1000_aufrufe": 11.965086495215562
+  },
+  "P8": {
+   "name": "Abi-Lernplan-Coach",
+   "panel_kaeufer": 32.29585971761104,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 4.0,
+    "OPP": 6.0,
+    "IDP": 7.5,
+    "PME": 13.5
+   },
+   "median_guenstig": 4.8630091954886,
+   "median_teuer": 9.7260183909772,
+   "top_segmente": [
+    [
+     "S18a",
+     10.3
+    ],
+    [
+     "S18b",
+     7.3
+    ],
+    [
+     "S19",
+     3.5
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.6087545101388336,
+   "preis_empfehlung": 7.5,
+   "euro_pro_verkauf": 4.710021008403362,
+   "euro_pro_1000_aufrufe": 7.577267540117566
+  },
+  "P9": {
+   "name": "BAföG-Lotse",
+   "panel_kaeufer": 30.90300932680856,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 3.0,
+    "OPP": 3.5,
+    "IDP": 6.0,
+    "PME": 10.5
+   },
+   "median_guenstig": 4.222373720648477,
+   "median_teuer": 8.121326142373361,
+   "top_segmente": [
+    [
+     "U20b",
+     6.8
+    ],
+    [
+     "U22w",
+     3.5
+    ],
+    [
+     "U21",
+     3.0
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.5393724169620349,
+   "preis_empfehlung": 6.0,
+   "euro_pro_verkauf": 3.5680168067226887,
+   "euro_pro_1000_aufrufe": 5.492506655525867
+  },
+  "P10": {
+   "name": "Hochzeits-Planer",
+   "panel_kaeufer": 15.006928484922895,
+   "starke_absicht": 0,
+   "vw": {
+    "PMC": 6.0,
+    "OPP": 6.0,
+    "IDP": 12.0,
+    "PME": 21.5
+   },
+   "median_guenstig": 8.402179619109392,
+   "median_teuer": 16.804359238218783,
+   "top_segmente": [
+    [
+     "H28",
+     5.1
+    ],
+    [
+     "H31",
+     1.3
+    ],
+    [
+     "U24",
+     0.7
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 0.7475405236011005,
+   "preis_empfehlung": 12.0,
+   "euro_pro_verkauf": 8.136033613445377,
+   "euro_pro_1000_aufrufe": 6.082014827431111
+  },
+  "F1": {
+   "name": "CapCut Pro (Affiliate)",
+   "panel_kaeufer": 17.163855790401183,
+   "starke_absicht": 0,
+   "gratis_anmeldungen": 62.72284431526678,
+   "median_max": 5.72155473150865,
+   "top_segmente": [
+    [
+     "C21",
+     5.0
+    ],
+    [
+     "G28",
+     3.0
+    ],
+    [
+     "C26",
+     1.1
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 0.8549836002391136,
+   "euro_pro_verkauf": 15,
+   "euro_pro_1000_aufrufe": 12.824754003586703
+  },
+  "F2": {
+   "name": "Gamma (Affiliate)",
+   "panel_kaeufer": 29.26732332523391,
+   "starke_absicht": 0,
+   "gratis_anmeldungen": 161.17161289730979,
+   "median_max": 5.213320525641273,
+   "top_segmente": [
+    [
+     "B32",
+     5.1
+    ],
+    [
+     "U24",
+     2.5
+    ],
+    [
+     "S18a",
+     2.5
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.4578939471144199,
+   "euro_pro_verkauf": 15,
+   "euro_pro_1000_aufrufe": 21.868409206716297
+  },
+  "F3": {
+   "name": "LanguageTool Premium (Affiliate)",
+   "panel_kaeufer": 21.661278591492522,
+   "starke_absicht": 0,
+   "gratis_anmeldungen": 115.87961616579125,
+   "median_max": 4.71266502875217,
+   "top_segmente": [
+    [
+     "U21",
+     2.2
+    ],
+    [
+     "S17a",
+     1.8
+    ],
+    [
+     "B29",
+     1.2
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.0790138406018281,
+   "euro_pro_verkauf": 20,
+   "euro_pro_1000_aufrufe": 21.580276812036562
+  },
+  "F4": {
+   "name": "ElevenLabs (Affiliate)",
+   "panel_kaeufer": 12.937355177026769,
+   "starke_absicht": 0,
+   "gratis_anmeldungen": 72.44062397052534,
+   "median_max": 5.63378247916248,
+   "top_segmente": [
+    [
+     "C21",
+     3.7
+    ],
+    [
+     "G28",
+     2.4
+    ],
+    [
+     "U23",
+     1.4
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 0.6444488139438008,
+   "euro_pro_verkauf": 7,
+   "euro_pro_1000_aufrufe": 4.511141697606606
+  },
+  "F5": {
+   "name": "smartsteuer (Affiliate)",
+   "panel_kaeufer": 25.734028524986353,
+   "starke_absicht": 0,
+   "gratis_anmeldungen": 107.08197643069464,
+   "median_max": 27.100402479680312,
+   "top_segmente": [
+    [
+     "A20",
+     2.5
+    ],
+    [
+     "T23",
+     2.3
+    ],
+    [
+     "B27",
+     1.7
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 1.2818898402335388,
+   "euro_pro_verkauf": 20,
+   "euro_pro_1000_aufrufe": 25.637796804670778
+  },
+  "F6": {
+   "name": "Surfshark VPN (Affiliate)",
+   "panel_kaeufer": 6.9714055445339245,
+   "starke_absicht": 0,
+   "gratis_anmeldungen": 46.53128801349858,
+   "median_max": 43.182877700469916,
+   "top_segmente": [
+    [
+     "V20",
+     0.9
+    ],
+    [
+     "U23",
+     0.7
+    ],
+    [
+     "B35",
+     0.6
+    ]
+   ],
+   "kaeufe_pro_1000_aufrufe": 0.3472668078769272,
+   "euro_pro_verkauf": 25,
+   "euro_pro_1000_aufrufe": 8.68167019692318
+  }
+ }
+}

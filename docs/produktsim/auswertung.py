@@ -61,10 +61,10 @@ def vw_points(rows):
         return None
 
     return {
-        "PMC": cross(too_cheap, [1 - e for e in exp]),     # untere Grenze
+        "PMC": cross(too_cheap, [1 - c for c in cheap]),   # untere Grenze: zu billig ∩ nicht billig
         "OPP": cross(too_cheap, too_exp),                  # optimaler Preis
         "IDP": cross(cheap, exp),                          # indifferenter Preis
-        "PME": cross([1 - c for c in cheap], too_exp),     # obere Grenze
+        "PME": cross([1 - e for e in exp], too_exp),       # obere Grenze: nicht teuer ∩ zu teuer
     }
 
 
@@ -101,7 +101,8 @@ k = 0.0012 / (res["P1"]["panel_kaeufer"] / 1000)
 for pid, r in res.items():
     r["kaeufe_pro_1000_aufrufe"] = r["panel_kaeufer"] / 1000 * k * 1000
     if pid.startswith("P"):
-        price = (r.get("vw") or {}).get("OPP") or 9.90
+        vw = r.get("vw") or {}
+        price = vw.get("IDP") or 9.90  # "normaler" Preis aus Kundensicht
         if pid in ("P1", "P2"):
             price = 9.90
         r["preis_empfehlung"] = price

@@ -1,0 +1,1814 @@
+{
+ "F1": {
+  "S16": {
+   "gratis": 12,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Schneidet ab und zu, Gratisversion reicht völlig"
+  },
+  "S17a": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Seminararbeit-Stress, kein Videoschnitt nötig"
+  },
+  "S17b": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Nicht ihr Thema, CapCut gratis genügt"
+  },
+  "S18a": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Prüfungsgespräch statt Videos, kein Bedarf"
+  },
+  "S18b": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Abi-Stress, Videobearbeitung irrelevant"
+  },
+  "S19": {
+   "gratis": 7,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Ausbildung wichtiger, kein Schnittbedarf"
+  },
+  "A16": {
+   "gratis": 10,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Schneidet manchmal TikToks, Pro zu teuer"
+  },
+  "A18": {
+   "gratis": 6,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Sucht Ausbildung, hat andere Sorgen"
+  },
+  "A20": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Creator, Geld für Wichtigeres"
+  },
+  "A22": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Keine Zeit, nur Zuschauerin"
+  },
+  "U19": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Hausarbeit und WG-Suche, kein Videoschnitt"
+  },
+  "U21": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Studium, keine Videos geplant"
+  },
+  "U23": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 3,
+   "grund": "Technikaffin, nutzt eher DaVinci gratis"
+  },
+  "U24": {
+   "gratis": 8,
+   "kauf": 2,
+   "max": 3,
+   "grund": "Mal Erklärvideo für Unterricht, gratis reicht"
+  },
+  "U22w": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Wohnungssuche frisst alles, kein Bedarf"
+  },
+  "U20b": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Knapp bei Kasse, kein Bedarf"
+  },
+  "U25": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Skeptisch, schneidet keine Videos"
+  },
+  "M18": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Nutzt CapCut gratis nur zum Spaß"
+  },
+  "M30": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Wenig Geld, Zuverdienst damit unklar"
+  },
+  "R19": {
+   "gratis": 12,
+   "kauf": 2,
+   "max": 5,
+   "grund": "Vinted-Videos denkbar, aber Gratis reicht"
+  },
+  "R26": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Elektronik-Anzeigen brauchen keine Videos"
+  },
+  "R35": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Will nur den Keller loswerden"
+  },
+  "R45": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Familienvater, keine Videoambitionen"
+  },
+  "G24": {
+   "gratis": 14,
+   "kauf": 4,
+   "max": 8,
+   "grund": "Nagel-Reels für Kundschaft, Pro vielleicht später"
+  },
+  "G28": {
+   "gratis": 10,
+   "kauf": 15,
+   "max": 15,
+   "grund": "Nutzt täglich, Pro-Upgrade realistisch, App schon da"
+  },
+  "G31": {
+   "gratis": 10,
+   "kauf": 5,
+   "max": 10,
+   "grund": "Produktvideos für Etsy, zahlt für Zeitersparnis"
+  },
+  "C17": {
+   "gratis": 25,
+   "kauf": 5,
+   "max": 5,
+   "grund": "Will Creator werden, aber nur 30 € Budget"
+  },
+  "C21": {
+   "gratis": 12,
+   "kauf": 20,
+   "max": 12,
+   "grund": "Überlegt Pro sowieso, Video gibt Anstoß"
+  },
+  "C26": {
+   "gratis": 10,
+   "kauf": 8,
+   "max": 10,
+   "grund": "Faceless-Kanal, evtl. Pro für Auto-Captions"
+  },
+  "B27": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Abo-müde, kein Videobedarf"
+  },
+  "B32": {
+   "gratis": 4,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Braucht Präsentationen, keine Videos"
+  },
+  "B29": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Bewerbungen, kein Videoschnitt"
+  },
+  "B35": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Datenschutz: chinesische App kommt nicht infrage"
+  },
+  "W26": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Wohnungssuche hat Vorrang"
+  },
+  "W30": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "gratis": 8,
+   "kauf": 2,
+   "max": 5,
+   "grund": "Hochzeitsvideo vielleicht, aber nur einmalig"
+  },
+  "H31": {
+   "gratis": 10,
+   "kauf": 2,
+   "max": 5,
+   "grund": "JGA-Video, Gratisversion reicht"
+  },
+  "T23": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Steuern im Kopf, kein Video"
+  },
+  "T19": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kleines Budget, kein Bedarf"
+  },
+  "V20": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Gaming-Clips, schneidet gratis"
+  },
+  "V34": {
+   "gratis": 4,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Reisevideos höchstens mit Gratisversion"
+  },
+  "E45": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kind braucht keinen Videoeditor"
+  },
+  "E50": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Misstraut KI und Influencern"
+  },
+  "AT19": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Seminararbeiten, kein Video"
+  },
+  "CH22": {
+   "gratis": 6,
+   "kauf": 2,
+   "max": 10,
+   "grund": "Kaufkräftig, aber kein echter Bedarf"
+  },
+  "N15": {
+   "gratis": 8,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Geld, schaut nur Hamster"
+  },
+  "N40": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Keinerlei Bedarf"
+  },
+  "K22": {
+   "gratis": 4,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Praxisbericht, kein Video"
+  },
+  "F20": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Führerschein kostet schon genug"
+  },
+  "L33": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Steht dem Kanal kritisch gegenüber"
+  }
+ },
+ "F2": {
+  "S16": {
+   "gratis": 25,
+   "kauf": 2,
+   "max": 3,
+   "grund": "Referate ja, aber Eltern zahlen kein Abo"
+  },
+  "S17a": {
+   "gratis": 20,
+   "kauf": 2,
+   "max": 3,
+   "grund": "Seminararbeit ist Text, Folien später"
+  },
+  "S17b": {
+   "gratis": 25,
+   "kauf": 3,
+   "max": 3,
+   "grund": "Referate praktisch, Gratis-Credits reichen"
+  },
+  "S18a": {
+   "gratis": 35,
+   "kauf": 6,
+   "max": 5,
+   "grund": "Folien fürs Prüfungsgespräch, erst gratis testen"
+  },
+  "S18b": {
+   "gratis": 25,
+   "kauf": 3,
+   "max": 3,
+   "grund": "Abi-Präsis selten, Gratisplan genügt"
+  },
+  "S19": {
+   "gratis": 20,
+   "kauf": 2,
+   "max": 3,
+   "grund": "Mal eine Präsentation, gratis reicht"
+  },
+  "A16": {
+   "gratis": 15,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Wenig Referate, kein Geld"
+  },
+  "A18": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Braucht Ausbildung, keine Folien"
+  },
+  "A20": {
+   "gratis": 18,
+   "kauf": 3,
+   "max": 5,
+   "grund": "Berufsschul-Präsis, aber Geld knapp"
+  },
+  "A22": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Pflege, kaum Präsentationen"
+  },
+  "U19": {
+   "gratis": 35,
+   "kauf": 5,
+   "max": 5,
+   "grund": "Erste Referate, testet gratis, zahlt kaum"
+  },
+  "U21": {
+   "gratis": 35,
+   "kauf": 6,
+   "max": 5,
+   "grund": "Viele Referate, erst Gratis-Credits verbrauchen"
+  },
+  "U23": {
+   "gratis": 25,
+   "kauf": 6,
+   "max": 8,
+   "grund": "Hat Claude Pro, baut Folien selbst"
+  },
+  "U24": {
+   "gratis": 30,
+   "kauf": 10,
+   "max": 8,
+   "grund": "Kennt Gamma, oft Referate, Plus denkbar"
+  },
+  "U22w": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Gerade nur mit Wohnung beschäftigt"
+  },
+  "U20b": {
+   "gratis": 10,
+   "kauf": 1,
+   "max": 0,
+   "grund": "600 € knapp, kein Abo"
+  },
+  "U25": {
+   "gratis": 10,
+   "kauf": 2,
+   "max": 5,
+   "grund": "Misstraut Influencer-Werbung, nutzt Beamer/LaTeX"
+  },
+  "M18": {
+   "gratis": 8,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf an Folien"
+  },
+  "M30": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf, wenig Geld"
+  },
+  "R19": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Vinted braucht keine Präsentationen"
+  },
+  "R26": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R35": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "G24": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Nageldesign braucht keine Folien"
+  },
+  "G28": {
+   "gratis": 20,
+   "kauf": 6,
+   "max": 10,
+   "grund": "Kundenpitches, offen für Tools"
+  },
+  "G31": {
+   "gratis": 8,
+   "kauf": 2,
+   "max": 5,
+   "grund": "Kaum Präsentationen im Etsy-Alltag"
+  },
+  "C17": {
+   "gratis": 8,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Will Videos, keine Folien"
+  },
+  "C21": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Präsentationsbedarf"
+  },
+  "C26": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "B27": {
+   "gratis": 30,
+   "kauf": 5,
+   "max": 8,
+   "grund": "Nutzt KI im Job, zahlt Abos ungern"
+  },
+  "B32": {
+   "gratis": 40,
+   "kauf": 20,
+   "max": 15,
+   "grund": "Wöchentliche Präsis, Zeitersparnis lohnt sich"
+  },
+  "B29": {
+   "gratis": 10,
+   "kauf": 2,
+   "max": 5,
+   "grund": "Bewerbungen, Präsentation selten"
+  },
+  "B35": {
+   "gratis": 12,
+   "kauf": 3,
+   "max": 8,
+   "grund": "Bedenken bei Firmendaten in der Cloud"
+  },
+  "W26": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Wohnungssuche hat Vorrang"
+  },
+  "W30": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Hochzeit, keine Präsentation nötig"
+  },
+  "H31": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "JGA-Präsi witzig, gratis reicht"
+  },
+  "T23": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein aktueller Bedarf"
+  },
+  "T19": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf, wenig Geld"
+  },
+  "V20": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "V34": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "gratis": 12,
+   "kauf": 4,
+   "max": 8,
+   "grund": "Würde fürs Kind zahlen, unsicher ob nötig"
+  },
+  "E50": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Misstraut KI"
+  },
+  "AT19": {
+   "gratis": 30,
+   "kauf": 5,
+   "max": 5,
+   "grund": "Seminar-Referate, Gratisplan reicht erstmal"
+  },
+  "CH22": {
+   "gratis": 30,
+   "kauf": 8,
+   "max": 12,
+   "grund": "Kaufkräftig, Referate, Abo kein Problem"
+  },
+  "N15": {
+   "gratis": 12,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Geld, nur Spaß am Ausprobieren"
+  },
+  "N40": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "gratis": 30,
+   "kauf": 8,
+   "max": 8,
+   "grund": "Projektpräsentationen, solides Einkommen"
+  },
+  "F20": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Sieht Folien-KI kritisch, prüft nur"
+  }
+ },
+ "F3": {
+  "S16": {
+   "gratis": 10,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Word-Korrektur reicht, kein Abo"
+  },
+  "S17a": {
+   "gratis": 30,
+   "kauf": 5,
+   "max": 4,
+   "grund": "Abgabe 10.11., Korrektur hilfreich, aber teuer"
+  },
+  "S17b": {
+   "gratis": 12,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein großer Schreibbedarf"
+  },
+  "S18a": {
+   "gratis": 15,
+   "kauf": 2,
+   "max": 3,
+   "grund": "Arbeit fast fertig, kommt zu spät"
+  },
+  "S18b": {
+   "gratis": 12,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Word und ChatGPT reichen"
+  },
+  "S19": {
+   "gratis": 15,
+   "kauf": 3,
+   "max": 3,
+   "grund": "Bewerbungen fehlerfrei, aber zu teuer"
+  },
+  "A16": {
+   "gratis": 15,
+   "kauf": 2,
+   "max": 0,
+   "grund": "Fehler im Anschreiben, aber kein Geld"
+  },
+  "A18": {
+   "gratis": 12,
+   "kauf": 2,
+   "max": 0,
+   "grund": "Rechtschreibung hilft, kann's nicht zahlen"
+  },
+  "A20": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kaum Schreibbedarf"
+  },
+  "A22": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Keine Zeit, kein Bedarf"
+  },
+  "U19": {
+   "gratis": 25,
+   "kauf": 4,
+   "max": 4,
+   "grund": "Erste Hausarbeit, Gratis-Check ausprobieren"
+  },
+  "U21": {
+   "gratis": 25,
+   "kauf": 6,
+   "max": 5,
+   "grund": "Viele Hausarbeiten, aber ChatGPT korrigiert auch"
+  },
+  "U23": {
+   "gratis": 15,
+   "kauf": 3,
+   "max": 5,
+   "grund": "Claude Pro korrigiert schon"
+  },
+  "U24": {
+   "gratis": 20,
+   "kauf": 5,
+   "max": 5,
+   "grund": "Schreibt viel, Gratisversion reicht meist"
+  },
+  "U22w": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "U20b": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Geld"
+  },
+  "U25": {
+   "gratis": 15,
+   "kauf": 5,
+   "max": 8,
+   "grund": "Kennt LanguageTool, kauft nicht über Influencer"
+  },
+  "M18": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "M30": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Geld"
+  },
+  "R19": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R26": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R35": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "G24": {
+   "gratis": 10,
+   "kauf": 2,
+   "max": 3,
+   "grund": "Kundentexte, aber knapp bei Kasse"
+  },
+  "G28": {
+   "gratis": 15,
+   "kauf": 5,
+   "max": 6,
+   "grund": "Texte für Kunden, evtl. Jahresabo"
+  },
+  "G31": {
+   "gratis": 12,
+   "kauf": 4,
+   "max": 6,
+   "grund": "Produkttexte, zahlt für Qualität"
+  },
+  "C17": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "C21": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "C26": {
+   "gratis": 8,
+   "kauf": 2,
+   "max": 3,
+   "grund": "Skripte, aber KI korrigiert schon"
+  },
+  "B27": {
+   "gratis": 15,
+   "kauf": 3,
+   "max": 4,
+   "grund": "Job-Texte, aber Abo-Müdigkeit"
+  },
+  "B32": {
+   "gratis": 12,
+   "kauf": 3,
+   "max": 6,
+   "grund": "Viele Mails, Firma zahlt eher"
+  },
+  "B29": {
+   "gratis": 22,
+   "kauf": 6,
+   "max": 6,
+   "grund": "Bewerbungen müssen fehlerfrei sein"
+  },
+  "B35": {
+   "gratis": 20,
+   "kauf": 8,
+   "max": 8,
+   "grund": "Datenschutz: deutscher Anbieter, viel Text"
+  },
+  "W26": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "W30": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "H31": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "T23": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "T19": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "V20": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "V34": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "gratis": 12,
+   "kauf": 4,
+   "max": 6,
+   "grund": "Würde fürs Kind zahlen, wenn sinnvoll"
+  },
+  "E50": {
+   "gratis": 4,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Rechtschreibhilfe ok, Influencer-Werbung nicht"
+  },
+  "AT19": {
+   "gratis": 20,
+   "kauf": 4,
+   "max": 4,
+   "grund": "Seminararbeiten, gratis reicht oft"
+  },
+  "CH22": {
+   "gratis": 22,
+   "kauf": 7,
+   "max": 10,
+   "grund": "Bachelorarbeit, Geld vorhanden"
+  },
+  "N15": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Geld"
+  },
+  "N40": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "gratis": 25,
+   "kauf": 7,
+   "max": 6,
+   "grund": "Praxisbericht und Projektarbeit, zahlt eher"
+  },
+  "F20": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "gratis": 10,
+   "kauf": 2,
+   "max": 5,
+   "grund": "Nützlich zum Korrigieren, aber skeptisch"
+  }
+ },
+ "F4": {
+  "S16": {
+   "gratis": 12,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Lustig ausprobieren, nicht bezahlen"
+  },
+  "S17a": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Keine Zeit, Abgabe drängt"
+  },
+  "S17b": {
+   "gratis": 6,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "S18a": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "S18b": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "S19": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "A16": {
+   "gratis": 10,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Spielerei, kein Geld"
+  },
+  "A18": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Hat andere Sorgen"
+  },
+  "A20": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "A22": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Keine Zeit"
+  },
+  "U19": {
+   "gratis": 6,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "U21": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "U23": {
+   "gratis": 15,
+   "kauf": 4,
+   "max": 5,
+   "grund": "Technikneugier, will API testen"
+  },
+  "U24": {
+   "gratis": 10,
+   "kauf": 2,
+   "max": 5,
+   "grund": "Vertonung für Unterrichtsmaterial denkbar"
+  },
+  "U22w": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "U20b": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "U25": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Skeptisch gegenüber KI-Spielereien"
+  },
+  "M18": {
+   "gratis": 6,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Nur Spielerei"
+  },
+  "M30": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Zuverdienst-Idee, aber kein Geld"
+  },
+  "R19": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R26": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R35": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "G24": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "G28": {
+   "gratis": 25,
+   "kauf": 12,
+   "max": 10,
+   "grund": "Voiceovers für Kunden, plausibel"
+  },
+  "G31": {
+   "gratis": 10,
+   "kauf": 3,
+   "max": 5,
+   "grund": "Produktvideos vertonen vielleicht"
+  },
+  "C17": {
+   "gratis": 35,
+   "kauf": 6,
+   "max": 5,
+   "grund": "Hamster-Stimme cool, aber 30 € Budget"
+  },
+  "C21": {
+   "gratis": 40,
+   "kauf": 15,
+   "max": 8,
+   "grund": "Will KI-Stimmen testen, Starter denkbar"
+  },
+  "C26": {
+   "gratis": 5,
+   "kauf": 10,
+   "max": 22,
+   "grund": "Nutzt schon Starter, Creator-Upgrade möglich"
+  },
+  "B27": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Spielerei, Abo-Müdigkeit"
+  },
+  "B32": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "B29": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "B35": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Stimmenklon datenschutzmäßig bedenklich"
+  },
+  "W26": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "W30": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "H31": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "JGA-Gag, gratis reicht"
+  },
+  "T23": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "T19": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "V20": {
+   "gratis": 10,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Stimme fürs Streamen lustig, kein Geld"
+  },
+  "V34": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf fürs Kind"
+  },
+  "E50": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Stimmenklone wirken unheimlich"
+  },
+  "AT19": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "CH22": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein echter Bedarf"
+  },
+  "N15": {
+   "gratis": 12,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Lustige Stimmen, kein Geld"
+  },
+  "N40": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "F20": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf, eher kritisch"
+  }
+ },
+ "F5": {
+  "S16": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Keine Steuererklärung nötig"
+  },
+  "S17a": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Andere Prioritäten, keine Steuer"
+  },
+  "S17b": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Einkommen dafür"
+  },
+  "S18a": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Minijob, Erstattung gering"
+  },
+  "S18b": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "S19": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Lohnt noch nicht"
+  },
+  "A16": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Zu jung, kein Thema"
+  },
+  "A18": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Einkommen"
+  },
+  "A20": {
+   "gratis": 35,
+   "kauf": 10,
+   "max": 20,
+   "grund": "Will Erklärung machen, aber ELSTER gratis"
+  },
+  "A22": {
+   "gratis": 15,
+   "kauf": 4,
+   "max": 15,
+   "grund": "Erstattung möglich, aber keine Zeit"
+  },
+  "U19": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Verlustvortrag unbekannt, kein Interesse"
+  },
+  "U21": {
+   "gratis": 12,
+   "kauf": 2,
+   "max": 10,
+   "grund": "Nur Verlustvortrag gratis interessant"
+  },
+  "U23": {
+   "gratis": 20,
+   "kauf": 3,
+   "max": 15,
+   "grund": "Werkstudent, kann ELSTER selbst"
+  },
+  "U24": {
+   "gratis": 15,
+   "kauf": 3,
+   "max": 10,
+   "grund": "Verlustvortrag gratis interessant, sonst nein"
+  },
+  "U22w": {
+   "gratis": 5,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Gerade andere Sorgen"
+  },
+  "U20b": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Erst BAföG, Steuer später"
+  },
+  "U25": {
+   "gratis": 10,
+   "kauf": 2,
+   "max": 15,
+   "grund": "Skeptisch, macht's mit ELSTER"
+  },
+  "M18": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "M30": {
+   "gratis": 12,
+   "kauf": 3,
+   "max": 15,
+   "grund": "Teilzeit, Erstattung lohnt vielleicht"
+  },
+  "R19": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Unsicher ob Vinted steuerpflichtig"
+  },
+  "R26": {
+   "gratis": 25,
+   "kauf": 6,
+   "max": 30,
+   "grund": "Gewerbefrage brennt, will Klarheit"
+  },
+  "R35": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "gratis": 15,
+   "kauf": 6,
+   "max": 30,
+   "grund": "Macht jährlich Erklärung, vergleicht mit WISO"
+  },
+  "G24": {
+   "gratis": 25,
+   "kauf": 6,
+   "max": 30,
+   "grund": "Erstes Gewerbe, tendiert zum Steuerberater"
+  },
+  "G28": {
+   "gratis": 20,
+   "kauf": 8,
+   "max": 40,
+   "grund": "Freelancer mit EÜR, eher Lexware/WISO"
+  },
+  "G31": {
+   "gratis": 15,
+   "kauf": 5,
+   "max": 40,
+   "grund": "Hat schon Software oder Berater"
+  },
+  "C17": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "C21": {
+   "gratis": 8,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kleine Einnahmen, noch kein Thema"
+  },
+  "C26": {
+   "gratis": 10,
+   "kauf": 3,
+   "max": 30,
+   "grund": "Nebeneinkünfte, prüft Alternativen"
+  },
+  "B27": {
+   "gratis": 20,
+   "kauf": 8,
+   "max": 35,
+   "grund": "Macht Erklärung, nutzt eher WISO"
+  },
+  "B32": {
+   "gratis": 15,
+   "kauf": 6,
+   "max": 40,
+   "grund": "Will Zeit sparen, hat schon Lösung"
+  },
+  "B29": {
+   "gratis": 15,
+   "kauf": 5,
+   "max": 30,
+   "grund": "Berufswechsel, Werbungskosten absetzen"
+  },
+  "B35": {
+   "gratis": 12,
+   "kauf": 4,
+   "max": 35,
+   "grund": "Datenschutz, bleibt bei ELSTER"
+  },
+  "W26": {
+   "gratis": 15,
+   "kauf": 6,
+   "max": 30,
+   "grund": "Umzugskosten absetzbar, interessant"
+  },
+  "W30": {
+   "gratis": 10,
+   "kauf": 3,
+   "max": 30,
+   "grund": "Paar, macht's eher gemeinsam mit WISO"
+  },
+  "H28": {
+   "gratis": 12,
+   "kauf": 4,
+   "max": 30,
+   "grund": "Macht Erklärung sowieso, Anbieter egal"
+  },
+  "H31": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Anlass"
+  },
+  "T23": {
+   "gratis": 40,
+   "kauf": 15,
+   "max": 30,
+   "grund": "Angst vor ELSTER, geführte Software hilft"
+  },
+  "T19": {
+   "gratis": 15,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Lohnt kaum, zahlt nichts"
+  },
+  "V20": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "V34": {
+   "gratis": 10,
+   "kauf": 3,
+   "max": 30,
+   "grund": "Reisekosten, hat aber Lösung"
+  },
+  "E45": {
+   "gratis": 8,
+   "kauf": 2,
+   "max": 30,
+   "grund": "Hat eigenen Steuerweg"
+  },
+  "E50": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Misstraut Online-Steuer"
+  },
+  "AT19": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Österreich, deutsches Steuertool nutzlos"
+  },
+  "CH22": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Schweiz, nicht anwendbar"
+  },
+  "N15": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "N40": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "gratis": 25,
+   "kauf": 6,
+   "max": 20,
+   "grund": "Dual, Erstattung möglich"
+  },
+  "F20": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "gratis": 8,
+   "kauf": 2,
+   "max": 30,
+   "grund": "Hat eigene Lösung"
+  }
+ },
+ "F6": {
+  "S16": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Eltern zahlen kein VPN"
+  },
+  "S17a": {
+   "gratis": 1,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Null Interesse gerade"
+  },
+  "S17b": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "S18a": {
+   "gratis": 4,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "S18b": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "S19": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "A16": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf, kein Geld"
+  },
+  "A18": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "A20": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "A22": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "U19": {
+   "gratis": 6,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Uni-WLAN reicht"
+  },
+  "U21": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "U23": {
+   "gratis": 10,
+   "kauf": 2,
+   "max": 40,
+   "grund": "Technikaffin, nutzt eher Mullvad"
+  },
+  "U24": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "U22w": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "U20b": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Geld"
+  },
+  "U25": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "M18": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "M30": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Geld"
+  },
+  "R19": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R26": {
+   "gratis": 8,
+   "kauf": 2,
+   "max": 40,
+   "grund": "Elektronik-Typ, VPN ok, nicht nötig"
+  },
+  "R35": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "G24": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "G28": {
+   "gratis": 6,
+   "kauf": 2,
+   "max": 40,
+   "grund": "Café-WLAN, aber kein Druck"
+  },
+  "G31": {
+   "gratis": 4,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "C17": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "C21": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "C26": {
+   "gratis": 8,
+   "kauf": 2,
+   "max": 40,
+   "grund": "Kennt VPN-Sponsoring, misstrauisch"
+  },
+  "B27": {
+   "gratis": 8,
+   "kauf": 2,
+   "max": 40,
+   "grund": "VPN-Werbung nervt, Abo-müde"
+  },
+  "B32": {
+   "gratis": 6,
+   "kauf": 2,
+   "max": 50,
+   "grund": "Firmen-VPN vorhanden"
+  },
+  "B29": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "B35": {
+   "gratis": 12,
+   "kauf": 4,
+   "max": 60,
+   "grund": "Datenschutz-bewusst, prüft Anbieter selbst"
+  },
+  "W26": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "W30": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "H31": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "T23": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "T19": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "V20": {
+   "gratis": 25,
+   "kauf": 6,
+   "max": 40,
+   "grund": "Streaming-Kataloge reizen, Budget knapp"
+  },
+  "V34": {
+   "gratis": 12,
+   "kauf": 4,
+   "max": 60,
+   "grund": "Hat NordVPN, Wechsel erst bei Ablauf"
+  },
+  "E45": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "E50": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Misstraut solcher Werbung"
+  },
+  "AT19": {
+   "gratis": 4,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "CH22": {
+   "gratis": 10,
+   "kauf": 3,
+   "max": 60,
+   "grund": "Kaufkraft da, Bedarf gering"
+  },
+  "N15": {
+   "gratis": 3,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Geld"
+  },
+  "N40": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "gratis": 5,
+   "kauf": 1,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "F20": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "gratis": 2,
+   "kauf": 0,
+   "max": 0,
+   "grund": "Kein Bedarf"
+  }
+ }
+}
