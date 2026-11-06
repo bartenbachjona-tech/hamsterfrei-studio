@@ -364,7 +364,7 @@ export const SceneEnde: React.FC<{ link: number; frei?: number }> = ({ link, fre
   return (
     <div style={{ position: "absolute", inset: 0, background: "#FDF1E6" }}>
       {/* Handy (Nachzeichnung der Seite im neuen Look, ohne Preis) */}
-      <div style={{ position: "absolute", left: 290, top: 26, width: 430, height: 660, background: "#FFF8EC", border: `10px solid ${INK}`, borderRadius: 54, overflow: "hidden", scale: String(s), rotate: "3deg", boxShadow: "0 18px 0 rgba(58,38,24,.15)" }}>
+      <div style={{ position: "absolute", left: 290, top: 150, width: 430, height: 660, background: "#FFF8EC", border: `10px solid ${INK}`, borderRadius: 54, overflow: "hidden", scale: String(s * 0.84), transformOrigin: "50% 0%", rotate: "3deg", boxShadow: "0 18px 0 rgba(58,38,24,.15)" }}>
         <div style={{ height: 54, display: "flex", alignItems: "center", gap: 8, padding: "0 22px", fontSize: 22, fontWeight: 700, borderBottom: "2px solid rgba(58,38,24,.08)" }}>
           🐹 Hamster<span style={{ color: GREEN }}>frei</span>
           <span style={{ marginLeft: "auto", fontSize: 16, color: INK }}>Seminar</span>
@@ -390,8 +390,14 @@ export const SceneEnde: React.FC<{ link: number; frei?: number }> = ({ link, fre
           </div>
         </div>
       </div>
+      {/* Jonas Satz (06.11.): eigener Skill, nur als Text eingeschnitten, keine neue Aufnahme */}
+      <div style={{ position: "absolute", left: 30, right: 30, top: 18, display: "flex", justifyContent: "center", scale: String(Math.max(0.0001, sp(t, 0, fps))) }}>
+        <div style={{ background: "#fff", color: INK, border: `6px solid ${INK}`, borderRadius: 28, padding: "12px 30px", fontSize: 46, fontWeight: 700, textAlign: "center", lineHeight: 1.15, boxShadow: "0 10px 0 rgba(58,38,24,.15)" }}>
+          Ich hab dafür einen eigenen<br /><span style={{ color: GREEN }}>Claude-Skill</span> entwickelt 🐹
+        </div>
+      </div>
       {/* Zeigestab-Tipp aufs Handy */}
-      <div style={{ position: "absolute", left: 250, top: 560, width: 90, height: 90, borderRadius: 45, border: `7px solid ${RED}`, scale: String(interpolate(t % 1.3, [0, 0.6], [0.6, 1.4], { extrapolateRight: "clamp" })), opacity: interpolate(t % 1.3, [0, 0.6, 0.9], [1, 0.6, 0], { extrapolateRight: "clamp" }) }} />
+      <div style={{ position: "absolute", left: 270, top: 600, width: 90, height: 90, borderRadius: 45, border: `7px solid ${RED}`, scale: String(interpolate(t % 1.3, [0, 0.6], [0.6, 1.4], { extrapolateRight: "clamp" })), opacity: interpolate(t % 1.3, [0, 0.6, 0.9], [1, 0.6, 0], { extrapolateRight: "clamp" }) }} />
       {/* Adresse groß */}
       <div style={{ position: "absolute", left: 20, right: 20, top: 730, textAlign: "center" }}>
         <div style={{ display: "inline-block", fontSize: 66, fontWeight: 700, color: "#1A56C4", background: "#fff", border: `6px solid rgba(35,136,90,${0.5 + glow * 0.5})`, borderRadius: 26, padding: "8px 30px", scale: String(1 + 0.08 * big) }}>hamsterfrei.de/seminar</div>

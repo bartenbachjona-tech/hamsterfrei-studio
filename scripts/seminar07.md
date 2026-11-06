@@ -35,12 +35,12 @@ Läuft im kostenlosen Claude. Link im Profil.
 (Fassung 1 mit Endcheck-Karte, Fußnote 12, Beleg-PDF und 3 Schritten ist ersetzt; die alten Szenen-Bausteine stehen noch ungenutzt in src/scenes/seminar07.tsx.)
 
 ## Caption (TikTok/Instagram)
-Werbung: mein eigenes Produkt | Seminararbeit mit KI: So kommst du am schnellsten zum Ziel, ob W-Seminar Quellen, Schreiben oder Prüfungsgespräch 🐹 Claude fragt zuerst, wo du stehst: noch keine Quellen, mittendrin oder fast fertig. Beispiel: Du zitierst eine Quelle im Text, aber im Literaturverzeichnis fehlt sie – Claude findet genau diese Stelle und sagt dir, was du ergänzen musst. Fürs Prüfungsgespräch stellt er dir Fragen zu deiner eigenen Arbeit, wie deine Lehrkraft, und sagt dir, was an deiner Antwort noch fehlt. Läuft auch im kostenlosen Claude. Alles auf hamsterfrei.de/seminar – Link im Profil ☝️ Keine Notengarantie. Claude-Konto ab 18. KI-animiert.
+Werbung: mein eigenes Produkt | Seminararbeit mit KI: So kommst du am schnellsten zum Ziel, ob W-Seminar Quellen, Schreiben oder Prüfungsgespräch 🐹 Claude fragt zuerst, wo du stehst: noch keine Quellen, mittendrin oder fast fertig. Beispiel: Du zitierst eine Quelle im Text, aber im Literaturverzeichnis fehlt sie – Claude findet genau diese Stelle und sagt dir, was du ergänzen musst. Fürs Prüfungsgespräch stellt er dir Fragen zu deiner eigenen Arbeit, wie deine Lehrkraft, und sagt dir, was an deiner Antwort noch fehlt. Ich hab dafür einen eigenen Claude-Skill entwickelt, er läuft auch im kostenlosen Claude. Alles auf hamsterfrei.de/seminar – Link im Profil ☝️ Keine Notengarantie. Claude-Konto ab 18. KI-animiert.
 #seminararbeit #wseminar #seminararbeitmitki #seminararbeitki #abitur #bayern #wseminarquellen #abi2027 #claude #schule
 
 ## YouTube
 Titel: Seminararbeit mit KI – so geht's (W-Seminar) #shorts
-Beschreibung: Werbung: mein eigenes Produkt | Seminararbeit mit KI im W-Seminar: Claude fragt, wo du stehst (Quellen suchen, Kapitel schreiben, checken), findet z. B. Quellen, die im Literaturverzeichnis fehlen, und übt mit dir das Prüfungsgespräch mit Fragen zu deiner eigenen Arbeit. Läuft auch im kostenlosen Claude. Seminararbeit-Profi (Claude-Skill): https://hamsterfrei.de/seminar 🐹 Keine Notengarantie. Claude-Konto ab 18. KI-animiert. #seminararbeit #wseminar #abitur
+Beschreibung: Werbung: mein eigenes Produkt | Seminararbeit mit KI im W-Seminar: Claude fragt, wo du stehst (Quellen suchen, Kapitel schreiben, checken), findet z. B. Quellen, die im Literaturverzeichnis fehlen, und übt mit dir das Prüfungsgespräch mit Fragen zu deiner eigenen Arbeit. Ich hab dafür einen eigenen Claude-Skill entwickelt, er läuft auch im kostenlosen Claude. Seminararbeit-Profi: https://hamsterfrei.de/seminar 🐹 Keine Notengarantie. Claude-Konto ab 18. KI-animiert. #seminararbeit #wseminar #abitur
 Hinweis: Bei S5 lehnte YouTube die Beschreibung mit URL ab → falls wieder abgelehnt, URL weglassen und „Link im Kanal“ schreiben.
 
 ## Text-Kritik Fassung 2 (Selbstprüfung)
@@ -61,3 +61,4 @@ Frame 0 hell, Schlüsselbild + Overlay ab Frame 0, Werbe-Label außerhalb der Le
 
 ## Erwartung (G7)
 Keine Basis (state/zahlen.md). TikTok 300–900 Aufrufe nach 48 h, Suchanteil ≥ 30 %, Ø Wiedergabe 7–10 s; YouTube 100–400.
+- Fassung 2b (06.11. 01:45, Jonas Wunsch): Schluss-Szene mit Textbanner „Ich hab dafür einen eigenen Claude-Skill entwickelt 🐹“ (ohne neue Aufnahme), Handy kleiner. Caption/YT-Beschreibung um den Satz ergänzt.
