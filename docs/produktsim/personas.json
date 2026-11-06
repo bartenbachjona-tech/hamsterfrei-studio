@@ -1,0 +1,252 @@
+[
+ {
+  "id": "S16",
+  "gewicht": 30,
+  "persona": "16 J., Gymnasium 11. Klasse Bayern, 20 € Taschengeld/Monat, nutzt ChatGPT gratis, Eltern zahlen Online-Käufe"
+ },
+ {
+  "id": "S17a",
+  "gewicht": 35,
+  "persona": "17 J., Q12 Bayern, W-Seminar läuft, Abgabe 10.11., gestresst, 40 € Nebenjob/Monat, kein Claude-Konto"
+ },
+ {
+  "id": "S17b",
+  "gewicht": 25,
+  "persona": "17 J., Gymnasium NRW, Abi 2027, sucht Lerntipps, 30 €/Monat, ChatGPT gratis"
+ },
+ {
+  "id": "S18a",
+  "gewicht": 40,
+  "persona": "18 J., Q13 Bayern, Seminararbeit fast fertig, Prüfungsgespräch im Dez., 150 €/Monat Minijob, PayPal vorhanden"
+ },
+ {
+  "id": "S18b",
+  "gewicht": 25,
+  "persona": "18 J., Q13 BaWü, Abi im Frühjahr, Lernstress, 80 €/Monat, nutzt KI für Hausaufgaben"
+ },
+ {
+  "id": "S19",
+  "gewicht": 20,
+  "persona": "19 J., Fachoberschule, macht Fachabi, bewirbt sich parallel um Ausbildung, 100 €/Monat"
+ },
+ {
+  "id": "A16",
+  "gewicht": 20,
+  "persona": "16 J., Realschule 10. Klasse, sucht Ausbildungsplatz für 2027, Anschreiben fällt schwer, 25 €/Monat"
+ },
+ {
+  "id": "A18",
+  "gewicht": 25,
+  "persona": "18 J., Mittelschulabschluss, sucht seit Monaten Ausbildung als Kfz-Mechatroniker, 20 Absagen, 50 €/Monat"
+ },
+ {
+  "id": "A20",
+  "gewicht": 25,
+  "persona": "20 J., Azubi Industriekauffrau 2. Lehrjahr, 950 € netto, will Steuererklärung machen, Neo-Bank"
+ },
+ {
+  "id": "A22",
+  "gewicht": 20,
+  "persona": "22 J., Azubi Pflege, 1.100 € netto, wenig Zeit, nutzt TikTok abends, nie KI-Abo"
+ },
+ {
+  "id": "U19",
+  "gewicht": 30,
+  "persona": "19 J., Erstsemester BWL in Köln, erste Hausarbeit, WG-Suche läuft, 900 € BAföG+Eltern"
+ },
+ {
+  "id": "U21",
+  "gewicht": 35,
+  "persona": "21 J., Studentin Soziale Arbeit, 4. Semester, Hausarbeiten, nutzt ChatGPT Plus geteilt, 1.000 €/Monat"
+ },
+ {
+  "id": "U23",
+  "gewicht": 35,
+  "persona": "23 J., Bachelorarbeit Informatik in 3 Monaten, nutzt Claude Pro, technikaffin, 1.200 €/Monat Werkstudent"
+ },
+ {
+  "id": "U24",
+  "gewicht": 25,
+  "persona": "24 J., Masterstudentin Lehramt, Bachelorarbeit vorbei, hält Referate, Gamma schon gesehen"
+ },
+ {
+  "id": "U22w",
+  "gewicht": 30,
+  "persona": "22 J., zieht zum Master nach München, sucht WG-Zimmer, 30 Besichtigungsanfragen ohne Antwort"
+ },
+ {
+  "id": "U20b",
+  "gewicht": 20,
+  "persona": "20 J., Studi, beantragt BAföG zum ersten Mal, überfordert von Formblättern, 600 €/Monat"
+ },
+ {
+  "id": "U25",
+  "gewicht": 20,
+  "persona": "25 J., Promovierender, wissenschaftliches Schreiben, skeptisch gegenüber KI-Produkten von Influencern"
+ },
+ {
+  "id": "M18",
+  "gewicht": 20,
+  "persona": "18 J., Schüler mit Minijob im Café, will zweiten Minijob, schreibt ungern Bewerbungen"
+ },
+ {
+  "id": "M30",
+  "gewicht": 15,
+  "persona": "30 J., Mutter in Teilzeit + Minijob, wenig Geld, sucht Zuverdienst, nutzt Instagram mehr als TikTok"
+ },
+ {
+  "id": "R19",
+  "gewicht": 25,
+  "persona": "19 J., verkauft Klamotten auf Vinted, 15 Artikel/Monat, will mehr verdienen"
+ },
+ {
+  "id": "R26",
+  "gewicht": 25,
+  "persona": "26 J., Reseller Elektronik auf Kleinanzeigen nebenbei, 400 €/Monat Gewinn, fragt sich ob Gewerbe nötig"
+ },
+ {
+  "id": "R35",
+  "gewicht": 20,
+  "persona": "35 J., entrümpelt Keller, will 30 Sachen auf Kleinanzeigen verkaufen, keine Lust auf Texte"
+ },
+ {
+  "id": "R45",
+  "gewicht": 10,
+  "persona": "45 J., Familienvater, verkauft Kinderzeug auf Vinted/Kleinanzeigen, nutzt ChatGPT selten"
+ },
+ {
+  "id": "G24",
+  "gewicht": 20,
+  "persona": "24 J., hat gerade Kleingewerbe angemeldet (Nageldesign), unsicher bei Rechnungen und Kleinunternehmerregel"
+ },
+ {
+  "id": "G28",
+  "gewicht": 20,
+  "persona": "28 J., Social-Media-Freelancer, nutzt CapCut täglich, Canva Pro, offen für Tools"
+ },
+ {
+  "id": "G31",
+  "gewicht": 15,
+  "persona": "31 J., Online-Shop nebenbei (Etsy), sucht Automatisierung, zahlt für Tools, die Zeit sparen"
+ },
+ {
+  "id": "C17",
+  "gewicht": 20,
+  "persona": "17 J., will TikTok-Creator werden, schneidet mit CapCut gratis, 30 €/Monat"
+ },
+ {
+  "id": "C21",
+  "gewicht": 25,
+  "persona": "21 J., kleiner Creator 5k Follower, CapCut, überlegt Pro, will KI-Stimmen testen"
+ },
+ {
+  "id": "C26",
+  "gewicht": 15,
+  "persona": "26 J., YouTuber nebenbei, Faceless-Kanal, nutzt ElevenLabs Starter"
+ },
+ {
+  "id": "B27",
+  "gewicht": 20,
+  "persona": "27 J., Bürojob Marketing, 2.400 € netto, nutzt ChatGPT im Job, sucht KI-Abkürzungen, zahlt ungern für Abos"
+ },
+ {
+  "id": "B32",
+  "gewicht": 25,
+  "persona": "32 J., Vertriebler, Präsentationen jede Woche, würde für Zeitersparnis zahlen, 3.000 € netto"
+ },
+ {
+  "id": "B29",
+  "gewicht": 20,
+  "persona": "29 J., Berufswechslerin, schreibt Bewerbungen für neuen Job, 2.000 € netto"
+ },
+ {
+  "id": "B35",
+  "gewicht": 15,
+  "persona": "35 J., Projektmanager, viel E-Mail/Texte, Datenschutz-bewusst"
+ },
+ {
+  "id": "W26",
+  "gewicht": 20,
+  "persona": "26 J., Berufseinsteiger, zieht für Job nach Hamburg, sucht Wohnung, 2.300 € netto, Konkurrenz hoch"
+ },
+ {
+  "id": "W30",
+  "gewicht": 10,
+  "persona": "30 J., Paar, sucht 3-Zimmer-Wohnung in Frankfurt, Bewerbermappe fehlt"
+ },
+ {
+  "id": "H28",
+  "gewicht": 15,
+  "persona": "28 J., verlobt, Hochzeit im Sommer 2027, Planung chaotisch, 2.600 € netto"
+ },
+ {
+  "id": "H31",
+  "gewicht": 10,
+  "persona": "31 J., Trauzeugin, plant JGA, nutzt Pinterest + Instagram"
+ },
+ {
+  "id": "T23",
+  "gewicht": 15,
+  "persona": "23 J., Berufseinsteiger, erste Steuererklärung, Angst vor ELSTER, 2.100 € netto"
+ },
+ {
+  "id": "T19",
+  "gewicht": 15,
+  "persona": "19 J., Bufdi/FSJ, wüsste gern ob Steuererklärung lohnt, 500 €/Monat"
+ },
+ {
+  "id": "V20",
+  "gewicht": 15,
+  "persona": "20 J., zockt, streamt Serien, hat mal von VPN gehört, 300 €/Monat"
+ },
+ {
+  "id": "V34",
+  "gewicht": 10,
+  "persona": "34 J., reist viel, öffentliches WLAN, nutzt schon NordVPN"
+ },
+ {
+  "id": "E45",
+  "gewicht": 15,
+  "persona": "45 J., Elternteil, schaut Videos weil Kind Seminararbeit schreibt, würde fürs Kind zahlen"
+ },
+ {
+  "id": "E50",
+  "gewicht": 10,
+  "persona": "50 J., Elternteil, misstraut KI, schaut aus Neugier"
+ },
+ {
+  "id": "AT19",
+  "gewicht": 15,
+  "persona": "19 J., Studentin in Wien, VWA/Diplomarbeit vorbei, Bachelor-Seminararbeiten, 800 €/Monat"
+ },
+ {
+  "id": "CH22",
+  "gewicht": 10,
+  "persona": "22 J., Student in Zürich, hohe Kaufkraft, Bachelorarbeit, CHF"
+ },
+ {
+  "id": "N15",
+  "gewicht": 15,
+  "persona": "15 J., Schüler 9. Klasse, schaut Hamster lustig, kein Geld, keine Kaufabsicht"
+ },
+ {
+  "id": "N40",
+  "gewicht": 15,
+  "persona": "40 J., zufällig in der FYP, keinerlei Bedarf an den Themen"
+ },
+ {
+  "id": "K22",
+  "gewicht": 15,
+  "persona": "22 J., dual Studierender, Praxisbericht + Projektarbeit, 1.300 € netto"
+ },
+ {
+  "id": "F20",
+  "gewicht": 15,
+  "persona": "20 J., Führerschein läuft, Theorie 1x durchgefallen, 200 €/Monat"
+ },
+ {
+  "id": "L33",
+  "gewicht": 10,
+  "persona": "33 J., Lehrerin, sieht Seminararbeit-Videos kritisch, prüft KI-Nutzung"
+ }
+]
