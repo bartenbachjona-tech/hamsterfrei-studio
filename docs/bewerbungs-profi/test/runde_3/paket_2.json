@@ -1,0 +1,74 @@
+[
+ {
+  "id": 692,
+  "alter": 40,
+  "ziel": "Jobwechsel",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "Claude-Erfahren",
+  "eigenart": "Tippfehler, umgangssprachlich",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 224,
+  "alter": 42,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "Tippfehler, umgangssprachlich",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 530,
+  "alter": 19,
+  "ziel": "Minijob/Nebenjob",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "Link funktioniert",
+  "geraet": "nur Handy",
+  "lebenslauf": "Abbruch Ausbildung/Studium",
+  "assessment_center": false
+ },
+ {
+  "id": 626,
+  "alter": 18,
+  "ziel": "Ausbildung",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 846,
+  "alter": 43,
+  "ziel": "Praktikum/Werkstudent",
+  "stand": "Unterlagen schon abgeschickt, Gespräch/AC steht an",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "Tablet",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 698,
+  "alter": 21,
+  "ziel": "Minijob/Nebenjob",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "antwortet sehr knapp",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ }
+]

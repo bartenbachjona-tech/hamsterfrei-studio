@@ -1,0 +1,74 @@
+[
+ {
+  "id": 895,
+  "alter": 22,
+  "ziel": "Ausbildung",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "ungeduldig, will schnell Ergebnis",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 744,
+  "alter": 35,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "schweift gern ab",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 116,
+  "alter": 19,
+  "ziel": "Ausbildung",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nutzt KI regelmäßig",
+  "eigenart": "antwortet sehr knapp",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "Laptop",
+  "lebenslauf": "Lücke im Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 36,
+  "alter": 21,
+  "ziel": "Ausbildung",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "unsicher, braucht Ermutigung",
+  "link": "hat keinen Link, nur Firmenname",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ },
+ {
+  "id": 58,
+  "alter": 22,
+  "ziel": "Duales Studium",
+  "stand": "weiß noch nicht, was ich machen will",
+  "ki": "nur ChatGPT ein paar Mal",
+  "eigenart": "Tippfehler, umgangssprachlich",
+  "link": "Link funktioniert",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": true
+ },
+ {
+  "id": 124,
+  "alter": 26,
+  "ziel": "Berufseinstieg nach Studium",
+  "stand": "habe einen Favoriten/eine konkrete Stelle",
+  "ki": "noch nie KI benutzt",
+  "eigenart": "gründlich, viele Rückfragen",
+  "link": "Link blockiert (Portal-Sperre)",
+  "geraet": "Laptop",
+  "lebenslauf": "lückenloser Lebenslauf",
+  "assessment_center": false
+ }
+]
