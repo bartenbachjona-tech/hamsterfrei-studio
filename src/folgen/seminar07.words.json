@@ -1,0 +1,443 @@
+{
+ "_note": "Scribe-Zeitstempel von Take B (Generation MYMLK4SwDjO6HmmjydjV, Scribe fZzvKaa7wcG2AVyjyLOs), [tag]-Wörter entfernt, Zeiten /1.1 wegen atempo 1.1",
+ "words": [
+  {
+   "text": "Du",
+   "start": 0.073,
+   "end": 0.145,
+   "type": "word"
+  },
+  {
+   "text": "suchst",
+   "start": 0.218,
+   "end": 0.436,
+   "type": "word"
+  },
+  {
+   "text": "Seminararbeit",
+   "start": 0.509,
+   "end": 1.091,
+   "type": "word"
+  },
+  {
+   "text": "mit",
+   "start": 1.127,
+   "end": 1.164,
+   "type": "word"
+  },
+  {
+   "text": "KI?",
+   "start": 1.236,
+   "end": 1.855,
+   "type": "word"
+  },
+  {
+   "text": "Hier",
+   "start": 2.036,
+   "end": 2.182,
+   "type": "word"
+  },
+  {
+   "text": "ist",
+   "start": 2.255,
+   "end": 2.327,
+   "type": "word"
+  },
+  {
+   "text": "der",
+   "start": 2.4,
+   "end": 2.473,
+   "type": "word"
+  },
+  {
+   "text": "schnellste",
+   "start": 2.545,
+   "end": 2.909,
+   "type": "word"
+  },
+  {
+   "text": "Weg.",
+   "start": 2.982,
+   "end": 3.233,
+   "type": "word"
+  },
+  {
+   "text": "Du",
+   "start": 3.564,
+   "end": 3.636,
+   "type": "word"
+  },
+  {
+   "text": "gibst",
+   "start": 3.661,
+   "end": 3.855,
+   "type": "word"
+  },
+  {
+   "text": "Claude",
+   "start": 3.927,
+   "end": 4.218,
+   "type": "word"
+  },
+  {
+   "text": "deine",
+   "start": 4.255,
+   "end": 4.436,
+   "type": "word"
+  },
+  {
+   "text": "Word-Datei.",
+   "start": 4.509,
+   "end": 5.2,
+   "type": "word"
+  },
+  {
+   "text": "Zurück",
+   "start": 5.382,
+   "end": 5.673,
+   "type": "word"
+  },
+  {
+   "text": "kommt",
+   "start": 5.745,
+   "end": 5.891,
+   "type": "word"
+  },
+  {
+   "text": "der",
+   "start": 5.964,
+   "end": 6.036,
+   "type": "word"
+  },
+  {
+   "text": "Endcheck.",
+   "start": 6.145,
+   "end": 6.909,
+   "type": "word"
+  },
+  {
+   "text": "Fußnote",
+   "start": 6.982,
+   "end": 7.345,
+   "type": "word"
+  },
+  {
+   "text": "zwölf:",
+   "start": 7.418,
+   "end": 8.0,
+   "type": "word"
+  },
+  {
+   "text": "wörtliches",
+   "start": 8.073,
+   "end": 8.436,
+   "type": "word"
+  },
+  {
+   "text": "Zitat,",
+   "start": 8.509,
+   "end": 9.018,
+   "type": "word"
+  },
+  {
+   "text": "aber",
+   "start": 9.091,
+   "end": 9.164,
+   "type": "word"
+  },
+  {
+   "text": "mit",
+   "start": 9.236,
+   "end": 9.309,
+   "type": "word"
+  },
+  {
+   "text": "Vergleiche.",
+   "start": 9.345,
+   "end": 10.182,
+   "type": "word"
+  },
+  {
+   "text": "Müller",
+   "start": 10.218,
+   "end": 10.473,
+   "type": "word"
+  },
+  {
+   "text": "zwanzig",
+   "start": 10.545,
+   "end": 10.836,
+   "type": "word"
+  },
+  {
+   "text": "einundzwanzig",
+   "start": 10.909,
+   "end": 11.455,
+   "type": "word"
+  },
+  {
+   "text": "fehlt",
+   "start": 11.564,
+   "end": 11.782,
+   "type": "word"
+  },
+  {
+   "text": "im",
+   "start": 11.818,
+   "end": 11.855,
+   "type": "word"
+  },
+  {
+   "text": "Literaturverzeichnis.",
+   "start": 11.964,
+   "end": 13.164,
+   "type": "word"
+  },
+  {
+   "text": "W-Seminar",
+   "start": 13.236,
+   "end": 13.745,
+   "type": "word"
+  },
+  {
+   "text": "Quellen?",
+   "start": 13.818,
+   "end": 14.4,
+   "type": "word"
+  },
+  {
+   "text": "Aus",
+   "start": 14.473,
+   "end": 14.545,
+   "type": "word"
+  },
+  {
+   "text": "Screenshots",
+   "start": 14.618,
+   "end": 15.055,
+   "type": "word"
+  },
+  {
+   "text": "wird",
+   "start": 15.127,
+   "end": 15.2,
+   "type": "word"
+  },
+  {
+   "text": "ein",
+   "start": 15.273,
+   "end": 15.345,
+   "type": "word"
+  },
+  {
+   "text": "Beleg-PDF",
+   "start": 15.418,
+   "end": 16.145,
+   "type": "word"
+  },
+  {
+   "text": "mit",
+   "start": 16.218,
+   "end": 16.291,
+   "type": "word"
+  },
+  {
+   "text": "Link",
+   "start": 16.364,
+   "end": 16.582,
+   "type": "word"
+  },
+  {
+   "text": "und",
+   "start": 16.618,
+   "end": 16.655,
+   "type": "word"
+  },
+  {
+   "text": "Datum.",
+   "start": 16.727,
+   "end": 17.382,
+   "type": "word"
+  },
+  {
+   "text": "Dann",
+   "start": 17.43,
+   "end": 17.527,
+   "type": "word"
+  },
+  {
+   "text": "die",
+   "start": 17.6,
+   "end": 17.673,
+   "type": "word"
+  },
+  {
+   "text": "Probe-Prüfung:",
+   "start": 17.818,
+   "end": 18.618,
+   "type": "word"
+  },
+  {
+   "text": "Wofür",
+   "start": 18.691,
+   "end": 18.909,
+   "type": "word"
+  },
+  {
+   "text": "hast",
+   "start": 18.982,
+   "end": 19.055,
+   "type": "word"
+  },
+  {
+   "text": "du",
+   "start": 19.127,
+   "end": 19.2,
+   "type": "word"
+  },
+  {
+   "text": "KI",
+   "start": 19.273,
+   "end": 19.491,
+   "type": "word"
+  },
+  {
+   "text": "benutzt?",
+   "start": 19.564,
+   "end": 20.218,
+   "type": "word"
+  },
+  {
+   "text": "Drei",
+   "start": 20.266,
+   "end": 20.364,
+   "type": "word"
+  },
+  {
+   "text": "Schritte:",
+   "start": 20.509,
+   "end": 21.091,
+   "type": "word"
+  },
+  {
+   "text": "Skill",
+   "start": 21.236,
+   "end": 21.382,
+   "type": "word"
+  },
+  {
+   "text": "holen,",
+   "start": 21.491,
+   "end": 21.818,
+   "type": "word"
+  },
+  {
+   "text": "in",
+   "start": 21.891,
+   "end": 21.964,
+   "type": "word"
+  },
+  {
+   "text": "Claude",
+   "start": 22.036,
+   "end": 22.255,
+   "type": "word"
+  },
+  {
+   "text": "hochladen,",
+   "start": 22.291,
+   "end": 22.909,
+   "type": "word"
+  },
+  {
+   "text": "Word-Datei",
+   "start": 23.018,
+   "end": 23.418,
+   "type": "word"
+  },
+  {
+   "text": "rein.",
+   "start": 23.455,
+   "end": 23.927,
+   "type": "word"
+  },
+  {
+   "text": "Läuft",
+   "start": 23.964,
+   "end": 24.145,
+   "type": "word"
+  },
+  {
+   "text": "im",
+   "start": 24.218,
+   "end": 24.291,
+   "type": "word"
+  },
+  {
+   "text": "kostenlosen",
+   "start": 24.364,
+   "end": 24.873,
+   "type": "word"
+  },
+  {
+   "text": "Claude.",
+   "start": 24.945,
+   "end": 25.527,
+   "type": "word"
+  },
+  {
+   "text": "Seminararbeit",
+   "start": 25.6,
+   "end": 26.182,
+   "type": "word"
+  },
+  {
+   "text": "bis",
+   "start": 26.218,
+   "end": 26.255,
+   "type": "word"
+  },
+  {
+   "text": "zum",
+   "start": 26.327,
+   "end": 26.4,
+   "type": "word"
+  },
+  {
+   "text": "zehnten?",
+   "start": 26.545,
+   "end": 27.2,
+   "type": "word"
+  },
+  {
+   "text": "Keine",
+   "start": 27.273,
+   "end": 27.491,
+   "type": "word"
+  },
+  {
+   "text": "Angst.",
+   "start": 27.564,
+   "end": 28.0,
+   "type": "word"
+  },
+  {
+   "text": "Link",
+   "start": 28.073,
+   "end": 28.218,
+   "type": "word"
+  },
+  {
+   "text": "im",
+   "start": 28.255,
+   "end": 28.291,
+   "type": "word"
+  },
+  {
+   "text": "Profil.",
+   "start": 28.364,
+   "end": 28.945,
+   "type": "word"
+  }
+ ]
+}

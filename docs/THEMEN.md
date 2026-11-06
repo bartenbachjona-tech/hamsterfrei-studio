@@ -13,6 +13,7 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | S4 | **Seminar-Offensive:** Belege-Zeitraffer – Screenshots → Beleg-PDF | SEMINAR | ja (eigenes Produkt) | offen |
 | S5 | **Seminar-Offensive:** Countdown „Noch X Tage“ – ein Formalia-Tipp pro Tag | SEMINAR | ja (eigenes Produkt) | offen (täglich bis 10.11.) |
 | S5-2 | **Countdown Teil 2:** „Noch 5 Tage: Claude macht dein Literaturverzeichnis fertig“ (Composition Seminar06, ohne Produkt) | QUELLEN | **nein** | terminiert 05.11.2026 18:00 (TikTok, YT; IG offen 18:00) |
+| S7 | S7 Suchbegriff-Video, produziert 06.11., wartet auf Freigabe („Seminararbeit mit KI? So geht's.“, Composition Seminar07, scripts/seminar07.md, ohne Preis) | – | ja (eigenes Produkt) | wartet auf Freigabe |
 | 01 | Ein Produkt, ein Shop (Sonnenuntergangs-Lampe, Shopify) | SHOP | ja (Shopify) | veröffentlicht 29.10.2026 |
 | T1 | **Trend:** Warum verkauft der Hamster den Keller seiner Nachbarn? (FinanzKopf-Formel, Beispielrechnung, siehe TRENDS.md Shortlist 1) | KELLER | nur wenn Skill-Link | offen |
 | T2 | **Trend:** Eine KI hat seinen Sessel verkauft – und seine Adresse weitergegeben (Meta Muse, Shortlist 2) | SICHER | ja, wenn Skill gezeigt | offen |
