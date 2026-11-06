@@ -37,6 +37,7 @@ Wird von der Auswertungsroutine gepflegt (siehe `docs/AUSWERTUNG_AKTUELL.md`). P
 | Zeitraum | Wort-Kommentare | DMs gesendet | DMs „wartet“ | Verkäufe 757079 | Verkäufe 757063 | Notiz |
 |---|---|---|---|---|---|---|
 | bis 04.11. | – | 0 | 0 | – | – | dm_log leer |
+| bis 06.11. 01:00 | 0 | 0 | 0 | 3 Verkäufe gesamt (laut Jona, Aufteilung offen) | | S1 wächst über TikTok-Suche |
 
 ## Mediane (nach jeder Auswertung neu)
 | Datum | Plattform | Median Aufrufe (letzte 10) | Median Ø Wiedergabe | Median ganz angesehen / angesehen % |
