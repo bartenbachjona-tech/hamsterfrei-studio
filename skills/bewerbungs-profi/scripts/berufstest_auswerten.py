@@ -3,10 +3,11 @@
 
     python3 berufstest_auswerten.py 4 5 2 3 1 4 5 2 3 4 1 5
     python3 berufstest_auswerten.py "4,5,2,3,1,4,5,2,3,4,1,5"
+    python3 berufstest_auswerten.py "1a 2c 3b 4a 5e 6d 7b 8c 9a 10b 11c 12d"
     python3 berufstest_auswerten.py --fragen        (zeigt die 12 Aussagen)
 
-Jede Antwort ist 1–5 (1 = macht mir keinen Spaß … 5 = mache ich sehr gern),
-in der Reihenfolge der Fragen 1–12. Ausgabe: Punkte je Typ, Code aus den
+Antworten entweder als Zahlen 1–5 in Reihenfolge (1 = gar nicht … 5 = sehr gern) oder im
+Kompakt-Format „Nummer + Buchstabe“: a = sehr gern, b = gern, c = geht so, d = eher nicht, e = gar nicht. Ausgabe: Punkte je Typ, Code aus den
 2–3 stärksten Typen, Hinweise zu Gleichstand und flachem Profil.
 Das Ergebnis ist ein Gesprächsanstoß, keine Diagnose.
 """
@@ -15,18 +16,18 @@ import sys
 
 # Reihenfolge und Zuordnung müssen mit references/berufstest.md übereinstimmen.
 FRAGEN = [
-    ("R", "Ein Fahrrad, ein Gerät oder ein Möbelstück reparieren oder zusammenbauen"),
-    ("S", "Jemandem etwas erklären, bis er es wirklich verstanden hat"),
-    ("C", "Eine Tabelle sauber führen und Fehler darin finden"),
-    ("I", "Herausfinden, warum etwas nicht funktioniert – tüfteln, recherchieren, testen"),
-    ("A", "Etwas gestalten: zeichnen, fotografieren, Videos schneiden oder dekorieren"),
-    ("E", "Andere von einer Idee überzeugen oder etwas verkaufen"),
-    ("S", "Mich um Menschen kümmern, z. B. Kinder, Ältere, Kranke oder Kunden"),
-    ("R", "Draußen oder mit Werkzeug und Maschinen körperlich arbeiten"),
-    ("E", "Eine Gruppe anführen, Entscheidungen treffen und Verantwortung übernehmen"),
-    ("I", "Mit Zahlen, Experimenten oder am Computer knifflige Aufgaben lösen"),
-    ("C", "Dinge planen und ordnen: Termine, Lager, Unterlagen oder Abläufe"),
-    ("A", "Eigene Ideen entwickeln: schreiben, Musik machen oder Neues erfinden"),
+    ("R", "Geräte, Fahrräder oder Möbel reparieren"),
+    ("S", "Anderen etwas erklären"),
+    ("C", "Tabellen sauber führen, Fehler finden"),
+    ("I", "Tüfteln, warum etwas nicht geht"),
+    ("A", "Gestalten: zeichnen, Fotos, Videos"),
+    ("E", "Andere überzeugen, etwas verkaufen"),
+    ("S", "Mich um Menschen kümmern"),
+    ("R", "Draußen oder mit Werkzeug arbeiten"),
+    ("E", "Eine Gruppe anführen, entscheiden"),
+    ("I", "Knobeln mit Zahlen oder am Computer"),
+    ("C", "Planen und ordnen: Termine, Abläufe"),
+    ("A", "Eigene Ideen: schreiben, Musik, erfinden"),
 ]
 TYPEN = {
     "R": "Praktisch-technisch (Realistic)",
@@ -36,12 +37,14 @@ TYPEN = {
     "E": "Unternehmerisch-führend (Enterprising)",
     "C": "Ordnend-verwaltend (Conventional)",
 }
-HEXAGON = "RIASEC"  # Nachbarn im Hexagon passen besser zusammen
+HEXAGON = "RIASEC"  # Reihenfolge rund ums Hexagon
 
 
-def nachbarn(a, b):
-    i, j = HEXAGON.index(a), HEXAGON.index(b)
-    return abs(i - j) in (1, 5)
+def abstand(a, b):
+    """1 = Nachbarn (R-I, I-A, A-S, S-E, E-C, C-R), 2 = eine Ecke dazwischen,
+    3 = genau gegenüber (nur R-S, I-E, A-C)."""
+    d = abs(HEXAGON.index(a) - HEXAGON.index(b))
+    return min(d, 6 - d)
 
 
 def main():
@@ -52,7 +55,17 @@ def main():
         for i, (t, f) in enumerate(FRAGEN, 1):
             print(f"{i:2}. [{t}] {f}")
         return
-    werte = [int(x) for x in re.findall(r"\d", " ".join(a))]
+    roh = " ".join(a).lower()
+    paare = re.findall(r"(\d{1,2})\s*[:.)=-]?\s*([a-e])\b", roh)
+    if paare:
+        buchst = {"a": 5, "b": 4, "c": 3, "d": 2, "e": 1}
+        dic = {int(n): buchst[b] for n, b in paare}
+        fehlen = [i for i in range(1, len(FRAGEN) + 1) if i not in dic]
+        if fehlen:
+            sys.exit(f"FEHLER: Antwort fehlt zu Aussage {', '.join(map(str, fehlen))} – bitte nachfragen.")
+        werte = [dic[i] for i in range(1, len(FRAGEN) + 1)]
+    else:
+        werte = [int(x) for x in re.findall(r"\d", roh)]
     if len(werte) != len(FRAGEN):
         sys.exit(f"FEHLER: {len(werte)} Antworten erkannt, gebraucht werden genau {len(FRAGEN)} (je 1–5).")
     if any(w < 1 or w > 5 for w in werte):
@@ -76,9 +89,14 @@ def main():
               "Praktika und Check-U weiterkommen; Vorschläge breit streuen.")
     if punkte[rang[0]] <= 5:
         print("Hinweis: Wenig Begeisterung insgesamt – nachfragen, was im Alltag Spaß macht (Hobbys, Nebenjob).")
-    print("Passung der Top-2: " + ("Nachbarn im Hexagon – passen gut zusammen."
-                                    if nachbarn(rang[0], rang[1]) else "eher gegensätzlich – Berufe suchen, die beides verbinden, oder eins priorisieren."))
-    print("Nächster Schritt: Vorschläge aus references/berufstest.md zum Code und passend zum Abschluss.")
+    ab = abstand(rang[0], rang[1])
+    print("Passung der Top-2: " + {
+        1: "Nachbarn im Hexagon – passen gut zusammen.",
+        2: "eine Ecke auseinander – gut kombinierbar, viele Berufe verbinden beides.",
+        3: "genau gegenüber im Hexagon – seltener in einem Beruf vereint: Berufe suchen, die beides verbinden, oder eins priorisieren.",
+    }[ab])
+    print("Nächster Schritt: 3 Vorschläge aus references/berufstest.md zum Code (2-Buchstaben-Tabelle) und passend zum Abschluss; "
+          "am Ende immer Check-U, BERUFENET und Berufsberatung nennen.")
 
 
 if __name__ == "__main__":

@@ -1,38 +1,40 @@
 # Die Bewerbungsakte (Gedächtnis zwischen Chats)
 
-Ein neuer Chat weiß nichts vom alten. Im Free-Plan sind Nachrichten begrenzt (Reset etwa alle 5 Stunden). Darum führst du eine Datei **`Bewerbungsakte.md`**: Stand, Profil, Zielstelle, Status je Unterlage, nächste Schritte – plus die Daten für die Unterlagen als json-Block.
+Ein neuer Chat weiß nichts vom alten, und im Free-Plan sind Nachrichten begrenzt (Reset etwa alle 5 Stunden). Darum gibt es die **Bewerbungsakte**: eine `.txt`-Datei, die `akte.py` aus der Profil-JSON schreibt – oben lesbar (Stand, Ziel, Profil, Status, Gespräch, Bewerbungen, Entscheidungen, nächste Schritte), unten die vollständigen Daten zum Fortsetzen.
 
-## Wann anlegen, wann aktualisieren
+## Schreiben – automatisch und billig
 
-- **Anlegen**, sobald es um eine konkrete Stelle geht oder der Berufstest fertig ist:
-  `python3 "$S/ordner_anlegen.py" --nur-akte "Firma" "Stelle" --name "Vorname Nachname"` → `/mnt/user-data/outputs/Bewerbungsakte.md`.
-  (Mit lokalem Ordner legt `ordner_anlegen.py` die Akte im Bewerbungsordner an, siehe `werkzeuge.md`.)
-- **Aktualisieren** nach jedem großen Schritt (Phase fertig), wenn der Nutzer aufhört („Danke, bis morgen“) oder wenn der Chat lang wird. Die Akte schreibst du direkt neu, immer unter dem gleichen Namen `Bewerbungsakte.md` (Ausnahme von „nie überschreiben“: so ist klar, welche die aktuelle ist; „Stand“ oben trägt das Datum).
-- **Immer zum Download geben**, mit dem Satz:
-  > „📁 Speicher dir die **Bewerbungsakte.md**. Beim nächsten Chat einfach hochladen und ‚Weiter mit meiner Bewerbung‘ schreiben – dann weiß ich alles wieder.“
+```
+python3 "$S/akte.py" /tmp/bewerbung/profil.json          (Handy: --pdf dazu, dann gibt es auch eine lesbare PDF)
+```
+→ `/mnt/user-data/outputs/Bewerbungsakte_Vorname_Nachname_JJJJ-MM-TT_HHMM.txt`. Ältere Akten im Ausgabeordner wandern nach `alt/`. Vorher `meta.phase`, `meta.naechster_schritt`, `status`, `naechste_schritte` in der JSON aktualisieren – nie die Akte von Hand schreiben.
 
-## Aufbau (Pflichtteile)
+**Wann:**
+- nach **jeder Phase** (Steckbrief ok, Profil ok, Lebenslauf ok …),
+- **spätestens nach ~6 Nutzerantworten** innerhalb einer Phase (Profil-Fragen, STAR-Geschichten, Übungen),
+- wenn der Nutzer aufhört („danke, bis morgen“) oder der Chat lang wird.
 
-1. Kopf: Name, **Stand** (Datum), **Phase** (Nummer + Name), **nächster Schritt**.
-2. Ziel: Art, Stelle, Firma, Link, Kennziffer, Ansprechperson, Bewerbungsweg, Frist, Start, verlangte Unterlagen, Muss/Kann, Schlüsselwörter, erwartetes Auswahlverfahren.
-3. Profil kurz: Stand, Stärken mit Beispiel, Motivation **in den Worten des Nutzers**, Warum diese Firma, Berufstest-Code.
-4. Status der Unterlagen: Tabelle (Unterlage | Status: offen/Entwurf/fertig/abgeschickt | Datei | Offen, z. B. [PRÜFEN]-Punkte).
-5. Gespräch: Termin/Art, STAR-Geschichten (je 1 Zeile), eigene Fragen, Feedback aus Übungen.
-6. Alle Bewerbungen: Tracking-Tabelle (Firma | Stelle | abgeschickt | Status | Nachfassen am).
-7. Entscheidungen mit Datum (z. B. „06.11.: Kurzanschreiben statt voll, weil optional“).
-8. Nächste Schritte (nummeriert, max. 3).
-9. **Daten für die Unterlagen** als ```json-Block (gleiches Format wie `unterlagen_erstellen.py --beispiel`). `unterlagen_erstellen.py Bewerbungsakte.md` liest den letzten json-Block direkt.
+Ein Satz reicht: „📁 Akte aktualisiert: Bewerbungsakte_…_1840.txt – speichern, im neuen Chat einfach hochladen.“ Beim ersten Mal zusätzlich: „Sie enthält deine Daten – privat speichern, nicht teilen.“
 
-Die Vorlage erzeugt `ordner_anlegen.py`; halte dich an ihre Überschriften.
+## Fahrplan in Chats (Free-Plan)
 
-## Fortsetzung erkennen
+| Weg | Chat 1 | Chat 2 | Chat 3 |
+|---|---|---|---|
+| Stelle vorhanden | Stelle + Profil | Lebenslauf, Anschreiben, Abschicken | Gespräch/AC üben |
+| Ohne Plan | Berufstest + Stelle finden | Profil + Unterlagen | Abschicken + Gespräch |
+| Einladung da | Übersicht + Üben | (Runde 2 / AC-Übungen) | – |
 
-Lädt der Nutzer eine `Bewerbungsakte.md` hoch:
-1. Lesen, Phase und nächsten Schritt erkennen.
-2. In **2 Zeilen** sagen, wo er steht: „Du bewirbst dich als Kauffrau für Büromanagement bei der Beispiel GmbH. Lebenslauf und Anschreiben sind fertig, abgeschickt am 10.11.“
-3. Nächsten Schritt nennen und **direkt loslegen** (bzw. eine Frage stellen, falls eine Entscheidung nötig ist). Nicht alles neu fragen.
-4. Sind seit dem Stand Fristen vergangen (Frist, Nachfass-Datum), das zuerst ansprechen.
+`meta.chat_plan` speichern. An jeder Etappen-Grenze und wenn eine Phase lang wird (~20 Nachrichten im Chat): Akte speichern und **neuen Chat empfehlen**: „Starte jetzt einen neuen Chat, lade die Akte hoch und schreib ‚Weiter mit meiner Bewerbung‘. So läufst du nicht ins Nachrichtenlimit.“
+
+## Fortsetzung
+
+Lädt der Nutzer eine Akte hoch (`.txt`, PDF hilft nicht – die Daten stehen nur in der `.txt`; alte `.md` geht auch):
+1. `python3 "$S/akte.py" --lesen /mnt/user-data/uploads/<Akte>` → schreibt `/tmp/bewerbung/profil.json` und zeigt Stand/Phase/nächsten Schritt.
+2. Mehrere Akten hochgeladen? Die mit dem jüngsten Datum im Namen bzw. „Stand“ nehmen und kurz sagen, welche.
+3. In **2 Zeilen** sagen, wo er steht; nächsten Schritt nennen und **direkt loslegen** (nicht alles neu fragen).
+4. Fristen oder Nachfass-Daten vorbei? Das zuerst ansprechen.
+5. Alte Akte (v1, ohne `profil`): fehlende Profil-Felder **nachfragen**, nicht aus den alten Texten ableiten.
 
 ## Datenschutz
 
-Die Akte enthält persönliche Daten. Hinweis beim ersten Download (einmal): „Die Akte enthält deine Daten – speicher sie privat und teil sie nicht öffentlich.“ Keine Ausweis-, Steuer-, Sozialversicherungs- oder Kontonummern aufnehmen. Gibt es ein Claude-Projekt im Konto, kann der Nutzer die Akte dort als Projektdatei ablegen.
+Keine Ausweis-, Steuer-, Sozialversicherungs- oder Kontonummern aufnehmen. Gibt es ein Claude-Projekt, kann der Nutzer die Akte dort als Projektdatei ablegen.

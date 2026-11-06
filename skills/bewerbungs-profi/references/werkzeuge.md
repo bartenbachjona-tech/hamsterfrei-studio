@@ -1,63 +1,49 @@
 # Werkzeuge, Speichern und kostenloses Claude
 
-Der Skill funktioniert **mit dem kostenlosen Claude**. Voraussetzung: In den Einstellungen ist „Code-Ausführung und Dateierstellung“ (bzw. „Dateien erstellen und bearbeiten“) eingeschaltet. Prüfe still, welche Werkzeuge da sind, und sag dem Nutzer nur, was für ihn wichtig ist. Fehlt die Code-Ausführung ganz: Texte im Chat liefern und erklären, wie man die Einstellung einschaltet.
+Der Skill funktioniert mit dem **kostenlosen Claude**, wenn „Code-Ausführung und Dateierstellung“ (bzw. „Dateien erstellen und bearbeiten“) eingeschaltet ist. Prüfe still, welche Werkzeuge da sind; sag dem Nutzer nur, was für ihn wichtig ist. Fehlt die Code-Ausführung: Texte im Chat liefern und erklären, wie man die Einstellung einschaltet (Einstellungen → Funktionen).
 
-| Funktion | Kostenloses Claude | Mit Extras |
+| Funktion | Kostenlos | Mit Extras |
 |---|---|---|
-| Anzeige-Link lesen | ✅ oft; sonst Text einfügen oder PDF hochladen | – |
-| Firmen-Recherche | ✅ wenn Websuche an ist; sonst fragt der Nutzer selbst nach | – |
-| Lebenslauf, Anschreiben (.docx + .pdf) | ✅ zum Download | direkt im lokalen Ordner |
-| Gesamt-PDF, E-Mail-/Formular-Texte | ✅ zum Download | direkt im lokalen Ordner |
-| Gespräch/AC üben | ✅ Text; Sprachmodus/Diktat, falls die App ihn bietet | – |
-| Weitermachen in neuem Chat | ✅ `Bewerbungsakte.md` hochladen | Claude-Projekt mit Akte als Datei |
-| Bewerbungsordner | ✅ optional als ZIP | Ordner `Bewerbung_Firma_Stelle` auf dem Rechner |
+| Anzeige-Link lesen | oft; sonst Screenshot, Text oder PDF | – |
+| Firmen-Recherche, aktuelle Zahlen | wenn Websuche an ist | – |
+| Lebenslauf, Anschreiben (.pdf + .docx) | Download | direkt im lokalen Ordner |
+| Gesamt-PDF, E-Mail-/Formular-Texte | Download | lokaler Ordner |
+| Gespräch/AC üben | Text, Diktat/Sprachmodus | – |
+| Weitermachen | Akte (.txt) hochladen | Claude-Projekt mit Akte |
 
 ## Die Skripte (immer ausführen, nicht nachbauen)
 
 | Skript | Zweck |
 |---|---|
-| `berufstest_auswerten.py 4 5 2 …` | RIASEC-Code aus den 12 Antworten (`--fragen` zeigt die Aussagen) |
-| `textlib.py Datei [--info]` | Text aus .docx/.pdf/.html/.txt; `--info` zeigt Tabellen, Spalten, Textfelder (ATS-Risiko) |
-| `unterlagen_erstellen.py daten.json [--nur lebenslauf/anschreiben] [--ausgabe Ordner] [--kein-pdf]` | Lebenslauf + Anschreiben als .docx und .pdf; liest auch `Bewerbungsakte.md`; `--beispiel` zeigt das Datenformat |
-| `endcheck.py Dateien --firma "…" --stelle "…"` | Selbstcheck: [PRÜFEN], Platzhalter, Floskeln, Länge, Seiten, Firmenname, ATS, Dateiname, Größe |
-| `pdf_zusammenfuegen.py Ziel.pdf Dateien…` | Anschreiben + Lebenslauf + Anlagen zu einer PDF (docx/jpg werden umgewandelt) |
-| `ordner_anlegen.py Basis "Firma" "Stelle" [Dateien] [--zip]` | Bewerbungsordner + Akte; `--nur-akte` für den Free-Plan |
+| `fakten_check.py PROFIL.json [Dateien] [--anzeige x.txt]` | **Pflicht vor jeder Freigabe**: unbelegte Zahlen, Daten, Dauern, Namen, Abschlüsse, Niveaus, Führerschein, Links, Aufwertungen; Datei = freigegebener Text. Exit 1 bei ❌ |
+| `unterlagen_erstellen.py PROFIL.json [--nur lebenslauf/anschreiben/formular/email] [--nur-pdf] [--ausgabe O]` | Unterlagen aus der JSON; Versionen `_vN`, ältere → `alt/`; Anlagen-Zeile automatisch; `--beispiel` zeigt das Format |
+| `endcheck.py Dateien --typ T [--profil P] [--firma F --stelle S]` | Form/Stil: [PRÜFEN], Platzhalter, Floskeln, Länge, Seiten, Firma (unscharf), Stelle (ganz), fremde Firmen, E-Mail (nur echte Probleme), Formular-Limits. Typ: lebenslauf, anschreiben, motivationsschreiben, kurzanschreiben, formular, email, gesamt |
+| `pdf_zusammenfuegen.py Ziel.pdf --profil P` (oder Dateien…) / `--einzeln Dateien` | eine PDF bzw. saubere Einzeldateien; nimmt neueste Fassung, A4-Fotos, HEIC; Abbruch (Exit 2) bei fehlender Datei, Exit 3 bei falscher Anlagen-Zeile |
+| `akte.py PROFIL.json [--pdf]` · `--lesen AKTE` · `--spickzettel [--pdf]` | Akte schreiben/lesen, Gesprächs-Spickzettel |
+| `berufstest_auswerten.py "1a 2c …"` | RIASEC-Code (`--fragen` zeigt die Aussagen) |
+| `textlib.py Datei [--info]` | Text aus .docx/.pdf/.html/.txt; `--info`: Layout-Befunde (docx sicher, PDF einfache Spalten-Erkennung) |
+| `ordner_anlegen.py Basis "Firma" "Stelle" [Dateien] [--profil P] [--zip] [--ausgabe O]` | Bewerbungsordner mit Akte (lokaler Ordner oder ZIP) |
 
-Abhängigkeiten: Standardbibliothek; `python-docx` (wird bei Bedarf per pip nachinstalliert), für PDF LibreOffice (`soffice`), zum Zusammenfügen `pypdf` (pip-Fallback) oder `pdfunite`, für Bilder Pillow. Fehlt etwas und ist keine Installation möglich: `.docx` liefern und erklären, wie man in Word „Speichern unter → PDF“ macht; ersatzweise den eingebauten docx-Skill nutzen. Die Skripte melden Fehler auf Deutsch – lies die Meldung und erklär sie dem Nutzer in einem Satz.
+Abhängigkeiten: Standardbibliothek; `python-docx`, `pypdf`, `pillow`, `pillow-heif` werden bei Bedarf per pip nachinstalliert; PDF über LibreOffice (`soffice`). Fehlt etwas und keine Installation möglich: `.docx` liefern und „Speichern unter → PDF“ erklären bzw. den eingebauten docx-Skill nutzen. Fehlermeldungen sind deutsch – in einem Satz erklären.
 
 ## Speichern ohne Ordnerzugriff (Free-Plan, Standard)
 
-- Alles, was der Nutzer bekommen soll, kommt nach **`/mnt/user-data/outputs/`** – sonst sieht er es nicht.
-- **Klare Dateinamen** ohne Umlaute/Leerzeichen: `Lebenslauf_Vorname_Nachname.docx/.pdf`, `Anschreiben_Vorname_Nachname_Firma.docx/.pdf`, `Bewerbung_Vorname_Nachname_Stelle.pdf`, `E-Mail_Bewerbung_Firma.txt`, `Formular-Texte_Firma.txt`, `Gespraech_Vorbereitung_Firma.md`, `Bewerbungsakte.md`.
-- Neue Fassungen bekommen `_v2`, `_v3` (die Skripte machen das automatisch). Nur die Akte behält immer ihren Namen.
-- Nach jeder Datei sagen, was der Nutzer damit tut: „Lade beide herunter und speicher sie in einem Ordner ‚Bewerbung Beispiel GmbH‘ auf deinem Handy/PC.“
-- Optional am Ende: alles als ZIP mit Ordnerstruktur (`ordner_anlegen.py /tmp "Firma" "Stelle" Dateien… --zip`).
+- Alles für den Nutzer nach **`/mnt/user-data/outputs/`**; Arbeits-JSON in `/tmp/bewerbung/`.
+- Namen ohne Umlaute/Sonderzeichen (die Skripte transliterieren: ć→c, ş→s, ı→i, ë→e, ä→ae, ß→ss): `Lebenslauf_Vorname_Nachname_vN.pdf`, `Anschreiben_…_Firma_vN.pdf`, `Bewerbung_Vorname_Nachname_Stelle.pdf`, `Formular-Texte_Firma_vN.txt`, `E-Mail_Bewerbung_Firma_vN.txt`, `Gespraech_Spickzettel_Firma_vN.txt/.pdf`, `Bewerbungsakte_Vorname_Nachname_Datum_Uhrzeit.txt`.
+- **Genau eine aktuelle Fassung je Unterlage** im Ausgabeordner; ältere in `alt/`. Im Chat immer sagen, welche aktuell ist.
+- Nach jeder Datei sagen, was der Nutzer tut (Handy: `geraet.md`).
+- Optional am Ende: alles als ZIP (`ordner_anlegen.py /tmp "Firma" "Stelle" Dateien… --profil P --zip`).
 
-## Speichern mit lokalem Ordner (bezahlte Pläne, Desktop-App mit verbundenem Ordner)
+## Speichern mit lokalem Ordner (Desktop-App, bezahlte Pläne)
 
-Erkennst du einen verbundenen Ordner (Datei-Werkzeuge für den Rechner des Nutzers):
-1. Kurz fragen: „Soll ich deinen Bewerbungsordner direkt in [Ordnername] anlegen? a) Ja (Empfohlen) b) Nein, nur Downloads“.
-2. Kannst du dort Befehle ausführen: `python3 "$S/ordner_anlegen.py" "<verbundener Ordner>" "Firma" "Stelle" [Dateien] --name "Vorname Nachname"`. Kannst du dort nur Dateien schreiben: den Ordner in der Sandbox bauen (gleiches Skript) und die Dateien in den verbundenen Ordner kopieren.
-3. Struktur:
-```
-Bewerbung_Firma_Stelle/
-├── Bewerbungsakte.md          ← Stand, Profil, Status, nächste Schritte
-├── 01_Stellenanzeige/         ← Anzeige als PDF/Text, Steckbrief
-├── 02_Lebenslauf/
-├── 03_Anschreiben/
-├── 04_Zeugnisse_Anlagen/
-├── 05_Versand/                ← Gesamt-PDF, E-Mail-/Formular-Texte, Bestätigung
-└── 06_Gespraech/              ← Einladung, Vorbereitung, Übungs-Feedback
-```
-4. Erzeugte Dateien mit `--ausgabe "<Ordner>/02_Lebenslauf"` usw. direkt an die richtige Stelle schreiben.
-5. Nichts löschen, nichts überschreiben (außer der Akte). Hat der Nutzer eine Datei inzwischen selbst geändert, erst nachfragen. Ist eine Datei in Word geöffnet, kann das Speichern scheitern – dann um Schließen bitten.
+1. Kurz fragen: „Soll ich deinen Bewerbungsordner direkt in [Ordner] anlegen? a) Ja (Empfohlen) b) Nein, nur Downloads“.
+2. Befehle dort möglich: `python3 "$S/ordner_anlegen.py" "<Ordner>" "Firma" "Stelle" [Dateien] --profil /tmp/bewerbung/profil.json`. Nur Dateien schreibbar: in der Sandbox bauen und kopieren.
+3. Struktur: `Bewerbung_Firma_Stelle/` mit Akte, `01_Stellenanzeige`, `02_Lebenslauf`, `03_Anschreiben`, `04_Zeugnisse_Anlagen`, `05_Versand`, `06_Gespraech`.
+4. Erzeugte Dateien mit `--ausgabe "<Ordner>/02_Lebenslauf"` usw. direkt hineinschreiben.
+5. Nichts löschen oder überschreiben. Hat der Nutzer eine Datei selbst geändert: erst nachfragen. Datei in Word geöffnet: um Schließen bitten.
 
-## Nachrichtenlimit und lange Chats
+## Nachrichtenlimit
 
-- Pro Chat ein großer Schritt (z. B. Berufstest, Unterlagen, Gesprächstraining).
-- Lange Ergebnisse als Datei, im Chat nur Kurzfassung. Skript-Ausgaben nicht vollständig in den Chat kopieren.
-- Wird der Chat lang: Akte aktualisieren, herunterladen lassen, neuen Chat empfehlen.
-
-## Fragen-Stil (Kurzfassung)
-
-Eine Frage pro Nachricht, „Frage X von Y“, Optionen a/b/c oder Beispielantworten, Empfehlung markiert. Gibt es ein Auswahl-Werkzeug (z. B. AskUserQuestion), nutze es. Sagt der Nutzer „mach einfach“: die empfohlene Option nehmen und oben sagen, welche.
+- Fahrplan in Chats (`bewerbungsakte.md`), Akte nach jeder Phase und alle ~6 Antworten.
+- Lange Ergebnisse als Datei, im Chat nur Kurzfassung; Skript-Ausgaben nie komplett in den Chat kopieren.
+- Ziel: Profil → fertige Unterlagen in ≤ ~25 Nutzer-Nachrichten.

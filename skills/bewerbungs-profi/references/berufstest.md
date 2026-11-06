@@ -1,118 +1,119 @@
-# Phase 1: Berufstest (für alle, die noch nicht wissen, was sie machen wollen)
+# Phase 1: Berufstest
 
 ## Inhalt
-1. Einstieg und Ablauf
-2. Die 14 Fragen (12 Interessen + 2 Rahmenfragen)
-3. Auswertung
-4. Vorschläge machen – so lange, bis etwas passt
-5. Vorschlagsliste nach Typ
-6. Ergänzende Angebote (Check-U, BERUFENET, Berufsberatung)
+1. Welcher Weg?
+2. Standard: der Block mit 12 Aussagen
+3. Kurzweg (Minijob, Praktikum, Nebenjob)
+4. Auswertung und 3 Vorschläge
+5. Vorschlagslisten (Einzeltypen, alle 2-Buchstaben-Codes, besondere Gruppen)
+6. Immer am Ende: Check-U, BERUFENET, Berufsberatung
 
 ---
 
-## 1. Einstieg und Ablauf
+## 1. Welcher Weg?
 
-Modell: RIASEC (Holland-Code). Sechs Interessentypen: **R** praktisch-technisch, **I** forschend, **A** kreativ, **S** sozial, **E** unternehmerisch, **C** ordnend-verwaltend. Ergebnis ist ein Code aus den 2–3 stärksten Typen, z. B. „SEC“. Nachbarn im Hexagon (R-I, I-A, A-S, S-E, E-C, C-R) passen besser zusammen als Gegenüberliegende.
+- **Ausbildung, Studium, Berufseinstieg, Quereinstieg „was soll ich werden?“** → Block mit 12 Aussagen (Abschnitt 2).
+- **Minijob, Nebenjob, Praktikum, Ferienjob** → Kurzweg (Abschnitt 3).
+- Unklar → eine Frage: „Suchst du a) einen Beruf/eine Ausbildung/ein Studium oder b) einen Neben-/Minijob oder ein Praktikum?“
 
-Sag vorher in 2 Sätzen:
-> „Ich stelle dir 14 kurze Fragen, eine nach der anderen. Du antwortest jeweils nur mit einer Zahl von 1 bis 5 – dauert etwa 5 Minuten.“
-> „Das ist ein Gesprächsanstoß, kein Urteil. Am Ende bekommst du konkrete Berufsvorschläge.“
+## 2. Standard: der Block mit 12 Aussagen
 
-Biete einmal an: „Wenn du schneller sein willst, kann ich dir alle 12 Aussagen auf einmal schicken.“ (spart Nachrichten im Free-Plan)
+**Ausnahme vom Eine-Frage-Prinzip:** Die 12 Aussagen kommen **in einer Nachricht**, beantwortbar in einer Zeile. Mit Auswahl-Werkzeug: alle 12 als Auswahl in einem Aufruf. Kein Hinweis-Block bei den Aussagen außer der 👉-Zeile.
 
-## 2. Die 14 Fragen
+```
+**Kurzer Berufstest** – ein Gesprächsanstoß, kein Urteil.
+Wie gern machst du das? a = sehr gern · b = gern · c = geht so · d = eher nicht · e = gar nicht
 
-Skala bei jeder Interessen-Frage gleich, immer mit anzeigen:
-`1 = macht mir keinen Spaß · 2 = eher nicht · 3 = geht so · 4 = gern · 5 = sehr gern`
+1 Geräte, Fahrräder oder Möbel reparieren
+2 Anderen etwas erklären
+3 Tabellen sauber führen, Fehler finden
+4 Tüfteln, warum etwas nicht geht
+5 Gestalten: zeichnen, Fotos, Videos
+6 Andere überzeugen, etwas verkaufen
+7 Mich um Menschen kümmern
+8 Draußen oder mit Werkzeug arbeiten
+9 Eine Gruppe anführen, entscheiden
+10 Knobeln mit Zahlen oder am Computer
+11 Planen und ordnen: Termine, Abläufe
+12 Eigene Ideen: schreiben, Musik, erfinden
 
-Reihenfolge **genau so** (das Skript `berufstest_auswerten.py` rechnet in dieser Reihenfolge):
+👉 Du jetzt: Antworte in einer Zeile, z. B. „1a 2c 3b 4a …“
+```
+Reihenfolge genau so (das Skript rechnet so). Typ-Buchstaben nicht zeigen. Fehlen Antworten, nur nach den fehlenden fragen.
 
-| Nr | Aussage: „Wie gern würdest du …“ | Typ |
+Danach **eine** Rahmenfrage (falls nicht bekannt): „Welcher Schulabschluss (oder läuft gerade)? a) Mittel-/Hauptschule b) Mittlere Reife c) Fachabi d) Abi e) Ausbildung/Studium schon fertig f) anderer/Ausland“. Ob Ausbildung, dual oder Studium gewünscht ist, fragst du erst, wenn es für die Vorschläge nötig ist (dann eine Frage: „a) Ausbildung (Geld ab Monat 1) b) duales Studium c) Studium d) direkt arbeiten e) egal“).
+
+## 3. Kurzweg (3–5 Fragen, je eine Nachricht)
+
+1. „Was machst du lieber? a) mit Menschen (Kunden, Kinder) b) mit Händen/Technik c) mit Zahlen/Ordnung d) Kreatives e) draußen/Bewegung“ (Mehrfachwahl ok)
+2. „Wann kannst du? a) Wochenende b) abends c) vormittags d) Ferien e) flexibel“
+3. „Wie weit darf es weg sein / wie kommst du hin?“
+4. „Hast du schon Erfahrung (Job, Verein, Familie)?“ (optional)
+5. Praktikum: „Pflichtpraktikum für Schule/Studium oder freiwillig? Wie lange?“ (nur bei Praktikum)
+
+Dann 3 Vorschläge aus der Tabelle „Minijob/Nebenjob“ unten mit je einem Satz Begründung.
+
+## 4. Auswertung und 3 Vorschläge
+
+`python3 "$S/berufstest_auswerten.py" "1a 2c 3b …"` (oder Zahlen 1–5). Ergebnis in `berufstest` der JSON.
+
+Zeig in **einer** Nachricht (max. ~12 Zeilen):
+- Die 2–3 stärksten Typen in Alltagssprache (1 Satz) und Skript-Hinweise (Gleichstand, flaches Profil) einfach erklärt. „Gegenüber im Hexagon“ gibt es nur bei R–S, I–E, A–C – das ist kein Problem, nur seltener in einem Beruf vereint.
+- **3 Vorschläge**, passend zu Code, Abschluss und Weg, je **ein Satz** Begründung mit Bezug auf seine Antworten:
+```
+1. **Kaufmann/-frau für Büromanagement** (Ausbildung) – du ordnest gern (11a) und erklärst gern (2b).
+2. …
+3. …
+Nachschlagen: BERUFENET → Berufsname
+```
+- Frage: „a) Einer passt → Nr. … b) Weitere Vorschläge c) Mehr zu Nr. …“
+
+Regeln: Weg beachten – wer „Geld ab Monat 1“ will, bekommt keine schulischen Ausbildungen mit Schulgeld (z. B. Ergotherapie, Physiotherapie oft schulisch) ohne Hinweis. Studium nur mit (Fach-)Abi oder Zugangsweg. Dauer nur nennen, wenn sicher. b) → neue Runde (gleicher Code, dann Typ 2+3 getauscht, dann Nachbartypen; vorher ein Wort fragen, was nicht passte). c) → 4–6 Zeilen Alltag, Ort, Können, Zugang. Nach 3 Runden ohne Treffer: Abschnitt 6 empfehlen und weitermachen, wenn er will. a) → JSON (`berufstest.beruf_gewaehlt`), dann Phase 2 („Such in der Jobbörse der Arbeitsagentur oder auf Karriereseiten nach dem Beruf und schick mir den Link oder Screenshot“).
+
+## 5. Vorschlagslisten (Startpunkt – nur echte Berufsbezeichnungen, in BERUFENET prüfbar)
+
+**Einzeltypen**
+
+| Typ | Ausbildung | Studium / dual |
 |---|---|---|
-| 1 | ein Fahrrad, ein Gerät oder ein Möbelstück reparieren oder zusammenbauen | R |
-| 2 | jemandem etwas erklären, bis er es wirklich verstanden hat | S |
-| 3 | eine Tabelle sauber führen und Fehler darin finden | C |
-| 4 | herausfinden, warum etwas nicht funktioniert – tüfteln, recherchieren, testen | I |
-| 5 | etwas gestalten: zeichnen, fotografieren, Videos schneiden oder dekorieren | A |
-| 6 | andere von einer Idee überzeugen oder etwas verkaufen | E |
-| 7 | dich um Menschen kümmern, z. B. Kinder, Ältere, Kranke oder Kunden | S |
-| 8 | draußen oder mit Werkzeug und Maschinen körperlich arbeiten | R |
-| 9 | eine Gruppe anführen, Entscheidungen treffen und Verantwortung übernehmen | E |
-| 10 | mit Zahlen, Experimenten oder am Computer knifflige Aufgaben lösen | I |
-| 11 | Dinge planen und ordnen: Termine, Lager, Unterlagen oder Abläufe | C |
-| 12 | eigene Ideen entwickeln: schreiben, Musik machen oder Neues erfinden | A |
+| R | Kfz-Mechatroniker/in, Elektroniker/in Energie- und Gebäudetechnik, Anlagenmechaniker/in SHK, Tischler/in, Industriemechaniker/in, Gärtner/in | Maschinenbau, Bauingenieurwesen, Elektrotechnik |
+| I | Fachinformatiker/in, Chemielaborant/in, Biologielaborant/in, Elektroniker/in für Geräte und Systeme | Informatik, Physik, Chemie, Biologie, Mathematik |
+| A | Mediengestalter/in Digital und Print, Gestalter/in für visuelles Marketing, Fotograf/in, Friseur/in | Kommunikationsdesign, Architektur, Medien |
+| S | Pflegefachfrau/-mann, Medizinische/r Fachangestellte/r, Erzieher/in, Notfallsanitäter/in, Heilerziehungspfleger/in | Soziale Arbeit, Lehramt, Psychologie, Pflege |
+| E | Kaufmann/-frau im Einzelhandel, Bankkaufmann/-frau, Immobilienkaufmann/-frau, Veranstaltungskaufmann/-frau | BWL, Wirtschaftsrecht, Tourismusmanagement |
+| C | Kaufmann/-frau für Büromanagement, Steuerfachangestellte/r, Verwaltungsfachangestellte/r, Industriekaufmann/-frau, Fachkraft für Lagerlogistik | Öffentliche Verwaltung (dual), Steuerwesen, Accounting |
 
-Den Typ-Buchstaben **nicht** anzeigen (beeinflusst die Antwort).
+**Alle 15 Zwei-Buchstaben-Kombinationen** (Reihenfolge egal; Abstand im Hexagon: 1 = Nachbarn, 2 = eine Ecke dazwischen, 3 = gegenüber)
 
-**Frage 13 von 14 – Abschluss:** „Welchen Schulabschluss hast du (oder machst du gerade)?“
-a) Mittelschule/Hauptschule b) Mittlere Reife/Realschule c) Fachabitur d) Abitur e) schon eine Ausbildung oder ein Studium abgeschlossen f) anderer / aus dem Ausland
-
-**Frage 14 von 14 – Weg:** „Was passt gerade am besten zu dir?“
-a) Ausbildung (Geld ab dem ersten Monat) b) duales Studium (Betrieb + Hochschule, Geld ab Tag 1) c) Studium d) direkt arbeiten / Job wechseln e) weiß ich nicht
-
-Optional danach (nur wenn hilfreich, je eine Nachricht): Lieblings- und Hassfächer; Region bzw. Umzug ja/nein.
-
-## 3. Auswertung
-
-Führe aus:
-```
-python3 "$S/berufstest_auswerten.py" 4 5 2 3 1 4 5 2 3 4 1 5
-```
-Zeig dem Nutzer: seine 2–3 stärksten Typen in Alltagssprache (nicht nur Buchstaben), einen Satz, was das bedeutet, und Hinweise des Skripts (Gleichstand, flaches Profil) in einfachen Worten. Interessen allein reichen nicht – Fähigkeiten, Noten und Rahmen (Ort, Abschluss, Geld) gehören dazu.
-
-## 4. Vorschläge machen – so lange, bis etwas passt
-
-Pro Runde **3 Vorschläge**, passend zu Code **und** Abschluss und Weg (Studium nur mit (Fach-)Abitur bzw. Zugang prüfen; wer schon einen Abschluss hat: Weiterbildung, Quereinstieg, Umschulung nennen). Je Vorschlag genau dieses Format:
-
-```
-1. **Kaufmann/-frau für Büromanagement** (Ausbildung, 3 Jahre)
-   Warum: Du ordnest gern (Frage 11: 5) und erklärst gern (Frage 2: 4) – hier planst du Abläufe und hast viel Kontakt.
-   Nachschlagen: BERUFENET → „Kaufmann/-frau für Büromanagement“
-```
-Dauer nur nennen, wenn du sie sicher weißt, sonst weglassen.
-
-Danach fragen (eine Frage):
-> „Klingt einer davon spannend? a) Ja, Nr. … → dann schauen wir nach Stellen b) Mehr dazu erzählen (Nr. …) c) Nicht das Richtige – zeig mir andere“
-
-- **c)** → nächste Runde mit anderen Vorschlägen: erst weitere zum gleichen Code, dann Typ 2+3 in anderer Reihenfolge, dann Nachbartypen. Vorher kurz fragen, was nicht gepasst hat (ein Wort reicht) und das berücksichtigen.
-- **b)** → in 4–6 Zeilen: typischer Alltag, wo man arbeitet, was man können sollte, Zugang; dann wieder die Frage.
-- Nach 3 Runden ohne Treffer: freundlich die Ergänzungen aus Abschnitt 6 empfehlen **und** weitermachen, wenn der Nutzer möchte. Nie aufgeben, nie drängen.
-- **a)** → kurz festhalten (Akte: Berufstest-Code, gewählter Beruf), dann Phase 2: „Hast du schon eine konkrete Stelle? Wenn nicht: Such auf der Jobbörse der Arbeitsagentur oder auf der Karriereseite einer Firma in deiner Nähe nach dem Beruf und schick mir den Link.“
-
-Mit Websuche: Gib auf Wunsch 2–3 echte Suchwege (Jobbörse der BA, Karriereseiten) – keine erfundenen Stellen, keine erfundenen Gehälter.
-
-## 5. Vorschlagsliste nach Typ (Startpunkt, in BERUFENET prüfen)
-
-| Typ | Ausbildung (Beispiele) | Studium / dual (Beispiele) |
+| Code | Abst. | Ideen |
 |---|---|---|
-| R | Kfz-Mechatroniker/in, Elektroniker/in für Energie- und Gebäudetechnik, Anlagenmechaniker/in SHK, Tischler/in, Industriemechaniker/in, Gärtner/in | Maschinenbau, Bauingenieurwesen, Elektrotechnik, Agrarwissenschaften |
-| I | Fachinformatiker/in, Chemielaborant/in, Biologielaborant/in, Elektroniker/in für Geräte und Systeme | Informatik, Physik, Chemie, Biologie, Mathematik, Medizin |
-| A | Mediengestalter/in Digital und Print, Gestalter/in für visuelles Marketing, Fotograf/in, Friseur/in, Goldschmied/in | Kommunikationsdesign, Architektur, Medien, Germanistik |
-| S | Pflegefachfrau/-mann, Medizinische/r Fachangestellte/r, Erzieher/in, Notfallsanitäter/in, Heilerziehungspfleger/in | Soziale Arbeit, Lehramt, Psychologie, Pflege, Physiotherapie |
-| E | Kaufmann/-frau im Einzelhandel, Bankkaufmann/-frau, Immobilienkaufmann/-frau, Kaufmann/-frau für Versicherungen und Finanzanlagen, Veranstaltungskaufmann/-frau | BWL, Wirtschaftsrecht, Tourismusmanagement, Jura |
-| C | Kaufmann/-frau für Büromanagement, Steuerfachangestellte/r, Verwaltungsfachangestellte/r, Industriekaufmann/-frau, Fachkraft für Lagerlogistik | Öffentliche Verwaltung (dual), Steuerwesen, Wirtschaftsinformatik, Accounting |
+| RI | 1 | Mechatroniker/in, Fachinformatiker/in Systemintegration, Elektrotechnik |
+| RA | 2 | Tischler/in, Raumausstatter/in, Goldschmied/in, Bühnenmaler/in, Innenarchitektur |
+| RS | 3 | Notfallsanitäter/in, Physiotherapeut/in, Orthopädietechnik-Mechaniker/in |
+| RE | 2 | Kfz-Mechatroniker/in mit Kundendienst, Meister/in im Handwerk (später), Baustellenleitung (Bauingenieurwesen) |
+| RC | 1 | Fachkraft für Lagerlogistik, Vermessungstechniker/in, Logistik (dual) |
+| IA | 1 | Architektur, Mediengestalter/in, Medieninformatik |
+| IS | 2 | Medizinisch-technische/r Laboratoriumsassistent/in (MTL), Pharmazeutisch-technische/r Assistent/in, Lehramt MINT, Psychologie |
+| IE | 3 | Wirtschaftsinformatik, Wirtschaftsingenieurwesen, IT-Systemkaufmann/-frau (Kaufmann/-frau für IT-System-Management) |
+| IC | 2 | Fachinformatiker/in Daten- und Prozessanalyse, Steuerwesen, Statistik, Wirtschaftsinformatik |
+| AS | 1 | Erzieher/in, Ergotherapeut/in, Soziale Arbeit, Heilerziehungspfleger/in |
+| AE | 2 | Veranstaltungskaufmann/-frau, Kaufmann/-frau für Marketingkommunikation, Gestalter/in für visuelles Marketing |
+| AC | 3 | Mediengestalter/in Digital und Print (Druckvorstufe), Technische/r Produktdesigner/in, Bauzeichner/in |
+| SE | 1 | Polizeivollzugsdienst, Personaldienstleistungskaufmann/-frau, Lehramt, Sport- und Fitnesskaufmann/-frau |
+| SC | 2 | Medizinische/r Fachangestellte/r, Sozialversicherungsfachangestellte/r, Zahnmedizinische/r Fachangestellte/r |
+| EC | 1 | Industriekaufmann/-frau, Bankkaufmann/-frau, BWL (dual), Kaufmann/-frau im Groß- und Außenhandelsmanagement |
 
-Kombinationen, die zwei Typen verbinden:
+**Besondere Gruppen**
 
-| Code | Ideen |
+| Gruppe | Vorschläge (nach Code wählen) |
 |---|---|
-| RI / IR | Mechatroniker/in, Fachinformatiker/in Systemintegration, Elektrotechnik |
-| RC / CR | Fachkraft für Lagerlogistik, Vermessungstechniker/in, Logistik (dual) |
-| IC / CI | Fachinformatiker/in, Wirtschaftsinformatik, Steuerwesen |
-| IA / AI | Architektur, Mediengestalter/in, Medieninformatik |
-| AS / SA | Erzieher/in, Ergotherapeut/in, Soziale Arbeit mit Medienschwerpunkt |
-| SE / ES | Polizeivollzugsdienst, Personaldienstleistungskaufmann/-frau, Lehramt |
-| SC / CS | Medizinische/r Fachangestellte/r, Sozialversicherungsfachangestellte/r |
-| EC / CE | Industriekaufmann/-frau, Bankkaufmann/-frau, BWL (dual) |
-| AE / EA | Veranstaltungskaufmann/-frau, Kaufmann/-frau für Marketingkommunikation |
-| RS / SR | Notfallsanitäter/in, Physiotherapeut/in, Gärtner/in im Therapiebereich |
+| **Absolventen** (Studium fertig) | Trainee-Programme, Direkteinstieg im Fach, Junior-Stellen; Code nutzt man für die Branche/Funktion: I → Analyse/IT/Forschung, E → Vertrieb/Projektmanagement, S → Personal/Bildung/Beratung, C → Controlling/Verwaltung/Einkauf, A → Marketing/Kommunikation/UX, R → Technik/Produktion/Bau |
+| **Quereinsteiger** (anderer Beruf, Berufserfahrung) | Umschulung oder verkürzte Ausbildung (IHK/HWK beraten), Weiterbildung, Quereinstieg mit Einarbeitung: S → Pflegehilfe/Erzieher/in in Teilzeitausbildung, C → Verwaltung/Büro, I/R → IT-Support, Fachinformatiker/in (Umschulung), E → Vertrieb/Kundenberatung. Förderung: BA-Berufsberatung im Erwerbsleben, Bildungsgutschein prüfen lassen |
+| **Werkstudenten** | Werkstudentenjob im Studienfach; nach Code: I → IT/Data/Labor, E → Vertrieb/Marketing, C → Controlling/HR-Administration, S → Recruiting/Studienberatung/Nachhilfe, A → Social Media/Design, R → Technik/Produktion. Regeln: `sonderfaelle.md` |
+| **Minijob/Nebenjob** (Kurzweg) | Menschen → Service/Gastro, Kasse/Verkauf, Kinderbetreuung, Nachhilfe · Hände/Technik → Lager, Fahrradwerkstatt, Aushilfe Handwerk · Zahlen/Ordnung → Büroaushilfe, Inventur, Bibliothek · Kreativ → Fotoassistenz, Deko/Visual Merchandising, Social Media für kleine Läden · Draußen → Gartenpflege, Zustellung, Event-Aufbau |
 
-Diese Liste ist ein Startpunkt. Ergänze aus deinem Wissen, aber nur echte Berufsbezeichnungen, die man in BERUFENET findet.
+## 6. Immer am Ende (Pflichtzeile in der Vorschlags-Nachricht oder direkt danach)
 
-## 6. Ergänzende Angebote (immer am Ende nennen)
+> „Zum Vertiefen (kostenlos): **Check-U** der Arbeitsagentur (testet auch Fähigkeiten, ca. 1,5–2 Std.), **BERUFENET** für alle Berufe, und die **Berufsberatung** der Arbeitsagentur – auch für Erwachsene, vor Ort, per Telefon oder Video.“
 
-- **Check-U** (Bundesagentur für Arbeit, kostenlos): vier Module, zusammen ca. 105 Minuten (Fähigkeiten ~65, Soziale Kompetenzen ~15, Interessen ~15, Berufliche Vorlieben ~10). Die Top-Vorschläge erscheinen erst nach „Fähigkeiten“ und „Soziale Kompetenzen“. Ergebnis als PDF für die Beratung, Konto zum Speichern nötig.
-- **BERUFENET**: alle Berufsbilder mit Tätigkeiten, Zugang, Verdienst. Für Schüler: **planet-beruf.de**; Abiturienten: **abi.de**, **studienwahl.de**; Studium-Interessentest (SIT) im Hochschulkompass.
-- **Berufsberatung der BA**: kostenlos, auch für Erwachsene („Berufsberatung im Erwerbsleben“), vor Ort, per Telefon oder Video. Check-U-PDF mitbringen.
-- **Praktikum oder Probetag**: der beste Test, ob ein Beruf passt.
-- **AT:** AMS (Berufsinformation, BerufsInfoZentren). **CH:** berufsberatung.ch und die kantonalen BIZ.
+Mehr: planet-beruf.de (Schüler), abi.de, studienwahl.de, Studium-Interessentest (SIT) im Hochschulkompass; Praktikum oder Probetag als bester Test. **AT:** AMS, BerufsInfoZentren. **CH:** berufsberatung.ch, kantonale BIZ.

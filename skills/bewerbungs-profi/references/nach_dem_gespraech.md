@@ -1,12 +1,11 @@
-# Phase 9: Nach dem Gespräch – Nachfassen, Zusage, Absage
+# Phase 9: Nach dem Gespräch – Nachfassen, Zusage, Absage, Gehalt
 
 ## 1. Nachfassen
 
-- **Dankes-Mail** 1–2 Tage nach dem Gespräch: kurz, greift einen konkreten Punkt aus dem Gespräch auf (optional, aber positiv). Den Punkt liefert der Nutzer („Worüber habt ihr gesprochen, das dir gefallen hat?“).
-- **Nachfragen**, wenn die genannte Frist vorbei ist oder nach **1–2 Wochen** ohne Frist keine Nachricht kam: freundlich per Mail oder Telefon. Nach einer Bewerbung ohne Gespräch nach etwa **2–3 Wochen**.
-- Mail-Entwürfe als Text im Chat (zum Kopieren), 3–5 Sätze, Betreff mit Stelle und Gesprächsdatum.
+- **Dankes-Mail** 1–2 Tage nach dem Gespräch: kurz, greift einen konkreten Punkt auf – den Punkt liefert der Nutzer („Worüber habt ihr gesprochen, das dir gefallen hat?“).
+- **Nachfragen**, wenn die genannte Frist vorbei ist oder nach **1–2 Wochen** ohne Frist; nach Bewerbung ohne Gespräch nach etwa **2–3 Wochen**.
+- Entwürfe im Chat zum Kopieren, 3–5 Sätze, Betreff mit Stelle und Gesprächsdatum.
 
-Beispiel Nachfrage:
 ```
 Betreff: Nachfrage zu meiner Bewerbung als [Stelle] – Gespräch am [Datum]
 
@@ -17,30 +16,32 @@ Mit freundlichen Grüßen
 [Name]
 ```
 
-**Ghosting normalisieren:** Laut karriere.at (AT, 11/2025, 1.077 Jobsuchende) haben 84 % schon keine Rückmeldung bekommen, 77 % sogar mehrfach; 13 % bekommen dadurch Selbstzweifel. Sag dem Nutzer: „Das liegt meistens nicht an dir.“ Darum **parallel weiterbewerben** und die Tracking-Tabelle in der Akte pflegen.
+**Ghosting normalisieren:** Laut karriere.at (AT, 11/2025, 1.077 Jobsuchende) haben 84 % schon keine Rückmeldung bekommen. „Das liegt meistens nicht an dir.“ Parallel weiterbewerben, `bewerbungen` in der JSON pflegen.
 
 ## 2. Zusage
 
-- **Schriftliche Bestätigung abwarten**, bevor man anderen Firmen absagt.
-- Vertrag in Ruhe lesen: Vergütung, Probezeit, Arbeitszeit, Urlaub, Beginn. Bei Unklarheiten nachfragen; bei rechtlichen Fragen an Beratung verweisen (z. B. Gewerkschaft, bei Ausbildung IHK/HWK) – **keine Rechtsberatung**.
-- Bei Ausbildung lässt der Betrieb den Vertrag bei IHK/HWK eintragen.
-- Anderen Arbeitgebern **fair und zügig absagen** (auch Ausbildungsplätze) – so werden Plätze frei, und man verbrennt keine Kontakte. Kurze Absage-Mail anbieten.
+- Schriftliche Bestätigung abwarten, bevor man anderen absagt.
+- Vertrag in Ruhe lesen (Vergütung, Probezeit, Arbeitszeit, Urlaub, Beginn). Rechtliches nur allgemein einordnen; Fragen zu Fristen, Klauseln, Elternzeit, Kündigung → Gewerkschaft, IHK/HWK (bei Ausbildung), Arbeitnehmerkammer, Anwalt. **Keine Rechtsberatung, keine Fristen für den Einzelfall ausrechnen.**
+- Ausbildung: Der Betrieb lässt den Vertrag bei IHK/HWK eintragen.
+- Anderen fair und zügig absagen – kurze Absage-Mail anbieten.
 
-**Geld kurz:**
-- **Mindestausbildungsvergütung (BBiG):** Ausbildungsbeginn 2026: 724 €/Monat im 1. Jahr, 2.–4. Jahr ≈ 854 / 977 / 1.014 €. Ausbildungsbeginn 2027: 764 / 902 / 1.031 / 1.070 €. Tarifverträge gehen vor, auch wenn sie darunter liegen; viele liegen deutlich darüber.
-- Einstiegsgehalt einschätzen: **BA-Entgeltatlas** (Median nach Beruf, Region, Alter, Geschlecht), BERUFENET, Tarifverträge (z. B. TVöD, IG Metall), Gehaltsangaben in Anzeigen.
-- Verhandeln: **Spanne** im Bruttojahresgehalt, mit Marktdaten und Qualifikation begründen, unteren Wert realistisch ansetzen; Benefits mitdenken (Fahrtkosten, Weiterbildung, Homeoffice). Bei Ausbildung wird selten verhandelt.
-- **AT:** Lehrlingsentschädigung laut Kollektivvertrag; Gehaltsangabe in Anzeigen ist Pflicht. **CH:** kein gesetzlicher Lehrlingslohn auf Bundesebene, Branchenempfehlungen.
+## 3. Gehalt und Geld
 
-## 3. Absage
+- **Mindestausbildungsvergütung (BBiG):** Beginn 2026: 724 €/Monat im 1. Jahr (2.–4. Jahr ≈ 854 / 977 / 1.014 €). Beginn 2027: 764 / 902 / 1.031 / 1.070 € (BIBB, PM 07.10.2026). Tarifverträge gehen vor.
+- Mindestlohn, Minijob-Grenze, Praktikum, Werkstudent: `sonderfaelle.md` Abschnitt 1.
+- **Einstiegsgehalt einschätzen:** Den BA-Entgeltatlas kannst du **nicht** selbst abrufen (interaktive Seite). Darum:
+  1. Gehaltsangabe in der Anzeige (Pflicht in AT, in DE durch die EU-Entgelttransparenz künftig häufiger).
+  2. Mit Websuche: Tarifvertrag der Branche (z. B. TVöD, IG Metall, Handel) oder seriöse Gehaltsangaben suchen und **mit Quelle und Stand** nennen; Jobportal-Zahlen als grobe Orientierung kennzeichnen.
+  3. Ohne Websuche oder zum Selbstprüfen – Anleitung für den Nutzer: „Such im Browser ‚Entgeltatlas Arbeitsagentur‘ → Beruf eingeben → Region und Alter wählen → du siehst den Median (mittleres Gehalt).“
+  Nie eine Zahl ohne Quelle nennen.
+- **Verhandeln:** Spanne im Bruttojahresgehalt, mit Quelle und Qualifikation begründen, unteren Wert realistisch; Benefits mitdenken. Bei Ausbildung wird selten verhandelt.
+- **AT:** Lehrlingsentschädigung laut Kollektivvertrag; Gehalt in Anzeigen Pflicht. **CH:** kein gesetzlicher Lehrlingslohn auf Bundesebene, Branchenempfehlungen.
 
-- Nicht persönlich nehmen: Oft entscheiden Kontingente, interne Kandidaten oder Kleinigkeiten.
-- Optional höflich um kurzes Feedback bitten (Anspruch darauf gibt es nicht) – Mail-Entwurf anbieten.
-- **Mini-Auswertung** anbieten (eine Frage): „Wo kam die Absage? a) nach den Unterlagen b) nach dem Test c) nach dem Gespräch d) keine Antwort“. Dann:
-  - a) Unterlagen gemeinsam prüfen (Passung zur Anzeige, Muss-Kriterien, Endcheck).
-  - b) Testtraining (`assessment_center.md`, Abschnitt 9).
-  - c) Gespräch erneut üben, Fokus auf schwache Antworten.
-  - d) Nachfassen, parallel weiter.
-- Häufen sich Absagen: Unterlagen prüfen lassen (BA-Berufsberatung, Jobcenter, Career Service der Hochschule) und die Zielauswahl überdenken. Ehrlich: Berufseinsteiger suchen derzeit oft 9–15 Monate; viele Firmen bekommen deutlich mehr Bewerbungen als früher (Indeed 10/2026: 56 % der HR-Leute). Dranbleiben lohnt sich.
+## 4. Absage
 
-Zum Schluss: Akte aktualisieren (Status, Datum, nächste Bewerbung) und anbieten, die nächste Bewerbung zu starten („Gleiches Profil, neue Stelle – schick mir den Link.“).
+- Nicht persönlich nehmen: Oft entscheiden Kontingente, interne Kandidaten, Kleinigkeiten.
+- Optional höflich um Feedback bitten (kein Anspruch) – Entwurf anbieten.
+- **Mini-Auswertung** (eine Frage): „Wo kam die Absage? a) nach den Unterlagen b) nach dem Test c) nach dem Gespräch d) keine Antwort“ → a) Unterlagen gegen die Anzeige prüfen · b) Testtraining (`assessment_center.md`) · c) Gespräch üben, Fokus auf schwache Antworten · d) nachfassen, parallel weiter.
+- Häufen sich Absagen: Unterlagen prüfen lassen (BA-Berufsberatung, Jobcenter, Career Service), Zielauswahl überdenken. Ehrlich: Berufseinsteiger suchen derzeit oft 9–15 Monate (t3n, 09/2026).
+
+Zum Schluss: JSON (`bewerbungen`, `status`, `naechste_schritte`) aktualisieren, `akte.py`, und anbieten: „Gleiches Profil, neue Stelle – schick mir den Link.“ Für die neue Stelle bleibt `profil` gleich; `ziel`, `anschreiben`, `formular`, `email`, `firmenfakten` werden neu befüllt.

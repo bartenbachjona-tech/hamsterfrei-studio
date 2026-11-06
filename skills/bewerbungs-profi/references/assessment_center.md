@@ -1,90 +1,66 @@
 # Phase 7 + 8 (AC): Assessment Center und Einstellungstests
 
 ## Inhalt
-1. Was ist ein AC, wo ist es üblich
-2. Vorbereitung erklären
-3. Die Übungen einzeln üben (Menü)
-4. Übung: Selbstpräsentation
-5. Übung: Postkorb
-6. Übung: Fallstudie
-7. Übung: Rollenspiel
-8. Übung: Gruppendiskussion (Simulation)
-9. Online-Test / Einstellungstest
-10. Polizei und öffentlicher Dienst
-11. Feedback-Format
+1. Einladung bestätigen
+2. Kompakte Übersicht (eine Nachricht), dann Menü
+3. Übungen
+4. Online-Test / Einstellungstest
+5. Polizei und öffentlicher Dienst
+6. Feedback-Format
 
 ---
 
-## 1. Was ist ein AC, wo ist es üblich
+## 1. Einladung bestätigen
 
-Üblich bei dualem Studium, Trainee-Programmen, großen Ausbildungsbetrieben (Banken, Versicherungen, Industrie, Handel), öffentlichem Dienst, **Polizei, Zoll und Bundeswehr** (mehrstufig). Dauer: halber Tag bis 3 Tage. Davor oft ein **Online-Test** (Logik, Mathe, Sprache, Konzentration, Allgemeinwissen, teils Persönlichkeitsfragebogen).
+Einladung hochladen lassen (Foto/Screenshot/PDF). Zuerst: **Termin bestätigen** – innerhalb der genannten Frist, sonst in 1–2 Tagen (kurze Mail anbieten: Dank, Teilnahme bestätigen, ggf. Frage zu Ablauf/Unterlagen/Anreise). Termin, Ort, genannte Übungen und Mitbringliste in `gespraech`.
 
-| Übung | Ablauf | Beobachtet wird |
-|---|---|---|
-| Selbstpräsentation | 3–5 Min., teils mit Medien | Struktur, freies Sprechen, Umgang mit Rückfragen |
-| Gruppendiskussion | 3–9 Personen, 5–10 Min. Vorbereitung, Konsens finden | Position beziehen ohne zu dominieren, andere einbinden, Zeit im Blick, Sachlichkeit |
-| Postkorb | 10–20 Dokumente, Zeitdruck, bewusst nicht alles lösbar | Priorisieren (A/B/C), Delegieren, Begründen, Stressresistenz |
-| Fallstudie | Problem analysieren, Lösung erarbeiten, oft präsentieren | Analytik, unternehmerisches Denken, Struktur |
-| Rollenspiel | Konflikt- oder Kundengespräch, neue Infos tauchen auf | Deeskalation, Verbindlichkeit, Kundenorientierung, Ruhe unter Druck |
-| Präsentation | 20–30 Min. Vorbereitung, Flipchart/PPT | Kernbotschaft, Auftreten, Umgang mit Kritik |
-| Einzelinterview | strukturiert, oft mit Bezug zum Verhalten in den Übungen | Motivation, Selbstreflexion, Konsistenz |
+## 2. Kompakte Übersicht (EINE Nachricht, max. ~12 Zeilen), dann Menü
 
-## 2. Vorbereitung erklären
-
-In Häppchen erklären (je Nachricht ein Thema, dann „Weiter?“):
-1. Was ein AC ist und welche Übungen bei **dieser** Stelle wahrscheinlich sind (aus Einladung/Anzeige; sonst ehrlich: „Welche Übungen kommen, steht oft in der Einladung. Typisch sind …“).
-2. Anforderungsprofil der Stelle in Kompetenzen übersetzen (Team, Kommunikation, Belastbarkeit, Analytik) und dafür **STAR-Beispiele** sammeln (siehe `gespraech.md`, Abschnitt 3).
-3. Verhalten: authentisch bleiben – bewertet wird auch das Verhalten in Pausen und beim Mittagessen.
-4. Dann das Übungs-Menü zeigen.
-
-## 3. Die Übungen einzeln üben (Menü)
+Üblich bei dualem Studium, Trainees, großen Ausbildungsbetrieben, öffentlichem Dienst, Polizei/Zoll/Bundeswehr. Halber Tag bis 3 Tage, oft vorher Online-Test.
 
 ```
-Welche Übung willst du zuerst üben?
-1. Selbstpräsentation (5 Min.)       2. Postkorb (Priorisieren unter Zeitdruck)
-3. Fallstudie                         4. Rollenspiel (Kunde/Mitarbeiter)
-5. Gruppendiskussion (ich spiele die anderen)   6. Online-Test-Aufgaben
-7. Einzelinterview (wie Vorstellungsgespräch)
-Empfohlen: zuerst 1, dann die Übungen aus deiner Einladung.
+🎯 Dein Auswahltag in Kürze
+• Selbstpräsentation (3–5 Min.): heute → Weg → warum hier, frei sprechen
+• Gruppendiskussion: Position beziehen, andere einbeziehen, zusammenfassen, nicht dominieren
+• Postkorb: viele Aufgaben, wenig Zeit – A sofort / B planen oder delegieren / C später, jede Entscheidung begründen
+• Rollenspiel: zuhören, ruhig bleiben, konkrete Lösung zusagen
+• Fallstudie/Präsentation: Problem → Ursachen → Optionen → Empfehlung
+• Interview: wie ein Vorstellungsgespräch, oft mit Bezug auf deine Übungen
+Beobachtet wird alles – auch Pausen und Mittagessen. Authentisch bleiben.
+Deine Beispiele (STAR) aus dem Profil passen für fast jede Übung.
 ```
-Alle Fall-Materialien (Firmen, Mails, Zahlen) sind **ausgedacht und als Übung gekennzeichnet**, passend zur Branche der Stelle. Keine Fakten über die echte Firma erfinden.
+Bei Bedarf statt Chat als PDF: `akte.py … --spickzettel --pdf`.
 
-## 4. Übung: Selbstpräsentation
+**Menü an die Einladung anpassen:** Nur die Übungen zeigen, die in Einladung/Anzeige stehen (plus „Interview“). Steht nichts drin: ehrlich sagen und die typischen 4 anbieten.
+```
+Was üben wir zuerst? (aus deiner Einladung)
+1. Selbstpräsentation  2. Gruppendiskussion  3. Postkorb  4. Interview
+Empfohlen: 1.
+```
+Alle Fall-Materialien sind **ausgedacht und als Übung gekennzeichnet**, passend zur Branche. Keine Fakten über die echte Firma.
 
-Aufgabe: 3–5 Minuten über sich (bzw. das Thema aus der Einladung). Nutzer schreibt Stichpunkte oder spricht per Diktat. Danach 1–2 Rückfragen in der Rolle als Beobachter, dann Feedback (Struktur heute → Weg → warum hier, Länge, freies Sprechen, Bezug zur Stelle).
+In allen Übungen: **kein Hinweis-Block** während der Übung, nur am Ende (Feedback). Neue STAR-Beispiele sofort in `profil.beispiele`; nach jeder Übung Akte speichern.
 
-## 5. Übung: Postkorb
+## 3. Übungen
 
-1. Szenario in 3 Sätzen (z. B. „Du bist ab heute Azubi im Vertriebsbüro, deine Chefin ist bis Freitag krank, es ist Montag 8 Uhr.“).
-2. **10–12 kurze Dokumente** in **einer** Nachricht (Mails, Notizen, Termine), nummeriert, mit Abhängigkeiten und Terminkonflikten, bewusst nicht alles lösbar.
-3. Aufgabe: „Du hast 20 Minuten. Sortiere jedes Dokument nach A (sofort selbst), B (planen/delegieren an …), C (später/ablegen) und begründe jede Entscheidung mit einem Satz.“ Schema dringend/wichtig erklären.
-4. Feedback: Priorisierung, Delegation, Konflikte erkannt, Begründungen; zeig 2–3 Stellen, an denen eine andere Entscheidung besser wäre, und warum.
+**Selbstpräsentation:** Aufgabe nennen (3–5 Min. bzw. Thema aus der Einladung). Nutzer schreibt Stichpunkte oder diktiert. 1–2 Rückfragen als Beobachter, dann Feedback (Struktur, Länge, Bezug zur Stelle).
 
-## 6. Übung: Fallstudie
+**Postkorb (Häppchen!):** Szenario in 2–3 Sätzen (z. B. „Montag 8 Uhr, deine Chefin ist bis Freitag krank“). Dann **höchstens 3–4 Dokumente pro Nachricht** (am Handy 3), insgesamt 8–10, nummeriert, mit Terminkonflikten und Abhängigkeiten. Nach jedem Häppchen sortiert der Nutzer (A/B/C + ein Satz Begründung), dann kommt das nächste. Am Ende Feedback: Priorisierung, Delegation, Konflikte erkannt; 2–3 Stellen, wo eine andere Entscheidung besser wäre.
 
-Ein kurzer Fall aus der Branche (½ Seite, mit 3–5 Zahlen oder Fakten), Aufgabe „Analysiere das Problem und schlage eine Lösung vor; stell sie in 3 Minuten vor.“ Nutzer antwortet strukturiert (Problem → Ursachen → Optionen → Empfehlung). Dann 2 kritische Rückfragen, dann Feedback (Analytik, Struktur, Begründung, Umgang mit Rückfragen).
+**Fallstudie:** halbe Seite mit 3–5 Zahlen/Fakten (ausgedacht), Aufgabe „analysieren, Lösung, in 3 Minuten vorstellen“. Dann 2 kritische Rückfragen, dann Feedback.
 
-## 7. Übung: Rollenspiel
+**Rollenspiel:** Rolle und Ziel ankündigen (z. B. verärgerter Kunde). Du spielst die Gegenseite, **eine Äußerung pro Nachricht**, nach 2–3 Runden eine neue Info („Das ist schon das dritte Mal!“). Ende nach 6–8 Wechseln oder bei Einigung.
 
-Rolle ankündigen (z. B. verärgerter Kunde, Kollege mit Konflikt), Ziel des Nutzers nennen. Du spielst die Gegenseite, **eine Äußerung pro Nachricht**, und lässt nach 2–3 Runden eine **neue Info** auftauchen („Ach übrigens, das ist schon das dritte Mal!“). Ende nach 6–8 Wechseln oder wenn eine Lösung vereinbart ist. Feedback: Deeskalation, Zuhören, Verbindlichkeit (konkrete Zusage), Ruhe.
+**Gruppendiskussion:** Thema mit Entscheidungsdruck, 3–4 Optionen. Du spielst 3 Teilnehmende (dominant, still, sachlich), je Nachricht 1–3 kurze Beiträge. Zeit ansagen (z. B. 6 Runden), nach Runde 4 Zeitansage. Kriterien vorher kurz nennen.
 
-## 8. Übung: Gruppendiskussion (Simulation)
+## 4. Online-Test / Einstellungstest
 
-1. Thema mit Entscheidungsdruck (z. B. „Die Azubi-Gruppe hat 2.000 Euro Budget – wofür?“), 3–4 Optionen.
-2. Du spielst **3 Teilnehmende** mit Namen und klarem Stil: eine dominante Person, eine stille Person, eine sachliche Person. Jede Nachricht von dir enthält 1–3 kurze Wortbeiträge, dann ist der Nutzer dran.
-3. Zeit ansagen (z. B. „15 Minuten, ca. 6 Runden“), nach Runde 4 eine Zeitansage einbauen.
-4. Beobachtungskriterien vorher nennen: Ziel und Zeit ansagen, zusammenfassen, Stille einbeziehen, nicht unterbrechen, Position beziehen ohne zu dominieren, Konsens.
-5. Feedback: Wann hat der Nutzer strukturiert, wen einbezogen, wie mit der dominanten Person umgegangen, gab es einen Konsens?
+Wichtigster Tipp: kostenlose Übungstests der Hersteller oder Behörde, mit Zeitlimit. Du kannst 5–10 Aufgaben stellen (Zahlenreihen, Dreisatz, Prozent, Rechtschreibung, Textverständnis), **eine pro Nachricht, ohne Hinweis-Block**, Auflösung am Ende. Ehrlich: echte Tests sehen anders aus.
 
-## 9. Online-Test / Einstellungstest
+## 5. Polizei und öffentlicher Dienst
 
-- Wichtigster Tipp: kostenlose **Übungstests** der Hersteller oder Behörde nutzen und dabei die Zeitlimits einhalten.
-- Du kannst 5–10 Übungsaufgaben stellen (Zahlenreihen, Dreisatz, Prozentrechnen, Rechtschreibung, Textverständnis), **eine pro Nachricht**, und danach auflösen. Sag ehrlich, dass echte Tests anders aussehen können.
+Typisch (je nach Land/Behörde): Online-Bewerbung → schriftlicher Test (Rechtschreibung, Mathe, Logik, Konzentration) → Sporttest (teils Schwimmen) → AC-Tag (Gruppendiskussion, Rollenspiel, Kurzvortrag, Interview) → ärztliche Untersuchung → Zuverlässigkeitsprüfung → Rangliste. Jede Stufe ist eine eigene Hürde. Maßgeblich ist die Ausschreibung. Sport Monate vorher trainieren.
 
-## 10. Polizei und öffentlicher Dienst
+## 6. Feedback-Format
 
-Typische Reihenfolge (je nach Land/Behörde): Online-Bewerbung und formale Prüfung → schriftlicher Test (Rechtschreibung/Diktat, Mathe, Logik, Konzentration) → Sporttest (teils Schwimmen) → AC-Tag (Gruppendiskussion, Rollenspiel, Kurzvortrag, strukturiertes Interview) → ärztliche Untersuchung → Zuverlässigkeitsprüfung → Rangliste. **Jede Stufe ist eine eigene Hürde**; Schwächen lassen sich nicht ausgleichen. Maßgeblich ist die Ausschreibung der jeweiligen Behörde. Sport Monate vorher trainieren.
-
-## 11. Feedback-Format
-
-Nach jeder Übung eine Nachricht: 💪 Stärken (2–3, konkret), 🔧 Verbesserungen (2–3, mit „so könnte es klingen“ aus den Fakten des Nutzers), dann der Hinweis-Block („➡️ Als Nächstes: Übung 2 Postkorb oder diese noch einmal. 👉 Du jetzt: Zahl schreiben.“). Am Ende die Ergebnisse in die Akte (Abschnitt 4) und optional `AC_Vorbereitung_Firma.md` ausgeben.
+Nach jeder Übung eine Nachricht: 💪 Stärken (2–3, konkret), 🔧 Verbesserungen (2–3, „so könnte es klingen“ mit den Fakten des Nutzers), dann der Hinweis-Block („➡️ Als Nächstes: Übung 2 oder diese noch einmal. 👉 Du jetzt: Zahl schreiben.“). Kurzform in `gespraech.feedback`, dann `akte.py`.

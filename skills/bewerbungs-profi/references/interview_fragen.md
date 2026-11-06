@@ -1,74 +1,76 @@
 # Phase 3: Persönliche Fragen (Profil)
 
-Ziel: alle Fakten für Lebenslauf und Anschreiben sammeln – **vom Nutzer**, nicht erfunden. Eine Frage pro Nachricht, kurz beantwortbar, mit Beispielen.
+Ziel: alle Fakten für die Unterlagen **vom Nutzer**, in die Profil-JSON (`profil_json.md`). Eine Frage = ein Thema pro Nachricht. ~10 Fragen, damit die ganze Bewerbung in ~25 Nachrichten passt.
 
 ## Inhalt
 1. Vorher: was schon da ist
-2. Format jeder Frage
-3. Die 9 Standardfragen
+2. Format und Zählung
+3. Die Standardfragen
 4. Anpassen nach Ziel
-5. Nachhaken, wenn Antworten dünn sind
+5. Nachfragen und Rückfragen
 6. Abschluss: Profil bestätigen
 
 ---
 
 ## 1. Vorher: was schon da ist
 
-- Alter Lebenslauf hochgeladen? → `python3 "$S/textlib.py" Lebenslauf.docx --info` (oder .pdf). Daten übernehmen, dann nur **eine** Bestätigungsfrage: „Ich habe aus deinem Lebenslauf übernommen: … Stimmt das noch? Was ist neu dazugekommen?“ Fragen 1–5 entfallen dann meist.
-- Akte vorhanden? → Daten aus dem json-Block nehmen, nichts doppelt fragen.
-- Zeugnisse müssen **nicht** hochgeladen werden – Angaben reichen. Ausweis, Steuer-ID, Sozialversicherungsnummer oder Kontodaten werden nie gebraucht; nicht danach fragen.
+- Alter Lebenslauf hochgeladen → `textlib.py … --info`, Daten in die JSON, dann **eine** Frage: „Ich habe übernommen: … (3–5 Zeilen). Stimmt das noch, und was ist neu?“ Fragen 1–4 entfallen meist.
+- Akte vorhanden → JSON nehmen, nichts doppelt fragen.
+- Anzeige sagt schon etwas (z. B. Start 01.09.) → nicht fragen, nur bestätigen lassen, wenn es den Nutzer betrifft.
+- Zeugnisse müssen nicht hochgeladen werden (außer für die Gesamt-PDF). Nie nach Ausweis, Steuer-ID, SV- oder Kontonummer fragen.
 
-Sag am Anfang einmal: „Ich stelle dir jetzt 9 kurze Fragen. Stichworte reichen – ich mache daraus ordentliche Sätze. Wenn du etwas nicht weißt, schreib einfach ‚weiß nicht‘.“
+Einmal sagen: „Jetzt kommen ca. 10 kurze Fragen. Stichworte reichen. ‚Weiß nicht‘ ist okay.“ (Wer will, bekommt sie als Liste auf einmal – höchstens 5 pro Nachricht.)
 
-## 2. Format jeder Frage
+## 2. Format und Zählung
 
 ```
-**Frage 4 von 9 – Was hast du dort gemacht?**
-Beim Minijob an der Kasse: Was hast du konkret gemacht oder geschafft? 1–2 Beispiele reichen.
-Beispiele: „Abrechnung am Abend gemacht“, „neue Kollegen eingelernt“, „Regale nach Plan eingeräumt“
+**Frage 4 von 10 – Kenntnisse**
+Welche Sprachen und Programme kannst du – und wie gut?
+Beispiele: „Englisch B1, Türkisch Muttersprache“ · „Excel Grundlagen, Canva“
 
-➡️ Als Nächstes: noch 5 Fragen, dann baue ich deinen Lebenslauf.
+➡️ Als Nächstes: noch 6 Fragen, dann baue ich deinen Lebenslauf.
 👉 Du jetzt: Antworte in Stichworten.
 ```
+- **Y** steht nach Frage 3 (Stationen) fest und ändert sich danach nicht. Kommt eine Lücke oder ein fehlendes Detail dazu: „**Nachfrage zu Frage 3** – …“ (zählt nicht als neue Nummer).
+- Pro Nachricht **ein** Fragezeichen-Thema. Nicht anhängen: „Und hast du ein Foto?“.
 
-Optionen (a/b/c) bei Auswahlfragen, offene Fragen immer mit 2–3 Beispielantworten. Ist ein Auswahl-Werkzeug da, nutze es.
+## 3. Die Standardfragen
 
-## 3. Die 9 Standardfragen
-
-| Nr | Frage | Beispiele/Optionen | Wofür |
+| Nr | Frage (ein Thema) | Beispiele | → JSON |
 |---|---|---|---|
-| 1 | **Kontakt:** Vor- und Nachname, Adresse, Handynummer, E-Mail | „Lena Muster, Musterweg 1, 85049 Ingolstadt, 0151 …, lena.muster@…“ | Kopf |
-| 2 | **Wo stehst du gerade?** Schule/Abschluss (mit Jahr, Note falls gut oder verlangt), Ausbildung, Studium, Job | „Realschule, Mittlere Reife 07/2026, Schnitt 2,3“ | Bildung |
-| 3 | **Deine Stationen:** Jobs, Nebenjobs, Praktika, Ehrenamt, Verein – jeweils mit Monat/Jahr von–bis | „Minijob Kasse seit 09/2025, Praktikum Steuerbüro 03/2025 (2 Wochen)“ | Erfahrung |
-| 4 | **Was hast du dort gemacht oder erreicht?** Pro Station 1–2 Beispiele, gern mit Zahl | „Abrechnung allein“, „5 neue Mitglieder geworben“ | Stichpunkte „Ergebnis statt Aufgabe“ |
-| 5 | **Kenntnisse:** Sprachen (Niveau A1–C2 oder „gut/fließend“), PC-Programme, Führerschein | „Englisch B1, Excel, Führerschein B“ | Kenntnisse |
-| 6 | **Warum dieser Beruf / diese Stelle?** In deinen Worten, ein echter Grund | „Ich mag Zahlen“, „mein Onkel ist Elektriker, ich war oft dabei“ | Anschreiben-Einstieg, Gespräch |
-| 7 | **Warum diese Firma?** Ein Grund oder Fakt | „nah dran“, „bilden viel aus“, „mag ihre Produkte“; ggf. Recherche-Fakt vorschlagen und bestätigen lassen | Anschreiben |
-| 8 | **Ein Beispiel für [Soft Skill aus der Anzeige]** – eine kurze Situation: was war los, was hast du getan, was kam raus? | „Teamarbeit: Schülerfirma, zu fünft Stand organisiert, ich Kasse, 600 € Umsatz“ | Beleg im Anschreiben, STAR im Gespräch |
-| 9 | **Rahmen:** Starttermin, ggf. Stunden/Tage (Minijob, Werkstudent), Gehaltsvorstellung (nur wenn verlangt), Foto ja/nein, Hobbys mit Bezug | „ab 01.09., Foto nein, Handballtrainerin“ | Anschreiben-Schluss, Lebenslauf |
+| 1 | **Kontaktdaten** als Block, so wie sie oben im Lebenslauf stehen sollen | „Lena Muster, Musterweg 1, 85049 Ingolstadt, 0151 …, lena.muster@…“ | person |
+| 2 | **Schule/Abschluss**: höchster (oder laufender) mit Monat/Jahr, Schule | „Realschule Ingolstadt, Mittlere Reife 07/2026“ | profil.bildung |
+| 3 | **Stationen**: Jobs, Praktika, Ehrenamt, Verein – je mit Monat/Jahr und was du dort gemacht hast | „Minijob Kasse seit 09/2025, abends abgerechnet“ | profil.stationen |
+| 4 | **Kenntnisse**: Sprachen mit Niveau, Programme | „Englisch B1, Excel“ | profil.sprachen, edv |
+| 5 | **Warum dieser Beruf?** ein echter Grund | „Ich mag Zahlen“ | motivation_beruf |
+| 6 | **Warum diese Firma?** ein Grund oder Fakt | „nah dran“, „bilden viel aus“ | motivation_firma |
+| 7 | **Ein Beispiel für [Soft Skill aus der Anzeige]**: was war los, was hast *du* getan, was kam raus? | „Schülerfirma, zu fünft Stand geplant, ich Kasse“ | profil.beispiele |
+| 8 | **Ab wann kannst du anfangen?** (Minijob/Werkstudent: Tage/Stunden) | „ab 01.09.“, „Fr+Sa abends“ | rahmen.start/verfuegbarkeit |
+| 9 | **Foto im Lebenslauf?** a) ja, habe eins b) nein (Empfohlen, wenn kein gutes vorhanden) | | rahmen.foto |
+| 10 | **Hobbys/Freizeit**, die etwas über dich sagen | „Handballtrainerin U12“ | profil.hobbys |
 
-Bei Frage 9 zum Foto kurz erklären: freiwillig, seit dem AGG (2006) darf kein Arbeitgeber eins verlangen; viele Personaler mögen trotzdem eins. Wenn Foto: professionell, aktuell (höchstens 1 Jahr), kein Selfie. In AT/CH deutlich üblicher.
+Nur bei Bedarf (als eigene Frage, zählt in Y): **Note** (wenn die Anzeige sie verlangt oder sie gut ist) · **Lücke** > 3 Monate (erkennst du an den Daten) · **Führerschein** (nur wenn Anzeige/Beruf ihn braucht) · **Gehaltsvorstellung** (nur wenn verlangt) · **Wie bist du auf die Stelle aufmerksam geworden?** (nur wenn das Formular fragt – nie raten).
 
-Bei Gehalt: Formulierungshilfe anbieten (Spanne in EUR brutto/Jahr, begründet mit Marktdaten, z. B. BA-Entgeltatlas, Tarif). Bei Ausbildung wird die Vergütung selten verhandelt (Tarif bzw. Mindestausbildungsvergütung, siehe `nach_dem_gespraech.md`).
+Zu Frage 9 (ein Satz): Foto ist freiwillig, seit dem AGG (2006) darf es niemand verlangen; wenn, dann professionell und aktuell. In AT/CH üblicher.
 
 ## 4. Anpassen nach Ziel
 
-- **Ausbildung (Schüler):** Frage 2 mit Lieblingsfächern und Noten in passenden Fächern; Frage 3 auch Schülerpraktikum, Verein, Schülerfirma, Familie (z. B. Geschwister betreut).
-- **Duales Studium:** zusätzlich Hochschulzugang (Abi/Fachabi) und gewünschte Hochschule, falls schon bekannt.
-- **Praktikum/Werkstudent:** Studiengang, Semester, Pflicht- oder freiwilliges Praktikum, Zeitraum, Stunden pro Woche.
-- **Berufseinstieg/Jobwechsel:** Frage 4 mit Ergebnissen und Verantwortung (Zahlen, Projekte); zusätzlich Wechselgrund (sachlich, nichts Negatives über den alten Arbeitgeber); Lücken über ~3 Monate kurz und ehrlich benennen lassen.
-- **Minijob:** Fragen 6–8 zusammen kürzer (1 Frage „Warum hier, und wann kannst du?“), Fokus Verfügbarkeit und Startdatum.
+- **Ausbildung (Schüler):** Frage 2 mit Lieblingsfach (nur wenn passend); Frage 3 auch Schülerpraktikum, Verein, Schülerfirma, Familie.
+- **Duales Studium:** Frage 2 mit Hochschulzugang (Abi/Fachabi). Bei Motivationsschreiben Frage 5 doppelt: Fach **und** Betrieb (zwei Fragen).
+- **Praktikum/Werkstudent:** Frage 2 = Studiengang + Semester; Frage 8 = Zeitraum, Stunden/Woche, Pflicht- oder freiwilliges Praktikum (`sonderfaelle.md`).
+- **Berufseinstieg/Jobwechsel:** Frage 3 mit Ergebnissen und Verantwortung (nur echte); zusätzlich **Wechselgrund** (sachlich). Keine Schulnoten-Fragen.
+- **Minijob (≈ 6 Fragen):** 1 Kontakt · 2 Schule/Stand · 3 Erfahrung · 8 Verfügbarkeit · 5 Warum hier (ein Satz) · 10 Hobbys (optional). Frage 7 nur, wenn die Anzeige einen Soft Skill betont.
+- **Ältere/erfahrene Bewerber:** `sonderfaelle.md` Abschnitt 5.
 
-Lass Fragen weg, deren Antwort schon bekannt ist, und pass „Frage X von Y“ an.
+## 5. Nachfragen und Rückfragen
 
-## 5. Nachhaken, wenn Antworten dünn sind
-
-- „Weiß nicht“ bei Motivation (6/7): biete 3 Denkanstöße als Optionen an, z. B. „a) Was hat dich an der Anzeige angesprochen? b) Was machst du in der Freizeit gern, das dazu passt? c) Wen kennst du, der das macht?“ – **die Antwort schreibt trotzdem der Nutzer**. Nicht selbst eine Motivation ausdenken.
-- „Hab keine Erfahrung“: nach Schule, Verein, Familie, Hobby, Nachbarschaftshilfe fragen. Fast jeder hat ein Beispiel.
-- Unklare Daten (Zeitraum, Note, Niveau): einmal nachfragen; sonst im Text [PRÜFEN: …].
-- Übertreibungen bremsen: Aus „Kasse gemacht“ wird keine „Filialverantwortung“, aus einem Gruppenreferat keine „Projektleitung“. Erklär kurz, warum: Alles muss im Gespräch erklärbar sein, und Lügen bei zulässigen Fragen können den Arbeitsvertrag gefährden (Anfechtung wegen arglistiger Täuschung, § 123 BGB).
-- Gefälschte Zeugnisse, erfundene Abschlüsse, Noten oder Referenzen: ablehnen, freundlich, eine Alternative nennen (z. B. Lücke ehrlich benennen, Stärken anders belegen).
+- **Rückfrage des Nutzers** („Was heißt B1?“): kurz beantworten, **dieselbe Frage noch einmal** stellen. Keine neue Frage anhängen.
+- **„Weiß nicht“** bei 5/6: drei Denkanstöße als Optionen („a) Was hat dich an der Anzeige angesprochen? b) Was machst du gern, das dazu passt? c) Wen kennst du, der das macht?“) – die Antwort schreibt der Nutzer.
+- **„Keine Erfahrung“:** nach Schule, Verein, Familie, Hobby, Nachbarschaftshilfe fragen.
+- **Unklare Daten** (Monat, Niveau, Ergebnis): **eine** Nachfrage; sonst so lassen, wie gesagt („seit 2023“), oder [PRÜFEN: Monat?].
+- **Übertreibungen bremsen:** aus „Kasse gemacht“ wird keine „Filialverantwortung“. Kurz begründen (Gespräch, § 123 BGB).
+- **Gefälschtes** (Zeugnis, Abschluss, Referenz): freundlich ablehnen, Alternative nennen.
 
 ## 6. Abschluss: Profil bestätigen
 
-Zeig ein **Kurzprofil** (max. 10 Zeilen: Stand, Stationen, Stärken mit Beispiel, Motivation, Rahmen) und frag: „Passt das so? a) Ja, bau den Lebenslauf b) Ändern: …“. Erst nach dem Ja weiter. Daten in die Akte (Profil + json-Block).
+Kurzprofil (max. 8 Zeilen: Stand, Stationen, Stärken mit Beispiel, Motivation, Start) und „Passt das? a) Ja, bau den Lebenslauf b) Ändern: …“. Bei Ja: Akte speichern (`akte.py`), dann Phase 4. Im Fahrplan ist hier oft das Ende von Chat 1.

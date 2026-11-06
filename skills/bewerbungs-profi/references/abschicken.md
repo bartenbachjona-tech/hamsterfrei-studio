@@ -1,91 +1,83 @@
 # Phase 6: Endcheck und Abschicken
 
 ## Inhalt
-1. Endcheck (Skript + Checkliste)
-2. Anlagen und eine PDF
-3. Weg A: per E-Mail
+1. Prüfen (Skripte + Checkliste)
+2. Anlagen und eine PDF (oder Einzeldateien)
+3. Weg A: E-Mail
 4. Weg B: Online-Formular / Portal
 5. Weg C: persönlich oder per Post
 6. Nach dem Abschicken
 
 ---
 
-## 1. Endcheck (Skript + Checkliste)
-
-Führe aus:
-```
-python3 "$S/endcheck.py" /mnt/user-data/outputs/Anschreiben_….pdf /mnt/user-data/outputs/Lebenslauf_….pdf --firma "Firma" --stelle "Stelle"
-```
-Zeig nur die Befunde (❌ zuerst) in einfachen Worten und behebe ❌ gemeinsam mit dem Nutzer. Dann die Checkliste – als **eine** Nachricht zum Abhaken, der Nutzer antwortet z. B. „alles ok“ oder „4 fehlt“:
+## 1. Prüfen (Pflicht, auch im Schnellmodus)
 
 ```
-✅ Endcheck – bitte kurz selbst prüfen:
-1. Firmenname, Ansprechperson und Stelle stimmen überall (Betreff, Anrede, Text)
-2. Alle [PRÜFEN]-Stellen sind geklärt (gelb markiert = noch offen)
-3. Daten, Noten, Zeiträume stimmen mit deinen Zeugnissen überein
-4. Alle verlangten Unterlagen liegen bereit: …(aus der Anzeige)
-5. E-Mail-Adresse ist seriös, Telefonnummer stimmt
-6. Du kannst zu jedem Satz etwas erzählen
-7. Einmal laut vorlesen oder von jemandem lesen lassen (Rechtschreibung!)
+python3 "$S/fakten_check.py" /tmp/bewerbung/profil.json /mnt/user-data/outputs/<alle aktuellen Dateien>
+python3 "$S/endcheck.py" …/Anschreiben_…_vN.pdf --typ anschreiben --profil /tmp/bewerbung/profil.json
+python3 "$S/endcheck.py" …/Lebenslauf_…_vN.pdf --typ lebenslauf --profil /tmp/bewerbung/profil.json
+python3 "$S/endcheck.py" …/Formular-Texte_….txt --typ formular --profil /tmp/bewerbung/profil.json
 ```
-Rechtschreibfehler sind für 44 % der Recruiter entscheidend; häufige Fehler sind falscher Firmenname durch Copy-and-paste, generische Texte, zu lange Unterlagen, mehrere Einzeldateien, fehlende verlangte Unterlagen.
+Ein Aufruf je Dokumenttyp. Zeig nur Befunde in einfachen Worten (❌ zuerst), behebe ❌ über die JSON + neu erzeugen. Dann die Checkliste (am Handy in 2 Nachrichten zu je 3–4 Punkten):
+
+```
+✅ Bitte kurz selbst prüfen:
+1. Firma, Ansprechperson, Stelle stimmen überall
+2. Daten, Noten, Zeiträume stimmen mit deinen Zeugnissen
+3. Alle verlangten Unterlagen liegen bereit: …(aus der Anzeige)
+4. Du kannst zu jedem Satz etwas erzählen
+5. Einmal laut vorlesen (Rechtschreibung!)
+```
+Rechtschreibfehler sind für 44 % der Recruiter entscheidend; häufig: falscher Firmenname durch Copy-and-paste, fehlende verlangte Unterlagen, mehrere Einzeldateien.
 
 ## 2. Anlagen und eine PDF
 
-**Anlagen:** das letzte bzw. relevante Schulzeugnis (bei Ausbildung meist die letzten zwei), Abschlusszeugnisse, Arbeits- und Praktikumszeugnisse, relevante Zertifikate. Keine Seminarbescheinigungen von vor 10 Jahren. AT: „Dienstzeugnisse“. CH: Zeugnisse und Diplome immer beilegen.
+**Anlagen:** letztes bzw. relevantes Schulzeugnis (Ausbildung: meist die letzten zwei), Abschluss-, Arbeits-, Praktikumszeugnisse, relevante Zertifikate. AT: „Dienstzeugnisse“. CH: Zeugnisse/Diplome immer beilegen. Uploads in `profil.anlagen` (datei + bezeichnung) eintragen – daraus entsteht die Anlagen-Zeile im Anschreiben. Neue Anlage später? JSON ergänzen, Anschreiben neu erzeugen.
 
-Zeugnisse hat der Nutzer meist auf Papier → er scannt sie (Handy-Scan-App oder Kopierer, als PDF oder JPG) und lädt sie hoch. Sie werden **nicht** verändert.
+Scans/Fotos werden **nicht** verändert, nur auf A4 eingepasst. HEIC (iPhone) wird umgewandelt; klappt das nicht, gibt das Skript eine Handy-Anleitung aus (JPG/Screenshot/Scan).
 
-**Eine PDF-Datei** in der Reihenfolge Anschreiben → Lebenslauf → Anlagen, unter ~5 MB (Richtwert, Vorgabe der Anzeige geht vor):
+**Eine PDF** (Anschreiben → Lebenslauf → Anlagen, Richtwert < 5 MB):
 ```
-python3 "$S/pdf_zusammenfuegen.py" Bewerbung_Vorname_Nachname_Stelle.pdf \
-  /mnt/user-data/outputs/Anschreiben_….pdf /mnt/user-data/outputs/Lebenslauf_….pdf /mnt/user-data/uploads/Zeugnis.pdf
+python3 "$S/pdf_zusammenfuegen.py" Bewerbung_Vorname_Nachname_Stelle.pdf --profil /tmp/bewerbung/profil.json
 ```
-Dateiname ohne Umlaute und Leerzeichen (das Skript ersetzt sie). Ohne Anlagen-Uploads: Gesamt-PDF aus Anschreiben + Lebenslauf bauen und erklären, wie der Nutzer Zeugnisse später anhängt – oder ob das Formular sie einzeln will.
+Nimmt automatisch die **aktuellsten** Fassungen und die Anlagen aus dem Profil. Mit Einzeldateien geht's auch (`… Ziel.pdf A.pdf B.pdf Zeugnis.jpg`) – ist eine Fassung veraltet, nimmt das Skript die neueste und sagt es. **Fehlt eine Datei, bricht es ab (Exit 2)** – dann fehlende Datei hochladen lassen. Passt die Anlagen-Zeile nicht zu den angehängten Dateien: Abbruch (Exit 3) → Anschreiben neu erzeugen.
 
-Verlangt das Formular **getrennte Dateien**, dann getrennt hochladen – die Anzeige gilt.
+**Formular will getrennte Dateien** (oder Upload-Limit, `sonderfaelle.md` Abschnitt 7):
+```
+python3 "$S/pdf_zusammenfuegen.py" --einzeln …/Lebenslauf_…_v2.pdf …/Anschreiben_…_v3.pdf
+```
+→ saubere Namen ohne `_vN` in `outputs/versand/`. Vorher fragen, was das Formular will, sonst baust du umsonst.
 
-## 3. Weg A: per E-Mail
+## 3. Weg A: E-Mail
 
-E-Mail-Text als Datei `E-Mail_Bewerbung_Firma.txt` ausgeben **und** im Chat zeigen (zum Kopieren):
-
+`email.betreff`/`email.text` in der JSON, dann `unterlagen_erstellen.py … --nur email` → `E-Mail_Bewerbung_Firma_vN.txt`; Text **auch im Chat** zeigen (zum Kopieren).
 ```
 Betreff: Bewerbung als [Stelle genau wie in der Anzeige] (Kennziffer …)
 
 Sehr geehrte Frau Sommer,
-
-anbei sende ich Ihnen meine Bewerbung als [Stelle] ab [Start]. [Ein Satz, wer du bist,
-z. B. „Ich mache gerade meine Mittlere Reife und arbeite nebenbei an der Kasse.“]
-Anschreiben, Lebenslauf und Zeugnisse finden Sie in einer PDF-Datei im Anhang.
-Für Rückfragen erreichen Sie mich unter 0151 ….
+anbei sende ich Ihnen meine Bewerbung als [Stelle] ab [Start]. [Ein Satz aus dem Profil, wer du bist.]
+Anschreiben, Lebenslauf und Zeugnisse finden Sie in einer PDF im Anhang.
+Für Rückfragen erreichen Sie mich unter [Telefon aus dem Profil].
 
 Mit freundlichen Grüßen
-Lena Muster
+[Name]
 ```
-Regeln: 3–5 Sätze; den Anschreiben-Text **nicht** doppelt in die Mail kopieren (Ausnahme: das Anschreiben soll ganz entfallen, dann kommt das Kurzanschreiben in die Mail).
-
-Schritt für Schritt für Anfänger (eine Nachricht, nummeriert):
-1. E-Mail-Programm öffnen, neue Mail an die Adresse aus der Anzeige.
-2. Betreff und Text aus der Datei einfügen.
-3. PDF anhängen (Büroklammer-Symbol).
-4. **Erst eine Testmail an dich selbst schicken** – kommt der Anhang an, öffnet er sich?
-5. Dann an die Firma senden. Gesendete Mail aufheben.
+3–5 Sätze; Anschreiben nicht doppelt hineinkopieren (außer es soll entfallen). Anleitung Schritt für Schritt (Handy: `geraet.md`): neue Mail → Betreff/Text einfügen → PDF anhängen → **Testmail an dich selbst** → senden → gesendete Mail aufheben.
 
 ## 4. Weg B: Online-Formular / Portal
 
-- Texte **vorher** in einer Datei schreiben (Timeout-Gefahr) – du lieferst sie als `Formular-Texte_Firma.txt`, Feld für Feld beschriftet.
-- Pflichtfelder vollständig ausfüllen, Felder **nicht** mit „siehe Lebenslauf“ füllen. Zeichenlimits beachten (frag nach, wenn ein Feld ein Limit zeigt, und kürze passend).
-- Dateien im verlangten Format hochladen (meist PDF; getrennt oder eine Datei – wie das Formular es will).
-- Am Ende: **Screenshot der Bestätigungsseite** machen oder Bestätigungsmail aufheben.
-- Typische Felder, die du vorbereitest: Kurzprofil/„Über mich“, Motivation, Eintrittstermin, Gehaltsvorstellung (nur Spanne, nur wenn gefragt), „Wie sind Sie auf uns aufmerksam geworden?“.
-- Du kannst das Formular nicht selbst ausfüllen oder absenden (außer ein Browser-Werkzeug ist verbunden und der Nutzer will das ausdrücklich – dann gibt er Passwörter selbst ein, und du klickst nie selbst auf „Absenden“, ohne dass er es bestätigt).
+- Texte vorher als Datei (Timeout-Gefahr): `formular[]` mit `feld`, `limit`, `text` → `--nur formular`. Feldtitel stehen als `=== … ===` darüber; `endcheck.py --typ formular` prüft Limits, leere Felder, „siehe Lebenslauf“, Platzhalter.
+- Typische Felder: Über mich, Motivation, Eintrittstermin, Gehalt (nur Spanne, nur wenn gefragt), „Wie sind Sie auf uns aufmerksam geworden?“ – **nur mit der Antwort des Nutzers** (`profil.wie_aufmerksam`), nie raten.
+- Dateien im verlangten Format (meist PDF; getrennt oder eine – wie das Formular es will, Upload-Limits beachten).
+- Am Ende: Screenshot der Bestätigungsseite oder Bestätigungsmail aufheben.
+- Du füllst das Formular nicht selbst aus (Ausnahme: Browser-Werkzeug verbunden und ausdrücklicher Wunsch – Passwörter gibt der Nutzer selbst ein, „Absenden“ nur nach seinem Ja).
 
 ## 5. Weg C: persönlich oder per Post
 
-Selten, eher bei Minijob oder kleinen Betrieben. Persönlich: Lebenslauf ausgedruckt mitnehmen, kurz vorstellen („Ich habe gesehen, dass Sie eine Aushilfe suchen …“), nach der zuständigen Person fragen, Verfügbarkeit sagen. Per Post nur, wenn ausdrücklich verlangt.
+Selten (Minijob, kleine Betriebe). Persönlich: Lebenslauf ausgedruckt mitnehmen, kurz vorstellen, nach der zuständigen Person fragen, Verfügbarkeit sagen. Post nur, wenn verlangt.
 
 ## 6. Nach dem Abschicken
 
-- Akte aktualisieren: „Abgeschickt am …“, Weg, Nachfass-Datum (ohne Gespräch nach etwa 2–3 Wochen nachfragen, falls keine Frist genannt).
-- **Parallel weiterbewerben** – Ghosting ist häufig (laut karriere.at, AT 11/2025: 84 % haben schon keine Rückmeldung bekommen). Tracking-Tabelle in der Akte (Abschnitt 5) führen.
-- Fragen: „Möchtest du dich schon mal aufs Vorstellungsgespräch vorbereiten? Je früher, desto entspannter.“ → Phase 7.
+- JSON: `status`, `bewerbungen` (abgeschickt am, Weg, nachfassen am – ohne Gespräch etwa 2–3 Wochen später), dann `akte.py`.
+- **Parallel weiterbewerben** – Ghosting ist häufig (karriere.at, AT 11/2025: 84 % schon ohne Rückmeldung).
+- Fahrplan: „Zeit für einen neuen Chat? Lade dort die Akte hoch und schreib ‚Gespräch üben‘.“
