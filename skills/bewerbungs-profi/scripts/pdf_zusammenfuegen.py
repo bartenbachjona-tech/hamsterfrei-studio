@@ -8,9 +8,13 @@
     python3 pdf_zusammenfuegen.py --einzeln DATEI … [--name DATEI=Bezeichnung …] [--ausgabe ORDNER]
           → jede Datei als eigene PDF mit sprechendem Namen (Bezeichnung aus profil.anlagen statt IMG_4471),
             flach im Ausgabeordner (kein Unterordner – am Handy gibt es keine Ordner) + Liste „Hochladen: …“
-    python3 pdf_zusammenfuegen.py --buendeln N --profil PROFIL.json [--ausgabe ORDNER]
-          → Upload-Limit „max. N Dateien“: Anschreiben, Lebenslauf einzeln, alle Anlagen gebündelt
-            (N=2: Lebenslauf + Anschreiben&Anlagen; N=1: alles in einer PDF)
+    python3 pdf_zusammenfuegen.py --buendeln N --profil PROFIL.json [--ordner QUELLE] [--ausgabe ORDNER]
+          → Upload-Limit „max. N Dateien“: Anschreiben (bzw. Motivationsschreiben), Lebenslauf einzeln, alle
+            Anlagen gebündelt (N=2: Lebenslauf + Anschreiben&Anlagen; N=1: alles in einer PDF)
+- Quellen (…_AKTUELL.pdf) werden in --ordner, sonst in --ausgabe, sonst im Standard-Ausgabeordner gesucht –
+  im ersten Ordner, in dem sie liegen. --ausgabe ist nur das Ziel.
+- --einzeln/--buendeln im selben Ordner: die Arbeitsdateien …_AKTUELL.pdf wandern danach nach alt/ – am Handy
+  liegt so nur EINE Datei je Unterlage im Ordner (die saubere zum Hochladen).
 
 - ZIEL-Name wird genau so verwendet (Bindestriche bleiben). Nur Umlaute/Leerzeichen/Sonderzeichen werden
   ersetzt – mit klarer Meldung.
@@ -219,6 +223,16 @@ def neueste(pfade, genau, hinweise):
     return out
 
 
+def quell_ordner(profil, kandidaten):
+    """Erster Ordner, in dem die Unterlagen-PDFs (auch in alt/) liegen – v3-Fehler: Suche nur im Ausgabeordner."""
+    kandidaten = [k for k in dict.fromkeys(kandidaten) if k]
+    for k in kandidaten:
+        doks, _, fehlt, _ = profil_dateien(profil, k)
+        if doks and not fehlt:
+            return k
+    return kandidaten[0] if kandidaten else textlib.ausgabe_ordner()
+
+
 def profil_dateien(profil, ordner):
     """→ (dokumente [(pfad, bezeichnung, art)], anlagen [(pfad, bezeichnung)], fehlt, d)."""
     d = textlib.lade_profil(profil)
@@ -301,7 +315,7 @@ def einzeln(eintraege, ausgabe, name, drehen, hinweise):
                 continue
             stamm = textlib.basis_und_version(os.path.splitext(os.path.basename(q))[0])[0]
             if bez:
-                teil = textlib.safe_name(bez, 50).replace("-", "_")
+                teil = textlib.safe_name(bez, 70).replace("-", "_")
                 stamm = f"{teil}_{name}" if name and name.split("_")[-1] not in teil else teil
             elif KAMERA_NAME.match(stamm):
                 stamm = f"Anlage_{i}_{name}" if name else f"Anlage_{i}"
@@ -346,10 +360,11 @@ def main():
             ziel[os.path.basename(datei)] = wert
             del a[i:i + 2]
     hinweise = []
-    ordner_q = textlib.ausgabe_ordner(opts.get("--ordner") or opts.get("--ausgabe"))
     d, doks, anl = None, [], []
+    ordner_q = textlib.ausgabe_ordner(opts.get("--ordner") or opts.get("--ausgabe"))
     if opts.get("--profil"):
         try:
+            ordner_q = quell_ordner(opts["--profil"], [opts.get("--ordner"), opts.get("--ausgabe"), textlib.ausgabe_ordner()])
             doks, anl, fehlt, d = profil_dateien(opts["--profil"], ordner_q)
         except RuntimeError as e:
             print(f"FEHLER: {e}")
@@ -386,9 +401,15 @@ def main():
         eintraege = [(neueste([p], "--genau" in flags, hinweise)[0], b, an) for p, b, an in eintraege]
         if opts.get("--buendeln"):
             n = int(opts["--buendeln"])
-            buendel(eintraege, n, opts.get("--ausgabe"), name, drehen, hinweise)
+            ziele = buendel(eintraege, n, opts.get("--ausgabe"), name, drehen, hinweise)
         else:
-            einzeln(eintraege, opts.get("--ausgabe"), name, drehen, hinweise)
+            ziele = einzeln(eintraege, opts.get("--ausgabe"), name, drehen, hinweise)
+        # keine zwei gleichen Dateien am Handy: Arbeitsdateien im selben Ordner nach alt/
+        ziel_ordner = os.path.abspath(textlib.ausgabe_ordner(opts.get("--ausgabe")))
+        for p, _, anlage in eintraege:
+            if not anlage and ziele and os.path.dirname(os.path.abspath(p)) == ziel_ordner and \
+                    textlib.basis_und_version(os.path.splitext(os.path.basename(p))[0])[1] == textlib.N_AKTUELL:
+                textlib.aktuell_archivieren(p)
         for h in hinweise:
             print(h)
         return
@@ -468,13 +489,18 @@ def buendel(eintraege, n, ausgabe, name, drehen, hinweise):
     anl = [e for e in eintraege if e[2]]
     ordner = textlib.ausgabe_ordner(ausgabe)
     os.makedirs(ordner, exist_ok=True)
+    # Name des Briefs wie er ist (v3-Fehler: Motivationsschreiben hieß „Anschreiben_…“)
+    wort = "Anschreiben"
+    if brief:
+        m = re.match(r"(anschreiben|motivationsschreiben|kurzanschreiben)", (brief[0][1] or os.path.basename(brief[0][0])).lower())
+        wort = m.group(1).capitalize()
     gruppen = []
     if n == 1:
         gruppen = [("Bewerbung", brief + ll + anl)]
     elif n == 2:
-        gruppen = [("Lebenslauf", ll), ("Anschreiben_und_Anlagen" if brief else "Anlagen", brief + anl)]
+        gruppen = [("Lebenslauf", ll), (f"{wort}_und_Anlagen" if brief else "Anlagen", brief + anl)]
     else:
-        gruppen = [("Anschreiben", brief), ("Lebenslauf", ll), ("Anlagen", anl)]
+        gruppen = [(wort, brief), ("Lebenslauf", ll), ("Anlagen", anl)]
     gruppen = [(g, e) for g, e in gruppen if e]
     pypdf = pypdf_laden()
     probleme, fertig = [], []
@@ -500,6 +526,7 @@ def buendel(eintraege, n, ausgabe, name, drehen, hinweise):
     print(f"✅ {len(fertig)} Datei(en) für „max. {n} Dateien“. 📤 Hochladen:")
     for i, (_, z) in enumerate(fertig, 1):
         print(f"   {i}. {os.path.basename(z)}")
+    return [z for _, z in fertig]
 
 
 if __name__ == "__main__":

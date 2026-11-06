@@ -18,20 +18,21 @@ python3 "$S/endcheck.py" …/Anschreiben_…_AKTUELL.pdf --typ anschreiben --pro
 python3 "$S/endcheck.py" …/Lebenslauf_…_AKTUELL.pdf --typ lebenslauf --profil /tmp/bewerbung/profil.json
 python3 "$S/endcheck.py" …/Formular-Texte_…_AKTUELL.txt --typ formular --profil /tmp/bewerbung/profil.json
 python3 "$S/endcheck.py" …/E-Mail_Bewerbung_…_AKTUELL.txt --typ email --profil /tmp/bewerbung/profil.json
+python3 "$S/endcheck.py" …/WhatsApp-Text_…_AKTUELL.txt --typ whatsapp --profil /tmp/bewerbung/profil.json
 python3 "$S/endcheck.py" /mnt/user-data/uploads/Zeugnis.jpg --typ anlage          (Zeugnisse: nur Format/Größe)
 python3 "$S/endcheck.py" …/Bewerbung_Vorname_Nachname_Stelle.pdf --typ gesamt     (fertige Gesamt-PDF)
 ```
-Ein Aufruf je Dokumenttyp. Akte und Spickzettel prüft der Sammel-Check nicht mit (Spickzettel: `--typ spickzettel`). Firmenname und Stellentitel verlangt `endcheck` nur im Anschreiben/Motivationsschreiben – Formular und Mail bleiben, wie sie freigegeben wurden. ❌ beheben über JSON + neu erzeugen (nach Freigabe der Änderung im Chat).
+Ein Aufruf je Dokumenttyp. Akte und Spickzettel prüft der Sammel-Check nicht mit (Spickzettel: `fakten_check.py … --typ spickzettel`; `endcheck` hat keinen Spickzettel-Typ). Firmenname und Stellentitel verlangt `endcheck` nur im Anschreiben/Motivationsschreiben – Formular und Mail bleiben, wie sie freigegeben wurden. ❌ beheben über JSON + neu erzeugen (nach Freigabe der Änderung im Chat).
 
-**Pflicht-Checkliste** (auch im Schnellmodus, kompakt; am Handy in 2 Nachrichten zu je 2–3 Punkten):
+**Pflicht-Checkliste** – immer in **einem** Teil (≤ 6 Zeilen, auch am Handy und im Schnellmodus), als Codeblock:
 ```
-✅ Bitte kurz selbst prüfen:
+✅ Kurz selbst prüfen, dann abschicken:
 1. Firma, Ansprechperson, Stelle stimmen
 2. Daten, Noten, Zeiträume = deine Zeugnisse
-3. Alle verlangten Unterlagen da: …(aus der Anzeige)
-4. Zu jedem Satz kannst du etwas erzählen
-5. Einmal laut vorlesen (Rechtschreibung!)
+3. Alles dabei: …(aus der Anzeige)
+4. Zu jedem Satz kannst du etwas erzählen – einmal laut vorlesen
 ```
+Dazu **eine** Frage („Alles geprüft? a) Ja, abgeschickt b) Mir ist was aufgefallen: …“). Keine zweite Checklisten-Nachricht.
 
 ## 2. Anlagen: eine PDF, Einzeldateien oder Bündel
 
@@ -47,13 +48,13 @@ Nimmt automatisch die aktuellen Fassungen (`…_AKTUELL`, auch wenn ein alter Pf
 ```
 python3 "$S/pdf_zusammenfuegen.py" --einzeln --profil /tmp/bewerbung/profil.json
 ```
-→ saubere Namen **flach im Ausgabeordner** (kein Unterordner): `Anschreiben_Vorname_Nachname.pdf`, `Lebenslauf_…pdf`, `Zeugnis_der_10_Klasse_…pdf` (Bezeichnung statt `IMG_4471`). Das Skript listet „📤 Diese Dateien hochladen“ – genau diese Liste dem Nutzer geben. Ohne Profil: `--einzeln Datei … --name IMG_4471.jpg="Zeugnis 10. Klasse"`.
+→ saubere Namen **flach im Ausgabeordner**: `Anschreiben_Vorname_Nachname.pdf` (bzw. `Motivationsschreiben_…`), `Lebenslauf_…pdf`, `Zeugnis_der_10_Klasse_…pdf` (Bezeichnung vollständig statt `IMG_4471`). Die Arbeitsdateien `…_AKTUELL.pdf` wandern dabei nach `alt/` – am Handy liegt **je Unterlage genau eine** Datei. Das Skript listet „📤 Diese Dateien hochladen“ – genau diese Liste dem Nutzer geben. Ohne Profil: `--einzeln Datei … --name IMG_4471.jpg="Zeugnis 10. Klasse"`. Erzeugst du danach eine Unterlage neu, wandert die alte Upload-Datei automatisch nach `alt/` – dann `--einzeln` erneut.
 
 **Upload-Limit „max. N Dateien“** (`ziel.upload_limit`) – Rezept:
 ```
 python3 "$S/pdf_zusammenfuegen.py" --buendeln N --profil /tmp/bewerbung/profil.json
 ```
-N ≥ 3: Anschreiben | Lebenslauf | alle Anlagen in einer PDF · N = 2: Lebenslauf | Anschreiben + Anlagen (ohne Anschreiben-Feld: Lebenslauf | Anlagen) · N = 1: alles in einer PDF. Größenlimit pro Datei beachten (Scans kleiner). Vorher fragen, was das Formular genau will – sonst baust du umsonst.
+N ≥ 3: Anschreiben (bzw. Motivationsschreiben) | Lebenslauf | alle Anlagen in einer PDF · N = 2: Lebenslauf | Anschreiben + Anlagen · N = 1: alles in einer PDF. Größenlimit pro Datei beachten (Scans kleiner). Quellen sucht das Skript in `--ordner`, sonst `--ausgabe`, sonst im Standardordner. Vorher klären, was das Formular genau will – sonst baust du umsonst.
 
 ## 3. Weg A: E-Mail
 
@@ -69,10 +70,11 @@ Für Rückfragen erreichen Sie mich unter [Telefon aus dem Profil].
 Mit freundlichen Grüßen
 [Name]
 ```
-3–5 Sätze; Anschreiben nicht doppelt hineinkopieren (außer es soll entfallen). Anleitung (Handy: `geraet.md`): neue Mail → Betreff/Text einfügen → PDF anhängen → **Testmail an dich selbst** → senden → gesendete Mail aufheben.
+3–5 Sätze; Anschreiben nicht doppelt hineinkopieren (außer es soll entfallen). Jeder Satz über die Person braucht seine `herkunft` (z. B. „über die Ausbildungsmesse“ nur, wenn er das so gesagt hat). **Bewerbungsadresse unbekannt:** nicht raten – Anzeige/Karriereseite/Impressum prüfen lassen oder anrufen. Anleitung (`geraet.md`): neue Mail → Betreff/Text einfügen → PDF anhängen → **Testmail an dich selbst** → senden.
 
 ## 4. Weg B: Online-Formular / Portal
 
+- **Felder vorab erfragen:** „Welche Felder hat das Formular? Mach einen Screenshot der Felder (mit Zeichengrenzen).“ – dann nur diese Texte bauen.
 - Texte vorher als Datei und im Chat (Timeout-Gefahr): `formular[]` mit `feld`, `limit`, `text` → `--nur formular`. Feldtitel stehen als `=== … (max. N Zeichen) ===` darüber.
 - Typische Felder: Über mich, Motivation, Eintrittstermin, Gehalt (nur Spanne, nur wenn gefragt), „Wie sind Sie auf uns aufmerksam geworden?“ – **immer aus seiner Antwort** (`profil.wie_aufmerksam`, in der Profil-Phase gefragt).
 - **Portale, die nach dem Upload alles noch einmal eintippen lassen** (Lebenslauf-Felder, Stationen, Daten): Felder sind oft vorausgefüllt und falsch zugeordnet. Sag das vorher. Gib die Stationen als kurze Liste im Chat (Zeitraum · Titel · Firma · 1 Zeile Tätigkeit) zum Abtippen/Kopieren; Daten exakt wie im Lebenslauf; Pflichtfelder nie mit „siehe Lebenslauf“.
@@ -82,12 +84,13 @@ Mit freundlichen Grüßen
 
 ## 5. Weg C: WhatsApp, persönlich oder per Post
 
-- **WhatsApp** (Minijob, Gastro, Handwerk – nur wenn die Anzeige es anbietet): kurze Nachricht (3–4 Sätze: wer, welche Stelle, ab wann/wie viele Stunden, Lebenslauf als PDF im Anhang), mit Gruß und vollem Namen, kein Emoji-Feuerwerk, seriöses Profilbild/-name. Lebenslauf als PDF schicken (Büroklammer → Dokument), nicht als Foto. Erst den Text im Chat freigeben.
-- **Persönlich:** Lebenslauf ausgedruckt mitnehmen, kurz vorstellen, nach der zuständigen Person fragen, Verfügbarkeit sagen.
+- **WhatsApp** (Minijob, Gastro, Handwerk – nur wenn die Anzeige es anbietet): `whatsapp.text` (3–4 Sätze: wer, welche Stelle, ab wann/wie viele Stunden, Lebenslauf als PDF), mit Gruß und vollem Namen, kein Emoji-Feuerwerk. Herkunft wie beim Anschreiben. Nach der Freigabe `--nur whatsapp` → `WhatsApp-Text_Firma_AKTUELL.txt`, `endcheck --typ whatsapp`. Lebenslauf als **Dokument** schicken (Büroklammer → Dokument), nicht als Foto; liegt die PDF auf einem anderen Gerät: WhatsApp Web oder an sich selbst mailen (`geraet.md`). Im Chat den Text **direkt über** der Anleitung zeigen (nicht „siehe oben“).
+- **Persönlich abgeben:** Lebenslauf (und ggf. Anschreiben) ausgedruckt in einer Klarsichthülle/Mappe, zu ruhiger Zeit hingehen (nicht zur Stoßzeit), nach der zuständigen Person fragen, 2–3 Sätze sagen (wer, welche Stelle, ab wann/wann verfügbar), Telefonnummer dalassen. Kurzen Satz vorher im Chat üben.
 - **Post** nur, wenn verlangt.
 
 ## 6. Nach dem Abschicken
 
 - JSON: `status`, `bewerbungen` (abgeschickt am, Weg, nachfassen am – ohne Gespräch etwa 2–3 Wochen später), dann `akte.py`.
 - **Parallel weiterbewerben** – Ghosting ist häufig (karriere.at, AT 11/2025: 84 % schon ohne Rückmeldung).
-- Fahrplan: „Zeit für einen neuen Chat? Lade dort die Akte hoch und schreib ‚Gespräch üben‘.“
+- **Online-Test angekündigt?** Einmal anbieten, 5 Übungsaufgaben zu machen (`assessment_center.md` 4) – als eigene Nachricht, nicht mit der Abschicken-Bestätigung zusammen.
+- Fahrplan (nur, wenn noch nicht gesagt): „Wenn die Einladung kommt: neuer Chat, Akte hochladen, ‚Gespräch üben‘ schreiben.“

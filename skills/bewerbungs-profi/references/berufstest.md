@@ -51,7 +51,7 @@ Danach **eine** Rahmenfrage (falls nicht bekannt): „Welcher Schulabschluss (od
 4. „Hast du schon Erfahrung (Job, Verein, Familie)?“ (optional)
 5. Praktikum: „Pflichtpraktikum für Schule/Studium oder freiwillig? Wie lange?“ (nur bei Praktikum)
 
-Dann 3 Vorschläge aus der Tabelle „Minijob/Nebenjob“ unten mit je einem Satz Begründung.
+Dann 3 Vorschläge aus der Tabelle „Minijob/Nebenjob“ unten mit je einem Satz Begründung. Die Kurzweg-Antworten kommen **wörtlich** in `profil.rohtext` und zählen später als Antworten (Verfügbarkeit, Erfahrung) – **nicht noch einmal fragen**.
 
 ## 4. Auswertung und 3 Vorschläge
 

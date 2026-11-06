@@ -11,7 +11,7 @@
 
 ## 1. Regeln für den Inhalt
 
-**Aufbau:** 1. Kopf (Name, Adresse, Telefon, seriöse E-Mail, LinkedIn nur wenn genannt) · 2. optional Kurzprofil (2–3 Zeilen, nur Fakten aus dem Profil) · 3. Berufserfahrung/Praktische Erfahrung **antichronologisch** · 4. Ausbildung/Studium/Schulbildung · 5. Praktika, Nebenjobs, Ehrenamt · 6. Kenntnisse (Sprachen mit Niveau, EDV konkret, Führerschein **nur wenn im Profil**) · 7. optional Interessen (was etwas aussagt). Einsteiger ohne Erfahrung: Schulbildung zuerst.
+**Aufbau:** 1. Kopf (Name, Adresse, Telefon, seriöse E-Mail, LinkedIn nur wenn genannt) · 2. optional Kurzprofil (2–3 Zeilen, nur Fakten aus dem Profil, mit `herkunft`) · 3. Berufserfahrung/Praktische Erfahrung **antichronologisch** · 4. Ausbildung/Studium/Schulbildung · 5. Praktika, Nebenjobs, Ehrenamt · 6. optional Projekte (private Projekte, nur seine Angaben) · 7. Kenntnisse (Sprachen mit Niveau, EDV konkret, Führerschein **nur wenn er es sagt** – nie aus der Anzeige) · 8. optional Interessen. Einsteiger ohne Erfahrung: Schulbildung zuerst. **Titel nicht aufwerten:** sagt er „Disposition“, steht da „Disposition“, nicht „Sachbearbeiterin Disposition“; „am Ende nur 3 %“ wird nicht zu „von 8 % auf 3 % gesenkt“.
 
 **Länge:** Schüler/Einsteiger 1 Seite, mit Berufserfahrung höchstens 2.
 
@@ -47,9 +47,10 @@ Zuordnung: `profil.stationen` → Erfahrung/Ehrenamt, `profil.bildung` → Schul
 
 1. `python3 "$S/fakten_check.py" /tmp/bewerbung/profil.json` → 0 ❌ (Monate/Dauern nur aus dem Wortlaut).
 2. **Kurzfassung im Chat** (Stationen je eine Zeile: Zeitraum · Titel · Ort; Kenntnisse in einer Zeile), offene [PRÜFEN] als Liste. „Passt das so? a) Ja, als PDF b) Ändern: …“ – **noch keine Datei**.
-3. Nach dem Ja: `python3 "$S/unterlagen_erstellen.py" /tmp/bewerbung/profil.json --nur lebenslauf` (Handy: `--nur-pdf`) → `Lebenslauf_Vorname_Nachname_AKTUELL.pdf` (+ .docx).
+3. Nach dem Ja: `python3 "$S/unterlagen_erstellen.py" /tmp/bewerbung/profil.json --nur lebenslauf` → `Lebenslauf_Vorname_Nachname_AKTUELL.pdf` (+ .docx; `--nur-pdf`, wenn er sicher am Handy ist).
 4. `fakten_check.py … /mnt/user-data/outputs/Lebenslauf_…_AKTUELL.pdf` (Abgleich) und `endcheck.py … --typ lebenslauf --profil …`. Seite als Bild ansehen (`pdftoppm -r 60 -png …pdf /tmp/ll`) – Foto, Umbrüche, eine Seite.
-5. Im Chat: „📁 Lebenslauf_…_AKTUELL.pdf – antippen → speichern.“ Leere untere Hälfte bei Einsteigern ist normal (kurz sagen).
+5. Im Chat die Datei mit den zwei Bedienzeilen (SKILL.md „Dateien und Bedienung“). Leere untere Hälfte bei Einsteigern ist normal (kurz sagen). Danach **direkt** den Anschreiben-Entwurf zeigen, wenn er schon „weiter“ gesagt hat – kein extra „weiter?“.
+6. **Kein Arbeitszeugnis** vom früheren Job? Einmal kurz sagen: Man kann es beim Arbeitgeber anfordern (auch nachträglich); bis dahin ohne.
 
 Kein python-docx/keine Installation: eingebauter docx-Skill, gleiches Layout, Texte 1:1 aus der JSON.
 

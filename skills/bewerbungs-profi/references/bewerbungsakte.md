@@ -16,6 +16,8 @@ python3 "$S/akte.py" /tmp/bewerbung/profil.json
 - **nicht mitten in Rollenspiel/Simulation/Übung** – dann direkt nach dem Feedback,
 - wenn der Nutzer aufhört oder der Chat lang wird (~20 Nachrichten).
 
+Sensible Details (Todesfall, Diagnose) stehen nie wörtlich in der Akte (`profil_json.md` 2).
+
 Ein Satz reicht: „📁 Akte gespeichert: Bewerbungsakte_…_184012.txt – speichern, im neuen Chat einfach hochladen.“ Beim ersten Mal zusätzlich: „Sie enthält deine Daten – privat speichern, nicht teilen.“ Gibt das Skript „Im neuen Chat zusätzlich hochladen: …“ aus (Zeugnisse, Foto), sag das einmal, wenn du einen neuen Chat empfiehlst.
 
 ## Fahrplan in Chats (Free-Plan)
@@ -26,15 +28,15 @@ Ein Satz reicht: „📁 Akte gespeichert: Bewerbungsakte_…_184012.txt – spe
 | Ohne Plan | Berufstest + Stelle finden | Profil + Unterlagen | Abschicken + Gespräch |
 | Einladung da | Bestätigen + Übersicht + Üben | (Runde 2 / AC-Übungen) | – |
 
-`meta.chat_plan` speichern. An jeder Etappen-Grenze: Akte speichern und **neuen Chat empfehlen**: „Starte jetzt einen neuen Chat, lade die Akte (.txt) hoch und schreib ‚Weiter mit meiner Bewerbung‘.“
+`meta.chat_plan` speichern. **Chatwechsel-Hinweis höchstens einmal** pro Chat, an einer echten Etappen-Grenze (z. B. nach dem Profil) – **nie kurz vor einem Ziel** (wenn die Unterlagen in 2–3 Nachrichten fertig wären: erst fertig machen) und nie in derselben Nachricht wie eine Freigabe-Frage. Text: „Starte jetzt einen neuen Chat, lade die Akte (.txt) hoch und schreib ‚Weiter mit meiner Bewerbung‘.“ Minijob/Probearbeiten: in der Regel **ein** Chat, kein Wechsel.
 
 ## Fortsetzung
 
-1. `python3 "$S/akte.py" --lesen /mnt/user-data/uploads/<Akte>.txt` → schreibt `/tmp/bewerbung/profil.json`, sucht Anlagen/Foto unter den neuen Uploads und nennt, was fehlt („📎 Bitte noch einmal hochladen …“) – anfordern, **wenn es gebraucht wird** (Gesamt-PDF, Lebenslauf mit Foto).
-2. Mehrere Akten? Die mit der jüngsten Zeit im Namen nehmen und kurz sagen, welche. Eine `Akte-Lesefassung_…pdf` hilft nicht (keine Daten) – um die `.txt` bitten.
+1. `python3 "$S/akte.py" --lesen /mnt/user-data/uploads` (Ordner genügt) → nimmt die neueste Akte, auch umbenannt („Bewerbungsakte (1).txt“), schreibt `/tmp/bewerbung/profil.json` und ordnet Anlagen/Foto unter den neuen Uploads zu – auch, wenn das Handy sie umbenannt hat („image(1).jpg“: gleicher Inhalt; „IMG_2041 (1).jpg“). Bei 🔗 „zugeordnet“ kurz bestätigen lassen. Was fehlt („📎 …“), erst anfordern, **wenn es gebraucht wird** (Gesamt-PDF, Lebenslauf mit Foto) – nicht für die Gesprächsvorbereitung.
+2. Eine `Akte-Lesefassung_…pdf` hilft nicht (keine Daten) – um die `.txt` bitten.
 3. In **2 Zeilen** sagen, wo er steht; nächsten Schritt nennen und **direkt loslegen**.
 4. Fristen oder Nachfass-Daten vorbei? Das zuerst ansprechen.
-5. Alte Akte (v1/v2 ohne Wortlaut): fehlende Fakten **nachfragen**, nicht aus alten Texten ableiten; neue Antworten in `profil.rohtext`.
+5. Alte Akte (v1/v2 ohne Wortlaut): fehlende Fakten **nachfragen**, nicht aus alten Texten ableiten; neue Antworten in `profil.rohtext`. Akte aus v3: vor der nächsten Freigabe `herkunft` für die Texte anlegen.
 
 ## Datenschutz
 

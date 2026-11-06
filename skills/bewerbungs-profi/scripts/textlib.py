@@ -19,7 +19,7 @@ import zipfile
 import xml.etree.ElementTree as ET
 
 W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
-AUSGABE_STD = "/mnt/user-data/outputs"
+AUSGABE_STD = os.environ.get("BP_AUSGABE", "/mnt/user-data/outputs")   # BP_AUSGABE nur für Tests
 
 # ---------------------------------------------------------------- Dateinamen
 _TRANS = {
@@ -47,8 +47,16 @@ def safe_name(s, maxlen=40, leer="unbenannt"):
             if len(kand) > maxlen:
                 break
             out = kand
-        s = out or s[:maxlen]
+        # nie mit „fuer“, „der“, „und“ … enden („Kauffrau-fuer“ wirkt abgeschnitten)
+        teile = out.split("-") if out else []
+        while len(teile) > 1 and teile[-1].lower() in _FUELLWORT:
+            teile.pop()
+        s = "-".join(teile) or s[:maxlen]
     return s or leer
+
+
+_FUELLWORT = {"fuer", "der", "die", "das", "den", "dem", "des", "und", "im", "in", "zur", "zum", "von", "vom", "mit",
+              "bei", "am", "an", "als", "auf", "aus", "nach", "oder", "fur", "a", "the", "of"}
 
 
 def name_teile(name):
@@ -134,6 +142,42 @@ def neueste_version(pfad):
     return pfad, n, n
 
 
+def aktuell_archivieren(pfad):
+    """Arbeitsdatei …_AKTUELL.pdf nach alt/…_vN verschieben (z. B. nachdem --einzeln die saubere Upload-Datei
+    gebaut hat) – so liegt am Handy nur EINE Datei je Unterlage im Ordner. → neuer Pfad oder None."""
+    ordner = os.path.dirname(os.path.abspath(pfad))
+    stamm, ext = os.path.splitext(os.path.basename(pfad))
+    basis, n = basis_und_version(stamm)
+    if n != N_AKTUELL or not os.path.isfile(pfad) or os.path.basename(ordner) == "alt":
+        return None
+    nr = _naechste_alt_nr(ordner, basis, (".pdf", ".docx", ".txt"))
+    alt = os.path.join(ordner, "alt")
+    os.makedirs(alt, exist_ok=True)
+    ziel = os.path.join(alt, f"{basis}_v{nr}{ext}")
+    shutil.move(pfad, ziel)
+    return ziel
+
+
+def versandkopien_weg(ordner, wort, name):
+    """Neue Fassung erzeugt → alte saubere Upload-Kopien (Lebenslauf_Vorname_Nachname.pdf,
+    Anschreiben_und_Anlagen_….pdf aus --einzeln/--buendeln) nach alt/, damit keine veraltete Datei neben der
+    neuen liegt. → Liste der verschobenen Dateinamen."""
+    weg = []
+    if not os.path.isdir(ordner):
+        return weg
+    muster = re.compile(rf"^{re.escape(wort)}(_und_Anlagen)?_{re.escape(name)}(_\d+)?\.pdf$")
+    for f in os.listdir(ordner):
+        if muster.match(f):
+            alt = os.path.join(ordner, "alt")
+            os.makedirs(alt, exist_ok=True)
+            stamm, n = os.path.splitext(f)[0], 1
+            while os.path.exists(os.path.join(alt, f"{stamm}_alt{n}.pdf")):
+                n += 1
+            shutil.move(os.path.join(ordner, f), os.path.join(alt, f"{stamm}_alt{n}.pdf"))
+            weg.append(f)
+    return weg
+
+
 def version_text(n):
     return "aktuell" if n >= N_AKTUELL else f"v{n}"
 
@@ -166,8 +210,133 @@ def lade_profil(pfad):
         raise RuntimeError(f"JSON ungültig (Zeile {e.lineno}, Spalte {e.colno}): {e.msg}")
 
 
+# ---------------------------------------------------------------- Normalisierungs-Wörterbuch (v4)
+# Was Nutzer schreiben („fachabi“, „fsj“, „papa“, „str.“, „20h“, „febuar“) und was in den Unterlagen steht.
+# Gilt in BEIDE Richtungen: steht die Kurzform im Wortlaut, ist die Langform belegt – und umgekehrt.
+# Nur echte Gleichbedeutungen – keine Aufwertungen (aus „bisschen“ wird hier kein „gute Kenntnisse“).
+NORMALISIERUNG = {
+    "abi": ["abitur", "allgemeine hochschulreife"],
+    "abitur": ["allgemeine hochschulreife", "abi"],
+    "allgemeine hochschulreife": ["abitur", "abi"],
+    "fachabi": ["fachabitur", "fachhochschulreife"],
+    "fachabitur": ["fachhochschulreife", "fachabi"],
+    "fachhochschulreife": ["fachabitur", "fachabi"],
+    "fhr": ["fachhochschulreife"],
+    "quali": ["qualifizierender mittelschulabschluss", "qualifizierender abschluss der mittelschule", "qualifizierender hauptschulabschluss"],
+    "qualifizierender mittelschulabschluss": ["quali"],
+    "msa": ["mittlerer schulabschluss", "mittlere reife"],
+    "m10": ["mittlerer schulabschluss", "mittlere reife"],
+    "mittlere reife": ["mittlerer schulabschluss", "realschulabschluss", "msa"],
+    "realschulabschluss": ["mittlere reife", "mittlerer schulabschluss"],
+    "mittlerer schulabschluss": ["mittlere reife", "msa", "realschulabschluss"],
+    "fsj": ["freiwilliges soziales jahr"], "freiwilliges soziales jahr": ["fsj"],
+    "föj": ["freiwilliges ökologisches jahr"], "foej": ["freiwilliges ökologisches jahr"],
+    "bfd": ["bundesfreiwilligendienst"], "bufdi": ["bundesfreiwilligendienst"], "bundesfreiwilligendienst": ["bfd"],
+    "zfa": ["zahnmedizinische fachangestellte", "zahnmedizinischer fachangestellter"],
+    "mfa": ["medizinische fachangestellte", "medizinischer fachangestellter"],
+    "kfz": ["kraftfahrzeug"], "pkw": ["personenkraftwagen"], "lkw": ["lastkraftwagen"],
+    "bio": ["biologie"], "mathe": ["mathematik"], "reli": ["religion"], "geo": ["geographie", "geografie"],
+    "info": ["informatik"], "chemie": ["chemie"], "physik": ["physik"], "wirtschaft": ["wirtschaft"],
+    "engl": ["englisch"], "franz": ["französisch"], "frz": ["französisch"], "span": ["spanisch"],
+    "lk": ["leistungskurs"], "gk": ["grundkurs"], "ag": ["arbeitsgemeinschaft"],
+    "fos": ["fachoberschule"], "bos": ["berufsoberschule"], "gym": ["gymnasium"], "gymi": ["gymnasium"],
+    "rs": ["realschule"], "ms": ["mittelschule"], "gs": ["grundschule"], "bs": ["berufsschule"],
+    "fh": ["fachhochschule", "hochschule"], "th": ["technische hochschule", "hochschule"],
+    "uni": ["universität", "hochschule"], "tu": ["technische universität", "universität"],
+    "hochschule": ["fachhochschule", "technische hochschule"],
+    "bwl": ["betriebswirtschaftslehre", "betriebswirtschaft"], "vwl": ["volkswirtschaftslehre"],
+    "wiwi": ["wirtschaftswissenschaften"], "wing": ["wirtschaftsingenieurwesen"],
+    "azubi": ["auszubildende", "auszubildender", "ausbildung"], "praxissemester": ["praktikum"],
+    "b.a.": ["bachelor of arts"], "bachelor of arts": ["b.a."], "b.sc.": ["bachelor of science"],
+    "bachelor of science": ["b.sc."], "b.eng.": ["bachelor of engineering"], "bachelor of engineering": ["b.eng."],
+    "m.a.": ["master of arts"], "master of arts": ["m.a."], "m.sc.": ["master of science"], "master of science": ["m.sc."],
+    "ll.b.": ["bachelor of laws"], "bachelor of laws": ["ll.b."],
+    "papa": ["vater"], "papi": ["vater"], "mama": ["mutter"], "mami": ["mutter"], "vater": ["papa"], "mutter": ["mama"],
+    "oma": ["großmutter"], "opa": ["großvater"], "bro": ["bruder"], "sis": ["schwester"],
+    "lappen": ["führerschein"], "b-schein": ["führerschein klasse b"], "autoführerschein": ["führerschein klasse b"],
+    "str.": ["straße"], "str": ["straße"], "straße": ["str."], "strasse": ["straße"],
+    "pl.": ["platz"], "nr.": ["nummer"], "hbf": ["hauptbahnhof"], "min": ["minuten"], "min.": ["minuten"],
+    "std": ["stunden"], "std.": ["stunden"], "km": ["kilometer"], "ca.": ["etwa", "circa"],
+    "ehrenamtlich": ["ehrenamt"], "ehrenamt": ["ehrenamtlich"],
+    "minijob": ["aushilfe", "geringfügige beschäftigung"], "aushilfe": ["aushilfskraft"],
+    "nebenjob": ["aushilfe"], "werkstudi": ["werkstudent", "werkstudentin"],
+    "office": ["word", "excel", "powerpoint", "ms office", "microsoft office"],
+    "ms office": ["microsoft office", "word", "excel", "powerpoint"],
+    "pc": ["computer"], "laptop": ["computer"], "erste hilfe": ["ersthelfer"], "ersthelfer": ["erste hilfe"],
+}
+# Rückrichtung automatisch: steht die Langform im Wortlaut, ist auch die Kurzform belegt
+for _k, _werte in list(NORMALISIERUNG.items()):
+    for _v in _werte:
+        NORMALISIERUNG.setdefault(_v, [])
+        if _k not in NORMALISIERUNG[_v]:
+            NORMALISIERUNG[_v].append(_k)
+# Monatsnamen inkl. typischer Tippfehler
+MONATE_NORM = {
+    "januar": 1, "jänner": 1, "janur": 1, "januat": 1, "jan": 1, "februar": 2, "febuar": 2, "februrar": 2, "feburar": 2,
+    "feber": 2, "febr": 2, "feb": 2, "märz": 3, "maerz": 3, "marz": 3, "mär": 3, "mrz": 3, "april": 4, "apirl": 4,
+    "apr": 4, "mai": 5, "juni": 6, "jun": 6, "juli": 7, "jul": 7, "august": 8, "augsut": 8, "aug": 8,
+    "september": 9, "septemer": 9, "spetember": 9, "sept": 9, "sep": 9, "oktober": 10, "oktbober": 10, "okt": 10,
+    "november": 11, "novmber": 11, "nov": 11, "dezember": 12, "dezemer": 12, "dez": 12}
+
+
+def normalisiere_nutzertext(t):
+    """Nutzer-Wortlaut → Wortlaut + Ergänzungszeilen aus dem Wörterbuch (Kurz-/Langformen, Tippfehler bei
+    Monaten, „20h“ → „20 Stunden“, „29-31k“ → „29.000 31.000“). Das Original bleibt vollständig erhalten."""
+    t = t or ""
+    low = t.lower()
+    extra = []
+    for k, werte in NORMALISIERUNG.items():
+        if re.search(r"(?<![\wäöüß])" + re.escape(k) + (r"(?![\wäöüß])" if k[-1].isalnum() else ""), low):
+            extra += werte
+    for m in re.finditer(r"(?<![\w.,])(\d{1,3})\s*(?:h|std\.?|stunden?)(?![\wäöü])(?:\s*(?:/|pro|die|in der)\s*(?:woche|wo|w)\b)?", low):
+        extra.append(f"{m.group(1)} Stunden")
+        if re.search(r"/\s*w|woche|pro wo", m.group(0)):
+            extra.append(f"{m.group(1)} Stunden pro Woche {m.group(1)} Std./Woche")
+    for m in re.finditer(r"(?<![\w.,])(\d{1,3})(?:[.,](\d))?\s*(?:-|–|bis)?\s*(\d{1,3})?(?:[.,](\d))?\s*k\b", low):
+        for zahl, nach in ((m.group(1), m.group(2)), (m.group(3), m.group(4))):
+            if zahl:
+                wert = int(zahl) * 1000 + (int(nach) * 100 if nach else 0)
+                extra.append(f"{wert:,}".replace(",", "."))
+    woerter = set(re.findall(r"[a-zäöüß]+", low))
+    ersatz = {}
+    for w in woerter:
+        if w in MONATE_NORM:
+            if w not in _MONAT_STANDARD:
+                ersatz[w] = _MONAT_STANDARD_NAME[MONATE_NORM[w]]
+        elif len(w) >= 6:
+            for mon, nr in _MONAT_STANDARD_NAME.items():
+                if len(nr) >= 6 and _ein_fehler(w, nr):
+                    ersatz[w] = nr
+                    break
+    if ersatz:
+        neu = low
+        for w, n in ersatz.items():
+            neu = re.sub(r"(?<![a-zäöüß])" + re.escape(w) + r"(?![a-zäöüß])", n, neu)
+        extra.append(neu)
+    if not extra:
+        return t
+    return t + "\n" + "\n".join(dict.fromkeys(extra))
+
+
+_MONAT_STANDARD_NAME = {1: "januar", 2: "februar", 3: "märz", 4: "april", 5: "mai", 6: "juni", 7: "juli", 8: "august",
+                        9: "september", 10: "oktober", 11: "november", 12: "dezember"}
+_MONAT_STANDARD = set(_MONAT_STANDARD_NAME.values()) | {"jan", "feb", "apr", "jun", "jul", "aug", "sep", "sept", "okt",
+                                                        "nov", "dez", "jänner", "maerz", "mär"}
+
+
+def _ein_fehler(a, b):
+    """Levenshtein-Abstand ≤ 1 (für Tippfehler in Monatsnamen)."""
+    if a == b or abs(len(a) - len(b)) > 1:
+        return a == b
+    if len(a) == len(b):
+        diff = [i for i in range(len(a)) if a[i] != b[i]]
+        return len(diff) == 1 or (len(diff) == 2 and diff[1] == diff[0] + 1 and a[diff[0]] == b[diff[1]] and a[diff[1]] == b[diff[0]])
+    k, l = (a, b) if len(a) < len(b) else (b, a)
+    return any(l[:i] + l[i + 1:] == k for i in range(len(l)))
+
+
 # ---------------------------------------------------------------- Wortlaut (v3)
-JA_RE = re.compile(r"^\s*(ja|jap|jep|jo|joa|yes|genau|stimmt|passt|richtig|korrekt|ok|okay|jawohl|klar)\b", re.I)
+JA_RE = re.compile(r"^\s*(ja|jap|jep|jo|joa|yes|genau|stimmt|passt|richtig|korrekt|ok|okay|jawohl|klar|👍)", re.I)
 
 
 def rohtext_eintraege(d):
@@ -182,7 +351,20 @@ def rohtext_eintraege(d):
             out.append({"nr": i, "frage": "", "antwort": e})
         elif isinstance(e, dict):
             out.append({"nr": e.get("nr", i), "frage": e.get("frage", ""), "antwort": e.get("antwort", "") or "",
-                        "bestaetigt": e.get("bestaetigt", ""), "optionen": e.get("optionen") or {}})
+                        "bestaetigt": e.get("bestaetigt", ""), "optionen": e.get("optionen") or {},
+                        "geklaert": e.get("geklaert", False), "sensibel": e.get("sensibel", False)})
+    return out
+
+
+def unklare_antworten(d):
+    """Antworten mit „glaub schon“, „b2 glaub ich“, „vielleicht“ …, die noch nicht per Ja/Nein geklärt sind."""
+    out = []
+    for e in rohtext_eintraege(d):
+        a = e["antwort"]
+        if e.get("geklaert") or e.get("sensibel") or len(a) > 160:
+            continue
+        if re.search(r"(glaub|vielleicht|ungefähr|irgendwie|oder so|denk schon|müsste|keine ahnung|weiß nicht genau)", a, re.I):
+            out.append(e)
     return out
 
 
@@ -191,7 +373,9 @@ def wortlaut(d):
     + bei Auswahlfragen der Text der gewählten Optionen ({"optionen": {"a": "Übernahme", …}}, Antwort „a und b“)."""
     teile = []
     for e in rohtext_eintraege(d):
-        teile.append(e["antwort"])
+        if e.get("sensibel"):
+            continue          # sensible Details (Todesfall, Diagnose …) sind kein Beleg für Unterlagen
+        teile.append(normalisiere_nutzertext(e["antwort"]))
         gewaehlt = set(re.findall(r"(?<![\w])([a-f])(?![\w])", e["antwort"].lower()))
         for k, v in (e.get("optionen") or {}).items():
             if str(k).lower() in gewaehlt:

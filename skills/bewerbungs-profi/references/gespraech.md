@@ -14,8 +14,10 @@
 
 ## 0. Termin bestätigen (eigener Schritt)
 
-Einladung bekommen und `gespraech.bestaetigt` ist nicht `true`? Dann ist das die **erste und einzige** Sache dieser Nachricht: Einladung ganz in `gespraech.einladung_text`, Termin/Art/Ort/Gesprächspartner in `gespraech`, dann eine kurze Bestätigungs-Mail (3 Sätze: Dank, Termin bestätigen, ggf. eine Frage zu Ablauf/Ort/Mitbringen) im Chat zum Kopieren und:
-„Hast du sie abgeschickt? a) Ja b) Mach ich später“. Frist der Einladung beachten, sonst innerhalb von 1–2 Tagen. **Erst in der nächsten Nachricht** Übersicht und Übungsangebot (Konfliktregel).
+Einladung ganz in `gespraech.einladung_text`, Termin/Art/**Ort genau wie in der Einladung** („Filiale am Ludwigsplatz“)/Gesprächspartner in `gespraech`.
+- **Schon zugesagt** („hab mit 👍 geantwortet“, „hab angerufen“, „passt, komme“) → `bestaetigt: true`, **keine** zweite Bestätigungsrunde; direkt weiter mit der Übersicht. Nur wenn die Einladung eine schriftliche Bestätigung verlangt, einen Satz zum Kopieren anbieten.
+- **Telefonische Einladung:** keine Bestätigungs-Mail nötig; nur Termin, Ort, Ansprechperson notieren lassen (eine Frage, falls etwas fehlt).
+- **Noch nicht zugesagt:** eine Nachricht nur dafür: kurze Bestätigung (3 Sätze, Codeblock) + „Abgeschickt? a) Ja b) Später“. Frist beachten. Erst danach Übersicht und Übungsangebot.
 
 ## 1. Gespräch, Probearbeiten oder Assessment Center?
 
@@ -39,11 +41,26 @@ Aus Akte/JSON: Stelle, Unterlagen, `profil.beispiele`. Fehlt etwas: höchstens e
 Verhalten: 10 Min. Puffer, eine Stufe schicker als üblich, Stichpunkte statt auswendig, bei Blackout durchatmen und nachfragen.
 Unzulässig (z. B. Schwangerschaft, Kinderwunsch, Kinderbetreuung, Religion): freundlich nachfragen, worum es geht – du musst nicht antworten.
 ```
-Dann: „Wollen wir üben? a) Ja, kurze Runde – 5 Fragen (Empfohlen am Handy) b) Ja, volle Runde – 8 Fragen c) Erst den Spickzettel“.
+Dann: „Wollen wir üben? a) Ja, kurze Runde – 5 Fragen (Empfohlen) b) Volle Runde – 8 Fragen c) Erst den Spickzettel“. Die „1–2 Min.“ in Punkt 3 durch die Dauer aus der Einladung ersetzen.
 
-**Spickzettel** (`akte.py … --spickzettel [--pdf]`) – gegliedert, kurz, sachlich, ohne leere Felder und ohne interne Vermerke:
-`Termin | Art | Ort` · Mitbringen (aus der Einladung, sonst passend zur Art) · **3 Kernbotschaften** (`gespraech.kernbotschaften`, je ein Satz aus seinen Antworten) · Vorstellung · **Schwierige Fragen mit Antwort** (`schwierige_fragen`; Lücken, Abbruch, Wechselgrund kommen automatisch dazu; nach dem Üben gilt die **verbesserte** Fassung aus `feedback[].besser`) · Beispiele · **nur die eigenen Fragen, die der Nutzer gewählt hat** (`eigene_fragen[{frage, gewaehlt: true}]`) · Tipps passend zu Präsenz/Video/Telefon/Probearbeiten/AC.
-Schreib die Felder in sachlicher Sprache („Frau Gruber“, nicht „der Gruber“). Vorher `python3 "$S/fakten_check.py" /tmp/bewerbung/profil.json --typ spickzettel` → 0 ❌ (z. B. keine „8 Jahre“ bei 7,5).
+### Spickzettel (`akte.py PROFIL --spickzettel --pdf`)
+
+Klare Datenstruktur in `gespraech` – das Skript baut daraus eine **kompakte A5-PDF** (am Handy lesbar, keine fast leere Seite 2; `--a4` zum Drucken) und eine `.txt`:
+
+| Feld | Inhalt |
+|---|---|
+| `anrede` | `du` oder `sie` (siezt der Nutzer → `sie`; alle Überschriften passen sich an) |
+| `kernbotschaften[]` | 3 Sätze aus seinen Antworten, **ohne** eigene Nummerierung |
+| `vorstellung{dauer_min, kernpunkte[]}` | Dauer **aus der Einladung** (3/5 Min.); fehlt sie, liest das Skript die Einladung, sonst 1–2 Min. |
+| `schwierige_fragen[{frage, antwort_final}]` | **nur echte Fragen** mit der **finalen** Antwort in seinen Worten (Ich-Form). Kein Feedback, keine Übungsnamen, keine Notizen, kein Rohtext von Wechsel-/Abbruchgrund – die schreibst du als fertige Antwort aus. Lücke/Abbruch/Wechsel nicht automatisch: das Skript erinnert dich. |
+| `fachfragen[{frage, antwort_final}]` | 2–3 Fachfragen zur Stelle mit seiner Antwort |
+| `gehalt{antwort_final}` | Spanne mit Quelle; offen (`[PRÜFEN]`) → steht als „noch offen – vor dem Termin klären“ drauf, **nie still weg** |
+| `eigene_fragen[{frage, gewaehlt}]` | nur die gewählten |
+| `mitbringen[]` | aus der Einladung (sonst Standard je Art) |
+| `ac_uebungen[{typ, titel, dauer_min}]` | `typ`: selbstpraesentation · praesentation · fallstudie · gruppe · postkorb · rollenspiel · interview · test → passender Tipp (Selbstpräsentation ≠ Fallstudie) |
+| `feedback[]` | **intern**, nie auf dem Spickzettel |
+
+Das Skript meldet dir: Ort/Termin ≠ Einladung, offene Gehaltsfrage, Antworten mit internem Vermerk oder in 3. Person. Vorher `python3 "$S/fakten_check.py" /tmp/bewerbung/profil.json --typ spickzettel` → 0 ❌. Nach dem Erzeugen die PDF als Bild ansehen.
 
 Neue STAR-Geschichten, die beim Üben entstehen, **wörtlich** in `profil.rohtext` und dann in `profil.beispiele`. **Akte nicht mitten in der Übung**, sondern direkt nach dem Feedback.
 
@@ -60,7 +77,7 @@ Neue STAR-Geschichten, die beim Üben entstehen, **wörtlich** in `profil.rohtex
 - **Telefon:** ruhiger Ort, im Stehen sprechen, lächeln, Lebenslauf und Notizen vor sich, Namen notieren. Oft kürzer und eine Vorauswahl – Selbstpräsentation in 1 Minute.
 - **Video:** Technik vorher testen (Link, Kamera, Ton, Akku/Strom, WLAN), helles Licht von vorn, ruhiger Hintergrund, Kamera auf Augenhöhe (Handy auf Stapel Bücher, quer), **in die Kamera schauen**, Benachrichtigungen aus, Telefonnummer für Technikprobleme bereit. Kleidung wie vor Ort.
 - **Zeitversetztes Video** (Fragen aufzeichnen): selten; Antworten wie im Gespräch, auf die Zeit achten.
-- **Probearbeiten / Probetag (5a):** üblich in Handwerk, Gastro, Pflege, Kita, Handel. Klären (eine Frage, falls nicht in der Einladung): Dauer, Kleidung/Schuhe, was mitbringen, Bezahlung. Hinweis: Ein kurzes unbezahltes „Einfühlungsverhältnis“ (meist wenige Tage, ohne Arbeitspflicht) ist üblich; wird richtig mitgearbeitet, steht in der Regel Lohn zu – bei Unsicherheit allgemein einordnen und auf Beratung (Gewerkschaft, IHK/HWK) verweisen. Tipps: pünktlich, mit anpacken, Fragen stellen, am Ende nach Rückmeldung fragen. Spickzettel mit `gespraech.art = "Probearbeiten"`.
+- **Probearbeiten / Probetag (5a) – Kurzpfad:** üblich in Handwerk, Gastro, Pflege, Kita, Handel. **Eine** Übersicht (≤ 10 Zeilen: Datum, Uhrzeit, Ort laut Einladung, Kleidung, 3 Tipps, Bezahlung in einem Satz), dann „Zwei kurze Übungsfragen? a) Ja b) Nein, passt“ – **max. 2 Fragen** (z. B. „Warum bei uns?“, „Was machst du bei einer langen Schlange?“). Bezahlung: Ein kurzes unbezahltes „Einfühlungsverhältnis“ (wenige Tage, ohne Arbeitspflicht) ist üblich; wird richtig mitgearbeitet, steht in der Regel Lohn zu – allgemein einordnen, Beratung (Gewerkschaft, IHK/HWK) nennen. Spickzettel nur auf Wunsch (`gespraech.art = "Probearbeiten"`).
 - **Technisches/Fach-Interview** (IT, Technik, Labor, Handwerk): Fachfragen zu Muss-Anforderungen der Anzeige, oft eine kleine Aufgabe (Code, Rechnung, Fehlersuche). Üben: 3–4 Fachfragen zu den Schlüsselwörtern, **laut denken** („Ich würde zuerst … prüfen, weil …“), Nichtwissen ehrlich sagen und den Lösungsweg zeigen. Keine Fakten über die echte Firmentechnik erfinden.
 
 ## 6. Üben: Simulation
@@ -69,7 +86,8 @@ Kurz ankündigen (2 Sätze): „Ich bin jetzt [Frau Sommer] von [Firma]. Eine Fr
 
 - **Eine Frage pro Nachricht**, „Frage 3 von 8“ (bzw. „von 5“), in der Rolle, kurze Reaktionen. **Kein Hinweis-Block, kein Feedback** während der Runde (außer bei „Tipp“).
 - **Volle Runde 8 Fragen**, passend zu Stelle und Lebenslauf: 1 Über sich · 2 Warum dieser Beruf/diese Stelle · 3 Warum wir · 4 konkrete Station oder Lücke/Wechsel · 5 Verhaltensfrage zu einer Muss-Anforderung (STAR) · 6 Stärken/Schwächen · 7 fachlich/situativ (bei Azubis einfach) · 8 Stressfrage oder Rahmen, dann „Haben Sie Fragen an uns?“ (antworte plausibel, **ohne** Fakten über die echte Firma zu erfinden).
-- **Kurze Runde = genau diese 5:** 1 Über sich · 2 Warum diese Stelle/Firma · 4 Station/Lücke/Wechsel · 5 Verhaltensfrage (STAR) · 6 Stärken/Schwächen – dann „Haben Sie Fragen an uns?“.
+- **Kurze Runde = genau diese 5:** 1 Über sich · 2 Warum diese Stelle/Firma · 4 Station/Lücke/Wechsel · 5 Verhaltensfrage (STAR) · 6 Stärken/Schwächen – dann „Haben Sie Fragen an uns?“. Minijob/Probearbeiten: 2 Fragen.
+- **„stopp“, „reicht“, „fertig“** beendet sofort: aus der Rolle, **Kurzfeedback** (1 Stärke, 1 Tipp, je 1 Satz), dann **eine** Frage (z. B. Spickzettel ja/nein). Beantworte Zusatzfragen („und bezahlt?“) kurz in derselben Nachricht.
 - Optional nach Absprache: eine unzulässige Frage einbauen (vorher ankündigen).
 - Ein-Wort-Antwort: einmal in der Rolle nachhaken.
 - Am Handy/Free-Plan: die kurze Runde empfehlen.
@@ -86,4 +104,4 @@ Nach der letzten Frage aus der Rolle gehen, **eine** Nachricht:
 ➡️ Als Nächstes: Runde 2 oder nur die roten Fragen.
 👉 Du jetzt: „Runde 2“, „nur die roten“ oder „fertig“.
 ```
-Verbesserungen nur mit Fakten des Nutzers; keine Noten, keine Garantie. Die verbesserte Antwort je Frage als `gespraech.feedback[{frage, besser}]` speichern (landet so im Spickzettel), dann `akte.py`. Runde 2: andere Fragen, Vergleich zu Runde 1. Im Feedback keine gerundeten Dauern („seit 2010“ statt „12 Jahre“).
+Verbesserungen nur mit Fakten des Nutzers – **keine erfundenen Gegenmaßnahmen** zu Schwächen („…was du dagegen tust“ fragen statt ausdenken). Übernimmt er eine Verbesserung („passt so“), trägst du sie als `schwierige_fragen[{frage, antwort_final}]` ein; `feedback` bleibt intern. Dann `akte.py`. Runde 2: andere Fragen. Keine gerundeten Dauern („seit 2010“ statt „12 Jahre“).

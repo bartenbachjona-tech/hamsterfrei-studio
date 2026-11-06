@@ -1,20 +1,26 @@
 #!/usr/bin/env python3
-"""Fakten-Check v3: Steht in den Unterlagen etwas, das der Nutzer NICHT gesagt hat
-(und das nicht in Anzeige, Einladung oder seinen Uploads steht)?
+"""Fakten-Check v4: Steht in den Unterlagen etwas, das der Nutzer NICHT gesagt hat
+(und das nicht in Anzeige, Einladung oder seinen Uploads steht)? Prüft außerdem die Satz-Herkunft
+(herkunft.py: jeder Satz über die Person ↔ Antwort-Nr. + wörtliches Zitat).
 
     python3 fakten_check.py PROFIL.json                  → prüft lebenslauf/anschreiben/formular/email der JSON
     python3 fakten_check.py PROFIL.json DATEI [DATEI …]  → zusätzlich die Dateien (.pdf/.docx/.txt) + Abgleich
                                                            Datei = freigegebener JSON-Text
     python3 fakten_check.py PROFIL.json --typ spickzettel [DATEI]  → Spickzettel (ohne Datei: aus der JSON gebaut)
-    Optionen: --anzeige ANZEIGE.txt · --quelle UPLOAD.pdf (weitere Belegquellen) · --woher (Woher-Liste für
-              die Freigabe-Nachricht) · --kurz (nur ❌)
+    Optionen: --anzeige ANZEIGE.txt · --quelle UPLOAD.pdf (weitere Belegquellen) · --woher (Woher-Liste aus
+              profil.herkunft für die Freigabe-Nachricht) · --kurz (nur ❌)
 
 BELEGE (v3 – Wortlaut-Prinzip): NICHT die Profil-Felder, die Claude selbst füllt, sondern
   1. profil.rohtext – die Antworten des Nutzers im Wortlaut ({"nr", "frage", "antwort", "bestaetigt"}).
      „bestaetigt“ zählt nur, wenn die Antwort ein klares „ja“ ist und der Wert wörtlich in der Frage stand.
   2. Anzeige (ziel.anzeige_text, --anzeige), Einladung (gespraech.einladung_text), zugestimmte Firmenfakten
   3. Uploads mit Text (profil.anlagen[].datei, profil.quellen[], --quelle) – Zeugnisse, alter Lebenslauf
-  4. belege[] mit Pflicht-Zitat {"text", "woher", "zitat"}: das Zitat muss wörtlich in 1–3 stehen
+  4. belege[] mit Pflicht-Zitat {"text", "woher", "zitat"}: das Zitat muss wörtlich in 1–3 stehen UND den
+     Wert tragen (jede Zahl/jedes Datum/jeder Abschluss im text muss aus dem Zitat folgen)
+Normalisierungs-Wörterbuch (textlib.NORMALISIERUNG): fachabi ↔ Fachhochschulreife, fsj ↔ Freiwilliges Soziales
+Jahr, papa ↔ Vater, str. ↔ Straße, B.A. ↔ Bachelor of Arts, „20h“ → 20 Std., „29-31k“ → 29.000/31.000,
+Monatsnamen mit Tippfehlern, „april 25“, „märz bis august 24“, „31. August 2027“ = 31.08.2027 – ohne belege.
+Lebenslauf: nur der Nutzer-Wortlaut zählt (Anzeige belegt nichts über die Person).
 Dauern („drei Jahre“) zählen nur aus dem Nutzer-Wortlaut oder als Rechnung aus belegten Zeiträumen
 („10/2023 – 09/2026“ = 2 J. 11 M.); Zahlen aus der Anzeige belegen keine Dauer über den Nutzer.
 
@@ -66,14 +72,6 @@ AUFWERTUNG = ["geleitet", "leitung", "leitete", "projektleitung", "verantwortlic
               "koordiniert", "geführt", "führung", "teamleitung", "filialverantwortung", "managed", "gemanagt",
               "maßgeblich", "federführend", "strategisch", "betreut", "verbessert", "ausgebildet", "eingearbeitet",
               "eingelernt", "selbstständig", "selbständig", "erfolgreich"]
-# Motivations-/Gefühls-/Eigenschaftsmarker (weiche Erfindungen)
-MARKER = ["möchte", "möchten", "spaß", "begeister", "genau so", "genau das", "schon immer", "leidenschaft", "oft",
-          "täglich", "kein problem", "liebe es", "faszinier", "macht mir", "am liebsten", "von klein auf", "traumberuf",
-          "erfüllt mich", "gefällt mir"]
-EIGENSCHAFT = ["zuverlässig", "pünktlich", "sorgfältig", "ordentlich", "geduldig", "belastbar", "teamfähig", "flexibel",
-               "kommunikativ", "hilfsbereit", "strukturiert", "organisiert", "verantwortungsbewusst", "motiviert",
-               "lernbereit", "freundlich", "kreativ", "ehrgeizig", "fleißig", "gewissenhaft",
-               "empathisch", "einfühlsam", "kontaktfreudig", "durchsetzungsstark", "stressresistent"]
 FIRMEN_RE = re.compile(r"\b([A-ZÄÖÜ][\wÄÖÜäöüß&.\-]*(?:[ \t]+[A-ZÄÖÜ&][\wÄÖÜäöüß&.\-]*){0,3})[ \t]+"
                        r"(gGmbH|GmbH|AG|KG|SE|e\.\s?V\.|GbR|OHG|UG|mbH|KGaA)(?![\wÄÖÜäöüß])")
 AKRONYM_RE = re.compile(r"\b([A-ZÄÖÜ]{2,}[0-9]*|[A-Z][a-z]+[A-Z][A-Za-z]+)\b")
@@ -114,6 +112,10 @@ gehaltsvorstellung gehalt verfügbarkeit wochenstunden arbeitszeit bewerbungsweg
 rückmeldung anhang gesprächspartner gesprächspartnerin ansprechpartner ansprechpartnerin hiermit sehr gut gute neue neuen erste ersten letzte letzten nächste nächsten
 aushilfe aushilfen mitarbeiter mitarbeiterin praktikant praktikantin werkstudent werkstudentin azubi azubis
 auszubildende auszubildender helfer helferin minijobber schülerpraktikum ferienjob nebenjob teilzeit vollzeit
+haus praxis filiale markt laden geschäft kita kanzlei büro werkstatt kantine zentrale standort
+zertifikate zertifikat scheine schein sonstiges sonstige weitere weiterbildung weiterbildungen führerschein software
+it-kenntnisse edv-kenntnisse sprachkenntnisse fähigkeiten stärken projekte schwerpunkte tätigkeiten aufgaben
+vater mutter eltern oma opa bruder schwester cousine cousin tante onkel
 """.split()
 STANDARD = {textlib.translit(w) for w in _STANDARD_ROH}
 NOMEN_ENDUNG = re.compile(r"(ung|ungen|heit|heiten|keit|keiten|schaft|schaften|tion|tionen|tät|täten|nis|nisse|tum|ment|"
@@ -122,7 +124,7 @@ NOMEN_ENDUNG = re.compile(r"(ung|ungen|heit|heiten|keit|keiten|schaft|schaften|t
                           r"leute|team|teams|ware|waren|halle|lager|dienst|beruf|berufe|fach|fächer|kasse|kurs|kurse)$")
 GRUSS_RE = re.compile(r"^\s*(mit\s+)?(freundlichen|freundliche|beste[n]?|viele[n]?|herzliche[n]?|liebe[n]?|sonnige)\s+gr(ü|ue)(ß|ss)(e|en)\b", re.I)
 IGNORIER_ZEILE = re.compile(r"^\s*(Anlagen?\s*:|===.*===\s*$|Betreff\s*:)", re.I)
-MAXZ_RE = re.compile(r"\(?\s*max\.?\s*\d+\s*(Zeichen|Wörter|Worte)\s*\)?", re.I)
+MAXZ_RE = re.compile(r"\(?\s*max\.?\s*\d{1,3}(?:[.\s]\d{3})*\s*(Zeichen|Wörter|Worte)\s*\)?", re.I)
 
 
 # ---------------------------------------------------------------- Hilfen
@@ -196,6 +198,8 @@ class Belege:
     def daten(t, nutzer=False):
         for m in re.finditer(r"\b(\d{1,2})\.(\d{1,2})\.(\d{2,4})\b", t):
             yield jahr2(m.group(3)), int(m.group(2)), int(m.group(1))
+        for m in re.finditer(r"\b(\d{1,2})\.\s*(" + MON_RE + r")\.?\s+(\d{4})\b", t, re.I):   # „31. August 2027“
+            yield int(m.group(3)), MONATE[m.group(2).lower()], int(m.group(1))
         for m in re.finditer(r"\b(\d{1,2})\s*[/.]\s*(\d{4})\b", t):
             if 1 <= int(m.group(1)) <= 12:
                 yield int(m.group(2)), int(m.group(1)), None
@@ -203,9 +207,23 @@ class Belege:
             yield int(m.group(2)), MONATE[m.group(1).lower()], None
         for m in re.finditer(r"(?<![\d./])((?:19|20)\d{2})(?![\d])", t):
             yield int(m.group(1)), None, None
-        if nutzer:   # Nutzer schreiben „seit märz 25“, „juli 24“, „03/25“, „ab dezember“
+        if nutzer:   # Nutzer schreiben „seit märz 25“, „juli 24“, „03/25“, „ab dezember“, „märz bis august 24“
             for m in re.finditer(r"\b(" + MON_RE + r")\.?\s+'?(\d{2})\b(?![.:\d])", t, re.I):
                 yield jahr2(m.group(2)), MONATE[m.group(1).lower()], None
+            for m in re.finditer(r"\b(" + MON_RE + r")\.?\s*(?:bis|-|–|und)\s*(" + MON_RE + r")\.?\s+'?(\d{2}|\d{4})\b", t, re.I):
+                y = jahr2(m.group(3))
+                yield y, MONATE[m.group(1).lower()], None
+                yield y, MONATE[m.group(2).lower()], None
+            for m in re.finditer(r"\b(\d{1,2})\.\s*(" + MON_RE + r")\b(?!\.?\s*'?\d)", t, re.I):   # „zum 1. januar“
+                mo = MONATE[m.group(2).lower()]
+                yield (HEUTE.year if mo >= HEUTE.month else HEUTE.year + 1), mo, int(m.group(1))
+            for m in re.finditer(r"(?<![\w.])(" + MON_RE + r")\b(?!\.?\s*'?\d)", t, re.I):         # Monat ohne Jahr
+                vor = t[max(0, m.start() - 8):m.start()].lower()
+                if re.search(r"\b(ab|im|seit|bis|zum|ende|anfang|mitte|von|und|-|–)\s*$", vor):
+                    continue      # mit Präposition: unten genauer
+                mo = MONATE[m.group(1).lower()]
+                yield (HEUTE.year if mo >= HEUTE.month else HEUTE.year + 1), mo, None
+                yield (HEUTE.year if mo <= HEUTE.month else HEUTE.year - 1), mo, None
             for m in re.finditer(r"(?<![\d./])(\d{1,2})/(\d{2})(?![\d/])", t):
                 if 1 <= int(m.group(1)) <= 12:
                     yield jahr2(m.group(2)), int(m.group(1)), None
@@ -219,6 +237,7 @@ class Belege:
     @staticmethod
     def ohne_daten(t):
         t = re.sub(r"\b\d{1,2}\.\d{1,2}\.\d{2,4}\b", " ", t)
+        t = re.sub(r"\b\d{1,2}\.\s*(?=(?:" + MON_RE + r")\b)", " ", t, flags=re.I)
         t = re.sub(r"\b\d{1,2}\s*[/.]\s*\d{4}\b", " ", t)
         return t
 
@@ -311,7 +330,7 @@ def korpus(d, anzeigen=(), quellen=(), befunde=None):
     else:
         u_teile = textlib.wortlaut(d)
     up, hinw = textlib.upload_texte(d, quellen)
-    u_teile += up
+    u_teile += [textlib.normalisiere_nutzertext(x) for x in up]
     for h in hinw:
         befunde.append(("ℹ️", "Uploads", "Hinweis", h, ""))
     basis = kompakt("\n".join(u_teile + [anzeige_roh]))
@@ -322,7 +341,12 @@ def korpus(d, anzeigen=(), quellen=(), befunde=None):
             befunde.append(("❌", "belege", "Beleg ohne Zitat", txt[:60],
                             "Jeder Beleg braucht ein wörtliches Zitat aus Nutzer-Antwort, Anzeige oder Upload (zitat)."))
             continue
-        u_teile += [txt, b.get("woher", "")]
+        fehlt = traegt_nicht(txt, b.get("zitat", ""))
+        if fehlt:
+            befunde.append(("❌", "belege", "Zitat trägt den Wert nicht", txt[:60],
+                            "im Zitat steht nicht: " + ", ".join(fehlt) + " – Beleg gilt nicht (nicht „wegbelegen“)."))
+            continue
+        u_teile.append(txt)          # „woher“ ist Claudes Erklärung, kein Beleg
     if not legacy:
         alle_a = norm(anzeige_roh)
         if (z.get("anzeige_text") or "").strip():
@@ -334,26 +358,80 @@ def korpus(d, anzeigen=(), quellen=(), befunde=None):
     U = Belege("\n".join(u_teile), nutzer=True)
     A = Belege("\n".join(a_teile))
     UA = Belege(U.text + "\n" + A.text, nutzer=True)
-    return U, A, UA, offen, legacy
+    zr_antw = [(norm(x), zeitraeume(x)) for x in u_teile]
+    return U, A, UA, offen, legacy, zr_antw
+
+
+def traegt_nicht(txt, zitat):
+    """Was im Beleg-Text steht, aber nicht aus dem Zitat folgt (Zahlen, Daten, Dauern, Abschlüsse, Niveaus)."""
+    Z = Belege(textlib.normalisiere_nutzertext(zitat), nutzer=True)
+    fehl = []
+    for y, mo, tg in Belege.daten(txt):
+        if tg and (y, mo, tg) not in Z.tage:
+            fehl.append(f"{tg:02d}.{mo:02d}.{y}")
+        elif mo and not tg and (y, mo) not in Z.monate:
+            fehl.append(f"{mo:02d}/{y}")
+        elif not mo and y not in Z.jahre:
+            fehl.append(str(y))
+    comp = zeitraeume(zitat)
+    for (v, e), m in Belege.dauern_mit_pos(txt):
+        r = pruefe_dauer(v, e, txt[max(0, m.start() - 20):m.start()], txt, Z, Belege(""), comp)
+        if r and r[0] == "❌":
+            fehl.append(m.group(0))
+    rest = Belege.ohne_daten(txt)
+    for m in re.finditer(r"(?<![\w])\d+(?:[.,]\d+)*(?![\w])", rest):
+        zz = zahl(m.group(0))
+        if zz is not None and zz not in Z.zahlen and not any(v == zz for v, _ in Z.dauern) and \
+                not any(v == zz for (v, _), _m in Belege.dauern_mit_pos(rest[m.start():m.end() + 12])):
+            fehl.append(m.group(0))
+    lt = norm(txt)
+    for a in ABSCHLUESSE:
+        na = norm(a)
+        if re.search(r"(?<![a-z])" + re.escape(na) + (r"(?![a-z])" if not na.endswith(".") else ""), lt) and \
+                not re.search(r"(?<![a-z])" + re.escape(na), Z.low):
+            fehl.append(a)
+    for m in NIVEAU_RE.finditer(txt):
+        if not Z.hat_wort(m.group(0)):
+            fehl.append(m.group(0))
+    return list(dict.fromkeys(fehl))
 
 
 # ---------------------------------------------------------------- Text vorbereiten
+SPICK_KOPF = re.compile(r"^\s*(spickzettel|termin\b|mitbringen|deine 3 kernbotschaften|ihre 3 kernbotschaften|kernbotschaften|"
+                        r"so stellst du dich vor|so stellen sie sich vor|vorstellung|schwierige fragen|fachfragen|"
+                        r"deine beispiele|ihre beispiele|beispiele|deine fragen|ihre fragen|fragen an die firma|"
+                        r"dein auswahltag|ihr auswahltag|die übungen|übungen|tipps)\b", re.I)
+SPICK_PRUEFEN = re.compile(r"^\s*(spickzettel|termin|deine 3 kernbotschaften|ihre 3 kernbotschaften|kernbotschaften|"
+                           r"so stellst du dich vor|so stellen sie sich vor|vorstellung|schwierige fragen|fachfragen|"
+                           r"deine beispiele|ihre beispiele|beispiele)\b", re.I)
+ORT_DATUM_RE = re.compile(r"^\s*[A-ZÄÖÜ][\wäöüß .\-]{1,40},\s*(den\s+)?\d{1,2}\.\s?\d{1,2}\.\s?\d{2,4}\s*$")
+
+
 def zeilen_fuer_pruefung(t, spickzettel=False):
-    """Zeilen, die geprüft werden: ohne Grußformel + Name darunter, Anlagen, Feldtitel, Betreff-Label,
-    „max. N Zeichen“. Beim Spickzettel: ohne Überschriften und ohne den Tipps-Teil."""
-    out, nach_gruss, skip = [], 0, False
+    """Zeilen, die geprüft werden: ohne Grußformel + Name darunter, Anlagen (auch umbrochen), Feldtitel,
+    Betreff-Label, „max. N Zeichen“, Ort/Datum-Zeile des Briefs. Beim Spickzettel: nur die Fakten-Abschnitte
+    (Kernbotschaften, Vorstellung, Antworten „→ …“, Beispiele) – ohne Überschriften, Fragen, Tipps, Übungen,
+    Mitbring-Liste und ohne eigene Nummerierung („1.“, „•“)."""
+    out, nach_gruss, skip, in_anlagen = [], 0, False, False
     for z in (t or "").splitlines():
         if spickzettel:
-            kopf = re.match(r"^\s*(spickzettel|mitbringen|deine 3 kernbotschaften|so stellst du dich vor|schwierige fragen|"
-                            r"deine beispiele|deine fragen an die firma|dein auswahltag|tipps f(ü|ue)r)\b", z, re.I)
-            if kopf:
-                skip = bool(re.match(r"\s*(TIPPS|MITBRINGEN)", z))   # allgemeine Tipps, keine Fakten
-                rest = re.sub(r"^\s*SPICKZETTEL\s*–\s*", "", z, flags=re.I) if z.lstrip().lower().startswith("spickzettel") else ""
-                if rest:
-                    out.append(rest)
+            if SPICK_KOPF.match(z) and (z.strip().isupper() or z.lower().startswith(("spickzettel", "termin")) or len(z.split()) <= 6):
+                skip = not SPICK_PRUEFEN.match(z)
+                if z.lstrip().lower().startswith(("spickzettel", "termin")):
+                    out.append(re.sub(r"^\s*SPICKZETTEL\s*[–:-]\s*", "", z, flags=re.I))
                 continue
-            if skip or z.strip().endswith("?"):   # Fragen (an dich / an die Firma) sind keine Fakten
+            if skip:
                 continue
+            z = re.sub(r"^\s*(?:\d{1,2}[.)]|[•\-–·▸])\s+", "", z)   # eigene Nummerierung/Aufzählung
+            if z.strip().endswith("?") or z.strip().lower().startswith(("frage:", "f:")):
+                continue          # Fragen sind keine Fakten
+            z = re.sub(r"^\s*(→|antwort:)\s*", "", z, flags=re.I)
+        if in_anlagen:
+            if z.strip():
+                continue          # umbrochene Anlagen-Zeile
+            in_anlagen = False
+        if ORT_DATUM_RE.match(z):
+            continue              # „Ingolstadt, 07.11.2026“ – Briefdatum ist Erstellungsdatum, kein Fakt
         if GRUSS_RE.match(z):
             nach_gruss = 2
             continue
@@ -364,6 +442,8 @@ def zeilen_fuer_pruefung(t, spickzettel=False):
         if IGNORIER_ZEILE.match(z):
             if z.strip().lower().startswith("betreff"):
                 out.append(re.sub(r"^\s*Betreff\s*:\s*", "", z, flags=re.I))
+            elif re.match(r"^\s*Anlagen?\s*:", z, re.I):
+                in_anlagen = True
             continue
         out.append(MAXZ_RE.sub(" ", z))
     return out
@@ -412,6 +492,22 @@ def pruefe_dauer(v, e, satz_vor, satz, U, A, computed):
     return ("❌", "Dauer so nicht vom Nutzer gesagt und nicht aus Daten berechenbar (Anzeige-Zahlen zählen hier nicht)")
 
 
+DETERMINATIV_RE = re.compile(r"^(Ihr|Ihre|Ihrem|Ihren|Ihrer|Ihres|Mein|Meine|Meinem|Meinen|Meiner|Unser|Unsere|Unserem|"
+                             r"Unseren|Euer|Eure|Der|Die|Das|Den|Dem|Des|Ein|Eine|Einem|Einen|Einer|Jede|Jeder|Diese|Dieser)$")
+ALTER_RE = re.compile(r"(\balt\b|kind|kinder|sohn|söhne|tochter|töchter|enkel|jährig|\balter\b|lebensjahr)", re.I)
+
+
+def passende_zeitraeume(zeile, K):
+    """Zeiträume (in Monaten) aus derselben Zeile + aus Nutzer-Antworten, die inhaltlich zur Zeile passen."""
+    out = list(zeitraeume(zeile))
+    kern = {w[:6] for w in re.findall(r"[a-z]{5,}", norm(zeile)) if w not in STANDARD}
+    kern |= {norm(a) for a in re.findall(r"\b[A-ZÄÖÜ]{2,5}\b", zeile)}
+    for antw, zr in K.get("zr_antworten", []):
+        if zr and kern & {w[:6] for w in re.findall(r"[a-z0-9]{2,}", antw)}:
+            out += zr
+    return sorted(set(out))
+
+
 def ist_eigenname_folge(tokens):
     """Echte Eigennamen-Muster: mind. ein Token, das kein Standardwort ist und nicht wie ein normales
     Nomen endet (Minuten Zeit, Ihren Sachen, Erfahrung Kundenkontakt → keine Namen)."""
@@ -420,8 +516,11 @@ def ist_eigenname_folge(tokens):
 
 
 # ---------------------------------------------------------------- Prüfung eines Textes
-def pruefe_text(name, t, K, befunde, spickzettel=False):
+def pruefe_text(name, t, K, befunde, spickzettel=False, nur_nutzer=False):
+    """nur_nutzer (Lebenslauf): Belege nur aus dem Nutzer-Wortlaut/Uploads – die Anzeige belegt nichts über die Person."""
     U, A, UA, offen = K["U"], K["A"], K["UA"], K["offen"]
+    if nur_nutzer:
+        A, UA = Belege(""), U
     gemeldet = set()
 
     def add(sym, kat, was, ctx=""):
@@ -435,7 +534,6 @@ def pruefe_text(name, t, K, befunde, spickzettel=False):
                 "[PRÜFEN] nur für echte Lücken. Eigene Vorschläge vorher im Chat fragen – nicht in den Text schreiben.")
     zeilen = zeilen_fuer_pruefung(PRUEFEN_RE.sub(" ", t), spickzettel)
     s = "\n".join(zeilen)
-    computed = sorted(set(U.zeitraeume + zeitraeume(s)))
 
     # Daten
     for y, mo, tg in Belege.daten(s):
@@ -454,12 +552,16 @@ def pruefe_text(name, t, K, befunde, spickzettel=False):
                 add("❌", "Monat/Jahr", f"{mo:02d}/{y}", "kein Beleg")
         elif not mo and y not in UA.jahre:
             add("❌", "Jahr", str(y), "kein Beleg")
-    # Dauern (zeilenweise, mit Satz-Kontext)
+    # Dauern (zeilenweise, mit Satz-Kontext). Gerechnet wird nur mit Zeiträumen derselben Zeile oder aus
+    # Antworten, die zum Satz passen (v3-Fehler: „4 Semester“ gegen die Minijob-Dauer geprüft).
     gesehen_d = set()
     for z in zeilen:
         for (v, e), m in Belege.dauern_mit_pos(z):
+            umfeld = z[max(0, m.start() - 30):m.end() + 15]
+            if ALTER_RE.search(umfeld) and v in UA.zahlen:
+                continue          # Alter („Kinder (4 und 7 Jahre)“, „3- bis 6-Jährige“) ist keine Dauer
             satz_vor = z[max(0, m.start() - 20):m.start()]
-            r = pruefe_dauer(v, e, satz_vor, z, U, A, computed)
+            r = pruefe_dauer(v, e, satz_vor, z, U, A, passende_zeitraeume(z, K))
             key = (v, e, r[0] if r else "")
             if r and key not in gesehen_d:
                 gesehen_d.add(key)
@@ -468,6 +570,7 @@ def pruefe_text(name, t, K, befunde, spickzettel=False):
     # Zahlen
     rest = Belege.ohne_daten(s)
     rest = re.sub(r"\b[ABC][12]\b", " ", rest)
+    rest = re.sub(r"\b(\d{1,2}):00\b", r"\1", rest)      # „9:00 Uhr“ = „9 Uhr“
     for m in re.finditer(r"(?<![\w])\d+(?:[.,]\d+)*(?![\w])", rest):
         zz = zahl(m.group(0))
         if zz is None or zz in UA.zahlen:
@@ -485,11 +588,13 @@ def pruefe_text(name, t, K, befunde, spickzettel=False):
             add("❌", "Zahlwort", m.group(0), kontext(m, s))
     # Abschlüsse / Kürzel
     low = norm(s)
+    abschl_basis = U.low + "\n" + norm(K["stelle"] + " " + K["firma"])   # Stellentitel („… (B.A.)“) darf im Betreff stehen
     for a in ABSCHLUESSE:
         na = norm(a)
         if re.search(r"(?<![a-z])" + re.escape(na) + (r"(?![a-z])" if not na.endswith(".") else ""), low) and \
-                not re.search(r"(?<![a-z])" + re.escape(na) + (r"(?![a-z])" if not na.endswith(".") else ""), UA.low):
-            add("❌", "Abschluss", a, "Abschluss/Kürzel steht nicht im Wortlaut des Nutzers oder in Zeugnis/Anzeige")
+                not re.search(r"(?<![a-z])" + re.escape(na) + (r"(?![a-z])" if not na.endswith(".") else ""), abschl_basis):
+            add("❌", "Abschluss", a, "Abschluss/Kürzel steht nicht im Wortlaut des Nutzers oder in seinem Zeugnis "
+                                     "(die Anzeige belegt nichts über ihn)")
     # Sprachniveaus
     for m in NIVEAU_RE.finditer(s):
         if not U.hat_wort(m.group(0)):
@@ -535,6 +640,11 @@ def pruefe_text(name, t, K, befunde, spickzettel=False):
             if w.upper() in AKRONYM_OK or w in gesehen:
                 continue
             gesehen.add(w)
+            if w.isupper() and len(w) >= 5 and w.isalpha():
+                # GROSS geschriebenes Wort („ALLGEMEINE HOCHSCHULREIFE“) ist kein Kürzel → wie ein Wort prüfen
+                if norm(w) not in STANDARD and not UA.hat_wort(w.lower()) and len(w) >= 12:
+                    add("⚠️", "Begriff", w, kontext(m, z))
+                continue
             if not UA.hat_wort(w):
                 add("❌", "Name/Begriff", w, kontext(m, z))
         satzzeile = bool(re.search(r"[.!?]\s*$", z.strip()))
@@ -546,6 +656,8 @@ def pruefe_text(name, t, K, befunde, spickzettel=False):
             else:
                 if not z[:m.start(1)].strip() and satzzeile:
                     teile = teile[1:]          # Satzanfang ist kein Name
+                # nach Artikel/Possessiv folgt ein normales Nomen („Ihr Haus“, „Ihre Praxis“, „Meine Cousine“)
+                teile = [x for i, x in enumerate(teile) if not (i > 0 and DETERMINATIV_RE.match(teile[i - 1]))]
                 kand = ist_eigenname_folge(teile)
             fehlt = [x for x in kand if not UA.hat_wort(x) and norm(x) not in gemeldet]
             if fehlt and folge not in gesehen:
@@ -581,38 +693,6 @@ def pruefe_text(name, t, K, befunde, spickzettel=False):
     return s
 
 
-def weiche_saetze(s, U, A):
-    """Motivations-/Gefühls-/Eigenschaftssätze → [(satz, marker, gestuetzt, best_nr, snippet)]."""
-    out = []
-    for satz in saetze(s):
-        satz_n = satz
-        ns = norm(satz)
-        mk = [m for m in MARKER if re.search(r"(?<![a-z])" + re.escape(norm(m)), ns)]
-        ei = [e for e in EIGENSCHAFT if re.search(r"(?<![a-z])" + re.escape(norm(e)) + r"[a-z]{0,3}(?![a-z])", ns)]
-        if not mk and not ei:
-            continue
-        inhalt = [w for w in re.findall(r"[a-zäöüß]{4,}", satz.lower())
-                  if norm(w) not in STANDARD and not any(norm(x) in norm(w) for x in MARKER + EIGENSCHAFT)]
-        gest = [w for w in inhalt if U.hat_wort(w)]
-        neutral = [w for w in inhalt if w not in gest and A.hat_wort(w)]   # Wörter aus der Anzeige: weder Beleg noch Gegenbeweis
-        marker_ok = all(U.hat_wort(x.split()[0]) if " " not in x else norm(x) in U.low for x in mk + ei)
-        nenner = len(inhalt) - len(neutral)
-        anteil = len(gest) / nenner if nenner > 0 else 0
-        ok = marker_ok or (anteil >= 0.5 and len(gest) >= 1 and not ei)
-        out.append((satz, (mk + ei)[0], ok, gest))
-    return out
-
-
-def beste_quelle(gest, eintraege):
-    best, bq = None, 0
-    for e in eintraege:
-        na = norm(" ".join([e["antwort"], e.get("bestaetigt") or ""] + [str(v) for v in (e.get("optionen") or {}).values()]))
-        q = sum(1 for w in gest if norm(w)[:max(4, len(norm(w)) - 2)] in na)
-        if q > bq:
-            best, bq = e, q
-    return best
-
-
 # ---------------------------------------------------------------- Texte aus der JSON
 def json_texte(d):
     out = {}
@@ -622,7 +702,7 @@ def json_texte(d):
         for ab in lv.get("abschnitte", []):
             for e in ab.get("eintraege", []):
                 teile += [e.get("zeitraum", ""), e.get("titel", ""), e.get("ort", "")] + list(e.get("punkte", []))
-        teile += [f'{k.get("label", "")} {k.get("wert", "")}'.strip() for k in lv.get("kenntnisse", [])] + [lv.get("interessen", "")]
+        teile += [f'{k.get("label", "")}: {k.get("wert", "")}'.strip(": ") for k in lv.get("kenntnisse", [])] + [lv.get("interessen", "")]
         out["lebenslauf"] = [x for x in teile if x]
     an = d.get("anschreiben") or {}
     if an.get("absaetze"):
@@ -632,6 +712,9 @@ def json_texte(d):
     em = d.get("email") or {}
     if em.get("text"):
         out["email"] = [x for x in (em.get("betreff", ""), em["text"]) if x]
+    wa = d.get("whatsapp") or {}
+    if wa.get("text"):
+        out["whatsapp"] = [wa["text"]]
     return out
 
 
@@ -680,12 +763,12 @@ def aufmerksam_check(d, U, befunde):
     for f in d.get("formular") or []:
         if "aufmerksam" not in (f.get("feld") or "").lower():
             continue
-        t = PRUEFEN_RE.sub(" ", f.get("text") or "").strip()
+        t = PRUEFEN_RE.sub(" ", f.get("text") or "").strip().rstrip(".!")
         if not t:
             continue
         nt = norm(t)
         quellen = [q for q in QUELLEN if re.search(r"(?<![a-z])" + re.escape(norm(q)), nt)]
-        woerter = re.findall(r"[A-Za-zÄÖÜäöüß][\wäöüß.\-]*", t)
+        woerter = [w.rstrip(".,;:!") for w in re.findall(r"[A-Za-zÄÖÜäöüß][\wäöüß.\-]*", t)]
         namen = [w for w in woerter[1:] if w[0].isupper() and norm(w) not in STANDARD
                  and not NOMEN_ENDUNG.search(w.lower()) and not any(norm(q) in norm(w) for q in quellen)]
         fehl = [q for q in quellen if not U.hat_wort(q)] + [n for n in namen if not U.hat_wort(n)]
@@ -727,9 +810,10 @@ def main():
             print(f"FEHLER: Datei nicht gefunden: {x}")
             sys.exit(2)
     befunde = []
-    U, A, UA, offen, legacy = korpus(d, anzeigen, quellen, befunde)
+    U, A, UA, offen, legacy, zr_antw = korpus(d, anzeigen, quellen, befunde)
     z = d.get("ziel") or {}
-    K = {"U": U, "A": A, "UA": UA, "offen": offen, "stelle": z.get("stelle", ""), "firma": z.get("firma", "")}
+    K = {"U": U, "A": A, "UA": UA, "offen": offen, "stelle": z.get("stelle", ""), "firma": z.get("firma", ""),
+         "zr_antworten": zr_antw}
     alle, geprueft = [], []
 
     if typ == "spickzettel":
@@ -744,14 +828,16 @@ def main():
             import akte
             quellen_sp = [("Spickzettel (JSON)", akte.spickzettel_text(d))]
         for name, t in quellen_sp:
-            alle.append(pruefe_text(name, t, K, befunde, spickzettel=True))
+            alle.append(t)
+            pruefe_text(name, t, K, befunde, spickzettel=True)
     else:
         texte = json_texte(d)
         if not texte and not a[1:]:
             print("FEHLER: In der JSON stehen noch keine Unterlagen-Texte (lebenslauf/anschreiben/formular/email).")
             sys.exit(2)
         for sek, einheiten in texte.items():
-            alle.append(pruefe_text(sek + " (JSON)", "\n".join(einheiten), K, befunde))
+            alle.append("\n".join(einheiten))
+            pruefe_text(sek + " (JSON)", "\n".join(einheiten), K, befunde, nur_nutzer=(sek == "lebenslauf"))
             geprueft.append(sek)
         for datei in a[1:]:
             name = os.path.basename(datei)
@@ -770,50 +856,36 @@ def main():
             if texte:
                 abgleich(dt, texte, name, befunde)
             tmp = []
-            alle.append(pruefe_text(name, dt, K, tmp))
+            alle.append(dt)
+            pruefe_text(name, dt, K, tmp, nur_nutzer=name.lower().startswith("lebenslauf"))
             schon = {(b[2], b[3]) for b in befunde}
             befunde += [b for b in tmp if (b[2], b[3]) not in schon]
         aufmerksam_check(d, U, befunde)
         ungenutzt(d, alle, befunde)
-        # Weiche Erfindungen (Anschreiben, Formular, E-Mail, Kurzprofil)
-        weich_txt = []
-        an = d.get("anschreiben") or {}
-        weich_txt += an.get("absaetze") or []
-        weich_txt += [f.get("text", "") for f in d.get("formular") or [] if "aufmerksam" not in (f.get("feld") or "").lower()]
-        weich_txt += [(d.get("email") or {}).get("text", ""), (d.get("lebenslauf") or {}).get("kurzprofil", "")]
-        ws = weiche_saetze("\n".join(zeilen_fuer_pruefung(PRUEFEN_RE.sub(" ", "\n".join(weich_txt)))), U, A)
-        for satz, mk, ok, gest in ws:
-            if not ok:
-                befunde.append(("⚠️", "weich", "Motivation/Eigenschaft ohne Wortlaut", satz[:90],
-                                f"„{mk}“ hat der Nutzer so nicht gesagt – Satz streichen oder als Frage stellen"))
+        # Satz-Herkunft (v4): jeder Satz über die Person ↔ Antwort-Nr. + wörtliches Zitat (herkunft.py)
+        import herkunft
+        hb, woher_z = herkunft.pruefe(d)
+        for sym, teil, satz, meldung in hb:
+            befunde.append((sym, "Herkunft", teil, "„" + herkunft.kurz(satz, 9) + "“", meldung))
+        for e in textlib.unklare_antworten(d):
+            befunde.append(("ℹ️", "Wortlaut", f"unsichere Antwort Nr. {e['nr']}", f"„{herkunft.kurz(e['antwort'], 8)}“",
+                            "vor der Verwendung kurz mit Ja/Nein bestätigen lassen (dann rohtext geklaert: true)"))
         if woher:
-            eintr = textlib.rohtext_eintraege(d)
-            print("# Woher-Liste (für die Freigabe-Nachricht, max. 5 Zeilen zeigen)")
-            for satz, mk, ok, gest in ws[:8]:
-                q = beste_quelle(gest + [mk], eintr) if ok else None
-                anfang = " ".join(satz.split()[:7]) + ("…" if len(satz.split()) > 7 else "")
-                if q:
-                    snip = " ".join(q["antwort"].split()[:8])
-                    print(f"- „{anfang}“ ↔ deine Antwort {q['nr']}: „{snip}“")
-                elif ok:
-                    print(f"- „{anfang}“ ↔ belegt (Upload/Beleg) – Quelle nennen")
-                else:
-                    print(f"- „{anfang}“ ↔ ❓ ohne Wortlaut → nicht schreiben, sondern fragen")
-            if not ws:
-                print("- (keine Motivations-/Eigenschaftssätze gefunden)")
+            print("# Woher-Liste (für die Freigabe-Nachricht – kompakt zeigen)")
+            for zl in herkunft.woher_liste(woher_z) or ["(keine Sätze mit Aussagen über die Person)"]:
+                print(zl)
             print("---")
-
     rot = [b for b in befunde if b[0] == "❌"]
     gelb = [b for b in befunde if b[0] == "⚠️"]
     info = [b for b in befunde if b[0] == "ℹ️"]
-    print("# Fakten-Check v3 – Belege: Wortlaut des Nutzers, Anzeige/Einladung, Uploads" + (" (LEGACY ohne rohtext)" if legacy else ""))
+    print("# Fakten-Check v4 – Belege: Wortlaut des Nutzers, Anzeige/Einladung, Uploads" + (" (LEGACY ohne rohtext)" if legacy else ""))
     for sym, wo, kat, was, ctx in rot + ([] if kurz else gelb + info):
         print(f"{sym} [{wo}] {kat}: {was}" + (f"  ⟶ {ctx}" if ctx else ""))
-    n_pr = sum(len(PRUEFEN_RE.findall(x)) for x in alle)
+    n_pr = sum(len(PRUEFEN_RE.findall(x)) for x in alle)   # v3-Fehler: wurde nach dem Entfernen gezählt (immer 0)
     print("---")
     print(f"{len(rot)} ❌ ohne Beleg · {len(gelb)} ⚠️ prüfen · {n_pr} offene [PRÜFEN]")
     if not rot:
-        print("✅ Keine unbelegten harten Fakten. Selbst-Check bleibt: Jeder Satz – woher weiß ich das?")
+        print("✅ Keine unbelegten Fakten, jeder Satz über die Person hat eine Quelle. Woher-Liste in der Freigabe zeigen.")
     print("Bei ❌: Nutzer fragen (Antwort wörtlich in profil.rohtext) oder streichen. belege nur mit wörtlichem zitat.")
     sys.exit(1 if rot else 0)
 

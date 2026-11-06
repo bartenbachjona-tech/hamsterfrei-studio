@@ -2,7 +2,7 @@
 """Erzeugt Lebenslauf, Anschreiben/Motivationsschreiben/Kurzanschreiben, Formular- und
 E-Mail-Texte – NUR aus der Profil-JSON (bzw. der Akte mit DATEN-Block).
 
-    python3 unterlagen_erstellen.py PROFIL.json [--nur lebenslauf|anschreiben|formular|email]
+    python3 unterlagen_erstellen.py PROFIL.json [--nur lebenslauf|anschreiben|formular|email|whatsapp]
                                     [--ausgabe ORDNER] [--nur-pdf] [--kein-pdf]
     python3 unterlagen_erstellen.py Bewerbungsakte_….txt   (liest den DATEN-Block)
     python3 unterlagen_erstellen.py --beispiel              (zeigt das Datenformat)
@@ -13,7 +13,10 @@ wandern intern nach alt/ (…_v1, …_v2; nichts wird gelöscht). Erst NACH der 
 --nur-pdf: nur PDF ausgeben (Handy), .docx bleibt in alt/word/ als Sicherung.
 Anlagen-Zeile im Anschreiben: automatisch aus profil.anlagen (nur Dateien, die es gibt) +
 „Lebenslauf“. Kurzanschreiben: ohne Anlagen-Zeile (anschreiben.anlagen_zeile: true erzwingt sie).
-Formular: Steht „max. N Zeichen“ schon im Feldnamen, wird es nicht doppelt angehängt.
+Formular: Steht „max. N Zeichen“ (auch „max. 1.000 Zeichen“) schon im Feldnamen, wird es nicht doppelt angehängt.
+WhatsApp: whatsapp.text → WhatsApp-Text_Firma_AKTUELL.txt (ohne Feldtitel/Zeichengrenze).
+Kennziffern im Betreff („DS-BWL-2027-03“) werden nicht am Bindestrich umbrochen.
+Neue Fassung → alte saubere Upload-Kopien (Lebenslauf_Vorname_Nachname.pdf aus --einzeln) wandern nach alt/.
 Foto (person.foto): schwebend rechts neben dem Kopf, 3,5 × 4,5 cm. Stellen mit [PRÜFEN: …] werden gelb markiert und pro Dokument gezählt.
 Layout: einspaltig, keine Tabellen/Grafiken, Tabstopp, Arial 11, A4 (ATS-lesbar).
 """
@@ -99,6 +102,26 @@ BEISPIEL = {
     },
     "firmenfakten": [{"fakt": "Azubis betreuen eigene Projekte", "quelle": "Karriereseite beispiel.de/karriere", "zugestimmt": False}],
     "belege": [],
+    "herkunft": [
+        {"satz": "seit September 2025 mache ich an der Kasse eines Supermarkts die Abrechnung am Schichtende selbst.",
+         "nr": 3, "zitat": "an der Kasse im Supermarkt Beispiel in Ingolstadt seit 09/2025, am Schichtende mach ich die Abrechnung selbst"},
+        {"satz": "Die Abrechnung macht mir Spaß, weil ich Zahlen gern sauber und ohne Fehler abschließe.",
+         "quellen": [{"nr": 5, "zitat": "Die Abrechnung macht mir Spaß"}, {"nr": 5, "zitat": "Ich schließe Zahlen gern sauber und ohne Fehler ab"}]},
+        {"satz": "In Ihrer Anzeige nennen Sie Sorgfalt und Teamarbeit.", "quellen": [{"anzeige": "Sorgfalt, Teamarbeit"}]},
+        {"satz": "In meinem Praktikum im Steuerbüro habe ich Belege sortiert und erfasst.",
+         "nr": 3, "zitat": "Schülerpraktikum im Steuerbüro Beispiel 03/2025, 2 Wochen, Belege sortiert und erfasst"},
+        {"satz": "In der Schülerfirma haben wir zu fünft einen Verkaufsstand geplant; ich habe die Kasse und die Abrechnung übernommen.",
+         "nr": 7, "zitat": "Schülerfirma, wir haben zu fünft einen Verkaufsstand geplant, ich hab die Kasse und die Abrechnung übernommen"},
+        {"satz": "Für die Beispiel GmbH spricht für mich, dass Sie viele Azubis ausbilden und ich Sie mit dem Bus in 15 Minuten erreiche.",
+         "nr": 6, "zitat": "ihr bildet viele Azubis aus und ich bin mit dem Bus in 15 Minuten da"},
+        {"satz": "Ab dem 01.09.2027 kann ich bei Ihnen anfangen.", "nr": 8, "zitat": "ab 01.09.2027 passt"},
+        {"satz": "An der Kasse mache ich am Schichtende die Abrechnung selbst und merke dabei, dass ich Zahlen gern sauber abschließe.",
+         "quellen": [{"nr": 3, "zitat": "am Schichtende mach ich die Abrechnung selbst"},
+                     {"nr": 5, "zitat": "Ich schließe Zahlen gern sauber und ohne Fehler ab, das merk ich an der Kasse"}]},
+        {"satz": "Sie bilden viele Azubis aus, und ich erreiche Sie mit dem Bus in 15 Minuten.",
+         "nr": 6, "zitat": "ihr bildet viele Azubis aus und ich bin mit dem Bus in 15 Minuten da"},
+        {"satz": "Im Juli 2026 habe ich meine Mittlere Reife an der Realschule Beispiel gemacht.",
+         "nr": 2, "zitat": "Realschule Beispiel in Ingolstadt, 09/2020 bis 07/2026, Mittlere Reife"}],
     "lebenslauf": {
         "kurzprofil": "",
         "abschnitte": [
@@ -135,9 +158,12 @@ BEISPIEL = {
     "email": {"betreff": "Bewerbung als Kauffrau für Büromanagement (Kennziffer AZ-2027-04)",
               "text": "Sehr geehrte Frau Sommer,\n\nanbei sende ich Ihnen meine Bewerbung um einen Ausbildungsplatz als Kauffrau für Büromanagement ab 01.09.2027. Im Juli 2026 habe ich meine Mittlere Reife an der Realschule Beispiel gemacht.\nAnschreiben, Lebenslauf und Zeugnis finden Sie in einer PDF im Anhang.\nFür Rückfragen erreichen Sie mich unter 0151 23456789.\n\nMit freundlichen Grüßen\nLena Muster"},
     "status": [{"unterlage": "Lebenslauf", "status": "Entwurf", "datei": "", "offen": ""}],
+    "whatsapp": {"text": ""},
     "gespraech": {"termin": "", "art": "", "ort": "", "gespraechspartner": "", "einladung_text": "", "bestaetigt": False,
-                  "mitbringen": [], "kernbotschaften": [], "selbstpraesentation": [], "schwierige_fragen": [],
-                  "star": [], "eigene_fragen": [], "feedback": [], "ac_uebungen": []},
+                  "anrede": "du", "mitbringen": [], "kernbotschaften": [], "vorstellung": {"dauer_min": None, "kernpunkte": []},
+                  "schwierige_fragen": [{"frage": "", "antwort_final": ""}], "fachfragen": [], "gehalt": {"antwort_final": ""},
+                  "eigene_fragen": [{"frage": "", "gewaehlt": False}], "ac_uebungen": [{"typ": "", "titel": "", "dauer_min": None}],
+                  "feedback": []},
     "bewerbungen": [{"firma": "Beispiel GmbH", "stelle": "Kauffrau für Büromanagement", "abgeschickt": "", "status": "in Arbeit", "nachfassen": ""}],
     "entscheidungen": [{"datum": "06.11.2026", "text": "Volles Anschreiben, weil verlangt"}],
     "naechste_schritte": ["Lebenslauf freigeben", "Anschreiben"]
@@ -241,6 +267,28 @@ def text(par, inhalt, bold=False, size=None):
             r.font.size = Pt(size)
         if PRUEFEN_RE.fullmatch(teil) or teil == "??":
             r.font.highlight_color = WD_COLOR_INDEX.YELLOW
+    return par
+
+
+CODE_RE = re.compile(r"\b[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\b")
+
+
+def text_ohne_umbruch(par, inhalt, bold=False):
+    """Wie text(), aber Kennziffern/Codes („DS-BWL-2027-03“) mit geschütztem Bindestrich (kein Zeilenumbruch)."""
+    from docx.oxml.ns import qn
+    pos = 0
+    for m in CODE_RE.finditer(inhalt or ""):
+        if not re.search(r"\d", m.group(0)):
+            continue          # normale Wörter mit Bindestrich („Kfz-Mechatroniker“) dürfen umbrechen
+        text(par, inhalt[pos:m.start()], bold=bold)
+        for i, teil in enumerate(m.group(0).split("-")):
+            if i:
+                r = par.add_run()
+                r.bold = bold
+                r._r.append(r._r.makeelement(qn("w:noBreakHyphen"), {}))
+            text(par, teil, bold=bold)
+        pos = m.end()
+    text(par, (inhalt or "")[pos:], bold=bold)
     return par
 
 
@@ -391,6 +439,7 @@ def baue_lebenslauf(d, ordner):
         text(doc.add_paragraph(), name)
     pfad, n = textlib.neue_version(ordner, "Lebenslauf_" + textlib.name_teile(name), ".docx")
     doc.save(pfad)
+    textlib.versandkopien_weg(ordner, "Lebenslauf", textlib.name_teile(name))
     return pfad, pruefen
 
 
@@ -444,7 +493,7 @@ def baue_anschreiben(d, ordner):
     p.paragraph_format.space_before = Pt(12)
     p.paragraph_format.space_after = Pt(12)
     betreff = an.get("betreff") or f"Bewerbung als {ziel.get('stelle', '')}"
-    text(p, betreff, bold=True)
+    text_ohne_umbruch(p, betreff, bold=True)
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(8)
     anrede = an.get("anrede") or ziel.get("anrede") or "Sehr geehrte Damen und Herren,"
@@ -473,6 +522,7 @@ def baue_anschreiben(d, ordner):
     firma = textlib.safe_name(ziel.get("firma", ""), 30, "Firma")
     pfad, n = textlib.neue_version(ordner, f"{wort}_{textlib.name_teile(name)}_{firma}", ".docx")
     doc.save(pfad)
+    textlib.versandkopien_weg(ordner, wort, textlib.name_teile(name))
     return pfad, pruefen, hinw
 
 
@@ -483,10 +533,15 @@ def baue_formular(d, ordner):
     for f in felder:
         lim = f.get("limit")
         feld = (f.get("feld") or "Feld").strip()
-        schon = re.search(r"max\.?\s*\d+\s*(Zeichen|Wörter|Worte)", feld, re.I)
-        if schon and lim:   # Grenze steht schon im Feldtitel → nicht doppelt; die Zahl im Titel muss passen
-            feld = re.sub(r"\s*\(?\s*max\.?\s*\d+\s*(Zeichen|Wörter|Worte)\s*\)?", "", feld, flags=re.I).strip()
-        kopf = f"=== {feld}" + (f" (max. {lim} Zeichen)" if lim else (f" ({schon.group(0)})" if schon else "")) + " ==="
+        schon = re.search(r"max\.?\s*(\d{1,3}(?:[.\s]\d{3})+|\d+)\s*(Zeichen|Wörter|Worte)", feld, re.I)
+        if schon:   # Grenze steht schon im Feldtitel (auch „1.000“) → so lassen, nicht doppelt anhängen
+            zahl_titel = int(re.sub(r"\D", "", schon.group(1)))
+            if lim and int(lim) != zahl_titel:
+                warn.append(f"Feld „{feld}“: limit {lim} ≠ {zahl_titel} im Feldnamen – Feldnamen-Zahl gilt.")
+                lim = zahl_titel
+            kopf = f"=== {feld} ==="
+        else:
+            kopf = f"=== {feld}" + (f" (max. {lim} Zeichen)" if lim else "") + " ==="
         t = (f.get("text") or "").strip()
         zeilen += [kopf, t, ""]
         pruefen += zaehle_pruefen(t)
@@ -496,6 +551,15 @@ def baue_formular(d, ordner):
     pfad, _ = textlib.neue_version(ordner, f"Formular-Texte_{firma}", ".txt", mitziehen=(".txt",))
     open(pfad, "w", encoding="utf8").write("\n".join(zeilen).rstrip() + "\n")
     return pfad, pruefen, warn
+
+
+def baue_whatsapp(d, ordner):
+    w = d.get("whatsapp") or {}
+    inhalt = (w.get("text") or "").strip() + "\n"
+    firma = textlib.safe_name(d.get("ziel", {}).get("firma", ""), 30, "Firma")
+    pfad, _ = textlib.neue_version(ordner, f"WhatsApp-Text_{firma}", ".txt", mitziehen=(".txt",))
+    open(pfad, "w", encoding="utf8").write(inhalt)
+    return pfad, zaehle_pruefen(inhalt), []
 
 
 def baue_email(d, ordner):
@@ -549,8 +613,8 @@ def main():
     nur = a[a.index("--nur") + 1] if "--nur" in a else None
     if nur in TYPEN:
         nur = "anschreiben"
-    if nur not in (None, "lebenslauf", "anschreiben", "formular", "email"):
-        sys.exit("FEHLER: --nur kennt lebenslauf, anschreiben (bzw. motivationsschreiben/kurzanschreiben), formular, email.")
+    if nur not in (None, "lebenslauf", "anschreiben", "formular", "email", "whatsapp"):
+        sys.exit("FEHLER: --nur kennt lebenslauf, anschreiben (bzw. motivationsschreiben/kurzanschreiben), formular, email, whatsapp.")
     ordner = textlib.ausgabe_ordner(a[a.index("--ausgabe") + 1] if "--ausgabe" in a else None)
     os.makedirs(ordner, exist_ok=True)
     try:
@@ -580,8 +644,11 @@ def main():
     if nur in (None, "email") and (d.get("email") or {}).get("text"):
         p, n, h = baue_email(d, ordner)
         erstellt.append((p, n, False))
+    if nur in (None, "whatsapp") and (d.get("whatsapp") or {}).get("text"):
+        p, n, h = baue_whatsapp(d, ordner)
+        erstellt.append((p, n, False))
     if not erstellt:
-        sys.exit("FEHLER: Nichts erzeugt – in der JSON fehlen lebenslauf/anschreiben/formular/email.")
+        sys.exit("FEHLER: Nichts erzeugt – in der JSON fehlen lebenslauf/anschreiben/formular/email/whatsapp.")
     fehler = 0
     for p, n, ist_docx in erstellt:
         zeile = ""

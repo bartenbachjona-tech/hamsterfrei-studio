@@ -285,7 +285,7 @@
   {
    "feld": "Warum willst du zu uns? (max. 1000 Zeichen)",
    "limit": 1000,
-   "text": "Seit März 2025 arbeite ich als Minijobber im Getränkelager von Getränke Hofmann. Ich nehme Lieferungen an, räume Kisten ein und sortiere Leergut. Samstags schließe ich allein auf – mein Chef gibt mir dafür den Schlüssel. Dabei merke ich, dass ich gern Ordnung reinbringe und mich lieber den ganzen Tag bewege, statt zu sitzen. Bei Ihnen gefällt mir die Übernahme bei guten Leistungen, und mit dem Rad bin ich in 10 Minuten da."
+   "text": "Seit März 2025 arbeite ich als Minijobber im Getränkelager von Getränke Hofmann. Ich nehme Lieferungen an, räume Kisten ein und mache das Leergut. Samstags schließe ich allein auf – mein Chef gibt mir dafür den Schlüssel. Dabei merke ich, dass ich gern Ordnung reinbringe und mich den ganzen Tag bewege, statt zu sitzen. Bei Ihnen spricht für mich die Übernahme bei guten Leistungen, und mit dem Rad bin ich in 10 Minuten da."
   },
   {
    "feld": "Frühestmöglicher Eintritt",
@@ -344,5 +344,48 @@
  "naechste_schritte": [
   "Lebenslauf freigeben",
   "Anschreiben"
+ ],
+ "herkunft": [
+  {
+   "satz": "Seit März 2025 arbeite ich als Minijobber im Getränkelager von Getränke Hofmann.",
+   "quellen": [
+    {
+     "nr": 4,
+     "zitat": "minijob getränke hofmann seit märz 25 lager"
+    },
+    {
+     "nr": 8,
+     "zitat": "im getränkelager"
+    }
+   ]
+  },
+  {
+   "satz": "Ich nehme Lieferungen an, räume Kisten ein und mache das Leergut.",
+   "nr": 4,
+   "zitat": "lieferungen annehmen kisten einräumen leergut"
+  },
+  {
+   "satz": "Samstags schließe ich allein auf – mein Chef gibt mir dafür den Schlüssel.",
+   "nr": 10,
+   "zitat": "samstags schließ ich allein auf, chef gibt mir den schlüssel"
+  },
+  {
+   "satz": "Dabei merke ich, dass ich gern Ordnung reinbringe und mich den ganzen Tag bewege, statt zu sitzen.",
+   "nr": 8,
+   "zitat": "merk ich dass ich gern ordnung reinbring und mich beweg den ganzen tag statt sitzen"
+  },
+  {
+   "satz": "Bei Ihnen spricht für mich die Übernahme bei guten Leistungen, und mit dem Rad bin ich in 10 Minuten da.",
+   "quellen": [
+    {
+     "nr": 9,
+     "zitat": "Übernahme bei guten Leistungen"
+    },
+    {
+     "nr": 9,
+     "zitat": "10 min mit rad"
+    }
+   ]
+  }
  ]
 }

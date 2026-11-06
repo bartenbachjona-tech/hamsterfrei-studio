@@ -4,12 +4,14 @@
     python3 endcheck.py DATEI [DATEI …] --typ TYP [--firma "Beispiel GmbH"] [--stelle "Kauffrau …"]
                         [--profil PROFIL.json]
 
-TYP: lebenslauf | anschreiben | motivationsschreiben | kurzanschreiben | formular | email | gesamt | anlage
+TYP: lebenslauf | anschreiben | motivationsschreiben | kurzanschreiben | formular | email | whatsapp | gesamt | anlage
      (gilt für alle Dateien des Aufrufs; ein Aufruf pro Dokumenttyp. Ohne --typ wird am INHALT geraten.)
      anlage = Zeugnis/Zertifikat (Scan/PDF): nur Format, Größe, Seiten – keine Textprüfung.
      gesamt = fertige Gesamt-PDF: [PRÜFEN], Platzhalter, Größe, Seiten – keine Stil-/Firmenprüfung (Scans!).
 Firmenname und Stellenbezeichnung werden NUR in Anschreiben/Motivationsschreiben/Kurzanschreiben verlangt –
-nicht in Formularfeldern oder der E-Mail (dort nur Warnung bei fremden Firmennamen).
+nicht in Formularfeldern, E-Mail oder WhatsApp (dort nur Warnung bei fremden Firmennamen). Wörter wie „Start“,
+„ab“, Jahreszahlen oder „Vollzeit“ im Stellentitel muss der Betreff nicht wiederholen.
+whatsapp = kurze Nachricht: 2–6 Sätze, Gruß + voller Name, keine Emoji-Ketten, Lebenslauf als PDF erwähnt.
 --profil liefert Name, Firma, Stelle und frühere Arbeitgeber/Schulen (die sind kein Copy-and-paste-Rest).
 
 Prüft u. a.: offene [PRÜFEN], Platzhalter, Floskeln, Konjunktiv, Länge, Seiten, Firmenname
@@ -27,7 +29,7 @@ import textlib  # noqa: E402
 MAX_MB = 5
 ANSCHR_MAX_WORTE = 420
 KURZ_MIN, KURZ_MAX = 150, 200
-TYPEN = ("lebenslauf", "anschreiben", "motivationsschreiben", "kurzanschreiben", "formular", "email", "gesamt", "anlage")
+TYPEN = ("lebenslauf", "anschreiben", "motivationsschreiben", "kurzanschreiben", "formular", "email", "whatsapp", "gesamt", "anlage")
 BRIEF = ("anschreiben", "motivationsschreiben", "kurzanschreiben")
 
 FLOSKELN = [   # (Regex, Anzeige) – auch gebeugte Formen und Konjunktiv-Schluss
@@ -58,7 +60,9 @@ MAIL_PROBLEM = ["party", "sexy", "hot", "cool", "gangster", "babe", "baby", "mau
                 "princess", "prinzessin", "killer", "lol", "crazy", "boss", "king", "queen", "swag", "girl", "boy",
                 "love", "dark", "devil", "angel", "bunny", "gamer", "zocker", "chiller", "styler", "suess", "süß",
                 "engel", "teufel", "bad", "xx", "420", "1337", "69", "drunk", "beer", "bier", "bitch", "thug", "ninja"]
-FELD_KOPF = re.compile(r"^===\s*(.+?)\s*(?:\(max\.?\s*(\d+)\s*Zeichen\))?\s*===\s*$", re.M)
+FELD_KOPF = re.compile(r"^===\s*(.+?)\s*(?:\(max\.?\s*(\d{1,3}(?:[.\s]\d{3})+|\d+)\s*Zeichen\))?\s*===\s*$", re.M)
+STELLE_META = {"start", "beginn", "ab", "bis", "zum", "jahr", "befristet", "unbefristet", "vollzeit", "teilzeit", "standort",
+               "kennziffer", "stellen", "plaetze", "platz", "minijob", "basis", "deutschlandweit", "remote", "hybrid"}
 
 
 def kern_firma(s):
@@ -82,7 +86,8 @@ def firma_im_text(firma, txt):
 def stelle_kern(stelle):
     s = re.sub(r"\((?:m|w|d|f|x|div|gn)(?:\s*/\s*(?:m|w|d|f|x|div))*\)|\b[mwd]\s*/\s*[mwd](\s*/\s*[mwd])?\b", " ", stelle or "", flags=re.I)
     s = re.sub(r"/-?\s*(frau|mann|in|innen|r|e)\b|\*in(nen)?\b|:in(nen)?\b|\(in\)", "", s, flags=re.I)
-    return [w for w in re.findall(r"[a-zäöüß0-9]{3,}", s.lower()) if w not in ("und", "für", "der", "die", "das", "als", "zum", "zur", "ausbildung")]
+    return [w for w in re.findall(r"[a-zäöüß0-9]{3,}", s.lower()) if w not in ("und", "für", "der", "die", "das", "als", "zum", "zur", "ausbildung")
+            and textlib.translit(w) not in STELLE_META and not w.isdigit()]
 
 
 def stamm(w):
@@ -131,7 +136,8 @@ def mail_check(mails, name):
     for lokal, dom in mails:
         l = textlib.translit(lokal.lower())
         gruende = []
-        if re.search(r"\d{3,}", l):
+        zahlen = re.findall(r"\d{3,}", l)
+        if any(not re.fullmatch(r"(19|20)\d\d", z) for z in zahlen):   # Geburtsjahr („melis.k2007“) ist normal
             gruende.append("Zahlenfolge")
         tr = [w for w in MAIL_PROBLEM if w in re.split(r"[._\-+0-9]+", l) or (len(w) >= 4 and w in l)]
         if tr:
@@ -284,7 +290,17 @@ def pruefe(pfad, typ=None, firma=None, stelle=None, info=None):
         ich = sum(1 for x in saetze if x.strip().startswith("Ich "))
         if saetze and ich / len(saetze) > 0.4:
             add("⚠️", f"{ich} von {len(saetze)} Sätzen beginnen mit „Ich“ – Satzanfänge variieren.")
-    if art in BRIEF + ("formular", "email"):
+    if art == "whatsapp":
+        saetze_w = [x for x in re.split(r"(?<=[.!?])\s+", txt.strip()) if len(x.split()) >= 2]
+        if len(saetze_w) > 7:
+            add("⚠️", f"{len(saetze_w)} Sätze – per WhatsApp reichen 2–6 kurze Sätze (Lebenslauf hängt als PDF dran).")
+        if info.get("name") and info["name"].split()[-1].lower() not in low:
+            add("⚠️", "Voller Name fehlt am Ende (Gruß + Vor- und Nachname).")
+        if len(re.findall(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]", txt)) > 2:
+            add("⚠️", "Mehrere Emojis – bei Bewerbungen höchstens eins.")
+        if not re.search(r"lebenslauf", low):
+            add("ℹ️", "Lebenslauf nicht erwähnt – als PDF mitschicken (Büroklammer → Dokument).")
+    if art in BRIEF + ("formular", "email", "whatsapp"):
         gef = []
         for rx, label in FLOSKELN:
             if re.search(rx, low) and label not in gef:
@@ -305,7 +321,7 @@ def pruefe(pfad, typ=None, firma=None, stelle=None, info=None):
             inhalt = txt[m.end():ende].strip()
             if not inhalt:
                 add("❌", f"Feld „{m.group(1)}“ ist leer.")
-            elif m.group(2) and len(inhalt) > int(m.group(2)):
+            elif m.group(2) and len(inhalt) > int(re.sub(r"\D", "", m.group(2))):
                 add("❌", f"Feld „{m.group(1)}“: {len(inhalt)} Zeichen, erlaubt {m.group(2)}.")
             if re.search(r"siehe (lebenslauf|anlage|anhang)", inhalt, re.I):
                 add("❌", f"Feld „{m.group(1)}“: „siehe Lebenslauf“ – Feld richtig ausfüllen.")
