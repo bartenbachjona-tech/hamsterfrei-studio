@@ -1,0 +1,1402 @@
+{
+ "P1": {
+  "S16": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Seminararbeit erst nächstes Jahr, unter 18"
+  },
+  "S17a": {
+   "kauf": 15,
+   "vw": [
+    2,
+    5,
+    12,
+    20
+   ],
+   "grund": "Abgabe in 4 Tagen, aber unter 18, kein Claude"
+  },
+  "S17b": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "NRW, keine W-Seminararbeit"
+  },
+  "S18a": {
+   "kauf": 25,
+   "vw": [
+    3,
+    6,
+    13,
+    20
+   ],
+   "grund": "Formalia-Check und Prüfungsgesprächs-Coach kurz vor Abgabe"
+  },
+  "S18b": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "BaWü, betrifft mich nicht"
+  },
+  "S19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "FOS, keine bayerische W-Seminararbeit"
+  },
+  "A16": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf, suche Ausbildung"
+  },
+  "A18": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A20": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A22": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Uni-Hausarbeit, nicht Schul-Seminararbeit"
+  },
+  "U21": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Falsche Zielgruppe, Uni"
+  },
+  "U23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Falsche Zielgruppe, Claude Pro vorhanden"
+  },
+  "U24": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Schulzeit vorbei"
+  },
+  "U22w": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U20b": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U25": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf, misstraut Influencer-KI"
+  },
+  "M18": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Bundesland unklar, Schreiben nicht akut"
+  },
+  "M30": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kinder noch nicht so weit"
+  },
+  "G24": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "G28": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "G31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C17": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Interessiert mich nicht, nur Creator-Themen"
+  },
+  "C21": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B27": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B32": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B29": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "W26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "W30": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T23": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Schule vorbei"
+  },
+  "V20": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "V34": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "kauf": 20,
+   "vw": [
+    4,
+    8,
+    15,
+    25
+   ],
+   "grund": "Würde fürs Kind zahlen, unsicher ob erlaubt"
+  },
+  "E50": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Misstraut KI, Kind soll selbst schreiben"
+  },
+  "AT19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Österreich, VWA längst vorbei"
+  },
+  "CH22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Schweiz, Uni, falsches Produkt"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Geld, nur Hamster lustig"
+  },
+  "N40": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Duales Studium, nicht Schule"
+  },
+  "F20": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Sehe das als Schummelhilfe"
+  }
+ },
+ "P2": {
+  "S16": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Verkaufe kaum was, ChatGPT gratis"
+  },
+  "S17a": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Gerade nur Seminararbeit im Kopf"
+  },
+  "S17b": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Verkaufe selten, ChatGPT reicht"
+  },
+  "S18a": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Gelegentlich Vinted, Text schreibe ich schnell selbst"
+  },
+  "S18b": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Lernstress, kein Verkaufsthema"
+  },
+  "S19": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Selten Verkäufe, Geld lieber sparen"
+  },
+  "A16": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Unter 18, kaum Verkäufe"
+  },
+  "A18": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Geld knapp, würde verkaufen, aber gratis KI"
+  },
+  "A20": {
+   "kauf": 5,
+   "vw": [
+    1,
+    3,
+    6,
+    10
+   ],
+   "grund": "Verkaufe gelegentlich, ChatGPT reicht eigentlich"
+  },
+  "A22": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Keine Zeit zum Verkaufen"
+  },
+  "U19": {
+   "kauf": 5,
+   "vw": [
+    1,
+    3,
+    7,
+    12
+   ],
+   "grund": "Umzug, Möbel verkaufen, aber Text easy"
+  },
+  "U21": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "ChatGPT Plus kann das auch"
+  },
+  "U23": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Baue mir das selbst mit Claude Pro"
+  },
+  "U24": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Verkaufe kaum etwas"
+  },
+  "U22w": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Umzug, aber Prompt reicht"
+  },
+  "U20b": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Wenig Geld, aber 9,90 für Text?"
+  },
+  "U25": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Misstraut Influencer-Produkten"
+  },
+  "M18": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Verkaufe nichts"
+  },
+  "M30": {
+   "kauf": 8,
+   "vw": [
+    2,
+    4,
+    8,
+    12
+   ],
+   "grund": "Zuverdienst durch Verkaufen, aber jeder Euro zählt"
+  },
+  "R19": {
+   "kauf": 18,
+   "vw": [
+    2,
+    5,
+    10,
+    15
+   ],
+   "grund": "Spart Zeit pro Artikel, Preis-Check reizt"
+  },
+  "R26": {
+   "kauf": 10,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Anzeigen kann ich, Gewerbefrage wichtiger"
+  },
+  "R35": {
+   "kauf": 20,
+   "vw": [
+    3,
+    5,
+    10,
+    18
+   ],
+   "grund": "30 Anzeigen ohne Texten, genau mein Problem"
+  },
+  "R45": {
+   "kauf": 9,
+   "vw": [
+    2,
+    4,
+    8,
+    12
+   ],
+   "grund": "Praktisch, aber Skill-Installation wirkt kompliziert"
+  },
+  "G24": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Verkaufe Dienstleistung, keine Gebrauchtware"
+  },
+  "G28": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Prompte ich selbst in ChatGPT"
+  },
+  "G31": {
+   "kauf": 6,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Etsy statt Kleinanzeigen, nur bedingt passend"
+  },
+  "C17": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kaum Geld, wenig zu verkaufen"
+  },
+  "C21": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Interesse"
+  },
+  "C26": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Interesse"
+  },
+  "B27": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "ChatGPT macht das gratis"
+  },
+  "B32": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Verkaufe zu selten"
+  },
+  "B29": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Andere Sorgen gerade"
+  },
+  "B35": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Datenschutz, keine Fotos an Fremdtools"
+  },
+  "W26": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Umzug, aber verschenke lieber"
+  },
+  "W30": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Umzug, aber kein Aufwand wert"
+  },
+  "H28": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T19": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Wenig Geld, wenig zu verkaufen"
+  },
+  "V20": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Alte Games verkaufen, aber 9,90 zu viel"
+  },
+  "V34": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Nicht deswegen hier"
+  },
+  "E50": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Misstraut KI"
+  },
+  "AT19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Willhaben statt Kleinanzeigen, kaum Bedarf"
+  },
+  "CH22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Geld, keine Absicht"
+  },
+  "N40": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "F20": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Geld fürs Fahren nötig"
+  },
+  "L33": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  }
+ },
+ "P3": {
+  "S16": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Unter 18, noch keine Bewerbung"
+  },
+  "S17a": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Gerade nur Seminararbeit"
+  },
+  "S17b": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Abi zuerst, Studium geplant"
+  },
+  "S18a": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Studium geplant, evtl. Minijob"
+  },
+  "S18b": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Abi-Stress, Bewerbung später"
+  },
+  "S19": {
+   "kauf": 15,
+   "vw": [
+    2,
+    5,
+    10,
+    18
+   ],
+   "grund": "Bewerbungen laufen, aber ChatGPT kann Anschreiben"
+  },
+  "A16": {
+   "kauf": 8,
+   "vw": [
+    2,
+    4,
+    8,
+    12
+   ],
+   "grund": "Anschreiben schwer, aber unter 18 kein Claude"
+  },
+  "A18": {
+   "kauf": 22,
+   "vw": [
+    2,
+    5,
+    10,
+    15
+   ],
+   "grund": "Nach 20 Absagen jede Hilfe willkommen, Geld knapp"
+  },
+  "A20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Habe Ausbildungsplatz"
+  },
+  "A22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Habe Ausbildungsplatz"
+  },
+  "U19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Jobbedarf gerade"
+  },
+  "U21": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Bewerbungen kann ich mit ChatGPT"
+  },
+  "U23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Werkstudentenjob vorhanden"
+  },
+  "U24": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U22w": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Wohnung wichtiger als Job"
+  },
+  "U20b": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Minijob vielleicht, aber Geld knapp"
+  },
+  "U25": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf, misstraut Influencern"
+  },
+  "M18": {
+   "kauf": 10,
+   "vw": [
+    1,
+    3,
+    7,
+    12
+   ],
+   "grund": "Für Minijob reicht meist kurze Nachricht"
+  },
+  "M30": {
+   "kauf": 9,
+   "vw": [
+    2,
+    4,
+    8,
+    12
+   ],
+   "grund": "Passt teilweise, aber Geld sehr knapp"
+  },
+  "R19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kinder vielleicht später"
+  },
+  "G24": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Selbstständig, kein Bedarf"
+  },
+  "G28": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Freelancer, kein Bedarf"
+  },
+  "G31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C17": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Will Creator werden, nicht Azubi"
+  },
+  "C21": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B27": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B32": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B29": {
+   "kauf": 6,
+   "vw": [
+    5,
+    10,
+    20,
+    35
+   ],
+   "grund": "Zielgruppe Ausbildung, ich brauche Berufserfahrenen-Bewerbung"
+  },
+  "B35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "W26": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Job schon gefunden"
+  },
+  "W30": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Gerade eingestiegen"
+  },
+  "T19": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Nach FSJ vielleicht Ausbildung, wenig Geld"
+  },
+  "V20": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein akuter Bedarf"
+  },
+  "V34": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kind schreibt Seminararbeit, keine Bewerbung"
+  },
+  "E50": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Misstraut KI"
+  },
+  "AT19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "CH22": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "N15": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Geld, noch zu früh"
+  },
+  "N40": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Dual, schon untergebracht"
+  },
+  "F20": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein akuter Bedarf"
+  },
+  "L33": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  }
+ },
+ "P4": {
+  "S16": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Wohne bei Eltern"
+  },
+  "S17a": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Wohne bei Eltern"
+  },
+  "S17b": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Umzug erst nach Abi"
+  },
+  "S18a": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "WG vielleicht nächstes Jahr"
+  },
+  "S18b": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "WG erst nach Abi"
+  },
+  "S19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Wohne noch zuhause"
+  },
+  "A16": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A18": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A20": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Vielleicht später eigene Wohnung"
+  },
+  "A22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U19": {
+   "kauf": 14,
+   "vw": [
+    2,
+    5,
+    10,
+    15
+   ],
+   "grund": "WG-Suche läuft, aber Nachrichten schreibe ich selbst"
+  },
+  "U21": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Wohne schon"
+  },
+  "U23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Wohne schon"
+  },
+  "U24": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Wohne schon"
+  },
+  "U22w": {
+   "kauf": 28,
+   "vw": [
+    3,
+    7,
+    15,
+    25
+   ],
+   "grund": "30 Anfragen ohne Antwort, Nachricht muss besser werden"
+  },
+  "U20b": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein akuter Umzug"
+  },
+  "U25": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "M18": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Wohne bei Eltern"
+  },
+  "M30": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R26": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "G24": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "G28": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "G31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C17": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C21": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C26": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B27": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein akuter Umzug"
+  },
+  "B32": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B29": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B35": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf, Datenschutz"
+  },
+  "W26": {
+   "kauf": 20,
+   "vw": [
+    5,
+    10,
+    20,
+    35
+   ],
+   "grund": "Bewerbermappe spart Zeit, Konkurrenz riesig"
+  },
+  "W30": {
+   "kauf": 24,
+   "vw": [
+    5,
+    10,
+    20,
+    35
+   ],
+   "grund": "Mappe fehlt genau, aber Vorlagen gratis"
+  },
+  "H28": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Vielleicht später gemeinsame Wohnung"
+  },
+  "H31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T23": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein akuter Umzug"
+  },
+  "T19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "V20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "V34": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kind zieht noch nicht aus"
+  },
+  "E50": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "AT19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Wien, Schufa irrelevant"
+  },
+  "CH22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Schweiz, Unterlagen anders"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "N40": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Evtl. Umzug zum Praxisort"
+  },
+  "F20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  }
+ },
+ "P5": {
+  "S16": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Noch Schule"
+  },
+  "S17a": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Noch Schule"
+  },
+  "S17b": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Studium erst später"
+  },
+  "S18a": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Studium nächstes Jahr, nicht akut"
+  },
+  "S18b": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Erst Abi"
+  },
+  "S19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Ausbildung geplant"
+  },
+  "A16": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A18": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A20": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A22": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U19": {
+   "kauf": 18,
+   "vw": [
+    3,
+    7,
+    15,
+    25
+   ],
+   "grund": "Erste Hausarbeit, keine Ahnung vom Zitieren"
+  },
+  "U21": {
+   "kauf": 7,
+   "vw": [
+    3,
+    5,
+    12,
+    20
+   ],
+   "grund": "ChatGPT Plus reicht mir eigentlich"
+  },
+  "U23": {
+   "kauf": 8,
+   "vw": [
+    5,
+    10,
+    20,
+    30
+   ],
+   "grund": "Kann ich mit Claude Pro selbst bauen"
+  },
+  "U24": {
+   "kauf": 5,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Master-Hausarbeiten eher Routine"
+  },
+  "U22w": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Wohnung gerade wichtiger"
+  },
+  "U20b": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "BAföG-Stress, Geld knapp"
+  },
+  "U25": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Misstraut Influencer-KI, kann wissenschaftlich schreiben"
+  },
+  "M18": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "M30": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "G24": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "G28": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "G31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C17": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C21": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B27": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B32": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B29": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "W26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "W30": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T23": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Studium vielleicht später"
+  },
+  "V20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "V34": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kind ist noch in der Schule"
+  },
+  "E50": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Misstraut KI"
+  },
+  "AT19": {
+   "kauf": 12,
+   "vw": [
+    3,
+    6,
+    13,
+    20
+   ],
+   "grund": "Seminararbeiten laufen, Zitierstil-Prüfer praktisch"
+  },
+  "CH22": {
+   "kauf": 15,
+   "vw": [
+    5,
+    10,
+    25,
+    40
+   ],
+   "grund": "Bachelorarbeit läuft, Preis egal, Qualität fraglich"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "N40": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "kauf": 14,
+   "vw": [
+    4,
+    8,
+    15,
+    25
+   ],
+   "grund": "Praxisbericht und Projektarbeit, Gliederungshilfe willkommen"
+  },
+  "F20": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Fördert eher KI-Abhängigkeit"
+  }
+ }
+}

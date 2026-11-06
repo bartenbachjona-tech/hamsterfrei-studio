@@ -1,0 +1,1467 @@
+{
+ "P6": {
+  "S16": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Gewerbe, unter 18"
+  },
+  "S17a": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "S17b": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "S18a": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Gewerbe geplant"
+  },
+  "S18b": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "S19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Gewerbe"
+  },
+  "A16": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A18": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "A20": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Gewerbe"
+  },
+  "A22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Gewerbe"
+  },
+  "U21": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Gewerbe"
+  },
+  "U23": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Selbst promptbar mit Claude Pro"
+  },
+  "U24": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U22w": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U20b": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "U25": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "M18": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Minijob reicht, kein Gewerbe"
+  },
+  "M30": {
+   "kauf": 8,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Zuverdienst noch unklar, Gewerbe zu früh"
+  },
+  "R19": {
+   "kauf": 7,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Ab wann Gewerbe? Interessant, aber eher privat"
+  },
+  "R26": {
+   "kauf": 30,
+   "vw": [
+    5,
+    10,
+    20,
+    35
+   ],
+   "grund": "Genau meine Frage, aber Antwort auch googelbar"
+  },
+  "R35": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Privat entrümpeln, kein Gewerbe nötig"
+  },
+  "R45": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Privatverkauf, kein Gewerbe"
+  },
+  "G24": {
+   "kauf": 40,
+   "vw": [
+    5,
+    10,
+    20,
+    35
+   ],
+   "grund": "Rechnungen und Kleinunternehmer akut, Steuerberater teuer"
+  },
+  "G28": {
+   "kauf": 12,
+   "vw": [
+    5,
+    10,
+    20,
+    35
+   ],
+   "grund": "Gewerbe läuft schon, Rechnungs-Skill vielleicht nett"
+  },
+  "G31": {
+   "kauf": 10,
+   "vw": [
+    5,
+    12,
+    25,
+    40
+   ],
+   "grund": "Gewerbe existiert, will eher Buchhaltungs-Automatisierung"
+  },
+  "C17": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Unter 18, Gewerbe noch weit weg"
+  },
+  "C21": {
+   "kauf": 10,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Erste Kooperationen, Gewerbe wird bald Thema"
+  },
+  "C26": {
+   "kauf": 12,
+   "vw": [
+    4,
+    8,
+    15,
+    25
+   ],
+   "grund": "Monetarisierung braucht Gewerbe, vieles schon recherchiert"
+  },
+  "B27": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein Gewerbe geplant"
+  },
+  "B32": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B29": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "B35": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "W26": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "W30": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H28": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "H31": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "V20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "V34": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E45": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E50": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Misstraut KI"
+  },
+  "AT19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "CH22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Nur Hamster lustig"
+  },
+  "N40": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "F20": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "L33": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  }
+ },
+ "P7": {
+  "S16": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Einkommen, Steuer irrelevant"
+  },
+  "S17a": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Nebenjob zu klein für Steuer"
+  },
+  "S17b": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein relevantes Einkommen"
+  },
+  "S18a": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Minijob, Erklärung lohnt kaum"
+  },
+  "S18b": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kaum Einkommen"
+  },
+  "S19": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Einkommen zu gering"
+  },
+  "A16": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Einkommen"
+  },
+  "A18": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Erst Ausbildungsplatz finden"
+  },
+  "A20": {
+   "kauf": 28,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Genau mein Thema, aber ELSTER gratis, Taxfix bekannt"
+  },
+  "A22": {
+   "kauf": 12,
+   "vw": [
+    3,
+    5,
+    10,
+    17
+   ],
+   "grund": "Erstattung reizt, aber keine Zeit, kein Claude"
+  },
+  "U19": {
+   "kauf": 5,
+   "vw": [
+    2,
+    4,
+    7,
+    12
+   ],
+   "grund": "Kaum Einkommen, lohnt vermutlich nicht"
+  },
+  "U21": {
+   "kauf": 7,
+   "vw": [
+    2,
+    4,
+    8,
+    13
+   ],
+   "grund": "Nebenjob vielleicht, ChatGPT Plus reicht dafür"
+  },
+  "U23": {
+   "kauf": 6,
+   "vw": [
+    2,
+    5,
+    9,
+    15
+   ],
+   "grund": "Werkstudent, Erstattung möglich, aber selbst lösbar"
+  },
+  "U24": {
+   "kauf": 6,
+   "vw": [
+    2,
+    4,
+    8,
+    12
+   ],
+   "grund": "Vielleicht nützlich, aber kein Druck"
+  },
+  "U22w": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Gerade andere Sorgen"
+  },
+  "U20b": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Einkommen zu niedrig"
+  },
+  "U25": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Misstraut Influencer-Produkten, nutzt Steuersoftware"
+  },
+  "M18": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Minijob pauschal, lohnt nicht"
+  },
+  "M30": {
+   "kauf": 6,
+   "vw": [
+    2,
+    5,
+    9,
+    15
+   ],
+   "grund": "Erklärung könnte lohnen, Geld knapp"
+  },
+  "R19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kaum steuerrelevant"
+  },
+  "R26": {
+   "kauf": 6,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Reselling-Steuer interessant, Zielgruppe passt nicht"
+  },
+  "R35": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "R45": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Steuer macht er selbst"
+  },
+  "G24": {
+   "kauf": 5,
+   "vw": [
+    3,
+    6,
+    10,
+    18
+   ],
+   "grund": "Braucht Gewerbe-Steuer, nicht Azubi-Checkliste"
+  },
+  "G28": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Steuer als Freelancer anders"
+  },
+  "G31": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Nutzt eigene Steuersoftware"
+  },
+  "C17": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Einkommen"
+  },
+  "C21": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein akuter Bedarf"
+  },
+  "C26": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein akuter Bedarf"
+  },
+  "B27": {
+   "kauf": 6,
+   "vw": [
+    3,
+    6,
+    10,
+    18
+   ],
+   "grund": "Mache ich mit ELSTER oder WISO"
+  },
+  "B32": {
+   "kauf": 5,
+   "vw": [
+    5,
+    10,
+    18,
+    30
+   ],
+   "grund": "Nicht Azubi/Studi, nutzt WISO"
+  },
+  "B29": {
+   "kauf": 5,
+   "vw": [
+    3,
+    6,
+    10,
+    18
+   ],
+   "grund": "Jobwechsel wichtiger, Steuer kein Thema"
+  },
+  "B35": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Steuerdaten nicht in KI geben"
+  },
+  "W26": {
+   "kauf": 10,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Umzugskosten absetzbar, aber Fokus Wohnungssuche"
+  },
+  "W30": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Wohnung gerade wichtiger"
+  },
+  "H28": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Kein akutes Thema"
+  },
+  "H31": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "T23": {
+   "kauf": 35,
+   "vw": [
+    4,
+    8,
+    15,
+    25
+   ],
+   "grund": "ELSTER-Angst, aber Taxfix wirkt bequemer"
+  },
+  "T19": {
+   "kauf": 15,
+   "vw": [
+    1,
+    3,
+    6,
+    10
+   ],
+   "grund": "Will nur wissen ob's lohnt, eher googeln"
+  },
+  "V20": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kaum Einkommen"
+  },
+  "V34": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Steuer längst geregelt"
+  },
+  "E45": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "E50": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Misstraut KI"
+  },
+  "AT19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Österreich, ELSTER irrelevant"
+  },
+  "CH22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Schweiz, deutsches Steuerrecht irrelevant"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Nur Hamster lustig"
+  },
+  "N40": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "kauf": 15,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Erklärung lohnt sicher, Kollegen nutzen WISO"
+  },
+  "F20": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kaum Einkommen"
+  },
+  "L33": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Macht Steuer selbst"
+  }
+ },
+ "P8": {
+  "S16": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Abi erst 2028, unter 18, ChatGPT gratis"
+  },
+  "S17a": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Erst Seminararbeit-Abgabe, kein Claude-Konto, unter 18"
+  },
+  "S17b": {
+   "kauf": 8,
+   "vw": [
+    2,
+    4,
+    8,
+    13
+   ],
+   "grund": "Passt thematisch, aber unter 18, ChatGPT gratis"
+  },
+  "S18a": {
+   "kauf": 25,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Abi naht, aber erst Prüfungsgespräch im Kopf"
+  },
+  "S18b": {
+   "kauf": 30,
+   "vw": [
+    3,
+    5,
+    10,
+    18
+   ],
+   "grund": "Lernstress akut, aber ChatGPT macht auch Lernpläne"
+  },
+  "S19": {
+   "kauf": 18,
+   "vw": [
+    2,
+    5,
+    10,
+    16
+   ],
+   "grund": "Fachabi passt, Fokus gerade auf Bewerbungen"
+  },
+  "A16": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Abi"
+  },
+  "A18": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Abi"
+  },
+  "A20": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "A22": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "U19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Abi vorbei"
+  },
+  "U21": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "U23": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "U24": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Abi lange vorbei"
+  },
+  "U22w": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "U20b": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "U25": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "M18": {
+   "kauf": 6,
+   "vw": [
+    2,
+    4,
+    7,
+    12
+   ],
+   "grund": "Schule nebenbei, Prüfungen noch nicht akut"
+  },
+  "M30": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "R19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "R26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "R35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "R45": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kinder noch zu jung"
+  },
+  "G24": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "G28": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "G31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "C17": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Interessiert sich nicht fürs Lernen"
+  },
+  "C21": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "C26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "B27": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "B32": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "B29": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "B35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "W26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "W30": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "H28": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "H31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "T23": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "T19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "V20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "V34": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "E45": {
+   "kauf": 15,
+   "vw": [
+    5,
+    10,
+    20,
+    30
+   ],
+   "grund": "Würde fürs Kind zahlen, Kind evtl. unter 18"
+  },
+  "E50": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Misstraut KI, nur Neugier"
+  },
+  "AT19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Matura vorbei"
+  },
+  "CH22": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "N15": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Unter 18, kein Interesse"
+  },
+  "N40": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "F20": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Brauche Führerschein-Theorie, nicht Abi"
+  },
+  "L33": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Sieht KI-Lernhilfen kritisch"
+  }
+ },
+ "P9": {
+  "S16": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Studium noch weit weg"
+  },
+  "S17a": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Studium noch nicht akut"
+  },
+  "S17b": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Studium erst 2027"
+  },
+  "S18a": {
+   "kauf": 6,
+   "vw": [
+    2,
+    4,
+    8,
+    12
+   ],
+   "grund": "Studium ab Herbst, jetzt noch zu früh"
+  },
+  "S18b": {
+   "kauf": 5,
+   "vw": [
+    2,
+    4,
+    7,
+    12
+   ],
+   "grund": "Studium noch nicht konkret"
+  },
+  "S19": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Ausbildung statt Studium geplant"
+  },
+  "A16": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Studium"
+  },
+  "A18": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Studium"
+  },
+  "A20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Azubi, kein BAföG"
+  },
+  "A22": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Azubi, kein BAföG"
+  },
+  "U19": {
+   "kauf": 10,
+   "vw": [
+    2,
+    4,
+    8,
+    14
+   ],
+   "grund": "BAföG läuft schon, Folgeantrag erst später"
+  },
+  "U21": {
+   "kauf": 8,
+   "vw": [
+    2,
+    4,
+    8,
+    13
+   ],
+   "grund": "Folgeantrag nervt, Studierendenwerk berät gratis"
+  },
+  "U23": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein BAföG-Thema"
+  },
+  "U24": {
+   "kauf": 6,
+   "vw": [
+    2,
+    4,
+    8,
+    12
+   ],
+   "grund": "Master-BAföG möglich, Beratung kostenlos"
+  },
+  "U22w": {
+   "kauf": 12,
+   "vw": [
+    2,
+    5,
+    9,
+    15
+   ],
+   "grund": "Master-BAföG neu beantragen, aber WG-Stress zuerst"
+  },
+  "U20b": {
+   "kauf": 35,
+   "vw": [
+    2,
+    5,
+    10,
+    15
+   ],
+   "grund": "Akut überfordert, aber Studierendenwerk hilft gratis"
+  },
+  "U25": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Promotion, kein BAföG"
+  },
+  "M18": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Studium unklar"
+  },
+  "M30": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "R19": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Studium unklar"
+  },
+  "R26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "R35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "R45": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kinder noch nicht im Studium"
+  },
+  "G24": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "G28": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "G31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "C17": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "C21": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "C26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "B27": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "B32": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "B29": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "B35": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "W26": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "W30": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "H28": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "H31": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "T23": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "T19": {
+   "kauf": 6,
+   "vw": [
+    1,
+    3,
+    6,
+    10
+   ],
+   "grund": "Studium nach FSJ, BAföG später relevant"
+  },
+  "V20": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Unklar ob Studium"
+  },
+  "V34": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "E45": {
+   "kauf": 10,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Kind studiert bald, BAföG-Antrag schreckt ab"
+  },
+  "E50": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Misstraut KI, Amt berät gratis"
+  },
+  "AT19": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Österreich, kein BAföG"
+  },
+  "CH22": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Schweiz, kein BAföG"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "N40": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Dual, kein BAföG"
+  },
+  "F20": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein akutes Thema"
+  },
+  "L33": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  }
+ },
+ "P10": {
+  "S16": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "S17a": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "S17b": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "S18a": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "S18b": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "S19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "A16": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "A18": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "A20": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "A22": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "U19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "U21": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "U23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "U24": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Noch keine Hochzeit geplant"
+  },
+  "U22w": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "U20b": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "U25": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Influencer-Produkt, kein Anlass"
+  },
+  "M18": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "M30": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "R19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "R26": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "R35": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "R45": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Längst verheiratet"
+  },
+  "G24": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "G28": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "G31": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "C17": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "C21": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "C26": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "B27": {
+   "kauf": 3,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "B32": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "B29": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "B35": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Datenschutz, kein Anlass"
+  },
+  "W26": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "W30": {
+   "kauf": 4,
+   "vw": null,
+   "grund": "Heirat irgendwann, Wohnung zuerst"
+  },
+  "H28": {
+   "kauf": 35,
+   "vw": [
+    5,
+    10,
+    20,
+    35
+   ],
+   "grund": "Chaos akut, aber Apps und Pinterest gratis"
+  },
+  "H31": {
+   "kauf": 12,
+   "vw": [
+    3,
+    6,
+    12,
+    20
+   ],
+   "grund": "Braucht JGA-Plan, Rede-Gerüst immerhin nützlich"
+  },
+  "T23": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "T19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "V20": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "V34": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "E45": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "E50": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "AT19": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "CH22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "N15": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "N40": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Bedarf"
+  },
+  "K22": {
+   "kauf": 1,
+   "vw": null,
+   "grund": "Kein Anlass"
+  },
+  "F20": {
+   "kauf": 0,
+   "vw": null,
+   "grund": "Kein Bezug"
+  },
+  "L33": {
+   "kauf": 2,
+   "vw": null,
+   "grund": "Kein Anlass"
+  }
+ }
+}
