@@ -7,3 +7,14 @@
 - Kein Ausreißer (Schwelle 3× Median ≈ 843).
 - Kritiker (fable): S5-2 aus Basis, S1 getrennt, Aufrufe kein Ziel, Hook-Test A/B/A/B, Kommentar-Rate messen, Verkaufsquelle tracken, Follower-Anteil nachsehen statt spekulieren. Alles übernommen.
 - Regeländerung: AUSWERTUNG_AKTUELL → neue Messziele, Testdesign A/B/A/B mit Widerlegungskriterium, Messzeitpunkt 48 h.
+
+## 08.11.2026 (Routine, gestartet 17:10)
+- Chrome: Hamsterfrei-Profil (deviceId 2d7e7af3…), TikTok-Konto **hamsterfrei** per Account-Info bestätigt. Nur gelesen. Tab geschlossen ~17:40.
+- Erstmals alle drei Plattformen erhoben (state/zahlen.md): TikTok 7 Videos inkl. Zuschauer-/Follower-Daten, YouTube 8 Shorts, Instagram 6 Reels (nur Aufrufzahlen, keine Insights). Digistore nicht eingeloggt → Verkäufe n. v.
+- Bestes: S1 (TikTok 1.285 / 10,47 s / 52,5 % Suche; IG 1.875). YouTube-Spitze: S2 Prüfungsgespräch 698 (Shorts-Feed). Schwächstes: S5-2 (TikTok 256 / 3,37 s, Erwartung verfehlt; YT 94, 12,6 % bis Ende; IG nie gepostet).
+- Ausreißer: S1 TikTok (4,4×), S1 IG (12,7×), S2 YouTube (6,7×). Follow-up: nur S2 → THEMEN S2-F am 10.11.; S1 bewusst nicht (Such-Akkumulator, Deadline).
+- S7 löste die Regel „< 4 s = Frame 0 schlechter“ aus (3,7 s) → Suchleiste als Frame 0 verworfen.
+- Geerbtes Konto: Gefolgt-Traffic <0,1 %, 0 % Follower-Zuschauer, Follower-Demografie passt nicht → Empfehlung behalten, Follower ignorieren (AUSWERTUNG_AKTUELL, offene Frage).
+- 07./08.11. kein Video veröffentlicht → Jona gemeldet.
+- Kritiker (fable): Werbung-Confound, S1 kein FYP-Ausreißer, YT-Median Rauschen, S7-Befund fehlte, Verkäufe unmessbar. Übernommen: S1-Teil-2 gestrichen, S2-Follow-up vor Teststart, 48 h + 7 T, Ausreißer erst ab 500 Aufrufen, Messziele gekürzt (Follower Δ, Suchanteil raus), Test: gleiche Länge 30–35 s, ohne Werbung, Entscheidung ≥ 4 von 5 Paaren, Ausfallregel, verfehlte Erwartung → Ursache + 1 Änderung. Abgewandelt: Länge 30–35 s statt 15–20 s (SERIEN.md sieht 30–50 s vor; Marke nur über Jona ändern).
+- Regeländerungen: AUSWERTUNG_AKTUELL (Befunde, Messregeln, Messziele, Testdesign, offene Frage), THEMEN.md (S2-F).
