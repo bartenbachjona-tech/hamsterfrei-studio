@@ -2,6 +2,67 @@
 
 > **Ab Marke v2 (04.11.2026)** arbeitet der Trend-Scout als **Ausreißer-Scout** (Handbuch G5): Videos mit ≥ 3× Kanal-Median, eigene Nische + Nachbarnischen, deutsch und englisch, 3–5 Konten; Pflichtfrage „Was haben die besten 5 dieses Kontos, was den schlechtesten 5 fehlt?“; Motor kopieren, nie das Thema 1:1. Jede Idee wird einer Serie aus `docs/brand/SERIEN.md` zugeordnet oder als Experiment markiert und braucht ein Schlüsselbild (sonst verwerfen). Hooks ohne KI-Jargon (STIMME.md). Ältere Einträge unten sind Hintergrund; „Werbung ab Sekunde 0“ oder Werbe-Pointen dort gelten nicht mehr.
 
+## 2026-11-09 – Ausreißer-Scout (TikTok-Direktcheck + YouTube-Shorts)
+Methode: Faktor = Aufrufe ÷ **Median der ~30–40 neuesten Videos** des Kontos, selbst nachgerechnet (Stand 09.11. ~07:00 UTC). TikTok im Hamsterfrei-Chrome (deviceId 2d7e7af3…, Konto hamsterfrei geprüft, nur gelesen, 6 Suchen ohne Drosselung, Zahlen von Profilseiten). YouTube: Shorts-Tab je Kanal (gerundete Aufrufe), Watch-Seiten/Player gesperrt → **Länge, CTA, Transkript fehlen**; Erstes Bild nur ≈ Thumbnail/Kachel. vidIQ/OutlierKit diesmal nicht genutzt. Mini-Kanäle (< 1.000 Abos) sind markiert: Faktor schlägt dort leicht aus.
+
+### Ausreißer
+| Konto | Video | Aufrufe | Datum | Median | Faktor | Spr./Nische |
+|---|---|---|---|---|---|---|
+| TikTok @tiktoktechnik (1,3 Mio F.) | „Neue Methode: So änderst du dein iPhone Klingelton ganz einfach!“ https://www.tiktok.com/@tiktoktechnik/video/7687560749832588577 | 1,0 Mio | 20.09. (alt) | 60,1K | **16,6×** | DE / Tech-Tipps |
+| TikTok @yoragitech (816K F.) | „So löst du das nervige Samsung Smartphone Problem!“ https://www.tiktok.com/@yoragitech/video/7703148569330486561 · „Eine WhatsApp Funktion die kaum jemand kennt!“ …/7698021801552514336 · „Du musst deine Nachrichten nicht selber schreiben!“ …/7700912611109473568 | 374K / 311K / 212K | 01.11. / 18.10. / 26.10. | 64K | **5,9× / 4,9× / 3,3×** | DE / Tech-Tipps |
+| TikTok @myrkothum (1,2K F., Mini) | „Schreib VOICE … Claude spricht jetzt mit deiner Stimme.“ https://www.tiktok.com/@myrkothum/video/7705047957145439521 (+ STIMME 11,7×, LIMIT 8,2×, BERATER 6,1×) | 17,4K | 06.11. | 964 | **18,0×** | DE / KI-Alltag |
+| TikTok @teo.resellt.immer (9,2K F.) | „3 Schritte System“ (Vinted) https://www.tiktok.com/@teo.resellt.immer/video/7697235069437480224 · „Favoriten auf Vinted anschreiben“ …/7699881587202100512 | 51,7K / 44,3K | 16.10. / 23.10. | 4.844 | **10,7× / 9,1×** | DE / Reselling (verkauft „supplier“-Listen → Thema kein Vorbild) |
+| TikTok @ai.with.ni (11,7K F.) | „Vibe coding is moving way beyond websites and apps“ https://www.tiktok.com/@ai.with.ni/video/7697003694251937076 | 6,8K | 15.10. | 975 | 7,0× | EN / KI |
+| YT @geldmacherei (242 Abos, Mini, 2D-Animationsfiguren) | „Schwarzfahren: Ab wann wird es teurer als das Ticket?“ https://www.youtube.com/shorts/Hx1HArjO00Y · „Vinted und Finanzamt: Ab wann musst du Steuern zahlen?“ https://www.youtube.com/shorts/85kMPDRZ3g4 · „1 Euro in Rial“ https://www.youtube.com/shorts/c7tFImKoPyo | 44K / 35K / 29K | 03.11. / 05.11. / 31.10. | 3,4K (n = 22) | **12,9× / 10,3× / 8,5×** | DE / Geld, Reselling |
+| YT @sinem_off (663 Abos, Mini) | „Dieser Überkonsum ist NICHT normal“ https://www.youtube.com/shorts/EfUack093nE | 26K | 24.10. | 2,3K | 11,3× | DE / Sparen |
+| YT @finanztip (592K) | „Wie Dein Finanzberater Dein Portfolio diversifiziert 😅“ (Meme mit Labels) https://www.youtube.com/shorts/AEg3TMZwsP8 | 214K | 06.11. | 20K | 10,7× | DE / Finanzen (Thema für uns tabu) |
+| YT @TheFinancialDiet (1,35 Mio) | „Pretty Privilege“ https://www.youtube.com/shorts/VcwhdmhBqVc | 446K | 28.10. | 50,5K | 8,8× | EN / Geld & Konsum |
+| YT @ThioJoe (3,1 Mio) | „Modders have lost their minds 💀“ https://www.youtube.com/shorts/ZbGMwqeob84 | 1,9 Mio | 04.10. | 152K | 12,5× | EN / Tech |
+| YT @TechWithTim (2,1 Mio) · @CultureForce (154K) | „Why You Can't Run That AI Model“ https://www.youtube.com/shorts/LLFpLVvK9Dk · „Nike Made Air Force 1s For SCHOOL!?“ https://www.youtube.com/shorts/7_UtHIXNdX4 | 35K / 70K | 18.10. / 05.11. | 9,6K / 20K | 3,6× / 3,5× | EN / Tech, Reselling |
+
+Nicht gewertet (Werbung/Finanzprodukt): @finance.with.lou (146×, wirbt fast immer für Spar-App), @lern.mit.domi („MacBook Platz verkaufen für Werbung“ 131×, fast alles „Werbung“-markiert; Motor notiert: absurder Nebenjob-Einfall), yoragitech „Anzeige | OPPO vs iPhone“ 951K, tiktoktechnik Gewinnspiel 600K, @kevinstratvert Copilot (#MicrosoftPartner). KI-Schule-Nische: kein sauberer Ausreißer ohne Werbung gefunden.
+
+### Beste 5 vs. schlechteste 5
+- **@geldmacherei (nächstes Vorbild für Animationsfigur):** Top (Schwarzfahren 44K, Vinted/Finanzamt 35K, Rial 29K, Fitnessstudio-Rechnung 20K, Kartbahn 14K) = **Schwellenfrage „Ab wann …?“ / Rechnung, die jeden betrifft**, erstes Bild **riesige Zahl oben + Figur in Extrempose** (Jubel/Schock). Bottom (App-Tester-Masche 1,2K, Gold aus Handys 1,3K, Weihnachtsmann/Waschsalon/Black Friday 1,6K) = Randthemen, kleine oder keine Zahl, traurige Figur.
+- **@yoragitech / @tiktoktechnik:** Top = **Problem → Lösung am eigenen Gerät** („das nervige … Problem“, „kennt kaum jemand“, Klingelton, Wetteransage), Handy in der Hand, Einstellungsbildschirm groß. Bottom (0,16–0,36×) = News, Produkte, Messe, Kaufberatung („Lohnt sich …?“), Anzeigen.
+- **@myrkothum:** Top = Kommentar-Wort + **sofort spürbares Ergebnis** als Karte (Timer + Stempel „✓“); Bottom (0,29×) = abstrakte Coaching-Sätze („Deine KI spielt deinen Traumkunden“). Kommentar-Wort steht auch bei Flops → nicht der Unterschied.
+- **@teo.resellt.immer:** Top = **ein konkreter Handgriff** („3 Schritte“, „Favoriten anschreiben“, „3 Vinted Fehler“ 6×); Bottom (0,13–0,4×) = Flex („30k 🤝“), Kommentar-Antworten.
+- **@finanztip / @TheFinancialDiet:** Top = Meme-Template mit Labels bzw. Contrarian-Stitch, **Hauptfigur + fette 2–4-Wort-Titelkarte im ersten Bild**; Bottom = statische Infografiken, Nebenfiguren, Podcast-Ausschnitte, Textwände.
+
+### 3 Folgerungen (Hinweise, n = 2–4 Konten je Punkt)
+1. **Große Zahl + Figur in Extrempose im ersten Bild** (geldmacherei, CultureForce, TFD-Titelkarte) – kleine/keine Zahl landet unten. Für uns: Zahl nur aus eigener Rechnung, Hamster in Schock-/Jubelpose (LOOK.md).
+2. **Schwellenfrage / Problem → Lösung schlägt News und Kaufberatung** bei 4 von 5 Konten (geldmacherei, yoragitech, tiktoktechnik, teo). Bestätigt 05.11.: Ergebnis statt Erklärung, keine Tool-News.
+3. **Die Hauptfigur muss im ersten Bild sein**; Nebenfiguren, Gäste, Infografiken ohne Figur floppen (finanztip, TFD) → Hamster nie aus Frame 0 nehmen. Kommentar-Wörter unterscheiden Top und Flop nicht (myrkothum, wie 05.11.).
+
+Trichter (G5): 10 Rohideen (Vinted-Mindestpreis, Speicher voll, Abo-Liste, Stimme klonen, Favoriten anschreiben, Schwarzfahren-Rechnung, Finanzberater-Meme, Klingelton-Trick, Stitch auf Promi, „Funktion kennt keiner“) → Ausschluss (Thema 1:1, Finanzprodukt/U18, Deepfake-Risiko, kein Claude-Ergebnis, fremde Person) → 3.
+
+### 3 Video-Ideen (ab 11.11., Kernserien; Kritiker fable: I1 7/10, I2 6/10, I3 5/10 – Nachbesserungen eingearbeitet)
+**I1 – Nebenjob-Check: „Ab welchem Preis lohnt sich Vinted überhaupt?“ (Serie c, Motor geldmacherei 12,9×/10,3×: Schwellenfrage + Riesenzahl; Thema dort Steuer, hier Zeit) – Wort MINDESTPREIS – stärkste Idee**
+- Schlüsselbild: Leinwand riesig „Unter <X> € = Laufrad“ (nur nach gestoppter Rechnung), Hamster mit Krawatte im Laufrad, schockiert. Nur diese zwei Elemente.
+- Hook Contrarian: „Alle sagen: Stell alles auf Vinted. Ich hab die Stoppuhr laufen lassen. Bei meinen drei Teilen lag alles unter <X> Euro unter Mindestlohn.“
+- Hook Investigator: „Ab welchem Preis lohnt sich ein Vinted-Teil überhaupt? Ich hab jede Minute mitgestoppt.“
+- Ablauf: 1) Schwellenzahl zuerst 2) Zeit-Bausteine gestoppt: Fotos, Text, Nachrichten, Verpacken, Weg zur Post 3) Minuten × Mindestlohn 13,90 € (2026, Quelle bundesregierung.de) = Mindestpreis; kurz: Vinted nimmt Verkäufern keine Gebühr, Käufer zahlt Versand 4) „aber …“: Claude schreibt den Anzeigentext aus dem Foto in Sekunden → Schwelle sinkt um <Y> € (nur gemessen), Bündeln senkt weiter 5) Urteil „lohnt sich für Pakete und Markenteile, nicht für Einzel-Shirts“; Haken: ab 30 Verkäufen oder 2.000 € meldet Vinted ans Finanzamt (Meldung, keine automatische Steuerpflicht – nie „ab 30 zahlst du Steuern“).
+- Echt aufnehmen: Jona stoppt bei 3 eigenen Teilen jeden Schritt (Stoppuhr-Screenshots), echte Claude-Antwort als Bildschirmaufnahme. Aussage nur „bei meinen drei Teilen“, keine allgemeine Regel. Kein Anzeigen-Profi → keine Werbung.
+- Kommentar-Wort MINDESTPREIS → Rechentabelle zum Selbst-Eintragen (gratis).
+
+**I2 – Hamster-Test: „Speicher voll – ich hab Claude gefragt, was weg kann“ (Serie a, Motor yoragitech 5,9× + tiktoktechnik 16,6×: Problem → Lösung am eigenen Gerät) – Wort SPEICHER**
+- Schlüsselbild: zwei Speicherbalken, oben rot „Speicher voll“, unten grün „<X> GB frei“ (nur echter Wert); Hamster schaufelt gezeichnete App-Kacheln (keine Logos) aus einem Riesenhandy.
+- Hook Experimenter: „Hamster-Test: Mein Handy sagt Speicher voll. Ich hab Claude gefragt, was weg kann. <X> Gigabyte später …“
+- Hook Investigator: „Hamster-Test: Wo versteckt sich der Speicher auf meinem Handy? Claude hatte drei Verdächtige.“
+- Ablauf: 1) Vorher/Nachher-Balken zuerst 2) Speicher-Übersicht (nachgezeichnet, keine Hersteller-UI) → Frage an Claude kurz auf der Leinwand 3) Claudes drei Schritte, je mit echtem Ergebnis in GB 4) „aber …“: ein Tipp war generisch oder riskant (z. B. Chat-Verlauf löschen) – ehrlich zeigen 5) Stempel Geklappt/Halb/Fail + Pointe „der größte Brocken war <…>“.
+- Echt aufnehmen: Jonas eigenes Handy, Werte vorher/nachher (ohne Namen, Chats, Benachrichtigungen), echte Claude-Antwort. Speicher-Ansicht neu zeichnen. „Claude-Konto ab 18“ in der Caption.
+- Kommentar-Wort SPEICHER → Frage an Claude zum Kopieren + 3-Schritte-Checkliste (gratis).
+
+**I3 – Vorher/Nachher: „Beispiel-Kontoauszug vs. Claudes Abo-Karte“ (Serie b, Motor geldmacherei Riesenzahl + Preiskontrast CultureForce 3,5×; schwächster Beleg) – Wort ABO**
+- Schlüsselbild: Split: links lange, unübersichtliche Liste mit Stempel „BEISPIEL“, rechts Claudes Karte „Abos = <X> € im Jahr“ in Krawatten-Grün; Hamster hält eine Riesenschere an die linke Liste.
+- Hook Magician: „Links ein ganz normaler Kontoauszug als Beispiel. Rechts, was Claude daraus macht: alle Abos, aufs Jahr gerechnet.“
+- Hook Contrarian: „Fünf Euro im Monat klingen nach nichts. Claude hat sie aufs Jahr gerechnet.“
+- Ablauf: 1) Split zuerst 2) Unterschied 1: Abos herausgesucht, nach Jahreskosten sortiert 3) Unterschied 2: doppelte/ähnliche Abos markiert 4) Unterschied 3: wo der Kündigungsbutton sitzt (gesetzlich seit 2022) bzw. kurze Kündigungs-Mail 5) Pointe = die Jahreszahl; Hinweis: nie IBAN/Kontonummer in den Chat, vorher schwärzen.
+- Echt aufnehmen: entweder Jonas echte, geschwärzte Abbuchungen oder eine klar als „Beispiel“ markierte Liste (dann nie „mein Kontoauszug“ sagen); echte Claude-Antwort. Keine Banking-Logos, kein Finanzprodukt. Kein „hat mich umgehauen“.
+- Kommentar-Wort ABO → Frage an Claude + Kündigungs-Vorlage (gratis).
+
+Verworfen: Stimme klonen (Deepfake-/Missbrauchsrisiko), Vinted-Favoriten anschreiben (teo-Thema 1:1), Finanzberater-/Depot-Meme (Finanzprodukte, U18), Klingelton-/WhatsApp-Trick (kein Claude-Ergebnis, Tool-News), Stitch auf Promi (fremde Person, G9).
+
 ## 2026-11-05 – Ausreißer-Scout (TikTok-Direktcheck + Web/YouTube)
 Methode TikTok: Suche im Hamsterfrei-Chrome (nur gelesen), dann Profilseite des Kontos: Faktor = Aufrufe ÷ **Median der ca. 16–50 neuesten Videos** des Kontos (Stand 05.11. ~07:00). Suche wurde nach ~3 Abfragen gedrosselt (TikTok gab leere Antworten) → Nebenjob-/Spar-Nische auf TikTok kaum abgedeckt. Web/YouTube: Faktor laut OutlierKit (Median nicht nachrechenbar), nur Longform; YouTube-Shorts-Seiten, Playboard und X waren gesperrt, vidIQ 1 Credit (Outliers kosten 5, nichts gekauft).
 
