@@ -18,3 +18,12 @@
 - 07./08.11. kein Video veröffentlicht → Jona gemeldet.
 - Kritiker (fable): Werbung-Confound, S1 kein FYP-Ausreißer, YT-Median Rauschen, S7-Befund fehlte, Verkäufe unmessbar. Übernommen: S1-Teil-2 gestrichen, S2-Follow-up vor Teststart, 48 h + 7 T, Ausreißer erst ab 500 Aufrufen, Messziele gekürzt (Follower Δ, Suchanteil raus), Test: gleiche Länge 30–35 s, ohne Werbung, Entscheidung ≥ 4 von 5 Paaren, Ausfallregel, verfehlte Erwartung → Ursache + 1 Änderung. Abgewandelt: Länge 30–35 s statt 15–20 s (SERIEN.md sieht 30–50 s vor; Marke nur über Jona ändern).
 - Regeländerungen: AUSWERTUNG_AKTUELL (Befunde, Messregeln, Messziele, Testdesign, offene Frage), THEMEN.md (S2-F).
+
+## 09.11.2026 (Routine, gestartet 23:24)
+- Chrome: Browser 2 (deviceId 2d7e7af3…), TikTok-Konto **hamsterfrei** per Account-Info bestätigt, YouTube-Kanal Hamsterfrei (UCBmT3RjRK5PGk-YVTdFzuDA) bestätigt. Nur gelesen. Tab ~23:33 geschlossen.
+- Erhoben: TikTok 7 Videos + Konto 7 T + Follower, YouTube 9 Shorts (S9-Analyse), Instagram 7 Reels. Digistore nicht geprüft (nicht eingeloggt).
+- Bestes: S1 TikTok 1.819 (+534 in ~30 h), 62,3 % Suche, Ø 11,07 s, 5,1 % ganz – weiter Such-Akkumulator. Schwächstes (≥ 48 h): S5-2 272 / 3,49 s (einziges unbeworbenes). S9 vorläufig 324 / 4,75 s, Rang 4 von 8, ohne vorab notierte Erwartung.
+- Ausreißer: nur S1 (5,7× Median 321, aber nicht innerhalb 48 h → keine Follow-up-Pflicht); Beobachtung bis 16.11. vorgemerkt.
+- YouTube-Feed seit 04.11. tot (S9 27 Aufrufe/12,5 h). 0 Abos, 0 Wort-Kommentare, 0 DMs.
+- Kritiker (fable): Suchbegriff-Regel überinterpretiert (stützt sich nur auf S1) und kollidiert mit Hook-Test; Erwartungen aus beworbenen Videos zu hoch; Test bei 5 Paaren nur Indiz; Funnel-Tracking und Produktionsengpass (Credits) fehlen; S1 weiter beobachten. Übernommen: Suchbegriff nur Caption-Zeile 1 + Bildtext, identisch in A/B, als Hypothese; Erwartung unbeworben 150–300 / 3–4,5 s; S1 bis 16.11. beobachten; Paare aus derselben Serie, Ergebnis = Indiz; Credits + Tracking an Jona. Nicht übernommen: Frame 0 als eigene Testvariable (Frame 0 + erster Satz gehören im Hook-Test zusammen, ein Test).
+- Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 09.11. Nr. 1–6, Erwartungen, Messziel-Hinweis, offene Frage), THEMEN.md (S1-Beobachtung).

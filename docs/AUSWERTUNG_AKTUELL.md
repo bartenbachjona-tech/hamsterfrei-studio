@@ -1,4 +1,4 @@
-# Hamsterfrei – Auswertung aktuell (Stand 08.11.2026, Marke v2)
+# Hamsterfrei – Auswertung aktuell (Stand 09.11.2026, Marke v2)
 
 Geht PRODUKTION.md vor, steht unter KANAL_REGELN, `docs/brand/*` und STUDIO_HANDBUCH. Die Auswertungsroutine (geplante Aufgabe, alle 2 Tage, wie bei Groschenfall/Schattengast; muss noch angelegt werden) aktualisiert diese Datei und `state/zahlen.md`. Befunde werden als konkrete Regeländerung in `docs/brand/*` bzw. hier eingetragen, nicht nur ins Log (Handbuch G7).
 
@@ -35,6 +35,21 @@ Für **alle bisherigen Videos** (Folge 01, S1 „Seminararbeit bis 10.11.?“, V
 - **Funnel:** 0 Wort-Kommentare, 0 DMs; Verkäufe nicht messbar (Digistore nicht eingeloggt).
 - **07.11. und 08.11.: kein Video** (Soll 1/Tag) → Jona gemeldet.
 
+## Erhebung 09.11.2026 ~23:25 (alle drei Plattformen, Details state/zahlen.md)
+- **TikTok:** S1 wächst weiter: **1.819** Aufrufe (+534 seit 08.11. 17:20), Suche **62,3 %**, Ø 11,07 s, 5,1 % ganz, 58 Saves. Neue Suchbegriffe „w seminararbeit“, „w seminar durchgefallen“. Alle anderen 272–365, Ø 3,5–5,8 s, Absprung bei 0:01. **S9** (12,5 h, vorläufig, beworben, 46 s): 324 / 4,75 s / 1,2 % ganz, FYP 85,6 %. Konto 7 T: 2,6K Aufrufe, Suche 43,1 % (davon ~1.160 allein S1), Gefolgt 0 %, Follower netto 0.
+- **YouTube:** Feed liefert kaum aus: S9 27 Aufrufe nach 12,5 h (Ø Anteil 25,9 %), S7 21 + Duplikat 24, S5-2 94. S2 704 (+6). 0 Abos.
+- **Instagram:** S9 142, S1 1.877 (+2), Rest 105–380. 1 Follower.
+- **Funnel:** 0 Wort-Kommentare, 0 DMs, Verkäufe n. v.
+- **S9 ohne vorab notierte Erwartung gepostet** (G7-Verstoß).
+
+## Befunde 09.11. (nach Kritiker-Runde, gelten als Regeln)
+1. **Suchbegriff in Caption-Zeile 1 + Bildtext (Hypothese, kein Test):** Ab 11.11. steht in jedem Video ein Suchbegriff, wie Leute ihn tippen, wörtlich in **Caption-Zeile 1** und als **Bildtext** – in A- und B-Videos des Hook-Tests identisch. **Nicht** im ersten gesprochenen Satz (der ist die Testvariable). Beleg ist schwach (fast nur S1; S5/S7 mit 15–19 % Suche blieben bei 4,1–4,6 s), deshalb nur als Hypothese geführt: Prüfung nach den 10 Testvideos über den Suchanteil je Video.
+2. **Ohne Erwartung kein Post:** Vor jedem Post steht im Log eine Erwartung (TikTok Aufrufe 48 h + Ø Wiedergabe, YouTube Aufrufe 48 h). Fehlt sie, wird nicht gepostet bzw. nachgetragen, bevor geplant wird (dritter G7-Verstoß-Typ → feste Regel).
+3. **Erwartungen auf unbeworbene Basis gesenkt:** Einziger unbeworbener TikTok-Wert ist S5-2 (272 / 3,49 s). Erwartung für unbeworbene Test-Videos: **TikTok 150–300 Aufrufe/48 h, Ø 3–4,5 s, ganz 1–2 %; YouTube 20–100; IG 100–160.** Beworbene Videos: TikTok 250–380 / 4–5,5 s.
+4. **S1 weiter beobachten statt sofort Follow-up:** S1 wächst noch (~400–500/Tag) über Suche, „w seminar durchgefallen“ wird eher nach der Abgabe gesucht. Täglich bis 16.11. mitschreiben; wächst S1 bis dahin weiter (> +200/Tag), kommt ein Such-Follow-up auf dasselbe Keyword (Regel 08.11. Nr. 2), außerhalb des Hook-Tests.
+5. **Hook-Test-Schwäche dokumentiert:** Absprung bei 0:01 bei allen Videos liegt vor dem gesprochenen Hook – Frame 0 und erster Satz gehören deshalb im Test zusammen (A = Ergebnis-Bild + „Hamster-Test:“, B = bisheriges Bild + Frage/Anleitung). Paare möglichst aus **derselben Serie**; Ergebnis bei n = 5 Paaren nur als Indiz werten, nicht als Beweis.
+6. **YouTube:** kein Eingriff. Feed-Einbruch seit 04.11. (Ursache unklar: evtl. S7-Duplikat, Werbekennzeichnung oder Thema). Duplikat löschen kann nur Jona.
+
 ## Befunde 08.11. (nach Kritiker-Runde, gelten als Regeln)
 1. **Suchleiste in Frame 0 (S7) widerlegt:** 3,7 s < 4 s (eigene Regel ausgelöst), Suche nur 7,3 %. Suchbegriffe bleiben in Caption/Sprechtext, aber eine nachgezeichnete Suchleiste ist kein Schlüsselbild. Das eigentliche Problem bleibt der **Absprung bei 0:01 bei allen Videos** → genau das prüft der Hook-Test ab 11.11.
 2. **S1 ist ein Such-Akkumulator, kein FYP-Treffer** (wächst über 9 Tage, beworben). Ein Deadline-„Teil 2“ kurz vor dem 10.11. kann nicht mehr ranken → **kein S1-Follow-up**. Such-Ausreißer bekommen künftig ein Folgevideo auf **dasselbe Keyword**, keine Deadline-Variante.
@@ -54,6 +69,7 @@ Für **alle bisherigen Videos** (Folge 01, S1 „Seminararbeit bis 10.11.?“, V
 | „Bis zum Ende angesehen“ % | YouTube | Median 36 % | ≥ 40 % (nur bei gleicher Länge vergleichbar) |
 | Wort-Kommentare pro Video mit Kommentar-Wort | TikTok + IG | 0 | ≥ 1 |
 | Verkäufe je Plattform zuordenbar | Digistore | nicht messbar | Tracking aktiv (Jona) |
+Hinweis 09.11.: Die Basis stammt fast nur aus beworbenen Videos; der Test läuft ohne Werbung (einziger unbeworbener Wert S5-2: 3,49 s / 1,4 %). Ziele bleiben, Vergleich aber gegen die unbeworbene Basis.
 Gestrichen (Kritiker 08.11.): Follower Δ 7 T (Rauschen ±2 auf totem Konto), Suchanteil ≥ 20 % (gilt nur fürs Seminar-Thema).
 
 ## Testdesign ab 11.11. (EIN Test: Hook), Fassung 08.11.
@@ -61,7 +77,7 @@ Gestrichen (Kritiker 08.11.): Follower Δ 7 T (Rauschen ±2 auf totem Konto), Su
 - **Alle 10 Videos gleich lang (30–35 s, im Rahmen von SERIEN.md) und alle ohne Werbung**; Werbe-Videos laufen in dieser Zeit nicht oder zählen nicht zum Test.
 - **Entscheidung:** A gewinnt, wenn A in **≥ 4 von 5 Paaren** sowohl bei TikTok Ø Wiedergabe als auch bei „ganz angesehen“ (je 48 h) vorne liegt. Sonst bleibt B Standard. (Die alte Regel „+1,5 s im Mittel“ ist bei n = 5 und ~300 Aufrufen Rauschen.)
 - **Ausfalltag:** Fehlt ein Tag, wird das angefangene Paar neu begonnen; zwei Ausfalltage im Test → Test neu starten. Deshalb startet der Test erst, wenn mindestens 3 Test-Videos fertig sind.
-- Erwartung nächstes FYP-Video (G7): 230–350 Aufrufe/48 h, Ø 4–5 s.
+- Erwartung (G7, Stand 09.11.): unbeworben TikTok 150–300 Aufrufe/48 h, Ø 3–4,5 s; beworben 250–380 / 4–5,5 s; YouTube 20–100; IG 100–160.
 - **S2-Follow-up (YouTube-Ausreißer 698):** Prüfungsgespräch-Video am **10.11.** (Abgabe heute → jetzt kommt die Prüfung), also vor dem Teststart, als Follow-up markiert. Mit Werbung nur nach Jonas OK.
 
 ## Offene Messpunkte (nächster Lauf)
@@ -78,5 +94,6 @@ Gestrichen (Kritiker 08.11.): Follower Δ 7 T (Rauschen ±2 auf totem Konto), Su
 - Ausreißer (≥ 3× Median und ≥ 500 Aufrufe) lösen innerhalb von 48 h ein Folgevideo aus, ändern aber nicht die Testvariable (Handbuch G6).
 
 ## Offene Frage für Jona
+- **Zahlen 09.11.:** Gefolgt-Traffic 7 T = 0 %, Follower netto 0 bei 2,6K Wochenaufrufen. Die geerbten Follower spielen weiter keine Rolle; Empfehlung unverändert (behalten, ignorieren).
 - **Ist das geerbte Privatkonto (TikTok @hamsterfrei, ca. 2.400 themenfremde Follower) die richtige Basis?** Themenfremde Follower reagieren schlecht auf die ersten Ausspielungen und können die Ø-Werte drücken. Optionen: (1) weiter so und nur beobachten, ob die Follower-Demografie kippt; (2) neues TikTok-Konto starten und das alte ruhen lassen. Die Basiswerte (Follower-Demografie, Traffic aus „Folge ich“ vs. For You) sollen die Entscheidung stützen. Antwort hier eintragen.
 - **Zahlen 08.11. (TikTok Studio):** Die 2.400 geerbten Follower liefern praktisch nichts: Traffic „Gefolgt“ <0,1 % bei allen Videos, 0 % Follower unter den Zuschauern (S1, S5-2, S7), Netto −2 in 7 Tagen. Follower = 57 % Männer, nur 52,8 % DE (40 % „Anderes“); Zuschauer = ~70 % Frauen, 18–24, 80–90 % DE. **Empfehlung des Studios:** Konto behalten (Suche funktioniert, S1 rankt), die alten Follower als irrelevant behandeln. 250–300 FYP-Aufrufe sind Kaltstart-Normal; ein Neukonto würde daran nichts ändern. Neustart nur erwägen, wenn der DE-Anteil der Zuschauer unter 70 % fällt. Entscheidung: Jona.
