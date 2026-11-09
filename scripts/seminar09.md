@@ -25,3 +25,8 @@ Werbung: mein eigenes Produkt | Noch 1 Tag bis zur Abgabe der Seminararbeit? Let
 ## YouTube
 Titel: Noch 1 Tag bis zur Abgabe: Seminararbeit jetzt checken #shorts
 Beschreibung: Werbung: mein eigenes Produkt | Morgen Abgabe der Seminararbeit? Claude prüft Fußnoten, Literaturverzeichnis und Formalia nach deinem Merkblatt, checkt Plagiate (gegen deine Quellen) und KI-Floskeln und spielt im Prüfungsgespräch deine Lehrkraft. Eigener Claude-Skill, läuft auch im kostenlosen Claude: https://hamsterfrei.de/seminar 🐹 Keine Notengarantie. Claude-Konto ab 18. KI-animiert. #seminararbeit #wseminar #abitur
+
+## Produktion (09.11.)
+- Stimme: eleven_v4, Voice E6cNSOTqfEt7KnIGmkxz, Flow N5ddDntytjJqLiguXZUM, 1 Aufruf mit 2 Takes (2 × 920 = 1.840 Credits). **Take A** gewählt (Generation 6dzv3ygZ2uP0HP2jbLm1, 46,5 s; Take B Zcpz7MiWIyxwOmOOfTJJ 46,8 s, beide Scribe-wortgetreu, A etwas knapper). Mit ffmpeg `atempo=1.04` auf 44,7 s gestrafft (Ziel ≤ ~45 s). Scribe PEa9cl8usLwJW5ZVK9Bg (Take A) und 1rahsvXlH9FJCOiJj7t3 (Take B), je 0 Credits; `[tag]`-Wörter entfernt, Zeiten /1,04 → `src/folgen/seminar09.words.json`. Gesamtverbrauch S9: 1.840 Credits.
+- Video: Composition `Seminar09` (src/folgen/seminar09.tsx, Szenen src/scenes/seminar09.tsx, wiederverwendet aus S7: SceneLuecke, SceneEnde), 46,8 s, 11 Einstellungen, Werbe-Label, „Claude-Konto ab 18“ unten rechts durchgehend, Endbild 2 s nach „Profil“.
+- Datei: out/hamsterfrei-s9-letzte-chance.mp4 (+ out/upload/, /mnt/user-data/outputs/), Cover out/cover-seminar09.png, Zuschauer-Test-Material docs/video_test/seminar09/material/.
