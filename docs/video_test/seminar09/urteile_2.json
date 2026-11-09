@@ -1,0 +1,227 @@
+{
+ "G31": {
+  "bis_ende": 4,
+  "website": 0.3,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Seminararbeit? Nicht mein Thema, ich suche Shop-Automatisierung."
+ },
+ "C17": {
+  "bis_ende": 8,
+  "website": 0.5,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Süßer Hamster, aber mit Seminararbeit habe ich nichts zu tun."
+ },
+ "C21": {
+  "bis_ende": 6,
+  "website": 0.3,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Seminararbeit betrifft mich nicht, weiter zum nächsten Video."
+ },
+ "C26": {
+  "bis_ende": 5,
+  "website": 0.2,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Nicht meine Baustelle, ich schau Faceless-Kanal-Tipps."
+ },
+ "B27": {
+  "bis_ende": 5,
+  "website": 0.2,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Schule und Abgabe sind für mich lange vorbei."
+ },
+ "B32": {
+  "bis_ende": 3,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Kein Bezug zu mir, wische sofort weiter."
+ },
+ "B29": {
+  "bis_ende": 4,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Ich brauche Bewerbungshilfe, keine Seminararbeit-Prüfung."
+ },
+ "B35": {
+  "bis_ende": 3,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Nicht relevant für mich, und Werbung mit KI nervt."
+ },
+ "W26": {
+  "bis_ende": 3,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Ich such eine Wohnung, keine Seminararbeit-Hilfe."
+ },
+ "W30": {
+  "bis_ende": 3,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Völlig anderes Thema, weiterscrollen."
+ },
+ "H28": {
+  "bis_ende": 3,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Hochzeit ist mein Thema, nicht Abgaben."
+ },
+ "H31": {
+  "bis_ende": 3,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "JGA-Planung wäre interessant, das hier nicht."
+ },
+ "T23": {
+  "bis_ende": 4,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Ich kämpfe mit ELSTER, nicht mit Fußnoten."
+ },
+ "T19": {
+  "bis_ende": 4,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Hab meine Seminararbeit längst hinter mir."
+ },
+ "V20": {
+  "bis_ende": 2,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Null Bezug, ich wische zum nächsten Zock-Clip."
+ },
+ "V34": {
+  "bis_ende": 2,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Kein Bedarf, geht mich nichts an."
+ },
+ "E45": {
+  "bis_ende": 45,
+  "website": 6,
+  "kauf": 1.5,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "werbung_misstrauen",
+  "grund_kein_kauf": "preis_unbekannt_oder_zu_teuer",
+  "satz": "Hilft das meinem Kind wirklich, oder ist das Schummeln?"
+ },
+ "E50": {
+  "bis_ende": 12,
+  "website": 0.5,
+  "kauf": 0,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "KI bei Schularbeiten? Da bin ich skeptisch, kaufen würde ich nie."
+ },
+ "AT19": {
+  "bis_ende": 25,
+  "website": 3,
+  "kauf": 0.5,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Klingt nützlich, aber Bayern-Merkblatt passt nicht, ChatGPT reicht mir."
+ },
+ "CH22": {
+  "bis_ende": 25,
+  "website": 3,
+  "kauf": 0.5,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Bayern-Schule, Bachelorarbeit hier anders. Prompt mach ich selbst."
+ },
+ "N15": {
+  "bis_ende": 15,
+  "website": 0.5,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hamster ist witzig, aber Seminararbeit ist erst in Jahren dran."
+ },
+ "N40": {
+  "bis_ende": 3,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Seminararbeit? Nichts für mich, weiter."
+ },
+ "K22": {
+  "bis_ende": 25,
+  "website": 2,
+  "kauf": 0.3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Praxisbericht ist anders, Claude kann ich selbst fragen."
+ },
+ "F20": {
+  "bis_ende": 4,
+  "website": 0.1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Ich lerne Fahrschultheorie, kein Bezug hier."
+ },
+ "L33": {
+  "bis_ende": 40,
+  "website": 2,
+  "kauf": 0,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Schüler sollen selbst arbeiten, Prüfungsgespräch ersetzt keine Eigenleistung."
+ }
+}

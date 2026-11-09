@@ -1,0 +1,227 @@
+{
+ "S16": {
+  "bis_ende": 15,
+  "website": 2,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Ich hab noch ein Jahr, das betrifft mich nicht."
+ },
+ "S17a": {
+  "bis_ende": 75,
+  "website": 22,
+  "kauf": 6,
+  "grund_weg": "-",
+  "grund_kein_klick": "preis_unbekannt_oder_zu_teuer",
+  "grund_kein_kauf": "kein_claude_konto",
+  "satz": "Abgabe ist morgen, aber ich hab kein Claude-Konto, Panik."
+ },
+ "S17b": {
+  "bis_ende": 12,
+  "website": 1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Anderes Bundesland, kein W-Seminar, wisch weiter."
+ },
+ "S18a": {
+  "bis_ende": 55,
+  "website": 12,
+  "kauf": 3,
+  "grund_weg": "-",
+  "grund_kein_klick": "spaeter_vielleicht",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Meine Arbeit ist fast fertig, Gespräch erst im Dezember."
+ },
+ "S18b": {
+  "bis_ende": 20,
+  "website": 2,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Keine Seminararbeit bei mir, nicht mein Thema."
+ },
+ "S19": {
+  "bis_ende": 18,
+  "website": 2,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Fachabi hat keine Seminararbeit, scrolle weiter."
+ },
+ "A16": {
+  "bis_ende": 8,
+  "website": 1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Seminararbeit? Hab ich nicht, uninteressant."
+ },
+ "A18": {
+  "bis_ende": 6,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Nichts für mich, ich suche eine Ausbildung."
+ },
+ "A20": {
+  "bis_ende": 8,
+  "website": 1,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Keine Seminararbeit mehr, Schule ist vorbei."
+ },
+ "A22": {
+  "bis_ende": 7,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Betrifft mich null, wischen."
+ },
+ "U19": {
+  "bis_ende": 25,
+  "website": 3,
+  "kauf": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Hausarbeit ja, aber Bayern-Schulzeug, ChatGPT reicht mir."
+ },
+ "U21": {
+  "bis_ende": 25,
+  "website": 3,
+  "kauf": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Ich nutze schon ChatGPT, brauche keinen extra Skill."
+ },
+ "U23": {
+  "bis_ende": 22,
+  "website": 3,
+  "kauf": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "werbung_misstrauen",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab Claude Pro, baue mir solche Prompts selbst."
+ },
+ "U24": {
+  "bis_ende": 18,
+  "website": 2,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich schreibe keine Seminararbeit mehr, Video ist fuer Schueler."
+ },
+ "U22w": {
+  "bis_ende": 8,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich suche ein Zimmer, nicht Seminararbeit-Hilfe."
+ },
+ "U20b": {
+  "bis_ende": 8,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich kaempfe mit BAfoeG, das hilft mir nicht."
+ },
+ "U25": {
+  "bis_ende": 15,
+  "website": 1,
+  "kauf": 0,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "werbung_misstrauen",
+  "grund_kein_kauf": "werbung_misstrauen",
+  "satz": "Influencer-Skill fuers Zitieren? Ich pruefe lieber selbst."
+ },
+ "M18": {
+  "bis_ende": 8,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Seminararbeit hab ich nicht, ich will Jobs."
+ },
+ "M30": {
+  "bis_ende": 6,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Keine Schule mehr, das ist nichts fuer mich."
+ },
+ "R19": {
+  "bis_ende": 8,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Seminararbeit interessiert mich nicht, weiter scrollen."
+ },
+ "R26": {
+  "bis_ende": 6,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Nicht meine Welt, ich handle mit Elektronik."
+ },
+ "R35": {
+  "bis_ende": 4,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Keine Schule bei mir, sofort weitergewischt."
+ },
+ "R45": {
+  "bis_ende": 5,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Meine Kinder sind noch zu klein dafuer."
+ },
+ "G24": {
+  "bis_ende": 8,
+  "website": 0,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Seminararbeit? Ich brauche Rechnungshilfe, nicht das."
+ },
+ "G28": {
+  "bis_ende": 12,
+  "website": 1,
+  "kauf": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "werbung_misstrauen",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Nicht meine Zielgruppe, aber der Hamster ist nett gemacht."
+ }
+}
