@@ -1,0 +1,718 @@
+{
+"words": [
+{
+"text": "Seminararbeit",
+"start": 0.33,
+"end": 0.64,
+"type": "word"
+},
+{
+"text": "abgegeben?",
+"start": 0.693,
+"end": 1.36,
+"type": "word"
+},
+{
+"text": "Durch",
+"start": 1.4,
+"end": 1.6,
+"type": "word"
+},
+{
+"text": "bist",
+"start": 1.632,
+"end": 1.76,
+"type": "word"
+},
+{
+"text": "du",
+"start": 1.787,
+"end": 1.84,
+"type": "word"
+},
+{
+"text": "noch",
+"start": 1.872,
+"end": 2.0,
+"type": "word"
+},
+{
+"text": "nicht.",
+"start": 2.04,
+"end": 2.32,
+"type": "word"
+},
+{
+"text": "Jetzt",
+"start": 2.387,
+"end": 2.72,
+"type": "word"
+},
+{
+"text": "kommt",
+"start": 2.747,
+"end": 2.88,
+"type": "word"
+},
+{
+"text": "das",
+"start": 2.92,
+"end": 3.04,
+"type": "word"
+},
+{
+"text": "Prüfungsgespräch.",
+"start": 3.067,
+"end": 4.12,
+"type": "word"
+},
+{
+"text": "Und",
+"start": 4.17,
+"end": 4.32,
+"type": "word"
+},
+{
+"text": "da",
+"start": 4.347,
+"end": 4.4,
+"type": "word"
+},
+{
+"text": "fragt",
+"start": 4.464,
+"end": 4.8,
+"type": "word"
+},
+{
+"text": "dich",
+"start": 4.816,
+"end": 4.88,
+"type": "word"
+},
+{
+"text": "die",
+"start": 4.92,
+"end": 5.04,
+"type": "word"
+},
+{
+"text": "Lehrkraft",
+"start": 5.088,
+"end": 5.52,
+"type": "word"
+},
+{
+"text": "zu",
+"start": 5.547,
+"end": 5.6,
+"type": "word"
+},
+{
+"text": "deiner",
+"start": 5.653,
+"end": 6.0,
+"type": "word"
+},
+{
+"text": "eigenen",
+"start": 6.05,
+"end": 6.4,
+"type": "word"
+},
+{
+"text": "Arbeit.",
+"start": 6.491,
+"end": 7.28,
+"type": "word"
+},
+{
+"text": "Also",
+"start": 7.328,
+"end": 7.52,
+"type": "word"
+},
+{
+"text": "lass",
+"start": 7.56,
+"end": 7.68,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 7.737,
+"end": 8.08,
+"type": "word"
+},
+{
+"text": "vorher",
+"start": 8.12,
+"end": 8.32,
+"type": "word"
+},
+{
+"text": "die",
+"start": 8.34,
+"end": 8.4,
+"type": "word"
+},
+{
+"text": "Lehrkraft",
+"start": 8.448,
+"end": 8.88,
+"type": "word"
+},
+{
+"text": "spielen.",
+"start": 8.92,
+"end": 9.28,
+"type": "word"
+},
+{
+"text": "Du",
+"start": 9.387,
+"end": 9.6,
+"type": "word"
+},
+{
+"text": "lädst",
+"start": 9.627,
+"end": 9.84,
+"type": "word"
+},
+{
+"text": "deine",
+"start": 9.867,
+"end": 10.0,
+"type": "word"
+},
+{
+"text": "Arbeit",
+"start": 10.046,
+"end": 10.32,
+"type": "word"
+},
+{
+"text": "hoch",
+"start": 10.384,
+"end": 10.64,
+"type": "word"
+},
+{
+"text": "und",
+"start": 10.66,
+"end": 10.72,
+"type": "word"
+},
+{
+"text": "schreibst:",
+"start": 10.76,
+"end": 11.48,
+"type": "word"
+},
+{
+"text": "Stell",
+"start": 11.547,
+"end": 11.76,
+"type": "word"
+},
+{
+"text": "mir",
+"start": 11.82,
+"end": 12.0,
+"type": "word"
+},
+{
+"text": "zehn",
+"start": 12.04,
+"end": 12.24,
+"type": "word"
+},
+{
+"text": "Prüfungsfragen",
+"start": 12.267,
+"end": 12.88,
+"type": "word"
+},
+{
+"text": "zu",
+"start": 12.933,
+"end": 13.04,
+"type": "word"
+},
+{
+"text": "meiner",
+"start": 13.063,
+"end": 13.2,
+"type": "word"
+},
+{
+"text": "Arbeit.",
+"start": 13.28,
+"end": 13.92,
+"type": "word"
+},
+{
+"text": "Eine",
+"start": 13.968,
+"end": 14.16,
+"type": "word"
+},
+{
+"text": "nach",
+"start": 14.192,
+"end": 14.32,
+"type": "word"
+},
+{
+"text": "der",
+"start": 14.36,
+"end": 14.48,
+"type": "word"
+},
+{
+"text": "anderen.",
+"start": 14.53,
+"end": 14.96,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 15.029,
+"end": 15.44,
+"type": "word"
+},
+{
+"text": "fragt",
+"start": 15.472,
+"end": 15.68,
+"type": "word"
+},
+{
+"text": "nach",
+"start": 15.696,
+"end": 15.76,
+"type": "word"
+},
+{
+"text": "deinem",
+"start": 15.787,
+"end": 16.0,
+"type": "word"
+},
+{
+"text": "Thema,",
+"start": 16.067,
+"end": 16.56,
+"type": "word"
+},
+{
+"text": "deinen",
+"start": 16.587,
+"end": 16.8,
+"type": "word"
+},
+{
+"text": "Quellen,",
+"start": 16.853,
+"end": 17.36,
+"type": "word"
+},
+{
+"text": "deiner",
+"start": 17.413,
+"end": 17.6,
+"type": "word"
+},
+{
+"text": "Methode",
+"start": 17.664,
+"end": 18.24,
+"type": "word"
+},
+{
+"text": "und",
+"start": 18.34,
+"end": 18.64,
+"type": "word"
+},
+{
+"text": "wofür",
+"start": 18.68,
+"end": 18.96,
+"type": "word"
+},
+{
+"text": "du",
+"start": 18.987,
+"end": 19.04,
+"type": "word"
+},
+{
+"text": "KI",
+"start": 19.16,
+"end": 19.52,
+"type": "word"
+},
+{
+"text": "benutzt",
+"start": 19.56,
+"end": 19.84,
+"type": "word"
+},
+{
+"text": "hast.",
+"start": 19.92,
+"end": 20.36,
+"type": "word"
+},
+{
+"text": "Zum",
+"start": 20.39,
+"end": 20.48,
+"type": "word"
+},
+{
+"text": "Beispiel:",
+"start": 20.533,
+"end": 21.24,
+"type": "word"
+},
+{
+"text": "Warum",
+"start": 21.31,
+"end": 21.68,
+"type": "word"
+},
+{
+"text": "hast",
+"start": 21.712,
+"end": 21.84,
+"type": "word"
+},
+{
+"text": "du",
+"start": 21.867,
+"end": 21.92,
+"type": "word"
+},
+{
+"text": "nur",
+"start": 21.96,
+"end": 22.08,
+"type": "word"
+},
+{
+"text": "deinen",
+"start": 22.107,
+"end": 22.24,
+"type": "word"
+},
+{
+"text": "eigenen",
+"start": 22.3,
+"end": 22.72,
+"type": "word"
+},
+{
+"text": "Kurs",
+"start": 22.76,
+"end": 22.96,
+"type": "word"
+},
+{
+"text": "befragt?",
+"start": 23.013,
+"end": 23.6,
+"type": "word"
+},
+{
+"text": "Du",
+"start": 23.707,
+"end": 23.92,
+"type": "word"
+},
+{
+"text": "antwortest.",
+"start": 23.98,
+"end": 24.64,
+"type": "word"
+},
+{
+"text": "Und",
+"start": 24.72,
+"end": 24.96,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 25.006,
+"end": 25.28,
+"type": "word"
+},
+{
+"text": "sagt",
+"start": 25.328,
+"end": 25.52,
+"type": "word"
+},
+{
+"text": "dir,",
+"start": 25.54,
+"end": 25.68,
+"type": "word"
+},
+{
+"text": "was",
+"start": 25.72,
+"end": 25.84,
+"type": "word"
+},
+{
+"text": "noch",
+"start": 25.872,
+"end": 26.0,
+"type": "word"
+},
+{
+"text": "wackelt.",
+"start": 26.04,
+"end": 26.68,
+"type": "word"
+},
+{
+"text": "Zu",
+"start": 26.951,
+"end": 26.96,
+"type": "word"
+},
+{
+"text": "allgemein.",
+"start": 27.02,
+"end": 27.72,
+"type": "word"
+},
+{
+"text": "Nenn,",
+"start": 27.82,
+"end": 28.16,
+"type": "word"
+},
+{
+"text": "wie",
+"start": 28.18,
+"end": 28.24,
+"type": "word"
+},
+{
+"text": "viele",
+"start": 28.28,
+"end": 28.48,
+"type": "word"
+},
+{
+"text": "du",
+"start": 28.507,
+"end": 28.56,
+"type": "word"
+},
+{
+"text": "befragt",
+"start": 28.613,
+"end": 29.04,
+"type": "word"
+},
+{
+"text": "hast,",
+"start": 29.088,
+"end": 29.36,
+"type": "word"
+},
+{
+"text": "und",
+"start": 29.38,
+"end": 29.44,
+"type": "word"
+},
+{
+"text": "sag,",
+"start": 29.52,
+"end": 29.84,
+"type": "word"
+},
+{
+"text": "was",
+"start": 29.88,
+"end": 30.0,
+"type": "word"
+},
+{
+"text": "das",
+"start": 30.04,
+"end": 30.16,
+"type": "word"
+},
+{
+"text": "für",
+"start": 30.18,
+"end": 30.24,
+"type": "word"
+},
+{
+"text": "dein",
+"start": 30.272,
+"end": 30.4,
+"type": "word"
+},
+{
+"text": "Ergebnis",
+"start": 30.457,
+"end": 30.88,
+"type": "word"
+},
+{
+"text": "heißt.",
+"start": 30.944,
+"end": 31.48,
+"type": "word"
+},
+{
+"text": "Klar,",
+"start": 31.58,
+"end": 32.0,
+"type": "word"
+},
+{
+"text": "deine",
+"start": 32.027,
+"end": 32.16,
+"type": "word"
+},
+{
+"text": "Lehrkraft",
+"start": 32.208,
+"end": 32.64,
+"type": "word"
+},
+{
+"text": "fragt",
+"start": 32.672,
+"end": 32.88,
+"type": "word"
+},
+{
+"text": "vielleicht",
+"start": 32.902,
+"end": 33.12,
+"type": "word"
+},
+{
+"text": "anders.",
+"start": 33.189,
+"end": 33.8,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 33.84,
+"end": 34.0,
+"type": "word"
+},
+{
+"text": "deine",
+"start": 34.027,
+"end": 34.16,
+"type": "word"
+},
+{
+"text": "wackelige",
+"start": 34.2,
+"end": 34.64,
+"type": "word"
+},
+{
+"text": "Stelle",
+"start": 34.667,
+"end": 34.88,
+"type": "word"
+},
+{
+"text": "kennst",
+"start": 34.928,
+"end": 35.2,
+"type": "word"
+},
+{
+"text": "du",
+"start": 35.227,
+"end": 35.28,
+"type": "word"
+},
+{
+"text": "jetzt.",
+"start": 35.347,
+"end": 35.92,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 35.95,
+"end": 36.32,
+"type": "word"
+},
+{
+"text": "Prüfung,",
+"start": 36.347,
+"end": 36.8,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 36.832,
+"end": 36.96,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 36.98,
+"end": 37.12,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 37.16,
+"end": 37.28,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 37.3,
+"end": 37.36,
+"type": "word"
+},
+{
+"text": "den",
+"start": 37.4,
+"end": 37.52,
+"type": "word"
+},
+{
+"text": "Prompt",
+"start": 37.554,
+"end": 37.76,
+"type": "word"
+},
+{
+"text": "zum",
+"start": 37.8,
+"end": 37.92,
+"type": "word"
+},
+{
+"text": "Kopieren.",
+"start": 37.98,
+"end": 38.56,
+"type": "word"
+}
+]
+}

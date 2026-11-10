@@ -1,0 +1,227 @@
+{
+ "S16": {
+  "bis_ende": 30,
+  "website": 2,
+  "folgen": 6,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Seminararbeit hab ich erst nächstes Jahr, eher egal."
+ },
+ "S17a": {
+  "bis_ende": 62,
+  "website": 9,
+  "folgen": 24,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "kein_claude_konto",
+  "satz": "Heute abgegeben, Prüfungsgespräch macht Angst, aber kein Claude-Konto."
+ },
+ "S17b": {
+  "bis_ende": 22,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Seminararbeit gibts in NRW nicht, weiter."
+ },
+ "S18a": {
+  "bis_ende": 70,
+  "website": 12,
+  "folgen": 30,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Gute Idee fürs Gespräch, Prompt hol ich mir per Kommentar."
+ },
+ "S18b": {
+  "bis_ende": 28,
+  "website": 3,
+  "folgen": 8,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Klingt nach Bayern-Ding, betrifft mich so nicht."
+ },
+ "S19": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Keine Seminararbeit bei mir, ich brauch Bewerbungshilfe."
+ },
+ "A16": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Gymnasium-Kram, hat nichts mit meiner Ausbildungssuche zu tun."
+ },
+ "A18": {
+  "bis_ende": 6,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Seminararbeit? Ich such eine Lehrstelle, weiter."
+ },
+ "A20": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Schulthema, bin längst raus da."
+ },
+ "A22": {
+  "bis_ende": 4,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Abi-Zeug, interessiert mich nach der Schicht nicht."
+ },
+ "U19": {
+  "bis_ende": 16,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Mein Abi ist vorbei, Trick wär aber für Referate okay."
+ },
+ "U21": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Kann ich auch mit ChatGPT, und ist Schülerthema."
+ },
+ "U23": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Netter Prompt, mach ich mit Claude Pro sowieso selbst."
+ },
+ "U24": {
+  "bis_ende": 20,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Als Lehrerin in spe witzig, aber nicht für mich."
+ },
+ "U22w": {
+  "bis_ende": 3,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Ich brauch ein WG-Zimmer, keine Prüfungsfragen."
+ },
+ "U20b": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "BAföG-Formulare sind mein Problem, nicht Seminararbeiten."
+ },
+ "U25": {
+  "bis_ende": 10,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "werbung_misstrauen",
+  "grund_kein_kauf": "werbung_misstrauen",
+  "satz": "Kommentier-für-Prompt-Masche, kenn ich, nein danke."
+ },
+ "M18": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Hab keine Seminararbeit, brauch nur einen Minijob."
+ },
+ "M30": {
+  "bis_ende": 2,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Schulkram, ich such Zuverdienst."
+ },
+ "R19": {
+  "bis_ende": 4,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Nichts mit Vinted, weiterwischen."
+ },
+ "R26": {
+  "bis_ende": 3,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Schüler-Content, irrelevant für mich."
+ },
+ "R35": {
+  "bis_ende": 2,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Hamster mit Krawatte, aber nicht mein Thema."
+ },
+ "R45": {
+  "bis_ende": 3,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Vielleicht was für meinen Neffen, ich wische weiter."
+ },
+ "G24": {
+  "bis_ende": 3,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Ich brauch Hilfe bei Rechnungen, nicht beim Abi."
+ },
+ "G28": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Sauber animiert, aber Zielgruppe Schüler, nicht ich."
+ }
+}
