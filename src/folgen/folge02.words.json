@@ -1,0 +1,580 @@
+{
+"words": [
+{
+"text": "Hamster-Test:",
+"start": 0.066,
+"end": 0.777,
+"type": "word"
+},
+{
+"text": "Ich",
+"start": 0.816,
+"end": 0.932,
+"type": "word"
+},
+{
+"text": "hab",
+"start": 0.951,
+"end": 1.01,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 1.043,
+"end": 1.243,
+"type": "word"
+},
+{
+"text": "meine",
+"start": 1.269,
+"end": 1.398,
+"type": "word"
+},
+{
+"text": "alte",
+"start": 1.445,
+"end": 1.631,
+"type": "word"
+},
+{
+"text": "Switch",
+"start": 1.676,
+"end": 1.942,
+"type": "word"
+},
+{
+"text": "schätzen",
+"start": 1.961,
+"end": 2.175,
+"type": "word"
+},
+{
+"text": "lassen.",
+"start": 2.23,
+"end": 2.71,
+"type": "word"
+},
+{
+"text": "Der",
+"start": 2.71,
+"end": 2.782,
+"type": "word"
+},
+{
+"text": "Preis",
+"start": 2.847,
+"end": 3.17,
+"type": "word"
+},
+{
+"text": "passt.",
+"start": 3.209,
+"end": 3.714,
+"type": "word"
+},
+{
+"text": "Die",
+"start": 3.753,
+"end": 3.869,
+"type": "word"
+},
+{
+"text": "Begründung",
+"start": 3.908,
+"end": 4.258,
+"type": "word"
+},
+{
+"text": "nicht.",
+"start": 4.309,
+"end": 4.646,
+"type": "word"
+},
+{
+"text": "Normale",
+"start": 4.71,
+"end": 5.034,
+"type": "word"
+},
+{
+"text": "Switch,",
+"start": 5.09,
+"end": 5.578,
+"type": "word"
+},
+{
+"text": "Kratzer",
+"start": 5.604,
+"end": 5.889,
+"type": "word"
+},
+{
+"text": "am",
+"start": 5.915,
+"end": 5.966,
+"type": "word"
+},
+{
+"text": "Display,",
+"start": 6.015,
+"end": 6.51,
+"type": "word"
+},
+{
+"text": "ohne",
+"start": 6.557,
+"end": 6.743,
+"type": "word"
+},
+{
+"text": "Karton.",
+"start": 6.805,
+"end": 7.287,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 7.364,
+"end": 7.606,
+"type": "word"
+},
+{
+"text": "sagt:",
+"start": 7.653,
+"end": 7.994,
+"type": "word"
+},
+{
+"text": "hundertfünfzig",
+"start": 8.072,
+"end": 8.693,
+"type": "word"
+},
+{
+"text": "Euro",
+"start": 8.771,
+"end": 9.082,
+"type": "word"
+},
+{
+"text": "Vau",
+"start": 9.313,
+"end": 9.699,
+"type": "word"
+},
+{
+"text": "Beh.",
+"start": 9.757,
+"end": 10.165,
+"type": "word"
+},
+{
+"text": "Nicht",
+"start": 10.204,
+"end": 10.398,
+"type": "word"
+},
+{
+"text": "unter",
+"start": 10.424,
+"end": 10.554,
+"type": "word"
+},
+{
+"text": "hundertzwanzig.",
+"start": 10.631,
+"end": 11.563,
+"type": "word"
+},
+{
+"text": "Auf",
+"start": 11.625,
+"end": 11.741,
+"type": "word"
+},
+{
+"text": "Kleinanzeigen",
+"start": 11.78,
+"end": 12.362,
+"type": "word"
+},
+{
+"text": "stehen",
+"start": 12.407,
+"end": 12.673,
+"type": "word"
+},
+{
+"text": "ähnliche",
+"start": 12.75,
+"end": 13.061,
+"type": "word"
+},
+{
+"text": "heute",
+"start": 13.113,
+"end": 13.372,
+"type": "word"
+},
+{
+"text": "für",
+"start": 13.411,
+"end": 13.527,
+"type": "word"
+},
+{
+"text": "hundert",
+"start": 13.605,
+"end": 13.915,
+"type": "word"
+},
+{
+"text": "bis",
+"start": 13.954,
+"end": 14.071,
+"type": "word"
+},
+{
+"text": "zweihundert.",
+"start": 14.148,
+"end": 14.925,
+"type": "word"
+},
+{
+"text": "Passt.",
+"start": 14.966,
+"end": 15.548,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 15.548,
+"end": 15.708,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 15.752,
+"end": 16.018,
+"type": "word"
+},
+{
+"text": "sagt",
+"start": 16.049,
+"end": 16.174,
+"type": "word"
+},
+{
+"text": "auch:",
+"start": 16.236,
+"end": 16.562,
+"type": "word"
+},
+{
+"text": "Händler",
+"start": 16.655,
+"end": 16.928,
+"type": "word"
+},
+{
+"text": "verkaufen",
+"start": 16.967,
+"end": 17.317,
+"type": "word"
+},
+{
+"text": "sie",
+"start": 17.356,
+"end": 17.472,
+"type": "word"
+},
+{
+"text": "schon",
+"start": 17.498,
+"end": 17.627,
+"type": "word"
+},
+{
+"text": "ab",
+"start": 17.679,
+"end": 17.783,
+"type": "word"
+},
+{
+"text": "etwa",
+"start": 17.829,
+"end": 18.016,
+"type": "word"
+},
+{
+"text": "hundertfünfzehn",
+"start": 18.055,
+"end": 18.909,
+"type": "word"
+},
+{
+"text": "Euro.",
+"start": 18.948,
+"end": 19.331,
+"type": "word"
+},
+{
+"text": "Ich",
+"start": 19.351,
+"end": 19.409,
+"type": "word"
+},
+{
+"text": "hab",
+"start": 19.448,
+"end": 19.564,
+"type": "word"
+},
+{
+"text": "die",
+"start": 19.584,
+"end": 19.642,
+"type": "word"
+},
+{
+"text": "Quelle",
+"start": 19.668,
+"end": 19.875,
+"type": "word"
+},
+{
+"text": "aufgemacht.",
+"start": 19.933,
+"end": 20.496,
+"type": "word"
+},
+{
+"text": "Dort",
+"start": 20.574,
+"end": 20.884,
+"type": "word"
+},
+{
+"text": "war",
+"start": 20.904,
+"end": 20.962,
+"type": "word"
+},
+{
+"text": "das",
+"start": 21.001,
+"end": 21.117,
+"type": "word"
+},
+{
+"text": "der",
+"start": 21.137,
+"end": 21.195,
+"type": "word"
+},
+{
+"text": "Preis",
+"start": 21.26,
+"end": 21.584,
+"type": "word"
+},
+{
+"text": "für",
+"start": 21.603,
+"end": 21.661,
+"type": "word"
+},
+{
+"text": "die",
+"start": 21.7,
+"end": 21.817,
+"type": "word"
+},
+{
+"text": "Switch",
+"start": 21.861,
+"end": 22.127,
+"type": "word"
+},
+{
+"text": "Lite.",
+"start": 22.189,
+"end": 22.516,
+"type": "word"
+},
+{
+"text": "Die",
+"start": 22.593,
+"end": 22.826,
+"type": "word"
+},
+{
+"text": "normale",
+"start": 22.873,
+"end": 23.215,
+"type": "word"
+},
+{
+"text": "gab",
+"start": 23.273,
+"end": 23.448,
+"type": "word"
+},
+{
+"text": "es",
+"start": 23.474,
+"end": 23.525,
+"type": "word"
+},
+{
+"text": "erst",
+"start": 23.572,
+"end": 23.758,
+"type": "word"
+},
+{
+"text": "ab",
+"start": 23.836,
+"end": 23.991,
+"type": "word"
+},
+{
+"text": "hundertsiebenundvierzig.",
+"start": 24.03,
+"end": 25.312,
+"type": "word"
+},
+{
+"text": "Urteil:",
+"start": 25.614,
+"end": 26.132,
+"type": "word"
+},
+{
+"text": "Halb.",
+"start": 26.19,
+"end": 26.792,
+"type": "word"
+},
+{
+"text": "Preis",
+"start": 26.837,
+"end": 27.064,
+"type": "word"
+},
+{
+"text": "passt,",
+"start": 27.103,
+"end": 27.452,
+"type": "word"
+},
+{
+"text": "Begründung",
+"start": 27.491,
+"end": 27.918,
+"type": "word"
+},
+{
+"text": "falsch.",
+"start": 27.98,
+"end": 28.462,
+"type": "word"
+},
+{
+"text": "Klick",
+"start": 28.539,
+"end": 28.772,
+"type": "word"
+},
+{
+"text": "die",
+"start": 28.792,
+"end": 28.85,
+"type": "word"
+},
+{
+"text": "Quelle",
+"start": 28.902,
+"end": 29.161,
+"type": "word"
+},
+{
+"text": "immer",
+"start": 29.187,
+"end": 29.316,
+"type": "word"
+},
+{
+"text": "selbst",
+"start": 29.361,
+"end": 29.627,
+"type": "word"
+},
+{
+"text": "an.",
+"start": 29.704,
+"end": 29.937,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 30.015,
+"end": 30.349,
+"type": "word"
+},
+{
+"text": "SWITCH,",
+"start": 30.405,
+"end": 30.815,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 30.846,
+"end": 30.971,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 30.99,
+"end": 31.126,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 31.145,
+"end": 31.204,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 31.243,
+"end": 31.359,
+"type": "word"
+},
+{
+"text": "meine",
+"start": 31.385,
+"end": 31.514,
+"type": "word"
+},
+{
+"text": "Frage",
+"start": 31.566,
+"end": 31.825,
+"type": "word"
+},
+{
+"text": "zum",
+"start": 31.864,
+"end": 31.98,
+"type": "word"
+},
+{
+"text": "Kopieren.",
+"start": 32.019,
+"end": 32.602,
+"type": "word"
+}
+]
+}

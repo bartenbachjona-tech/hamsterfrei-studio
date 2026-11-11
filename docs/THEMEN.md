@@ -18,6 +18,7 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | S5-3 | **Countdown Teil 3:** „Morgen Abgabe: Claude baut dein Deckblatt und Inhaltsverzeichnis“ (Composition Seminar08, ohne Produkt, scripts/seminar08.md) | DECKBLATT | **nein** | Skript freigegeben 08.11. (Kritiker Ø 8,25), **Stimme fehlt: ElevenLabs-Credits leer** – geplant 09.11. 18:00 |
 | S7 | S7 Suchbegriff-Video, produziert 06.11., wartet auf Freigabe („Seminararbeit mit KI? So geht's.“, Composition Seminar07, scripts/seminar07.md, ohne Preis) | – | ja (eigenes Produkt) | wartet auf Freigabe |
 | 01 | Ein Produkt, ein Shop (Sonnenuntergangs-Lampe, Shopify) | SHOP | ja (Shopify) | veröffentlicht 29.10.2026 |
+| F02 | **Folge 02 · Hamster-Test (Serie a, Hook-Test A, Paar 1):** „Ich hab Claude meine alte Switch schätzen lassen. Der Preis passt. Die Begründung nicht.“ (Composition Folge02, scripts/folge02.md) | SWITCH | **nein** | terminiert 11.11.2026 18:00 (TikTok, YT; IG offen 18:00) |
 | T1 | **Trend:** Warum verkauft der Hamster den Keller seiner Nachbarn? (FinanzKopf-Formel, Beispielrechnung, siehe TRENDS.md Shortlist 1) | KELLER | nur wenn Skill-Link | offen |
 | T2 | **Trend:** Eine KI hat seinen Sessel verkauft – und seine Adresse weitergegeben (Meta Muse, Shortlist 2) | SICHER | ja, wenn Skill gezeigt | offen |
 | T3 | **Trend:** Codes-Serie „Mach ein Foto von deinem alten ___“ (Shortlist 3, braucht echte Fotos von Jona) | CODES | ja (eigenes Produkt) | wartet auf Fotos |
