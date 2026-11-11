@@ -27,3 +27,11 @@
 - YouTube-Feed seit 04.11. tot (S9 27 Aufrufe/12,5 h). 0 Abos, 0 Wort-Kommentare, 0 DMs.
 - Kritiker (fable): Suchbegriff-Regel überinterpretiert (stützt sich nur auf S1) und kollidiert mit Hook-Test; Erwartungen aus beworbenen Videos zu hoch; Test bei 5 Paaren nur Indiz; Funnel-Tracking und Produktionsengpass (Credits) fehlen; S1 weiter beobachten. Übernommen: Suchbegriff nur Caption-Zeile 1 + Bildtext, identisch in A/B, als Hypothese; Erwartung unbeworben 150–300 / 3–4,5 s; S1 bis 16.11. beobachten; Paare aus derselben Serie, Ergebnis = Indiz; Credits + Tracking an Jona. Nicht übernommen: Frame 0 als eigene Testvariable (Frame 0 + erster Satz gehören im Hook-Test zusammen, ein Test).
 - Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 09.11. Nr. 1–6, Erwartungen, Messziel-Hinweis, offene Frage), THEMEN.md (S1-Beobachtung).
+
+## 11.11.2026 (Routine, gestartet 23:23)
+- Chrome: Browser 4 (deviceId 2d7e7af3…, wie in den Vorläufen), TikTok-Konto **hamsterfrei** per Account-Info bestätigt, YouTube-Kanal UCBmT3RjRK5PGk-YVTdFzuDA. Nur gelesen. Tab ~23:40 geschlossen.
+- Erhoben: TikTok Folge02, S2-F, S9, S1 (Detail) + Liste + Konto 7 T + Follower; YouTube 11 Shorts + Analyse S2-F/Folge02; Instagram Profil. Digistore n. v.
+- Bestes: **Folge02 (Hook A, Paar 1)** TikTok 9,77 s / 3,9 % ganz nach 5,5 h (vorläufig) + YouTube 221 / erstes Abo. Schwächstes: **S2-F** TikTok 2,94 s / 0,4 % (Erwartung verfehlt), aber YouTube 792 = Ausreißer.
+- Testvariable: Paar 1 A läuft, B am 12.11.; Wertung erst bei 48 h.
+- Kritiker (fable): Folge02 nur Indiz, nur 48-h-Werte; Follow-up nur YouTube; Ursache S2-F nur außerhalb des Tests anwenden; „YouTube-Themenlogik“ streichen (Hypothese); IG-Freigabe-Engpass ist das Problem; Konto-Frage mit Termin; Suche als nächster Test; Funnel bleibt 0. Alles übernommen.
+- Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 11.11. Nr. 1–8, offene Messpunkte, Konto-Frage mit Termin nach Paar 5), THEMEN S2-F2 (YouTube-Follow-up bis 13.11.).

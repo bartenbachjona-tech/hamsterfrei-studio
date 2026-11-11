@@ -1,4 +1,4 @@
-# Hamsterfrei – Auswertung aktuell (Stand 09.11.2026, Marke v2)
+# Hamsterfrei – Auswertung aktuell (Stand 11.11.2026, Marke v2)
 
 Geht PRODUKTION.md vor, steht unter KANAL_REGELN, `docs/brand/*` und STUDIO_HANDBUCH. Die Auswertungsroutine (geplante Aufgabe, alle 2 Tage, wie bei Groschenfall/Schattengast; muss noch angelegt werden) aktualisiert diese Datei und `state/zahlen.md`. Befunde werden als konkrete Regeländerung in `docs/brand/*` bzw. hier eingetragen, nicht nur ins Log (Handbuch G7).
 
@@ -34,6 +34,22 @@ Für **alle bisherigen Videos** (Folge 01, S1 „Seminararbeit bis 10.11.?“, V
 - **Instagram:** S1 1.875, S2 380, Rest 104–157. Keine Insights (kein Creator-Konto). S5-2 nie gepostet.
 - **Funnel:** 0 Wort-Kommentare, 0 DMs; Verkäufe nicht messbar (Digistore nicht eingeloggt).
 - **07.11. und 08.11.: kein Video** (Soll 1/Tag) → Jona gemeldet.
+
+## Erhebung 11.11.2026 ~23:30 (alle drei Plattformen, Details state/zahlen.md)
+- **TikTok:** **Folge02 (Hook A, Paar 1)** nach 5,5 h: 248 / **9,77 s** / **3,9 % ganz**, FYP 99,6 % → bester Nicht-Such-Wert bisher (vorläufig). **S2-F** (Contrarian, außerhalb Test) nach 29,5 h: 255 / **2,94 s / 0,4 %** → schwächster Ø-Wert aller Videos, Erwartung verfehlt. S9 (60 h) 338 / 4,67 s im Rahmen. S1 2.073 (+254/Tag, Suche 64,5 %). Konto 7 T: 3,6K Aufrufe, Suche 44,6 %, Gefolgt 0 %, Follower netto 0.
+- **YouTube:** Shorts-Feed liefert wieder: **S2-F 792 in 29,5 h** (Erwartung 20–100) = Ausreißer; Folge02 221 in 5,5 h + **erstes Abo**. Bindung beider noch n. v.
+- **Instagram:** keine neuen Reels (S2-F, Folge02 warten auf Jonas Freigabe). 1 Follower.
+- **Funnel:** 0 Wort-Kommentare (PRÜFUNG, SWITCH), 0 DMs, Verkäufe n. v.
+
+## Befunde 11.11. (nach Kritiker-Runde, gelten als Regeln)
+1. **Hook-Test unverändert.** Folge02 ist n = 1 und 5,5 h alt (3,9 % ≈ 10 Zuschauer). Gewertet wird nur der 48-h-Wert (13.11. 18:00) gegen **Paar 1 B (12.11.)**, nicht gegen die Erwartung. Erwartung für weitere Test-Videos **nicht** angehoben. Pflicht-Ursache „nach oben verfehlt“: vermutlich Ergebnis-Hook + Alltagsthema ohne Vorbedingung; keine Änderung, weil der Test genau das misst. **Paar 1 B muss Serie (a)-nahes Alltagsthema und 30–35 s haben**, sonst misst das Paar Thema statt Hook.
+2. **Nur 48-h-Werte vergleichen.** Werte bei 5,5 h / 29,5 h / 60 h sind nur Zwischenstand; Rang und Urteil erst bei 48 h (Messregel 08.11. wird strikt angewandt, auch in der Nachricht an Jona).
+3. **S2-F verfehlt (TikTok), Ursache + 1 Änderung:** Vermutete Hauptursache = erster Satz stellt eine Vorbedingung („Abgegeben?“), die fast das ganze Kaltpublikum ausschließt (Störgrößen: 40 s statt 30–35 s, Contrarian-Hook, Thema nach Deadline). **Änderung (nur für Videos außerhalb des Hook-Tests):** Der erste Satz darf keine Vorbedingung stellen, die die Mehrheit der Zuschauer ausschließt. Test-Videos (A/B) bleiben unberührt. Endgültig erst mit dem 48-h-Wert am 12.11.
+4. **YouTube-Ausreißer S2-F → Follow-up NUR auf YouTube** binnen 48 h ab Erkennung (bis **13.11. ~23:30**), Thema Prüfungsgespräch „die nächste Frage“. Kein zusätzliches TikTok-Video (würde Paar 1 B Konkurrenz machen, Thema floppt dort). Vorher Bindung von S2-F in YouTube Studio prüfen (98 % Shorts-Feed kann Wegwischen bedeuten). Kostet ~700 Credits → nur wenn Credits reichen, sonst Jona melden.
+5. **„Prüfungsgespräch = YouTube-Thema“ nur Hypothese** (2 Datenpunkte: S2 705, S2-F 792; kein Kontrollvideo). Das Follow-up ist Datenpunkt 3. Keine getrennte Themenlogik als Regel (wäre zweite Testvariable).
+6. **Folge02 auf YouTube beobachten:** erreicht es bis 13.11. 18:00 ≥ 500 (3× Median = 345), steht ein zweites YouTube-Follow-up an (gleiche Logik wie Nr. 4).
+7. **Instagram** zählt nicht in die Testbewertung (Entscheidungsregel ist TikTok). Eigentliches Problem: Reels werden ohne Jonas Freigabe nicht gepostet, obwohl IG mit S1 (1.877) die höchste Einzelreichweite hatte → Freigabeweg mit Jona klären.
+8. **Nächster Test (vorgemerkt, erst nach Paar 5):** Suche ist Treiber (44,6 % der Kontoaufrufe, S1 allein ~250/Tag). Kandidat: Such-Keyword-Video vs. FYP-Video. Nicht vorher starten.
 
 ## Erhebung 09.11.2026 ~23:25 (alle drei Plattformen, Details state/zahlen.md)
 - **TikTok:** S1 wächst weiter: **1.819** Aufrufe (+534 seit 08.11. 17:20), Suche **62,3 %**, Ø 11,07 s, 5,1 % ganz, 58 Saves. Neue Suchbegriffe „w seminararbeit“, „w seminar durchgefallen“. Alle anderen 272–365, Ø 3,5–5,8 s, Absprung bei 0:01. **S9** (12,5 h, vorläufig, beworben, 46 s): 324 / 4,75 s / 1,2 % ganz, FYP 85,6 %. Konto 7 T: 2,6K Aufrufe, Suche 43,1 % (davon ~1.160 allein S1), Gefolgt 0 %, Follower netto 0.
@@ -81,6 +97,7 @@ Gestrichen (Kritiker 08.11.): Follower Δ 7 T (Rauschen ±2 auf totem Konto), Su
 - **S2-Follow-up (YouTube-Ausreißer 698):** Prüfungsgespräch-Video am **10.11.** (Abgabe heute → jetzt kommt die Prüfung), also vor dem Teststart, als Follow-up markiert. Mit Werbung nur nach Jonas OK.
 
 ## Offene Messpunkte (nächster Lauf)
+- 48-h-Werte S2-F (12.11. 18:00), Folge02 (13.11. 18:00) und Paar 1 B (14.11.); YouTube-Bindung S2-F und Folge02; S7 7 T (13.11.); S1-Zuwachs (bis 16.11.).
 - 7-T-Werte für S5-2 und S7; 48-h-Werte für jedes neue Video.
 - Herkunft der Verkäufe unklar → Jona: Digistore im Hamsterfrei-Chrome einloggen und getrennte Links/Coupons bzw. UTM je Plattform.
 
@@ -94,6 +111,7 @@ Gestrichen (Kritiker 08.11.): Follower Δ 7 T (Rauschen ±2 auf totem Konto), Su
 - Ausreißer (≥ 3× Median und ≥ 500 Aufrufe) lösen innerhalb von 48 h ein Folgevideo aus, ändern aber nicht die Testvariable (Handbuch G6).
 
 ## Offene Frage für Jona
+- **Zahlen 11.11.:** Gefolgt 0 % bei 3,6K Wochenaufrufen, Follower netto 0. Alle FYP-Videos landen bei ~250–340 Aufrufen; ob das Kaltstart-Normal oder ein Konto-Deckel ist, ist **nicht belegt**. Kein Test jetzt (ein Test gleichzeitig) – **Entscheidung nach Paar 5** (ca. 20.11.) anhand der FYP-Aufrufe der Testvideos: liegen alle 10 unter ~350, Neukonto ernsthaft prüfen.
 - **Zahlen 09.11.:** Gefolgt-Traffic 7 T = 0 %, Follower netto 0 bei 2,6K Wochenaufrufen. Die geerbten Follower spielen weiter keine Rolle; Empfehlung unverändert (behalten, ignorieren).
 - **Ist das geerbte Privatkonto (TikTok @hamsterfrei, ca. 2.400 themenfremde Follower) die richtige Basis?** Themenfremde Follower reagieren schlecht auf die ersten Ausspielungen und können die Ø-Werte drücken. Optionen: (1) weiter so und nur beobachten, ob die Follower-Demografie kippt; (2) neues TikTok-Konto starten und das alte ruhen lassen. Die Basiswerte (Follower-Demografie, Traffic aus „Folge ich“ vs. For You) sollen die Entscheidung stützen. Antwort hier eintragen.
 - **Zahlen 08.11. (TikTok Studio):** Die 2.400 geerbten Follower liefern praktisch nichts: Traffic „Gefolgt“ <0,1 % bei allen Videos, 0 % Follower unter den Zuschauern (S1, S5-2, S7), Netto −2 in 7 Tagen. Follower = 57 % Männer, nur 52,8 % DE (40 % „Anderes“); Zuschauer = ~70 % Frauen, 18–24, 80–90 % DE. **Empfehlung des Studios:** Konto behalten (Suche funktioniert, S1 rankt), die alten Follower als irrelevant behandeln. 250–300 FYP-Aufrufe sind Kaltstart-Normal; ein Neukonto würde daran nichts ändern. Neustart nur erwägen, wenn der DE-Anteil der Zuschauer unter 70 % fällt. Entscheidung: Jona.

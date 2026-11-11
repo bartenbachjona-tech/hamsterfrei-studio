@@ -1,16 +1,48 @@
-# Hamsterfrei – Zahlen (Basis TikTok seit 06.11.2026, YouTube + Instagram seit 08.11.2026; letzte Erhebung 09.11. 23:25)
+# Hamsterfrei – Zahlen (Basis TikTok seit 06.11.2026, YouTube + Instagram seit 08.11.2026; letzte Erhebung 11.11. 23:30)
 
 Wird von der Auswertungsroutine gepflegt (siehe `docs/AUSWERTUNG_AKTUELL.md`). Plattformen getrennt. Immer mit Erhebungsdatum, weil die Videos unterschiedlich alt sind. Unbekannt = „–“, nicht sichtbar = „n. v.“. Nur Zahlen aus den Studios, nie schätzen. **Ab 08.11.: jedes Video bei 48 h UND 7 T protokollieren, nur gleich alte Werte vergleichen.**
 
 ## Konto-Stand
 | Datum | Plattform | Follower | Δ 7 Tage | Demografie | Notiz |
 |---|---|---|---|---|---|
+| 11.11. 23:30 | TikTok @hamsterfrei | 2,4K | 0 | Follower unverändert (57 % Männer, 18–24 40,6 %, DE 52,8 %, „Anderes“ 40,1 %) | 7 T: 3,6K Aufrufe (+184 %), Suche 44,6 %, FYP 48,4 %, Profil 6,9 %, Gefolgt 0 %; Profilaufrufe 100; Likes 83, Komm. 0, Shares 9 |
+| 11.11. 23:30 | YouTube Hamsterfrei | erstes Abo (+1 über Folge02) | +1 | n. v. | Shorts-Feed liefert wieder aus (S2-F 792, Folge02 221/5,5 h) |
+| 11.11. 23:30 | Instagram @hamsterfrei | 1 | 0 | n. v. | weiter 7 Reels; S2-F und Folge02 nicht gepostet; Bio noch „Seminararbeit bis 10.11.?“ |
 | 09.11. 23:25 | TikTok @hamsterfrei | 2,4K | 0 | Follower unverändert (57 % Männer, 18–24 40,8 %, DE 52,8 %, „Anderes“ 40,1 %) | 7 T: 2,6K Aufrufe (+171 %), Suche 43,1 %, FYP 49,8 %, Gefolgt 0 %; Profilaufrufe 84; Likes 60, Komm. 0, Shares 6 |
 | 09.11. 23:30 | YouTube Hamsterfrei | 0 Abos | 0 | n. v. | Feed liefert kaum aus (S9 27 Aufrufe/12,5 h) |
 | 09.11. 23:32 | Instagram @hamsterfrei | 1 | 0 | n. v. | 7 Reels |
 | 08.11. 17:20 | TikTok @hamsterfrei | 2,4K | −2 | Follower: 57 % Männer, 18–24 41,6 %, DE 52,8 %, „Anderes“ 40,1 % | 7 T: 2,1K Aufrufe (+125 %), Suche 35,6 %, FYP 57,9 %, Gefolgt 0 %; Profilaufrufe 59 |
 | 08.11. 17:30 | YouTube Hamsterfrei | 0 Abos | 0 | n. v. | 28 T: 1.653 Aufrufe, 4,4 h Wiedergabe |
 | 08.11. 17:35 | Instagram @hamsterfrei | 1 | – | n. v. (kein Creator-Konto, keine Insights) | 6 Reels |
+
+## Videos – TikTok (Erhebung 11.11.2026 ~23:30, seit Veröffentlichung)
+| Video | veröff. | Werbung | Hook | Alter | Aufrufe | Ø Wiedergabe (s) | Länge (s) | ganz % | Likes | Komm. | Wort-Komm. | Shares | Saves | +Follower | Für dich % | Suche % | Erwartung | Bewertung |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **Folge02 Hamster-Test Switch** | 11.11. 18:00 | nein | **A (Paar 1)** | **5,5 h (vorläufig)** | 248 | **9,77** | 34 | **3,9** | 4 | 0 | 0 | 0 | 1 | 1 | 99,6 | 0,4 | 150–300 / 3–4,5 s / 1–2 % | Aufrufe im Rahmen, Ø + ganz **weit über** Erwartung (nach oben verfehlt); bestes Nicht-Such-Video bisher; Urteil erst bei 48 h (13.11. 18:00) |
+| S2-F Prüfungsgespräch (Follow-up) | 10.11. 18:00 | nein | Contrarian (außerhalb Test) | 29,5 h | 255 | **2,94** | 40 | **0,4** | 2 | 0 | 0 | 1 | 1 | 0 | 98,4 | <0,1 | 150–300 / 3–4,5 s / 1–2 % | Ø + ganz **verfehlt** (vorläufig, 48 h = 12.11. 18:00); schwächster Ø-Wert aller Videos |
+| S9 Noch 1 Tag | 09.11. 10:55 | ja | – | 60 h (≈48-h-Wert) | 338 | 4,67 | 46 | 1,1 | 9 | 0 | 0 | 0 | 1 | 0 | 82,0 | 12,5 | (allg. 230–350 / 4–5 s) | im Rahmen |
+| S1 Seminararbeit bis 10.11.? | 30.10. | ja | – | 12 T (Stand TikTok 10.11.) | **2.073** (+254 seit 09.11.) | 10,84 | 50 | 4,6 | 57 | 1 | 0 | 9 | 63 | 2 | 27,3 | **64,5** | – | Such-Akkumulator, wächst ~250/Tag |
+- Übrige Videos (Liste Studio, nur Aufrufe): S7 370, S5-2 275, S5 370, S2 298. Alle: Absprung bei 0:01, Gefolgt <0,1 %.
+- S9 Suchbegriffe: „claude seminararbeit“ 11,9 %, „w seminararbeit plagiat“, „w seminar abgabe“, „seminararbeit bayern plagiat“, „w seminararbeit“ je 7,1 %. S1: „w seminararbeit“ 6,6 %, „w seminar durchgefallen“ 3,7 %, „w seminararbeit mit ki“ 3,4 %.
+- Nächste Stichtage: S2-F 48 h = 12.11. 18:00; Folge02 48 h = 13.11. 18:00; S7 7 T = 13.11.; S2-F 7 T = 17.11.
+
+## Videos – YouTube Shorts (Erhebung 11.11.2026 ~23:30)
+| Video | Aufrufe | Δ seit 09.11. | Notiz |
+|---|---|---|---|
+| **Folge02 Switch (TJjSnFUEZ4E)**, 5,5 h | **221** | neu | Shorts-Feed 95,8 %, **+1 Abo (erstes)**, 24 Aufrufe letzte 60 min; Bindung noch n. v.; Erwartung 20–100 → weit drüber (vorläufig) |
+| **S2-F Prüfungsgespräch (LUWPYGMC0Ck)**, 29,5 h | **792** | neu | Shorts-Feed 98,0 %; Bindung noch n. v.; Erwartung 20–100 → **Ausreißer 8,4× Median 94 (Stand 09.11.; 6,9× neuer Median 115)** |
+| S9 (gEqe5IGXizw) | 27 | 0 | |
+| S7 Duplikat / S7 | 25 / 21 | +1 / 0 | |
+| S5-2 | 94 | 0 | |
+| S5 | 59 | +8 | |
+| S2 | 705 | +1 | |
+| 5 Fehler | 223 | 0 | |
+| S1 | 443 | +2 | |
+| Lampe | 115 | – | |
+- Shorts-Feed liefert seit 10.11. wieder aus (Einbruch 04.–09.11. beendet, Ursache weiter unklar).
+
+## Videos – Instagram Reels (Erhebung 11.11.2026 ~23:30, Profil-Aufrufzahl)
+S9 143 · S7 138 · S5 139 · S2 381 · 5 Fehler 157 · S1 1.877 · Lampe 105. **S2-F und Folge02 nicht gepostet** (Freigabe Jona). 1 Follower.
 
 ## Videos – TikTok (Erhebung 09.11.2026 ~23:25, seit Veröffentlichung)
 | Video | veröff. | Werbung | Alter | Aufrufe | Ø Wiedergabe (s) | Länge (s) | ganz % | Likes | Komm. | Wort-Komm. | Shares | Saves | +Follower | Für dich % | Suche % | Erwartung | Rang (von 8) |
@@ -83,12 +115,16 @@ S9 (DfhEUNThw2b) 142 · S7 (DfZdzlLp47k) 138 · S5 139 · S2 380 · 5 Fehler 157
 |---|---|---|---|---|---|---|
 | bis 04.11. | – | 0 | 0 | – | – | dm_log leer |
 | bis 06.11. 01:00 | 0 | 0 | 0 | 3 Verkäufe gesamt (laut Jona, Aufteilung offen) | | S1 wächst über TikTok-Suche |
+| bis 11.11. 23:30 | 0 | 0 | 0 | n. v. | n. v. | dm_log leer; Kommentar-Wörter PRÜFUNG/SWITCH: 0 |
 | bis 09.11. 23:35 | 0 | 0 | 0 | n. v. | n. v. | dm_log leer |
 | bis 08.11. 17:40 | 0 | 0 | 0 | n. v. (Digistore im Hamsterfrei-Chrome nicht eingeloggt) | n. v. | Herkunft der Verkäufe weiter unbekannt |
 
 ## Mediane (nach jeder Auswertung neu)
 | Datum | Plattform | Median Aufrufe | Median Ø Wiedergabe | Median ganz / bis Ende % | Notiz |
 |---|---|---|---|---|---|
+| 11.11. | TikTok (letzte 10, gemischtes Alter) | 308 | 4,8 s | 1,75 % | unbeworben jetzt 3: S5-2 3,49 s, S2-F 2,94 s, Folge02 9,77 s (vorl.) |
+| 11.11. | YouTube (11 inkl. Duplikat) | 115 | n. v. | n. v. | Ausreißer-Schwelle 3× = 345 und ≥ 500 |
+| 11.11. | Instagram (7) | 143 | n. v. | n. v. | keine neuen Reels |
 | 09.11. | TikTok (8 Videos) | 321 | 4,84 s | 1,75 % | einziger unbeworbener: S5-2 272 / 3,49 s / 1,4 % |
 | 09.11. | YouTube (9 inkl. Duplikat) | 94 | n. v. | n. v. | |
 | 09.11. | Instagram (7) | 142 | n. v. | n. v. | |
