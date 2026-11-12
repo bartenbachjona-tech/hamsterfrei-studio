@@ -1,0 +1,502 @@
+{
+"words": [
+{
+"text": "Wie",
+"start": 0.068,
+"end": 0.08,
+"type": "word"
+},
+{
+"text": "viel",
+"start": 0.096,
+"end": 0.16,
+"type": "word"
+},
+{
+"text": "zahlst",
+"start": 0.208,
+"end": 0.48,
+"type": "word"
+},
+{
+"text": "du",
+"start": 0.507,
+"end": 0.56,
+"type": "word"
+},
+{
+"text": "jeden",
+"start": 0.587,
+"end": 0.72,
+"type": "word"
+},
+{
+"text": "Monat",
+"start": 0.76,
+"end": 0.96,
+"type": "word"
+},
+{
+"text": "für",
+"start": 1.0,
+"end": 1.12,
+"type": "word"
+},
+{
+"text": "Abos?",
+"start": 1.147,
+"end": 1.76,
+"type": "word"
+},
+{
+"text": "Kopier",
+"start": 1.84,
+"end": 2.24,
+"type": "word"
+},
+{
+"text": "deinen",
+"start": 2.267,
+"end": 2.4,
+"type": "word"
+},
+{
+"text": "Kontoauszug",
+"start": 2.44,
+"end": 2.96,
+"type": "word"
+},
+{
+"text": "zu",
+"start": 3.013,
+"end": 3.12,
+"type": "word"
+},
+{
+"text": "Claude.",
+"start": 3.166,
+"end": 3.76,
+"type": "word"
+},
+{
+"text": "Namen",
+"start": 3.813,
+"end": 4.08,
+"type": "word"
+},
+{
+"text": "und",
+"start": 4.12,
+"end": 4.24,
+"type": "word"
+},
+{
+"text": "Kontonummer",
+"start": 4.288,
+"end": 4.72,
+"type": "word"
+},
+{
+"text": "vorher",
+"start": 4.78,
+"end": 5.04,
+"type": "word"
+},
+{
+"text": "löschen.",
+"start": 5.08,
+"end": 5.44,
+"type": "word"
+},
+{
+"text": "Ich",
+"start": 5.54,
+"end": 5.84,
+"type": "word"
+},
+{
+"text": "hab's",
+"start": 5.86,
+"end": 6.08,
+"type": "word"
+},
+{
+"text": "mit",
+"start": 6.1,
+"end": 6.16,
+"type": "word"
+},
+{
+"text": "einem",
+"start": 6.2,
+"end": 6.4,
+"type": "word"
+},
+{
+"text": "Beispiel-Auszug",
+"start": 6.444,
+"end": 7.2,
+"type": "word"
+},
+{
+"text": "ausprobiert.",
+"start": 7.24,
+"end": 8.04,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 8.08,
+"end": 8.32,
+"type": "word"
+},
+{
+"text": "findet",
+"start": 8.366,
+"end": 8.64,
+"type": "word"
+},
+{
+"text": "sieben",
+"start": 8.66,
+"end": 8.8,
+"type": "word"
+},
+{
+"text": "Abos.",
+"start": 8.88,
+"end": 9.56,
+"type": "word"
+},
+{
+"text": "Zusammen",
+"start": 9.591,
+"end": 9.84,
+"type": "word"
+},
+{
+"text": "hundertsiebzehn",
+"start": 9.88,
+"end": 10.56,
+"type": "word"
+},
+{
+"text": "Euro",
+"start": 10.592,
+"end": 10.72,
+"type": "word"
+},
+{
+"text": "vierundneunzig.",
+"start": 10.768,
+"end": 12.0,
+"type": "word"
+},
+{
+"text": "Steam",
+"start": 12.053,
+"end": 12.32,
+"type": "word"
+},
+{
+"text": "und",
+"start": 12.36,
+"end": 12.48,
+"type": "word"
+},
+{
+"text": "Klarna",
+"start": 12.507,
+"end": 12.8,
+"type": "word"
+},
+{
+"text": "zählt",
+"start": 12.84,
+"end": 13.04,
+"type": "word"
+},
+{
+"text": "er",
+"start": 13.067,
+"end": 13.12,
+"type": "word"
+},
+{
+"text": "nicht",
+"start": 13.16,
+"end": 13.36,
+"type": "word"
+},
+{
+"text": "mit.",
+"start": 13.4,
+"end": 13.6,
+"type": "word"
+},
+{
+"text": "Das",
+"start": 13.66,
+"end": 13.84,
+"type": "word"
+},
+{
+"text": "sind",
+"start": 13.888,
+"end": 14.08,
+"type": "word"
+},
+{
+"text": "eher",
+"start": 14.112,
+"end": 14.24,
+"type": "word"
+},
+{
+"text": "Einkäufe.",
+"start": 14.32,
+"end": 15.2,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 15.248,
+"end": 15.44,
+"type": "word"
+},
+{
+"text": "zweimal",
+"start": 15.5,
+"end": 15.92,
+"type": "word"
+},
+{
+"text": "Apple.",
+"start": 15.973,
+"end": 16.48,
+"type": "word"
+},
+{
+"text": "Wofür,",
+"start": 16.6,
+"end": 17.32,
+"type": "word"
+},
+{
+"text": "weiß",
+"start": 17.344,
+"end": 17.44,
+"type": "word"
+},
+{
+"text": "auch",
+"start": 17.472,
+"end": 17.6,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 17.657,
+"end": 18.0,
+"type": "word"
+},
+{
+"text": "nicht.",
+"start": 18.053,
+"end": 18.48,
+"type": "word"
+},
+{
+"text": "Schau",
+"start": 18.52,
+"end": 18.72,
+"type": "word"
+},
+{
+"text": "im",
+"start": 18.747,
+"end": 18.8,
+"type": "word"
+},
+{
+"text": "Handy",
+"start": 18.853,
+"end": 19.12,
+"type": "word"
+},
+{
+"text": "nach.",
+"start": 19.184,
+"end": 19.68,
+"type": "word"
+},
+{
+"text": "Im",
+"start": 19.76,
+"end": 19.92,
+"type": "word"
+},
+{
+"text": "Beispiel",
+"start": 19.964,
+"end": 20.32,
+"type": "word"
+},
+{
+"text": "bleiben",
+"start": 20.36,
+"end": 20.64,
+"type": "word"
+},
+{
+"text": "nach",
+"start": 20.672,
+"end": 20.8,
+"type": "word"
+},
+{
+"text": "der",
+"start": 20.84,
+"end": 20.96,
+"type": "word"
+},
+{
+"text": "Miete",
+"start": 21.0,
+"end": 21.28,
+"type": "word"
+},
+{
+"text": "neunzig",
+"start": 21.333,
+"end": 21.76,
+"type": "word"
+},
+{
+"text": "Euro.",
+"start": 21.856,
+"end": 22.4,
+"type": "word"
+},
+{
+"text": "Die",
+"start": 22.44,
+"end": 22.56,
+"type": "word"
+},
+{
+"text": "Abos",
+"start": 22.64,
+"end": 22.96,
+"type": "word"
+},
+{
+"text": "kosten",
+"start": 23.017,
+"end": 23.36,
+"type": "word"
+},
+{
+"text": "mehr.",
+"start": 23.424,
+"end": 23.76,
+"type": "word"
+},
+{
+"text": "Urteil:",
+"start": 24.205,
+"end": 24.721,
+"type": "word"
+},
+{
+"text": "Geklappt.",
+"start": 24.801,
+"end": 25.361,
+"type": "word"
+},
+{
+"text": "Abos",
+"start": 25.521,
+"end": 26.001,
+"type": "word"
+},
+{
+"text": "gefunden,",
+"start": 26.045,
+"end": 26.561,
+"type": "word"
+},
+{
+"text": "Summe",
+"start": 26.601,
+"end": 26.801,
+"type": "word"
+},
+{
+"text": "stimmt.",
+"start": 26.849,
+"end": 27.281,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 27.351,
+"end": 28.001,
+"type": "word"
+},
+{
+"text": "Abo,",
+"start": 28.081,
+"end": 28.401,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 28.433,
+"end": 28.561,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 28.601,
+"end": 28.801,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 28.821,
+"end": 28.881,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 28.921,
+"end": 29.041,
+"type": "word"
+},
+{
+"text": "meine",
+"start": 29.068,
+"end": 29.201,
+"type": "word"
+},
+{
+"text": "Frage",
+"start": 29.268,
+"end": 29.601,
+"type": "word"
+},
+{
+"text": "zum",
+"start": 29.641,
+"end": 29.761,
+"type": "word"
+},
+{
+"text": "Kopieren.",
+"start": 29.821,
+"end": 30.481,
+"type": "word"
+}
+]
+}

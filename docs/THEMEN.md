@@ -20,6 +20,7 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | S7 | S7 Suchbegriff-Video, produziert 06.11., wartet auf Freigabe („Seminararbeit mit KI? So geht's.“, Composition Seminar07, scripts/seminar07.md, ohne Preis) | – | ja (eigenes Produkt) | wartet auf Freigabe |
 | 01 | Ein Produkt, ein Shop (Sonnenuntergangs-Lampe, Shopify) | SHOP | ja (Shopify) | veröffentlicht 29.10.2026 |
 | F02 | **Folge 02 · Hamster-Test (Serie a, Hook-Test A, Paar 1):** „Ich hab Claude meine alte Switch schätzen lassen. Der Preis passt. Die Begründung nicht.“ (Composition Folge02, scripts/folge02.md) | SWITCH | **nein** | terminiert 11.11.2026 18:00 (TikTok, YT; IG offen 18:00) |
+| F03 | **Folge 03 · Abo-Check (Serie a-nah, Hook-Test B, Paar 1):** „Wie viel zahlst du jeden Monat für Abos?“ – Claude liest einen erfundenen Beispiel-Kontoauszug (Composition Folge03, scripts/folge03.md; T12 als Hamster-Test-Bau verbraucht) | ABO | **nein** | terminiert 12.11.2026 18:00 (TikTok, YT; IG offen 18:00) |
 | T1 | **Trend:** Warum verkauft der Hamster den Keller seiner Nachbarn? (FinanzKopf-Formel, Beispielrechnung, siehe TRENDS.md Shortlist 1) | KELLER | nur wenn Skill-Link | offen |
 | T2 | **Trend:** Eine KI hat seinen Sessel verkauft – und seine Adresse weitergegeben (Meta Muse, Shortlist 2) | SICHER | ja, wenn Skill gezeigt | offen |
 | T3 | **Trend:** Codes-Serie „Mach ein Foto von deinem alten ___“ (Shortlist 3, braucht echte Fotos von Jona) | CODES | ja (eigenes Produkt) | wartet auf Fotos |
@@ -40,7 +41,7 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | T9 | Nebenjob-Check „Drei Nebenjobs, die dir TikTok verspricht“ (Serie c, eigene gestoppte Testmenge; TRENDS.md 05.11. I3) | STUNDE | nein | offen |
 | T10 | Nebenjob-Check „Ab welchem Preis lohnt sich Vinted überhaupt?“ (Serie c, Jona stoppt 3 eigene Teile; TRENDS.md 09.11. I1) | MINDESTPREIS | nein | offen |
 | T11 | Hamster-Test „Speicher voll – ich hab Claude gefragt, was weg kann“ (Serie a, Jonas Handy, Ansicht nachzeichnen; TRENDS.md 09.11. I2) | SPEICHER | nein | offen |
-| T12 | Vorher/Nachher „Beispiel-Kontoauszug vs. Claudes Abo-Karte“ (Serie b, nur geschwärzt oder als Beispiel; TRENDS.md 09.11. I3) | ABO | nein | offen |
+| T12 | Vorher/Nachher „Beispiel-Kontoauszug vs. Claudes Abo-Karte“ (Serie b, nur geschwärzt oder als Beispiel; TRENDS.md 09.11. I3) | ABO | nein | als F03 umgesetzt (12.11.) |
 | T13 | Hamster-Test „20 Euro, fünf Mittagessen – Claude schreibt den Einkaufszettel“ (Serie a, Jona kauft wirklich ein, Kandidat Serie-(a)-Paar; TRENDS.md 12.11. I1) | ZETTEL | nein | offen |
 | T14 | Vorher/Nachher „Minijob-Lebenslauf: gleiche Person, drei Änderungen“ (Serie b, fiktives Beispiel; Bewerbungs-Profi nicht nennen, sonst Werbung; TRENDS.md 12.11. I2) | LEBENSLAUF | nein | offen |
 | T15 | Nebenjob-Check „Nachhilfe geben: Was bleibt pro Stunde übrig?“ (Serie c, erst nach echter gemessener Stunde; TRENDS.md 12.11. I3) | NACHHILFE | nein | offen (wartet auf echte Messung) |

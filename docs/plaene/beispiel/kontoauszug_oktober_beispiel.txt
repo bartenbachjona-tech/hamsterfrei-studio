@@ -1,0 +1,15 @@
+BEISPIEL-KONTOAUSZUG (erfunden, für Folge 03) – Girokonto, Oktober 2026
+01.10.  NEBENJOB CAFE LOHN OKT                     +480,00
+01.10.  DAUERAUFTRAG MIETE WG                      -390,00
+02.10.  SPOTIFY P2F8K1Q7                             -6,99
+04.10.  REWE SAGT DANKE 4411                        -23,47
+05.10.  NETFLIX.COM                                  -6,99
+06.10.  DB VERTRIEB GMBH D-TICKET                   -63,00
+08.10.  PAYPAL *APPLE.COM/BILL                       -0,99
+10.10.  FITHAUS GMBH BEITRAG 10/26                  -24,99
+12.10.  LIDL DIENSTL. 1207                          -18,30
+15.10.  PAYPAL *STEAM GAMES                         -19,99
+18.10.  KLARNA LASTSCHRIFT 7781                     -29,99
+20.10.  MOBILFUNK GMBH RECHNUNG 10/26                -9,99
+25.10.  APPLE.COM/BILL                               -4,99
+28.10.  DOENER ECK                                   -7,50
