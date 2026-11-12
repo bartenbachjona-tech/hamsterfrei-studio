@@ -41,6 +41,9 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | T10 | Nebenjob-Check „Ab welchem Preis lohnt sich Vinted überhaupt?“ (Serie c, Jona stoppt 3 eigene Teile; TRENDS.md 09.11. I1) | MINDESTPREIS | nein | offen |
 | T11 | Hamster-Test „Speicher voll – ich hab Claude gefragt, was weg kann“ (Serie a, Jonas Handy, Ansicht nachzeichnen; TRENDS.md 09.11. I2) | SPEICHER | nein | offen |
 | T12 | Vorher/Nachher „Beispiel-Kontoauszug vs. Claudes Abo-Karte“ (Serie b, nur geschwärzt oder als Beispiel; TRENDS.md 09.11. I3) | ABO | nein | offen |
+| T13 | Hamster-Test „20 Euro, fünf Mittagessen – Claude schreibt den Einkaufszettel“ (Serie a, Jona kauft wirklich ein, Kandidat Serie-(a)-Paar; TRENDS.md 12.11. I1) | ZETTEL | nein | offen |
+| T14 | Vorher/Nachher „Minijob-Lebenslauf: gleiche Person, drei Änderungen“ (Serie b, fiktives Beispiel; Bewerbungs-Profi nicht nennen, sonst Werbung; TRENDS.md 12.11. I2) | LEBENSLAUF | nein | offen |
+| T15 | Nebenjob-Check „Nachhilfe geben: Was bleibt pro Stunde übrig?“ (Serie c, erst nach echter gemessener Stunde; TRENDS.md 12.11. I3) | NACHHILFE | nein | offen (wartet auf echte Messung) |
 
 Regeln für neue Themen (ab 11.11. nach SERIEN.md inkl. Ausschlusskriterien; „Gibt es ein starkes Schlüsselbild?“ zuerst): klein, unscheinbar, ohne Vorwissen startbar, mit Beispielen, die man in Deutschland wirklich umsetzen kann; Wörter kurz, ein Wort, Großbuchstaben, nicht doppelt.
 Wenn eine Folge veröffentlicht ist: Status auf `veröffentlicht <Datum>` setzen und `docs/plaene/<WORT>.md` muss existieren.
