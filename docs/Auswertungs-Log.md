@@ -35,3 +35,12 @@
 - Testvariable: Paar 1 A läuft, B am 12.11.; Wertung erst bei 48 h.
 - Kritiker (fable): Folge02 nur Indiz, nur 48-h-Werte; Follow-up nur YouTube; Ursache S2-F nur außerhalb des Tests anwenden; „YouTube-Themenlogik“ streichen (Hypothese); IG-Freigabe-Engpass ist das Problem; Konto-Frage mit Termin; Suche als nächster Test; Funnel bleibt 0. Alles übernommen.
 - Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 11.11. Nr. 1–8, offene Messpunkte, Konto-Frage mit Termin nach Paar 5), THEMEN S2-F2 (YouTube-Follow-up bis 13.11.).
+
+## 13.11.2026 (Routine, gestartet 23:23)
+- Chrome: Browser 5 (deviceId 2d7e7af3…, wie in den Vorläufen), TikTok-Konto **hamsterfrei** per Account-Info bestätigt, YouTube-Kanal UCBmT3RjRK5PGk-YVTdFzuDA. Nur gelesen. Tab ~23:28 geschlossen.
+- Erhoben: TikTok Folge02/03/04, S2-F (Detail) + Liste + Konto 7 T + Follower; YouTube 13 Shorts + Analyse Folge02/03, S2-F; Instagram Profil. Digistore n. v.
+- Bestes: **Folge02 (A, Paar 1)** 48-h-Wert 9,91 s / 4,1 % ganz (TikTok), YouTube 259 + 1 Abo – aber TikTok-Ausspielung nach 5,5 h gestoppt (248 → 256). Schwächstes: **S2-F** 3,09 s / 0,8 % (Erwartung endgültig verfehlt); YouTube-„Ausreißer“ S2-F war Wegwisch-Artefakt (92,8 % weggewischt).
+- Testvariable: Paar 1 vorläufig A (Folge03 B 3,54 s / 1,2 % bei 29,5 h), endgültig 14.11. 18:00; Paar 2 A (Folge04) läuft, vorläufig 4,39 s / 0 %.
+- Kein Ausreißer (TikTok-Schwelle 861, YouTube neu über echte Zuschauer). S2-F2-Follow-up gestrichen; Prozessfehler (Frist verstrich ungemeldet) notiert.
+- Kritiker (fable): 30-%-Schwelle an einem Punkt kalibriert → absolute echte Zuschauer; Stimm-Regel aus S2-F überinterpretiert → bleibt Hypothese; Paar 1 nur Indiz (Thema-Confound, Folge04); Messfenster fixieren; Konto-Frage braucht Kriterium; S1-Such-Follow-up nicht streichen. Alles übernommen (S1: kein Follow-up jetzt, Such-Test bleibt nächster Test nach Paar 5).
+- Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 13.11. Nr. 1–7, Messregeln YouTube-Ausreißer + 48-h-Fenster, offene Messpunkte, Konto-Kriterium), THEMEN S2-F2 gestrichen.

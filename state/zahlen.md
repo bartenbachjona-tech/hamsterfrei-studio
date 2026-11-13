@@ -1,10 +1,13 @@
-# Hamsterfrei – Zahlen (Basis TikTok seit 06.11.2026, YouTube + Instagram seit 08.11.2026; letzte Erhebung 11.11. 23:30)
+# Hamsterfrei – Zahlen (Basis TikTok seit 06.11.2026, YouTube + Instagram seit 08.11.2026; letzte Erhebung 13.11. 23:25)
 
 Wird von der Auswertungsroutine gepflegt (siehe `docs/AUSWERTUNG_AKTUELL.md`). Plattformen getrennt. Immer mit Erhebungsdatum, weil die Videos unterschiedlich alt sind. Unbekannt = „–“, nicht sichtbar = „n. v.“. Nur Zahlen aus den Studios, nie schätzen. **Ab 08.11.: jedes Video bei 48 h UND 7 T protokollieren, nur gleich alte Werte vergleichen.**
 
 ## Konto-Stand
 | Datum | Plattform | Follower | Δ 7 Tage | Demografie | Notiz |
 |---|---|---|---|---|---|
+| 13.11. 23:20 | TikTok @hamsterfrei | 2,4K | −1 | Follower unverändert (57 % Männer, 18–24 39,9 %, DE 52,7 %, „Anderes“ 40,1 %) | 7 T: 3,2K Aufrufe (+58,5 %), Suche 41,2 %, FYP 53,4 %, Profil 5,3 %, Gefolgt 0 %; Profilaufrufe 78; Likes 70, Komm. 0, Shares 5 |
+| 13.11. 23:25 | YouTube Hamsterfrei | 1 Abo (Folge02) | 0 | n. v. | Shorts-Feed liefert, aber S2-F 92,8 % weggewischt |
+| 13.11. 23:27 | Instagram @hamsterfrei | 1 | 0 | n. v. | weiter 7 Reels; Bio noch „Seminararbeit bis 10.11.?“ |
 | 11.11. 23:30 | TikTok @hamsterfrei | 2,4K | 0 | Follower unverändert (57 % Männer, 18–24 40,6 %, DE 52,8 %, „Anderes“ 40,1 %) | 7 T: 3,6K Aufrufe (+184 %), Suche 44,6 %, FYP 48,4 %, Profil 6,9 %, Gefolgt 0 %; Profilaufrufe 100; Likes 83, Komm. 0, Shares 9 |
 | 11.11. 23:30 | YouTube Hamsterfrei | erstes Abo (+1 über Folge02) | +1 | n. v. | Shorts-Feed liefert wieder aus (S2-F 792, Folge02 221/5,5 h) |
 | 11.11. 23:30 | Instagram @hamsterfrei | 1 | 0 | n. v. | weiter 7 Reels; S2-F und Folge02 nicht gepostet; Bio noch „Seminararbeit bis 10.11.?“ |
@@ -14,6 +17,31 @@ Wird von der Auswertungsroutine gepflegt (siehe `docs/AUSWERTUNG_AKTUELL.md`). P
 | 08.11. 17:20 | TikTok @hamsterfrei | 2,4K | −2 | Follower: 57 % Männer, 18–24 41,6 %, DE 52,8 %, „Anderes“ 40,1 % | 7 T: 2,1K Aufrufe (+125 %), Suche 35,6 %, FYP 57,9 %, Gefolgt 0 %; Profilaufrufe 59 |
 | 08.11. 17:30 | YouTube Hamsterfrei | 0 Abos | 0 | n. v. | 28 T: 1.653 Aufrufe, 4,4 h Wiedergabe |
 | 08.11. 17:35 | Instagram @hamsterfrei | 1 | – | n. v. (kein Creator-Konto, keine Insights) | 6 Reels |
+
+## Videos – TikTok (Erhebung 13.11.2026 ~23:20, seit Veröffentlichung)
+| Video | veröff. | Werbung | Hook | Alter | Aufrufe | Ø Wiedergabe (s) | Länge (s) | ganz % | Likes | Komm. | Wort-Komm. | Shares | Saves | +Follower | Für dich % | Suche % | Erwartung | Bewertung |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Folge04 Hamster-Test Fitnessstudio | 13.11. 18:00 | nein | A (Paar 2) | 5,5 h (vorläufig) | 182 | 4,39 | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 99,5 | 0,5 | 150–300 / 3–4,5 s / 1–2 % | Ø im Rahmen, ganz darunter (vorläufig); 48 h = 15.11. 18:00 |
+| Folge03 Abo-Check | 12.11. 18:00 | nein | B (Paar 1) | 29,5 h (vorläufig) | 239 | 3,54 | 32 | 1,2 | 1 | 0 | 0 | 0 | 0 | 0 | 99,2 | <0,1 | 150–300 / 3–4,5 s / 1–2 % | im Rahmen; 48 h = 14.11. 18:00 |
+| **Folge02 Hamster-Test Switch** | 11.11. 18:00 | nein | **A (Paar 1)** | **53,5 h (= 48-h-Wert)** | 256 | **9,91** | 34 | **4,1** | 4 | 0 | 0 | 0 | 1 | 1 | 96,3 | 2,6 („nintendo switch kleinanzeigen“) | 150–300 / 3–4,5 s / 1–2 % | Aufrufe im Rahmen, Ø + ganz weit drüber; bei 5,5 h schon 248 → Ausspielung gestoppt |
+| S2-F Prüfungsgespräch | 10.11. 18:00 | nein | Contrarian (außerhalb) | 77 h | 259 | 3,09 | 40 | 0,8 | 2 | 0 | 0 | 1 | 1 | 0 | 97,2 | 0,8 | 150–300 / 3–4,5 s / 1–2 % | Ø + ganz **verfehlt** (endgültig) |
+| S9 Noch 1 Tag | 09.11. | ja | – | 4,5 T | 342 | – | 46 | – | 9 | 0 | 0 | – | – | – | – | – | – | – |
+| S1 | 30.10. | ja | – | 14 T | 2,1K (Studio gerundet; 11.11.: 2.073) | – | 50 | – | – | – | – | – | – | – | – | – | – | Wachstum gestoppt |
+- Liste: S7 376, S5-2 276. Alle Videos: Absprung bei 0:01, Gefolgt <0,1 %.
+- Nächste Stichtage: Folge03 48 h = 14.11. 18:00; Folge04 48 h = 15.11. 18:00; Paar 2 B 48 h = 16.11. 18:00; S2-F 7 T = 17.11.
+
+## Videos – YouTube Shorts (Erhebung 13.11.2026 ~23:25)
+| Video | Aufrufe | angesehen % / weggewischt % | echte Zuschauer (≈) | Notiz |
+|---|---|---|---|---|
+| Folge04 (JA_tV6Uc3g8), 5,5 h | 38 | n. v. | – | vorläufig |
+| Folge03 (Odk6bwGqXUQ), 29,5 h | 113 | 25,0 / 75,0 | 28 | Shorts-Feed 110, Suche 3; 0 Abos |
+| Folge02 (TJjSnFUEZ4E), 53,5 h | 259 | 30,2 / 69,8 | 78 | +1 Abo; 38 Aufrufe in 48 h danach → Ausspielung gestoppt; kein 2. Follow-up (< 500) |
+| S2-F (LUWPYGMC0Ck), 77 h | 832 | **7,2 / 92,8** | **60** | **kein echter Ausreißer** (Wegwisch-Artefakt), S2-F2 gestrichen |
+| S9 28 · S7 27 + Duplikat 28 · S5-2 96 · S5 60 · S2 705 · 5 Fehler 223 · S1 443 · Lampe 115 | | n. v. | | |
+- Median Aufrufe (13 Shorts): 111.
+
+## Videos – Instagram Reels (Erhebung 13.11.2026 ~23:27, Profil-Aufrufzahl)
+S9 143 · S7 138 · S5 139 · S2 381 · 5 Fehler 157 · S1 1.878 · Lampe 105. Folge02–04 und S2-F **nicht gepostet**. 1 Follower.
 
 ## Videos – TikTok (Erhebung 11.11.2026 ~23:30, seit Veröffentlichung)
 | Video | veröff. | Werbung | Hook | Alter | Aufrufe | Ø Wiedergabe (s) | Länge (s) | ganz % | Likes | Komm. | Wort-Komm. | Shares | Saves | +Follower | Für dich % | Suche % | Erwartung | Bewertung |
@@ -122,6 +150,9 @@ S9 (DfhEUNThw2b) 142 · S7 (DfZdzlLp47k) 138 · S5 139 · S2 380 · 5 Fehler 157
 ## Mediane (nach jeder Auswertung neu)
 | Datum | Plattform | Median Aufrufe | Median Ø Wiedergabe | Median ganz / bis Ende % | Notiz |
 |---|---|---|---|---|---|
+| 13.11. | TikTok (letzte 10) | 287 | 4,5 s | – | unbeworben: Folge02 9,91 s, Folge03 3,54 s (vorl.), Folge04 4,39 s (vorl.), S2-F 3,09 s, S5-2 3,49 s; Ausreißer-Schwelle 861 |
+| 13.11. | YouTube (13) | 111 | n. v. | angesehen: Folge02 30,2 %, Folge03 25,0 %, S2-F 7,2 % | ab jetzt echte Zuschauer als Maß |
+| 13.11. | Instagram (7) | 143 | n. v. | n. v. | keine neuen Reels |
 | 11.11. | TikTok (letzte 10, gemischtes Alter) | 308 | 4,8 s | 1,75 % | unbeworben jetzt 3: S5-2 3,49 s, S2-F 2,94 s, Folge02 9,77 s (vorl.) |
 | 11.11. | YouTube (11 inkl. Duplikat) | 115 | n. v. | n. v. | Ausreißer-Schwelle 3× = 345 und ≥ 500 |
 | 11.11. | Instagram (7) | 143 | n. v. | n. v. | keine neuen Reels |
