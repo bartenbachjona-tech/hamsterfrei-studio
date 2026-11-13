@@ -1,0 +1,508 @@
+{
+"words": [
+{
+"text": "Hamster-Test:",
+"start": 0.136,
+"end": 0.72,
+"type": "word"
+},
+{
+"text": "Ich",
+"start": 0.8,
+"end": 1.04,
+"type": "word"
+},
+{
+"text": "hab",
+"start": 1.08,
+"end": 1.2,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 1.234,
+"end": 1.44,
+"type": "word"
+},
+{
+"text": "die",
+"start": 1.48,
+"end": 1.6,
+"type": "word"
+},
+{
+"text": "Kündigung",
+"start": 1.64,
+"end": 2.0,
+"type": "word"
+},
+{
+"text": "für",
+"start": 2.02,
+"end": 2.08,
+"type": "word"
+},
+{
+"text": "mein",
+"start": 2.128,
+"end": 2.32,
+"type": "word"
+},
+{
+"text": "Fitnessstudio",
+"start": 2.36,
+"end": 2.88,
+"type": "word"
+},
+{
+"text": "schreiben",
+"start": 2.92,
+"end": 3.2,
+"type": "word"
+},
+{
+"text": "lassen.",
+"start": 3.246,
+"end": 3.92,
+"type": "word"
+},
+{
+"text": "Ich",
+"start": 3.96,
+"end": 4.08,
+"type": "word"
+},
+{
+"text": "dachte,",
+"start": 4.12,
+"end": 4.4,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 4.42,
+"end": 4.48,
+"type": "word"
+},
+{
+"text": "häng",
+"start": 4.5,
+"end": 4.56,
+"type": "word"
+},
+{
+"text": "noch",
+"start": 4.592,
+"end": 4.72,
+"type": "word"
+},
+{
+"text": "ein",
+"start": 4.76,
+"end": 4.88,
+"type": "word"
+},
+{
+"text": "Jahr",
+"start": 4.912,
+"end": 5.04,
+"type": "word"
+},
+{
+"text": "drin.",
+"start": 5.067,
+"end": 5.68,
+"type": "word"
+},
+{
+"text": "Zwölf",
+"start": 5.707,
+"end": 6.0,
+"type": "word"
+},
+{
+"text": "Monate",
+"start": 6.04,
+"end": 6.32,
+"type": "word"
+},
+{
+"text": "Mindestlaufzeit,",
+"start": 6.38,
+"end": 7.36,
+"type": "word"
+},
+{
+"text": "längst",
+"start": 7.408,
+"end": 7.76,
+"type": "word"
+},
+{
+"text": "vorbei.",
+"start": 7.8,
+"end": 8.48,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 8.526,
+"end": 8.8,
+"type": "word"
+},
+{
+"text": "sagt:",
+"start": 8.864,
+"end": 9.4,
+"type": "word"
+},
+{
+"text": "Dann",
+"start": 9.456,
+"end": 9.68,
+"type": "word"
+},
+{
+"text": "gilt",
+"start": 9.728,
+"end": 9.92,
+"type": "word"
+},
+{
+"text": "höchstens",
+"start": 9.973,
+"end": 10.4,
+"type": "word"
+},
+{
+"text": "ein",
+"start": 10.48,
+"end": 10.72,
+"type": "word"
+},
+{
+"text": "Monat",
+"start": 10.78,
+"end": 11.04,
+"type": "word"
+},
+{
+"text": "Frist.",
+"start": 11.12,
+"end": 11.52,
+"type": "word"
+},
+{
+"text": "Nachgeprüft:",
+"start": 11.616,
+"end": 12.4,
+"type": "word"
+},
+{
+"text": "Stimmt,",
+"start": 12.48,
+"end": 13.2,
+"type": "word"
+},
+{
+"text": "für",
+"start": 13.22,
+"end": 13.28,
+"type": "word"
+},
+{
+"text": "Verträge",
+"start": 13.32,
+"end": 13.76,
+"type": "word"
+},
+{
+"text": "ab",
+"start": 13.813,
+"end": 13.92,
+"type": "word"
+},
+{
+"text": "März",
+"start": 13.96,
+"end": 14.24,
+"type": "word"
+},
+{
+"text": "zweitausendzweiundzwanzig.",
+"start": 14.28,
+"end": 15.72,
+"type": "word"
+},
+{
+"text": "Den",
+"start": 15.79,
+"end": 16.0,
+"type": "word"
+},
+{
+"text": "Brief",
+"start": 16.04,
+"end": 16.24,
+"type": "word"
+},
+{
+"text": "gibt's",
+"start": 16.288,
+"end": 16.68,
+"type": "word"
+},
+{
+"text": "dazu.",
+"start": 16.72,
+"end": 16.96,
+"type": "word"
+},
+{
+"text": "Tipp:",
+"start": 17.12,
+"end": 17.6,
+"type": "word"
+},
+{
+"text": "Lastschrift",
+"start": 17.712,
+"end": 18.48,
+"type": "word"
+},
+{
+"text": "erst",
+"start": 18.528,
+"end": 18.72,
+"type": "word"
+},
+{
+"text": "zum",
+"start": 18.76,
+"end": 18.88,
+"type": "word"
+},
+{
+"text": "Vertragsende",
+"start": 18.92,
+"end": 19.52,
+"type": "word"
+},
+{
+"text": "stoppen,",
+"start": 19.568,
+"end": 20.08,
+"type": "word"
+},
+{
+"text": "sonst",
+"start": 20.133,
+"end": 20.4,
+"type": "word"
+},
+{
+"text": "drohen",
+"start": 20.44,
+"end": 20.64,
+"type": "word"
+},
+{
+"text": "Gebühren.",
+"start": 20.68,
+"end": 21.4,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 21.456,
+"end": 21.68,
+"type": "word"
+},
+{
+"text": "beim",
+"start": 21.712,
+"end": 21.84,
+"type": "word"
+},
+{
+"text": "Kündigungsbutton",
+"start": 21.92,
+"end": 22.72,
+"type": "word"
+},
+{
+"text": "ist",
+"start": 22.76,
+"end": 22.88,
+"type": "word"
+},
+{
+"text": "er",
+"start": 22.907,
+"end": 22.96,
+"type": "word"
+},
+{
+"text": "zu",
+"start": 23.04,
+"end": 23.2,
+"type": "word"
+},
+{
+"text": "eng.",
+"start": 23.26,
+"end": 23.64,
+"type": "word"
+},
+{
+"text": "Den",
+"start": 23.69,
+"end": 23.84,
+"type": "word"
+},
+{
+"text": "muss",
+"start": 23.888,
+"end": 24.08,
+"type": "word"
+},
+{
+"text": "es",
+"start": 24.107,
+"end": 24.16,
+"type": "word"
+},
+{
+"text": "geben,",
+"start": 24.2,
+"end": 24.48,
+"type": "word"
+},
+{
+"text": "sobald",
+"start": 24.52,
+"end": 24.8,
+"type": "word"
+},
+{
+"text": "man",
+"start": 24.82,
+"end": 24.88,
+"type": "word"
+},
+{
+"text": "online",
+"start": 24.949,
+"end": 25.36,
+"type": "word"
+},
+{
+"text": "Mitglied",
+"start": 25.406,
+"end": 25.76,
+"type": "word"
+},
+{
+"text": "werden",
+"start": 25.794,
+"end": 26.0,
+"type": "word"
+},
+{
+"text": "kann.",
+"start": 26.064,
+"end": 26.48,
+"type": "word"
+},
+{
+"text": "Urteil:",
+"start": 26.773,
+"end": 27.12,
+"type": "word"
+},
+{
+"text": "Geklappt.",
+"start": 27.28,
+"end": 27.92,
+"type": "word"
+},
+{
+"text": "Ein",
+"start": 28.02,
+"end": 28.32,
+"type": "word"
+},
+{
+"text": "Monat",
+"start": 28.38,
+"end": 28.72,
+"type": "word"
+},
+{
+"text": "statt",
+"start": 28.76,
+"end": 28.96,
+"type": "word"
+},
+{
+"text": "ein",
+"start": 28.98,
+"end": 29.04,
+"type": "word"
+},
+{
+"text": "Jahr.",
+"start": 29.104,
+"end": 29.44,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 29.51,
+"end": 30.16,
+"type": "word"
+},
+{
+"text": "Raus,",
+"start": 30.28,
+"end": 30.8,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 30.832,
+"end": 30.96,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 31.0,
+"end": 31.2,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 31.22,
+"end": 31.28,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 31.32,
+"end": 31.44,
+"type": "word"
+},
+{
+"text": "den",
+"start": 31.46,
+"end": 31.52,
+"type": "word"
+},
+{
+"text": "Brief.",
+"start": 31.587,
+"end": 32.0,
+"type": "word"
+}
+]
+}

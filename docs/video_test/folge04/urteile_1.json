@@ -1,0 +1,227 @@
+{
+ "S16": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab kein Fitnessstudio, Eltern regeln Verträge. Weiter."
+ },
+ "S17a": {
+  "bis_ende": 6,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Seminararbeit brennt, Fitnessvertrag ist gerade egal."
+ },
+ "S17b": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Süßer Hamster, aber ich suche Lerntipps, nicht Kündigungen."
+ },
+ "S18a": {
+  "bis_ende": 18,
+  "website": 3,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Mein Studio läuft noch, aber gut zu wissen."
+ },
+ "S18b": {
+  "bis_ende": 15,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Abistress, kein Gym. Hamster ist niedlich, wische trotzdem."
+ },
+ "S19": {
+  "bis_ende": 14,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab kein Studio-Abo, brauch eher Bewerbungshilfe."
+ },
+ "A16": {
+  "bis_ende": 7,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Mit sechzehn hab ich keinen Fitnessvertrag."
+ },
+ "A18": {
+  "bis_ende": 16,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bin im Gym, Vertrag läuft aber eh noch."
+ },
+ "A20": {
+  "bis_ende": 30,
+  "website": 4,
+  "folgen": 7,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Spannend, mein McFit-Vertrag ist bald durch. Merk ich mir."
+ },
+ "A22": {
+  "bis_ende": 22,
+  "website": 3,
+  "folgen": 4,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Abends zu müde für Paragraphen, aber Kündigungstipp ist gut."
+ },
+ "U19": {
+  "bis_ende": 26,
+  "website": 3,
+  "folgen": 5,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Gym-Vertrag gerade erst abgeschlossen, speicher ich mir vielleicht."
+ },
+ "U21": {
+  "bis_ende": 28,
+  "website": 3,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Kündigungsbrief kann ChatGPT auch, trotzdem nett erklärt."
+ },
+ "U23": {
+  "bis_ende": 35,
+  "website": 5,
+  "folgen": 8,
+  "grund_weg": "sonstiges",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Nachprüfen mit Paragraf gefällt mir, Studio hab ich keins."
+ },
+ "U24": {
+  "bis_ende": 20,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bin im Uni-Sport, brauche keinen Kündigungsbrief."
+ },
+ "U22w": {
+  "bis_ende": 32,
+  "website": 3,
+  "folgen": 5,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Umzug nach München, Studio hier muss ich eh kündigen. Praktisch."
+ },
+ "U20b": {
+  "bis_ende": 16,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "BAföG-Formulare sind mein Problem, nicht das Fitnessstudio."
+ },
+ "U25": {
+  "bis_ende": 24,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "werbung_misstrauen",
+  "grund_kein_klick": "werbung_misstrauen",
+  "grund_kein_kauf": "werbung_misstrauen",
+  "satz": "Ordentlich nachgeprüft, aber Influencer-KI-Kanal folge ich nicht."
+ },
+ "M18": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kein Studio, wisch weiter."
+ },
+ "M30": {
+  "bis_ende": 28,
+  "website": 3,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab gekündigt schon vor Jahren, aber gut erklärt."
+ },
+ "R19": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Will mehr auf Vinted verdienen, nicht Gym kündigen."
+ },
+ "R26": {
+  "bis_ende": 22,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kurz nützlich, aber meine Gewerbefrage beantwortet das nicht."
+ },
+ "R35": {
+  "bis_ende": 30,
+  "website": 3,
+  "folgen": 4,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Mein Studio-Abo nutz ich nie, sollte ich echt kündigen."
+ },
+ "R45": {
+  "bis_ende": 25,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Paragrafen mit Hamster, für mich zu viel Text."
+ },
+ "G24": {
+  "bis_ende": 22,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Brauche Rechnungshilfe, kein Kündigungsschreiben fürs Fitnessstudio."
+ },
+ "G28": {
+  "bis_ende": 24,
+  "website": 3,
+  "folgen": 5,
+  "grund_weg": "hook_schwach",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Format sauber, aber Thema betrifft mich gerade nicht."
+ }
+}

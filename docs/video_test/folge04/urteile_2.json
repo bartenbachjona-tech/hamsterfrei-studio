@@ -1,0 +1,227 @@
+{
+ "G31": {
+  "bis_ende": 22,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kein Studio-Vertrag, nichts für meinen Shop. Weiter."
+ },
+ "C17": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Hab kein Fitnessstudio, Hamster ist süß, aber egal."
+ },
+ "C21": {
+  "bis_ende": 20,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Netter Stil, aber Kündigungen interessieren mich null."
+ },
+ "C26": {
+  "bis_ende": 18,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "sonstiges",
+  "satz": "Gut gemachtes Faceless-Format, schau ich mir als Inspiration an."
+ },
+ "B27": {
+  "bis_ende": 38,
+  "website": 3,
+  "folgen": 6,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Mein Gym-Vertrag läuft noch, gut zu wissen, merk ich."
+ },
+ "B32": {
+  "bis_ende": 30,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab schon gekündigt, Paragrafen-Video brauch ich nicht."
+ },
+ "B29": {
+  "bis_ende": 28,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauche Bewerbungen, keine Fitnessstudio-Kündigung."
+ },
+ "B35": {
+  "bis_ende": 30,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "werbung_misstrauen",
+  "satz": "Rechtsfragen an KI? Lieber Verbraucherzentrale, Kommentar-Köder nervt."
+ },
+ "W26": {
+  "bis_ende": 42,
+  "website": 3,
+  "folgen": 7,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Umzug nach Hamburg, Studio muss weg: genau das brauche ich."
+ },
+ "W30": {
+  "bis_ende": 25,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Wir suchen Wohnung, Fitnessstudio ist gerade nicht Thema."
+ },
+ "H28": {
+  "bis_ende": 26,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Vor der Hochzeit kündige ich das Gym sicher nicht."
+ },
+ "H31": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Juristischer Kram auf TikTok, wisch ich weg."
+ },
+ "T23": {
+  "bis_ende": 34,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Ganz nützlich, aber zu viele Paragrafen auf einmal."
+ },
+ "T19": {
+  "bis_ende": 22,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab kein Studio-Abo, bin eh pleite."
+ },
+ "V20": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Fitnessstudio? Ich zock lieber. Weiter."
+ },
+ "V34": {
+  "bis_ende": 28,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Reise viel, hab eh kein festes Studio."
+ },
+ "E45": {
+  "bis_ende": 24,
+  "website": 4,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "unklar_was_produkt",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hilft meinem Kind bei der Seminararbeit nicht."
+ },
+ "E50": {
+  "bis_ende": 30,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Kündigung von einer KI? Da frag ich lieber jemanden."
+ },
+ "AT19": {
+  "bis_ende": 18,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Deutsches BGB, ich bin in Wien, gilt nicht für mich."
+ },
+ "CH22": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Schweizer Recht ist anders, bringt mir nichts."
+ },
+ "N15": {
+  "bis_ende": 25,
+  "website": 0,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Hamster wirft Hantel, lustig, Rest verstehe ich nicht."
+ },
+ "N40": {
+  "bis_ende": 20,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Mein Vertrag ist alt, weiß ich alles schon."
+ },
+ "K22": {
+  "bis_ende": 26,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab Unisport, kein Studio-Vertrag, passt nicht."
+ },
+ "F20": {
+  "bis_ende": 18,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Brauch Führerschein-Hilfe, nicht Fitnessstudio-Kündigung."
+ },
+ "L33": {
+  "bis_ende": 22,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Rechtsberatung per KI-Hamster finde ich fragwürdig."
+ }
+}

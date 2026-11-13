@@ -15,6 +15,7 @@ import { Seminar09, SEMINAR09_SECONDS } from "./folgen/seminar09";
 import { Seminar10, SEMINAR10_SECONDS } from "./folgen/seminar10";
 import { Folge02, FOLGE02_SECONDS } from "./folgen/folge02";
 import { Folge03, FOLGE03_SECONDS } from "./folgen/folge03";
+import { Folge04, FOLGE04_SECONDS } from "./folgen/folge04";
 
 // Jede neue Folge: src/folgen/folgeNN.tsx anlegen und hier eine Composition "FolgeNN" ergänzen.
 const FOLGEN: { id: string; component: React.FC; seconds: number }[] = [
@@ -30,6 +31,7 @@ const FOLGEN: { id: string; component: React.FC; seconds: number }[] = [
   { id: "Seminar10", component: Seminar10, seconds: SEMINAR10_SECONDS },
   { id: "Folge02", component: Folge02, seconds: FOLGE02_SECONDS },
   { id: "Folge03", component: Folge03, seconds: FOLGE03_SECONDS },
+  { id: "Folge04", component: Folge04, seconds: FOLGE04_SECONDS },
 ];
 
 export const RemotionRoot: React.FC = () => (
