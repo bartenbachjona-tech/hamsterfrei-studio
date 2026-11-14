@@ -1,0 +1,227 @@
+{
+ "G31": {
+  "bis_ende": 6,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schulkram, hat nichts mit meinem Shop zu tun."
+ },
+ "C17": {
+  "bis_ende": 22,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Süßer Hamster, aber ich will Videos machen, nicht Bio."
+ },
+ "C21": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Netter Animationsstil, Thema ist für mich aber Schule."
+ },
+ "C26": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Format gut gemacht, inhaltlich nicht mein Ding."
+ },
+ "B27": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Das kann ChatGPT auch, und Schule ist lange her."
+ },
+ "B32": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Lernzettel brauche ich nicht mehr, Präsentationen schon eher."
+ },
+ "B29": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hilft mir bei Bewerbungen nicht weiter."
+ },
+ "B35": {
+  "bis_ende": 7,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Notizen abtippen und an KI geben? Nicht mein Thema."
+ },
+ "W26": {
+  "bis_ende": 6,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauche eine Wohnung, keinen Bio-Lernzettel."
+ },
+ "W30": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Weiter, Schulthema."
+ },
+ "H28": {
+  "bis_ende": 6,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Cute, aber ich plane eine Hochzeit, keine Prüfung."
+ },
+ "H31": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hamster süß, Zellatmung nicht."
+ },
+ "T23": {
+  "bis_ende": 9,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Für ELSTER wäre sowas cool, für Bio nicht."
+ },
+ "T19": {
+  "bis_ende": 16,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Abi ist vorbei, ich mache gerade FSJ."
+ },
+ "V20": {
+  "bis_ende": 10,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Glykolyse? Nee, Schule ist durch, weiter."
+ },
+ "V34": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kein Interesse an Schulbiologie."
+ },
+ "E45": {
+  "bis_ende": 40,
+  "website": 9,
+  "folgen": 6,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "spaeter_vielleicht",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Könnte meinem Kind helfen, aber Claude erst ab 18."
+ },
+ "E50": {
+  "bis_ende": 22,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Immerhin zeigt er, dass KI nicht alles richtig macht."
+ },
+ "AT19": {
+  "bis_ende": 30,
+  "website": 4,
+  "folgen": 5,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Fehlercheck ist nett, aber ChatGPT macht mir das auch."
+ },
+ "CH22": {
+  "bis_ende": 20,
+  "website": 3,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Schulniveau, für meine Bachelorarbeit zu simpel."
+ },
+ "N15": {
+  "bis_ende": 45,
+  "website": 3,
+  "folgen": 10,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "kein_claude_konto",
+  "satz": "Lustiger Hamster, aber Claude darf ich noch nicht."
+ },
+ "N40": {
+  "bis_ende": 4,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kein Bedarf, weiter."
+ },
+ "K22": {
+  "bis_ende": 24,
+  "website": 3,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Für Klausuren vielleicht praktisch, nutze aber schon ChatGPT."
+ },
+ "F20": {
+  "bis_ende": 20,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bräuchte das für Theoriefragen, nicht für Bio."
+ },
+ "L33": {
+  "bis_ende": 55,
+  "website": 10,
+  "folgen": 3,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Ehrlich mit Fehler und Grenze, aber Schüler sollen selbst lernen."
+ }
+}

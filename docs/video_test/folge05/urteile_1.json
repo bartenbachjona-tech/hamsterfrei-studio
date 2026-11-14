@@ -1,0 +1,227 @@
+{
+ "S16": {
+  "bis_ende": 38,
+  "website": 3,
+  "folgen": 8,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Bio-Tipp ist okay, aber das kann ChatGPT auch."
+ },
+ "S17a": {
+  "bis_ende": 30,
+  "website": 6,
+  "folgen": 6,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_claude_konto",
+  "satz": "Ich hab grad Seminararbeit-Stress, keine Zeit für Lernzettel."
+ },
+ "S17b": {
+  "bis_ende": 48,
+  "website": 4,
+  "folgen": 12,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Fehler finden ist cool, mach ich mit ChatGPT."
+ },
+ "S18a": {
+  "bis_ende": 35,
+  "website": 7,
+  "folgen": 7,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Nett, aber für mein Prüfungsgespräch brauch ich das nicht."
+ },
+ "S18b": {
+  "bis_ende": 50,
+  "website": 4,
+  "folgen": 13,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Brauch ich fürs Abi, aber zwei Seiten statt einer, naja."
+ },
+ "S19": {
+  "bis_ende": 28,
+  "website": 3,
+  "folgen": 5,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab grad Bewerbungen im Kopf, nicht Zellatmung."
+ },
+ "A16": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "unklar_worum",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Glykolyse? Ich such einen Ausbildungsplatz, weiter."
+ },
+ "A18": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schulzeug, betrifft mich nicht mehr."
+ },
+ "A20": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Berufsschule hat andere Themen, wisch weiter."
+ },
+ "A22": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Pflegeschule lernt anders, ist aber süß gemacht."
+ },
+ "U19": {
+  "bis_ende": 22,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Für Klausuren vielleicht, aber ChatGPT reicht mir."
+ },
+ "U21": {
+  "bis_ende": 18,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Mach ich längst mit ChatGPT Plus, nichts Neues."
+ },
+ "U23": {
+  "bis_ende": 25,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Nutze Claude Pro, das ist für Schüler gedacht."
+ },
+ "U24": {
+  "bis_ende": 30,
+  "website": 2,
+  "folgen": 7,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Für meine späteren Schüler interessant, aber zu simpel."
+ },
+ "U22w": {
+  "bis_ende": 6,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauch ein WG-Zimmer, keine Lernzettel."
+ },
+ "U20b": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "BAföG-Formulare sind mein Problem, nicht Bio."
+ },
+ "U25": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "werbung_misstrauen",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Ein Fehler gefunden beweist wenig, Hamster-Content ist mir zu flach."
+ },
+ "M18": {
+  "bis_ende": 20,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bin eh fertig mit Bio, ich will Minijobs."
+ },
+ "M30": {
+  "bis_ende": 5,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schulthema, nichts für mich."
+ },
+ "R19": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich will Vinted-Tipps, keine Zellatmung."
+ },
+ "R26": {
+  "bis_ende": 6,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schülerkram, weiter."
+ },
+ "R35": {
+  "bis_ende": 4,
+  "website": 1,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hamster mit Biologie? Nicht meins."
+ },
+ "R45": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Vielleicht was für meine Kinder, schick ich weiter."
+ },
+ "G24": {
+  "bis_ende": 5,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauch Rechnungshilfe, nicht Schulbio."
+ },
+ "G28": {
+  "bis_ende": 22,
+  "website": 3,
+  "folgen": 5,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Format gut gemacht, Thema aber nicht meins."
+ }
+}

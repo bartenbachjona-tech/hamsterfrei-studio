@@ -1,0 +1,454 @@
+{
+"words": [
+{
+"text": "Wie",
+"start": 0.068,
+"end": 0.08,
+"type": "word"
+},
+{
+"text": "wird",
+"start": 0.112,
+"end": 0.24,
+"type": "word"
+},
+{
+"text": "aus",
+"start": 0.28,
+"end": 0.4,
+"type": "word"
+},
+{
+"text": "deinem",
+"start": 0.427,
+"end": 0.64,
+"type": "word"
+},
+{
+"text": "Heft-Chaos",
+"start": 0.667,
+"end": 1.28,
+"type": "word"
+},
+{
+"text": "ein",
+"start": 1.32,
+"end": 1.44,
+"type": "word"
+},
+{
+"text": "Lernzettel?",
+"start": 1.48,
+"end": 2.24,
+"type": "word"
+},
+{
+"text": "Tipp",
+"start": 2.36,
+"end": 2.64,
+"type": "word"
+},
+{
+"text": "deine",
+"start": 2.68,
+"end": 2.88,
+"type": "word"
+},
+{
+"text": "Notizen",
+"start": 2.92,
+"end": 3.28,
+"type": "word"
+},
+{
+"text": "ab",
+"start": 3.333,
+"end": 3.44,
+"type": "word"
+},
+{
+"text": "und",
+"start": 3.48,
+"end": 3.6,
+"type": "word"
+},
+{
+"text": "gib",
+"start": 3.64,
+"end": 3.76,
+"type": "word"
+},
+{
+"text": "sie",
+"start": 3.8,
+"end": 3.92,
+"type": "word"
+},
+{
+"text": "Claude.",
+"start": 3.977,
+"end": 4.64,
+"type": "word"
+},
+{
+"text": "Ich",
+"start": 4.72,
+"end": 4.96,
+"type": "word"
+},
+{
+"text": "hab's",
+"start": 5.0,
+"end": 5.2,
+"type": "word"
+},
+{
+"text": "mit",
+"start": 5.24,
+"end": 5.36,
+"type": "word"
+},
+{
+"text": "Bio-Notizen",
+"start": 5.4,
+"end": 6.0,
+"type": "word"
+},
+{
+"text": "zur",
+"start": 6.04,
+"end": 6.16,
+"type": "word"
+},
+{
+"text": "Zellatmung",
+"start": 6.2,
+"end": 6.72,
+"type": "word"
+},
+{
+"text": "probiert.",
+"start": 6.768,
+"end": 7.36,
+"type": "word"
+},
+{
+"text": "Und",
+"start": 7.48,
+"end": 7.84,
+"type": "word"
+},
+{
+"text": "einen",
+"start": 7.88,
+"end": 8.08,
+"type": "word"
+},
+{
+"text": "Fehler",
+"start": 8.137,
+"end": 8.48,
+"type": "word"
+},
+{
+"text": "eingebaut.",
+"start": 8.512,
+"end": 9.12,
+"type": "word"
+},
+{
+"text": "Glykolyse",
+"start": 9.26,
+"end": 10.16,
+"type": "word"
+},
+{
+"text": "im",
+"start": 10.213,
+"end": 10.32,
+"type": "word"
+},
+{
+"text": "Mitochondrium.",
+"start": 10.36,
+"end": 11.28,
+"type": "word"
+},
+{
+"text": "Falsch,",
+"start": 11.52,
+"end": 12.24,
+"type": "word"
+},
+{
+"text": "die",
+"start": 12.26,
+"end": 12.32,
+"type": "word"
+},
+{
+"text": "läuft",
+"start": 12.373,
+"end": 12.64,
+"type": "word"
+},
+{
+"text": "im",
+"start": 12.667,
+"end": 12.72,
+"type": "word"
+},
+{
+"text": "Zytoplasma.",
+"start": 12.773,
+"end": 13.6,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 13.726,
+"end": 14.48,
+"type": "word"
+},
+{
+"text": "findet",
+"start": 14.526,
+"end": 14.8,
+"type": "word"
+},
+{
+"text": "ihn.",
+"start": 14.86,
+"end": 15.2,
+"type": "word"
+},
+{
+"text": "Die",
+"start": 15.3,
+"end": 15.6,
+"type": "word"
+},
+{
+"text": "Korrektur",
+"start": 15.66,
+"end": 16.16,
+"type": "word"
+},
+{
+"text": "steht",
+"start": 16.2,
+"end": 16.4,
+"type": "word"
+},
+{
+"text": "ganz",
+"start": 16.464,
+"end": 16.72,
+"type": "word"
+},
+{
+"text": "oben.",
+"start": 16.784,
+"end": 17.12,
+"type": "word"
+},
+{
+"text": "Dazu",
+"start": 17.32,
+"end": 17.84,
+"type": "word"
+},
+{
+"text": "eine",
+"start": 17.872,
+"end": 18.0,
+"type": "word"
+},
+{
+"text": "Tabelle",
+"start": 18.04,
+"end": 18.48,
+"type": "word"
+},
+{
+"text": "und",
+"start": 18.52,
+"end": 18.64,
+"type": "word"
+},
+{
+"text": "fünf",
+"start": 18.72,
+"end": 19.16,
+"type": "word"
+},
+{
+"text": "Fragen",
+"start": 19.189,
+"end": 19.36,
+"type": "word"
+},
+{
+"text": "zum",
+"start": 19.4,
+"end": 19.52,
+"type": "word"
+},
+{
+"text": "Abfragen.",
+"start": 19.6,
+"end": 20.32,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 20.448,
+"end": 20.96,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 21.0,
+"end": 21.12,
+"type": "word"
+},
+{
+"text": "wollte",
+"start": 21.166,
+"end": 21.44,
+"type": "word"
+},
+{
+"text": "eine",
+"start": 21.488,
+"end": 21.68,
+"type": "word"
+},
+{
+"text": "Seite.",
+"start": 21.773,
+"end": 22.56,
+"type": "word"
+},
+{
+"text": "Ausgedruckt",
+"start": 22.64,
+"end": 23.28,
+"type": "word"
+},
+{
+"text": "sind's",
+"start": 23.312,
+"end": 23.6,
+"type": "word"
+},
+{
+"text": "zwei.",
+"start": 23.696,
+"end": 24.16,
+"type": "word"
+},
+{
+"text": "Urteil:",
+"start": 24.908,
+"end": 25.281,
+"type": "word"
+},
+{
+"text": "Geklappt.",
+"start": 25.441,
+"end": 26.601,
+"type": "word"
+},
+{
+"text": "Fehler",
+"start": 26.664,
+"end": 27.041,
+"type": "word"
+},
+{
+"text": "gefunden,",
+"start": 27.103,
+"end": 27.761,
+"type": "word"
+},
+{
+"text": "nur",
+"start": 27.821,
+"end": 28.001,
+"type": "word"
+},
+{
+"text": "zu",
+"start": 28.054,
+"end": 28.161,
+"type": "word"
+},
+{
+"text": "lang.",
+"start": 28.225,
+"end": 28.921,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 28.976,
+"end": 29.521,
+"type": "word"
+},
+{
+"text": "Lernen,",
+"start": 29.561,
+"end": 30.001,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 30.033,
+"end": 30.161,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 30.181,
+"end": 30.321,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 30.361,
+"end": 30.481,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 30.501,
+"end": 30.561,
+"type": "word"
+},
+{
+"text": "meine",
+"start": 30.601,
+"end": 30.801,
+"type": "word"
+},
+{
+"text": "Frage",
+"start": 30.854,
+"end": 31.121,
+"type": "word"
+},
+{
+"text": "zum",
+"start": 31.161,
+"end": 31.281,
+"type": "word"
+},
+{
+"text": "Kopieren.",
+"start": 31.341,
+"end": 32.081,
+"type": "word"
+}
+]
+}

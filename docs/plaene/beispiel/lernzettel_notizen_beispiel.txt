@@ -1,0 +1,17 @@
+BEISPIEL-NOTIZEN (erfunden, vom Studio geschrieben, 14.11.2026). Fehler absichtlich eingebaut: "Glykolyse: im Mitochondrium" (richtig: Cytoplasma).
+
+Zellatmung – Bio Mitschrift
+- Glucose + O2 -> CO2 + H2O + Energie (ATP)
+- C6H12O6 + 6 O2 → 6 CO2 + 6 H2O
+- 4 Schritte?? Glykolyse, oxidative Decarboxylierung, Citratzyklus, Atmungskette
+- Glykolyse: im Mitochondrium, Glucose -> 2 Pyruvat, 2 ATP netto, 2 NADH
+- ox. Decarb.: Pyruvat -> Acetyl-CoA, CO2 wird frei, Mitochondrienmatrix
+- Citratzyklus = Krebs-Zyklus, Matrix, 2 Durchläufe pro Glucose, CO2, NADH, FADH2, 2 ATP (GTP)
+- Atmungskette: innere Mitochondrienmembran, NADH/FADH2 geben Elektronen ab, Protonengradient, ATP-Synthase, O2 = letzter Elektronenakzeptor -> Wasser
+- am meisten ATP hier!! ca 34?
+- gesamt 36-38 ATP (Lehrer meinte heute eher ~30-32??)
+- ohne O2: Gärung (Milchsäure Muskel / alkoholische Hefe), nur 2 ATP
+- Mitochondrien = Kraftwerke, Doppelmembran, Cristae
+- Test Do!! auch Bilanz können
+
+Frage an Claude (wörtlich, frischer Kontext, ohne Werkzeuge): "Hier sind meine Bio-Notizen zur Zellatmung (vom Heft abgetippt). Mach mir daraus einen Lernzettel, der auf eine Seite passt, und 5 Fragen, mit denen ich mich abfragen kann. Test ist am Donnerstag."
