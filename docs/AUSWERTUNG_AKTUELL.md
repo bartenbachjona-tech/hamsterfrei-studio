@@ -1,4 +1,4 @@
-# Hamsterfrei – Auswertung aktuell (Stand 13.11.2026, Marke v2)
+# Hamsterfrei – Auswertung aktuell (Stand 15.11.2026, Marke v2)
 
 Geht PRODUKTION.md vor, steht unter KANAL_REGELN, `docs/brand/*` und STUDIO_HANDBUCH. Die Auswertungsroutine (geplante Aufgabe, alle 2 Tage, wie bei Groschenfall/Schattengast; muss noch angelegt werden) aktualisiert diese Datei und `state/zahlen.md`. Befunde werden als konkrete Regeländerung in `docs/brand/*` bzw. hier eingetragen, nicht nur ins Log (Handbuch G7).
 
@@ -34,6 +34,22 @@ Für **alle bisherigen Videos** (Folge 01, S1 „Seminararbeit bis 10.11.?“, V
 - **Instagram:** S1 1.875, S2 380, Rest 104–157. Keine Insights (kein Creator-Konto). S5-2 nie gepostet.
 - **Funnel:** 0 Wort-Kommentare, 0 DMs; Verkäufe nicht messbar (Digistore nicht eingeloggt).
 - **07.11. und 08.11.: kein Video** (Soll 1/Tag) → Jona gemeldet.
+
+## Erhebung 15.11.2026 ~23:30 (alle drei Plattformen, Details state/zahlen.md)
+- **TikTok:** **Folge04 (A, Paar 2)** bei 53,5 h (= 48-h-Wert): 268 / **4,32 s / 0,4 %**, FYP 98,2 %, Absprung 0:02 → Aufrufe + Ø im Rahmen, „ganz“ unter Erwartung (0,4 % ≈ 1 Person). **Folge05 (B, Paar 2)** bei 29,5 h (vorläufig): 291 / **1,86 s / 0 %**, Absprung 0:01 → niedrigster Ø aller 14 Videos. **Folge03 (B, Paar 1)** bei 77,5 h: 239 / 3,52 s / 1,2 % = unverändert seit 29,5 h. **15.11. kein Video** (ElevenLabs-Credits 522 < 632) → Ausfalltag 1 im Test. Konto 7 T: 3K Aufrufe (+59,5 %), FYP 57,6 %, Suche 37,5 %, Gefolgt 0 %, Profilaufrufe 66, Kommentare 0, Follower 2,4K netto −2 (Demografie nicht mehr angezeigt). Median letzte 10: 288 Aufrufe / 4,2 s.
+- **YouTube:** Folge04 40 (9,8 % angesehen ≈ 4 echte Zuschauer; 38 schon bei 5,5 h → gestoppt), Folge05 47 (17,8 % ≈ 8; Shorts-Feed 43, Suche 4), Folge03 114, Folge02 259, S2-F 829. 1 Abo gesamt.
+- **Instagram:** unverändert 7 Reels (S1 1.881), 1 Follower, Bio noch „Seminararbeit bis 10.11.?“. **Folge02–05 nicht gepostet** (4 Videos).
+- **Funnel:** 0 Wort-Kommentare (SWITCH, ABO, RAUS, LERNEN), 0 DMs (dm_log leer), Verkäufe n. v.
+
+## Befunde 15.11. (nach Kritiker-Runde, gelten als Regeln)
+1. **Messregel „stabiler Wert“ (neu, eng):** Liegt das 48-h-Fenster zwischen zwei Ablesungen, die praktisch gleich sind (Aufrufe ±2 %, Ø ±0,1 s) – je eine **vor und nach** dem Fenster –, gilt die spätere Ablesung als 48-h-Wert. Folge03 (29,5 h: 239/3,54 s; 77,5 h: 239/3,52 s) erfüllt das → **Paar 1 = A, gewertet mit Regelabweichung** (Fenster formal verpasst). Ohne Vor-und-nach-Paar gilt weiter Befund 13.11. Nr. 4.
+2. **Paar 2 noch offen, kein Zwischenstand melden:** Folge04 (53,5 h) gegen Folge05 (29,5 h) ist kein gültiger Vergleich. Folge05-48-h-Wert = **16.11. zwischen 18:00 und 24:00** ablesen (Fenster 42–54 h endet 17.11. 00:00). Die Auswertungsroutine läuft erst 17.11. 23:23 → der Lauf „Kommentare & DMs“ am 16.11. (19:55 oder 21:55) liest TikTok Studio Folge05 (Ø, ganz, Aufrufe) nur ab und trägt sie in state/zahlen.md ein. Sonst greift Nr. 1 (Ablesung 17.11. mit Vor-Wert 29,5 h), falls stabil.
+3. **„Ganz angesehen“ unter ~1 % ist Rauschen** (0,4 % vs. 0 % ≈ 1 Person). Entscheidungsregel bleibt unverändert (keine Regeländerung mitten im Test), aber jedes Paar wird mit Personenzahl notiert; eine Paar-Entscheidung, die nur an „ganz“ mit < 3 Personen Unterschied hängt, wird als „knapp“ markiert.
+4. **Reihenfolge-Confound:** A lief in Paar 1 und 2 am ersten Tag. **Paar 3 = A zuerst (Folge06 ist fertig als A), Paar 4 und Paar 5 = B zuerst** (Reihenfolge danach 3:2 ausgeglichen). Themen weiter per Los aus SERIEN.md zuteilen und das Los im Log notieren. Ergebnis bleibt Indiz: Ein wirkungsloser Hook erreicht ≥ 4/5 je Metrik mit ~19 % Wahrscheinlichkeit.
+5. **Ausfalltage verhindern (Produktionsregel):** Der Produktionslauf prüft vor dem Skript die ElevenLabs-Credits; liegen sie **unter dem Bedarf für 3 Videos (~1.900 Credits)**, wird Jona sofort gemeldet (nicht erst am Ausfalltag). Ein Ausfall wird **nicht** durch ein kürzeres Skript umgangen (30–35 s ist Testkonstante). Stand: **1 Ausfalltag (15.11.) → Paar 3 startet neu; ein zweiter Ausfalltag setzt den Test zurück.**
+6. **Folge05 (B) – Ursache nur Hypothese:** 1,86 s (vorläufig) ist ein Einzelwert, Thema (Schule/Biologie) und Hook sind vermischt → keine Ursache, keine Änderung (Video ist im Test).
+7. **Ausreißer:** TikTok keiner (Schwelle 864). YouTube Folge02: 259 Aufrufe × 30,2 % ≈ 78 echte Zuschauer < 150 → nach Regel 13.11. kein Ausreißer, obwohl 2,6× über der Erwartung 20–100. TikTok-Bindungs-Ausreißer Folge02 (9,91 s = 2,4× Median) → Themenkandidat **nach** dem Test (THEMEN F02-T).
+8. **Instagram ist ein Blocker, kein Messthema:** 4 fertige Videos ungepostet; IG hatte mit S1 die höchste Einzelreichweite. An Jona eskaliert (posten/Freigabe erteilen/IG pausieren).
 
 ## Erhebung 13.11.2026 ~23:25 (alle drei Plattformen, Details state/zahlen.md)
 - **TikTok:** **Folge02 (A, Paar 1)** bei 53,5 h: 256 / **9,91 s / 4,1 %** (bei 5,5 h 248 → Ausspielung nach dem ersten Schub gestoppt, trotz doppelter Bindung). **Folge03 (B, Paar 1)** bei 29,5 h: 239 / 3,54 s / 1,2 % (im Rahmen). **Folge04 (A, Paar 2)** bei 5,5 h: 182 / 4,39 s / 0 % (vorläufig). **S2-F** bei 77 h: 259 / 3,09 s / 0,8 % → Erwartung endgültig verfehlt. S1 2,1K, Wachstum seit 11.11. fast gestoppt. Konto 7 T: 3,2K Aufrufe, Suche 41,2 %, Gefolgt 0 %, Follower netto −1, 0 Kommentare. Median letzte 10: 287 Aufrufe / 4,5 s. Kein Ausreißer.
@@ -90,7 +106,7 @@ Für **alle bisherigen Videos** (Folge 01, S1 „Seminararbeit bis 10.11.?“, V
 ## Messregeln (ab 08.11.)
 - Jedes Video wird bei **48 h und 7 T** in state/zahlen.md protokolliert (alle Metriken); verglichen werden nur gleich alte Werte.
 - **Ausreißer** = ≥ 3× Median der Plattform **und** ≥ 500 Aufrufe **und** innerhalb von 48 h erkannt. Dann Folgevideo in 48 h (G6). **YouTube ab 13.11.:** statt Aufrufen zählen echte Zuschauer (Aufrufe × „angesehen“ %), ≥ 3× Median und ≥ 150 (Befund 13.11. Nr. 1).
-- 48-h-Wert = Ablesung bei 42–54 h (Befund 13.11. Nr. 4).
+- 48-h-Wert = Ablesung bei 42–54 h (Befund 13.11. Nr. 4); Ausnahme „stabiler Wert“ (Befund 15.11. Nr. 1).
 - Aufrufe sind **kein Ziel**, nur Kontext.
 
 ## Messziele (Stand 08.11.2026)
@@ -113,6 +129,7 @@ Gestrichen (Kritiker 08.11.): Follower Δ 7 T (Rauschen ±2 auf totem Konto), Su
 - **S2-Follow-up (YouTube-Ausreißer 698):** Prüfungsgespräch-Video am **10.11.** (Abgabe heute → jetzt kommt die Prüfung), also vor dem Teststart, als Follow-up markiert. Mit Werbung nur nach Jonas OK.
 
 ## Offene Messpunkte (nächster Lauf)
+- **Stand 15.11.:** Folge05 48 h = **16.11. 18:00–24:00** (Lauf „Kommentare & DMs“ liest ab, Befund 15.11. Nr. 2); Folge06 (Paar 3 A) 48 h, sobald gepostet; 7-T-Werte Folge02 (18.11.) und S2-F (17.11.); S1-Zuwachs (Beobachtung bis 16.11., heute nicht einzeln erhoben); YouTube-Feed: Folge04/05 nach erstem Schub gestoppt.
 - **Stand 13.11.:** 48-h-Werte Folge03 (14.11. 18:00), Folge04 (15.11. 18:00), Paar 2 B (16.11.); YouTube „angesehen %“ aller Shorts nachtragen (für Median echter Zuschauer); S1 bis 16.11.
 - 48-h-Werte S2-F (12.11. 18:00), Folge02 (13.11. 18:00) und Paar 1 B (14.11.); YouTube-Bindung S2-F und Folge02; S7 7 T (13.11.); S1-Zuwachs (bis 16.11.).
 - 7-T-Werte für S5-2 und S7; 48-h-Werte für jedes neue Video.
@@ -128,6 +145,7 @@ Gestrichen (Kritiker 08.11.): Follower Δ 7 T (Rauschen ±2 auf totem Konto), Su
 - Ausreißer (≥ 3× Median und ≥ 500 Aufrufe) lösen innerhalb von 48 h ein Folgevideo aus, ändern aber nicht die Testvariable (Handbuch G6).
 
 ## Offene Frage für Jona
+- **Zahlen 15.11.:** Keine neue Evidenz. Gefolgt 0 % bei 3K Wochenaufrufen, Follower netto −2, alle unbeworbenen Videos 239–291 TikTok-Aufrufe unabhängig von der Bindung (1,86–9,91 s). Kriterium Befund 13.11. Nr. 5 weiter 1 von 2 → Entscheidung nach Paar 5.
 - **Zahlen 13.11.:** Folge02 hatte die doppelte Bindung (9,91 s, 4,1 % ganz) und bekam trotzdem nach dem ersten Schub fast nichts mehr (248 → 256). Alle unbeworbenen Videos landen bei 180–260, Gefolgt 0 %, Follower netto −1. Neues Kriterium (Befund 13.11. Nr. 5): noch **ein** unbeworbenes Video mit Ø ≥ 7 s unter 300 → Empfehlung Neukonto-Versuch parallel. Entscheidung: Jona.
 - **Zahlen 11.11.:** Gefolgt 0 % bei 3,6K Wochenaufrufen, Follower netto 0. Alle FYP-Videos landen bei ~250–340 Aufrufen; ob das Kaltstart-Normal oder ein Konto-Deckel ist, ist **nicht belegt**. Kein Test jetzt (ein Test gleichzeitig) – **Entscheidung nach Paar 5** (ca. 20.11.) anhand der FYP-Aufrufe der Testvideos: liegen alle 10 unter ~350, Neukonto ernsthaft prüfen.
 - **Zahlen 09.11.:** Gefolgt-Traffic 7 T = 0 %, Follower netto 0 bei 2,6K Wochenaufrufen. Die geerbten Follower spielen weiter keine Rolle; Empfehlung unverändert (behalten, ignorieren).

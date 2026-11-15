@@ -44,3 +44,12 @@
 - Kein Ausreißer (TikTok-Schwelle 861, YouTube neu über echte Zuschauer). S2-F2-Follow-up gestrichen; Prozessfehler (Frist verstrich ungemeldet) notiert.
 - Kritiker (fable): 30-%-Schwelle an einem Punkt kalibriert → absolute echte Zuschauer; Stimm-Regel aus S2-F überinterpretiert → bleibt Hypothese; Paar 1 nur Indiz (Thema-Confound, Folge04); Messfenster fixieren; Konto-Frage braucht Kriterium; S1-Such-Follow-up nicht streichen. Alles übernommen (S1: kein Follow-up jetzt, Such-Test bleibt nächster Test nach Paar 5).
 - Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 13.11. Nr. 1–7, Messregeln YouTube-Ausreißer + 48-h-Fenster, offene Messpunkte, Konto-Kriterium), THEMEN S2-F2 gestrichen.
+
+## 15.11.2026 (Routine, gestartet 23:25)
+- Chrome: Browser 1 (deviceId 2d7e7af3…, wie in den Vorläufen), TikTok-Konto **hamsterfrei** per Account-Info bestätigt, YouTube-Kanal UCBmT3RjRK5PGk-YVTdFzuDA. Nur gelesen. Tab ~23:38 geschlossen.
+- Erhoben: TikTok Folge03/04/05 (Detail) + Liste + Konto 7 T + Follower; YouTube 14 Shorts + Analyse Folge04/05; Instagram Profil. Digistore n. v. S1 nicht einzeln erhoben.
+- Bestes (48 h): **Folge04 (A, Paar 2)** 268 / 4,32 s / 0,4 % – im Rahmen. Schwächstes: **Folge05 (B, Paar 2)** 291 / **1,86 s** / 0 % (29,5 h, vorläufig; niedrigster Ø aller Videos). YouTube: Folge04 40 / Folge05 47, beide nach erstem Schub gestoppt.
+- Testvariable: Paar 1 = A (mit Regelabweichung, Folge03 stabil seit 29,5 h). Paar 2 offen bis 16.11. 18:00–24:00. 15.11. Ausfalltag (Credits) → Paar 3 neu.
+- Kein Ausreißer (TikTok-Schwelle 864; YouTube echte Zuschauer max. 78 < 150). 0 Wort-Kommentare, 0 DMs.
+- Kritiker (fable): Messregel nachträglich und zu weit → eng gefasst (Vor- und Nach-Ablesung); kein „2:0“ melden; „ganz“ < 1 % = 1 Person = Rauschen; Credits-Check auf 3 Tage; Folge05-Ursache nur Hypothese; YouTube Folge02 explizit gegen Regel prüfen; Folge02 als Themenkandidat nach Test; IG eskalieren; Reihenfolge-Confound (A immer zuerst) + 19 % Zufallswahrscheinlichkeit; Ablesung terminieren. Alles übernommen; Reihenfolge: Paar 3 A zuerst (Folge06 fertig als A), Paar 4/5 B zuerst.
+- Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 15.11. Nr. 1–8: Messregel „stabiler Wert“, Ablesung Folge05 am 16.11., Reihenfolge Paar 3–5, Credits-Regel 3 Videos), THEMEN F02-T.
