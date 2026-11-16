@@ -1,0 +1,227 @@
+{
+ "S16": {
+  "bis_ende": 30,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Mama kocht, Meal Prep brauch ich nicht."
+ },
+ "S17a": {
+  "bis_ende": 18,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Abgabe am 10.11., keine Zeit für Kochvideos."
+ },
+ "S17b": {
+  "bis_ende": 32,
+  "website": 1,
+  "folgen": 5,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Süßer Hamster, aber ich wohn noch daheim."
+ },
+ "S18a": {
+  "bis_ende": 34,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Vielleicht später beim Ausziehen, jetzt eher nicht."
+ },
+ "S18b": {
+  "bis_ende": 30,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Lernstress, Essen macht meine Mutter."
+ },
+ "S19": {
+  "bis_ende": 36,
+  "website": 2,
+  "folgen": 6,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Ganz nett, aber ich koch selten selbst."
+ },
+ "A16": {
+  "bis_ende": 22,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich such Ausbildung, kein Kochen."
+ },
+ "A18": {
+  "bis_ende": 28,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Billig essen ok, aber ich brauch Ausbildungsplatz."
+ },
+ "A20": {
+  "bis_ende": 52,
+  "website": 3,
+  "folgen": 12,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Brotdosen-Idee gut, Zettel-Kommentar reicht mir."
+ },
+ "A22": {
+  "bis_ende": 48,
+  "website": 2,
+  "folgen": 10,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Kantine im Heim, aber Restetrick merk ich mir."
+ },
+ "U19": {
+  "bis_ende": 55,
+  "website": 3,
+  "folgen": 13,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "unklar_was_produkt",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Brauch ich fürs WG-Leben, kommentier vielleicht Zettel."
+ },
+ "U21": {
+  "bis_ende": 50,
+  "website": 2,
+  "folgen": 11,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Kann ChatGPT auch, aber Preischeck ist cool."
+ },
+ "U23": {
+  "bis_ende": 58,
+  "website": 4,
+  "folgen": 12,
+  "grund_weg": "sonstiges",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Hab Claude Pro, mach ich mir selbst."
+ },
+ "U24": {
+  "bis_ende": 42,
+  "website": 2,
+  "folgen": 7,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kurz witzig, sonst nichts für mich."
+ },
+ "U22w": {
+  "bis_ende": 40,
+  "website": 2,
+  "folgen": 8,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab gerade andere Probleme als Meal Prep."
+ },
+ "U20b": {
+  "bis_ende": 54,
+  "website": 2,
+  "folgen": 12,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Wenig Geld, 19 Euro klingt echt brauchbar."
+ },
+ "U25": {
+  "bis_ende": 34,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "werbung_misstrauen",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "KI-Hamster mit Aldi-Preisen, wirkt wie Werbung."
+ },
+ "M18": {
+  "bis_ende": 30,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich ess im Café, brauch keinen Plan."
+ },
+ "M30": {
+  "bis_ende": 44,
+  "website": 2,
+  "folgen": 8,
+  "grund_weg": "gratis_alternative",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Für eine Person nett, ich koch für Familie."
+ },
+ "R19": {
+  "bis_ende": 25,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Will Vinted-Tipps, keine Rezepte."
+ },
+ "R26": {
+  "bis_ende": 26,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Billig essen kann ich auch ohne KI."
+ },
+ "R35": {
+  "bis_ende": 24,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Mein Keller interessiert mich gerade mehr."
+ },
+ "R45": {
+  "bis_ende": 30,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Fünf Mittagessen für einen reichen bei uns nicht."
+ },
+ "G24": {
+  "bis_ende": 30,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich hab Rechnungsfragen, keine Kochfragen."
+ },
+ "G28": {
+  "bis_ende": 38,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schöner Animationsstil, Inhalt aber nicht mein Thema."
+ }
+}

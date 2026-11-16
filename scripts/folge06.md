@@ -72,3 +72,12 @@ captionMap: „fünf“ → „5“, „zwanzig“ → „20“, „Sechzehn“ 
 
 ## 11. Produktion – STOPP Credits (15.11. ~13:20 Berlin)
 - Stimme: Flow uT8djKK7EX13Kxl5NWCM, Generation rG2tJCMuE9r94xgaaM4y **fehlgeschlagen**: „exceeds your quota … 522 credits remaining, 632 required“ (keine Credits verbraucht). Nicht wiederholt, keine andere Stimme (STIMME.md/PRODUKTION §5). Jona per Push gemeldet. Nicht terminiert.
+
+## 12. Produktion 16.11.2026 (neuer Lauf, Credits reichten wieder)
+- Stimme: Flow Hp1qyR1rnYpUnmY9kguo, Generation UKSSN2ogjHfpknAihxvu, 1 Take eleven_v3, **632 Credits**, 32,3 s, unbearbeitet. Scribe 0 Credits (src/folgen/folge06.words.json).
+- Datum im Termin jetzt **16.11.2026 18:00** (Preisprüfung bleibt 15.11., so in Caption/Bild).
+- Video out/hamsterfrei-folge06-zettel.mp4 (34,1 s), Cover out/cover-folge06.png.
+- Bild-Kritiker (fable, frischer Kontext): R1 **pass 8/10**, Stumm-Test ja. Nachbesserungen übernommen: Trick-Szene Burrito/Pfeile früher, „5 Preise geschätzt“ in NAVY groß, Tabelle mit Differenz statt Haken bei abweichendem Preis, „Claude 1,69 €“ früher sichtbar. Nicht übernommen (Zeit/Risiko): Dosen mit Inhalt, Schein neben Summe.
+- Zuschauer-Test: **334 bis Ende / 15 Website / 52 folgen pro 1.000** (bester Test-Wert bisher; Gründe kein_bedarf 55 %, spaeter_vielleicht 13 %, nicht_zielgruppe 12 % – nichts behebbar).
+- Termine: TikTok geplant 18:00 https://www.tiktok.com/@hamsterfrei/video/7708740254404136195 (KI-Label an, keine Offenlegung) · YouTube Short geplant 18:00 https://youtube.com/shorts/7AgVh0qkx70 (nicht für Kinder, KI = Ja, keine bezahlte Werbung) · **IG offen** (Posten nur mit Jonas Freigabe).
+- G10-Checkliste: Schlüsselbild ✓, Hook-Tore ✓ (Kritiker 15.11.), 3 Hook-Varianten ✓, Pointe zuerst ✓, Signatur im Hook ✓, Serie (a) ✓, Testvariable A/Paar 3 ✓, Cover = Frame 0 ✓, Erwartung ✓, Sicherheit ✓ (keine Werbung, „Claude-Konto ab 18“ in Caption), Zuschauer-Test ✓.

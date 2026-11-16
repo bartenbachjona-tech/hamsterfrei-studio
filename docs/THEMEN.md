@@ -45,7 +45,7 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | T10 | Nebenjob-Check „Ab welchem Preis lohnt sich Vinted überhaupt?“ (Serie c, Jona stoppt 3 eigene Teile; TRENDS.md 09.11. I1) | MINDESTPREIS | nein | offen |
 | T11 | Hamster-Test „Speicher voll – ich hab Claude gefragt, was weg kann“ (Serie a, Jonas Handy, Ansicht nachzeichnen; TRENDS.md 09.11. I2) | SPEICHER | nein | offen |
 | T12 | Vorher/Nachher „Beispiel-Kontoauszug vs. Claudes Abo-Karte“ (Serie b, nur geschwärzt oder als Beispiel; TRENDS.md 09.11. I3) | ABO | nein | als F03 umgesetzt (12.11.) |
-| T13 | Hamster-Test „20 Euro, fünf Mittagessen – Claude schreibt den Einkaufszettel“ (Serie a, Jona kauft wirklich ein, Kandidat Serie-(a)-Paar; TRENDS.md 12.11. I1) | ZETTEL | nein | als F06 skriptet 15.11. (wartet auf Credits) |
+| T13 | Hamster-Test „20 Euro, fünf Mittagessen – Claude schreibt den Einkaufszettel“ (Serie a, Jona kauft wirklich ein, Kandidat Serie-(a)-Paar; TRENDS.md 12.11. I1) | ZETTEL | nein | terminiert 16.11.2026 18:00 als Folge06 (TikTok, YT; IG offen) |
 | T14 | Vorher/Nachher „Minijob-Lebenslauf: gleiche Person, drei Änderungen“ (Serie b, fiktives Beispiel; Bewerbungs-Profi nicht nennen, sonst Werbung; TRENDS.md 12.11. I2) | LEBENSLAUF | nein | offen |
 | T15 | Nebenjob-Check „Nachhilfe geben: Was bleibt pro Stunde übrig?“ (Serie c, erst nach echter gemessener Stunde; TRENDS.md 12.11. I3) | NACHHILFE | nein | offen (wartet auf echte Messung) |
 | T16 | Hamster-Test „Gebrauchtes Handy kaufen: Claude sucht die Haken in der Anzeige“ (Serie a, selbstgebaute Beispielanzeige mit 5 Fallen, kein Portalname; TRENDS.md 16.11. I1) | CHECK | nein | offen |

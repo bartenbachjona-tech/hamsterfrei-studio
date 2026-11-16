@@ -1,0 +1,227 @@
+{
+ "G31": {
+  "bis_ende": 22,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Nett, aber ich koche nicht für zwanzig Euro die Woche."
+ },
+ "C17": {
+  "bis_ende": 30,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Süßer Hamster, aber Mama kocht, Meal Prep brauch ich nicht."
+ },
+ "C21": {
+  "bis_ende": 24,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "sonstiges",
+  "satz": "Gut geschnitten, aber Kochen ist nicht mein Content-Thema."
+ },
+ "C26": {
+  "bis_ende": 20,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "sonstiges",
+  "satz": "Faceless-Format clever, inhaltlich für mich irrelevant."
+ },
+ "B27": {
+  "bis_ende": 34,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Reste-Trick ist gut, Einkaufsliste macht mir ChatGPT auch."
+ },
+ "B32": {
+  "bis_ende": 18,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich esse in der Kantine, zwanzig Euro sind egal."
+ },
+ "B29": {
+  "bis_ende": 36,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Sparen passt gerade, aber Rezepte finde ich überall gratis."
+ },
+ "B35": {
+  "bis_ende": 22,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Netter Preischeck, aber Claude mit meinen Einkäufen? Nö."
+ },
+ "W26": {
+  "bis_ende": 33,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Neue Stadt, wenig Geld – ich speicher's vielleicht."
+ },
+ "W30": {
+  "bis_ende": 24,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Wir suchen Wohnung, nicht Rezepte."
+ },
+ "H28": {
+  "bis_ende": 23,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hochzeitsstress, Meal Prep schaff ich gerade nicht."
+ },
+ "H31": {
+  "bis_ende": 20,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Süß gezeichnet, aber nicht mein Feed-Thema."
+ },
+ "T23": {
+  "bis_ende": 35,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Erstes Gehalt knapp, Reste-Idee merke ich mir."
+ },
+ "T19": {
+  "bis_ende": 42,
+  "website": 2,
+  "folgen": 7,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Bei 500 Euro zählt jeder Euro, guter Tipp."
+ },
+ "V20": {
+  "bis_ende": 30,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "hook_schwach",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hamster lustig, aber Kochen mach ich eh nicht."
+ },
+ "V34": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich reise viel, Brotdosen-Planung ist nicht meins."
+ },
+ "E45": {
+  "bis_ende": 28,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "werbung_misstrauen",
+  "satz": "Ich kann selber planen, KI brauche ich dafür nicht."
+ },
+ "E50": {
+  "bis_ende": 30,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Wenigstens nachgeprüft, trotzdem traue ich der KI nicht."
+ },
+ "AT19": {
+  "bis_ende": 34,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "sonstiges",
+  "satz": "Aldi Süd Preise gelten in Wien sowieso nicht."
+ },
+ "CH22": {
+  "bis_ende": 14,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "nicht_zielgruppe",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Zwanzig Euro Wocheneinkauf? In Zürich ein Witz."
+ },
+ "N15": {
+  "bis_ende": 38,
+  "website": 1,
+  "folgen": 6,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hamster mit Krawatte ist witzig, kochen tu ich nicht."
+ },
+ "N40": {
+  "bis_ende": 14,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schon wieder so ein Spar-Video, weiter."
+ },
+ "K22": {
+  "bis_ende": 38,
+  "website": 2,
+  "folgen": 6,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Brauch ich fürs Büro, schreib vielleicht Zettel."
+ },
+ "F20": {
+  "bis_ende": 36,
+  "website": 1,
+  "folgen": 5,
+  "grund_weg": "spaeter_vielleicht",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Bei 200 Euro hilft das, aber Führerschein ist wichtiger."
+ },
+ "L33": {
+  "bis_ende": 24,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Harmloser als Seminararbeit, trotzdem folge ich keinem KI-Kanal."
+ }
+}
