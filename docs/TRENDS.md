@@ -2,6 +2,59 @@
 
 > **Ab Marke v2 (04.11.2026)** arbeitet der Trend-Scout als **Ausreißer-Scout** (Handbuch G5): Videos mit ≥ 3× Kanal-Median, eigene Nische + Nachbarnischen, deutsch und englisch, 3–5 Konten; Pflichtfrage „Was haben die besten 5 dieses Kontos, was den schlechtesten 5 fehlt?“; Motor kopieren, nie das Thema 1:1. Jede Idee wird einer Serie aus `docs/brand/SERIEN.md` zugeordnet oder als Experiment markiert und braucht ein Schlüsselbild (sonst verwerfen). Hooks ohne KI-Jargon (STIMME.md). Ältere Einträge unten sind Hintergrund; „Werbung ab Sekunde 0“ oder Werbe-Pointen dort gelten nicht mehr.
 
+## 2026-11-16 – Ausreißer-Scout (TikTok-Direktcheck + Web-Aggregatoren)
+Methode: Faktor = Aufrufe ÷ Median der neuesten Videos des Kontos (n angegeben), selbst nachgerechnet, Stand 16.11. ~07:30 UTC. TikTok im Hamsterfrei-Chrome (Browser 5, deviceId 2d7e7af3…, Konto per /profile → @hamsterfrei geprüft, nur gelesen, 1 Suche „claude ki trick“ + 3 Profile; Datum aus Video-ID). Web-Agent: YouTube-Kanal-/Shorts-Seiten diesmal per WebFetch gesperrt → **keine eigenen YouTube-Mediane**; Zahlen nur aus Aggregatoren (Virlo „Outlier-Score“ = Basis unklar, Viralmint = echter Median der letzten 30 Shorts). vidIQ/Reddit/creatordb: nichts Belegtes. Bereits gemeldete Konten (tecturtle, denizdeke, Riley, Nate, studyflix …) nicht wiederholt. Kurzer Lauf (Zeitfenster bis 07:50 UTC).
+
+### Ausreißer
+| Konto | Video | Aufrufe | Datum | Median (n) | Faktor | Spr./Nische |
+|---|---|---|---|---|---|---|
+| TikTok @denkbit (785 F.) | „Speicher dir das, bevor du das nächste Mal für eine KI-Stimme zahlst“ https://www.tiktok.com/@denkbit/video/7706967623065521441 · „Claude macht deine Singleplayer-Spiele jetzt zu Koop-Spielen“ …/7707013978131631393 · „Claude Code vertont dir jetzt deine Videos“ …/7707385108726025505 · „Schick das jemandem, der noch jeden Monat für Photoshop zahlt“ …/7707338698936896800 | 68,1K / 54,7K / 26,8K / 6,6K | 11.11. / 11.11. / 12.11. / 12.11. | 1.046 (16) | **65× / 52× / 26×** / 6,3× (< 10K, nur Hinweis) | DE / KI-Alltag, Gratis statt Abo |
+| TikTok @aiagentgeorg (39,8K F.) | „Claude Code hackt gerade tausende Fernseher 📺 Werbung, bevor du …“ https://www.tiktok.com/@aiagentgeorg/video/7707418714878086433 | 138,7K | 12.11. | 25,7K (16) | **5,4×** | DE / Claude (News/Schock – Kritiker: kaum kopierbar) |
+| TikTok @ki.glatze (33,1K F.) | „Kennst du schon diese ChatGPT-Codes? 🤫“ https://www.tiktok.com/@ki.glatze/video/7695275810445364513 · …/7697714725261511969 | 699K / 540K | 11.10. / 17.10. (angepinnt) | 2.742 (18) | 255× / 197× (**nicht gewertet**: angepinnt, > 4 Wochen) | DE / KI-Prompts |
+| YT (Viralmint, Median-belegt) | BRUSHIQ „Lazy Way to Get Perfect White Teeth (It Works)“ https://www.youtube.com/shorts/kz4AY2ybUIw · Jay Bartell „Airlines hate this one simple trick“ https://www.youtube.com/shorts/CfK5w81qh5o | 52,6 Mio / 16,2 Mio | KW 46 (kein Einzeldatum) | Mini-Median | 13.311× / 4.212× (Mini-Basis, nur Hook-Hinweis) | EN / Nachbar Spar-Hacks |
+| TikTok (Virlo, Basis unklar) | @signalservice_ „Geschäftsidee an 100 Fake-Kunden testen“ (Claude) 608,7K „43×“ 13.11.; @platyfinance animiertes Schnabeltier-Maskottchen (Geld als Paar aufteilen) 208,7K „36×“ 29.10.; @cassidywinkler_ ChatGPT vs. Claude 174,4K „34×“ 06.11. | – | – | unbekannt | nicht gewertet | EN / KI, Geld |
+
+Quellen Web: https://virlo.ai/agents/ai-productivity-insights-cze5fh · https://virlo.ai/agents/personal-finance-9fvxf8 · https://viralmint.net/trends/youtube-shorts-tracker/ · Hintergrund ShortsIntel (619 TikToks, 48 Creator): nur 4,8 % der Videos schaffen ≥ 10× Median https://www.shortsintel.com/statistics/outlier-videos. **Deutsche YouTube-Ausreißer: diesmal keine belegt.**
+
+### Beste 5 vs. schlechteste 5
+- **@denkbit:** Top (KI-Stimme 65×, Koop-Spiele 52×, Videos vertonen 26×, Photoshop 6,3×) = **„Gratis statt bezahlen“ + Speichern/Schicken-Aufforderung im ersten Satz** („Speicher dir das, bevor du … zahlst“, „Schick das jemandem, der noch … zahlt“), ein greifbares Alltagsding (Spiel, Stimme, Bildbearbeitung). Bottom (394–554, 0,4–0,5×) = **„Warum macht deine KI …?“-Erklärfragen** und reine Funktions-News („ChatGPT macht aus Kritzelei ein GIF“). Länge/erstes Bild nicht geprüft.
+- **@aiagentgeorg:** Top (Fernseher 5,4×, „Autohändler haben jetzt ein ernsthaftes Problem“ 2,6×, „KI lernen ohne Studium, gratis“ 2,1×) = **Betroffener/Gegenspieler aus dem Alltag** oder „gratis“. Bottom (0,1×) = Modell-News („Fable 5.2 …“), „Ein Satz an Claude, Werbespot in 4K“, „ChatGPT beantwortet meine Mails“ – aber erst 1–2 Tage alt (Kritiker: nicht als Flop werten).
+- **@ki.glatze:** Top nur angepinnte „Kennst du schon …?“-Neugier-Fragen (verzerrt). Belastbar ist nur der Boden: Videos, die **mit „Kommentier X und ich schick dir …“ beginnen**, liegen bei 0,4–0,5×; dieselben Inhalte mit Frage-Hook bei 1,5–2,1×.
+
+### 3 Folgerungen (Hinweise, n = 2–3 Konten je Punkt)
+1. **„Gratis statt Abo“ mit Spar-Satz am Anfang** ist der stärkste neue Motor (denkbit 65×/52×/26×, aiagentgeorg „gratis“ 2,1×, EN „Lazy … (It Works)“). Für uns nur mit echtem Vergleich (was kostet's sonst – Quelle mit Datum) und ohne Markenwerbung.
+2. **Kommentar-Wort nie als erster Satz** (ki.glatze 0,4–0,5×; bestätigt tecturtle 12.11. und Mini-Konten 09.11.). Kommentar-Wort ans Ende (SERIEN.md hält das schon so).
+3. **Erklärfragen über KI-Verhalten und Modell-News floppen** (denkbit „Warum …“ 0,4×, aiagentgeorg Modell-News 0,1×, früher Riley/Nate Produktnamen) – ein Alltagsding mit sichtbarem Ergebnis gewinnt. Keine Regeländerung nötig; bestätigt SERIEN (a)/(b).
+
+Trichter (G5): 10 Rohideen (KI-Stimme gratis, Koop-Spiele, Fernseher-Werbung, Gebrauchthandy-Anzeige prüfen, Referat-Folie kürzen, Umfrage-Apps Stundenlohn, Fake-Kunden-Test, ChatGPT-Codes, Autohändler-Preischeck, Flug-Trick) → Ausschluss (Thema 1:1, Hack/ToS-Risiko, Fremd-Software, Markenwerbung, kein Schlüsselbild, Auto für Zielgruppe zu weit) → 3.
+
+### 3 Video-Ideen (Kritiker fable: I1 7/10, I2 6/10, I3 6/10 – Korrekturen eingearbeitet)
+**I1 – Hamster-Test: „Gebrauchtes Handy kaufen: Claude sucht die Haken in der Anzeige“ (Serie a, Motor aiagentgeorg „Betroffener im Alltag“ + Gewinner-Thema Gebrauchtpreis aus F02-T) – Wort CHECK**
+- Schlüsselbild: neutral nachgezeichnete Anzeige auf einem erfundenen „Gebraucht-Portal“ (kein echtes Logo/Layout), 3 rote Kreise, Hamster mit Lupe, Stempel-Platz oben rechts.
+- Hook Experimenter: „Hamster-Test: In dieser Handy-Anzeige hab ich fünf Haken versteckt. Claude findet …“ (Zahl erst nach dem echten Test)
+- Hook Contrarian: „Ein günstiges Handy-Angebot ist nicht das Problem. Das Problem steht in Zeile drei.“
+- Ablauf: 1) Anzeige mit Kreisen zuerst 2) Frage an Claude kurz auf der Leinwand („Woran erkenne ich, ob diese Anzeige faul ist?“) 3) Claudes echte Funde nacheinander markieren (z. B. Zahlung nur vorab, Akku-Angabe fehlt, Foto aus dem Netz) 4) „aber …“: die Haken, die Claude übersehen hat, zeigen 5) Stempel Geklappt/Halb/Fail + Merksatz.
+- Echt aufnehmen: Jona baut die Beispielanzeige selbst (als BEISPIEL markiert, 5 Fallen vorher notiert), Bildschirmaufnahme der echten Claude-Antwort in frischem Chat. Keine echte fremde Anzeige, kein Portalname.
+- Kommentar-Wort am Ende: CHECK → Prüf-Frage zum Kopieren + Checkliste (gratis).
+
+**I2 – Vorher/Nachher: „Meine Referat-Folie: links Textwand, rechts drei Wörter“ (Serie b, Motor „ein sichtbares Werkstück“ + „Speicher dir das vor …“ als Speicher-Satz; denkbit) – Wort REFERAT**
+- Schlüsselbild: Split, links eine Folie voller Text (grau, unlesbar klein), rechts dieselbe Folie mit 3 großen Stichworten + kleiner Sprechkarte; Hamster hält die linke Folie angewidert hoch.
+- Hook Magician: „Links meine Folie. Rechts dieselbe, nachdem Claude nur gekürzt hat. Mein Text ist noch da – nur nicht mehr auf der Folie.“
+- Hook Contrarian: „Speicher dir das, bevor du dein nächstes Referat hältst: Je mehr auf der Folie steht, desto weniger hört dir jemand zu.“ (nur mit Quelle oder als Meinung formulieren)
+- Ablauf: 1) Split zuerst 2) zeigen: Inhalt ist selbst geschrieben, Claude soll nur kürzen und auf eine Sprechkarte verschieben 3) Unterschied 1–3 markieren (Stichworte, ein Bild statt Absatz, Satz auf die Karte) 4) ehrliche Schwäche: ein wichtiger Punkt fiel weg → selbst zurückholen 5) Pointe = die eine Regel „Folie zeigt, du sprichst“.
+- Echt aufnehmen: eigene Beispielfolie (Thema neutral, z. B. Wasserkreislauf), echte Claude-Antwort als Bildschirmaufnahme; Claude schreibt keinen Inhalt neu, nur Kürzung. Keine Marken-Präsentationssoftware groß im Bild.
+- Kommentar-Wort am Ende: REFERAT → Kürz-Frage an Claude + Folien-Checkliste (gratis).
+
+**I3 – Nebenjob-Check: „Umfrage-Apps: Eine Stunde getestet – was wirklich auszahlbar ist“ (Serie c, Motor „Gratis/Lazy … (It Works)“ umgedreht + Gegenspieler; EN Viralmint, aiagentgeorg) – Wort UMFRAGE**
+- Schlüsselbild: Hamster mit kleinem Münzhäufchen neben einem hohen Balken „Mindestlohn“ (aktueller Wert nur mit Quelle); daneben Stoppuhr 60:00.
+- Hook Contrarian: „Geld fürs Handy-Daddeln, sagen sie. Ich hab's eine Stunde gemacht. Auszahlbar sind <X> Euro.“
+- Hook Experimenter: „Nebenjob-Check: eine Stunde Umfragen, Claude rechnet mit. Der Haken kommt bei der Auszahlung.“
+- Ablauf: 1) Münzhäufchen vs. Mindestlohn-Balken zuerst 2) Regeln: 60 Minuten gestoppt, nur tatsächlich auszahlbares Geld zählt 3) Claude rechnet live Stundenlohn inkl. Rauswürfe und Auszahlungsgrenze (echte Ausgabe) 4) Haken: Mindest-Auszahlung, Daten, die man hergibt, Altersgrenze 5) Urteil „lohnt sich für …, nicht für …“.
+- Echt aufnehmen: Jona testet wirklich 60 Min (eine App, App-Oberfläche nachgezeichnet, kein Name/Logo – sonst Werbung), Bildschirmaufnahme Claude-Rechnung. Ohne echte Stunde nicht bauen. Kein Einkommensversprechen.
+- Kommentar-Wort am Ende: UMFRAGE → Rechnung zum Nachrechnen (gratis).
+
+Verworfen: KI-Stimme gratis / Koop-Spiele / Videos vertonen (Thema 1:1, Fremd-Software), Fernseher-Werbung (Hack/ToS), Fake-Kunden-Test (Thema 1:1, Basis unklar), ChatGPT-Codes (angepinnt, Prompt-Listen-Masche), Autohändler (Zielgruppe), Flug-Trick (kein Claude-Ergebnis).
+
 ## 2026-11-12 – Ausreißer-Scout (TikTok-Direktcheck + YouTube-Shorts)
 Methode: Faktor = Aufrufe ÷ Median der neuesten Videos des Kontos (n angegeben), selbst nachgerechnet, Stand 12.11. ~07:00 UTC. TikTok im Hamsterfrei-Chrome (deviceId 2d7e7af3…, Konto per /profile → @hamsterfrei geprüft, nur gelesen, 3 Suchen + 4 Profile; Datum aus Video-ID). YouTube: Shorts-Tab mit `hl=de&gl=DE` liefert **exakte** Aufrufe (neu, Agent „Web & YouTube“); Watch-Seiten großteils gesperrt → Länge, Transkript, erstes Bild fehlen bei YouTube. vidIQ: Freigabe kam nicht rechtzeitig, nicht genutzt. Reddit/creatordb nicht geprüft (Zeit). Mini-Konten (< 1.000) markiert. **Neu (Kritiker):** voll gewertet nur ≥ 3× Median UND ≥ 10.000 Aufrufe; Mini-Konten sind nur Hinweis und nie alleiniger Motor einer Idee.
 

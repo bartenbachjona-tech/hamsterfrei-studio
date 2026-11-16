@@ -48,6 +48,9 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | T13 | Hamster-Test „20 Euro, fünf Mittagessen – Claude schreibt den Einkaufszettel“ (Serie a, Jona kauft wirklich ein, Kandidat Serie-(a)-Paar; TRENDS.md 12.11. I1) | ZETTEL | nein | als F06 skriptet 15.11. (wartet auf Credits) |
 | T14 | Vorher/Nachher „Minijob-Lebenslauf: gleiche Person, drei Änderungen“ (Serie b, fiktives Beispiel; Bewerbungs-Profi nicht nennen, sonst Werbung; TRENDS.md 12.11. I2) | LEBENSLAUF | nein | offen |
 | T15 | Nebenjob-Check „Nachhilfe geben: Was bleibt pro Stunde übrig?“ (Serie c, erst nach echter gemessener Stunde; TRENDS.md 12.11. I3) | NACHHILFE | nein | offen (wartet auf echte Messung) |
+| T16 | Hamster-Test „Gebrauchtes Handy kaufen: Claude sucht die Haken in der Anzeige“ (Serie a, selbstgebaute Beispielanzeige mit 5 Fallen, kein Portalname; TRENDS.md 16.11. I1) | CHECK | nein | offen |
+| T17 | Vorher/Nachher „Meine Referat-Folie: links Textwand, rechts drei Wörter“ (Serie b, eigener Inhalt, Claude kürzt nur, Schwäche zeigen; TRENDS.md 16.11. I2) | REFERAT | nein | offen |
+| T18 | Nebenjob-Check „Umfrage-Apps: eine Stunde getestet, was wirklich auszahlbar ist“ (Serie c, erst nach echter 60-Min-Messung, App ohne Name; TRENDS.md 16.11. I3) | UMFRAGE | nein | offen (wartet auf echte Messung) |
 
 Regeln für neue Themen (ab 11.11. nach SERIEN.md inkl. Ausschlusskriterien; „Gibt es ein starkes Schlüsselbild?“ zuerst): klein, unscheinbar, ohne Vorwissen startbar, mit Beispielen, die man in Deutschland wirklich umsetzen kann; Wörter kurz, ein Wort, Großbuchstaben, nicht doppelt.
 Wenn eine Folge veröffentlicht ist: Status auf `veröffentlicht <Datum>` setzen und `docs/plaene/<WORT>.md` muss existieren.
