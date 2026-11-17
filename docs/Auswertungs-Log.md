@@ -53,3 +53,13 @@
 - Kein Ausreißer (TikTok-Schwelle 864; YouTube echte Zuschauer max. 78 < 150). 0 Wort-Kommentare, 0 DMs.
 - Kritiker (fable): Messregel nachträglich und zu weit → eng gefasst (Vor- und Nach-Ablesung); kein „2:0“ melden; „ganz“ < 1 % = 1 Person = Rauschen; Credits-Check auf 3 Tage; Folge05-Ursache nur Hypothese; YouTube Folge02 explizit gegen Regel prüfen; Folge02 als Themenkandidat nach Test; IG eskalieren; Reihenfolge-Confound (A immer zuerst) + 19 % Zufallswahrscheinlichkeit; Ablesung terminieren. Alles übernommen; Reihenfolge: Paar 3 A zuerst (Folge06 fertig als A), Paar 4/5 B zuerst.
 - Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 15.11. Nr. 1–8: Messregel „stabiler Wert“, Ablesung Folge05 am 16.11., Reihenfolge Paar 3–5, Credits-Regel 3 Videos), THEMEN F02-T.
+
+## 17.11.2026 (Routine, gestartet 23:23)
+- Chrome: Browser 2 (deviceId 2d7e7af3…, wie in den Vorläufen), TikTok-Konto **hamsterfrei** per Account-Info bestätigt, YouTube-Kanal UCBmT3RjRK5PGk-YVTdFzuDA. Nur gelesen. Tab ~23:40 geschlossen.
+- Erhoben: TikTok Folge05/06/07, S2-F (7 T) + Liste + Konto 7 T + Follower; YouTube Shorts-Liste + Analyse Folge06/07; Instagram Profil. Digistore n. v.
+- Bestes (gewertet): S2-F 7 T 4,92 s durch späte Suchaufrufe; im Test Folge04 (48 h 4,32 s). Schwächstes: **Folge05 (B) 1,86 s / 0 %** endgültig (stabiler Wert). Folge06 (A) vorläufig im Rahmen, Folge07 (B) zu früh.
+- Testvariable: Paar 1 A, Paar 2 nur Ø-A („ganz“ unentschieden), Paar 3 läuft. Delegierte Folge05-Ablesung am 16.11. ausgefallen → Regel: nie delegieren.
+- Kein Ausreißer. 0 Wort-Kommentare, 0 DMs.
+- Kritiker (fable): Paar 2 nicht als Sieg, „ganz“ < 3 Personen = unentschieden; Reichweite unabhängig von Bindung → Konto-Frage mit Stichtag; Such-Test-Beleg nur W-Seminar, Hauptmaß absolute Suchaufrufe, Keywords per Autocomplete; Suchrückgang = S1 fällt aus Fenster; Folge07 nicht melden; max. 1 Regelabweichung je Paar; IG eskalieren; Absprung 0:01 → Länge als späterer Test. Alles übernommen.
+- Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 17.11. Nr. 1–8, Messregeln „ganz“-Remis, keine Delegation, 7-T-Pflicht, Such-Test-Design, Konto-Stichtag Ende Paar 5).
+
