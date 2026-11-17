@@ -1,0 +1,538 @@
+{
+"words": [
+{
+"text": "Ist",
+"start": 0.068,
+"end": 0.08,
+"type": "word"
+},
+{
+"text": "diese",
+"start": 0.12,
+"end": 0.32,
+"type": "word"
+},
+{
+"text": "Handy-Anzeige",
+"start": 0.36,
+"end": 0.96,
+"type": "word"
+},
+{
+"text": "faul?",
+"start": 1.013,
+"end": 1.49,
+"type": "word"
+},
+{
+"text": "Kopier",
+"start": 1.49,
+"end": 1.771,
+"type": "word"
+},
+{
+"text": "den",
+"start": 1.791,
+"end": 1.851,
+"type": "word"
+},
+{
+"text": "Text",
+"start": 1.899,
+"end": 2.091,
+"type": "word"
+},
+{
+"text": "und",
+"start": 2.131,
+"end": 2.251,
+"type": "word"
+},
+{
+"text": "frag",
+"start": 2.299,
+"end": 2.491,
+"type": "word"
+},
+{
+"text": "Claude.",
+"start": 2.537,
+"end": 3.026,
+"type": "word"
+},
+{
+"text": "Meine",
+"start": 3.062,
+"end": 3.249,
+"type": "word"
+},
+{
+"text": "Beispiel-Anzeige",
+"start": 3.285,
+"end": 3.889,
+"type": "word"
+},
+{
+"text": "hat",
+"start": 3.949,
+"end": 4.129,
+"type": "word"
+},
+{
+"text": "fünf",
+"start": 4.189,
+"end": 4.449,
+"type": "word"
+},
+{
+"text": "Fallen.",
+"start": 4.495,
+"end": 4.849,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 4.918,
+"end": 5.329,
+"type": "word"
+},
+{
+"text": "sagt",
+"start": 5.361,
+"end": 5.489,
+"type": "word"
+},
+{
+"text": "sofort:",
+"start": 5.546,
+"end": 6.049,
+"type": "word"
+},
+{
+"text": "Nicht",
+"start": 6.102,
+"end": 6.369,
+"type": "word"
+},
+{
+"text": "kaufen.",
+"start": 6.438,
+"end": 6.929,
+"type": "word"
+},
+{
+"text": "PayPal",
+"start": 7.032,
+"end": 7.344,
+"type": "word"
+},
+{
+"text": "Freunde",
+"start": 7.384,
+"end": 7.744,
+"type": "word"
+},
+{
+"text": "und",
+"start": 7.764,
+"end": 7.824,
+"type": "word"
+},
+{
+"text": "Familie:",
+"start": 7.884,
+"end": 8.584,
+"type": "word"
+},
+{
+"text": "kein",
+"start": 8.64,
+"end": 8.864,
+"type": "word"
+},
+{
+"text": "Käuferschutz.",
+"start": 8.904,
+"end": 9.847,
+"type": "word"
+},
+{
+"text": "iCloud",
+"start": 9.91,
+"end": 10.287,
+"type": "word"
+},
+{
+"text": "erst",
+"start": 10.351,
+"end": 10.607,
+"type": "word"
+},
+{
+"text": "nach",
+"start": 10.655,
+"end": 10.847,
+"type": "word"
+},
+{
+"text": "der",
+"start": 10.867,
+"end": 10.927,
+"type": "word"
+},
+{
+"text": "Zahlung:",
+"start": 11.007,
+"end": 11.687,
+"type": "word"
+},
+{
+"text": "Dann",
+"start": 11.727,
+"end": 11.887,
+"type": "word"
+},
+{
+"text": "ist",
+"start": 11.927,
+"end": 12.047,
+"type": "word"
+},
+{
+"text": "das",
+"start": 12.087,
+"end": 12.207,
+"type": "word"
+},
+{
+"text": "Handy",
+"start": 12.247,
+"end": 12.447,
+"type": "word"
+},
+{
+"text": "für",
+"start": 12.467,
+"end": 12.527,
+"type": "word"
+},
+{
+"text": "dich",
+"start": 12.559,
+"end": 12.687,
+"type": "word"
+},
+{
+"text": "wertlos.",
+"start": 12.727,
+"end": 13.327,
+"type": "word"
+},
+{
+"text": "Dazu:",
+"start": 13.479,
+"end": 14.116,
+"type": "word"
+},
+{
+"text": "Verkäufer",
+"start": 14.116,
+"end": 14.595,
+"type": "word"
+},
+{
+"text": "angeblich",
+"start": 14.659,
+"end": 15.075,
+"type": "word"
+},
+{
+"text": "im",
+"start": 15.128,
+"end": 15.235,
+"type": "word"
+},
+{
+"text": "Ausland,",
+"start": 15.295,
+"end": 15.915,
+"type": "word"
+},
+{
+"text": "und",
+"start": 15.945,
+"end": 16.035,
+"type": "word"
+},
+{
+"text": "er",
+"start": 16.088,
+"end": 16.195,
+"type": "word"
+},
+{
+"text": "lockt",
+"start": 16.227,
+"end": 16.435,
+"type": "word"
+},
+{
+"text": "zu",
+"start": 16.462,
+"end": 16.515,
+"type": "word"
+},
+{
+"text": "WhatsApp.",
+"start": 16.577,
+"end": 17.155,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 17.267,
+"end": 17.505,
+"type": "word"
+},
+{
+"text": "Akku",
+"start": 17.585,
+"end": 17.825,
+"type": "word"
+},
+{
+"text": "top",
+"start": 17.925,
+"end": 18.225,
+"type": "word"
+},
+{
+"text": "ohne",
+"start": 18.273,
+"end": 18.465,
+"type": "word"
+},
+{
+"text": "Prozent?",
+"start": 18.545,
+"end": 19.106,
+"type": "word"
+},
+{
+"text": "Nennt",
+"start": 19.305,
+"end": 19.583,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 19.64,
+"end": 19.983,
+"type": "word"
+},
+{
+"text": "nicht",
+"start": 20.036,
+"end": 20.303,
+"type": "word"
+},
+{
+"text": "als",
+"start": 20.363,
+"end": 20.543,
+"type": "word"
+},
+{
+"text": "Haken.",
+"start": 20.583,
+"end": 21.023,
+"type": "word"
+},
+{
+"text": "Und",
+"start": 21.143,
+"end": 21.258,
+"type": "word"
+},
+{
+"text": "den",
+"start": 21.298,
+"end": 21.418,
+"type": "word"
+},
+{
+"text": "Preis",
+"start": 21.485,
+"end": 21.818,
+"type": "word"
+},
+{
+"text": "nennt",
+"start": 21.858,
+"end": 22.058,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 22.104,
+"end": 22.378,
+"type": "word"
+},
+{
+"text": "Lockpreis.",
+"start": 22.474,
+"end": 23.338,
+"type": "word"
+},
+{
+"text": "Generalüberholt",
+"start": 23.448,
+"end": 24.318,
+"type": "word"
+},
+{
+"text": "kostet",
+"start": 24.382,
+"end": 24.798,
+"type": "word"
+},
+{
+"text": "so",
+"start": 24.825,
+"end": 24.878,
+"type": "word"
+},
+{
+"text": "eins",
+"start": 24.926,
+"end": 25.118,
+"type": "word"
+},
+{
+"text": "gerade",
+"start": 25.175,
+"end": 25.518,
+"type": "word"
+},
+{
+"text": "fast",
+"start": 25.582,
+"end": 25.838,
+"type": "word"
+},
+{
+"text": "dasselbe.",
+"start": 25.886,
+"end": 26.478,
+"type": "word"
+},
+{
+"text": "Urteil:",
+"start": 26.663,
+"end": 27.063,
+"type": "word"
+},
+{
+"text": "Geklappt.",
+"start": 27.163,
+"end": 27.848,
+"type": "word"
+},
+{
+"text": "Vier",
+"start": 27.948,
+"end": 28.128,
+"type": "word"
+},
+{
+"text": "von",
+"start": 28.162,
+"end": 28.362,
+"type": "word"
+},
+{
+"text": "fünf,",
+"start": 28.402,
+"end": 28.762,
+"type": "word"
+},
+{
+"text": "und",
+"start": 28.782,
+"end": 28.842,
+"type": "word"
+},
+{
+"text": "die",
+"start": 28.862,
+"end": 28.922,
+"type": "word"
+},
+{
+"text": "gefährlichen",
+"start": 28.982,
+"end": 29.482,
+"type": "word"
+},
+{
+"text": "alle.",
+"start": 29.546,
+"end": 29.882,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 29.982,
+"end": 30.445,
+"type": "word"
+},
+{
+"text": "Check,",
+"start": 30.498,
+"end": 30.845,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 30.877,
+"end": 31.005,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 31.025,
+"end": 31.165,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 31.205,
+"end": 31.325,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 31.345,
+"end": 31.405,
+"type": "word"
+},
+{
+"text": "Frage",
+"start": 31.472,
+"end": 31.805,
+"type": "word"
+},
+{
+"text": "und",
+"start": 31.845,
+"end": 31.965,
+"type": "word"
+},
+{
+"text": "Checkliste.",
+"start": 32.005,
+"end": 32.765,
+"type": "word"
+}
+]
+}
