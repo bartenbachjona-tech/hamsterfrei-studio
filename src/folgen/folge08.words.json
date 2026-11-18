@@ -1,0 +1,544 @@
+{
+"words": [
+{
+"text": "Wie",
+"start": 0.068,
+"end": 0.08,
+"type": "word"
+},
+{
+"text": "wird",
+"start": 0.112,
+"end": 0.24,
+"type": "word"
+},
+{
+"text": "dein",
+"start": 0.272,
+"end": 0.4,
+"type": "word"
+},
+{
+"text": "Minijob-Lebenslauf",
+"start": 0.44,
+"end": 1.2,
+"type": "word"
+},
+{
+"text": "besser?",
+"start": 1.257,
+"end": 1.785,
+"type": "word"
+},
+{
+"text": "Kopier",
+"start": 1.785,
+"end": 2.079,
+"type": "word"
+},
+{
+"text": "ihn",
+"start": 2.119,
+"end": 2.239,
+"type": "word"
+},
+{
+"text": "in",
+"start": 2.266,
+"end": 2.319,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 2.365,
+"end": 2.639,
+"type": "word"
+},
+{
+"text": "und",
+"start": 2.659,
+"end": 2.719,
+"type": "word"
+},
+{
+"text": "frag.",
+"start": 2.799,
+"end": 3.199,
+"type": "word"
+},
+{
+"text": "Beispiel:",
+"start": 3.323,
+"end": 4.036,
+"type": "word"
+},
+{
+"text": "Leon,",
+"start": 4.092,
+"end": 4.396,
+"type": "word"
+},
+{
+"text": "elfte",
+"start": 4.436,
+"end": 4.636,
+"type": "word"
+},
+{
+"text": "Klasse,",
+"start": 4.689,
+"end": 5.196,
+"type": "word"
+},
+{
+"text": "will",
+"start": 5.228,
+"end": 5.356,
+"type": "word"
+},
+{
+"text": "im",
+"start": 5.383,
+"end": 5.436,
+"type": "word"
+},
+{
+"text": "Café",
+"start": 5.5,
+"end": 5.756,
+"type": "word"
+},
+{
+"text": "jobben.",
+"start": 5.796,
+"end": 6.27,
+"type": "word"
+},
+{
+"text": "Erstens:",
+"start": 6.297,
+"end": 6.75,
+"type": "word"
+},
+{
+"text": "Die",
+"start": 6.83,
+"end": 7.07,
+"type": "word"
+},
+{
+"text": "Mail",
+"start": 7.118,
+"end": 7.31,
+"type": "word"
+},
+{
+"text": "Zockerkönig",
+"start": 7.35,
+"end": 7.87,
+"type": "word"
+},
+{
+"text": "muss",
+"start": 7.902,
+"end": 8.03,
+"type": "word"
+},
+{
+"text": "weg.",
+"start": 8.09,
+"end": 8.35,
+"type": "word"
+},
+{
+"text": "Zweitens:",
+"start": 8.489,
+"end": 9.066,
+"type": "word"
+},
+{
+"text": "Der",
+"start": 9.146,
+"end": 9.386,
+"type": "word"
+},
+{
+"text": "Schulkiosk",
+"start": 9.406,
+"end": 9.946,
+"type": "word"
+},
+{
+"text": "stand",
+"start": 9.986,
+"end": 10.186,
+"type": "word"
+},
+{
+"text": "unter",
+"start": 10.239,
+"end": 10.506,
+"type": "word"
+},
+{
+"text": "Sonstiges.",
+"start": 10.586,
+"end": 11.306,
+"type": "word"
+},
+{
+"text": "Dabei",
+"start": 11.373,
+"end": 11.706,
+"type": "word"
+},
+{
+"text": "ist",
+"start": 11.746,
+"end": 11.866,
+"type": "word"
+},
+{
+"text": "das",
+"start": 11.886,
+"end": 11.946,
+"type": "word"
+},
+{
+"text": "genau",
+"start": 11.999,
+"end": 12.266,
+"type": "word"
+},
+{
+"text": "Café-Arbeit.",
+"start": 12.346,
+"end": 13.266,
+"type": "word"
+},
+{
+"text": "Also",
+"start": 13.306,
+"end": 13.466,
+"type": "word"
+},
+{
+"text": "nach",
+"start": 13.498,
+"end": 13.626,
+"type": "word"
+},
+{
+"text": "vorn.",
+"start": 13.666,
+"end": 14.137,
+"type": "word"
+},
+{
+"text": "Chillen",
+"start": 14.151,
+"end": 14.464,
+"type": "word"
+},
+{
+"text": "und",
+"start": 14.484,
+"end": 14.544,
+"type": "word"
+},
+{
+"text": "Zocken",
+"start": 14.584,
+"end": 14.864,
+"type": "word"
+},
+{
+"text": "fliegen",
+"start": 14.917,
+"end": 15.184,
+"type": "word"
+},
+{
+"text": "raus.",
+"start": 15.224,
+"end": 15.704,
+"type": "word"
+},
+{
+"text": "Fußball",
+"start": 15.754,
+"end": 16.064,
+"type": "word"
+},
+{
+"text": "bleibt.",
+"start": 16.11,
+"end": 16.464,
+"type": "word"
+},
+{
+"text": "Neuestes",
+"start": 16.618,
+"end": 17.085,
+"type": "word"
+},
+{
+"text": "nach",
+"start": 17.101,
+"end": 17.165,
+"type": "word"
+},
+{
+"text": "oben,",
+"start": 17.245,
+"end": 17.725,
+"type": "word"
+},
+{
+"text": "und",
+"start": 17.745,
+"end": 17.805,
+"type": "word"
+},
+{
+"text": "wann",
+"start": 17.837,
+"end": 17.965,
+"type": "word"
+},
+{
+"text": "du",
+"start": 18.018,
+"end": 18.125,
+"type": "word"
+},
+{
+"text": "arbeiten",
+"start": 18.178,
+"end": 18.445,
+"type": "word"
+},
+{
+"text": "kannst.",
+"start": 18.502,
+"end": 18.925,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 19.005,
+"end": 19.325,
+"type": "word"
+},
+{
+"text": "beim",
+"start": 19.357,
+"end": 19.485,
+"type": "word"
+},
+{
+"text": "Kiosk",
+"start": 19.525,
+"end": 19.885,
+"type": "word"
+},
+{
+"text": "schmückt",
+"start": 19.925,
+"end": 20.405,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 20.434,
+"end": 20.605,
+"type": "word"
+},
+{
+"text": "aus:",
+"start": 20.665,
+"end": 20.925,
+"type": "word"
+},
+{
+"text": "Kassieren,",
+"start": 21.045,
+"end": 21.645,
+"type": "word"
+},
+{
+"text": "freundlicher",
+"start": 21.702,
+"end": 22.285,
+"type": "word"
+},
+{
+"text": "Service",
+"start": 22.325,
+"end": 22.605,
+"type": "word"
+},
+{
+"text": "bei",
+"start": 22.645,
+"end": 22.765,
+"type": "word"
+},
+{
+"text": "großem",
+"start": 22.813,
+"end": 23.085,
+"type": "word"
+},
+{
+"text": "Andrang.",
+"start": 23.149,
+"end": 23.845,
+"type": "word"
+},
+{
+"text": "Stand",
+"start": 23.892,
+"end": 24.125,
+"type": "word"
+},
+{
+"text": "nirgends.",
+"start": 24.165,
+"end": 24.605,
+"type": "word"
+},
+{
+"text": "Urteil:",
+"start": 24.937,
+"end": 25.377,
+"type": "word"
+},
+{
+"text": "Geklappt.",
+"start": 25.382,
+"end": 25.916,
+"type": "word"
+},
+{
+"text": "Fünf",
+"start": 26.076,
+"end": 26.436,
+"type": "word"
+},
+{
+"text": "von",
+"start": 26.466,
+"end": 26.556,
+"type": "word"
+},
+{
+"text": "fünf",
+"start": 26.596,
+"end": 26.796,
+"type": "word"
+},
+{
+"text": "gefunden.",
+"start": 26.858,
+"end": 27.562,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 27.562,
+"end": 27.747,
+"type": "word"
+},
+{
+"text": "streich,",
+"start": 27.795,
+"end": 28.227,
+"type": "word"
+},
+{
+"text": "was",
+"start": 28.247,
+"end": 28.307,
+"type": "word"
+},
+{
+"text": "nicht",
+"start": 28.334,
+"end": 28.467,
+"type": "word"
+},
+{
+"text": "stimmt.",
+"start": 28.515,
+"end": 29.082,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 29.082,
+"end": 29.506,
+"type": "word"
+},
+{
+"text": "Lebenslauf,",
+"start": 29.552,
+"end": 30.146,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 30.162,
+"end": 30.226,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 30.246,
+"end": 30.386,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 30.426,
+"end": 30.546,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 30.566,
+"end": 30.626,
+"type": "word"
+},
+{
+"text": "die",
+"start": 30.646,
+"end": 30.706,
+"type": "word"
+},
+{
+"text": "Frage",
+"start": 30.773,
+"end": 31.106,
+"type": "word"
+},
+{
+"text": "und",
+"start": 31.146,
+"end": 31.266,
+"type": "word"
+},
+{
+"text": "die",
+"start": 31.286,
+"end": 31.346,
+"type": "word"
+},
+{
+"text": "Checkliste.",
+"start": 31.386,
+"end": 32.066,
+"type": "word"
+}
+]
+}

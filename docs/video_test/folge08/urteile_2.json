@@ -1,0 +1,227 @@
+{
+ "G31": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schüler-Lebenslauf? Hat mit meinem Etsy-Shop nichts zu tun."
+ },
+ "C17": {
+  "bis_ende": 30,
+  "website": 3,
+  "folgen": 6,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "link_umstaendlich",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Zockerkönig-Mail ist witzig, aber ich will Creator werden."
+ },
+ "C21": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Nett animiert, aber Lebenslauf für Schüler brauche ich nicht."
+ },
+ "C26": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kein Faceless-Thema für mich, weiter."
+ },
+ "B27": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Lebenslauf in KI kopieren mache ich längst mit ChatGPT."
+ },
+ "B32": {
+  "bis_ende": 9,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schülerkram, das hilft mir bei Präsentationen null."
+ },
+ "B29": {
+  "bis_ende": 38,
+  "website": 3,
+  "folgen": 4,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Der Tipp mit dem Dazudichten ist gut, aber für Schüler."
+ },
+ "B35": {
+  "bis_ende": 13,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Lebenslauf mit Daten in Claude kopieren? Eher nicht."
+ },
+ "W26": {
+  "bis_ende": 11,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauche eine Wohnung, keinen Minijob-Lebenslauf."
+ },
+ "W30": {
+  "bis_ende": 9,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bewerbermappe für Wohnung wäre spannend, das hier nicht."
+ },
+ "H28": {
+  "bis_ende": 8,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hochzeitsplanung ist mein Problem, nicht Schüler-Lebensläufe."
+ },
+ "H31": {
+  "bis_ende": 8,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Süßer Hamster, aber Thema passt gar nicht zu mir."
+ },
+ "T23": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hätte ich mit 16 gebraucht, jetzt leider zu spät."
+ },
+ "T19": {
+  "bis_ende": 28,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Minijob-Lebenslauf hab ich schon hinter mir, ganz okay."
+ },
+ "V20": {
+  "bis_ende": 22,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Zockerkönig, lol, aber ich brauch grad keinen Job."
+ },
+ "V34": {
+  "bis_ende": 7,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Komplett nicht mein Thema, weitergewischt."
+ },
+ "E45": {
+  "bis_ende": 42,
+  "website": 4,
+  "folgen": 6,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Könnte ich meinem Kind zeigen, Kioskhinweis finde ich ehrlich."
+ },
+ "E50": {
+  "bis_ende": 30,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Siehst du, die KI erfindet Sachen. Genau mein Punkt."
+ },
+ "AT19": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schülerjob-Lebenslauf, ich bin schon an der Uni."
+ },
+ "CH22": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Für Elftklässler gemacht, nicht für mich."
+ },
+ "N15": {
+  "bis_ende": 52,
+  "website": 2,
+  "folgen": 7,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "kein_claude_konto",
+  "satz": "Hamster lustig, Zockerkönig bin ich auch, aber kein Claude."
+ },
+ "N40": {
+  "bis_ende": 6,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kein Bezug, sofort weiter."
+ },
+ "K22": {
+  "bis_ende": 16,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauch Hilfe beim Praxisbericht, nicht beim Schüler-Lebenslauf."
+ },
+ "F20": {
+  "bis_ende": 18,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Führerscheintheorie wäre mein Thema, das hier nicht."
+ },
+ "L33": {
+  "bis_ende": 45,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Gut, dass das Dazudichten gezeigt wird, trotzdem KI-Werbung."
+ }
+}

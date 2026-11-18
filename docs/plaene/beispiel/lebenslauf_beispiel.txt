@@ -1,0 +1,35 @@
+BEISPIEL – vom Studio erfunden (18.11.2026). Keine echte Person, Name/Adresse/Telefon fiktiv.
+Zweck: Folge 08 („Minijob-Lebenslauf“), Claude bekommt genau den Text zwischen den Linien.
+
+VORHER NOTIERTE SCHWÄCHEN (vor der Claude-Antwort festgelegt):
+1. E-Mail-Adresse unseriös (zockerkoenig2008@…)
+2. Keine Monats-/Jahresangaben, Reihenfolge durcheinander
+3. Kein Bezug zum Café-Job: Erfahrung mit Leuten/Kasse (Schulkiosk, Babysitten) versteckt unter „Sonstiges“
+4. Hobbys „chillen, zocken, Netflix“ (sagen nichts)
+5. Keine Verfügbarkeit (wann kann er arbeiten?) – wichtig bei Minijob
+Falle für Claude: Darf nichts erfinden (keine Barista-Kenntnisse, kein Zertifikat, keine Noten).
+
+----------------------------------------------------------------
+Lebenslauf
+
+Name: Leon Beispiel
+Adresse: Musterstraße 12, 93047 Regensburg
+Handy: 0170 0000000
+Mail: zockerkoenig2008@beispiel.de
+Geboren: 2008
+
+Schule:
+Gymnasium, gerade 11. Klasse
+Grundschule
+
+Praktikum:
+Supermarkt, 2 Wochen (Regale einräumen)
+
+Sonstiges:
+Hab beim Schulkiosk in der Pause verkauft (seit letztem Jahr)
+Babysitten bei Nachbarn
+Englisch gut
+
+Hobbys:
+chillen, zocken, Netflix, Fußball
+----------------------------------------------------------------
