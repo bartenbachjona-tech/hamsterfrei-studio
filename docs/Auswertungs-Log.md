@@ -63,3 +63,12 @@
 - Kritiker (fable): Paar 2 nicht als Sieg, „ganz“ < 3 Personen = unentschieden; Reichweite unabhängig von Bindung → Konto-Frage mit Stichtag; Such-Test-Beleg nur W-Seminar, Hauptmaß absolute Suchaufrufe, Keywords per Autocomplete; Suchrückgang = S1 fällt aus Fenster; Folge07 nicht melden; max. 1 Regelabweichung je Paar; IG eskalieren; Absprung 0:01 → Länge als späterer Test. Alles übernommen.
 - Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 17.11. Nr. 1–8, Messregeln „ganz“-Remis, keine Delegation, 7-T-Pflicht, Such-Test-Design, Konto-Stichtag Ende Paar 5).
 
+
+## 19.11.2026 (Routine, gestartet 23:24)
+- Chrome: Browser 1 (deviceId 2d7e7af3…, wie in den Vorläufen), TikTok-Konto **hamsterfrei** per Account-Info bestätigt, YouTube #entity-name Hamsterfrei (UCBmT3RjRK5PGk-YVTdFzuDA), Instagram @hamsterfrei. Nur gelesen. Tab ~23:30 geschlossen.
+- Erhoben: TikTok F02 (7 T), F03 (7 T), F04 (6,2 T), F06 (77,5 h), F07 (48 h), F08 (29,5 h), F09 (5,5 h), Konto 7 T + Follower; YouTube Shorts-Liste + F07/F08/F09; Instagram Profil. Digistore n. v.
+- Bestes: **F08 Minijob-Lebenslauf (B)** 697 / 29,5 h, +2 Follower – erstes FYP-Video über ~300. Bester Ø im Test-Fenster: F07 (B) 5,58 s / 2,8 %. Schwächstes: F06 (A) 3,65 s / 1,5 % (im Rahmen).
+- Testvariable: Paar 3 nur Ø-B (ganz remis). A kann ≥ 4/5 nicht mehr erreichen → **Hook-Test entschieden: kein Unterschied, B bleibt per Regel.** Paar 4/5 laufen als Daten zu Ende.
+- Kein Ausreißer (TikTok-Schwelle 854, F08 2,4×; YouTube max. 23 echte Zuschauer). 1 Wort-Kommentar AUSHANG + DM, aber F4F-Profil → kein Lead.
+- Kritiker (fable): „B gewinnt“ überzogen → „kein Unterschied“; „ganz“-Metrik bei n≈250 nicht auflösbar (Design-Fehler); Paar 4 confounded; Paar 5 „verschenkt“ (abgelehnt: Testplan wird sauber beendet, Themen-Test startet 22.11.); Konto nach Zuschauer-Demografie statt Aufrufen entscheiden (übernommen); Ausreißer-Schwelle 2× (abgelehnt, n = 1; stattdessen Thema als nächster Test); Such-Test Power-Falle → Themen-Test vorgezogen (übernommen); IG Frist statt Eskalation (übernommen, 22.11.); Retention/Länge als späterer Test (vorgemerkt).
+- Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 19.11. Nr. 1–8, nächster Test = Themen-Test N vs K ab 22.11. mit Hauptmaß Aufrufe 48 h, Konto-Kriterium neu, IG-Frist), SERIEN.md (a) (Hook-Ergebnis: „Hamster-Test:“ im ersten Satz ab 22.11. keine Pflicht), THEMEN F08-T.

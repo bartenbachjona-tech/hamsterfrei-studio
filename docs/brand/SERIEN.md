@@ -13,6 +13,7 @@ Allgemein für alle Serien:
 
 ## (a) „Hamster-Test: Ich hab Claude X machen lassen“
 **Hook-Format:** Experimenter (ausprobiert). **Signatur:** Satz beginnt mit „Hamster-Test:“ (STIMME.md).
+> **Hook-Test-Ergebnis (Auswertung 19.11.2026), gilt ab 22.11. (nach Paar 5):** Kein nachweisbarer Unterschied zwischen „Hamster-Test:“-Satz (A) und Frage/Anleitung (B); B bleibt per Entscheidungsregel Standard, **nicht** weil B besser war (A 1 volles Paar, B 0; bestes Video F02 war A). Deshalb ist „Hamster-Test:“ im **ersten gesprochenen Satz nicht mehr Pflicht**; der Serienname „Hamster-Test“ bleibt in Titel, Bildtext und Caption. Der erste Satz wird frei nach den Hook-Formaten (G2) gewählt. Bis 21.11. gilt der Testplan unverändert.
 
 **Bauplan**
 1. 0–1 s: Schlüsselbild = echtes Ergebnis (Bildschirm/Ausgabe) auf der Leinwand, Hamster tut etwas Absurd-Konkretes dazu (LOOK.md). Overlay ≤ 6 Wörter.
