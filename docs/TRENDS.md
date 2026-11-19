@@ -2,6 +2,64 @@
 
 > **Ab Marke v2 (04.11.2026)** arbeitet der Trend-Scout als **Ausreißer-Scout** (Handbuch G5): Videos mit ≥ 3× Kanal-Median, eigene Nische + Nachbarnischen, deutsch und englisch, 3–5 Konten; Pflichtfrage „Was haben die besten 5 dieses Kontos, was den schlechtesten 5 fehlt?“; Motor kopieren, nie das Thema 1:1. Jede Idee wird einer Serie aus `docs/brand/SERIEN.md` zugeordnet oder als Experiment markiert und braucht ein Schlüsselbild (sonst verwerfen). Hooks ohne KI-Jargon (STIMME.md). Ältere Einträge unten sind Hintergrund; „Werbung ab Sekunde 0“ oder Werbe-Pointen dort gelten nicht mehr.
 
+## 2026-11-19 – Ausreißer-Scout (TikTok-Direktcheck + Web/vidIQ-Statistikseiten)
+Methode: Faktor = Aufrufe ÷ Median der neuesten 20 nicht angepinnten Videos des Kontos (n angegeben), selbst nachgerechnet, Stand 19.11. ~07:00 UTC, Datum aus der Video-ID. **Zeitfenster: Videos ab 22.10.2026 (~4 Wochen)**; ältere nur als Hinweis. Bei vidIQ-Konten ist n = 40–45 (andere Basis); frische Videos im Median drücken ihn eher, die Faktoren sind also eher zu hoch als zu niedrig. TikTok im Hamsterfrei-Chrome (deviceId 2d7e7af3…, Konto per Account-Info = hamsterfrei, nur gelesen; 4 Suchen „ki trick sparen“, „nebenjob mit ki“, „claude schule lernen“, „spartipps studenten“ + 6 Profile). Web-Agent: YouTube-Seiten per WebFetch wieder leer → Mediane nur über öffentliche vidIQ-„youtube-stats“-Seiten (ohne Login, keine Credits, nichts gekauft); Reddit-Suche abgelehnt (HTTP 400), Socialblade nicht erreichbar. Geprüft ohne Ausreißer: @jannikabt (Median 32,6K, Top 3,1× = Politik-Thema, passt nicht), @luna.lerntipps (Median 895, max. 1,9×), YT Logically Answered (max. 2,6×), Théophile Eliet (2,996×, knapp darunter). **Deutsche YouTube-Ausreißer: wieder keine belegt.**
+
+### Ausreißer
+| Konto | Video | Aufrufe | Datum | Median (n) | Faktor | Spr./Nische |
+|---|---|---|---|---|---|---|
+| TikTok @floknowsai (21,8K F.) | „Dein KI-Abo ist die größte Abhängigkeit, die du 2027 haben kannst“ https://www.tiktok.com/@floknowsai/video/7708839716786883872 | 56,7K | 16.11. | 6.541 (20) | **8,7×** | DE / KI-Alltag, Geld |
+| TikTok @floknowsai | „Diese Woche wurden zwei kritische Sicherheitslücken in PHP …“ **2. Anlauf** https://www.tiktok.com/@floknowsai/video/7701054330224397601 (1. Anlauf am Vortag …/7700670144229543200: 1.380 = 0,2×) | 42,1K | 26.10. | 6.541 (20) | **6,4×** | DE / Tech-News |
+| TikTok @floknowsai | „Dieser Roboter kostet 340 Euro und seine gesamte Software ist Open Source …“ https://www.tiktok.com/@floknowsai/video/7701441998313573665 | 39,4K | 27.10. | 6.541 (20) | **6,0×** | DE / Tech, Preis |
+| TikTok @kilehrkraft.de (14,6K F.) | „Ich finde, ChatGPT hat das Rennen gegen Claude Code jetzt verloren“ https://www.tiktok.com/@kilehrkraft.de/video/7700266433061588247 | 23,0K | 24.10. | 1.706 (20) | **13,5×** | DE / KI für Schule (Lehrkräfte) |
+| TikTok @kilehrkraft.de | „Bau mir einen Escape Room zum Thema Phishing-Mails erkennen“ (ein Prompt → Spiel) https://www.tiktok.com/@kilehrkraft.de/video/7702879217943579926 | 8.082 | 31.10. | 1.706 (20) | 4,7× (< 10K) | DE / KI für Schule |
+| TikTok @kilehrkraft.de | „Du hast 20 Dollar im Monat für KI und fragst dich, ob ChatGPT oder Claude …“ https://www.tiktok.com/@kilehrkraft.de/video/7692475337095138582 | 12,4K | ~03.10. (außerhalb Fenster) | 1.706 (20) | 7,3× (nur Hinweis) | DE / KI, Geld |
+| TikTok @sven_schnurr (44K F.) | Flyer „nach KI oder nach Profi“ (Caption beginnt mit „Kommentiere mit PROMPT …“) https://www.tiktok.com/@sven_schnurr/video/7705106228782877984 | 6.978 | 06.11. | 808 (20) | 8,6× (< 10K, nur Hinweis) | DE / KI-Design |
+
+**Nicht gewertet (Kritiker):** creative explained (vidIQ, Median 261.925 aus 45 Shorts; „5 store products you can make at home“ 12,3×, „Aloe Magic“ 49× – außerhalb Zeitfenster, nur Titel), Harrison Webb (fremde Nische, 72× = 1 von 5–6 Schnitten zum selben Thema), Virlo-Zeilen (@hannesrkuhn, @skilltree69 animiert; @lateese.miller – Score ohne Basis). @kilehrkraft.de 13,5× ist Meinung/Markenvergleich für Lehrkräfte → Motor kaum übertragbar; @sven_schnurr 8,6× nur Hinweis (< 10K). **Voll gültig bleiben 4 Videos von 2 deutschen Konten** – unter dem G5-Ziel von 3–5 Konten.
+
+Quellen Web: https://virlo.ai/agents/ai-tools-apps-hnxzhg · https://virlo.ai/agents/ai-productivity-insights-cze5fh · vidIQ-Statistikseiten oben.
+
+### Beste 5 vs. schlechteste 5
+- **@floknowsai:** Top (8,7× / 6,4× / 6,0× / 3,6× „Opus 5.5 beim Video-Editing“ / 2,4× „Deutschland will KI-Nation werden“) = **erster Satz macht DICH zum Betroffenen mit konkretem Preis oder Folge** („Dein KI-Abo …“, „kostet 340 Euro“, „was das für dich bedeutet“); erstes Bild beim Abo-Video: zwei große Euro-Beträge (90 € / 23 €) neben dem Gesicht. Bottom (0,2–0,6×) = **Firmen-News in der dritten Person** („OpenAI hat … gestartet“, „Anthropic holt …“, „Google lässt eine KI träumen“) und **„Wusstest du, dass …“**-Lexikonsätze. Auffällig: Dasselbe Thema (PHP-Lücken) floppte am 25.10. (0,2×) und lief am 26.10. als zweiter Anlauf mit 6,4×. Länge nicht geprüft.
+- **@kilehrkraft.de:** Top (13,5× Meinung „hat verloren“, 7,3× „20 Dollar – welches Abo?“, 4,7× Escape Room, 2,4× „Unterricht auf fünf Leveln“) = **klare Meinung oder Geld-Entscheidung, bzw. ein greifbares fertiges Ding aus einem Satz** (Spiel). Bottom (0,5–0,8×) = Prompt-Formulierungstipps („Wenn du der KI noch schreibst …“, „Wenn du denkst, KI ist nicht kreativ …“) und Plattform-Hinweise. Kommentar-Wort-Videos laufen auf beiden Seiten (4,7× und 0,8×) → das Wort entscheidet nicht.
+- **@sven_schnurr:** Fast alles bei 0,8–1,1× (gleiches Raster „Schritt X macht fast niemand 👀 + Kommentiere mit …“). Einziger Ausreißer (8,6×) ist der mit **sichtbarem Vorher/Nachher-Werkstück** (Flyer „nach KI vs. nach Profi“); Absolutzahl klein.
+- **creative explained (Web-Agent, nur Titel/Länge):** Top = **ein Gegenstand, eine Verwandlung** (Abfall → Wert, Kaufprodukt → selbst gemacht); Bottom = Listen („10 homemade cleaning hacks“), Nischen-Ergebnis, Format-Abweichung (3:00). Länge entscheidet nicht (beide 1:05–2:17).
+
+### 3 Folgerungen (Hinweise, dünne Basis)
+1. **Du-Betroffenheit mit konkretem Preis im ersten Satz** schlägt Firmen-News in der dritten Person (floknowsai 8,7× / 6,0× vs. 0,2–0,6×; kilehrkraft „20 Dollar“ 7,3× außerhalb Fenster; passt zu denkbit 65× vom 16.11.). „Euro-Betrag im ersten Bild“ ist nur 1 Video → beobachten, keine Regel. Für uns nur mit echter Zahl auf der Leinwand (Quelle + Datum).
+2. **Ein greifbares Werkstück** (Spiel, Flyer, Vorher/Nachher) statt Formulierungstipps (kilehrkraft Escape Room 4,7× vs. Prompt-Tipps 0,5–0,8×; sven_schnurr Flyer 8,6× vs. Raster 1,0×). Bestätigt SERIEN (a)/(b), keine Regeländerung.
+3. **Beobachtung, kein Vorschlag:** floknowsai postete das PHP-Thema zweimal (25.10.: 0,2×, 26.10.: 6,4×); was sich änderte (Hook, Uhrzeit, Zufall), ist ungeprüft (n = 1). Nur zur Kenntnis für die Auswertung.
+
+Trichter (G5): 11 Rohideen (Escape-Rätsel aus Lernstoff, Gratis-Version eine Woche, Schublade voller Kabel/Handys, KI-Abo-Preisvergleich, Aushang Rasenmähen, Haushaltsprodukt selbst machen, Meinung „Claude vs. ChatGPT“, Sicherheitslücke für dich, Roboter-Preis, Referat-Folie (schon T17), Vokabel-Spiel) → Ausschluss (Markenvergleich/Abo-Werbung, News ohne Schlüsselbild, Thema 1:1, schon in THEMEN, außerhalb Nische) → 3. Verworfen nach Kritik: „Eine Woche nur Gratis-Version“ (3/10: wirkt wie Abo-Werbung, Limit-Logik irreführend, Pointe = Formulierungstipps).
+
+### 3 Video-Ideen (Kritiker fable: I1 6/10 nach Umbau, I2 7,5/10, I3 5/10 nur als F02-T-Folge – Korrekturen eingearbeitet)
+Für alle: Frame 0 nur mit vorhandenen Mitteln (Zeigestab, startle, Leinwand-Requisit), die neuen Posen gibt es noch nicht (LOOK.md). Pointe vor dem Hook festlegen (G3). Hinweis „Claude-Konto ab 18“.
+
+**I1 – Hamster-Test: „Aus meinen Geschichts-Notizen wird ein Zahlenschloss mit drei Rätseln“ (Serie a, Motor kilehrkraft „ein Satz → spielbares Ding“, Thema bewusst nicht „Escape Room“) – Wort TRUHE**
+- Schlüsselbild: die **echte Rätselkarte** aus Claudes Antwort groß auf der Leinwand, darunter Zahlenschloss „_ _ _“; Hamster zeigt mit dem Zeigestab auf die erste Lücke. Overlay „Drei Rätsel, ein Code“.
+- Hook Experimenter: „Hamster-Test: Ich hab Claude meine Geschichts-Notizen gegeben. Raus kam ein Zahlenschloss mit drei Rätseln.“
+- Hook Frage: „Kann man Geschichte lernen, indem man ein Schloss knackt? Ich hab's mit Claude probiert.“
+- Ablauf: 1) Rätselkarte + Schloss zuerst 2) Eingabe kurz auf der Leinwand (eigene Notizen, „mach daraus drei Rätsel, jede Lösung eine Ziffer“) 3) Rätsel 1 und 2 lösen, Ziffern ergeben sich aus dem Stoff 4) „aber …“: ein Rätsel ist ohne Hinweis nicht lösbar oder fachlich schief → ehrlich zeigen 5) Stempel Geklappt/Halb/Fail, kurzer Satz ohne Belehrung.
+- Echt aufnehmen: eigene Beispielnotizen (anderes Fach als F05 Bio, als BEISPIEL markiert), echte Claude-Antwort im frischen Chat, Jona spielt die drei Rätsel wirklich und stoppt die Zeit. Kein Schulbuchtext, keine Mitschüler.
+- Kommentar-Wort am Ende: TRUHE → die Rätsel-Frage zum Kopieren (gratis).
+
+**I2 – Vorher/Nachher: „Mein Aushang fürs Rasenmähen: links handgeschrieben, rechts nach drei Fragen an Claude“ (Serie b, Motor sven_schnurr „sichtbares Werkstück vorher/nachher“ + creative explained „ein Gegenstand“) – Wort AUSHANG**
+- Schlüsselbild: Split, links krakeliger Zettel „Mache Gartenarbeit, Tel. …“, rechts klarer Aushang mit **höchstens drei großen Elementen** (Überschrift, Preis pro Stunde, Abreißstreifen); Hamster zeigt mit dem Zeigestab nach rechts.
+- Hook Magician: „Links mein Aushang fürs Rasenmähen. Rechts derselbe, nachdem Claude mir drei Fragen gestellt hat.“ (nur, wenn Claude die Fragen wirklich stellt; Eingabe kurz zeigen)
+- Hook Contrarian: „Dein Aushang braucht kein schönes Design. Auf meinem haben drei Sachen gefehlt.“
+- Ablauf: 1) Split zuerst 2) Claudes drei Rückfragen (was genau, wann, Preis) 3) drei Unterschiede markieren 4) ehrliche Schwäche: Claude wollte zu viel Text oder einen zu hohen Preis → selbst gekürzt 5) Pointe = das eine Detail (z. B. Abreißstreifen mit Preis). Haken: „Nummer der Eltern, nur in der Nachbarschaft aufhängen.“ Ziel 30 s, max. 40 s.
+- Echt aufnehmen: Jona baut beide Zettel selbst (BEISPIEL), eigener Stundenpreis als Beispiel (kein „so viel verdienst du“), Telefonnummer als klarer Platzhalter „0123 …“, echte Claude-Antwort. Keine Ergebnisbehauptung (Anrufe) ohne Beleg. Anzeigen-Profi nicht nennen (sonst Werbung).
+- Kommentar-Wort am Ende: AUSHANG → die drei Fragen + Vorlage zum Abschreiben.
+
+**I3 – Nebenjob-Check als Folge von F02-T: „Diese Schublade hat jeder. Was bringt sie pro Stunde?“ (Serie c / Gebrauchtpreis-Check, Motor creative explained „Abfall → Wert“ + floknowsai „Preis für dich“) – Wort SCHUBLADE – erst nach Paar 5, wartet auf echte Messung**
+- Schlüsselbild: offene Schublade mit nachgezeichneten Kabeln/Handys (keine Logos), Leinwand groß „Schublade = <X> €/Stunde“ (nur mit echter Rechnung); Hamster zeigt mit dem Zeigestab auf die Zahl.
+- Hook Contrarian: „Diese Schublade hat jeder. Ich hab nachgerechnet, was sie pro Stunde bringt.“
+- Hook Zahl: „Eine Schublade, <Anzahl> Teile, <X> Euro. Pro Stunde sieht's anders aus.“ (Zahlen nur nach echtem Verkauf)
+- Ablauf: 1) Schublade + Stundenlohn zuerst 2) Claude sortiert die Fotoliste in verkaufen / verschenken / Wertstoffhof und schätzt Preise 3) Gegencheck mit echten verkauften Preisen (Quelle + Datum), ein Teil lag daneben 4) Haken: Versand, Handy-Daten löschen, Kleinkram lohnt nicht, „Verkaufen nur mit Okay der Eltern“ 5) Urteil „lohnt sich für …, nicht für …“.
+- Echt aufnehmen: Jonas eigene Schublade, Claude-Antwort als Bildschirmaufnahme, gestoppte Zeit, nur abgeschlossene Verkäufe, keine fremden Anzeigenfotos, kein Portallogo. Dopplung mit F02/T10 beachten → nur als Teil der Serie „Was ist mein altes X noch wert?“.
+- Kommentar-Wort am Ende: SCHUBLADE → Sortier-Frage + Rechnung zum Nachrechnen.
+
 ## 2026-11-16 – Ausreißer-Scout (TikTok-Direktcheck + Web-Aggregatoren)
 Methode: Faktor = Aufrufe ÷ Median der neuesten Videos des Kontos (n angegeben), selbst nachgerechnet, Stand 16.11. ~07:30 UTC. TikTok im Hamsterfrei-Chrome (Browser 5, deviceId 2d7e7af3…, Konto per /profile → @hamsterfrei geprüft, nur gelesen, 1 Suche „claude ki trick“ + 3 Profile; Datum aus Video-ID). Web-Agent: YouTube-Kanal-/Shorts-Seiten diesmal per WebFetch gesperrt → **keine eigenen YouTube-Mediane**; Zahlen nur aus Aggregatoren (Virlo „Outlier-Score“ = Basis unklar, Viralmint = echter Median der letzten 30 Shorts). vidIQ/Reddit/creatordb: nichts Belegtes. Bereits gemeldete Konten (tecturtle, denizdeke, Riley, Nate, studyflix …) nicht wiederholt. Kurzer Lauf (Zeitfenster bis 07:50 UTC).
 

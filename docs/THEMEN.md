@@ -53,6 +53,9 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | T16 | Hamster-Test „Gebrauchtes Handy kaufen: Claude sucht die Haken in der Anzeige“ (Serie a, selbstgebaute Beispielanzeige mit 5 Fallen, kein Portalname; TRENDS.md 16.11. I1) | CHECK | nein | terminiert 17.11.2026 18:00 als Folge07 (TikTok, YT; IG offen) |
 | T17 | Vorher/Nachher „Meine Referat-Folie: links Textwand, rechts drei Wörter“ (Serie b, eigener Inhalt, Claude kürzt nur, Schwäche zeigen; TRENDS.md 16.11. I2) | REFERAT | nein | offen |
 | T18 | Nebenjob-Check „Umfrage-Apps: eine Stunde getestet, was wirklich auszahlbar ist“ (Serie c, erst nach echter 60-Min-Messung, App ohne Name; TRENDS.md 16.11. I3) | UMFRAGE | nein | offen (wartet auf echte Messung) |
+| T19 | Hamster-Test „Aus meinen Geschichts-Notizen wird ein Zahlenschloss mit drei Rätseln“ (Serie a, eigene Beispielnotizen, echte Claude-Antwort, Jona spielt die Rätsel wirklich; TRENDS.md 19.11. I1) | TRUHE | nein | offen |
+| T20 | Vorher/Nachher „Mein Aushang fürs Rasenmähen: links handgeschrieben, rechts nach drei Fragen an Claude“ (Serie b, beide Zettel selbst gebaut, Nummer als Platzhalter; TRENDS.md 19.11. I2) | AUSHANG | nein | offen |
+| T21 | Nebenjob-Check „Diese Schublade hat jeder. Was bringt sie pro Stunde?“ (Serie c, nur als Folge von F02-T nach Paar 5, Jonas eigene Schublade, echte Verkäufe; TRENDS.md 19.11. I3) | SCHUBLADE | nein | offen (wartet auf echte Messung, nach Paar 5) |
 
 Regeln für neue Themen (ab 11.11. nach SERIEN.md inkl. Ausschlusskriterien; „Gibt es ein starkes Schlüsselbild?“ zuerst): klein, unscheinbar, ohne Vorwissen startbar, mit Beispielen, die man in Deutschland wirklich umsetzen kann; Wörter kurz, ein Wort, Großbuchstaben, nicht doppelt.
 Wenn eine Folge veröffentlicht ist: Status auf `veröffentlicht <Datum>` setzen und `docs/plaene/<WORT>.md` muss existieren.
