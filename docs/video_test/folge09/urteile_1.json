@@ -1,0 +1,227 @@
+{
+ "S16": {
+  "bis_ende": 38,
+  "website": 3,
+  "folgen": 7,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Nebenjob-Regel war neu, aber Schnee schippe ich nicht."
+ },
+ "S17a": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab W-Seminar-Stress, Aushang interessiert mich gerade null."
+ },
+ "S17b": {
+  "bis_ende": 22,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Nett gemacht, aber ich such Lerntipps, keine Zettel."
+ },
+ "S18a": {
+  "bis_ende": 18,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich bin 18, die Regel betrifft mich nicht mehr."
+ },
+ "S18b": {
+  "bis_ende": 16,
+  "website": 1,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Abistress, keine Zeit für Laubrechen-Zettel."
+ },
+ "S19": {
+  "bis_ende": 17,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauch Ausbildung, keinen Schneeschipp-Job."
+ },
+ "A16": {
+  "bis_ende": 42,
+  "website": 4,
+  "folgen": 9,
+  "grund_weg": "sonstiges",
+  "grund_kein_klick": "unklar_worum",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Wusste nicht, dass ich morgens nicht jobben darf."
+ },
+ "A18": {
+  "bis_ende": 14,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bei mir gehts um Ausbildung, nicht um Taschengeld."
+ },
+ "A20": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kinderkram, ich bin Azubi mit echtem Gehalt."
+ },
+ "A22": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Süßer Hamster, aber nichts für mich nach der Schicht."
+ },
+ "U19": {
+  "bis_ende": 9,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Fünfzehnjährige und Schnee, wisch ich sofort weg."
+ },
+ "U21": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kann ChatGPT auch, und Aushang brauch ich nicht."
+ },
+ "U23": {
+  "bis_ende": 20,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Fair, dass sie den fehlenden Beleg zeigen, trotzdem irrelevant."
+ },
+ "U24": {
+  "bis_ende": 26,
+  "website": 2,
+  "folgen": 5,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Als Lehrerin spannend, die Jugendschutz-Regel kenne ich halb."
+ },
+ "U22w": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich such WG, kein Laub, weiter."
+ },
+ "U20b": {
+  "bis_ende": 9,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hab BAföG-Chaos, keinen Kopf für Aushänge."
+ },
+ "U25": {
+  "bis_ende": 13,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "werbung_misstrauen",
+  "grund_kein_klick": "werbung_misstrauen",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Wieder Claude-Werbung mit Hamster, zehn Euro ohne Beleg."
+ },
+ "M18": {
+  "bis_ende": 30,
+  "website": 3,
+  "folgen": 6,
+  "grund_weg": "sonstiges",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Aushang statt Bewerbung ist eigentlich eine Idee, mal sehen."
+ },
+ "M30": {
+  "bis_ende": 24,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Für meine Tochter später vielleicht, mir hilfts nicht."
+ },
+ "R19": {
+  "bis_ende": 13,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich verkauf auf Vinted, Zettel aufhängen mach ich nicht."
+ },
+ "R26": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hilft mir bei Gewerbefrage überhaupt nicht."
+ },
+ "R35": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hübsch, aber ich will Kleinanzeigen-Texte, keine Aushänge."
+ },
+ "R45": {
+  "bis_ende": 33,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "sonstiges",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Zeig ich meinem Sohn, das mit morgens wusste ich nicht."
+ },
+ "G24": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Abreißzettel bringt mir für Nageldesign nichts."
+ },
+ "G28": {
+  "bis_ende": 22,
+  "website": 1,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Gut animiert, inhaltlich aber nicht meine Nische."
+ }
+}

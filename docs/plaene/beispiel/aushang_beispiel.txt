@@ -1,0 +1,16 @@
+BEISPIEL (vom Studio erfunden, 19.11.2026) – Vorher-Aushang, „handgeschrieben“
+
+    Mache Gartenarbeit und so.
+    Bei Interesse melden!!!
+    Tel. 0123 456789 (Leonie)
+
+Situation (wie sie Claude gesagt wird): Leonie, 15, will in der eigenen Straße/Siedlung
+im Herbst Laub rechen und im Winter Schnee schippen. Zettel soll an Briefkästen / ans
+Brett im Supermarkt. Nummer = Handy der Mutter (Platzhalter 0123 456789).
+
+Vorher notierte Schwächen (bevor Claude gefragt wurde):
+1. Angebot unklar („Gartenarbeit und so“) – nicht Laub/Schnee genannt
+2. Kein Preis
+3. Keine Abreißstreifen mit Nummer
+4. Kein Zeitpunkt (wann kann sie: nachmittags, Wochenende)
+5. Keine Vertrauenssignale (Alter/aus der Nachbarschaft, Straße)
