@@ -1,0 +1,13 @@
+BEISPIEL (vom Studio erfunden, 20.11.2026) – Referat-Folie, Erdkunde 8. Klasse, Folie 3 von 8
+
+Titel: Der Wasserkreislauf
+
+Text auf der Folie (so, wie Schüler ihn oft draufschreiben):
+Die Sonne erwärmt das Wasser in Meeren, Seen und Flüssen, wodurch es verdunstet und als unsichtbarer Wasserdampf in die Luft aufsteigt. Auch Pflanzen geben über ihre Blätter Wasser an die Luft ab. In größerer Höhe ist es kälter, deshalb kühlt der Wasserdampf ab und kondensiert zu winzigen Tröpfchen, aus denen Wolken entstehen. Wenn die Tröpfchen in den Wolken zusammenstoßen und zu groß und zu schwer werden, fallen sie als Niederschlag, also als Regen, Schnee oder Hagel, wieder auf die Erde. Ein Teil des Wassers versickert im Boden und wird zu Grundwasser, ein anderer Teil fließt über Bäche und Flüsse zurück ins Meer. Dort beginnt der Kreislauf wieder von vorne. Insgesamt geht dabei kein Wasser verloren, es wechselt nur ständig seinen Zustand und seinen Ort.
+
+Vorher notiert (bevor Claude gefragt wurde) – was eine gute Kürzung leisten muss:
+1. Folie höchstens 3–5 Stichworte statt 7 Sätze.
+2. Die vier Stationen bleiben erkennbar: Verdunstung, Kondensation/Wolken, Niederschlag, Versickern/Abfluss.
+3. Kein Inhalt geht verloren: alles, was von der Folie fliegt, steht auf der Sprechkarte.
+4. Claude erfindet nichts dazu (keine neuen Fakten, Zahlen, Beispiele).
+5. Der Merksatz „Es geht kein Wasser verloren“ bleibt irgendwo erhalten.

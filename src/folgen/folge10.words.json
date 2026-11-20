@@ -1,0 +1,544 @@
+{
+"words": [
+{
+"text": "Steht",
+"start": 0.136,
+"end": 0.24,
+"type": "word"
+},
+{
+"text": "auf",
+"start": 0.26,
+"end": 0.32,
+"type": "word"
+},
+{
+"text": "deiner",
+"start": 0.347,
+"end": 0.48,
+"type": "word"
+},
+{
+"text": "Referat-Folie",
+"start": 0.533,
+"end": 1.2,
+"type": "word"
+},
+{
+"text": "zu",
+"start": 1.227,
+"end": 1.28,
+"type": "word"
+},
+{
+"text": "viel?",
+"start": 1.344,
+"end": 1.8,
+"type": "word"
+},
+{
+"text": "Kopier",
+"start": 1.85,
+"end": 2.08,
+"type": "word"
+},
+{
+"text": "den",
+"start": 2.12,
+"end": 2.24,
+"type": "word"
+},
+{
+"text": "Text",
+"start": 2.304,
+"end": 2.56,
+"type": "word"
+},
+{
+"text": "in",
+"start": 2.613,
+"end": 2.72,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 2.766,
+"end": 3.04,
+"type": "word"
+},
+{
+"text": "und",
+"start": 3.06,
+"end": 3.12,
+"type": "word"
+},
+{
+"text": "sag:",
+"start": 3.18,
+"end": 3.44,
+"type": "word"
+},
+{
+"text": "drei",
+"start": 3.52,
+"end": 3.84,
+"type": "word"
+},
+{
+"text": "Stichworte,",
+"start": 3.893,
+"end": 4.64,
+"type": "word"
+},
+{
+"text": "Rest",
+"start": 4.704,
+"end": 4.96,
+"type": "word"
+},
+{
+"text": "auf",
+"start": 5.0,
+"end": 5.12,
+"type": "word"
+},
+{
+"text": "die",
+"start": 5.14,
+"end": 5.2,
+"type": "word"
+},
+{
+"text": "Sprechkarte.",
+"start": 5.24,
+"end": 5.92,
+"type": "word"
+},
+{
+"text": "Beispiel:",
+"start": 6.009,
+"end": 6.92,
+"type": "word"
+},
+{
+"text": "Wasserkreislauf,",
+"start": 6.96,
+"end": 7.76,
+"type": "word"
+},
+{
+"text": "sieben",
+"start": 7.8,
+"end": 8.08,
+"type": "word"
+},
+{
+"text": "Sätze.",
+"start": 8.12,
+"end": 8.72,
+"type": "word"
+},
+{
+"text": "Auf",
+"start": 8.78,
+"end": 8.96,
+"type": "word"
+},
+{
+"text": "die",
+"start": 9.0,
+"end": 9.12,
+"type": "word"
+},
+{
+"text": "Folie",
+"start": 9.18,
+"end": 9.44,
+"type": "word"
+},
+{
+"text": "kommen",
+"start": 9.486,
+"end": 9.76,
+"type": "word"
+},
+{
+"text": "drei",
+"start": 9.808,
+"end": 10.0,
+"type": "word"
+},
+{
+"text": "Wörter:",
+"start": 10.04,
+"end": 10.68,
+"type": "word"
+},
+{
+"text": "Verdunstung,",
+"start": 10.736,
+"end": 11.52,
+"type": "word"
+},
+{
+"text": "Kondensation,",
+"start": 11.56,
+"end": 12.32,
+"type": "word"
+},
+{
+"text": "Niederschlag.",
+"start": 12.4,
+"end": 13.04,
+"type": "word"
+},
+{
+"text": "Der",
+"start": 13.12,
+"end": 13.36,
+"type": "word"
+},
+{
+"text": "Rest",
+"start": 13.408,
+"end": 13.6,
+"type": "word"
+},
+{
+"text": "steht",
+"start": 13.64,
+"end": 13.84,
+"type": "word"
+},
+{
+"text": "komplett",
+"start": 13.897,
+"end": 14.4,
+"type": "word"
+},
+{
+"text": "auf",
+"start": 14.44,
+"end": 14.56,
+"type": "word"
+},
+{
+"text": "der",
+"start": 14.58,
+"end": 14.64,
+"type": "word"
+},
+{
+"text": "Karte.",
+"start": 14.68,
+"end": 15.12,
+"type": "word"
+},
+{
+"text": "Nichts",
+"start": 15.187,
+"end": 15.6,
+"type": "word"
+},
+{
+"text": "erfunden.",
+"start": 15.64,
+"end": 16.24,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 16.336,
+"end": 16.72,
+"type": "word"
+},
+{
+"text": "Versickern",
+"start": 16.768,
+"end": 17.2,
+"type": "word"
+},
+{
+"text": "und",
+"start": 17.24,
+"end": 17.36,
+"type": "word"
+},
+{
+"text": "zurück",
+"start": 17.394,
+"end": 17.6,
+"type": "word"
+},
+{
+"text": "ins",
+"start": 17.66,
+"end": 17.84,
+"type": "word"
+},
+{
+"text": "Meer",
+"start": 17.888,
+"end": 18.08,
+"type": "word"
+},
+{
+"text": "stehen",
+"start": 18.114,
+"end": 18.32,
+"type": "word"
+},
+{
+"text": "nur",
+"start": 18.38,
+"end": 18.56,
+"type": "word"
+},
+{
+"text": "auf",
+"start": 18.58,
+"end": 18.64,
+"type": "word"
+},
+{
+"text": "der",
+"start": 18.68,
+"end": 18.8,
+"type": "word"
+},
+{
+"text": "Karte.",
+"start": 18.84,
+"end": 19.4,
+"type": "word"
+},
+{
+"text": "Das",
+"start": 19.45,
+"end": 19.6,
+"type": "word"
+},
+{
+"text": "sagt",
+"start": 19.632,
+"end": 19.76,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 19.806,
+"end": 20.08,
+"type": "word"
+},
+{
+"text": "sogar",
+"start": 20.107,
+"end": 20.24,
+"type": "word"
+},
+{
+"text": "selbst.",
+"start": 20.32,
+"end": 21.08,
+"type": "word"
+},
+{
+"text": "Nur:",
+"start": 21.15,
+"end": 21.56,
+"type": "word"
+},
+{
+"text": "Auf",
+"start": 21.61,
+"end": 21.76,
+"type": "word"
+},
+{
+"text": "der",
+"start": 21.8,
+"end": 21.92,
+"type": "word"
+},
+{
+"text": "Folie",
+"start": 22.02,
+"end": 22.4,
+"type": "word"
+},
+{
+"text": "ist",
+"start": 22.44,
+"end": 22.56,
+"type": "word"
+},
+{
+"text": "dein",
+"start": 22.592,
+"end": 22.72,
+"type": "word"
+},
+{
+"text": "Kreislauf",
+"start": 22.76,
+"end": 23.2,
+"type": "word"
+},
+{
+"text": "jetzt",
+"start": 23.24,
+"end": 23.44,
+"type": "word"
+},
+{
+"text": "kein",
+"start": 23.472,
+"end": 23.6,
+"type": "word"
+},
+{
+"text": "Kreis",
+"start": 23.66,
+"end": 24.0,
+"type": "word"
+},
+{
+"text": "mehr.",
+"start": 24.064,
+"end": 24.44,
+"type": "word"
+},
+{
+"text": "Urteil:",
+"start": 24.685,
+"end": 25.121,
+"type": "word"
+},
+{
+"text": "Geklappt.",
+"start": 25.241,
+"end": 26.121,
+"type": "word"
+},
+{
+"text": "Hol",
+"start": 26.171,
+"end": 26.321,
+"type": "word"
+},
+{
+"text": "das",
+"start": 26.381,
+"end": 26.561,
+"type": "word"
+},
+{
+"text": "vierte",
+"start": 26.588,
+"end": 26.801,
+"type": "word"
+},
+{
+"text": "Wort",
+"start": 26.849,
+"end": 27.041,
+"type": "word"
+},
+{
+"text": "zurück.",
+"start": 27.11,
+"end": 27.681,
+"type": "word"
+},
+{
+"text": "Die",
+"start": 27.721,
+"end": 27.841,
+"type": "word"
+},
+{
+"text": "Folie",
+"start": 27.921,
+"end": 28.241,
+"type": "word"
+},
+{
+"text": "zeigt,",
+"start": 28.308,
+"end": 28.801,
+"type": "word"
+},
+{
+"text": "du",
+"start": 28.854,
+"end": 28.961,
+"type": "word"
+},
+{
+"text": "redest.",
+"start": 29.014,
+"end": 29.761,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 29.791,
+"end": 30.081,
+"type": "word"
+},
+{
+"text": "Referat,",
+"start": 30.134,
+"end": 30.801,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 30.833,
+"end": 30.961,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 30.981,
+"end": 31.121,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 31.161,
+"end": 31.281,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 31.301,
+"end": 31.361,
+"type": "word"
+},
+{
+"text": "die",
+"start": 31.381,
+"end": 31.441,
+"type": "word"
+},
+{
+"text": "Frage",
+"start": 31.508,
+"end": 31.841,
+"type": "word"
+},
+{
+"text": "zum",
+"start": 31.881,
+"end": 32.001,
+"type": "word"
+},
+{
+"text": "Kopieren.",
+"start": 32.061,
+"end": 32.641,
+"type": "word"
+}
+]
+}
