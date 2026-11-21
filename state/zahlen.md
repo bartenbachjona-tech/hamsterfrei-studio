@@ -1,10 +1,13 @@
-# Hamsterfrei – Zahlen (Basis TikTok seit 06.11.2026, YouTube + Instagram seit 08.11.2026; letzte Erhebung 19.11. ~23:28)
+# Hamsterfrei – Zahlen (Basis TikTok seit 06.11.2026, YouTube + Instagram seit 08.11.2026; letzte Erhebung 21.11. ~23:26)
 
 Wird von der Auswertungsroutine gepflegt (siehe `docs/AUSWERTUNG_AKTUELL.md`). Plattformen getrennt. Immer mit Erhebungsdatum, weil die Videos unterschiedlich alt sind. Unbekannt = „–“, nicht sichtbar = „n. v.“. Nur Zahlen aus den Studios, nie schätzen. **Ab 08.11.: jedes Video bei 48 h UND 7 T protokollieren, nur gleich alte Werte vergleichen.**
 
 ## Konto-Stand
 | Datum | Plattform | Follower | Δ 7 Tage | Demografie | Notiz |
 |---|---|---|---|---|---|
+| 21.11. 23:24 | TikTok @hamsterfrei | 2,4K | +5 | 57 % Männer, 18–24 41,5 %, DE 52,6 %, „Anderes“ 40,2 % (geerbt, unverändert) | 7 T: 3K Aufrufe (+2 %), FYP 88,7 %, Suche 10 %, Profil 1,3 %, Gefolgt 0 %; Profilaufrufe 20 (−69,7 %); Likes 35, Komm. 2, Shares 0 |
+| 21.11. 23:27 | YouTube Hamsterfrei | 1 Abo | 0 | n. v. | F08 114, F09 94 (21,6 % bis Ende), F10 60/29,5 h (20 %); 0 neue Abos |
+| 21.11. 23:28 | Instagram @hamsterfrei | 1 | 0 | n. v. | weiter 7 Reels; **F02–F10 (9 Videos) nicht gepostet**; Bio noch „Seminararbeit bis 10.11.?“ |
 | 19.11. 23:28 | TikTok @hamsterfrei | 2,4K | −1 | 58 % Männer, 18–24 41,5 %, DE 52,7 %, „Anderes“ 40,1 % | 7 T (Übersicht hängt nach, F08/F09 kaum drin): 2K Aufrufe (−42,2 %), FYP 84,1 %, Suche 13,9 %, Profil 2,1 %, Gefolgt 0 %; Profilaufrufe 13 (−86 %); Likes 22, Komm. –, Shares 0 |
 | 19.11. 23:28 | YouTube Hamsterfrei | 1 Abo | 0 | n. v. | F08 115/29,5 h (20,3 % bis Ende), F09 39/5,5 h; keine neuen Abos über F06–F09 |
 | 19.11. 23:30 | Instagram @hamsterfrei | 1 | 0 | n. v. | weiter 7 Reels; **F02–F09 (8 Videos) nicht gepostet**; Bio noch „Seminararbeit bis 10.11.?“ |
@@ -26,6 +29,29 @@ Wird von der Auswertungsroutine gepflegt (siehe `docs/AUSWERTUNG_AKTUELL.md`). P
 | 08.11. 17:20 | TikTok @hamsterfrei | 2,4K | −2 | Follower: 57 % Männer, 18–24 41,6 %, DE 52,8 %, „Anderes“ 40,1 % | 7 T: 2,1K Aufrufe (+125 %), Suche 35,6 %, FYP 57,9 %, Gefolgt 0 %; Profilaufrufe 59 |
 | 08.11. 17:30 | YouTube Hamsterfrei | 0 Abos | 0 | n. v. | 28 T: 1.653 Aufrufe, 4,4 h Wiedergabe |
 | 08.11. 17:35 | Instagram @hamsterfrei | 1 | – | n. v. (kein Creator-Konto, keine Insights) | 6 Reels |
+
+## Videos – TikTok (Erhebung 21.11.2026 ~23:24, seit Veröffentlichung)
+| Video | veröff. | Werbung | Hook | Alter | Aufrufe | Ø Wiedergabe (s) | Länge (s) | ganz % (≈ Personen) | Likes | Komm. | +Follower | Follower/1.000 | Für dich % | Suche % | Zuschauer (18+ sichtbar) | Erwartung | Bewertung |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Folge11 Morgen-Briefing (MORGEN) | **22.11.** 18:00 (terminiert) | nein | A (Paar 5) | – | – | – | 36,4 | – | – | – | – | – | – | – | – | 150–300 (alt) → neu 400–750 / 3,5–4,5 s | **21.11. kein Video (Ausfalltag, Produktionslauf erst 21:57 gestartet)** |
+| Folge10 Referat-Folie (REFERAT) | 20.11. 18:00 | nein | B (Paar 5) | 29,5 h (vorläufig) | **624** | 4,43 | 34,5 | 1,5 (≈9) | 5 | 0 | 2 | 3,2 | 100 | <0,1 | Daten in Verarbeitung | 150–300 / 3–4,5 s / 1–2 % | Aufrufe weit über Erwartung (Schulthema, kein Nebenjob!), Ø/ganz im Rahmen; 48 h = 22.11. 12–24 Uhr → nächster Lauf 23.11. bei 77,5 h (stabiler Wert prüfen) |
+| **Folge09 Aushang Nebenjob (AUSHANG)** | 19.11. 18:00 | nein | A (Paar 4) | **53,5 h (= 48-h-Wert)** | **675** | 3,79 | 32,5 | 2,5 (≈17) | 17 | 2 | 4 | 5,9 | 98,6 | 0,8 („nebenjob“) | DE 88,9 %, Frauen 75 %, 18–24 31 %, 25–34 33 %, 35+ 36 %; Follower unter Zuschauern 1 % | 150–300 / 3–4,5 s / 1–2 % | **Aufrufe weit über Erwartung**, Ø/ganz im Rahmen |
+| **Folge08 Lebenslauf Minijob (LEBENSLAUF)** | 18.11. 18:00 | nein | B (Paar 4) | 77,5 h | **697** | 4,01 | 33,9 | 1,4 (≈10) | 5 | 1 | 2 | 2,9 | 99,1 | 0,4 | DE 84,9 %, Frauen 55 %, 18–24 32 %, 25–34 38 %, 35+ 30 %; Follower unter Zuschauern 0 % | 150–300 / 3–4,5 s / 1–2 % | 29,5 h war 697/4,01/1,4 → **stabiler Wert = 48-h-Wert** (RA, Fenster 20.11. verpasst); Aufrufe weit über Erwartung |
+| Folge05 Lernzettel (7 T) | 14.11. | nein | B (Paar 2) | 7,2 T | 301 | 2,14 | 33 | 0 | 4 | 0 | 1 | 3,3 | 93,1 | 5,3 („zellatmung lernzettel“, „Welche ki macht aus notizen einen lernzettel“) | – | – | 7-T-Wert |
+- Hinweis: TikTok zeigt Alter nur ab 18 – über Schüler-Anteil sagen die Altersanteile nichts.
+- Liste: F07 236, F06 258. Median letzte 10 (F10…S2-F) = **285,5** → Ausreißerschwelle **857**: keiner (F08 2,4×, F09 2,4×, F10 2,2×). **Niveausprung:** F08–F10 = 624–697 vs. 236–301 davor (3 von 3).
+- **Paare:** Paar 4 geteilt (Ø B +0,22 s; ganz A +7 Personen) → kein voller Punkt, ohnehin nur mit Vorbehalt. **Paar 5 ungültig** (Ausfalltag 21.11., F11 erst 22.11.) → nur Daten.
+
+## Videos – YouTube Shorts (Erhebung 21.11.2026 ~23:27)
+| Video | Aufrufe | bis Ende % / weggewischt % | echte Zuschauer (≈) | Notiz |
+|---|---|---|---|---|
+| Folge10 (_PNKpYrv7Fk), 29,5 h | 60 | 20,0 / 80,0 | 12 | Shorts-Feed 55; im Rahmen 20–100 |
+| Folge09 (CSi_mkaGlhQ), 53,5 h | 94 | 21,6 / 78,4 | 20 | 48-h-Wert im Rahmen; Shorts-Feed 54 in 48 h; 0 Abos |
+| Folge08 114 · Folge07 84 · Folge06 125 · Folge05 51 · Folge04 42 · Folge03 114 · Folge02 259 · S2-F 831 | | | | Liste |
+- Median letzte 10 ≈ 103. Kein Ausreißer (echte Zuschauer max. 23 < 150). **Kein Niveausprung auf YouTube.**
+
+## Videos – Instagram Reels (Erhebung 21.11.2026 ~23:28)
+Unverändert 7 Beiträge, 1 Follower, Bio „Seminararbeit bis 10.11.? Keine Angst 🐹“. F02–F10 und S2-F **nicht gepostet**.
 
 ## Videos – TikTok (Erhebung 19.11.2026 ~23:25, seit Veröffentlichung)
 | Video | veröff. | Werbung | Hook | Alter | Aufrufe | Ø Wiedergabe (s) | Länge (s) | ganz % (≈ Personen) | Likes | Komm. | Wort-Komm. | Shares | Saves | +Follower | Für dich % | Suche % | Erwartung | Bewertung |
@@ -220,6 +246,7 @@ S9 (DfhEUNThw2b) 142 · S7 (DfZdzlLp47k) 138 · S5 139 · S2 380 · 5 Fehler 157
 |---|---|---|---|---|---|---|
 | bis 04.11. | – | 0 | 0 | – | – | dm_log leer |
 | bis 06.11. 01:00 | 0 | 0 | 0 | 3 Verkäufe gesamt (laut Jona, Aufteilung offen) | | S1 wächst über TikTok-Suche |
+| bis 21.11. 23:30 | 1 (AUSHANG, F4F-Profil, kein Lead) | 1 | 0 | n. v. | n. v. | dm_log 1 Eintrag (19.11.); LEBENSLAUF/REFERAT/MORGEN: 0; TikTok-Konto 7 T: 2 Kommentare, Profilaufrufe 20 |
 | bis 17.11. 23:30 | 0 | 0 | 0 | n. v. | n. v. | dm_log leer; Wörter SWITCH/ABO/RAUS/LERNEN/ZETTEL/CHECK: 0; TikTok-Konto 7 T: 0 Kommentare |
 | bis 15.11. 23:30 | 0 | 0 | 0 | n. v. | n. v. | dm_log leer; Kommentar-Wörter SWITCH/ABO/RAUS/LERNEN: 0; TikTok-Konto 7 T: 0 Kommentare |
 | bis 11.11. 23:30 | 0 | 0 | 0 | n. v. | n. v. | dm_log leer; Kommentar-Wörter PRÜFUNG/SWITCH: 0 |
@@ -229,6 +256,9 @@ S9 (DfhEUNThw2b) 142 · S7 (DfZdzlLp47k) 138 · S5 139 · S2 380 · 5 Fehler 157
 ## Mediane (nach jeder Auswertung neu)
 | Datum | Plattform | Median Aufrufe | Median Ø Wiedergabe | Median ganz / bis Ende % | Notiz |
 |---|---|---|---|---|---|
+| 21.11. | TikTok (letzte 10) | 285,5 | 4,0 s (48 h F05–F09: 1,86/4,32/3,65/5,58/4,01/3,79) | ganz F08 1,4 / F09 2,5 % | **Niveausprung ab F08: 624–697** (davor 236–301); Ausreißer-Schwelle 857; neue Erwartung unbeworben 400–750 (vorläufig) |
+| 21.11. | YouTube (letzte 10) | ≈103 | n. v. | bis Ende: F09 21,6, F10 20,0 (vorl.) | kein Sprung; echte Zuschauer max. 23 |
+| 21.11. | Instagram (7) | 143 | n. v. | n. v. | keine neuen Reels |
 | 17.11. | TikTok (letzte 10, ohne Folge07) | 286 | 3,52 s (unbeworben 48 h) | – | unbeworben 48 h: Folge02 9,91, Folge04 4,32, Folge03 3,52, S5-2 3,49, S2-F 3,09, Folge05 1,86; Folge06 3,54 (vorl.); Ausreißer-Schwelle 857 |
 | 17.11. | YouTube (16) | ≈105 | n. v. | angesehen: Folge06 19,4, Folge07 18,6 (vorl.) | echte Zuschauer max. 24 |
 | 17.11. | Instagram (7) | 143 | n. v. | n. v. | keine neuen Reels |

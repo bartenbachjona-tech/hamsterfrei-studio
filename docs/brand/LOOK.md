@@ -34,6 +34,8 @@ Frame 0 besteht aus zwei Dingen gleichzeitig:
 - Das Signet (Hamster mit Krawatte) darf das Schlüsselbild nie verdecken.
 - Das „Werbung“-Label oben links erscheint nur in Werbe-Videos (KANAL_REGELN) und darf das Schlüsselbild nicht verdecken. Werbe-Videos dürfen aber nicht mit Werbung *beginnen*: Frame 0 zeigt das Ergebnis, nie das Produkt.
 
+- **Einstiegs-Test ab 23.11. (AUSWERTUNG_AKTUELL, Testdesign ab 23.11.):** In E2-Videos ist das Ergebnis in Frame 0 bildfüllend (≥ 60 %), in den ersten 0,5 s passiert sichtbar etwas am Ergebnis, der Hamster steht klein am Rand mit Handlung. E1 = Frame 0 wie oben. Welche Variante gilt, steht im Log je Folge.
+
 ## Shot-Variation (gegen „inauthentic content“, Handbuch G9)
 - Pro Beat ein neues Element oder eine neue Ansicht auf der Leinwand (Nah auf Ergebnis, ganze Leinwand, Split-Screen, Handy-Ansicht, Chat-Ansicht).
 - Folgen einer Serie variieren Setting, Szenenfolge und Requisiten. Keine zwei Folgen mit identischer Szenenfolge hintereinander.
