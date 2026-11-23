@@ -81,3 +81,12 @@
 - Kein Ausreißer (Schwelle 857; YouTube echte Zuschauer max. 23). Funnel: 0 neue Wort-Kommentare, 0 echte Leads.
 - Kritiker (fable): Sprung echt, „themenunabhängig“ nur 1 Video → Indiz; Erwartung 400–750 nur vorläufig; Hook-Formulierung „nicht trennscharf“; Konto behalten ja, aber Follower/1.000 kein Argument; **Themen-Test N/K ablehnen** (Faktor 1,1 statt 1,5 absehbar) → **Erste-Sekunde-Test**; „Eltern“-Hypothese nur gleichrangig mit „erwachsene Jobsuchende“; Umwandlung (Profilaufrufe −70 %, 0 Shares) fehlt im Bild. Alles übernommen.
 - Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 21.11. Nr. 1–9, Erwartung 400–750, Testdesign Einstiegs-Test E1/E2 ab 23.11., Befund 19.11. Nr. 5 gestrichen, Konto-Empfehlung), LOOK.md (E2-Frame-0 während des Tests), THEMEN F08-T.
+
+## 23.11.2026 (Routine, gestartet 23:23)
+- Chrome: Browser 3 (deviceId 2d7e7af3…, wie in den Vorläufen), TikTok-Konto **hamsterfrei** per Account-Info bestätigt, YouTube Kanal UCBmT3RjRK5PGk-YVTdFzuDA, Instagram @hamsterfrei. Nur gelesen. Tab ~23:36 geschlossen.
+- Erhoben: TikTok F12 (5,5 h), F11 (29,5 h), F10 (77,5 h), F06 (7 T), Liste, Konto 7 T + Follower; YouTube Shorts-Liste + F11/F12; Instagram Profil. Digistore n. v.
+- Bestes: **F10 Referat 826 / 4,28 s** (77,5 h, nicht stabil). Schwächstes im neuen Niveau: **F11 Morgen-Briefing 434 / 3,5 s / 1,0 %** (29,5 h, untere Kante). YouTube: F12 179 in 5,5 h (Beobachtung), F11 36.
+- Testvariable: Einstiegs-Test Paar 1 gestartet (F12 E2, vorläufig 4,4 s; Partner F13 E1 am 24.11.). Messregel geändert: Zählwert = erste Ablesung ab 50 h.
+- Kein Ausreißer (Mischmedian 285,5 / Median seit 18.11. 711). Funnel: 0 neue Wort-Kommentare; ≈ 35–50 Personen erreichen das Videoende.
+- Kritiker (fable): Ablesezeit wäre mit Variante konfundiert → erste Ablesung ab 50 h + Reihenfolge wechselt (übernommen); YouTube F12 nicht als Indiz (übernommen); „CTA wirkt nicht“ unbelegt → „fast niemand erreicht ihn“ (übernommen); Konto-Begründung gekürzt (übernommen); Ausreißer zusätzlich gegen Median seit 18.11. (übernommen); IG einmal melden (übernommen).
+- Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 23.11. Nr. 1–7, Testdesign-Hauptmaß, Ausreißer-Zusatz, IG pausiert, nächster Test vorgemerkt: Aufruf/Umwandlung).
