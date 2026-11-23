@@ -2,6 +2,59 @@
 
 > **Ab Marke v2 (04.11.2026)** arbeitet der Trend-Scout als **Ausreißer-Scout** (Handbuch G5): Videos mit ≥ 3× Kanal-Median, eigene Nische + Nachbarnischen, deutsch und englisch, 3–5 Konten; Pflichtfrage „Was haben die besten 5 dieses Kontos, was den schlechtesten 5 fehlt?“; Motor kopieren, nie das Thema 1:1. Jede Idee wird einer Serie aus `docs/brand/SERIEN.md` zugeordnet oder als Experiment markiert und braucht ein Schlüsselbild (sonst verwerfen). Hooks ohne KI-Jargon (STIMME.md). Ältere Einträge unten sind Hintergrund; „Werbung ab Sekunde 0“ oder Werbe-Pointen dort gelten nicht mehr.
 
+## 2026-11-23 – Ausreißer-Scout (TikTok-Direktcheck + Web/vidIQ)
+Methode: Faktor = Aufrufe ÷ Median der nicht angepinnten Profil-Videos (n angegeben, meist 16 geladen), per JS selbst gerechnet, Stand 23.11. ~07:00 UTC, Datum aus Video-ID. TikTok im Hamsterfrei-Chrome (deviceId 2d7e7af3…, /profile leitet auf @hamsterfrei, nur gelesen; 1 Suche „claude ki tipp" ausgewertet, 4 weitere Suchen luden nicht; 7 Profile). Web-Agent: YouTube-Seiten per WebFetch leer, selbst gebaute vidIQ-/YouTube-Such-URLs nicht freigegeben, TubeAlfred ohne Server → nur 1 Grenzfall. **Lücken: nur TikTok, nur Deutsch, faktisch eine Suche; deutsche YouTube-Ausreißer wieder keine belegt.**
+
+### Ausreißer
+| Konto | Video | Aufrufe | Datum | Median (n) | Faktor | Spr./Nische |
+|---|---|---|---|---|---|---|
+| TikTok @alan.buildz (29,1K F.) | Kommentar-Wort „Siri" (Jarvis-Assistent statt Siri) https://www.tiktok.com/@alan.buildz/video/7710739069218688288 · „BAUEN" (4 Claude-Prompts) …/7707404668703378721 · „Remover" (Wasserzeichen-Tool – Rechts-Grauzone, kein Vorbild) …/7708516671811603745 · „SEO" …/7707789109238058272 | 54,7K / 28,3K / 65,8K (391 Komm.) / 14,7K | 21.11. / 12.11. / 15.11. / 13.11. | 4.636 (16) | **11,8× / 6,1×** / 14,2× (Thema kein Vorbild) / 3,2× (Grenzfall) | DE / Claude-Tools |
+| TikTok @ichheissemarrvin (1,4K F.) | „Tag 11 von 30: Mit diesen 3 Tools lasse ich Claude meine Clipping-Videos schneiden" https://www.tiktok.com/@ichheissemarrvin/video/7701096726769192225 · „Tag 10 von 30: Ich habe mein erstes Geld mit Clipping verdient!" …/7700535284798131488 · „1.000 Views beim Clipping und trotzdem kein Geld verdient?" …/7708695882706734368 · „Tag 15/30 – Welche Clipping-Kampagnen lohnen sich wirklich?" …/7709265362520509729 | 25,9K / 24,9K / 18,5K / 14,8K | 26.10. / 25.10. / 16.11. / 17.11. | 1.867 (16) | 13,9× / 13,3× (Fensterrand, 4 Wochen Laufzeit) / **9,9× / 7,9×** | DE / Nebenjob mit KI |
+| TikTok @titusharmann (11K F.) | Kostenloses Skill-Paket für Instagram/TikTok/YouTube (Caption „Kostenlos und MIT-lizenziert …") https://www.tiktok.com/@titusharmann/video/7707348194899905825 | 68,6K | 12.11. | 5.280 (16) | **13,0×** | DE / Claude |
+| TikTok @herr_tech (324K F.) – abgewertet | „Dein Samsung geht lauter als das Maximum!" (Overlay „Geheime Einstellung macht dein Handy lauter", Green-Screen vor Handy-Reparatur) https://www.tiktok.com/@herr_tech/video/7710691731859082518 | 175K | 21.11. | 11.300 (19, enthält ~3 alte, vermutl. angepinnte Hits – entgegen Methode) | ~15× (1 Video, Nachbarnische) | DE / Tech-Tipps |
+
+**Nicht gewertet (Kritiker):** @lumis.50 „Mein Workflow für KI-Videos in 8 Schritten" 26,5K = 18,9× (117 Follower, n = 11, Konto sonst „Was wäre, wenn"-Wissen); YT Mariano Pierantozzi „Come Installare l'AI in Locale Passo Passo" 18.731 = 3,02× (IT, Langvideo, Median mischt Formate; https://vidiq.com/youtube-stats/channel/@marianopierantozzi/videos/); herr_tech GTA-6-Video 60,5K = 5,4×. Geprüft ohne Ausreißer: @younesbuildsbrands (17,9K F., Median 689, max. 1,2× – 16 Videos an einem Tag, Raster „Nutze Claude NIE ohne …"), YT Ye Technical, Enoylity, AI Magic (nichts im Fenster/Nische); Skill Leap AI, Futurepedia, AI Andy: kein Median möglich.
+
+### Beste 5 vs. schlechteste 5
+- **@alan.buildz:** Alle Videos im selben Format (oben Bildschirm/Ergebnis, unten Talking Head, Kommentar-Wort in der Caption) → Format und Wort entscheiden nicht. Top = **ein bekanntes Ding wird ersetzt bzw. du bekommst ein fertiges Werkzeug** (Siri, Prompt-Set); Bottom (0,2–0,6×) = abstrakte Setup-Themen (Regeln, Konnektoren, Tokens, „Guide-Library").
+- **@ichheissemarrvin:** Top = **„Tag X von 30"-Zähler bzw. Geldstand** („erstes Geld", „trotzdem kein Geld"); Bottom (0,5–0,7×) = Antworten auf Kommentare, allgemeine How-tos ohne Zähler („Wie erstellt man einen Claude Skill"), Hype-Aufhänger („GTA 6 = schnell reich"). Achtung: Tag 7 lag bei 0,5×, Tag 12–14 nicht geprüft → Zähler allein ist nicht belegt als Motor.
+- **@titusharmann:** Alle Captions im selben Raster („Hier ist der Link …"), Talking Head. Top 13× = **kostenloses fertiges Paket für jeden**; Alltagsthema „Claude prüft dein WLAN" nur 2,3×; Bottom (0,1–0,4×) = B2B-Setups (Firma in ChatGPT eintragen, Leads auf Instagram, Agenten-Abteilungen).
+- **@herr_tech:** Top im Fenster = **ein Alltagsproblem am eigenen Handy + „geheime Einstellung"**, Ergebnis im Overlay; Bottom (0,1–0,2×) = GTA-6-Memes, „ChatGPT operiert dich", Claude-Code-News. Länge bei keinem Konto geprüft.
+
+### 3 Folgerungen (Kritiker-Fassung)
+1. **„Du bekommst ein fertiges Ding gratis / es ersetzt etwas Bekanntes"** ist am besten gedeckt (alan Siri 11,8× + Prompt-Set 6,1×, titus Gratis-Paket 13×; vgl. denkbit 16.11.). Ob das Thema oder das „Gratis gegen Kommentar" zieht, ist offen. Für uns nur ehrlich: echter Test, keine Rechts-Grauzonen, keine Abo-Werbung.
+2. **Hypothese:** Fortlaufender Zähler mit echtem Zwischenstand („Tag 11 von 30", „erstes Geld") – 1 Konto, 3 Videos, nicht bestätigt. Höchstens als Follow-up nach einem ≥ 3×-Video testen (G6), keine Fünfer-Reihe.
+3. **Vereinbar mit Folgerung 1 vom 19.11.:** Dein Gerät, dein Alltagsproblem, Ergebnis im Overlay (herr_tech ~15×) vor News/B2B (herr_tech/titus 0,1–0,4×). Dünne Basis (1 Video), das GTA-6-Video mit 5,4× widerspricht „schlägt Hype" teilweise.
+
+Trichter (G5): 10 Rohideen (Akku-Statistik, Mathe-Test korrigieren lassen, Notenrechner in einem Satz, Klassen-Gruppe Geld einsammeln, 30-Tage-Nebenjob-Tagebuch, Clipping-Stundenlohn, WLAN-Check, Handy lauter, Gratis-Prompt-Set, Siri-Ersatz) → Ausschluss (Thema 1:1: Clipping, WLAN, Handy lauter, Siri; kein Schlüsselbild/Text gegen Text: Klassen-Gruppe 4/10 verworfen; Werbe-/Engagement-Köder-Gefahr: Gratis-Prompt-Set; Fünfer-Reihe gegen G9: 30-Tage-Tagebuch) → 3.
+
+### 3 Video-Ideen (Kritiker fable: I1 7/10, I2 5/10 → umgebaut, I3 nach Kritik ergänzt, nicht separat geprüft)
+Für alle: Frame 0 nur mit vorhandenen Mitteln (Zeigestab, startle, Requisit auf der Leinwand; es gibt keine Pose „hält Handy", LOOK.md). Pointe vor dem Hook (G3). **Schwächen und Zahlen stehen als Platzhalter `<…>` und werden erst nach dem echten Test gefüllt; tritt keine Schwäche auf, wird nichts erfunden.** Hinweis „Claude-Konto ab 18" in Caption oder Bild.
+
+**I1 – Hamster-Test: „Mein Akku ist um zwei fast leer. Ich hab Claude die Akku-Liste gezeigt." (Serie a, Motor herr_tech „dein Gerät, dein Problem, Ergebnis im Overlay") – Wort AKKU**
+- Schlüsselbild: nachgezeichnete Akku-Anzeige groß auf der Leinwand, roter Balken „14 % · 14:02", Hamster zeigt mit dem Zeigestab darauf (startle). Overlay „14 % um 14 Uhr".
+- Hook Experimenter: „Mein Akku ist um zwei fast leer. Ich hab Claude die Akku-Liste gezeigt. <Ein Tipp half, zwei nicht.>"
+- Hook Investigator: „Mein Akku war nicht kaputt. <Eine App hat ihn leer gezogen.>" (nur wenn der Test das zeigt)
+- Ablauf: 1) roter Balken zuerst 2) Akku-Nutzungsliste (nachgezeichnet, keine App-Logos/-Namen) an Claude 3) Claudes Vorschläge, 1 Satz je 4) „aber …": nächster Tag, echter Stand um 14 Uhr, welcher Tipp nichts brachte 5) Stempel Geklappt/Halb/Fail (ehrlich vermutlich „Halb").
+- Echt aufnehmen: Jonas eigene Akku-Statistik zwei Tage mit möglichst gleichem Ablauf, Uhrzeit-Screenshots, echte Claude-Antwort. Liefert Claude nur Allgemeinplätze → verwerfen. Nicht direkt neben T11 (Speicher, gleiche Mechanik) – eines von beiden wählen.
+- Kommentar-Wort am Ende: AKKU → die Frage an Claude zum Kopieren.
+
+**I2 – Hamster-Test: „Claude hat meinen Mathe-Test korrigiert. Dann hab ich Claude korrigiert." (Serie a, Einzelvideo; Motor marrvin „echter Zwischenstand" + alan „Ergebnis oben") – Wort TEST**
+- Schlüsselbild: korrigierter Aufgabenzettel mit großer roter Punktzahl „<X>/10" auf der Leinwand, Hamster zeigt mit dem Zeigestab auf die Zahl.
+- Hook Experimenter: „Claude hat meinen Mathe-Test korrigiert. <X> von zehn. <Dann hab ich Claude korrigiert.>" (zweiter Satz nur, wenn Claude wirklich falsch lag)
+- Hook Teacher: „So übst du Mathe mit Claude: zehn Aufgaben, erst rechnen, dann korrigieren lassen."
+- Ablauf: 1) rote Punktzahl zuerst 2) Eingabe kurz: eigenes Thema (z. B. lineare Funktionen), „stell mir 10 Aufgaben, steigend schwer, Lösungen erst, wenn ich fertig bin" 3) Fehler-Muster, das Claude erkennt 4) „aber …" <eine Aufgabe/Lösung von Claude war falsch – nur wenn echt> 5) Stempel + kleiner Zähler „Tag 1" nur als Option: Fortsetzung erst, wenn das Video ≥ 3× Median läuft (G6).
+- Echt aufnehmen: Jona rechnet die Aufgaben wirklich, Punktzahl echt, Bildschirmaufnahme; kein Schulbuchtext, keine echte Klassenarbeit, keine Lehrkraft, keine Note. Abstand zu F05/T22 (Schulthemen) beachten.
+- Kommentar-Wort am Ende: TEST → der Übungs-Prompt zum Kopieren.
+
+**I3 – Hamster-Test: „Ein Satz an Claude, und ich hab einen Notenrechner fürs Halbjahr." (Serie a, Motor alan/titus „fertiges Ding gratis aus einem Satz", vgl. kilehrkraft Escape Room 19.11.) – Wort SCHNITT**
+- Schlüsselbild: der fertige Rechner groß auf der Leinwand mit Ergebnisfeld „Schnitt <x,x>", Hamster zeigt mit dem Zeigestab auf das Ergebnis.
+- Hook Experimenter: „Ein Satz an Claude, und ich hab einen Notenrechner fürs Halbjahr. <Er hat sich einmal verrechnet.>"
+- Hook Fortune Teller: „Im Februar willst du wissen, wie dein Halbjahr steht. Den Rechner baust du dir heute in einem Satz."
+- Ablauf: 1) Rechner mit Ergebnis zuerst 2) der eine Satz (Fächer, Gewichtung schriftlich/mündlich) 3) Beispielnoten eintippen, Ergebnis 4) „aber …" Gegenrechnung von Hand: <stimmt / Gewichtung falsch> 5) Stempel Geklappt/Halb/Fail.
+- Echt aufnehmen: echte Claude-Antwort (Artefakt) im frischen Chat, erfundene Beispielnoten (als BEISPIEL markiert), Handrechnung zur Kontrolle; keine echten Zeugnisse, keine Schul-/Bundeslandregel als Fakt ohne Quelle. Nicht als Werbung für ein Abo formulieren.
+- Kommentar-Wort am Ende: SCHNITT → der Satz zum Kopieren.
+
 ## 2026-11-19 – Ausreißer-Scout (TikTok-Direktcheck + Web/vidIQ-Statistikseiten)
 Methode: Faktor = Aufrufe ÷ Median der neuesten 20 nicht angepinnten Videos des Kontos (n angegeben), selbst nachgerechnet, Stand 19.11. ~07:00 UTC, Datum aus der Video-ID. **Zeitfenster: Videos ab 22.10.2026 (~4 Wochen)**; ältere nur als Hinweis. Bei vidIQ-Konten ist n = 40–45 (andere Basis); frische Videos im Median drücken ihn eher, die Faktoren sind also eher zu hoch als zu niedrig. TikTok im Hamsterfrei-Chrome (deviceId 2d7e7af3…, Konto per Account-Info = hamsterfrei, nur gelesen; 4 Suchen „ki trick sparen“, „nebenjob mit ki“, „claude schule lernen“, „spartipps studenten“ + 6 Profile). Web-Agent: YouTube-Seiten per WebFetch wieder leer → Mediane nur über öffentliche vidIQ-„youtube-stats“-Seiten (ohne Login, keine Credits, nichts gekauft); Reddit-Suche abgelehnt (HTTP 400), Socialblade nicht erreichbar. Geprüft ohne Ausreißer: @jannikabt (Median 32,6K, Top 3,1× = Politik-Thema, passt nicht), @luna.lerntipps (Median 895, max. 1,9×), YT Logically Answered (max. 2,6×), Théophile Eliet (2,996×, knapp darunter). **Deutsche YouTube-Ausreißer: wieder keine belegt.**
 

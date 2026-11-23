@@ -61,6 +61,9 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | T19 | Hamster-Test „Aus meinen Geschichts-Notizen wird ein Zahlenschloss mit drei Rätseln“ (Serie a, eigene Beispielnotizen, echte Claude-Antwort, Jona spielt die Rätsel wirklich; TRENDS.md 19.11. I1) | TRUHE | nein | offen |
 | T20 | Vorher/Nachher „Mein Aushang fürs Rasenmähen: links handgeschrieben, rechts nach drei Fragen an Claude“ (Serie b, beide Zettel selbst gebaut, Nummer als Platzhalter; TRENDS.md 19.11. I2) | AUSHANG | nein | terminiert 19.11.2026 18:00 als Folge09 (TikTok, YT; IG offen) |
 | T21 | Nebenjob-Check „Diese Schublade hat jeder. Was bringt sie pro Stunde?“ (Serie c, nur als Folge von F02-T nach Paar 5, Jonas eigene Schublade, echte Verkäufe; TRENDS.md 19.11. I3) | SCHUBLADE | nein | offen (wartet auf echte Messung, nach Paar 5) |
+| T23 | Hamster-Test „Mein Akku ist um zwei fast leer. Ich hab Claude die Akku-Liste gezeigt.“ (Serie a, Jonas echte Akku-Statistik 2 Tage, nachgezeichnet ohne Logos; nicht direkt neben T11; TRENDS.md 23.11. I1) | AKKU | nein | offen |
+| T24 | Hamster-Test „Claude hat meinen Mathe-Test korrigiert. Dann hab ich Claude korrigiert.“ (Serie a, Einzelvideo, Jona rechnet echt, Fortsetzung nur bei ≥ 3×; TRENDS.md 23.11. I2) | TEST | nein | offen |
+| T25 | Hamster-Test „Ein Satz an Claude, und ich hab einen Notenrechner fürs Halbjahr.“ (Serie a, Beispielnoten, Handrechnung als Kontrolle; TRENDS.md 23.11. I3) | SCHNITT | nein | offen |
 
 Regeln für neue Themen (ab 11.11. nach SERIEN.md inkl. Ausschlusskriterien; „Gibt es ein starkes Schlüsselbild?“ zuerst): klein, unscheinbar, ohne Vorwissen startbar, mit Beispielen, die man in Deutschland wirklich umsetzen kann; Wörter kurz, ein Wort, Großbuchstaben, nicht doppelt.
 Wenn eine Folge veröffentlicht ist: Status auf `veröffentlicht <Datum>` setzen und `docs/plaene/<WORT>.md` muss existieren.
