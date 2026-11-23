@@ -1,0 +1,526 @@
+{
+"words": [
+{
+"text": "Drei",
+"start": 0.12,
+"end": 0.16,
+"type": "word"
+},
+{
+"text": "Klausuren,",
+"start": 0.2,
+"end": 0.72,
+"type": "word"
+},
+{
+"text": "ein",
+"start": 0.76,
+"end": 0.88,
+"type": "word"
+},
+{
+"text": "Minijob",
+"start": 0.92,
+"end": 1.36,
+"type": "word"
+},
+{
+"text": "und",
+"start": 1.4,
+"end": 1.52,
+"type": "word"
+},
+{
+"text": "Omas",
+"start": 1.6,
+"end": 1.92,
+"type": "word"
+},
+{
+"text": "Achtzigster.",
+"start": 1.96,
+"end": 2.6,
+"type": "word"
+},
+{
+"text": "Ich",
+"start": 2.65,
+"end": 2.8,
+"type": "word"
+},
+{
+"text": "hab",
+"start": 2.84,
+"end": 2.96,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 2.994,
+"end": 3.2,
+"type": "word"
+},
+{
+"text": "die",
+"start": 3.22,
+"end": 3.28,
+"type": "word"
+},
+{
+"text": "Woche",
+"start": 3.32,
+"end": 3.52,
+"type": "word"
+},
+{
+"text": "planen",
+"start": 3.568,
+"end": 3.84,
+"type": "word"
+},
+{
+"text": "lassen.",
+"start": 3.886,
+"end": 4.32,
+"type": "word"
+},
+{
+"text": "Ein",
+"start": 4.36,
+"end": 4.48,
+"type": "word"
+},
+{
+"text": "Fach",
+"start": 4.528,
+"end": 4.72,
+"type": "word"
+},
+{
+"text": "kommt",
+"start": 4.76,
+"end": 4.96,
+"type": "word"
+},
+{
+"text": "dabei",
+"start": 5.0,
+"end": 5.2,
+"type": "word"
+},
+{
+"text": "zu",
+"start": 5.253,
+"end": 5.36,
+"type": "word"
+},
+{
+"text": "kurz.",
+"start": 5.44,
+"end": 6.04,
+"type": "word"
+},
+{
+"text": "Beispiel:",
+"start": 6.071,
+"end": 6.48,
+"type": "word"
+},
+{
+"text": "Lea,",
+"start": 6.533,
+"end": 6.88,
+"type": "word"
+},
+{
+"text": "siebzehn.",
+"start": 6.92,
+"end": 7.6,
+"type": "word"
+},
+{
+"text": "Dienstag",
+"start": 7.632,
+"end": 8.0,
+"type": "word"
+},
+{
+"text": "Mathe,",
+"start": 8.04,
+"end": 8.4,
+"type": "word"
+},
+{
+"text": "Mittwoch",
+"start": 8.432,
+"end": 8.72,
+"type": "word"
+},
+{
+"text": "Englisch,",
+"start": 8.752,
+"end": 9.2,
+"type": "word"
+},
+{
+"text": "Donnerstag",
+"start": 9.24,
+"end": 9.68,
+"type": "word"
+},
+{
+"text": "Bio.",
+"start": 9.76,
+"end": 10.24,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 10.274,
+"end": 10.48,
+"type": "word"
+},
+{
+"text": "legt",
+"start": 10.52,
+"end": 10.72,
+"type": "word"
+},
+{
+"text": "Mathe",
+"start": 10.74,
+"end": 10.88,
+"type": "word"
+},
+{
+"text": "nach",
+"start": 10.928,
+"end": 11.12,
+"type": "word"
+},
+{
+"text": "vorn.",
+"start": 11.18,
+"end": 11.44,
+"type": "word"
+},
+{
+"text": "Fast",
+"start": 11.52,
+"end": 11.84,
+"type": "word"
+},
+{
+"text": "acht",
+"start": 11.92,
+"end": 12.08,
+"type": "word"
+},
+{
+"text": "Stunden,",
+"start": 12.13,
+"end": 12.56,
+"type": "word"
+},
+{
+"text": "weil",
+"start": 12.592,
+"end": 12.72,
+"type": "word"
+},
+{
+"text": "sie",
+"start": 12.74,
+"end": 12.8,
+"type": "word"
+},
+{
+"text": "da",
+"start": 12.853,
+"end": 12.96,
+"type": "word"
+},
+{
+"text": "am",
+"start": 12.987,
+"end": 13.04,
+"type": "word"
+},
+{
+"text": "schwächsten",
+"start": 13.072,
+"end": 13.44,
+"type": "word"
+},
+{
+"text": "ist.",
+"start": 13.5,
+"end": 13.84,
+"type": "word"
+},
+{
+"text": "Und",
+"start": 13.88,
+"end": 14.0,
+"type": "word"
+},
+{
+"text": "die",
+"start": 14.02,
+"end": 14.08,
+"type": "word"
+},
+{
+"text": "Schichten?",
+"start": 14.1,
+"end": 14.72,
+"type": "word"
+},
+{
+"text": "Bleiben",
+"start": 14.76,
+"end": 15.04,
+"type": "word"
+},
+{
+"text": "frei.",
+"start": 15.12,
+"end": 15.6,
+"type": "word"
+},
+{
+"text": "Omas",
+"start": 15.68,
+"end": 16.0,
+"type": "word"
+},
+{
+"text": "Feier",
+"start": 16.027,
+"end": 16.32,
+"type": "word"
+},
+{
+"text": "auch.",
+"start": 16.384,
+"end": 16.72,
+"type": "word"
+},
+{
+"text": "Bio",
+"start": 16.84,
+"end": 17.2,
+"type": "word"
+},
+{
+"text": "fängt",
+"start": 17.22,
+"end": 17.36,
+"type": "word"
+},
+{
+"text": "schon",
+"start": 17.387,
+"end": 17.52,
+"type": "word"
+},
+{
+"text": "Samstag",
+"start": 17.56,
+"end": 17.92,
+"type": "word"
+},
+{
+"text": "an,",
+"start": 17.973,
+"end": 18.16,
+"type": "word"
+},
+{
+"text": "in",
+"start": 18.213,
+"end": 18.32,
+"type": "word"
+},
+{
+"text": "kleinen",
+"start": 18.35,
+"end": 18.56,
+"type": "word"
+},
+{
+"text": "Portionen.",
+"start": 18.608,
+"end": 19.32,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 19.36,
+"end": 19.52,
+"type": "word"
+},
+{
+"text": "Englisch",
+"start": 19.552,
+"end": 19.84,
+"type": "word"
+},
+{
+"text": "kriegt",
+"start": 19.88,
+"end": 20.0,
+"type": "word"
+},
+{
+"text": "nur",
+"start": 20.04,
+"end": 20.16,
+"type": "word"
+},
+{
+"text": "einen",
+"start": 20.2,
+"end": 20.4,
+"type": "word"
+},
+{
+"text": "einzigen",
+"start": 20.448,
+"end": 20.8,
+"type": "word"
+},
+{
+"text": "Nachmittag.",
+"start": 20.848,
+"end": 21.52,
+"type": "word"
+},
+{
+"text": "Ausgerechnet",
+"start": 21.6,
+"end": 22.16,
+"type": "word"
+},
+{
+"text": "nach",
+"start": 22.192,
+"end": 22.32,
+"type": "word"
+},
+{
+"text": "der",
+"start": 22.36,
+"end": 22.48,
+"type": "word"
+},
+{
+"text": "Mathe-Klausur.",
+"start": 22.52,
+"end": 23.36,
+"type": "word"
+},
+{
+"text": "Urteil:",
+"start": 23.805,
+"end": 24.241,
+"type": "word"
+},
+{
+"text": "Geklappt.",
+"start": 24.281,
+"end": 24.801,
+"type": "word"
+},
+{
+"text": "Nur",
+"start": 24.881,
+"end": 25.121,
+"type": "word"
+},
+{
+"text": "Englisch",
+"start": 25.169,
+"end": 25.441,
+"type": "word"
+},
+{
+"text": "kommt",
+"start": 25.468,
+"end": 25.601,
+"type": "word"
+},
+{
+"text": "zu",
+"start": 25.654,
+"end": 25.761,
+"type": "word"
+},
+{
+"text": "kurz.",
+"start": 25.841,
+"end": 26.401,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 26.431,
+"end": 26.721,
+"type": "word"
+},
+{
+"text": "Klausur,",
+"start": 26.761,
+"end": 27.201,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 27.217,
+"end": 27.281,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 27.301,
+"end": 27.441,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 27.481,
+"end": 27.601,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 27.621,
+"end": 27.681,
+"type": "word"
+},
+{
+"text": "die",
+"start": 27.701,
+"end": 27.761,
+"type": "word"
+},
+{
+"text": "Frage",
+"start": 27.814,
+"end": 28.081,
+"type": "word"
+},
+{
+"text": "zum",
+"start": 28.121,
+"end": 28.241,
+"type": "word"
+},
+{
+"text": "Kopieren.",
+"start": 28.301,
+"end": 28.881,
+"type": "word"
+}
+]
+}

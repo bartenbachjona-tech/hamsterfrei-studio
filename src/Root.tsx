@@ -23,6 +23,8 @@ import { Folge08, FOLGE08_SECONDS } from "./folgen/folge08";
 import { Folge09, FOLGE09_SECONDS } from "./folgen/folge09";
 import { Folge10, FOLGE10_SECONDS } from "./folgen/folge10";
 import { Folge11, FOLGE11_SECONDS } from "./folgen/folge11";
+import { Folge12, FOLGE12_SECONDS } from "./folgen/folge12";
+import { Folge12Cover as Folge12CoverEl } from "./scenes/folge12";
 
 // Jede neue Folge: src/folgen/folgeNN.tsx anlegen und hier eine Composition "FolgeNN" ergänzen.
 const FOLGEN: { id: string; component: React.FC; seconds: number }[] = [
@@ -46,12 +48,14 @@ const FOLGEN: { id: string; component: React.FC; seconds: number }[] = [
   { id: "Folge09", component: Folge09, seconds: FOLGE09_SECONDS },
   { id: "Folge10", component: Folge10, seconds: FOLGE10_SECONDS },
   { id: "Folge11", component: Folge11, seconds: FOLGE11_SECONDS },
+  { id: "Folge12", component: Folge12, seconds: FOLGE12_SECONDS },
 ];
 
 export const RemotionRoot: React.FC = () => (
   <>
     <Composition id="HamsterCut" component={HamsterCut} durationInFrames={1} fps={30} width={640} height={640} />
     <Composition id="Banner" component={Banner} durationInFrames={1} fps={30} width={2560} height={1440} />
+    <Composition id="Folge12Cover" component={Folge12CoverEl} durationInFrames={30} fps={30} width={1080} height={1920} />
     <Composition id="Avatar" component={Avatar} durationInFrames={1} fps={30} width={1080} height={1080} />
     {FOLGEN.map((f) => (
       <Composition key={f.id} id={f.id} component={f.component} durationInFrames={Math.round(f.seconds * 30)} fps={30} width={1080} height={1920} />

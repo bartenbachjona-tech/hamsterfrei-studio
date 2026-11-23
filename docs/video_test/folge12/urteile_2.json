@@ -1,0 +1,227 @@
+{
+ "G31": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Schüler-Lernplan, hat mit meinem Etsy-Shop nichts zu tun."
+ },
+ "C17": {
+  "bis_ende": 22,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "-",
+  "satz": "Lernplan klingt nach Schule, Claude darf ich eh nicht."
+ },
+ "C21": {
+  "bis_ende": 14,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Netter Hamster-Stil, aber Klausuren sind nicht mein Ding."
+ },
+ "C26": {
+  "bis_ende": 16,
+  "website": 3,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Sauber animiert, interessiert mich aber inhaltlich null."
+ },
+ "B27": {
+  "bis_ende": 12,
+  "website": 2,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "-",
+  "satz": "Lernplan kann ChatGPT auch, bin aus der Schule raus."
+ },
+ "B32": {
+  "bis_ende": 7,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Klausuren? Ich brauch Hilfe bei Präsentationen, nicht Schulzeug."
+ },
+ "B29": {
+  "bis_ende": 13,
+  "website": 2,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Wochenplan nett, aber ich schreibe Bewerbungen, keine Klausuren."
+ },
+ "B35": {
+  "bis_ende": 9,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "-",
+  "satz": "Schülerdaten an Claude geben? Nicht mein Thema, weiter."
+ },
+ "W26": {
+  "bis_ende": 6,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Ich suche eine Wohnung, keinen Lernplan."
+ },
+ "W30": {
+  "bis_ende": 5,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Klausurwoche einer Siebzehnjährigen, irrelevant für uns."
+ },
+ "H28": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Bräuchte eher so einen Plan für die Hochzeit."
+ },
+ "H31": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Süßer Hamster, aber JGA-Planung ist was anderes."
+ },
+ "T23": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Schulklausuren sind vorbei, mich stresst ELSTER."
+ },
+ "T19": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Schule hinter mir, kurz geschaut wegen Hamster."
+ },
+ "V20": {
+  "bis_ende": 9,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "hook_schwach",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Klausuren und Oma, nee, nächstes Video."
+ },
+ "V34": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Nichts für mich, sofort weiter."
+ },
+ "E45": {
+  "bis_ende": 32,
+  "website": 6,
+  "folgen": 5,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "-",
+  "satz": "Fürs Kind interessant, aber Claude erst ab 18."
+ },
+ "E50": {
+  "bis_ende": 18,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "werbung_misstrauen",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "-",
+  "satz": "Soll jetzt KI auch das Lernen planen? Nein danke."
+ },
+ "AT19": {
+  "bis_ende": 26,
+  "website": 3,
+  "folgen": 4,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "-",
+  "satz": "Klausurstress kenn ich, Plan mach ich aber selbst."
+ },
+ "CH22": {
+  "bis_ende": 20,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "-",
+  "satz": "Ganz nett, aber Bachelorarbeit ist ein anderes Kaliber."
+ },
+ "N15": {
+  "bis_ende": 42,
+  "website": 2,
+  "folgen": 6,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "-",
+  "satz": "Hamster lustig, Claude darf ich aber eh nicht."
+ },
+ "N40": {
+  "bis_ende": 4,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Kein Bezug, weggewischt."
+ },
+ "K22": {
+  "bis_ende": 24,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "-",
+  "satz": "Klausuren hab ich auch, aber ChatGPT reicht mir."
+ },
+ "F20": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "-",
+  "satz": "Theorieprüfung bräuchte ich, nicht Schul-Klausuren."
+ },
+ "L33": {
+  "bis_ende": 55,
+  "website": 5,
+  "folgen": 3,
+  "grund_weg": "-",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "-",
+  "satz": "Schüler unter 18 mit Claude? Englisch-Fehler zeigt die Grenzen."
+ }
+}

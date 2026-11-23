@@ -1,0 +1,18 @@
+BEISPIEL (vom Studio erfunden, 23.11.2026) – Klausurwoche einer Schülerin (Lea, 17, 12. Klasse) mit Minijob
+Alles erfunden, keine echte Person.
+
+Eingabe an Claude (wörtlich):
+Ich hab nächste Woche drei Klausuren und arbeite nebenbei. Kannst du mir einen Lernplan von Samstag bis Donnerstag machen? Kurz, pro Tag eine Zeile. Hier meine Infos:
+- Di: Mathe-Klausur (Analysis, Kurvendiskussion), da bin ich am schlechtesten
+- Mi: Englisch-Klausur (Text analysieren + Kommentar)
+- Do: Bio-Klausur (Genetik, viel auswendig)
+- Minijob Bäckerei: Sa 6-12 Uhr, Mo 15-19 Uhr, Mi 15-19 Uhr
+- So ist Omas 80. Geburtstag, 12-18 Uhr, da muss ich hin
+- Schule jeden Tag bis 13:15
+
+Vorher notierte Prüfpunkte (was ein guter Plan schaffen muss):
+1. Mathe (Di, schwächstes Fach) bekommt die meiste Zeit und kommt zuerst dran.
+2. Die Arbeitszeiten (Sa 6–12, Mo 15–19, Mi 15–19) und Omas Geburtstag (So 12–18) sind frei vom Lernen.
+3. Montag ist eng (Schule bis 13:15, Arbeit ab 15) → nur kurzes Lernfenster 13:15–15 bzw. abends.
+4. Mittwoch: Englisch-Klausur am Morgen, Arbeit 15–19 → Bio muss vorher (z. B. Sa/So/Di) schon angefangen sein, nicht alles auf Mi-Abend.
+5. Bio (auswendig) wird über mehrere Tage verteilt (Wiederholen), nicht nur am Vorabend.
