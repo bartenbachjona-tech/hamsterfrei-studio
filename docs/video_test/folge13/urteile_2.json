@@ -1,0 +1,227 @@
+{
+ "G31": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Notenrechner? Bin seit Jahren aus der Schule raus."
+ },
+ "C17": {
+  "bis_ende": 30,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "kein_claude_konto",
+  "satz": "Noten interessieren mich, aber Claude darf ich nicht nutzen."
+ },
+ "C21": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schulkram, nicht mein Thema, weiter."
+ },
+ "C26": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Netter Hamster, aber Notenrechner brauche ich nicht."
+ },
+ "B27": {
+  "bis_ende": 15,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kann ChatGPT auch, und Schule ist lange her."
+ },
+ "B32": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bringt mir für meine Präsentationen gar nichts."
+ },
+ "B29": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauche Bewerbungen, keinen Notenschnitt."
+ },
+ "B35": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Für Schüler gedacht, betrifft mich nicht."
+ },
+ "W26": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich suche eine Wohnung, keinen Notenrechner."
+ },
+ "W30": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hat nichts mit unserer Wohnungssuche zu tun."
+ },
+ "H28": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hochzeitsplanung wäre spannender, Noten nicht."
+ },
+ "H31": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Süßer Hamster, aber Schulnoten? Nee."
+ },
+ "T23": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Wenn das für ELSTER wäre, würde ich bleiben."
+ },
+ "T19": {
+  "bis_ende": 22,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schule ist vorbei, Noten zählen für mich nicht mehr."
+ },
+ "V20": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Mathe-Brüche im Feed, schnell weiter."
+ },
+ "V34": {
+  "bis_ende": 6,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Komplett irrelevant für mich."
+ },
+ "E45": {
+  "bis_ende": 48,
+  "website": 9,
+  "folgen": 7,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Nützlich fürs Kind, aber Gewichtung der Fächer stimmt so nicht."
+ },
+ "E50": {
+  "bis_ende": 30,
+  "website": 2,
+  "folgen": 2,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Ehrlich, dass der Fehler gezeigt wird, trotzdem traue ich KI nicht."
+ },
+ "AT19": {
+  "bis_ende": 16,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schulaufgaben sagt man in Österreich nicht, Uni ist anders."
+ },
+ "CH22": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schweizer Noten laufen andersrum, passt nicht für mich."
+ },
+ "N15": {
+  "bis_ende": 42,
+  "website": 3,
+  "folgen": 6,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "kein_claude_konto",
+  "satz": "Schnitt rechnen wäre cool, aber Claude erst ab 18."
+ },
+ "N40": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hamster mit Zeigestab, Noten, weg damit."
+ },
+ "K22": {
+  "bis_ende": 16,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Notenschnitt rechnet mir die Hochschule ohnehin aus."
+ },
+ "F20": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauche Hilfe bei der Theorieprüfung, nicht bei Noten."
+ },
+ "L33": {
+  "bis_ende": 55,
+  "website": 6,
+  "folgen": 3,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Sauber nachgerechnet, aber mündliche Noten gewichten wir anders."
+ }
+}

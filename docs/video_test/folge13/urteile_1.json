@@ -1,0 +1,227 @@
+{
+ "S16": {
+  "bis_ende": 38,
+  "website": 3,
+  "folgen": 6,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Notenrechner hab ich als App, Claude darf ich eh nicht."
+ },
+ "S17a": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich hab Punkte, keine Noten, und W-Seminar-Stress."
+ },
+ "S17b": {
+  "bis_ende": 18,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Schulaufgaben? Bei uns heißt das Klausuren, egal."
+ },
+ "S18a": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Q13 hat Punkte, Notenrechner brauch ich nicht mehr."
+ },
+ "S18b": {
+  "bis_ende": 16,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "gratis_alternative",
+  "satz": "Mein Schnitt steht im Abirechner, das kann ChatGPT auch."
+ },
+ "S19": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ganz nett, aber ich kämpfe gerade mit Bewerbungen."
+ },
+ "A16": {
+  "bis_ende": 30,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Rechnen kann ich selbst, Anschreiben wäre interessanter."
+ },
+ "A18": {
+  "bis_ende": 6,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schule ist vorbei, ich brauch eine Ausbildung."
+ },
+ "A20": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Noten interessieren mich nicht mehr, Steuer schon."
+ },
+ "A22": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schulkram, weiter."
+ },
+ "U19": {
+  "bis_ende": 7,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Abiturnoten sind Geschichte, Hausarbeit drückt mehr."
+ },
+ "U21": {
+  "bis_ende": 6,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Für Schüler gemacht, nicht für mich."
+ },
+ "U23": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Excel-Formel in zehn Sekunden, dafür kein Video nötig."
+ },
+ "U24": {
+  "bis_ende": 22,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Als Lehramtsstudentin spannend, aber Gewichtung macht die Schule."
+ },
+ "U22w": {
+  "bis_ende": 4,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich suche ein Zimmer, keinen Notenschnitt."
+ },
+ "U20b": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "BAföG-Formulare wären hilfreich, das hier nicht."
+ },
+ "U25": {
+  "bis_ende": 8,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "werbung_misstrauen",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Ein Durchschnitt, wirklich? Trivialer KI-Content."
+ },
+ "M18": {
+  "bis_ende": 10,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Mir egal, ich will Geld verdienen."
+ },
+ "M30": {
+  "bis_ende": 9,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Vielleicht für meinen Sohn später, jetzt nicht."
+ },
+ "R19": {
+  "bis_ende": 4,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hat nix mit Vinted zu tun, weiter."
+ },
+ "R26": {
+  "bis_ende": 3,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schulthema, null relevant."
+ },
+ "R35": {
+  "bis_ende": 3,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Weiter, ich brauch Anzeigentexte."
+ },
+ "R45": {
+  "bis_ende": 9,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Mein Kind ist noch in der Grundschule."
+ },
+ "G24": {
+  "bis_ende": 3,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Rechnungen ja, Schulnoten nein."
+ },
+ "G28": {
+  "bis_ende": 8,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Netter Hamster-Stil, Thema aber nichts für mich."
+ }
+}

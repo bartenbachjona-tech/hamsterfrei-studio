@@ -1,0 +1,26 @@
+BEISPIEL (vom Studio erfunden, 24.11.2026) – Notenrechner fürs Halbjahr (Ben, 16, 10. Klasse)
+Alles erfunden, keine echte Person, keine echten Noten. Die Gewichtung (Schulaufgabe doppelt) ist Bens Wunsch, keine Schul- oder Bundeslandregel.
+
+Eingabe an Claude (wörtlich, EIN Satz):
+Bau mir einen Notenrechner fürs Halbjahr, in den ich pro Fach meine Noten eintrage, wobei Schulaufgaben doppelt und mündliche Noten einfach zählen, und der mir den Schnitt pro Fach und insgesamt anzeigt.
+
+Beispielnoten, die danach eingetippt werden:
+- Mathe: Schulaufgaben 4, 3 · mündlich 2
+- Deutsch: Schulaufgaben 2 · mündlich 3, 2
+- Englisch: Schulaufgaben 3, 2 · mündlich 2, 1
+- Bio: (keine Schulaufgabe) · mündlich 2, 3
+
+Handrechnung (vorher gemacht, Kontrolle):
+- Mathe: (4·2 + 3·2 + 2) / 5 = 16/5 = 3,20
+- Deutsch: (2·2 + 3 + 2) / 4 = 9/4 = 2,25
+- Englisch: (3·2 + 2·2 + 2 + 1) / 6 = 13/6 = 2,17
+- Bio: (2 + 3) / 2 = 2,50
+- Gesamt als Schnitt der Fachschnitte: (3,20 + 2,25 + 2,1667 + 2,50) / 4 = 10,1167/4 = 2,53
+- Gesamt über alle Noten gewichtet (anderer Weg): (16 + 9 + 13 + 5) / (5 + 4 + 6 + 2) = 43/17 = 2,53  (zufällig fast gleich, 2,529 vs. 2,529)
+
+Vorher notierte Prüfpunkte (was ein guter Rechner schaffen muss):
+1. Schulaufgaben zählen wirklich doppelt (Mathe muss 3,20 ergeben, nicht 3,00 bei einfacher Zählung).
+2. Ein Fach ohne Schulaufgabe (Bio) funktioniert und ergibt 2,50.
+3. Fächer kann man selbst hinzufügen/benennen (nicht fest vorgegeben).
+4. Gesamtschnitt stimmt mit der Handrechnung (2,53).
+5. Leere Felder oder falsche Eingaben (z. B. 7) machen keinen Unsinn.

@@ -1,0 +1,496 @@
+{
+"words": [
+{
+"text": "Zwölf",
+"start": 0.069,
+"end": 0.24,
+"type": "word"
+},
+{
+"text": "Noten,",
+"start": 0.3,
+"end": 0.72,
+"type": "word"
+},
+{
+"text": "vier",
+"start": 0.768,
+"end": 0.96,
+"type": "word"
+},
+{
+"text": "Fächer,",
+"start": 1.0,
+"end": 1.44,
+"type": "word"
+},
+{
+"text": "ein",
+"start": 1.48,
+"end": 1.6,
+"type": "word"
+},
+{
+"text": "Satz.",
+"start": 1.66,
+"end": 2.0,
+"type": "word"
+},
+{
+"text": "Ich",
+"start": 2.1,
+"end": 2.4,
+"type": "word"
+},
+{
+"text": "hab",
+"start": 2.42,
+"end": 2.48,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 2.526,
+"end": 2.8,
+"type": "word"
+},
+{
+"text": "einen",
+"start": 2.827,
+"end": 2.96,
+"type": "word"
+},
+{
+"text": "Notenrechner",
+"start": 3.02,
+"end": 3.52,
+"type": "word"
+},
+{
+"text": "bauen",
+"start": 3.56,
+"end": 3.68,
+"type": "word"
+},
+{
+"text": "lassen.",
+"start": 3.726,
+"end": 4.08,
+"type": "word"
+},
+{
+"text": "Ein",
+"start": 4.2,
+"end": 4.56,
+"type": "word"
+},
+{
+"text": "Fach",
+"start": 4.608,
+"end": 4.8,
+"type": "word"
+},
+{
+"text": "zählt",
+"start": 4.88,
+"end": 5.12,
+"type": "word"
+},
+{
+"text": "dabei",
+"start": 5.147,
+"end": 5.28,
+"type": "word"
+},
+{
+"text": "zu",
+"start": 5.333,
+"end": 5.44,
+"type": "word"
+},
+{
+"text": "viel.",
+"start": 5.504,
+"end": 6.0,
+"type": "word"
+},
+{
+"text": "Mein",
+"start": 6.048,
+"end": 6.24,
+"type": "word"
+},
+{
+"text": "Satz:",
+"start": 6.28,
+"end": 6.8,
+"type": "word"
+},
+{
+"text": "Schulaufgaben",
+"start": 6.86,
+"end": 7.52,
+"type": "word"
+},
+{
+"text": "doppelt,",
+"start": 7.6,
+"end": 8.08,
+"type": "word"
+},
+{
+"text": "mündliche",
+"start": 8.12,
+"end": 8.48,
+"type": "word"
+},
+{
+"text": "Noten",
+"start": 8.54,
+"end": 8.8,
+"type": "word"
+},
+{
+"text": "einfach.",
+"start": 8.87,
+"end": 9.44,
+"type": "word"
+},
+{
+"text": "Bens",
+"start": 9.64,
+"end": 10.16,
+"type": "word"
+},
+{
+"text": "Mathe:",
+"start": 10.2,
+"end": 10.56,
+"type": "word"
+},
+{
+"text": "Schulaufgaben",
+"start": 10.66,
+"end": 11.44,
+"type": "word"
+},
+{
+"text": "vier",
+"start": 11.504,
+"end": 11.76,
+"type": "word"
+},
+{
+"text": "und",
+"start": 11.8,
+"end": 11.92,
+"type": "word"
+},
+{
+"text": "drei,",
+"start": 12.0,
+"end": 12.48,
+"type": "word"
+},
+{
+"text": "mündlich",
+"start": 12.52,
+"end": 12.88,
+"type": "word"
+},
+{
+"text": "eine",
+"start": 12.928,
+"end": 13.12,
+"type": "word"
+},
+{
+"text": "Zwei.",
+"start": 13.2,
+"end": 13.6,
+"type": "word"
+},
+{
+"text": "Rechner:",
+"start": 13.733,
+"end": 14.56,
+"type": "word"
+},
+{
+"text": "3,20.",
+"start": 14.608,
+"end": 15.64,
+"type": "word"
+},
+{
+"text": "Von",
+"start": 15.71,
+"end": 15.92,
+"type": "word"
+},
+{
+"text": "Hand:",
+"start": 15.984,
+"end": 16.48,
+"type": "word"
+},
+{
+"text": "auch",
+"start": 16.528,
+"end": 16.72,
+"type": "word"
+},
+{
+"text": "3,20.",
+"start": 16.752,
+"end": 17.6,
+"type": "word"
+},
+{
+"text": "Bio",
+"start": 17.76,
+"end": 18.24,
+"type": "word"
+},
+{
+"text": "ohne",
+"start": 18.288,
+"end": 18.48,
+"type": "word"
+},
+{
+"text": "Schulaufgabe",
+"start": 18.52,
+"end": 19.12,
+"type": "word"
+},
+{
+"text": "klappt",
+"start": 19.16,
+"end": 19.44,
+"type": "word"
+},
+{
+"text": "auch.",
+"start": 19.504,
+"end": 19.92,
+"type": "word"
+},
+{
+"text": "Gesamt",
+"start": 19.96,
+"end": 20.32,
+"type": "word"
+},
+{
+"text": "2,53.",
+"start": 20.384,
+"end": 21.68,
+"type": "word"
+},
+{
+"text": "Stimmt.",
+"start": 21.76,
+"end": 22.44,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 22.48,
+"end": 22.64,
+"type": "word"
+},
+{
+"text": "jedes",
+"start": 22.7,
+"end": 22.96,
+"type": "word"
+},
+{
+"text": "Fach",
+"start": 23.008,
+"end": 23.2,
+"type": "word"
+},
+{
+"text": "zählt",
+"start": 23.24,
+"end": 23.44,
+"type": "word"
+},
+{
+"text": "gleich.",
+"start": 23.497,
+"end": 23.92,
+"type": "word"
+},
+{
+"text": "Bio",
+"start": 24.04,
+"end": 24.4,
+"type": "word"
+},
+{
+"text": "mit",
+"start": 24.44,
+"end": 24.56,
+"type": "word"
+},
+{
+"text": "zwei",
+"start": 24.608,
+"end": 24.8,
+"type": "word"
+},
+{
+"text": "mündlichen",
+"start": 24.84,
+"end": 25.28,
+"type": "word"
+},
+{
+"text": "Noten",
+"start": 25.34,
+"end": 25.6,
+"type": "word"
+},
+{
+"text": "wiegt",
+"start": 25.62,
+"end": 25.76,
+"type": "word"
+},
+{
+"text": "so",
+"start": 25.813,
+"end": 25.92,
+"type": "word"
+},
+{
+"text": "viel",
+"start": 25.952,
+"end": 26.08,
+"type": "word"
+},
+{
+"text": "wie",
+"start": 26.12,
+"end": 26.24,
+"type": "word"
+},
+{
+"text": "Mathe.",
+"start": 26.28,
+"end": 26.72,
+"type": "word"
+},
+{
+"text": "Urteil:",
+"start": 27.165,
+"end": 27.521,
+"type": "word"
+},
+{
+"text": "Geklappt.",
+"start": 27.641,
+"end": 28.241,
+"type": "word"
+},
+{
+"text": "Nur",
+"start": 28.321,
+"end": 28.561,
+"type": "word"
+},
+{
+"text": "sind",
+"start": 28.609,
+"end": 28.801,
+"type": "word"
+},
+{
+"text": "alle",
+"start": 28.833,
+"end": 28.961,
+"type": "word"
+},
+{
+"text": "Fächer",
+"start": 29.001,
+"end": 29.281,
+"type": "word"
+},
+{
+"text": "gleich",
+"start": 29.315,
+"end": 29.521,
+"type": "word"
+},
+{
+"text": "schwer.",
+"start": 29.59,
+"end": 30.361,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 30.406,
+"end": 30.881,
+"type": "word"
+},
+{
+"text": "Schnitt,",
+"start": 30.913,
+"end": 31.281,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 31.313,
+"end": 31.441,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 31.461,
+"end": 31.601,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 31.621,
+"end": 31.681,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 31.721,
+"end": 31.841,
+"type": "word"
+},
+{
+"text": "den",
+"start": 31.861,
+"end": 31.921,
+"type": "word"
+},
+{
+"text": "Satz",
+"start": 31.981,
+"end": 32.241,
+"type": "word"
+},
+{
+"text": "zum",
+"start": 32.281,
+"end": 32.401,
+"type": "word"
+},
+{
+"text": "Kopieren.",
+"start": 32.441,
+"end": 33.041,
+"type": "word"
+}
+]
+}
