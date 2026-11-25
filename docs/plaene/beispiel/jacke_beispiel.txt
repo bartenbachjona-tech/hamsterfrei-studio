@@ -1,0 +1,21 @@
+BEISPIEL (vom Studio erfunden, 25.11.2026) – Folge14 Vorher/Nachher „Winterjacken-Anzeige“
+Person: Emma, 19 (erfunden). Kein Portalname, keine Marke, keine echten Fotos.
+
+VORHER (Emmas Anzeige, so wie viele aussehen):
+Titel: Winterjacke
+Text: Jacke, gut erhalten, VB
+
+Emmas Notizen (chaotisch, so an Claude geschickt):
+"winterjacke schwarz, damen gr M, mit kapuze, kunstfell am rand abnehmbar, 2 winter getragen, innen warm gefüttert,
+reißverschluss geht, am rechten ärmel unten kleiner heller fleck geht nicht raus, hab 120 gezahlt,
+abholung in würzburg oder versand, will sie diese woche loswerden"
+
+Frage an Claude (wörtlich):
+"Mach mir aus meiner Anzeige eine bessere Kleinanzeige. Erfinde nichts dazu, frag nach, wenn was fehlt. Meine Anzeige: 'Jacke, gut erhalten, VB'. Meine Notizen: <Notizen oben>"
+
+Prüfpunkte, VORHER festgelegt (Studio):
+1. Titel enthält Suchwörter (Winterjacke, Damen, Größe M, Kapuze/schwarz)?
+2. Fleck wird ehrlich genannt (nicht versteckt)?
+3. Nichts erfunden (z. B. kein „Nichtraucherhaushalt“, kein Markenname, kein Material, das Emma nicht nannte)?
+4. Abholung/Versand + Ort drin?
+5. Preis: nennt Claude einen Preis? Wenn ja – begründet oder geraten? (Emma hat keinen Wunschpreis genannt)

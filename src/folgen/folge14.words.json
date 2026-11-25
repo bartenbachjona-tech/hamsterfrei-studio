@@ -1,0 +1,550 @@
+{
+"words": [
+{
+"text": "Gleiche",
+"start": 0.068,
+"end": 0.24,
+"type": "word"
+},
+{
+"text": "Jacke,",
+"start": 0.272,
+"end": 0.56,
+"type": "word"
+},
+{
+"text": "zwei",
+"start": 0.592,
+"end": 0.72,
+"type": "word"
+},
+{
+"text": "Anzeigen.",
+"start": 0.8,
+"end": 1.36,
+"type": "word"
+},
+{
+"text": "Links",
+"start": 1.4,
+"end": 1.6,
+"type": "word"
+},
+{
+"text": "die",
+"start": 1.64,
+"end": 1.76,
+"type": "word"
+},
+{
+"text": "Zeile,",
+"start": 1.787,
+"end": 2.04,
+"type": "word"
+},
+{
+"text": "die",
+"start": 2.05,
+"end": 2.08,
+"type": "word"
+},
+{
+"text": "du",
+"start": 2.133,
+"end": 2.24,
+"type": "word"
+},
+{
+"text": "sonst",
+"start": 2.28,
+"end": 2.48,
+"type": "word"
+},
+{
+"text": "schreibst.",
+"start": 2.5,
+"end": 2.88,
+"type": "word"
+},
+{
+"text": "Rechts",
+"start": 2.96,
+"end": 3.28,
+"type": "word"
+},
+{
+"text": "hat",
+"start": 3.3,
+"end": 3.36,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 3.417,
+"end": 3.76,
+"type": "word"
+},
+{
+"text": "nur",
+"start": 3.8,
+"end": 3.92,
+"type": "word"
+},
+{
+"text": "Emmas",
+"start": 3.96,
+"end": 4.24,
+"type": "word"
+},
+{
+"text": "Notizen",
+"start": 4.28,
+"end": 4.64,
+"type": "word"
+},
+{
+"text": "benutzt.",
+"start": 4.68,
+"end": 5.48,
+"type": "word"
+},
+{
+"text": "Fast.",
+"start": 5.568,
+"end": 6.12,
+"type": "word"
+},
+{
+"text": "Erstens",
+"start": 6.187,
+"end": 6.56,
+"type": "word"
+},
+{
+"text": "der",
+"start": 6.58,
+"end": 6.64,
+"type": "word"
+},
+{
+"text": "Titel:",
+"start": 6.72,
+"end": 7.12,
+"type": "word"
+},
+{
+"text": "schwarz,",
+"start": 7.2,
+"end": 7.84,
+"type": "word"
+},
+{
+"text": "Damen,",
+"start": 7.893,
+"end": 8.24,
+"type": "word"
+},
+{
+"text": "Größe",
+"start": 8.267,
+"end": 8.56,
+"type": "word"
+},
+{
+"text": "M,",
+"start": 8.68,
+"end": 8.88,
+"type": "word"
+},
+{
+"text": "Kapuze.",
+"start": 8.92,
+"end": 9.64,
+"type": "word"
+},
+{
+"text": "Genau",
+"start": 9.69,
+"end": 10.0,
+"type": "word"
+},
+{
+"text": "danach",
+"start": 10.06,
+"end": 10.32,
+"type": "word"
+},
+{
+"text": "sucht",
+"start": 10.373,
+"end": 10.64,
+"type": "word"
+},
+{
+"text": "man.",
+"start": 10.7,
+"end": 10.96,
+"type": "word"
+},
+{
+"text": "Zweitens",
+"start": 11.08,
+"end": 11.6,
+"type": "word"
+},
+{
+"text": "der",
+"start": 11.64,
+"end": 11.76,
+"type": "word"
+},
+{
+"text": "Fleck",
+"start": 11.82,
+"end": 12.08,
+"type": "word"
+},
+{
+"text": "am",
+"start": 12.107,
+"end": 12.16,
+"type": "word"
+},
+{
+"text": "Ärmel.",
+"start": 12.24,
+"end": 12.76,
+"type": "word"
+},
+{
+"text": "Der",
+"start": 12.81,
+"end": 12.96,
+"type": "word"
+},
+{
+"text": "steht",
+"start": 13.0,
+"end": 13.2,
+"type": "word"
+},
+{
+"text": "ehrlich",
+"start": 13.24,
+"end": 13.52,
+"type": "word"
+},
+{
+"text": "als",
+"start": 13.56,
+"end": 13.68,
+"type": "word"
+},
+{
+"text": "Mangel",
+"start": 13.72,
+"end": 13.92,
+"type": "word"
+},
+{
+"text": "drin.",
+"start": 13.973,
+"end": 14.32,
+"type": "word"
+},
+{
+"text": "Drittens",
+"start": 14.44,
+"end": 14.96,
+"type": "word"
+},
+{
+"text": "der",
+"start": 14.98,
+"end": 15.04,
+"type": "word"
+},
+{
+"text": "Preis.",
+"start": 15.133,
+"end": 15.88,
+"type": "word"
+},
+{
+"text": "Claude",
+"start": 15.92,
+"end": 16.16,
+"type": "word"
+},
+{
+"text": "rät",
+"start": 16.2,
+"end": 16.4,
+"type": "word"
+},
+{
+"text": "nicht.",
+"start": 16.453,
+"end": 16.88,
+"type": "word"
+},
+{
+"text": "Er",
+"start": 16.933,
+"end": 17.04,
+"type": "word"
+},
+{
+"text": "lässt",
+"start": 17.067,
+"end": 17.2,
+"type": "word"
+},
+{
+"text": "die",
+"start": 17.24,
+"end": 17.36,
+"type": "word"
+},
+{
+"text": "Lücke",
+"start": 17.4,
+"end": 17.6,
+"type": "word"
+},
+{
+"text": "und",
+"start": 17.64,
+"end": 17.76,
+"type": "word"
+},
+{
+"text": "fragt",
+"start": 17.808,
+"end": 18.08,
+"type": "word"
+},
+{
+"text": "nach.",
+"start": 18.16,
+"end": 18.56,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 18.624,
+"end": 18.88,
+"type": "word"
+},
+{
+"text": "zwei",
+"start": 18.944,
+"end": 19.2,
+"type": "word"
+},
+{
+"text": "Wörter",
+"start": 19.24,
+"end": 19.52,
+"type": "word"
+},
+{
+"text": "sind",
+"start": 19.568,
+"end": 19.76,
+"type": "word"
+},
+{
+"text": "erfunden.",
+"start": 19.8,
+"end": 20.4,
+"type": "word"
+},
+{
+"text": "Beim",
+"start": 20.507,
+"end": 20.88,
+"type": "word"
+},
+{
+"text": "Waschen.",
+"start": 20.96,
+"end": 21.68,
+"type": "word"
+},
+{
+"text": "Davon",
+"start": 21.74,
+"end": 22.08,
+"type": "word"
+},
+{
+"text": "stand",
+"start": 22.12,
+"end": 22.32,
+"type": "word"
+},
+{
+"text": "in",
+"start": 22.347,
+"end": 22.4,
+"type": "word"
+},
+{
+"text": "Emmas",
+"start": 22.46,
+"end": 22.72,
+"type": "word"
+},
+{
+"text": "Notizen",
+"start": 22.78,
+"end": 23.2,
+"type": "word"
+},
+{
+"text": "nichts.",
+"start": 23.257,
+"end": 23.68,
+"type": "word"
+},
+{
+"text": "Urteil:",
+"start": 24.213,
+"end": 24.72,
+"type": "word"
+},
+{
+"text": "Viel",
+"start": 24.8,
+"end": 25.04,
+"type": "word"
+},
+{
+"text": "besser.",
+"start": 25.109,
+"end": 25.52,
+"type": "word"
+},
+{
+"text": "Aber",
+"start": 25.584,
+"end": 25.84,
+"type": "word"
+},
+{
+"text": "lies",
+"start": 25.888,
+"end": 26.08,
+"type": "word"
+},
+{
+"text": "jeden",
+"start": 26.133,
+"end": 26.4,
+"type": "word"
+},
+{
+"text": "Satz",
+"start": 26.46,
+"end": 26.8,
+"type": "word"
+},
+{
+"text": "gegen,",
+"start": 26.827,
+"end": 27.12,
+"type": "word"
+},
+{
+"text": "auch",
+"start": 27.168,
+"end": 27.36,
+"type": "word"
+},
+{
+"text": "den",
+"start": 27.4,
+"end": 27.52,
+"type": "word"
+},
+{
+"text": "mit",
+"start": 27.56,
+"end": 27.68,
+"type": "word"
+},
+{
+"text": "dem",
+"start": 27.7,
+"end": 27.76,
+"type": "word"
+},
+{
+"text": "Foto.",
+"start": 27.856,
+"end": 28.32,
+"type": "word"
+},
+{
+"text": "Kommentier",
+"start": 28.38,
+"end": 28.96,
+"type": "word"
+},
+{
+"text": "Jacke,",
+"start": 29.008,
+"end": 29.44,
+"type": "word"
+},
+{
+"text": "dann",
+"start": 29.472,
+"end": 29.6,
+"type": "word"
+},
+{
+"text": "schick",
+"start": 29.62,
+"end": 29.84,
+"type": "word"
+},
+{
+"text": "ich",
+"start": 29.86,
+"end": 29.92,
+"type": "word"
+},
+{
+"text": "dir",
+"start": 29.94,
+"end": 30.0,
+"type": "word"
+},
+{
+"text": "die",
+"start": 30.04,
+"end": 30.16,
+"type": "word"
+},
+{
+"text": "Frage",
+"start": 30.213,
+"end": 30.48,
+"type": "word"
+},
+{
+"text": "zum",
+"start": 30.52,
+"end": 30.64,
+"type": "word"
+},
+{
+"text": "Kopieren.",
+"start": 30.7,
+"end": 31.28,
+"type": "word"
+}
+]
+}
