@@ -1,4 +1,4 @@
-# Hamsterfrei – Auswertung aktuell (Stand 23.11.2026, Marke v2)
+# Hamsterfrei – Auswertung aktuell (Stand 25.11.2026, Marke v2)
 
 Geht PRODUKTION.md vor, steht unter KANAL_REGELN, `docs/brand/*` und STUDIO_HANDBUCH. Die Auswertungsroutine (geplante Aufgabe, alle 2 Tage, wie bei Groschenfall/Schattengast; muss noch angelegt werden) aktualisiert diese Datei und `state/zahlen.md`. Befunde werden als konkrete Regeländerung in `docs/brand/*` bzw. hier eingetragen, nicht nur ins Log (Handbuch G7).
 
@@ -34,6 +34,21 @@ Für **alle bisherigen Videos** (Folge 01, S1 „Seminararbeit bis 10.11.?“, V
 - **Instagram:** S1 1.875, S2 380, Rest 104–157. Keine Insights (kein Creator-Konto). S5-2 nie gepostet.
 - **Funnel:** 0 Wort-Kommentare, 0 DMs; Verkäufe nicht messbar (Digistore nicht eingeloggt).
 - **07.11. und 08.11.: kein Video** (Soll 1/Tag) → Jona gemeldet.
+
+## Erhebung 25.11.2026 ~23:30 (alle drei Plattformen, Details state/zahlen.md)
+- **TikTok:** **Folge12 (E2, Paar 1) Zählwert 53,5 h: 612 / 5,57 s / 2,0 % (≈12) / 0 Follower**, FYP 99,3 % (5,5 h: 201 / 4,4 s → Drift +1,17 s). **Folge13 (E1, Paar 1)** 29,5 h vorläufig: 658 / 5,74 s / 2,7 % (≈18) / 0. **Folge14 (E1, Paar 2)** 5,5 h vorläufig: 251 / 6,12 s / 3,0 % (≈8). Folge11 77,5 h: 438 / 3,51 / 1,0 % (stabil gegen 29,5 h). Folge08 7 T: 708 / 4,01 / 1,4 %, Suche 1,1 %. Konto 7 T: 4,8K Aufrufe (+158 % – Basiseffekt, kein Wachstumsbeleg), Profilaufrufe 22, 3 Kommentare, 0 Shares, FYP 90,9 %, Suche 8,6 %, Gefolgt 0 %, netto +5 Follower (Demografie geerbt, unverändert). Median letzte 10 = 525 (Schwelle 1.575), seit 18.11. = 683 → kein Ausreißer. Absprung weiter 0:01 bei allen.
+- **YouTube:** F12 277 / 53,5 h, 22 % bis Ende ≈ 61 echte Zuschauer (3,4× Median ≈ 82, aber < 150 → kein Ausreißer; nur Nebenbeobachtung zu E2, nicht gedeutet). F13 81 / 29,5 h, F14 54 / 5,5 h, F11 35. 0 Abos.
+- **Instagram:** pausiert, unverändert (7 Beiträge, 1 Follower, alte Bio).
+- **Funnel:** 0 Kommentar-Wörter (KLAUSUR, SCHNITT, JACKE), 1 Kritik-Kommentar (F13), 0 echte Leads/DMs, Verkäufe n. v.
+
+## Befunde 25.11. (nach Kritiker-Runde, gelten als Regeln)
+1. **Bindungssprung ab F12, bei beiden Varianten:** Ø vorher (F08–F11) 3,5–4,4 s, jetzt F12 5,57 (Zählwert), F13 5,74 / F14 6,12 (vorläufig). Weil E1 (F13, F14) genauso hoch liegt, ist es **kein Varianten-Effekt**. Absprung bleibt bei 0:01 → der Gewinn entsteht **hinter** der ersten Sekunde, die der Test gar nicht verändert. Ursache unbekannt.
+2. **Erwartung NICHT angehoben (Kritiker übernommen):** Basis ist ein einziger Zählwert. Das Ø-Band gilt als **„unter Beobachtung“**; neu gesetzt wird es erst ab **3 Zählwerten auf dem neuen Niveau** (frühestens Lauf 29.11.). Pflicht-Ursache „nach oben verfehlt“ (F12 Ø 5,57 > 5,5): Bindungssprung Nr. 1; Änderung = Prüfauftrag Nr. 5. Ein breiteres E2-Band würde den Testeffekt vorwegnehmen → nicht gemacht.
+3. **Test läuft unverändert.** Paar 1 wird am 27.11. mit F13 bei 77,5 h entschieden; kein Zwischenstand an Jona. Ungleiches Ablesealter im Paar (53,5 h vs. 77,5 h) bleibt per Design (gleicht sich über die wechselnde Reihenfolge aus, Befund 23.11. Nr. 1), aber **neu: Der Lauf 27.11. liest F12 zusätzlich bei 101,5 h und F13 bei 77,5 h, und der Lauf 29.11. F14 bei 101,5 h** → so wird die Drift ab 53,5 h direkt gemessen. Ist sie > 0,3 s, wird die Ablesezeit-Regel überprüft. 0,5-s-Schwelle bleibt; Ergebnis wird am Ende als **„schwach belegt“** gekennzeichnet (≥ 4/5 zufällig ≈ 19 %, Streuung innerhalb einer Variante unbekannt).
+4. **Drift:** F12 5,5 h → 53,5 h +1,17 s → 5,5-h-Werte zählen weiter nie. F11 29,5 → 77,5 h stabil (nur 1 Video, Indiz).
+5. **Prüfauftrag Produktionslauf (ohne neue Testvariable):** Im Log je Video notieren: Länge in s, Musik, Untertitel-/Vorlagen-Version, Caption-Anfang, Thema – und **prüfen, ob sich am 23.11. an E1 unbeabsichtigt etwas mitgeändert hat** (Vorlage, Schnitt, Untertitel). Naheliegendster Confound: Länge (F12–F14 30–34 s vs. F11 36,4 s). Die Auswertung notiert dazu Traffic-Quelle je Video.
+6. **Geschäftsnutzen ehrlich:** 0 Leads, 0 Shares, 0 Follower aus F12–F14, ganz ≈ 2–3 % (≈ 12–18 Personen). Der Test optimiert eine Zwischengröße; Engpass „Umwandlung“ bleibt der vorgemerkte nächste Test.
+7. **Konto-Frage, Begründung korrigiert:** Gefolgt 0 % zeigt nur, dass die geerbten Follower tot sind – es belegt **nicht**, dass es keinen Deckel gibt. Ehrlicher Stand: **keine Evidenz in beide Richtungen; Empfehlung behalten wegen Wechselkosten.** Neu entscheiden, wenn (a) der TikTok-Median seit 18.11. unter 400 fällt oder (b) DE-Anteil der Zuschauer unter 70 % fällt oder (c) 10 Videos mit Ø ≥ 5,5 s trotzdem 0 Follower bringen.
 
 ## Erhebung 23.11.2026 ~23:30 (alle drei Plattformen, Details state/zahlen.md)
 - **TikTok:** **Folge12 (E2, Paar 1)** 5,5 h: 201 / 4,4 s / 1,3 % / 0 Follower, Absprung weiter 0:01 (nur vorläufig). **Folge11** 29,5 h: 434 / 3,5 s / 1,0 % / +1 – im Rahmen (untere Kante). **Folge10** 77,5 h: 826 / 4,28 s / 1,3 % – gegen 29,5 h (624 / 4,43) nicht stabil (Aufrufe +32 %, Ø −0,15 s) → kein 48-h-Wert (RA). F09 jetzt 719, F08 703. Folge06 7 T: 258 / 3,64 s / 1,5 %. Konto 7 T: 3,6K Aufrufe (+39 %), Profilaufrufe 18 (−36 %), 2 Kommentare, 0 Shares, Gefolgt 0 %, Suche 9 %, netto +6 Follower. Kein Ausreißer.
@@ -202,6 +217,7 @@ Gestrichen (Kritiker 08.11.): Follower Δ 7 T (Rauschen ±2 auf totem Konto), Su
 - **S2-Follow-up (YouTube-Ausreißer 698):** Prüfungsgespräch-Video am **10.11.** (Abgabe heute → jetzt kommt die Prüfung), also vor dem Teststart, als Follow-up markiert. Mit Werbung nur nach Jonas OK.
 
 ## Offene Messpunkte (nächster Lauf)
+- **Stand 25.11. (Lauf 27.11.):** **Folge13 (E1) bei 77,5 h = Zählwert → Paar 1 entscheiden**; F12 bei 101,5 h (Drift-Check); **Folge14 (E1, Paar 2) bei 53,5 h = Zählwert**; Folge15 (E2) 29,5 h vorläufig; Folge16 5,5 h; 7-T-Werte F09 (26.11.), F10 (27.11.); Länge/Version je Video aus dem Log (Befund 25.11. Nr. 5).
 - **Stand 23.11. (Lauf 25.11.):** **Folge12 (E2) bei 53,5 h = zählender Wert**; Folge13 (E1) 29,5 h nur vorläufig (zählt am 27.11. bei 77,5 h); Folge11 bei 77,5 h (stabil?); 7-T-Werte Folge07 (24.11.), Folge08 (25.11.); YouTube F12 48 h; Zuschauer-Demografie F10/F11; IG nur Kurzblick.
 - **Stand 21.11. (Lauf 23.11.):** Folge10 bei 77,5 h (48-h-Fenster 22.11. 12–24 verpasst → stabiler Wert gegen 29,5 h 624/4,43 prüfen); Folge11 48 h = 24.11. → Lauf 23.11. nur 29,5 h (vorläufig); Folge12 (Einstiegs-Test Paar 1) 5,5 h; 7-T-Werte Folge06 (23.11.), Folge07 (24.11.); Zuschauer F10; Profilaufrufe/Kommentare 7 T; IG-Entscheidung Jona.
 - **Stand 19.11. (Lauf 21.11.):** Folge09 48 h (21.11. 12–24 Uhr, im Fenster); Folge08 bei 77,5 h (RA, Fenster 20.11. verpasst – nicht delegieren); Folge10 (B, Paar 5) 48 h = 22.11. → stabiler Wert prüfen; **Zuschauer-Demografie F08/F09** (DE-Anteil, Alter) + Follower/1.000 für Konto-Entscheidung; 7 T Folge05 (21.11.), Folge06 (23.11.).
@@ -213,6 +229,7 @@ Gestrichen (Kritiker 08.11.): Follower Δ 7 T (Rauschen ±2 auf totem Konto), Su
 - Herkunft der Verkäufe unklar → Jona: Digistore im Hamsterfrei-Chrome einloggen und getrennte Links/Coupons bzw. UTM je Plattform.
 
 ## Laufender Test
+- **Stand 25.11.:** Einstiegs-Test Paar 1: F12 (E2) Zählwert 5,57 s; F13 (E1) zählt 27.11. Paar 2: F14 (E1, 25.11.) + F15 (E2, 26.11.). Bindungssprung bei beiden Varianten (Befund 25.11. Nr. 1); Test unverändert.
 - **Stand 23.11.:** Einstiegs-Test läuft: Paar 1 = F12 (E2, 23.11.) + F13 (E1, 24.11.); Paar 2 beginnt mit E1 (25.11.). Zählwert = erste Ablesung ab 50 h (Befund 23.11. Nr. 1). Danach vorgemerkt: Aufruf/Umwandlung (Nr. 5).
 - **Stand 21.11.:** Hook-Test beendet (Befund 21.11. Nr. 3). Themen-Test N/K gestrichen (Nr. 5). **Ab Folge12 (23.11.): Einstiegs-Test E1 vs E2** (Testdesign ab 23.11.). 22.11. läuft F11 (letztes Hook-Video, nur Daten).
 - **Stand 19.11.:** Hook-Test entschieden (Befund 19.11. Nr. 1): kein Unterschied, B bleibt Standard; Paar 4/5 laufen als Daten bis 21.11. ~~Ab 22.11.: Themen-Test~~ → gestrichen 21.11., stattdessen Einstiegs-Test ab Folge12.
@@ -225,6 +242,7 @@ Gestrichen (Kritiker 08.11.): Follower Δ 7 T (Rauschen ±2 auf totem Konto), Su
 - Ausreißer (≥ 3× Median und ≥ 500 Aufrufe) lösen innerhalb von 48 h ein Folgevideo aus, ändern aber nicht die Testvariable (Handbuch G6).
 
 ## Offene Frage für Jona
+- **Zahlen 25.11.:** Keine Evidenz für oder gegen einen Konto-Deckel; Empfehlung behalten (Wechselkosten), mit Neu-Entscheidungskriterien (Befund 25.11. Nr. 7). Weiter offen: Wer ist Käufer? Instagram (pausiert).
 - **Zahlen 23.11.:** Kein Hinweis, der einen Kontowechsel rechtfertigt: Gefolgt 0 % bei 3,6K Wochenaufrufen, Follower-Demografie unverändert geerbt (58 % Männer), neue Videos 434–826. Empfehlung „behalten“ steht, Entscheidung Jona. Weiter offen: **Wer ist Käufer?** und **Instagram (pausiert)**.
 - **Zahlen 21.11. (Stichtag): Empfehlung Konto behalten.** Drei Videos in Folge 624–697 Aufrufe (vorher nie > 301), Zuschauer 85–89 % DE, Gefolgt 0 % → die 2.400 geerbten Follower schaden nicht und nützen nicht. Ein Neukonto würde den Sprung riskieren. Neu offen: **Wer ist Käufer?** Zuschauer laut TikTok (nur 18+ sichtbar) zu ~2/3 über 25, F09 75 % Frauen (Befund 21.11. Nr. 7). Entscheidung formal: Jona.
 - **Zahlen 19.11.:** F08 (Minijob-Lebenslauf) 697 Aufrufe in 29,5 h, 99 % For You, +2 Follower – erstes Video über der 300er-Decke → ein Konto-Deckel ist **nicht** belegt. Gefolgt-Traffic weiter 0 %, Follower 58 % Männer / 52,7 % DE (geerbt). Entscheidung 21.11. nach Zuschauer-Demografie F08/F09 und Follower/1.000 (Befund 19.11. Nr. 4); Tendenz: Konto behalten.

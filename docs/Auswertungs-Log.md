@@ -90,3 +90,12 @@
 - Kein Ausreißer (Mischmedian 285,5 / Median seit 18.11. 711). Funnel: 0 neue Wort-Kommentare; ≈ 35–50 Personen erreichen das Videoende.
 - Kritiker (fable): Ablesezeit wäre mit Variante konfundiert → erste Ablesung ab 50 h + Reihenfolge wechselt (übernommen); YouTube F12 nicht als Indiz (übernommen); „CTA wirkt nicht“ unbelegt → „fast niemand erreicht ihn“ (übernommen); Konto-Begründung gekürzt (übernommen); Ausreißer zusätzlich gegen Median seit 18.11. (übernommen); IG einmal melden (übernommen).
 - Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 23.11. Nr. 1–7, Testdesign-Hauptmaß, Ausreißer-Zusatz, IG pausiert, nächster Test vorgemerkt: Aufruf/Umwandlung).
+
+## 25.11.2026 (Routine, gestartet 23:24)
+- Chrome: Browser 4 (deviceId 2d7e7af3…, wie in den Vorläufen; 4 Browser verbunden), TikTok-Konto **hamsterfrei** per Account-Info bestätigt, YouTube Kanal UCBmT3RjRK5PGk-YVTdFzuDA, Instagram @hamsterfrei. Nur gelesen. Tab ~23:28 geschlossen.
+- Erhoben: TikTok F12 (53,5 h), F13 (29,5 h), F14 (5,5 h), F11 (77,5 h), F08 (7 T), Liste, Konto 7 T + Follower; YouTube Shorts-Liste + F12-Analyse; Instagram Profil. Digistore n. v. (7-T-Werte F07 24.11. verpasst.)
+- Bestes: **F13 Notenrechner (E1)** 658 / 5,74 s / 2,7 % (29,5 h, vorläufig); gezählt: **F12 (E2) 612 / 5,57 s**. Schwächstes: **F11 Morgen-Briefing** 438 / 3,51 s / 1,0 % (77,5 h, stabil).
+- Testvariable: Paar 1 F12 (E2) gezählt, F13 (E1) zählt 27.11.; Paar 2 läuft (F14 E1). **Bindungssprung bei beiden Varianten** → kein Varianteneffekt.
+- Kein Ausreißer (TikTok Schwelle 1.575; YouTube F12 ≈ 61 echte Zuschauer < 150). Funnel: 0 Wort-Kommentare, 0 Leads.
+- Kritiker (fable): Erwartung nicht auf 1 Zählwert anheben (übernommen); gleiches Ablesealter im Paar (abgelehnt – Design gleicht über Reihenfolge aus; stattdessen Drift ab 53,5 h direkt messen); Schwelle 0,5 s als „schwach belegt“ kennzeichnen (übernommen); Konto-Begründung „keine Evidenz in beide Richtungen“ + Kriterien (übernommen); Prüfauftrag Länge/E1-Mitänderung/Traffic (übernommen); Geschäftsnutzen und +158 %-Basiseffekt benennen (übernommen); YouTube F12 als Nebenbeobachtung (übernommen).
+- Regeländerungen: AUSWERTUNG_AKTUELL (Befunde 25.11. Nr. 1–7: Ø-Band unter Beobachtung, Drift-Messung 27./29.11., Prüfauftrag Produktion, Konto-Kriterien), offene Messpunkte, laufender Test.

@@ -1,10 +1,13 @@
-# Hamsterfrei – Zahlen (Basis TikTok seit 06.11.2026, YouTube + Instagram seit 08.11.2026; letzte Erhebung 23.11. ~23:35)
+# Hamsterfrei – Zahlen (Basis TikTok seit 06.11.2026, YouTube + Instagram seit 08.11.2026; letzte Erhebung 25.11. ~23:30)
 
 Wird von der Auswertungsroutine gepflegt (siehe `docs/AUSWERTUNG_AKTUELL.md`). Plattformen getrennt. Immer mit Erhebungsdatum, weil die Videos unterschiedlich alt sind. Unbekannt = „–“, nicht sichtbar = „n. v.“. Nur Zahlen aus den Studios, nie schätzen. **Ab 08.11.: jedes Video bei 48 h UND 7 T protokollieren, nur gleich alte Werte vergleichen.**
 
 ## Konto-Stand
 | Datum | Plattform | Follower | Δ 7 Tage | Demografie | Notiz |
 |---|---|---|---|---|---|
+| 25.11. 23:25 | TikTok @hamsterfrei | 2,4K | +5 | 57 % Männer, 18–24 40,6 %, 25–34 26 %, DE 52,7 %, „Anderes“ 40,1 % (geerbt, unverändert) | 7 T: 4,8K Aufrufe (+158,3 %, Basiseffekt), FYP 90,9 %, Suche 8,6 %, Profil 0,5 %, Gefolgt 0 %; Profilaufrufe 22 (+57 %); Likes 47, Komm. 3, Shares 0 |
+| 25.11. 23:27 | YouTube Hamsterfrei | 1 Abo | 0 | F12 90 % DE | F12 277/53,5 h (22 % bis Ende ≈ 61), F13 81/29,5 h, F14 54/5,5 h; 0 neue Abos |
+| 25.11. 23:28 | Instagram @hamsterfrei | 1 | 0 | n. v. | 7 Beiträge, alte Bio; pausiert bis Jonas Entscheidung |
 | 23.11. 23:31 | TikTok @hamsterfrei | 2,4K | +6 | 58 % Männer, 18–24 40,7 %, 25–34 26,4 % (geerbt, unverändert; Standorte n. v.) | 7 T: 3,6K Aufrufe (+39,1 %), FYP 90,2 %, Suche 9,1 %, Profil 0,6 %, Gefolgt 0 %; Profilaufrufe 18 (−35,7 %); Likes 37, Komm. 2, Shares 0 |
 | 23.11. 23:33 | YouTube Hamsterfrei | 1 Abo | 0 | n. v. | F12 179/5,5 h (16,7 % bis Ende), F11 36/29,5 h (20,5 %); 0 neue Abos |
 | 23.11. 23:34 | Instagram @hamsterfrei | 1 | 0 | n. v. | weiter 7 Beiträge, alte Bio; F02–F12 ungepostet; **pausiert bis Jonas Entscheidung** (Frist 22.11. verstrichen) |
@@ -32,6 +35,29 @@ Wird von der Auswertungsroutine gepflegt (siehe `docs/AUSWERTUNG_AKTUELL.md`). P
 | 08.11. 17:20 | TikTok @hamsterfrei | 2,4K | −2 | Follower: 57 % Männer, 18–24 41,6 %, DE 52,8 %, „Anderes“ 40,1 % | 7 T: 2,1K Aufrufe (+125 %), Suche 35,6 %, FYP 57,9 %, Gefolgt 0 %; Profilaufrufe 59 |
 | 08.11. 17:30 | YouTube Hamsterfrei | 0 Abos | 0 | n. v. | 28 T: 1.653 Aufrufe, 4,4 h Wiedergabe |
 | 08.11. 17:35 | Instagram @hamsterfrei | 1 | – | n. v. (kein Creator-Konto, keine Insights) | 6 Reels |
+
+## Videos – TikTok (Erhebung 25.11.2026 ~23:20, seit Veröffentlichung)
+| Video | veröff. | Test | Alter | Aufrufe | Ø Wiedergabe (s) | Länge (s) | ganz % (≈ Personen) | Likes | Komm. | +Follower | Für dich % | Suche % | Erwartung | Bewertung |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Folge14 Winterjacken-Anzeige (JACKE) | 25.11. 18:00 | **E1, Paar 2** | 5,5 h (vorläufig) | 251 | 6,12 | 33 | 3,0 (≈8) | 3 | 0 | 0 | 99,7 | <0,1 | 400–750 / 3,5–4,5 | vorläufig, zählt nie |
+| Folge13 Notenrechner (SCHNITT) | 24.11. 18:00 | **E1, Paar 1** | 29,5 h (vorläufig) | 658 | 5,74 | 34 | 2,7 (≈18) | 3 | 1 | 0 | 99,0 | 0,8 | 400–750 / 3,5–4,5 | vorläufig über Ø-Band; Zählwert 27.11. (77,5 h) |
+| **Folge12 Klausurwoche (KLAUSUR)** | 23.11. 18:00 | **E2, Paar 1** | **53,5 h = Zählwert** | 612 | **5,57** | 30 | 2,0 (≈12) | 4 | 0 | 0 | 99,3 | 0,3 | 400–750 / 3,5–5,5 | Aufrufe im Rahmen, Ø knapp über Band (Befund 25.11. Nr. 1/2); Drift 5,5 h→53,5 h +1,17 s |
+| Folge11 Morgen-Briefing | 22.11. | Hook A (nur Daten) | 77,5 h | 438 | 3,51 | 36,4 | 1,0 (≈4) | 4 | 0 | 1 | 99,6 | <0,1 | 400–750 / 3,5–4,5 | stabil gegen 29,5 h (434/3,5) |
+| Folge08 Lebenslauf (7 T) | 18.11. | Hook B | 7,2 T | 708 | 4,01 | 33 | 1,4 | 6 | 1 | 2 | 98,1 | 1,1 | – | 7-T-Wert (Suchbegriffe „lebenslauf erstellen minijob“, „Cafee minijob“) |
+- Liste: F10 829, F09 723. Median letzte 10 ≥ 24 h (F13…F04) = **525** → Schwelle 1.575; Median seit 18.11. (F08–F13) = 683 → kein Ausreißer.
+- **Paar 1 Einstiegs-Test:** F12 (E2) 5,57 s gezählt; F13 (E1) zählt 27.11. bei 77,5 h. Kein Zwischenstand.
+
+## Videos – YouTube Shorts (Erhebung 25.11.2026 ~23:27)
+| Video | Aufrufe | bis Ende % / weggewischt % | echte Zuschauer (≈) | Notiz |
+|---|---|---|---|---|
+| Folge12 (tekpCDEn74U), 53,5 h | 277 | 22,0 / 78,0 | 61 | Shorts-Feed 92 (48 h), 87 % neue Zuschauer, 90 % DE; Nebenbeobachtung, kein Ausreißer (< 150) |
+| Folge13, 29,5 h | 81 | – | – | Liste |
+| Folge14, 5,5 h | 54 | – | – | Liste |
+| Folge11 35 · Folge10 61 · Folge09 93 · Folge08 114 · Folge07 84 · Folge06 125 · Folge05 51 · Folge04 43 | | | | Liste |
+- Median letzte 10 ≈ 82. Kein Ausreißer.
+
+## Videos – Instagram Reels (Erhebung 25.11.2026 ~23:28)
+Unverändert 7 Beiträge, 1 Follower, Bio „Seminararbeit bis 10.11.? …“. Pausiert.
 
 ## Videos – TikTok (Erhebung 23.11.2026 ~23:30, seit Veröffentlichung)
 | Video | veröff. | Test | Alter | Aufrufe | Ø Wiedergabe (s) | Länge (s) | ganz % (≈ Personen) | Likes | Komm. | +Follower | Für dich % | Erwartung | Bewertung |
