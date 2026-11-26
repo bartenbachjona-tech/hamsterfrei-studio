@@ -26,6 +26,7 @@ import { Folge11, FOLGE11_SECONDS } from "./folgen/folge11";
 import { Folge12, FOLGE12_SECONDS } from "./folgen/folge12";
 import { Folge13, FOLGE13_SECONDS } from "./folgen/folge13";
 import { Folge14, FOLGE14_SECONDS } from "./folgen/folge14";
+import { Folge15, FOLGE15_SECONDS, Folge15Cover } from "./folgen/folge15";
 import { Folge12Cover as Folge12CoverEl } from "./scenes/folge12";
 
 // Jede neue Folge: src/folgen/folgeNN.tsx anlegen und hier eine Composition "FolgeNN" ergänzen.
@@ -53,6 +54,8 @@ const FOLGEN: { id: string; component: React.FC; seconds: number }[] = [
   { id: "Folge12", component: Folge12, seconds: FOLGE12_SECONDS },
   { id: "Folge13", component: Folge13, seconds: FOLGE13_SECONDS },
   { id: "Folge14", component: Folge14, seconds: FOLGE14_SECONDS },
+  { id: "Folge15", component: Folge15, seconds: FOLGE15_SECONDS },
+  { id: "Folge15Cover", component: Folge15Cover, seconds: 1 },
 ];
 
 export const RemotionRoot: React.FC = () => (

@@ -1,0 +1,26 @@
+BEISPIEL (vom Studio erfunden, 26.11.2026) – Folge15 Vorher/Nachher „Gleiche Person, gleiche KI, ein Satz Unterschied“
+Person: Mia, 17 (erfunden). Keine echte Firma, kein Logo, kein Portalname. Bäckerei ohne Namen.
+
+MIAS FAKTEN (vorher festgelegt, NUR daraus werden Claudes Rückfragen beantwortet; was hier nicht steht → „weiß ich nicht“/„nichts“):
+- Mia, 17, 11. Klasse Gymnasium, wohnt 10 Minuten mit dem Rad von der Bäckerei weg.
+- Job: Aushilfe im Verkauf, samstags, Bäckerei im Ort (Aushang im Schaufenster).
+- Erfahrung: macht seit zwei Jahren beim Kuchenstand ihres Handballvereins die Kasse (Heimspiele, ca. einmal im Monat). Sonst keine Jobs, kein Praktikum im Verkauf.
+- Kann: Kopfrechnen gut, früh aufstehen kein Problem (Training sonntags um 8).
+- Verfügbar: jeden Samstag, frühestens ab 6 Uhr, ab Januar.
+- Warum diese Bäckerei: holt sich dort vor der Schule fast jeden Tag eine Brezel, kennt den Laden.
+- Nicht vorhanden: keine Zeugnisnoten nennen, kein Hygieneschein/Gesundheitszeugnis, keine Kassensystem-Kenntnis, keine Barista-Erfahrung.
+
+CHAT LINKS (frischer Kontext, eine Zeile, wörtlich):
+"Schreib mir eine Bewerbung als Aushilfe in einer Bäckerei."
+
+CHAT RECHTS (frischer Kontext, eine Zeile, wörtlich):
+"Schreib mir eine Bewerbung als Aushilfe in einer Bäckerei. Stell mir vorher fünf Fragen."
+→ Antworten auf die Fragen ausschließlich aus MIAS FAKTEN (wörtlich im Antwort-Dokument festgehalten).
+
+PRÜFPUNKTE, VORHER festgelegt (Studio):
+1. Links: Floskeln wie „Hiermit bewerbe ich mich“, „zuverlässig, teamfähig, freundlich“ ohne Beleg?
+2. Links: Platzhalter in eckigen Klammern statt echter Angaben?
+3. Rechts: konkrete Fakten aus Mias Antworten (Kuchenstand-Kasse, Samstag ab 6, Brezel) im Text?
+4. Rechts: nichts erfunden (keine Noten, kein Gesundheitszeugnis, keine Kassensystem-Erfahrung, keine zusätzlichen Jobs)?
+5. Rechts: Verfügbarkeit (Samstag, ab Januar) drin?
+Ist rechts nicht sichtbar besser → Idee verwerfen (TRENDS.md 26.11. I2).

@@ -1,0 +1,227 @@
+{
+ "G31": {
+  "bis_ende": 18,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schülerbewerbung, Bäckerei – hat nichts mit meinem Shop zu tun."
+ },
+ "C17": {
+  "bis_ende": 30,
+  "website": 3,
+  "folgen": 6,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Witziger Hamster, aber Bewerbung? Brauch ich gerade nicht."
+ },
+ "C21": {
+  "bis_ende": 22,
+  "website": 3,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Prompt-Tipp okay, für Creator aber nichts Neues dabei."
+ },
+ "C26": {
+  "bis_ende": 15,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kenn ich schon, Fragen stellen lassen ist Standard."
+ },
+ "B27": {
+  "bis_ende": 35,
+  "website": 4,
+  "folgen": 7,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Netter Trick, mach ich aber eh schon mit ChatGPT."
+ },
+ "B32": {
+  "bis_ende": 20,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Aushilfe in der Bäckerei? Nicht mein Problem, weiter."
+ },
+ "B29": {
+  "bis_ende": 58,
+  "website": 8,
+  "folgen": 14,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Fünf Fragen vorher – probier ich bei meiner nächsten Bewerbung."
+ },
+ "B35": {
+  "bis_ende": 30,
+  "website": 3,
+  "folgen": 5,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Erfundene Sätze bestätigen, warum ich KI-Texte immer prüfe."
+ },
+ "W26": {
+  "bis_ende": 28,
+  "website": 3,
+  "folgen": 5,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bräuchte das eher für Wohnungsbewerbungen, nicht Bäckerei."
+ },
+ "W30": {
+  "bis_ende": 25,
+  "website": 3,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ganz nett, aber wir suchen Wohnung, keinen Minijob."
+ },
+ "H28": {
+  "bis_ende": 14,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bewerbungen interessieren mich gerade null, Hochzeit ist Thema."
+ },
+ "H31": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "hook_schwach",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Viel Text auf einmal, wisch ich weg."
+ },
+ "T23": {
+  "bis_ende": 30,
+  "website": 3,
+  "folgen": 5,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bewerbung hab ich hinter mir, Steuer wäre spannender."
+ },
+ "T19": {
+  "bis_ende": 42,
+  "website": 5,
+  "folgen": 8,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Für meinen Nebenjob nach dem FSJ vielleicht ganz praktisch."
+ },
+ "V20": {
+  "bis_ende": 18,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "hook_schwach",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Zu viel Lesen, Bewerbungen sind gerade nicht mein Ding."
+ },
+ "V34": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Nicht mein Thema, weiter."
+ },
+ "E45": {
+  "bis_ende": 50,
+  "website": 6,
+  "folgen": 9,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Gut, dass er sagt, man soll gegenlesen. Zeig ich meinem Kind."
+ },
+ "E50": {
+  "bis_ende": 38,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "ki_skepsis_oder_verbot",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Sag ich doch, die KI erfindet einfach Sachen dazu."
+ },
+ "AT19": {
+  "bis_ende": 25,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Minijob-Bewerbung brauch ich nicht, eher Seminararbeit-Tipps."
+ },
+ "CH22": {
+  "bis_ende": 20,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Nett gemacht, aber Bäckerei-Aushilfe betrifft mich nicht."
+ },
+ "N15": {
+  "bis_ende": 55,
+  "website": 4,
+  "folgen": 10,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_claude_konto",
+  "grund_kein_kauf": "nicht_zielgruppe",
+  "satz": "Hamster süß, Bewerbung für Bäcker könnt ich mal brauchen."
+ },
+ "N40": {
+  "bis_ende": 6,
+  "website": 0,
+  "folgen": 1,
+  "grund_weg": "hook_schwach",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Textwand, sofort weiter."
+ },
+ "K22": {
+  "bis_ende": 35,
+  "website": 4,
+  "folgen": 6,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "gratis_alternative",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Guter Kniff, nehm ich mit, folgen muss ich deswegen nicht."
+ },
+ "F20": {
+  "bis_ende": 28,
+  "website": 2,
+  "folgen": 4,
+  "grund_weg": "kein_bedarf",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauch Theorie-Hilfe, keine Bewerbung."
+ },
+ "L33": {
+  "bis_ende": 45,
+  "website": 3,
+  "folgen": 6,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Ehrlich mit dem Dazudichten, das find ich ausnahmsweise ordentlich."
+ }
+}
