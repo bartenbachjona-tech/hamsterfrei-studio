@@ -67,6 +67,9 @@ Bis 10.11. gilt: Die Tagesproduktion nimmt die **oberste Folge mit Status `offen
 | T23 | Hamster-Test „Mein Akku ist um zwei fast leer. Ich hab Claude die Akku-Liste gezeigt.“ (Serie a, Jonas echte Akku-Statistik 2 Tage, nachgezeichnet ohne Logos; nicht direkt neben T11; TRENDS.md 23.11. I1) | AKKU | nein | offen |
 | T24 | Hamster-Test „Claude hat meinen Mathe-Test korrigiert. Dann hab ich Claude korrigiert.“ (Serie a, Einzelvideo, Jona rechnet echt, Fortsetzung nur bei ≥ 3×; TRENDS.md 23.11. I2) | TEST | nein | offen |
 | T25 | Hamster-Test „Ein Satz an Claude, und ich hab einen Notenrechner fürs Halbjahr.“ (Serie a, Beispielnoten, Handrechnung als Kontrolle; TRENDS.md 23.11. I3) | SCHNITT | nein | terminiert 24.11.2026 18:00 als Folge13 (TikTok, YT; IG pausiert) |
+| T26 | **Trend (zeitkritisch bis ~20.12.):** Hamster-Test „Sechs Geschenke, dreißig Euro. Claude hat die Liste gemacht, ich war einkaufen.“ (Serie a, Jona kauft wirklich, Summe groß statt Bon, frühestens ~28.11. wegen Abstand zu F06/T13; TRENDS.md 26.11. I1) | GESCHENK | nein | offen |
+| T27 | Vorher/Nachher „Gleiche Person, gleicher Job, gleiche KI. Der Unterschied ist ein Satz.“ (Serie b, Follow-up zu F08, zwei echte Claude-Chats, erfundene Person, Bewerbungs-Profi nicht nennen; TRENDS.md 26.11. I2) | FRAGEN | nein | offen |
+| T28 | Hamster-Test „Ich hab Claude gefragt, ob neun Euro die Stunde mit siebzehn erlaubt sind.“ (Serie a, § 22 MiLoG + offizielle Werte mit Stand, keine Rechtsberatung, Wort nur mit Checkliste; TRENDS.md 26.11. I3) | LOHN | nein | offen |
 
 Regeln für neue Themen (ab 11.11. nach SERIEN.md inkl. Ausschlusskriterien; „Gibt es ein starkes Schlüsselbild?“ zuerst): klein, unscheinbar, ohne Vorwissen startbar, mit Beispielen, die man in Deutschland wirklich umsetzen kann; Wörter kurz, ein Wort, Großbuchstaben, nicht doppelt.
 Wenn eine Folge veröffentlicht ist: Status auf `veröffentlicht <Datum>` setzen und `docs/plaene/<WORT>.md` muss existieren.
