@@ -1,0 +1,227 @@
+{
+ "S16": {
+  "bis_ende": 55,
+  "website": 4,
+  "folgen": 10,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Hab noch keinen Job, aber 9 Euro klingt wenig."
+ },
+ "S17a": {
+  "bis_ende": 50,
+  "website": 3,
+  "folgen": 7,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Interessant, aber ich muss gerade meine Seminararbeit schreiben."
+ },
+ "S17b": {
+  "bis_ende": 52,
+  "website": 4,
+  "folgen": 9,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Gut zu wissen, aber ich suche eher Lerntipps."
+ },
+ "S18a": {
+  "bis_ende": 45,
+  "website": 4,
+  "folgen": 7,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bin schon achtzehn, kriege den Mindestlohn eh."
+ },
+ "S18b": {
+  "bis_ende": 35,
+  "website": 3,
+  "folgen": 5,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Betrifft mich nicht mehr, ich bin achtzehn."
+ },
+ "S19": {
+  "bis_ende": 30,
+  "website": 3,
+  "folgen": 5,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauche Ausbildungstipps, nicht Minijob mit siebzehn."
+ },
+ "A16": {
+  "bis_ende": 48,
+  "website": 4,
+  "folgen": 8,
+  "grund_weg": "zu_lang_langweilig",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "spaeter_vielleicht",
+  "satz": "Wusste ich nicht, dass Minderjährige weniger kriegen dürfen."
+ },
+ "A18": {
+  "bis_ende": 25,
+  "website": 2,
+  "folgen": 3,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich suche eine Ausbildung, kein Café-Job."
+ },
+ "A20": {
+  "bis_ende": 18,
+  "website": 2,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich bin Azubi, das ist nicht mein Thema."
+ },
+ "A22": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Abends will ich Unterhaltung, keine Paragrafen."
+ },
+ "U19": {
+  "bis_ende": 15,
+  "website": 2,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Bin neunzehn, Mindestlohn kriege ich doch sowieso."
+ },
+ "U21": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schülerthema, ich wische weiter."
+ },
+ "U23": {
+  "bis_ende": 12,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Kenne Claude, Thema ist für Teenager."
+ },
+ "U24": {
+  "bis_ende": 20,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Vielleicht für meine Schüler interessant, für mich nicht."
+ },
+ "U22w": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich brauche ein WG-Zimmer, keinen Minijob-Tipp."
+ },
+ "U20b": {
+  "bis_ende": 15,
+  "website": 2,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Mein Problem ist BAföG, nicht Mindestlohn mit siebzehn."
+ },
+ "U25": {
+  "bis_ende": 15,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "ki_skepsis_oder_verbot",
+  "grund_kein_klick": "werbung_misstrauen",
+  "grund_kein_kauf": "ki_skepsis_oder_verbot",
+  "satz": "Wieder ein Hamster, der KI-Antworten erklärt. Nein danke."
+ },
+ "M18": {
+  "bis_ende": 45,
+  "website": 4,
+  "folgen": 6,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Café-Minijob kenn ich, aber ich bin schon achtzehn."
+ },
+ "M30": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Für Jugendliche gemacht, hilft mir beim Zuverdienst nicht."
+ },
+ "R19": {
+  "bis_ende": 10,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich verkaufe auf Vinted, Stundenlohn ist egal."
+ },
+ "R26": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Ich will Gewerbe-Infos, nicht Jugendlohn."
+ },
+ "R35": {
+  "bis_ende": 5,
+  "website": 0,
+  "folgen": 0,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hamster und Minijob mit siebzehn, schnell weiter."
+ },
+ "R45": {
+  "bis_ende": 22,
+  "website": 1,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Für meine Tochter später vielleicht, jetzt nicht."
+ },
+ "G24": {
+  "bis_ende": 8,
+  "website": 1,
+  "folgen": 1,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Hilft mir nicht bei Rechnungen fürs Nageldesign."
+ },
+ "G28": {
+  "bis_ende": 12,
+  "website": 2,
+  "folgen": 2,
+  "grund_weg": "nicht_zielgruppe",
+  "grund_kein_klick": "kein_bedarf",
+  "grund_kein_kauf": "kein_bedarf",
+  "satz": "Schöner Animationsstil, aber das Thema betrifft mich nicht."
+ }
+}
